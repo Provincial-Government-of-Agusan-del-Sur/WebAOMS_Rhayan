@@ -1,0 +1,87 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Received Document";
+}
+
+
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Received Document</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <!-- Kendo Grid -->
+        @(Html.Kendo().Grid<WebAOMS.Models.vw_t_Incoming_fromBudget>()
+            .Name("grid")
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.trans_id).Title("Transaction No").Width(150);
+                columns.Bound(c => c.AlobsNo).Title("ALOBS No").Width(150);
+                columns.Bound(c => c.Amount).Title("Amount").Width(100).Format("{0:c}");
+                columns.Bound(c => c.Particulars).Title("Particulars").Width(200);
+                columns.Bound(c => c.FundType).Title("Fund Type").Width(100);
+                columns.Bound(c => c.functionID).Title("Function ID").Width(100);
+                columns.Bound(c => c.FMISAccountCode).Title("FMIS Account Code").Width(150);
+                columns.Command(command =>
+                {
+                    command.Custom("Receive Document").Click("openPopup").Text("Receive");
+                }).Title("Actions").Width(150);
+            })
+            .Pageable()
+            .HtmlAttributes(new { style = "height:500px;" })
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Read(read => read.Action("GetTransactions", "Transactions"))
+            )
+        )
+    </div>
+</div>
+
+<!-- Popup Form -->
+<div id="documentPopup" style="display: none;">
+    @using (Html.BeginForm("ReceiveDocument", "Transactions", FormMethod.Post, new { id = "documentForm" }))
+    {
+        <h3>Receive Document</h3>
+        <div>
+            <label for="DocumentId">Document ID:</label>
+            @Html.TextBox("DocumentId", null, new { @class = "k-textbox", id = "documentId", @readonly = "readonly" })
+        </div>
+        <div>
+            <label for="ReceivedBy">Received By:</label>
+            @Html.TextBox("ReceivedBy", null, new { @class = "k-textbox", id = "receivedBy" })
+        </div>
+        <div>
+            <label for="Remarks">Remarks:</label>
+            @Html.TextArea("Remarks", null, new { @class = "k-textarea", id = "remarks" })
+        </div>
+        <div style="margin-top: 10px;">
+            <button type="submit" class="k-button k-primary">Submit</button>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function openPopup(e) {
+            e.preventDefault();
+
+            var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+            $("#documentId").val(dataItem.AlobsNo);
+
+            $("#documentPopup").kendoWindow({
+                title: "Receive Document",
+                width: "400px",
+                modal: true
+            }).data("kendoWindow").open();
+        }
+    </script>
+}

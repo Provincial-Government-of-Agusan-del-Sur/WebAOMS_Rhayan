@@ -1,0 +1,348 @@
+﻿@{
+    Layout = null;
+}
+<div class="panel panel-default" style="padding-bottom:10px;">
+    <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important;"><h5><bold>Transaction Details</bold></h5></div>
+    <div class="form-group-md">
+        <div class="row" >
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <input id="txt_jevid" name="jevid" value="@ViewBag.jevid" type="text" hidden />
+                <div class="col-md-4">
+                    <div class="col-md-12 padding10">
+                        <label for="ObrNo">DV Number</label>
+                        <input type="text" id="txt_dvno" name="Dvno" disabled value="@ViewBag.dvno" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="ObrNo">Obligation Request Number</label>
+                        <input type="text" id="txt_ObrNo" value="@ViewBag.ObrNo" disabled class="form-control">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="Name">Claimant Name</label>
+                        <input type="text" id="txt_Name" value="@ViewBag.Name" disabled class="form-control">
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-12">
+                        <label for="exampleFormControlTextarea5">Particular</label>
+                        <div  class="pull-right">
+                            <a href="#" onclick="addRemark()" style="color:darkseagreen"><b>Edit</b></a>
+                        </div>
+                       
+                        <textarea class="form-control" id="txt_particular" disabled rows="4">@ViewBag.Particular</textarea>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-12">
+                        <label for="officename">Responsibility Center</label>
+                        <input type="text" id="txt_officename" disabled value="@ViewBag.officename" class="form-control">
+                    </div>
+
+                    <div class="col-md-12 no-padding">
+                        <div class="col-md-6">
+                            <label for="FundType">Fund Type</label>
+                            <input type="text" id="txt_FundType" disabled value="@ViewBag.FundType" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="GAmount">Gross Amount</label>
+                            <input type="text" id="txt_GAmount" style="text-align:right" disabled value="@ViewBag.GAmount" class="form-control">
+                        </div>
+                        <input type="text" id="txt_NetAmount" hidden style="text-align:right" disabled value="@ViewBag.NetAmount" >
+                        <input type="text" id="txt_VatAmount" hidden style="text-align:right" disabled value="@ViewBag.VatAmount">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+        <div class="panel panel-default" style="padding-bottom:8px;">
+            <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important">
+                <h5><bold>Type of Journal</bold></h5>
+                <div class="form-group-md">
+                        <div data-toggle="buttons">
+                            <label class="btn radio-inline btn-radio-success-inverse ">
+                                <input name="jtypeOption" id="jtypeOption1" value="1" type="radio"> Cash Disbusrement
+                            </label>
+                            <label class="btn radio-inline btn-radio-success-inverse active">
+                                <input name="jtypeOption" id="jtypeOption2" value="2" type="radio"> Check Disbusrement
+                            </label>
+                            <label class="btn radio-inline btn-radio-success-inverse">
+                                <input name="jtypeOption" id="jtypeOption3" value="3" type="radio"> Cash Receipt Journal
+                            </label>
+                            <label class="btn radio-inline btn-radio-success-inverse">
+                             </label>
+                            <label class="btn radio-inline btn-radio-success-inverse">
+                                <input name="jtypeOption" id="jtypeOption5" value="5" type="radio"> Procurements Received
+                            </label>
+                            <label class="btn radio-inline btn-radio-success-inverse">
+                                <input name="jtypeOption" id="jtypeOption6" value="6" type="radio"> Authority to Debit Account Disburesement
+                            </label>
+                            <input id="jtypeOptionID" value="2" hidden />
+                            <script>
+                                $(document).ready(function () {
+                                    $("#add_claimant").html("")
+                                })
+                                $(function () {
+                                    $('input[name="jtypeOption"]').bind('change', function () {
+                                        $("#jtypeOptionID").val($(this).val())
+                                    });
+                                });
+
+                                function param_grid_entries_sub() {
+                                    return { jevid: $("#txt_jevid").val() };
+                                }
+                            </script>
+                        </div>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default" style="padding-bottom:8px;">
+            <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important">
+                <h5><bold>Accounting Entries</bold></h5>
+                <div class="form-group-md">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_jev_byDVNO_Result>()
+                            .Name("grid_Entries")
+                            .Columns(columns =>
+                            {
+                            columns.Bound(c => c.code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" })
+                                .ClientFooterTemplate("<div style='text-align:right'>Row(s) <b>#=count#</b></div>");
+                            columns.Bound(c => c.AccountChildName).Title("Account Name").Width(400);
+
+                            columns.Bound(c => c.debit).Width(100).Title("Debit").HeaderHtmlAttributes(new { Style = "text-align:center" })
+                                 .ClientTemplate("<div id=\"div_debit_#=ChartAccountChildID#\"><button type=\"button\" onclick=\"edit_subentries(#=ChartAccountChildID#)\" class=\" DebitCredit\">#=addCommas(debit)#</button></div>")
+                                .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+
+                            columns.Bound(c => c.credit).Width(100).Title("Credit").HeaderHtmlAttributes(new { Style = "text-align:center" })
+                            //.ClientTemplate("<div style='text-align:right'>#=addCommas(credit)# </div>")
+                            .ClientTemplate("<div id=\"div_debit_#=ChartAccountChildID#\"><button type=\"button\" onclick=\"edit_subentries(#=ChartAccountChildID#)\" class=\"DebitCredit\">#=addCommas(credit)#</button></div>")
+                            .ClientFooterTemplate("<div style='text-align:right'><b>#= addCommas(sum) #</b></div>");
+
+                            columns.Template(@<text></text>)
+                                .Width(100)
+                                .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                                .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"warnDelete(#=code#,#=GLChartAccountChildID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-trash\"></i></button>");
+
+                            })
+                            .Selectable(selectable => selectable
+                            .Mode(GridSelectionMode.Single))
+                            .AutoBind(true)
+                            .HtmlAttributes(new { style = "height: 300px;" })
+                            .Scrollable()
+                            .Sortable()
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .Read(read => read.Action("grid_entries", "JEV").Data("param_grid_entries_sub"))
+                                .PageSize(200)
+                                .Aggregates(aggregates =>
+                                {
+                                    aggregates.Add(p => p.debit).Sum();
+                                    aggregates.Add(p => p.credit).Sum();
+                                    aggregates.Add(p => p.code).Count();
+                                })
+                            )
+
+                            )
+                        </div>
+                        <script>
+                            var mg = new mgsInfo()
+
+                            $(document).ready(function () {
+                                $(function () {
+                                    $('#txt_GAmount').number(true, 2);
+
+                                });
+
+                            })
+
+                            function addRemark(){
+                                var reffno = $("#txt_dvno").val()
+                                startSpin()
+                                $.post('@Url.Action("_pv_reamkarkdetails", "JEV")', { dvno: reffno}
+                                    , function (r) {
+                                        if (r.code == 5) {
+                                            stopSpin()
+                                            mg.warning("" + r.statusName + "","System Message")
+                                        }
+                                        else {
+                                            stopSpin()
+                                            $("#body_addremarks_grid").html("")
+                                            $("#h_addremarks_edit_id").html("Update Sub Account");
+                                            $("#body_addremarks").html(r)
+                                            $("#mdl_jev_addremarks").modal("show");
+                                        }
+                                    })
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    mg.warning("" + textStatus + "")
+                                });
+                            }
+
+                            function edit_subentries(ChartAccountChildID) {
+                                var jevid = $("#txt_jevid").val()
+                                startSpin()
+                                $.post('@Url.Action("_pv_jevdetails_sub", "JEV")', { jevid: jevid, ChartAccountChildID: ChartAccountChildID }
+                                    , function (r) {
+                                        stopSpin()
+
+                                    $("#add_claimant").html("");
+                                    $("#body_details_grid").html("")
+                                    $("#h_subaccount_edit_id").html("Update Sub Account");
+                                    $("#body_details_grid").html(r)
+                                    $("#mdl_jev_entries").modal("show");
+                                })
+                                //.fail(function (jqXHR, textStatus, error) {
+                                //    stopSpin()
+                                //    mg.warning("" + textStatus + "")
+                                //});
+                            }
+
+                            function warnDelete(code, GLChartAccountChildID) {
+                                mg.bsyesNo("Are you sure you want to delete the Account <b>" + code + "?</b>", "del_entries(" + GLChartAccountChildID + ")")
+                            }
+
+                            function del_entries(GLChartAccountChildID) {
+                                var jevid = $("#txt_jevid").val()
+                                startSpin()
+                                $.post('@Url.Action("delelete_entries_byGL", "JEV")', { jevid: jevid, GLparentID: GLChartAccountChildID }
+                                    , function (r) {
+                                        stopSpin()
+                                        if (r.code == 6) {
+                                            toastr.success(r.statusName, 'System Message');
+                                            rgrid_main_account()
+                                            close_modal_delete();
+                                        }
+                                        else {
+                                            toastr.warning(r.statusName, 'System Message');
+                                            close_modal_delete();
+                                        }
+                                    })
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    mg.warning("" + textStatus + "")
+                                });
+                            }
+
+                            function new_entry() {
+                                
+                                if ($("#txt_jevid").val() == 0) {
+                                    mg.warning("Save first before you can add the accounting entries..!")
+                                    return;
+                                }
+                                startSpin()
+                                $.post('@Url.Action("_pv_jevdetails", "JEV")', { dvno: '' }, function (r) {
+                                    $("#body_details_grid").html("")
+                                    
+                                    stopSpin()
+                                    $("#add_claimant").html("");
+                                    $("#body_details_grid").html(r)
+                                    $("#mdl_jev_entries").modal("show");
+                                })
+                            }
+                            function close_mdl_entries() {
+                                $("#body_details_grid").html("")
+                                $("#mdl_jev_entries").modal("hide");
+                                rgrid_main_account()
+                            }
+
+                            function rgrid_main_account() {
+                                var gridData = $("#grid_Entries").data("kendoGrid");
+                                gridData.dataSource.read();
+                            }
+
+                            function btn_save_transaction() {
+                                var checkno = $("#txt_checkno").val()
+                                startSpin()
+                                $.post('@Url.Action("Save_transaction_through_checkno", "JEV")', {checkno:checkno, jevid: $("#txt_jevid").val()}
+                                    , function (r) {
+                                        stopSpin()
+                                        if (r.code == 6) {
+                                            toastr.success(r.statusName, 'System Message');
+                                            $("#txt_jevid").val(r.newjevID)
+                                            rgrid_trans_account();
+                                        }
+                                        else {
+                                            mg.warning("" + r.statusName + "")
+                                        }
+                                    })
+                                //.fail(function (jqXHR, textStatus, error) {
+                                //    stopSpin()
+                                //    mg.warning("" + textStatus + "")
+                                //});
+                            }
+                        </script>
+                        <div class="col-md-12" style="padding-top:10px">
+                            @*<button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-trash"></i> Delete</button>*@
+                            <button onclick="btn_save_transaction()" class="btn btn-success pull-right"> <i class="fa fa-save"></i> Save Changes</button>
+                            <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add Account</button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="modal" id="mdl_jev_entries" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"  onclick="close_mdl_entries()" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Accounting Entries Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <button onclick="btn_back()" type="button" class="btn btn-success pull-left"><i class="fa fa-backward"></i> Back</button>
+                    </div>
+                    <div id="add_claimant" class="col-md-10">
+                        <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_mdl_entries()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="mdl_jev_addremarks" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_addremarks_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_addremarks" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_remarks()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer"  data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <div class="modal" id="mdl_browse_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="close_browse_claimant()" aria-hidden="true">x</button>
+                <h4 id="h_browse_claimant_id" class="modal-title">Add name</h4>
+            </div>
+            <div id="body_browse_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_browse_claimant()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

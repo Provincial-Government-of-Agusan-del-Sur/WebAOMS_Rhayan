@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<script>
+    var arrayID = [];
+    var arrayName=[];
+    var arrayChildCode = [];
+    var parent_code;
+    var lvlid = 0;
+    var chartAccountID = @ViewBag.ChartAccountChildID;
+    $(document).ready(function () {
+        parent_code ='@ViewBag.code'
+        $("#h_subaccount_id").text('@ViewBag.code')
+        arrayID[0] = @ViewBag.ChartAccountChildID;
+        arrayName[0] ='@ViewBag.AccountChildName';
+        $("#li_title").text('@ViewBag.AccountChildName')
+        arrayChildCode[0] = '@ViewBag.ChildCode';
+    });
+
+</script>
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                @*<li class="breadcrumb-item"><a href="#" onclick="clicksubAccount(@ViewBag.ChartAccountChildID)">@ViewBag.AccountChildName</a><input id="@ViewBag.ChartAccountChildID"hidden type="text"/></li>*@
+                <li id="li_title" class="breadcrumb-item"></li>
+               
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="input-group control-width-large pull-right" style="padding-bottom:5px!important">
+                <input id="txt_search_sub_account" type="text" class="form-control navbar-input" placeholder="Search Account code or account name">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <script>
+            function clickNewSubAccount(){
+                edit_subaccount(0,arrayID[lvlid])
+            }
+            function clicksubAccount(ChartAccountChildID) {
+                chartAccountID = ChartAccountChildID
+                refreshGrid();
+            }
+
+            function getAccountNameComplete(){
+                var str='@ViewBag.AccountChildName';
+                for (x=1;x <= lvlid;x++){
+                    str = str + " > " + arrayName[x];
+                }
+                $("#h_subaccount_id").html(arrayChildCode[lvlid])
+                $("#li_title").text(str)
+            }
+            function btn_back(){
+                var i = lvlid - 1;
+                var x;
+                var txt;
+                if (i >= 0){
+                    lvlid = i;
+                    chartAccountID =arrayID[i]
+                    removeSearch();
+                    refreshGrid();
+                    getAccountNameComplete()
+                }
+                else{
+                    $("#body_details_subaccount").html("")
+                    $("#modal_subaccount").modal("hide");
+                }
+            }
+            function refreshGrid(){
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+
+            $('#txt_search_sub_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                if ($('#txt_search_sub_account').val().length > 0) {
+                        ISfn.applyFilter("AccountChildName", $('#txt_search_sub_account').val(), 'grid_COA_sub')
+                        //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                    }
+                    else {
+                        gridData.dataSource.filter({});
+                    }
+                //}
+            })
+
+            function param_grid_COA_sub() {
+                return { chartAccountID: chartAccountID};
+            }
+
+            function view_subChildAccount(ChartAccountChildID, AccountChildName,code,childcode,AccountChildParentID) {
+                lvlid = parseInt(lvlid) + 1;
+
+                arrayID[lvlid] = ChartAccountChildID
+                arrayName[lvlid] = AccountChildName
+                arrayChildCode[lvlid] = childcode
+                chartAccountID =ChartAccountChildID;
+                //$("#h_subaccount_id").html(childcode)
+                removeSearch();
+                refreshGrid();
+                getAccountNameComplete()
+            }
+            
+            function removeSearch(){
+                $('#txt_search_sub_account').val('');
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                gridData.dataSource.filter({});
+            }
+        </script>
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_ChartOfAccountsChild>()
+            .Name("grid_COA_sub")
+            .Columns(columns =>
+            {
+                columns.Bound(m => m.code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(m => m.AccountChildName).Width(400);
+                columns.Bound("").Width(150).Title("Beginning Balance");
+                columns.Template(@<text></text>)
+                .Width(100)
+                .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"view_subChildAccount(#=ChartAccountChildID#, '#=AccountChildName#','#=code#','#=ChildCode#',#=AccountChildParentID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-list\"></i></button> <button data-original-title=\"recompute\" type=\"button\" onclick=\"edit_subaccount(#=ChartAccountChildID#,'#=AccountChildParentID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+            })
+            .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single))
+            .AutoBind(true)
+            .HtmlAttributes(new { style = "height: 400px;" })
+            .Scrollable()
+            .Sortable()
+            .Pageable(pageable => pageable
+            .Refresh(true)
+            .ButtonCount(5))
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Read(read => read.Action("COA_read", "ChartOfAccounts").Data("param_grid_COA_sub"))
+                .PageSize(200)
+            )
+            )
+        </div>
+    </div>
+</div>
+<script>
+    function edit_subaccount(ChartAccountChildID,AccountChildParentID) {
+
+        startSpin()
+        $.post('@Url.Action("_partial_view_subaccount_edit", "ChartOfAccounts")', { ChartAccountChildID: ChartAccountChildID,AccountChildParentID:AccountChildParentID}, function (r) {
+            stopSpin()
+            $("#h_subaccount_edit_id").html("Update Sub Account");
+            $("#body_details_subaccount_edit").html(r)
+            $("#modal_subaccount_edit").modal("show");
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            toastr.warning("Access to your network is not currently available.", 'Problem Connecting');
+        });
+    }
+
+    function closeEditAccount(){
+        $("#body_details_subaccount_edit").html("")
+        $("#modal_subaccount_edit").modal("hide");
+    }
+</script>
+<style>
+    /*.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialogs {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}*/
+</style>
+<div class="modal" id="modal_subaccount_edit" data-backdrop="false" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="closeEditAccount()"  aria-hidden="true">X</button>
+                <h4 id="h_subaccount_edit_id" class="modal-title"></h4>
+            </div>
+            <div id="body_details_subaccount_edit" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button id="id_savecoa" onclick="saveCOA()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button id="id_deletecoa" onclick="deleteCOA()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                <button type="button" onclick="closeEditAccount()" class="btn btn-default">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

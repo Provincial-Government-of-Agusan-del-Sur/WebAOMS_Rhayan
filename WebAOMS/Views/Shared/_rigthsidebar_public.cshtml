@@ -1,0 +1,66 @@
+﻿@{
+    if (WebAOMS.Base.USERMENU_public.items == null)
+    {
+        return;
+    }
+    var menu = WebAOMS.Base.USERMENU_public.items.Where(M => M.parent_id == 0).OrderBy(M => M.Ordering);
+}
+<div class="sidebar-content">
+    <div class="nav-brand">
+        <a class="main-brand" href="">
+            <h3 class="text-light text-white"><span><strong>@ViewBag.rightSidebar_title</strong> </span></h3>
+        </a>
+    </div>
+    <!-- BEGIN MENU SEARCH -->
+    <form class="sidebar-search" role="search">
+        <a href="#"><i class="fa fa-search fa-fw search-icon"></i><i class="fa fa-angle-left fa-fw close-icon"></i></a>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control navbar-input" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+                
+            </div>
+        </div>
+    </form>
+    <ul id="menuNav" class="main-menu">
+        @{
+            foreach (var rw in menu)
+            {
+                int? parentid = rw.menu_id;
+                string strmenu_id;
+                strmenu_id = "a" + rw.menu_id.ToString();
+                var menuitem = WebAOMS.Base.USERMENU_public.items.Where(M => M.parent_id == parentid).OrderBy(M => M.Ordering).ToList();
+                <li>
+
+                    @if (rw.Actions == "none")
+                    {
+                        <a id="@strmenu_id" href="#"><i class="@rw.IconName"></i><span class="title">@rw.MenuName</span> <span class="expand-sign">+</span></a>
+                    }
+                    else
+                    {
+                        <a id="@strmenu_id" href="@Url.Action(rw.Actions, rw.Controller)"> <i class="@rw.IconName"></i><span class="title">@rw.MenuName</span></a>
+                    }
+                    @if (menuitem.Count > 0)
+                    {
+                        <ul>
+                            @foreach (var item in menuitem)
+                            {
+                                strmenu_id = "a" + item.menu_id.ToString();
+
+                                if (item.menu_id > 0)
+                                {
+                                    <li><a id="@strmenu_id" href="@Url.Action(item.Actions, item.Controller)">@item.MenuName</a></li>
+                                }
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        }
+    </ul>
+</div>
+<script>
+        $("#@ViewBag.menuid").addClass("active");
+</script>

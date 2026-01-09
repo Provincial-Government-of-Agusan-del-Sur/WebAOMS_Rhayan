@@ -1,0 +1,3598 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Collection" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Deposits" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="PTVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Acountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="NatureofPayment" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>CASH RECEIPTS JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of July, 2020</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevid>281748</jevid>
+    <Date_>06/29/2020</Date_>
+    <JEVNo>301-20-07-01-0001</JEVNo>
+    <Collection>380.0000</Collection>
+    <Deposits>380.0000</Deposits>
+    <Rdono>2020-06-12-PAB-2471</Rdono>
+    <Particular>RCD 6/29/2020 with RDONO 2020-06-12-PAB-2471 
+or# 8866667 clemente palad mut june 2020 (80.00)
+or# 8866681 zenaida diaz mut june to dec 2020 (300.00)
+</Particular>
+    <PTVno>301-20-06-0022-2471</PTVno>
+    <Debit>380.0000</Debit>
+    <Acountcode>10102010-6840-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-15T00:00:00+08:00</Jevdate>
+    <Gamount>380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281748</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>380.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-15T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281755</jevid>
+    <Date_>06/26/2020</Date_>
+    <JEVNo>301-20-07-01-0002</JEVNo>
+    <Collection>30660.0000</Collection>
+    <Deposits>30660.0000</Deposits>
+    <Rdono>2020-06-11-PAB-2471</Rdono>
+    <Particular>RCD 6/26/2020 with RDONO 2020-06-11-PAB-2471
+or# 8863850 pt-ads mut jan-feb 2020 (520.00)
+or# 8866651 pt-ads mut may 2020 (340.00)
+or# 8866652 pt-ads mut casual may 2020 (29,690)
+or# 8866653 pt-ads mut april 2020 (110.00)
+</Particular>
+    <PTVno>301-20-06-0021-2471</PTVno>
+    <Debit>30660.0000</Debit>
+    <Acountcode>10102010-6840-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-15T00:00:00+08:00</Jevdate>
+    <Gamount>30660.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281755</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>30660.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-15T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>30660.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281758</jevid>
+    <Date_>07/10/2020</Date_>
+    <JEVNo>301-20-07-01-0003</JEVNo>
+    <Collection>9886731.3400</Collection>
+    <Deposits>9886731.3400</Deposits>
+    <Rdono>2020-07-1-PAB-36096</Rdono>
+    <Particular>RCD 7/10/2020 with RDONO 2020-07-1-PAB-36096
+or# 8866682 PRDP-PSO 85.82% accomplishment of 103,307,338.33 representing 80% lp share for the concreting mahapag doña maxima fmr. (9,8886,731.34)</Particular>
+    <PTVno>301-20-07-0001-36096</PTVno>
+    <Debit>9886731.3400</Debit>
+    <Acountcode>10102010-6840-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>9886731.3400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281758</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9886731.3400</Credit>
+    <Acountcode>20201050-2-37-1-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>9886731.3400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281760</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0004</JEVNo>
+    <Collection>46117.0000</Collection>
+    <Deposits>46117.0000</Deposits>
+    <Rdono>2020-07-2-PAB-2501</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-2-PAB-2501
+lhsd-bdh</Particular>
+    <PTVno>301-20-07-0004-2501</PTVno>
+    <Debit>46117.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>46117.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281760</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>46117.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>46117.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281778</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0005</JEVNo>
+    <Collection>57472.0000</Collection>
+    <Deposits>57472.0000</Deposits>
+    <Rdono>2020-07-1-PAB-2501</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-1-PAB-2501
+lhsd-bdh</Particular>
+    <PTVno>301-20-07-0002-2501</PTVno>
+    <Debit>57472.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>57472.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281778</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>57472.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>57472.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281780</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0006</JEVNo>
+    <Collection>66757.0000</Collection>
+    <Deposits>66757.0000</Deposits>
+    <Rdono>2020-06-9-PAB-2501</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-9-PAB-2501
+lhsd-bdh</Particular>
+    <PTVno>301-20-07-0001-2501</PTVno>
+    <Debit>66757.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>66757.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>66757.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>66757.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281897</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0007</JEVNo>
+    <Collection>144.0000</Collection>
+    <Deposits>144.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36068</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-1-PAB-36068
+phrtf-bdh</Particular>
+    <PTVno>301-20-07-0001-36068</PTVno>
+    <Debit>144.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>144.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0007</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281897</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>144.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>144.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0007</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281900</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0008</JEVNo>
+    <Collection>414.0000</Collection>
+    <Deposits>414.0000</Deposits>
+    <Rdono>2020-07-2-PAB-36068</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-2-PAB-36068
+phrtf-bdh</Particular>
+    <PTVno>301-20-07-0002-36068</PTVno>
+    <Debit>414.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>414.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0008</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281900</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>414.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>414.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0008</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281901</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0009</JEVNo>
+    <Collection>6149.0000</Collection>
+    <Deposits>6149.0000</Deposits>
+    <Rdono>2020-07-2-PAB-36105</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-2-PAB-36105
+bdh-prof</Particular>
+    <PTVno>301-20-07-0003-36105</PTVno>
+    <Debit>6149.0000</Debit>
+    <Acountcode>10102010-6840-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>6149.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0009</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281901</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6149.0000</Credit>
+    <Acountcode>20401010-8-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6149.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0009</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281903</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0010</JEVNo>
+    <Collection>2300.0000</Collection>
+    <Deposits>2300.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36105</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-1-PAB-36105
+bdh-prof</Particular>
+    <PTVno>301-20-07-0002-36105</PTVno>
+    <Debit>2300.0000</Debit>
+    <Acountcode>10102010-6840-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>2300.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0010</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281903</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2300.0000</Credit>
+    <Acountcode>20401010-8-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>2300.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0010</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281904</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0011</JEVNo>
+    <Collection>4870.0000</Collection>
+    <Deposits>4870.0000</Deposits>
+    <Rdono>2020-06-9-PAB-36105</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-9-PAB-36105
+bdh-prof</Particular>
+    <PTVno>301-20-07-0001-36105</PTVno>
+    <Debit>4870.0000</Debit>
+    <Acountcode>10102010-6840-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4870.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281904</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4870.0000</Credit>
+    <Acountcode>20401010-8-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4870.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281905</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0012</JEVNo>
+    <Collection>502.0000</Collection>
+    <Deposits>502.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36066</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-1-PAB-36066
+ec-bdh</Particular>
+    <PTVno>301-20-07-0001-36066</PTVno>
+    <Debit>502.0000</Debit>
+    <Acountcode>10102010-505-301-41</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>502.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281905</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>502.0000</Credit>
+    <Acountcode>20401010-31</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>502.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281907</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0013</JEVNo>
+    <Collection>1627.0000</Collection>
+    <Deposits>1627.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36065</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-1-PAB-36065
+ec-emch</Particular>
+    <PTVno>301-20-07-0001-36065</PTVno>
+    <Debit>1627.0000</Debit>
+    <Acountcode>10102010-505-301-41</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1627.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281907</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1627.0000</Credit>
+    <Acountcode>20401010-31</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1627.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281908</jevid>
+    <Date_>07/09/2020</Date_>
+    <JEVNo>301-20-07-01-0014</JEVNo>
+    <Collection>1270.0000</Collection>
+    <Deposits>1270.0000</Deposits>
+    <Rdono>2020-07-2-PAB-36065</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-2-PAB-36065
+ec-emch</Particular>
+    <PTVno>301-20-07-0002-36065</PTVno>
+    <Debit>1270.0000</Debit>
+    <Acountcode>10102010-505-301-41</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1270.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281908</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1270.0000</Credit>
+    <Acountcode>20401010-31</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1270.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281910</jevid>
+    <Date_>07/10/2020</Date_>
+    <JEVNo>301-20-07-01-0015</JEVNo>
+    <Collection>301672.0000</Collection>
+    <Deposits>301672.0000</Deposits>
+    <Rdono>2020-07-3-PAB-2500</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-3-PAB-2500
+lhsd-emch</Particular>
+    <PTVno>301-20-07-0005-2500</PTVno>
+    <Debit>301672.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>301672.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281910</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>301672.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>301672.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281911</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0016</JEVNo>
+    <Collection>4925.0000</Collection>
+    <Deposits>4925.0000</Deposits>
+    <Rdono>2020-07-2-PAB-2500</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-2-PAB-2500
+lhsd-emch</Particular>
+    <PTVno>301-20-07-0004-2500</PTVno>
+    <Debit>4925.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4925.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0016</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281911</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4925.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4925.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0016</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281913</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0017</JEVNo>
+    <Collection>6867.0000</Collection>
+    <Deposits>6867.0000</Deposits>
+    <Rdono>2020-07-1-PAB-2500</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-1-PAB-2500
+lhsd-emch</Particular>
+    <PTVno>301-20-07-0003-2500</PTVno>
+    <Debit>6867.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>6867.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281913</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6867.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6867.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281914</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0018</JEVNo>
+    <Collection>5360.0000</Collection>
+    <Deposits>5360.0000</Deposits>
+    <Rdono>2020-06-11-PAB-2500</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-11-PAB-2500
+lhsd-emch</Particular>
+    <PTVno>301-20-07-0001-2500</PTVno>
+    <Debit>5360.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>5360.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281914</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5360.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>5360.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281915</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0019</JEVNo>
+    <Collection>4860.0000</Collection>
+    <Deposits>4860.0000</Deposits>
+    <Rdono>2020-06-37-PAB-36097</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-37-PAB-36097
+bdh-consignment</Particular>
+    <PTVno>301-20-07-0001-36097</PTVno>
+    <Debit>4860.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4860.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0019</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281915</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4860.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4860.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0019</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281916</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0020</JEVNo>
+    <Collection>21992.0000</Collection>
+    <Deposits>21992.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36097</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-1-PAB-36097
+con-dop</Particular>
+    <PTVno>301-20-07-0003-36097</PTVno>
+    <Debit>21992.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>21992.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0020</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281916</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>21992.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>21992.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0020</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281917</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0021</JEVNo>
+    <Collection>2143264.0100</Collection>
+    <Deposits>2143264.0100</Deposits>
+    <Rdono>2020-07-2-PAB-36097</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-2-PAB-36097
+con-dop
+or# 8655088 pt-ads fund transfer from dop phic acps lbp ca 0972-1276-55 to dop dbp ca 0845-03919D-080 (1,046,562.03)
+or# 8655089 pt-ads fund transfer from dop phic acps- lbp ca 0972-1276-55 to dop dbp 0845-03919D-080 con (1,096,701.98)</Particular>
+    <PTVno>301-20-07-0004-36097</PTVno>
+    <Debit>2143264.0100</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>2143264.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0021</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281917</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2143264.0100</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>2143264.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0021</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281919</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0022</JEVNo>
+    <Collection>1014450.0000</Collection>
+    <Deposits>1014450.0000</Deposits>
+    <Rdono>2020-07-3-PAB-36097</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-3-PAB-36097
+bdh-con
+or# 8655092 pt-ads transfer of fund from bdh phic acpsa med 09721277-10 to dbp 0845-03919D-080 (1,014,450.00)</Particular>
+    <PTVno>301-20-07-0005-36097</PTVno>
+    <Debit>1014450.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1014450.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0022</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281919</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1014450.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1014450.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0022</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281920</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0023</JEVNo>
+    <Collection>7874.0000</Collection>
+    <Deposits>7874.0000</Deposits>
+    <Rdono>2020-07-4-PAB-36097</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-4-PAB-36097
+CON-DOP</Particular>
+    <PTVno>301-20-07-0006-36097</PTVno>
+    <Debit>7874.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>7874.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0023</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281920</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7874.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>7874.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0023</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281925</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0024</JEVNo>
+    <Collection>12526.0000</Collection>
+    <Deposits>12526.0000</Deposits>
+    <Rdono>2020-07-5-PAB-36097</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-5-PAB-36097
+CON-BDH</Particular>
+    <PTVno>301-20-07-0009-36097</PTVno>
+    <Debit>12526.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>12526.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0024</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281925</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12526.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>12526.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0024</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281927</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0025</JEVNo>
+    <Collection>7531.0000</Collection>
+    <Deposits>7531.0000</Deposits>
+    <Rdono>2020-07-6-PAB-36097</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-6-PAB-36097
+CON-DOP</Particular>
+    <PTVno>301-20-07-0011-36097</PTVno>
+    <Debit>7531.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>7531.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0025</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281927</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7531.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>7531.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0025</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281929</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0026</JEVNo>
+    <Collection>25415.0000</Collection>
+    <Deposits>25415.0000</Deposits>
+    <Rdono>2020-07-7-PAB-36097</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-7-PAB-36097
+CON-DOP</Particular>
+    <PTVno>301-20-07-0012-36097</PTVno>
+    <Debit>25415.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>25415.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0026</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281929</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>25415.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>25415.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0026</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281930</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0027</JEVNo>
+    <Collection>7411.0000</Collection>
+    <Deposits>7411.0000</Deposits>
+    <Rdono>2020-07-8-PAB-36097</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-8-PAB-36097
+CON-BDH</Particular>
+    <PTVno>301-20-07-0013-36097</PTVno>
+    <Debit>7411.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>7411.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281930</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7411.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>7411.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281931</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0028</JEVNo>
+    <Collection>14182.0000</Collection>
+    <Deposits>14182.0000</Deposits>
+    <Rdono>2020-07-9-PAB-36097</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-9-PAB-36097
+CON-DOP</Particular>
+    <PTVno>301-20-07-0014-36097</PTVno>
+    <Debit>14182.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>14182.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281931</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>14182.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>14182.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281935</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0029</JEVNo>
+    <Collection>10572.0000</Collection>
+    <Deposits>10572.0000</Deposits>
+    <Rdono>2020-07-10-PAB-36097</Rdono>
+    <Particular>RCD 7/8/2020 with RDONO 2020-07-10-PAB-36097
+DOP-CON</Particular>
+    <PTVno>301-20-07-0016-36097</PTVno>
+    <Debit>10572.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>10572.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281935</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10572.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>10572.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281936</jevid>
+    <Date_>07/09/2020</Date_>
+    <JEVNo>301-20-07-01-0030</JEVNo>
+    <Collection>10082.0000</Collection>
+    <Deposits>10082.0000</Deposits>
+    <Rdono>2020-07-11-PAB-36097</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-11-PAB-36097
+CON-DOP</Particular>
+    <PTVno>301-20-07-0020-36097</PTVno>
+    <Debit>10082.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>10082.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281936</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10082.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>10082.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281937</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0031</JEVNo>
+    <Collection>14640.0000</Collection>
+    <Deposits>14640.0000</Deposits>
+    <Rdono>2020-07-4-PAB-2821</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-4-PAB-2821
+PVBDS</Particular>
+    <PTVno>301-20-07-0004-2821</PTVno>
+    <Debit>14640.0000</Debit>
+    <Acountcode>10102010-505-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>14640.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281937</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>14640.0000</Credit>
+    <Acountcode>20401010-22</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>14640.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281950</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0032</JEVNo>
+    <Collection>4500.0000</Collection>
+    <Deposits>4500.0000</Deposits>
+    <Rdono>2020-07-5-PAB-2821</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-5-PAB-2821
+pvbds</Particular>
+    <PTVno>301-20-07-0005-2821</PTVno>
+    <Debit>4500.0000</Debit>
+    <Acountcode>10102010-505-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281950</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4500.0000</Credit>
+    <Acountcode>20401010-22</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281951</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0033</JEVNo>
+    <Collection>6600.0000</Collection>
+    <Deposits>6600.0000</Deposits>
+    <Rdono>2020-07-1-PAB-2821</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-1-PAB-2821
+pvbds</Particular>
+    <PTVno>301-20-07-0001-2821</PTVno>
+    <Debit>6600.0000</Debit>
+    <Acountcode>10102010-505-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>6600.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281951</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6600.0000</Credit>
+    <Acountcode>20401010-22</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6600.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281952</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0034</JEVNo>
+    <Collection>122800.0000</Collection>
+    <Deposits>122800.0000</Deposits>
+    <Rdono>2020-07-2-PAB-2821</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-2-PAB-2821
+pvbds</Particular>
+    <PTVno>301-20-07-0002-2821</PTVno>
+    <Debit>122800.0000</Debit>
+    <Acountcode>10102010-505-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>122800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0034</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281952</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>122800.0000</Credit>
+    <Acountcode>20401010-22</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>122800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0034</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281953</jevid>
+    <Date_>07/10/2020</Date_>
+    <JEVNo>301-20-07-01-0035</JEVNo>
+    <Collection>3773.0000</Collection>
+    <Deposits>3773.0000</Deposits>
+    <Rdono>2020-07-13-PAB-36097</Rdono>
+    <Particular>RCD 7/10/2020 with RDONO 2020-07-13-PAB-36097
+con-dop</Particular>
+    <PTVno>301-20-07-0022-36097</PTVno>
+    <Debit>3773.0000</Debit>
+    <Acountcode>10102010-505-301-61</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>3773.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281953</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3773.0000</Credit>
+    <Acountcode>20401010-21</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>3773.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281954</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0036</JEVNo>
+    <Collection>191731.5600</Collection>
+    <Deposits>191731.5600</Deposits>
+    <Rdono>2020-07-1-PAB-36064</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-1-PAB-36064
+dopmh-ec
+or# 8655091 pt-ads fund transfer from dop phic acps 0972-1276-55 to dop 0845-026-290-080 ec (191,731.56)</Particular>
+    <PTVno>301-20-07-0001-36064</PTVno>
+    <Debit>191731.5600</Debit>
+    <Acountcode>10102010-505-301-41</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>191731.5600</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0036</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281954</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>191731.5600</Credit>
+    <Acountcode>20401010-31</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>191731.5600</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0036</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281955</jevid>
+    <Date_>07/09/2020</Date_>
+    <JEVNo>301-20-07-01-0037</JEVNo>
+    <Collection>4574.0000</Collection>
+    <Deposits>4574.0000</Deposits>
+    <Rdono>2020-07-6-PAB-2468</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-6-PAB-2468
+phrtf-dop</Particular>
+    <PTVno>301-20-07-0023-2468</PTVno>
+    <Debit>4574.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4574.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281955</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4574.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4574.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281956</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0038</JEVNo>
+    <Collection>4676.0000</Collection>
+    <Deposits>4676.0000</Deposits>
+    <Rdono>2020-07-5-PAB-2468</Rdono>
+    <Particular>RCD 7/8/2020 with RDONO 2020-07-5-PAB-2468
+phrtf-dop</Particular>
+    <PTVno>301-20-07-0022-2468</PTVno>
+    <Debit>4676.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4676.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281956</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4676.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4676.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281957</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0039</JEVNo>
+    <Collection>1750.0000</Collection>
+    <Deposits>1750.0000</Deposits>
+    <Rdono>2020-07-4-PAB-2468</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-4-PAB-2468
+phrtf-dop</Particular>
+    <PTVno>301-20-07-0020-2468</PTVno>
+    <Debit>1750.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1750.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281957</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1750.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1750.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281958</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0040</JEVNo>
+    <Collection>1942.0000</Collection>
+    <Deposits>1942.0000</Deposits>
+    <Rdono>2020-07-3-PAB-2468</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-3-PAB-2468
+phrtf-dop</Particular>
+    <PTVno>301-20-07-0017-2468</PTVno>
+    <Debit>1942.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1942.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281958</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1942.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1942.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281959</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0041</JEVNo>
+    <Collection>299.0000</Collection>
+    <Deposits>299.0000</Deposits>
+    <Rdono>2020-07-2-PAB-2468</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-2-PAB-2468
+phrtf-dop</Particular>
+    <PTVno>301-20-07-0015-2468</PTVno>
+    <Debit>299.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>299.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281959</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>299.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>299.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281960</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0042</JEVNo>
+    <Collection>1065.0000</Collection>
+    <Deposits>1065.0000</Deposits>
+    <Rdono>2020-07-1-PAB-2468</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-1-PAB-2468
+phrtf-dop</Particular>
+    <PTVno>301-20-07-0012-2468</PTVno>
+    <Debit>1065.0000</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1065.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0042</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281960</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1065.0000</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1065.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0042</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281961</jevid>
+    <Date_>07/10/2020</Date_>
+    <JEVNo>301-20-07-01-0043</JEVNo>
+    <Collection>3175.0000</Collection>
+    <Deposits>3175.0000</Deposits>
+    <Rdono>2020-07-8-PAB-2499</Rdono>
+    <Particular>RCD 7/10/2020 with RDONO 2020-07-8-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0011-2499</PTVno>
+    <Debit>3175.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>3175.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0043</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281961</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3175.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>3175.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0043</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281962</jevid>
+    <Date_>07/09/2020</Date_>
+    <JEVNo>301-20-07-01-0044</JEVNo>
+    <Collection>468.0000</Collection>
+    <Deposits>468.0000</Deposits>
+    <Rdono>2020-07-7-PAB-2499</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-7-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0010-2499</PTVno>
+    <Debit>468.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>468.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0044</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281962</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>468.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>468.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0044</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281963</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0045</JEVNo>
+    <Collection>7666.0000</Collection>
+    <Deposits>7666.0000</Deposits>
+    <Rdono>2020-07-6-PAB-2499</Rdono>
+    <Particular>RCD 7/8/2020 with RDONO 2020-07-6-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0008-2499</PTVno>
+    <Debit>7666.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>7666.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0045</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281963</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7666.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>7666.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0045</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281964</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0046</JEVNo>
+    <Collection>2360.0000</Collection>
+    <Deposits>2360.0000</Deposits>
+    <Rdono>2020-07-5-PAB-2499</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-5-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0007-2499</PTVno>
+    <Debit>2360.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>2360.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0046</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281964</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2360.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>2360.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0046</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281965</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0047</JEVNo>
+    <Collection>13667.0000</Collection>
+    <Deposits>13667.0000</Deposits>
+    <Rdono>2020-07-4-PAB-2499</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-4-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0006-2499</PTVno>
+    <Debit>13667.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>13667.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0047</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281965</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>13667.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>13667.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0047</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281966</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0048</JEVNo>
+    <Collection>1499.0000</Collection>
+    <Deposits>1499.0000</Deposits>
+    <Rdono>2020-07-3-PAB-2499</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-3-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0005-2499</PTVno>
+    <Debit>1499.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>1499.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0048</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281966</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1499.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>1499.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0048</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281967</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0049</JEVNo>
+    <Collection>160.0000</Collection>
+    <Deposits>160.0000</Deposits>
+    <Rdono>2020-07-2-PAB-2499</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-2-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0004-2499</PTVno>
+    <Debit>160.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>160.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0049</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281967</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>160.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>160.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0049</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281968</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0050</JEVNo>
+    <Collection>6556.0000</Collection>
+    <Deposits>6556.0000</Deposits>
+    <Rdono>2020-07-1-PAB-2499</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-1-PAB-2499
+lhsd-dop</Particular>
+    <PTVno>301-20-07-0002-2499</PTVno>
+    <Debit>6556.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>6556.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0050</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281968</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6556.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6556.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0050</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281969</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0051</JEVNo>
+    <Collection>31250.0000</Collection>
+    <Deposits>31250.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36053</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-1-PAB-36053
+or# 8655087 pt- diesoline peso (31,250.00)</Particular>
+    <PTVno>301-20-07-0001-36053</PTVno>
+    <Debit>31250.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>31250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0051</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281969</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>31250.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>31250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0051</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281970</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0052</JEVNo>
+    <Collection>200609.3800</Collection>
+    <Deposits>200609.3800</Deposits>
+    <Rdono>2020-07-2-PAB-36053</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-2-PAB-36053
+or# 8861280 pt-pgso payment diesoline &amp; etc.( 109,331.68)
+or# 8861281 pt-pdrrmo diesoline &amp; etc. (10,728.00)
+or# 8861282 pt-ldrrmf diesoline &amp; etc (36,936.00)
+or# 8861283 pt-pto diesoline &amp; etc. (43,613.70)</Particular>
+    <PTVno>301-20-07-0002-36053</PTVno>
+    <Debit>200609.3800</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>200609.3800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0052</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281970</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>200609.3800</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>200609.3800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0052</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281971</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0053</JEVNo>
+    <Collection>512919.5900</Collection>
+    <Deposits>512919.5900</Deposits>
+    <Rdono>2020-07-3-PAB-36053</Rdono>
+    <Particular>RCD 7/8/2020 with RDONO 2020-07-3-PAB-36053
+diesoline
+or# 8861295 pt-pgo deisoline &amp;etc. (88,500.00)
+or# 8861296 pt-pgo/sure deisoline (27,575.00)
+or# 8861297 pt-pasto deisoline &amp; etc. (40,000.00)
+or# 8861298 pt-pdrrmd disoline &amp;etc (2,580.00)
+or# 8861299 t-pdrrmo diesoline (1000)
+or# 8861300 pt-tdh diesoline &amp; etc (90,000.00)
+or# 8864451 pt-ppdo diesoline &amp; etc (135,843.75)
+or# 8864452 pt-phrmo diesoline &amp;etc (29,999.84)
+or# 8864453 pt-pho diesoline &amp; etc (50,000.00)
+or# 8864451 pt- pgo/sure diesoline (47,421.00)
+</Particular>
+    <PTVno>301-20-07-0003-36053</PTVno>
+    <Debit>512919.5900</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>512919.5900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0053</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281971</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>512919.5900</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>512919.5900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0053</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281972</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0054</JEVNo>
+    <Collection>150.0000</Collection>
+    <Deposits>150.0000</Deposits>
+    <Rdono>2020-07-3-PAB-36115</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-3-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0004-36115</PTVno>
+    <Debit>150.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0054</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281972</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>150.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0054</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281973</jevid>
+    <Date_>07/09/2020</Date_>
+    <JEVNo>301-20-07-01-0055</JEVNo>
+    <Collection>210.0000</Collection>
+    <Deposits>210.0000</Deposits>
+    <Rdono>2020-07-6-PAB-36115</Rdono>
+    <Particular>RCD 7/8/2020 with RDONO 2020-07-6-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0007-36115</PTVno>
+    <Debit>210.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>210.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0055</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281973</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>210.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>210.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0055</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281974</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0056</JEVNo>
+    <Collection>240.0000</Collection>
+    <Deposits>240.0000</Deposits>
+    <Rdono>2020-07-5-PAB-36115</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-5-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0006-36115</PTVno>
+    <Debit>240.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>240.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0056</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281974</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>240.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>240.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0056</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281975</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0057</JEVNo>
+    <Collection>150.0000</Collection>
+    <Deposits>150.0000</Deposits>
+    <Rdono>2020-07-4-PAB-36115</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-4-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0005-36115</PTVno>
+    <Debit>150.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0057</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281975</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>150.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0057</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281976</jevid>
+    <Date_>07/10/2020</Date_>
+    <JEVNo>301-20-07-01-0058</JEVNo>
+    <Collection>150.0000</Collection>
+    <Deposits>150.0000</Deposits>
+    <Rdono>2020-07-7-PAB-36115</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-7-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0008-36115</PTVno>
+    <Debit>150.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0058</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281976</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>150.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0058</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281977</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0059</JEVNo>
+    <Collection>240.0000</Collection>
+    <Deposits>240.0000</Deposits>
+    <Rdono>2020-07-2-PAB-36115</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-2-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0003-36115</PTVno>
+    <Debit>240.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>240.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0059</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281977</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>240.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>240.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0059</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281978</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0060</JEVNo>
+    <Collection>120.0000</Collection>
+    <Deposits>120.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36115</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-1-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0002-36115</PTVno>
+    <Debit>120.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>120.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0060</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281978</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>120.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>120.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0060</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281979</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0061</JEVNo>
+    <Collection>150.0000</Collection>
+    <Deposits>150.0000</Deposits>
+    <Rdono>2020-06-19-PAB-36115</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-19-PAB-36115
+doc.stamp</Particular>
+    <PTVno>301-20-07-0001-36115</PTVno>
+    <Debit>150.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0061</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281979</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>150.0000</Credit>
+    <Acountcode>20201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>150.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0061</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281980</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0062</JEVNo>
+    <Collection>956.0000</Collection>
+    <Deposits>956.0000</Deposits>
+    <Rdono>2020-07-1-PAB-36067</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-1-PAB-36067
+ec-loreto</Particular>
+    <PTVno>301-20-07-0001-36067</PTVno>
+    <Debit>956.0000</Debit>
+    <Acountcode>10102010-505-301-41</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>956.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0062</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281980</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>956.0000</Credit>
+    <Acountcode>20401010-31</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>956.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0062</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281981</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0063</JEVNo>
+    <Collection>4051.7400</Collection>
+    <Deposits>4051.7400</Deposits>
+    <Rdono>2020-07-1-PAB-36070</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-1-PAB-36070
+phrtf-loreto</Particular>
+    <PTVno>301-20-07-0001-36070</PTVno>
+    <Debit>4051.7400</Debit>
+    <Acountcode>10102010-6840-301-25</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>4051.7400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0063</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281981</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4051.7400</Credit>
+    <Acountcode>20401010-76</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>4051.7400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0063</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281982</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0064</JEVNo>
+    <Collection>12287.4000</Collection>
+    <Deposits>12287.4000</Deposits>
+    <Rdono>2020-07-1-PAB-2502</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-1-PAB-2502
+lhsd-loreto</Particular>
+    <PTVno>301-20-07-0001-2502</PTVno>
+    <Debit>12287.4000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>12287.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0064</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281982</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12287.4000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>12287.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0064</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281983</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0065</JEVNo>
+    <Collection>17182.0000</Collection>
+    <Deposits>17182.0000</Deposits>
+    <Rdono>2020-07-2-PAB-23438</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-2-PAB-23438
+lhsd-tdh</Particular>
+    <PTVno>301-20-07-0003-23438</PTVno>
+    <Debit>17182.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>17182.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0065</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281983</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>17182.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>17182.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0065</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281984</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0066</JEVNo>
+    <Collection>8643.0000</Collection>
+    <Deposits>8643.0000</Deposits>
+    <Rdono>2020-07-1-PAB-23438</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-1-PAB-23438
+lhsd-tdh</Particular>
+    <PTVno>301-20-07-0002-23438</PTVno>
+    <Debit>8643.0000</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>8643.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0066</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281984</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8643.0000</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>8643.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0066</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281985</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0067</JEVNo>
+    <Collection>15294.4200</Collection>
+    <Deposits>15294.4200</Deposits>
+    <Rdono>2020-06-9-PAB-23438</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-9-PAB-23438
+lhsd-tdh</Particular>
+    <PTVno>301-20-07-0001-23438</PTVno>
+    <Debit>15294.4200</Debit>
+    <Acountcode>10102010-6840-301-23</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>15294.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0067</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281985</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>15294.4200</Credit>
+    <Acountcode>20401010-47</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>15294.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0067</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281988</jevid>
+    <Date_>07/10/2020</Date_>
+    <JEVNo>301-20-07-01-0068</JEVNo>
+    <Collection>153563.5000</Collection>
+    <Deposits>153563.5000</Deposits>
+    <Rdono>2020-07-11-PAB-527</Rdono>
+    <Particular>RCD 7/9/2020 with RDONO 2020-07-11-PAB-527
+accountable form (2073.50)
+or#v 8864455 jnk meical sales ferformance bond  (142,500)
+or# 8864457 rca drugs &amp; med supply bid docs (4,000.00)
+or# 8864458 lzvra gen.mdse biddocs (2000)
+or#8864459 m.t san francisco ads vtf may 2020 (3,490.00)
+or# 8864462 dream team venture biddocs (500)
+</Particular>
+    <PTVno>301-20-07-0017-527</PTVno>
+    <Debit>153563.5000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>153563.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0068</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281988</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6500.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>153563.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0068</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281988</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2073.5000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>153563.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0068</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281988</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2490.0000</Credit>
+    <Acountcode>20401010-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>153563.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0068</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281988</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>142500.0000</Credit>
+    <Acountcode>20401040-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>153563.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0068</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281990</jevid>
+    <Date_>07/09/2020</Date_>
+    <JEVNo>301-20-07-01-0069</JEVNo>
+    <Collection>6414.0000</Collection>
+    <Deposits>6414.0000</Deposits>
+    <Rdono>2020-07-10-PAB-527</Rdono>
+    <Particular>RCD 7/8/2020 with RDONO 2020-07-10-PAB-527
+accountable form (1914)
+or# 8861292 anb pharmaceuticals bid docs (1000)
+or# 8861293 anb bid docs (500)
+or# 8861294 anb bid docs (500)
+or# 8653409 maximino orozco payment prpha (2500.00)
+</Particular>
+    <PTVno>301-20-07-0015-527</PTVno>
+    <Debit>6414.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>6414.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0069</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281990</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4500.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6414.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0069</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281990</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1914.0000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6414.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0069</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281992</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0070</JEVNo>
+    <Collection>19994.3700</Collection>
+    <Deposits>19994.3700</Deposits>
+    <Rdono>2020-07-9-PAB-527</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-9-PAB-527
+accountable form (14,465.00)
+or# 8861277 nestor batisting payment prpha april-dec 2020
+jan-dec 2021 jan-dec 2022 jan-dec 2023 (5,529.37)
+</Particular>
+    <PTVno>301-20-07-0011-527</PTVno>
+    <Debit>19994.3700</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>19994.3700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0070</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281992</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5529.3700</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>19994.3700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0070</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281992</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>14465.0000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>19994.3700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0070</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281995</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0071</JEVNo>
+    <Collection>77396.0000</Collection>
+    <Deposits>77396.0000</Deposits>
+    <Rdono>2020-07-7-PAB-527</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-7-PAB-527
+accountable form (77,396.00)</Particular>
+    <PTVno>301-20-07-0009-527</PTVno>
+    <Debit>77396.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>77396.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0071</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281995</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>77396.0000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>77396.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0071</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281996</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0072</JEVNo>
+    <Collection>35792.5500</Collection>
+    <Deposits>35792.5500</Deposits>
+    <Rdono>2020-07-5-PAB-527</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-5-PAB-527
+accountable form (1754.50)
+or# 8866423 agnes roldan/ rica drugs &amp; mde supply performance bond (11,347.33)
+or# 8866424 agnes roldan / rica drugs &amp;med supply performance bond (21,240.72)
+or# 8655096 everyday ent bid docs (1,000.00)
+or# 8655097 feg gen.mdse bid dosc (450)
+</Particular>
+    <PTVno>301-20-07-0007-527</PTVno>
+    <Debit>35792.5500</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>35792.5500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0072</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281996</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1450.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>35792.5500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0072</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281996</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1754.5000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>35792.5500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0072</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281996</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>32588.0500</Credit>
+    <Acountcode>20401040-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>35792.5500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0072</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281997</jevid>
+    <Date_>07/06/2020</Date_>
+    <JEVNo>301-20-07-01-0073</JEVNo>
+    <Collection>25000.0000</Collection>
+    <Deposits>25000.0000</Deposits>
+    <Rdono>2020-07-4-PAB-527</Rdono>
+    <Particular>RCD 7/3/2020 with RDONO 2020-07-4-PAB-527
+bdh-lgu asst.</Particular>
+    <PTVno>301-20-07-0006-527</PTVno>
+    <Debit>25000.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>25000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0073</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281997</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>25000.0000</Credit>
+    <Acountcode>20401010-13</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>25000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0073</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281998</jevid>
+    <Date_>07/03/2020</Date_>
+    <JEVNo>301-20-07-01-0074</JEVNo>
+    <Collection>6688.0000</Collection>
+    <Deposits>6688.0000</Deposits>
+    <Rdono>2020-07-3-PAB-527</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-3-PAB-527
+accountable form (6688.00)</Particular>
+    <PTVno>301-20-07-0005-527</PTVno>
+    <Debit>6688.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>6688.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0074</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281998</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6688.0000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>6688.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0074</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281999</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0075</JEVNo>
+    <Collection>2073.5000</Collection>
+    <Deposits>2073.5000</Deposits>
+    <Rdono>2020-07-2-PAB-527</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-2-PAB-527
+accountable form (2073.50)</Particular>
+    <PTVno>301-20-07-0004-527</PTVno>
+    <Debit>2073.5000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>2073.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0075</jvno>
+  </Table1>
+  <Table1>
+    <jevid>281999</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2073.5000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>2073.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0075</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282000</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0076</JEVNo>
+    <Collection>34230.5000</Collection>
+    <Deposits>34230.5000</Deposits>
+    <Rdono>2020-06-35-PAB-527</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-35-PAB-527
+accountable form (3030.50)
+or# 8655068 brgy aurora prosperidad anti-rabies counterpart 2020 (2000)
+or# 8655070 dds builders bid docs concreting of bayugan city sta.teresita mt.carmel (25,000)
+or# 8866422 jnk medical sales bid docs (4200.00)
+</Particular>
+    <PTVno>301-20-07-0002-527</PTVno>
+    <Debit>34230.5000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>34230.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0076</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282000</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>31200.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>34230.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0076</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282000</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3030.5000</Credit>
+    <Acountcode>20401010-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>34230.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0076</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282003</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0077</JEVNo>
+    <Collection>24900.0000</Collection>
+    <Deposits>24900.0000</Deposits>
+    <Rdono>2020-07-1-PAB-527</Rdono>
+    <Particular>RCD 7/1/2020 with RDONO 2020-07-1-PAB-527
+or# 7715519 anna angela alesna payment for pcfc floor stall rental june 2020 (3500)
+or# 7715403 DIOMEDISA SALINAS DSS RATAN HANDICRAFT LEAP MArch 2020 leap payment (4,400)
+or# 7715404 florafel amar / amar native products leap march 2020 (4,400)
+or# 7715405 charbin napitan chais cakery leap payment april &amp; may 2020 p. 12,163.29 int. 436.71 (12,600.00)
+
+</Particular>
+    <PTVno>301-20-07-0003-527</PTVno>
+    <Debit>24900.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>24900.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0077</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282003</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3500.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>24900.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0077</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282003</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>21400.0000</Credit>
+    <Acountcode>20401010-32-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>24900.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0077</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282004</jevid>
+    <Date_>07/01/2020</Date_>
+    <JEVNo>301-20-07-01-0078</JEVNo>
+    <Collection>5783.0000</Collection>
+    <Deposits>5783.0000</Deposits>
+    <Rdono>2020-06-34-PAB-527</Rdono>
+    <Particular>RCD 7/01/2020 with RDONO 2020-06-34-PAB-527
+or# 8436411 mswdo pads- payment for rental sound system (1500)
+or# 7715402 virginia indias /torah tour &amp; travel leap payment march april 2020 p. 3,768.64 int. 514.36 (4,283.00)</Particular>
+    <PTVno>301-20-07-0001-527</PTVno>
+    <Debit>5783.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>5783.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0078</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282004</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1500.0000</Credit>
+    <Acountcode>20401010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>5783.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0078</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282004</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3768.6400</Credit>
+    <Acountcode>20401010-32-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>5783.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0078</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282004</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>514.3600</Credit>
+    <Acountcode>20401010-32-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>5783.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0078</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282006</jevid>
+    <Date_>07/08/2020</Date_>
+    <JEVNo>301-20-07-01-0079</JEVNo>
+    <Collection>3000.0000</Collection>
+    <Deposits>3000.0000</Deposits>
+    <Rdono>2020-07-8-PAB-527</Rdono>
+    <Particular>RCD 7/7/2020 with RDONO 2020-07-8-PAB-527
+OR# 7715412- MADELYN ALVIZO leap payment april 2020 p. 2673.68 int. 326.32 (3000.00)</Particular>
+    <PTVno>301-20-07-0010-527</PTVno>
+    <Debit>3000.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0079</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282006</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2673.6800</Credit>
+    <Acountcode>20401010-32-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0079</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282006</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>326.3200</Credit>
+    <Acountcode>20401010-32-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0079</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282010</jevid>
+    <Date_>07/07/2020</Date_>
+    <JEVNo>301-20-07-01-0080</JEVNo>
+    <Collection>3000.0000</Collection>
+    <Deposits>3000.0000</Deposits>
+    <Rdono>2020-07-6-PAB-527</Rdono>
+    <Particular>RCD 7/6/2020 with RDONO 2020-07-6-PAB-527
+or# 7715406 bernaden jurado- payment leap service fee (500.00)
+or# 7715407 florenda ABAO LEAP-500
+OR# 7715408 SAMPAGUITA VALDEZ- 500
+OR# 7715409 JANE ALBOLOTE leap service fee- 500
+or# 7715410 robert jamisola leap service fee- 500
+or# 7715411 joean naje leap service fee-500
+</Particular>
+    <PTVno>301-20-07-0008-527</PTVno>
+    <Debit>3000.0000</Debit>
+    <Acountcode>10102010-6840-301-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0080</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282010</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3000.0000</Credit>
+    <Acountcode>20401010-32-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-17T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0080</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282127</jevid>
+    <Date_>07/02/2020</Date_>
+    <JEVNo>301-20-07-01-0081</JEVNo>
+    <Collection>5400.0000</Collection>
+    <Deposits>5400.0000</Deposits>
+    <Rdono>2020-07-3-PAB-2821</Rdono>
+    <Particular>RCD 7/2/2020 with RDONO 2020-07-3-PAB-2821
+pvbds</Particular>
+    <PTVno>301-20-07-0003-2821</PTVno>
+    <Debit>5400.0000</Debit>
+    <Acountcode>10102010-505-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-21T00:00:00+08:00</Jevdate>
+    <Gamount>5400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0081</jvno>
+  </Table1>
+  <Table1>
+    <jevid>282127</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5400.0000</Credit>
+    <Acountcode>20401010-22</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-07-21T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>5400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>301-20-07-01-0081</jvno>
+  </Table1>
+</NewDataSet>

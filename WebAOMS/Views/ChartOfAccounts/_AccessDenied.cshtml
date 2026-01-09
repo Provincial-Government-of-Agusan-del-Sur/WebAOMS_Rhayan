@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Denied";
+    Layout = null;
+}
+<style>
+
+</style>
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        
+        <div class="row" style="padding-top:20px">
+            <h5>@ViewBag.DeniedStatus</h5>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#h_subaccount_edit_id").html("Access Denied")
+        $("#id_savecoa").hide()
+        $("#id_deletecoa").hide()
+    });
+</script>

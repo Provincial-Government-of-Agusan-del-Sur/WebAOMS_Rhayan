@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "_grid";
+}
+
+<div class="div-block" style="border:none">
+    @(Html.Kendo().Grid<WebAOMS.Models.tbl_reff_Project>()
+        .Name("grid_project")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer" })
+        .Columns(columns =>
+        {
+            columns.Bound(M => M.project_name).Width(400).Title("Project Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            columns.Bound(M => M.fundID).Width(100).Title("Source Of Fund").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+        })
+        .Pageable(p => p
+            .Input(true)
+            .Numeric(false)
+            .Refresh(false)
+        )
+        .Sortable()
+        .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single)
+            .Type(GridSelectionType.Row) 
+        )
+        .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(12).Sort(M =>{
+            M.Add("project_name").Ascending();
+        })
+        .ServerOperation(true)
+                .Model(M => { M.Id(G => G.projectID); })
+        .Read(g => g.Action("GetgridProject", "Project")))
+        .Events(e => e.Change("selectedProject"))
+        
+        )
+</div>
+
+<script>
+    function addnewproject() {
+        $('#txtprojectID').val("0");
+        $('#txtyearProject').val("");
+        $('#txtprojectName').val("");
+        $('#txtprojectLocation').val("");
+        $('#cbo_Sfund').data('kendoComboBox').value("");
+        $('#divhalfdetail').css({"display": "inline-block"})
+        $('#div_projectEstimatedCost').css({"display": "None"})
+        $('#btnSaveProject').show()
+        $('#btnDeleteProject').hide()
+        $('#btnUpdateProject').hide()
+        reloadProjectEstimatedProjectCost("", $('#txtprojectID').val());
+    }
+    function selectedProject(e) {
+        var grid = e.sender;
+        
+        $('#btnSaveProject').hide()
+        $('#btnDeleteProject').show()
+        $('#btnUpdateProject').show()
+        var currentDataItem = grid.dataItem(this.select());
+        $('#divhalfdetail').css({ 'display': 'inline-block' })
+        $('#div_projectEstimatedCost').css({"display": "inline-block"})
+        $('#txtyearProject').val(currentDataItem.project_year),
+        $('#txtprojectName').val(currentDataItem.project_name),
+        $('#txtprojectLocation').val(currentDataItem.Location),
+        $('#txtprojectID').val(currentDataItem.projectID),
+        $('#cbo_Sfund').data('kendoComboBox').value(currentDataItem.fundID);
+        Index_Title_ProjectCost('Estimated Project Cost(' + currentDataItem.project_name + ')')
+        
+        reloadProjectEstimatedProjectCost("", currentDataItem.projectID);
+        $('#div_detail_projectCostDetails').css({ 'display': 'none' })
+        
+    }
+
+</script>

@@ -1,0 +1,320 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+
+<script>
+    var arrayID = [];
+    var arrayName=[];
+    var arrayChildCode = [];
+
+    var lvlid = 0;
+    var chartAccountID = @ViewBag.ChartAccountChildID;
+
+    $(document).ready(function () {
+        $("#h_subaccount_id").text('@ViewBag.code')
+        arrayID[0] = @ViewBag.ChartAccountChildID;
+        arrayName[0] ='@ViewBag.AccountChildName';
+        $("#li_title").text('@ViewBag.AccountChildName')
+        arrayChildCode[0] = '@ViewBag.ChildCode';
+    });
+
+</script>
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                @*<li class="breadcrumb-item"><a href="#" onclick="clicksubAccount(@ViewBag.ChartAccountChildID)">@ViewBag.AccountChildName</a><input id="@ViewBag.ChartAccountChildID"hidden type="text"/></li>*@
+                <li id="li_title" class="breadcrumb-item"></li>
+
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="input-group control-width-large pull-right" style="padding-bottom:5px!important">
+                <input id="txt_search_sub_account" type="text" class="form-control navbar-input" placeholder="Search Account code or account name">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <script>
+            function clickNewSubAccount(){
+                edit_subaccount(0,arrayID[lvlid])
+            }
+            function clicksubAccount(ChartAccountChildID) {
+                chartAccountID = ChartAccountChildID
+                refreshGrid();
+            }
+
+            function getAccountNameComplete(){
+                var str='@ViewBag.AccountChildName';
+                for (x=1;x <= lvlid;x++){
+                    str = str + " > " + arrayName[x];
+                }
+                $("#h_subaccount_id").html(arrayChildCode[lvlid])
+                $("#li_title").text(str)
+            }
+
+            function btn_back(){
+                var i = lvlid - 1;
+                var x;
+                var txt;
+                if (i >= 0){
+                    lvlid = i;
+                    chartAccountID =arrayID[i]
+                    removeSearch();
+                    refreshGrid();
+                    add_btn_customize(arrayName[lvlid],chartAccountID)
+                    getAccountNameComplete()
+                }
+                else
+                {
+                    close_mdl_entries();
+                }
+            }
+
+            function refreshGrid(){
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+
+            $('#txt_search_sub_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                if (e.keyCode == 13) {
+                if ($('#txt_search_sub_account').val().length > 0) {
+                        ISfn.applyFilter("AccountChildName", $('#txt_search_sub_account').val(), 'grid_COA_sub')
+                        //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                    }
+                    else {
+                        gridData.dataSource.filter({});
+                    }
+                }
+            })
+
+            function param_grid_COA_sub() {
+                return { jevid:$("#txt_jevid").val(), parentID:chartAccountID,GlParentID:@ViewBag.ChartAccountChildID};
+            }
+
+            function view_subChildAccount(ChartAccountChildID, AccountChildName,code,childcode,AccountChildParentID) {
+                lvlid = parseInt(lvlid) + 1;
+
+                arrayID[lvlid] = ChartAccountChildID
+                arrayName[lvlid] = AccountChildName
+                arrayChildCode[lvlid] = childcode
+                chartAccountID =ChartAccountChildID;
+                add_btn_customize (AccountChildName,ChartAccountChildID)
+                //$("#h_subaccount_id").html(childcode)
+                refreshGrid();
+                
+                getAccountNameComplete()
+            }
+
+            function add_btn_customize (AccountChildName,ChartAccountChildID){
+                //alert(AccountChildName.replace("'","'"))
+                $.post('@Url.Action("_pv_btn_addclaimant", "JEV")', { Accountname:AccountChildName,ChartAccountChildID:ChartAccountChildID}, function (r) {
+                    $("#add_claimant").html(r)
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    $("#add_claimant").html("")
+                    mg.warning("" + textStatus + "")
+                });
+            }
+
+            function add_claimant_tocoa(ChartAccountChildID){
+                $.post('@Url.Action("addclaimant_toCOA", "JEV")', { dvno:$("#txt_dvno").val(),ChartAccountChildID:ChartAccountChildID,parentName:arrayName[lvlid]}, function (r) {
+                    toastr.success(r.statusName, 'System Message');
+                    refreshGrid()
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    mg.warning("" + textStatus + "")
+                });
+            }
+
+            function removeSearch(){
+                $('#txt_search_sub_account').val('');
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                gridData.dataSource.filter({});
+            }
+            function loadnumeric(){
+                $(function () {
+                    $('.gridtxt').number(true, 2);
+
+                });
+            }
+
+            function onChange(arg) {
+                var selected = $.map(this.select(), function (item) {
+                    alert($(item).text());
+                });
+            }
+
+            function edit_amount(amount,ChartAccountChildID,type,hasChild,AccountChildName,code,ChildCode,AccountChildParentID){
+                var Itype;
+                if (amount == null)
+                {
+                    amount = $("#txt_NetAmount").val()
+                }
+
+                if (type=="credit")
+                {
+                    Itype = 0
+                }
+                else
+
+                {
+                    Itype = 2
+                }
+
+                if (hasChild== true)
+                {
+                    removeSearch()
+                    view_subChildAccount(ChartAccountChildID, AccountChildName,code,ChildCode,AccountChildParentID)
+                }
+                else
+                {
+                    $("#div_" + type + "_" + ChartAccountChildID).html("<input class=\"txtDebitCredit gridtxt\" value=\""+ amount +"\" type=\"text\" id=\"txt_"+type+"_" +ChartAccountChildID + "\">")
+                    //$("#txt_"+type+"_" +ChartAccountChildID).number(true, 2);
+
+
+
+                    $("#txt_"+type+"_" +ChartAccountChildID).focus();
+                    $("#txt_"+type+"_" +ChartAccountChildID).select();
+
+                    $("#txt_"+type+"_" +ChartAccountChildID).on('keyup', function (e) {
+                        if (e.keyCode == 13)
+                        {
+                            var txtAmount = $("#txt_"+type+"_" +ChartAccountChildID).val()
+                            if (txtAmount == ""){
+                                txtAmount = "0.00"
+                            }
+
+                            let sum = 0;
+                            str = txtAmount.replace(',','');
+                            let splitStr = str.split('+');
+    
+                            for (let i = 0; i < splitStr.length; i++) {
+                                sum += parseFloat(splitStr[i])
+                                if ($.isNumeric(splitStr[i])==false){
+                                    toastr.warning('None numeric entry ', 'System Message');
+                                    return;
+                                }
+                            }
+
+                            txtAmount = sum.toFixed(2);
+
+                            var newAmount = addCommas(txtAmount)
+                            var ChildID = ChartAccountChildID;
+                            startSpin()
+                            $.post('@Url.Action("SaveAmount", "JEV")'
+                                ,{
+                                    reffno:$("#txt_dvno").val(),ChartAccountChildID:ChildID,GLParentID:@ViewBag.ChartAccountChildID,amount:newAmount,type:Itype,jevid:$("#txt_jevid").val()
+                        }, function (r) {
+
+                            if (r==6)
+                            {
+                                if (newAmount == "0.00"){
+                                    newAmount = ""
+                                }
+                                $("#div_" + type + "_" + ChartAccountChildID).html("<button type=\"button\" id=\"btn_" + type + "_"+ChartAccountChildID+"\" onclick=\"edit_amount('"+newAmount+"',"+ChartAccountChildID+",'" + type + "',"+hasChild+",'"+AccountChildName+"',"+code+",'"+ChildCode+"',"+AccountChildParentID+")\" class=\"k-button DebitCredit\">"+newAmount+"</button>")
+                                stopSpin()
+                            }
+                            else {
+                                toastr.warning(r.statusName)
+                                stopSpin()
+                            }
+                        })
+                        .fail(function (jqXHR, textStatus, error) {
+                            stopSpin()
+                            toastr.warning(error, 'System Message');
+                        });
+                        }
+
+                    })
+                }
+            }
+            function sumLetters(str) {
+                let sum = 0;
+                str = str.replace(',','');
+                let splitStr = str.split('+');
+    
+                for (let i = 0; i < splitStr.length; i++) {
+                    sum += parseFloat(splitStr[i])
+                }
+                
+                return sum;
+            };
+        </script>
+        <style>
+            
+        </style>
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_ChartOfAccountsChild>()
+            .Name("grid_COA_sub")
+            .Columns(columns =>
+            {
+            columns.Bound(m => m.code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Bound(m => m.AccountChildName).Width(340);
+
+            columns.Template(@<text></text>)
+            .Width(130)
+            .Title("Debit")
+            .HtmlAttributes(new { style = "text-align:right;font-size:10"})
+            .ClientTemplate("<div id=\"div_debit_#=ChartAccountChildID#\"><button type=\"button\" id=\"btn_debit_#=ChartAccountChildID#\" onclick=\"edit_amount(#=debit#,#=ChartAccountChildID#,'debit',#=hasChild#,'#=AccountChildName#',#=code#,'#=ChildCode#',#=AccountChildParentID#)\" class=\"DebitCredit\">#=addCommas(debit)#</button></div>");
+
+            columns.Template(@<text></text>)
+            .Width(130)
+            .Title("Credit")
+            .HtmlAttributes(new { style = "text-align:right;font-size:10" })
+            .ClientTemplate("<div id=\"div_credit_#=ChartAccountChildID#\"><button type=\"button\" id=\"btn_credit_#=ChartAccountChildID#\" onclick=\"edit_amount(#=credit#,#=ChartAccountChildID#,'credit',#=hasChild#,'#=AccountChildName#',#=code#,'#=ChildCode#',#=AccountChildParentID#)\" class=\"DebitCredit\">#=addCommas(credit)#</button></div>");
+            })
+            .AutoBind(true)
+            .HtmlAttributes(new { style = "height: 400px;" })
+            .Scrollable()
+            .Sortable()
+            .Pageable(pageable => pageable
+            .Refresh(true)
+            .ButtonCount(5))
+            .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_sub_entries", "JEV").Data("param_grid_COA_sub"))
+            .PageSize(1000)
+            .ServerOperation(true)
+            .Sort(sort => sort.Add("orderBy").Ascending())
+            .Sort(s => s.Add("ChartAccountChildID").Descending())
+        )
+        .Events(x => x.DataBound("loadnumeric").Change("onChange"))
+        
+            )
+        </div>
+    </div>
+</div>
+<script>
+    function browse_claimant(){
+
+        startSpin()
+        $.post('@Url.Action("_pv_browse_claimant", "JEV")', { Accountname: arrayName[lvlid],ChartAccountChildID:arrayID[lvlid]}
+            , function (r) {
+                stopSpin()
+                if (r.code == 5) {
+                    mg.warning("" + r.statusName + "","System Message")
+                }
+                else {
+
+                    $("#body_browse_claimant").html("")
+                    $("#h_browse_claimant_id").html("Browse Claimant");
+                    $("#body_browse_claimant").html(r)
+                    $("#mdl_browse_claimant").modal("show");
+                }
+            })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+    $(document).ready(function(){
+        add_btn_customize('@ViewBag.AccountChildName',@ViewBag.ChartAccountChildID)
+    })
+</script>

@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountCode" type="xs:string" minOccurs="0" />
+                <xs:element name="Totaldebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Totalcredit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit100" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit100" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit200" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit200" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit300" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit300" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>ORLANDO P. EDICA, CPA</AccountingName>
+    <AccountingPosition>CITY ACCOUNTANT I</AccountingPosition>
+    <CompanyName>CITY OF TACURONG</CompanyName>
+    <CompanyAddress>City Hall Bldg., Alunan Highway, Tacurong City</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>Post-Closing TRIAL BALANCE</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>As of December 31, 2024</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>ORLANDO P. EDICA, CPA</AccountantName>
+    <AccountantPosition>CITY ACCOUNTANT I</AccountantPosition>
+  </Table>
+</NewDataSet>

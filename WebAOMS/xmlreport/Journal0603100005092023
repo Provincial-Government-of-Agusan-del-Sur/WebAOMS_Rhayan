@@ -1,0 +1,1844 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevID" type="xs:int" minOccurs="0" />
+                <xs:element name="Date_" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ADANo" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="debit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundryDebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CreditAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="CreditAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="credit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundrycredit" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="debit1" type="xs:int" minOccurs="0" />
+                <xs:element name="debit2" type="xs:int" minOccurs="0" />
+                <xs:element name="debit3" type="xs:int" minOccurs="0" />
+                <xs:element name="credit1" type="xs:int" minOccurs="0" />
+                <xs:element name="credit2" type="xs:int" minOccurs="0" />
+                <xs:element name="credit3" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Sdebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Scredit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderby" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>AUTHORITY  TO DEBIT ACCOUNT DISBURSEMENTS  JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of May, 2023</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevID>0</jevID>
+    <Particular>Totals Carried Forward</Particular>
+    <debit1>33758360.32</debit1>
+    <debit2>12799238.72</debit2>
+    <debit3>3219722.70</debit3>
+    <TotalSundryDebit>25285685.93</TotalSundryDebit>
+    <credit1>42619951.00</credit1>
+    <credit2>3926602.83</credit2>
+    <credit3>8545932.77</credit3>
+    <TotalSundrycredit>19970521.07</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671692</jevID>
+    <Date_>2023-05-03T00:00:00+08:00</Date_>
+    <ADANo>2023-12194</ADANo>
+    <JEVno>101-23-05-06-0001</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12194</Particular>
+    <TotalSundryDebit>16020.72</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>16,020.72</DebitAmount>
+    <credit1>16020.72</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671757</jevID>
+    <Date_>2023-05-03T00:00:00+08:00</Date_>
+    <ADANo>2023-12196</ADANo>
+    <JEVno>101-23-05-06-0002</JEVno>
+    <Particular>to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12196</Particular>
+    <TotalSundryDebit>3600.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>3,600.00</DebitAmount>
+    <credit1>3600.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671760</jevID>
+    <Date_>2023-05-03T00:00:00+08:00</Date_>
+    <ADANo>2023-12196</ADANo>
+    <JEVno>101-23-05-06-0003</JEVno>
+    <Particular>(7P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12196</Particular>
+    <TotalSundryDebit>27707.76</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>27,707.76</DebitAmount>
+    <credit1>27707.76</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671958</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12196</ADANo>
+    <JEVno>101-23-05-06-0004</JEVno>
+    <Particular>(11P),To payment of JOB ORDER for the period of April 16-30, 2023. ADA BATCH NO:2023-12196</Particular>
+    <TotalSundryDebit>42039.36</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>42,039.36</DebitAmount>
+    <credit1>41199.36</credit1>
+    <credit3>840.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671964</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0005</JEVno>
+    <Particular>To payment of JOB ORDER for the month of April 1-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>6400.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>6,400.00</DebitAmount>
+    <credit1>5590.00</credit1>
+    <credit3>710.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671965</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0006</JEVno>
+    <Particular>(12P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>44598.96</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>44,598.96</DebitAmount>
+    <credit1>44598.96</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671966</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0007</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671967</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0008</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671968</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0009</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671969</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0010</JEVno>
+    <Particular>To payment of JOB ORDER for the month of April 1-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>7394.71</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>381.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,394.71</DebitAmount>
+    <credit1>6303.71</credit1>
+    <credit3>710.00</credit3>
+    <TotalSundrycredit>381.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671970</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0011</JEVno>
+    <Particular>(8P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>32297.40</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>32,297.40</DebitAmount>
+    <credit1>32297.40</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671971</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12200</ADANo>
+    <JEVno>101-23-05-06-0012</JEVno>
+    <Particular>(3P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12200</Particular>
+    <TotalSundryDebit>12000.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>12,000.00</DebitAmount>
+    <credit1>12000.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671972</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12201</ADANo>
+    <JEVno>101-23-05-06-0013</JEVno>
+    <Particular>(7P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12201</Particular>
+    <debit2>49705.56</debit2>
+    <debit3>10180.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>4,055.56</CreditAmount>
+    <credit1>55260.80</credit1>
+    <credit3>570.00</credit3>
+    <TotalSundrycredit>4055.56</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671973</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12202</ADANo>
+    <JEVno>101-23-05-06-0014</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period April 16-30, 2023.ADA BATCH NO:2023-12202</Particular>
+    <debit2>22158.72</debit2>
+    <debit3>4363.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>1,202.40#=1,359.44</CreditAmount>
+    <credit1>23100.08</credit1>
+    <credit3>860.00</credit3>
+    <TotalSundrycredit>2561.84</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671974</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12202</ADANo>
+    <JEVno>101-23-05-06-0015</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12202</Particular>
+    <debit2>22654.90</debit2>
+    <debit3>4635.90</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>26290.80</credit1>
+    <credit3>1000.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671975</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12202</ADANo>
+    <JEVno>101-23-05-06-0016</JEVno>
+    <Particular>(5P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12202</Particular>
+    <debit2>39075.75</debit2>
+    <debit3>7272.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>5,280.00#=2,000.00</CreditAmount>
+    <credit1>38467.75</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>7280.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671976</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12202</ADANo>
+    <JEVno>101-23-05-06-0017</JEVno>
+    <Particular> (4P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12202</Particular>
+    <debit2>24781.41</debit2>
+    <debit3>5817.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>4,726.19</CreditAmount>
+    <credit1>25872.82</credit1>
+    <TotalSundrycredit>4726.19</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671980</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0018</JEVno>
+    <Particular>(42P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>168687.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>168,687.00</DebitAmount>
+    <credit1>168687.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671982</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0019</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>5184.81</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>5,184.81</DebitAmount>
+    <credit1>5184.81</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671983</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0020</JEVno>
+    <Particular>(7P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>30096.36</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>30,096.36</DebitAmount>
+    <credit1>30096.36</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671984</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0021</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>7899.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,899.48</DebitAmount>
+    <credit1>7899.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671985</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0022</JEVno>
+    <Particular>to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671986</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0023</JEVno>
+    <Particular>(6P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>29699.48</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>850.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>29,699.48</DebitAmount>
+    <credit1>28849.48</credit1>
+    <TotalSundrycredit>850.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671987</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0024</JEVno>
+    <Particular>(5P) to payment of CONTRACT OF SERVICE for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>32332.66</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,187.00</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>32,332.66</DebitAmount>
+    <credit1>31145.66</credit1>
+    <TotalSundrycredit>1187.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671988</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0025</JEVno>
+    <Particular>(3P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>11021.76</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>11,021.76</DebitAmount>
+    <credit1>11021.76</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671989</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0026</JEVno>
+    <Particular>(10P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>42039.36</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>42,039.36</DebitAmount>
+    <credit1>41199.36</credit1>
+    <credit3>840.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671991</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0027</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>7003.50</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>7,003.50</DebitAmount>
+    <credit1>7003.50</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671992</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0028</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>21019.68</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>21,019.68</DebitAmount>
+    <credit1>21019.68</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671994</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0029</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of April 1-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>50000.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>50,000.00</DebitAmount>
+    <credit1>46166.67</credit1>
+    <credit2>3833.33</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671997</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0030</JEVno>
+    <Particular>(16P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>56699.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>56,699.48</DebitAmount>
+    <credit1>56699.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672000</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0031</JEVno>
+    <Particular>l(3P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>10800.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>10,800.00</DebitAmount>
+    <credit1>10800.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672005</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0032</JEVno>
+    <Particular>To payment of JOB ORDER for the month of April 1-30, 202.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>6833.52</credit1>
+    <credit3>710.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672008</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0033</JEVno>
+    <Particular>(6P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>23698.44</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>23,698.44</DebitAmount>
+    <credit1>23698.44</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672014</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0034</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>7899.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,899.48</DebitAmount>
+    <credit1>7899.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672015</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0035</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>3600.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>3,600.00</DebitAmount>
+    <credit1>3600.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672017</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0036</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of April 16-30, 2023..ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>8598.96</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672019</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0037</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of April 1-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>15287.04</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>15,287.04</DebitAmount>
+    <credit1>13667.04</credit1>
+    <credit3>1420.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672023</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0038</JEVno>
+    <Particular>(6P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>21600.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>21,600.00</DebitAmount>
+    <credit1>21600.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672025</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0039</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>8598.96</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672027</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0040</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of April 1-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>50000.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>50,000.00</DebitAmount>
+    <credit1>46166.67</credit1>
+    <credit2>3833.33</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672029</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0041</JEVno>
+    <Particular>to payment of CONTRACT OF SERVICE for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>12645.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>12,645.00</DebitAmount>
+    <credit1>12600.43</credit1>
+    <credit2>44.57</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672032</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0042</JEVno>
+    <Particular>(9P),To payment of CONTRACT OF SERVICE for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>71949.50</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>71,949.50</DebitAmount>
+    <credit1>69785.47</credit1>
+    <credit2>2164.03</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672036</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0043</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the period April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>15798.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>146.65</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>15,798.96</DebitAmount>
+    <credit1>15652.31</credit1>
+    <TotalSundrycredit>146.65</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672037</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0044</JEVno>
+    <Particular>(8P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>28544.04</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>330.48</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>28,544.04</DebitAmount>
+    <credit1>28213.56</credit1>
+    <TotalSundrycredit>330.48</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672038</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12204</ADANo>
+    <JEVno>101-23-05-06-0045</JEVno>
+    <Particular> to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672039</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0046</JEVno>
+    <Particular> (36P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12205</Particular>
+    <debit2>300994.29</debit2>
+    <debit3>52267.50</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>17,031.21#=5,439.39</CreditAmount>
+    <credit1>328841.19</credit1>
+    <credit3>1950.00</credit3>
+    <TotalSundrycredit>22470.60</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672040</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0047</JEVno>
+    <Particular>(3P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <debit2>19626.48</debit2>
+    <debit3>4363.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>5,744.57</CreditAmount>
+    <credit1>18245.11</credit1>
+    <TotalSundrycredit>5744.57</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672041</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0048</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <debit2>11931.12</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>13385.52</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672042</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0049</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12204</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7349.02</credit1>
+    <credit3>110.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672043</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0050</JEVno>
+    <Particular>(8P),To payment of CASUAL for the period April 16-30, 2023.ADA BATCH NO:2023-12205</Particular>
+    <debit2>52944.75</debit2>
+    <debit3>11635.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>6,451.27#=1,051.07</CreditAmount>
+    <credit1>57077.61</credit1>
+    <TotalSundrycredit>7502.34</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672044</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0051</JEVno>
+    <Particular>(11P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12205</Particular>
+    <debit2>76412.97</debit2>
+    <debit3>15998.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>29,597.31</CreditAmount>
+    <credit1>57907.06</credit1>
+    <credit3>4907.00</credit3>
+    <TotalSundrycredit>29597.31</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672045</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0052</JEVno>
+    <Particular>(30P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12205</Particular>
+    <debit2>200052.09</debit2>
+    <debit3>43632.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>94,851.91#=7,071.00</CreditAmount>
+    <credit1>136090.18</credit1>
+    <credit3>5671.00</credit3>
+    <TotalSundrycredit>101922.91</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672047</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0053</JEVno>
+    <Particular> (28P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12205</Particular>
+    <debit2>165046.86</debit2>
+    <debit3>40723.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>81,826.37#=5,801.27</CreditAmount>
+    <credit1>111031.42</credit1>
+    <credit3>7111.00</credit3>
+    <TotalSundrycredit>87627.64</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672053</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12205</ADANo>
+    <JEVno>101-23-05-06-0054</JEVno>
+    <Particular>to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12178</Particular>
+    <debit2>6767.55</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>4,224.00</CreditAmount>
+    <credit1>3087.95</credit1>
+    <credit3>910.00</credit3>
+    <TotalSundrycredit>4224.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672067</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12206</ADANo>
+    <JEVno>101-23-05-06-0055</JEVno>
+    <Particular>(22P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12206
+</Particular>
+    <TotalSundryDebit>107009.28</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>175.70</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>107,009.28</DebitAmount>
+    <credit1>106833.58</credit1>
+    <TotalSundrycredit>175.70</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672070</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12206</ADANo>
+    <JEVno>101-23-05-06-0056</JEVno>
+    <Particular>(85P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12206</Particular>
+    <debit2>410395.68</debit2>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <credit1>403195.68</credit1>
+    <credit3>6700.00</credit3>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672088</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0057</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>43796.88</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>43,796.88</DebitAmount>
+    <credit1>43796.88</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672091</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0058</JEVno>
+    <Particular> (2P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>7899.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,899.48</DebitAmount>
+    <credit1>7899.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672093</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0059</JEVno>
+    <Particular>to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672094</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0060</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>6699.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>6,699.48</DebitAmount>
+    <credit1>6699.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672111</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0061</JEVno>
+    <Particular>(5P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>18221.76</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>18,221.76</DebitAmount>
+    <credit1>18221.76</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672112</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0062</JEVno>
+    <Particular>to payment of JOB ORDER for the period of April 1-15, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>3344.04</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>3,344.04</DebitAmount>
+    <credit1>2534.04</credit1>
+    <credit3>710.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672113</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0063</JEVno>
+    <Particular>(65P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>243055.92</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>400.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>243,055.92</DebitAmount>
+    <credit1>242655.92</credit1>
+    <TotalSundrycredit>400.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672114</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12208</ADANo>
+    <JEVno>101-23-05-06-0064</JEVno>
+    <Particular>(13P),To payment of JOB ORDER for the period of April 16-30, 2023..ADA BATCH NO:2023-12208</Particular>
+    <TotalSundryDebit>52392.06</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,188.16</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>52,392.06</DebitAmount>
+    <credit1>50533.90</credit1>
+    <credit3>670.00</credit3>
+    <TotalSundrycredit>1188.16</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672115</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0065</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>12009.24</debit2>
+    <debit3>2908.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>2,025.51</CreditAmount>
+    <credit1>12892.53</credit1>
+    <TotalSundrycredit>2025.51</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672116</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0066</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>2,300.00</CreditAmount>
+    <credit1>869.02</credit1>
+    <credit3>4290.00</credit3>
+    <TotalSundrycredit>2300.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672117</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0067</JEVno>
+    <Particular>(5P),To payment of CASUAL for the month of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>31219.20</debit2>
+    <debit3>7272.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>5,252.00</CreditAmount>
+    <credit1>33039.20</credit1>
+    <credit3>200.00</credit3>
+    <TotalSundrycredit>5252.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672118</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0068</JEVno>
+    <Particular> to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7349.02</credit1>
+    <credit3>110.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672119</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0069</JEVno>
+    <Particular> (4P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>26090.91</debit2>
+    <debit3>5817.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>1,700.00#=482.25</CreditAmount>
+    <credit1>29536.26</credit1>
+    <credit3>190.00</credit3>
+    <TotalSundrycredit>2182.25</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672120</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0070</JEVno>
+    <Particular>(19P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>146993.58</debit2>
+    <debit3>27633.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>24,609.11</CreditAmount>
+    <credit1>150018.07</credit1>
+    <TotalSundrycredit>24609.11</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672121</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0071</JEVno>
+    <Particular>To payment of CASUAL for the period April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>2,700.00</CreditAmount>
+    <credit1>4759.02</credit1>
+    <TotalSundrycredit>2700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672122</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0072</JEVno>
+    <Particular> (9P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>56065.68</debit2>
+    <debit3>13089.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>14,494.74#=2,200.00</CreditAmount>
+    <credit1>38636.54</credit1>
+    <credit3>13824.00</credit3>
+    <TotalSundrycredit>16694.74</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672123</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0073</JEVno>
+    <Particular> (3P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>18776.79</debit2>
+    <debit3>4363.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>3,145.37</CreditAmount>
+    <credit1>16257.62</credit1>
+    <credit3>3737.00</credit3>
+    <TotalSundrycredit>3145.37</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672124</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0074</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7459.02</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672125</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0075</JEVno>
+    <Particular>to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>11045.43</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>12499.83</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672126</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0076</JEVno>
+    <Particular>(8P) to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>47350.44</debit2>
+    <debit3>11635.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>530.00</CreditAmount>
+    <credit1>57255.64</credit1>
+    <credit3>1200.00</credit3>
+    <TotalSundrycredit>530.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672127</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0077</JEVno>
+    <Particular>(7P) to payment of CASUAL for the period of April 16-30, 2023. ADA BATCH NO:2023-12209</Particular>
+    <debit2>56748.87</debit2>
+    <debit3>10180.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>1,311.00#=500.00</CreditAmount>
+    <credit1>63108.67</credit1>
+    <credit3>2010.00</credit3>
+    <TotalSundrycredit>1811.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672128</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0078</JEVno>
+    <Particular>(2P) to payment of CASUAL for the month of April 1-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>31667.52</debit2>
+    <debit3>2908.80</debit3>
+    <TotalSundryDebit>6496.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>15,463.99#=1,070.86#=1,741.72</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>5,225.14#=200.00#=870.86#=200.00</DebitAmount>
+    <credit1>18355.84</credit1>
+    <credit2>137.91</credit2>
+    <credit3>4302.00</credit3>
+    <TotalSundrycredit>18276.57</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672129</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0079</JEVno>
+    <Particular>to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO;2023-12209</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7459.02</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672131</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0081</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO;2023-12209</Particular>
+    <debit2>17662.41</debit2>
+    <debit3>4363.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>3,701.12</CreditAmount>
+    <credit1>18014.49</credit1>
+    <credit3>310.00</credit3>
+    <TotalSundrycredit>3701.12</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672132</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0082</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO;2023-12209</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7459.02</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672133</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0083</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>5653.17</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7107.57</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672136</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12209</ADANo>
+    <JEVno>101-23-05-06-0084</JEVno>
+    <Particular>(14P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12209</Particular>
+    <debit2>80950.77</debit2>
+    <debit3>20361.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>12,555.77#=1,800.00</CreditAmount>
+    <credit1>83118.60</credit1>
+    <credit3>3838.00</credit3>
+    <TotalSundrycredit>14355.77</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672141</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12211</ADANo>
+    <JEVno>101-23-05-06-0085</JEVno>
+    <Particular>(7P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12211</Particular>
+    <TotalSundryDebit>28697.40</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>28,697.40</DebitAmount>
+    <credit1>28697.40</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672145</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12211</ADANo>
+    <JEVno>101-23-05-06-0086</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12211</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672146</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12211</ADANo>
+    <JEVno>101-23-05-06-0087</JEVno>
+    <Particular> to payment of CASUAL for the period of April 1-15, 2023.ADA BATCH NO:2023-12211</Particular>
+    <debit2>5263.65</debit2>
+    <TotalSundryDebit>2516.01</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>5,274.01#=430.86#=661.72</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>1,985.15#=100.00#=330.86#=100.00</DebitAmount>
+    <credit1>1413.07</credit1>
+    <TotalSundrycredit>6366.59</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672148</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12211</ADANo>
+    <JEVno>101-23-05-06-0088</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12211</Particular>
+    <TotalSundryDebit>17197.92</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>17,197.92</DebitAmount>
+    <credit1>16697.92</credit1>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672149</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12211</ADANo>
+    <JEVno>101-23-05-06-0089</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12211</Particular>
+    <debit2>30023.10</debit2>
+    <debit3>7272.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>5,819.29#=3,178.85</CreditAmount>
+    <credit1>27476.96</credit1>
+    <credit3>820.00</credit3>
+    <TotalSundrycredit>8998.14</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672150</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12212</ADANo>
+    <JEVno>101-23-05-06-0090</JEVno>
+    <Particular> (2P) to payment of CASUAL for the month of April 1-30, 2023.ADA BATCH NO:2023-12212</Particular>
+    <debit2>24216.64</debit2>
+    <debit3>2908.80</debit3>
+    <TotalSundryDebit>5061.71</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>20,255.80#=865.96#=1,331.92</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>3,995.75#=200.00#=665.96#=200.00</DebitAmount>
+    <credit1>9513.47</credit1>
+    <credit3>220.00</credit3>
+    <TotalSundrycredit>22453.68</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672151</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12212</ADANo>
+    <JEVno>101-23-05-06-0091</JEVno>
+    <Particular>(4P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12212</Particular>
+    <debit2>24389.91</debit2>
+    <debit3>5817.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>655.56</CreditAmount>
+    <credit1>27771.95</credit1>
+    <credit3>1780.00</credit3>
+    <TotalSundrycredit>655.56</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672152</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12212</ADANo>
+    <JEVno>101-23-05-06-0092</JEVno>
+    <Particular>(13P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12212</Particular>
+    <debit2>80497.35</debit2>
+    <debit3>18907.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>13,408.86</CreditAmount>
+    <credit1>82435.69</credit1>
+    <credit3>3560.00</credit3>
+    <TotalSundrycredit>13408.86</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672157</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12212</ADANo>
+    <JEVno>101-23-05-06-0093</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period April 16-30, 2023.ADA BATCH NO:2023-12212</Particular>
+    <debit2>14081.67</debit2>
+    <debit3>2908.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>16990.47</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672161</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0094</JEVno>
+    <Particular>(11P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>44496.36</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>44,496.36</DebitAmount>
+    <credit1>41896.36</credit1>
+    <credit3>2600.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672162</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0095</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of April 1-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>50000.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>50,000.00</DebitAmount>
+    <credit1>46166.67</credit1>
+    <credit2>3833.33</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672163</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0096</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of April 16-30, 2023..ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>12898.44</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>12,898.44</DebitAmount>
+    <credit1>12898.44</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672164</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0097</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023..ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>3600.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>3,600.00</DebitAmount>
+    <credit1>3600.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672165</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0098</JEVno>
+    <Particular>(2P),To payment of CONTRACT OF SERVICE for the month of April 1-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>31636.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>31,636.00</DebitAmount>
+    <credit1>29066.92</credit1>
+    <credit2>949.08</credit2>
+    <credit3>1420.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672166</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0099</JEVno>
+    <Particular>To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672167</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0100</JEVno>
+    <Particular> to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4299.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672168</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0101</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>8598.96</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672169</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0102</JEVno>
+    <Particular> to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>266.14</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>4033.34</credit1>
+    <TotalSundrycredit>266.14</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672170</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12215</ADANo>
+    <JEVno>101-23-05-06-0103</JEVno>
+    <Particular>to payment of JOB ORDER for the month of April 1-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>6833.52</credit1>
+    <credit3>710.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672171</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0104</JEVno>
+    <Particular>(4P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12215</Particular>
+    <debit2>23667.03</debit2>
+    <debit3>5817.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>8,209.08#=1,415.99</CreditAmount>
+    <credit1>19859.56</credit1>
+    <TotalSundrycredit>9625.07</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672172</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0105</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>30786.03</debit2>
+    <debit3>7272.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>10,352.82</CreditAmount>
+    <credit1>26535.21</credit1>
+    <credit3>1170.00</credit3>
+    <TotalSundrycredit>10352.82</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672175</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0106</JEVno>
+    <Particular>(7P),To payment of CASUAL for the period April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>52541.73</debit2>
+    <debit3>10180.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>7,362.79</CreditAmount>
+    <credit1>54849.74</credit1>
+    <credit3>510.00</credit3>
+    <TotalSundrycredit>7362.79</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672180</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0107</JEVno>
+    <Particular>to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7459.02</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672182</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0108</JEVno>
+    <Particular>To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>6959.02</credit1>
+    <credit3>500.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672183</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0109</JEVno>
+    <Particular>(29P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>176261.94</debit2>
+    <debit3>42177.60</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>48,516.13</CreditAmount>
+    <credit1>165483.41</credit1>
+    <credit3>4440.00</credit3>
+    <TotalSundrycredit>48516.13</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672187</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0110</JEVno>
+    <Particular>to payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>6004.62</debit2>
+    <debit3>1454.40</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7459.02</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672189</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0111</JEVno>
+    <Particular>l(2P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>15234.48</debit2>
+    <debit3>2908.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>18143.28</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672190</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0112</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>19148.22</debit2>
+    <debit3>4363.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>2,459.48</CreditAmount>
+    <credit1>18101.94</credit1>
+    <credit3>2950.00</credit3>
+    <TotalSundrycredit>2459.48</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672191</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12218</ADANo>
+    <JEVno>101-23-05-06-0113</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12218</Particular>
+    <debit2>17935.74</debit2>
+    <debit3>2908.80</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>3,250.49#=1,475.69</CreditAmount>
+    <credit1>14658.36</credit1>
+    <credit3>1460.00</credit3>
+    <TotalSundrycredit>4726.18</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672194</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12221</ADANo>
+    <JEVno>101-23-05-06-0114</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the month of April 1-30, 2023.ADA BATCH NO:2023-12221</Particular>
+    <TotalSundryDebit>29330.56</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>700.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>29,330.56</DebitAmount>
+    <credit1>25790.56</credit1>
+    <credit3>2840.00</credit3>
+    <TotalSundrycredit>700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672195</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12221</ADANo>
+    <JEVno>101-23-05-06-0115</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the period of April 16-30, 2023.ADA BATCH NO:2023-12221</Particular>
+    <TotalSundryDebit>7003.50</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>7,003.50</DebitAmount>
+    <credit1>6793.39</credit1>
+    <credit2>210.11</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671960</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12197</ADANo>
+    <JEVno>109-23-05-06-0001</JEVno>
+    <Particular>(25P),, payment to Extra Work for the month of March 2023.ADA BATCH NO:2023-12197</Particular>
+    <TotalSundryDebit>24305.54</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>24,305.54</DebitAmount>
+    <credit1>24305.54</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671978</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12203</ADANo>
+    <JEVno>109-23-05-06-0002</JEVno>
+    <Particular> (16P) to payment of CONTRACT OF SERVICE for the period of April 1-30, 2023.ADA BATCH NO:2023-12203</Particular>
+    <TotalSundryDebit>905097.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>3,500.00</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>905,097.00</DebitAmount>
+    <credit1>824443.05</credit1>
+    <credit2>72893.95</credit2>
+    <credit3>4260.00</credit3>
+    <TotalSundrycredit>3500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671979</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12203</ADANo>
+    <JEVno>109-23-05-06-0003</JEVno>
+    <Particular>(33P) to payment of JOB ORDER for the period of April 16-30, 2023.ADA BATCH NO:2023-12203</Particular>
+    <debit2>132732.60</debit2>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>493.69</CreditAmount>
+    <credit1>132238.91</credit1>
+    <TotalSundrycredit>493.69</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672072</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12207</ADANo>
+    <JEVno>109-23-05-06-0004</JEVno>
+    <Particular>(38P),To payment of CASUAL for the period of April 16-30, 2023.ADA BATCH NO:2023-12207
+</Particular>
+    <debit2>313505.72</debit2>
+    <debit3>55176.30</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>45,047.29#=6,941.20</CreditAmount>
+    <credit1>315013.53</credit1>
+    <credit3>1680.00</credit3>
+    <TotalSundrycredit>51988.49</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672160</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12214</ADANo>
+    <JEVno>109-23-05-06-0005</JEVno>
+    <Particular>(36P),To payment of JOB ORDER for the period April 16-30, 2023.ADA BATCH NO:2023-12214</Particular>
+    <debit2>132795.84</debit2>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>132795.84</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672192</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12219</ADANo>
+    <JEVno>109-23-05-06-0006</JEVno>
+    <Particular>(5P),To payment of CONTRACT OF SERVICE for the month of April 1-30, 2023.ADA BATCH NO:2023-12196</Particular>
+    <TotalSundryDebit>175485.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>175,485.00</DebitAmount>
+    <credit1>153595.00</credit1>
+    <credit2>10970.00</credit2>
+    <credit3>10420.00</credit3>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671961</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12198</ADANo>
+    <JEVno>128-23-05-06-0001</JEVno>
+    <Particular>(16P),To payment of JOB ORDER for the period April 1-15, 2023.ADA BATCH NO:2023-12198</Particular>
+    <TotalSundryDebit>52959.82</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>2,900.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>52,959.82</DebitAmount>
+    <credit1>38699.82</credit1>
+    <credit3>11360.00</credit3>
+    <TotalSundrycredit>2900.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672193</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12220</ADANo>
+    <JEVno>129-23-05-06-0001</JEVno>
+    <Particular>(27P) payt of Overtime Pay (Holiday/Weekend/Day Off) for the month of February 1-28, 2023</Particular>
+    <TotalSundryDebit>72108.72</TotalSundryDebit>
+    <DebitAccountcode>50102130</DebitAccountcode>
+    <DebitAmount>72,108.72</DebitAmount>
+    <credit1>64868.00</credit1>
+    <credit2>7240.72</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>671963</jevID>
+    <Date_>2023-05-05T00:00:00+08:00</Date_>
+    <ADANo>2023-12199</ADANo>
+    <JEVno>131-23-05-06-0001</JEVno>
+    <Particular> (3P) to payment of CONTRACT OF SERVICE for the month of April 1-30, 2023.ADA BATCH NO:2023-12199</Particular>
+    <TotalSundryDebit>135000.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>135,000.00</DebitAmount>
+    <credit1>125150.01</credit1>
+    <credit2>9849.99</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>672140</jevID>
+    <Date_>2023-05-08T00:00:00+08:00</Date_>
+    <ADANo>2023-12210</ADANo>
+    <JEVno>131-23-05-06-0002</JEVno>
+    <Particular>(2P), payment of Overtime Pay for the month of March, 2023.ADA BATCH NO:2023-12210</Particular>
+    <TotalSundryDebit>37061.50</TotalSundryDebit>
+    <DebitAccountcode>50102130</DebitAccountcode>
+    <DebitAmount>37,061.50</DebitAmount>
+    <credit1>25943.05</credit1>
+    <credit2>11118.45</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table2>
+    <debit1>50101010</debit1>
+    <debit2>50101020</debit2>
+    <debit3>50102010</debit3>
+    <credit1>10102010</credit1>
+    <credit2>20201010</credit2>
+    <credit3>29999990</credit3>
+  </Table2>
+  <Table3>
+    <Accountcode>Totals Carried Forward</Accountcode>
+    <Sdebit>25285685.93</Sdebit>
+    <Scredit>19970521.07</Scredit>
+    <orderby>1</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201020</Accountcode>
+    <Sdebit>0.00</Sdebit>
+    <Scredit>514861.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201030</Accountcode>
+    <Sdebit>0.00</Sdebit>
+    <Scredit>58432.65</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201040</Accountcode>
+    <Sdebit>0.00</Sdebit>
+    <Scredit>3735.36</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102130</Accountcode>
+    <Sdebit>109170.22</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103010</Accountcode>
+    <Sdebit>11206.04</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103020</Accountcode>
+    <Sdebit>500.00</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103030</Accountcode>
+    <Sdebit>1867.68</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103040</Accountcode>
+    <Sdebit>500.00</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50211990</Accountcode>
+    <Sdebit>1528152.16</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50212990</Accountcode>
+    <Sdebit>1471617.94</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+</NewDataSet>

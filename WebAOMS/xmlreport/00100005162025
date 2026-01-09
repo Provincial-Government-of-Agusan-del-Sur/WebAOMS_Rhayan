@@ -1,0 +1,483 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="amount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="year_" type="xs:long" minOccurs="0" />
+                <xs:element name="month_" type="xs:int" minOccurs="0" />
+                <xs:element name="FullAccountname" type="xs:string" minOccurs="0" />
+                <xs:element name="GLChartAccountChildID" type="xs:int" minOccurs="0" />
+                <xs:element name="levelNo" type="xs:unsignedByte" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>SCHEDULES</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>As of May 16, 2025</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <Name>10305020Advances for Payroll</Name>
+    <Accountcode>10305020</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll</FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CASINTO, RUTH CABARDO   </Name>
+    <amount>254215.7300</amount>
+    <Accountcode>10305020-314234</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~CASINTO, RUTH CABARDO   </FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>COSTIBOLO, ORESTES PASAGUI   </Name>
+    <amount>79999.9700</amount>
+    <Accountcode>10305020-6209</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~COSTIBOLO, ORESTES PASAGUI   </FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GA, JHON MICHAEL BERNALES   </Name>
+    <amount>65409.2600</amount>
+    <Accountcode>10305020-314253</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~GA, JHON MICHAEL BERNALES   </FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MONCANO, MONYEEN GRACE ALGUNO</Name>
+    <amount>271005.5600</amount>
+    <Accountcode>10305020-372</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~MONCANO, MONYEEN GRACE ALGUNO</FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PENDON, EIDDERF SALAZAR   </Name>
+    <amount>15335.6600</amount>
+    <Accountcode>10305020-6236</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~PENDON, EIDDERF SALAZAR   </FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>RIDAO, LODYLEE MAKILING   </Name>
+    <amount>1032237.7600</amount>
+    <Accountcode>10305020-365351</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~RIDAO, LODYLEE MAKILING   </FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SALVANI, PATRICIA PERLITA BAGUHIN</Name>
+    <amount>844790.4600</amount>
+    <Accountcode>10305020-1265</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~SALVANI, PATRICIA PERLITA BAGUHIN</FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TABAJONDA, LEIDA DELA VEGA   </Name>
+    <amount>5229466.4800</amount>
+    <Accountcode>10305020-1197</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305020 - Advances for Payroll~TABAJONDA, LEIDA DELA VEGA   </FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10305030Advances to Special Disbursing Officer</Name>
+    <Accountcode>10305030</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305030 - Advances to Special Disbursing Officer</FullAccountname>
+    <GLChartAccountChildID>303</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CANE, SANTIAGO BARRIGA  JR.</Name>
+    <amount>17500000.0000</amount>
+    <Accountcode>10305030-333</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305030 - Advances to Special Disbursing Officer~CANE, SANTIAGO BARRIGA  JR.</FullAccountname>
+    <GLChartAccountChildID>303</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10305040Advances for Officers and Employees</Name>
+    <Accountcode>10305040</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees</FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BARDILAS, CHRISTOPHER REY LADEMORA   </Name>
+    <amount>3520.0000</amount>
+    <Accountcode>10305040-1</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~BARDILAS, CHRISTOPHER REY LADEMORA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BORDAJE, JANDY ERIC  NILO   </Name>
+    <amount>35.2300</amount>
+    <Accountcode>10305040-6904</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~BORDAJE, JANDY ERIC  NILO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CASINILLO, JOAN OCITE   </Name>
+    <amount>-499803.8000</amount>
+    <Accountcode>10305040-904</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~CASINILLO, JOAN OCITE   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CASTRO, DOMINGO MANGASIP  JR. CPA</Name>
+    <amount>1513.0000</amount>
+    <Accountcode>10305040-625</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~CASTRO, DOMINGO MANGASIP  JR. CPA</FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CEBALLOS, GINA ALVIZO   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-2429</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~CEBALLOS, GINA ALVIZO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CEJAS, AVALOTA AGCOPRA   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-6698</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~CEJAS, AVALOTA AGCOPRA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CERCADO, DAN ALVARO BALASBAS   </Name>
+    <amount>9000.0000</amount>
+    <Accountcode>10305040-334767</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~CERCADO, DAN ALVARO BALASBAS   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CODILLA, ANCHENITH TUBO   </Name>
+    <amount>65.0000</amount>
+    <Accountcode>10305040-303806</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~CODILLA, ANCHENITH TUBO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DE GUZMAN, RUCHELE DUHILAG   </Name>
+    <amount>710.0000</amount>
+    <Accountcode>10305040-7179</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~DE GUZMAN, RUCHELE DUHILAG   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ELORDE, EDWIN GRANADA   </Name>
+    <amount>625.8600</amount>
+    <Accountcode>10305040-1578</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~ELORDE, EDWIN GRANADA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>FABIOSA, ROSELYN REPESO   </Name>
+    <amount>7580.0000</amount>
+    <Accountcode>10305040-365189</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~FABIOSA, ROSELYN REPESO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GA, EDGAR OSTOS   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-369</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~GA, EDGAR OSTOS   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LAGAT, JOY DY  CPA</Name>
+    <amount>28806.0000</amount>
+    <Accountcode>10305040-628</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~LAGAT, JOY DY  CPA</FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LARIEGO, MARY ANN CORVERA   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-2667</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~LARIEGO, MARY ANN CORVERA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LASPIÑAS, REY JOSEPH AQUINO   </Name>
+    <amount>3520.0000</amount>
+    <Accountcode>10305040-314305</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~LASPIÑAS, REY JOSEPH AQUINO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LIM, ALLAN DE LOS SANTOS   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-314162</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~LIM, ALLAN DE LOS SANTOS   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MACASARTE, IRENE HONTIVEROS   </Name>
+    <amount>9000.0000</amount>
+    <Accountcode>10305040-334476</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~MACASARTE, IRENE HONTIVEROS   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MANPATILAN, NILO DELANTO   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-405</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~MANPATILAN, NILO DELANTO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MASENDO, JESRYL ESPAÑA   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-314161</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~MASENDO, JESRYL ESPAÑA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>NIOG, BLANCA DAMINAR   </Name>
+    <amount>9000.0000</amount>
+    <Accountcode>10305040-1146</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~NIOG, BLANCA DAMINAR   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PAGALAN, ADONIS JUROLAN   </Name>
+    <amount>9000.0000</amount>
+    <Accountcode>10305040-334477</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~PAGALAN, ADONIS JUROLAN   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PEREZ, FERDINAND BACONGA   </Name>
+    <amount>17189.0000</amount>
+    <Accountcode>10305040-492</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~PEREZ, FERDINAND BACONGA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PLAZA, GLENN MONDEJAR   </Name>
+    <amount>49295.0000</amount>
+    <Accountcode>10305040-6231</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~PLAZA, GLENN MONDEJAR   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PLAZA, JOSEPH DINGLE   </Name>
+    <amount>48774.8600</amount>
+    <Accountcode>10305040-365296</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~PLAZA, JOSEPH DINGLE   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PLAZA, PABLO OTACAN   </Name>
+    <amount>48774.8600</amount>
+    <Accountcode>10305040-344828</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~PLAZA, PABLO OTACAN   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>RESTOR, ROMEO HERNANDO   </Name>
+    <amount>120.0000</amount>
+    <Accountcode>10305040-16</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~RESTOR, ROMEO HERNANDO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SALO, CARMEL RANARIO   </Name>
+    <amount>2210.0000</amount>
+    <Accountcode>10305040-7285</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~SALO, CARMEL RANARIO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SANCHEZ, AGAPITO AVILA   </Name>
+    <amount>120.0000</amount>
+    <Accountcode>10305040-906</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~SANCHEZ, AGAPITO AVILA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TIU, MYRNA QUIMNO   </Name>
+    <amount>15060.0000</amount>
+    <Accountcode>10305040-142</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~TIU, MYRNA QUIMNO   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>VALIENTE, ARMANDO GARDOSE   </Name>
+    <amount>0.8000</amount>
+    <Accountcode>10305040-2416</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~VALIENTE, ARMANDO GARDOSE   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>YUCOSING, PAMELA DINAYA   </Name>
+    <amount>48238.0000</amount>
+    <Accountcode>10305040-346</Accountcode>
+    <year_>2025</year_>
+    <month_>5</month_>
+    <FullAccountname>10305040 - Advances for Officers and Employees~YUCOSING, PAMELA DINAYA   </FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+</NewDataSet>

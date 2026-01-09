@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAOMS", "WebAOMS\WebAOMS.csproj", "{8886A7C2-F7D6-4CC4-9CAF-33BD3E4D38A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBAOMS_test", "WEBAOMS_test\WEBAOMS_test.csproj", "{CFC7240B-F904-49B1-9719-1C5CA184969D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8886A7C2-F7D6-4CC4-9CAF-33BD3E4D38A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8886A7C2-F7D6-4CC4-9CAF-33BD3E4D38A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8886A7C2-F7D6-4CC4-9CAF-33BD3E4D38A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8886A7C2-F7D6-4CC4-9CAF-33BD3E4D38A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC7240B-F904-49B1-9719-1C5CA184969D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC7240B-F904-49B1-9719-1C5CA184969D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC7240B-F904-49B1-9719-1C5CA184969D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC7240B-F904-49B1-9719-1C5CA184969D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E91D7712-DBB8-4598-B2EE-6D99CD9A7656}
+	EndGlobalSection
+EndGlobal

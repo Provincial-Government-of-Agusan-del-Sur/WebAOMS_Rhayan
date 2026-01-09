@@ -1,0 +1,379 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+        z-index: 500;
+    }
+
+    .modal-dialog-full {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content-full {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+
+</style>
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Criteria</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body" >
+            <div class="col-lg-12" style="padding-bottom:10px!important">
+                <div class="col-md-3" style="padding-right:10px!important">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Fiscal Year:</span>
+                        </span>
+                    </div>
+                    <script>
+                        function office_para() {
+                            var year = $('#dtp_to').data("kendoDatePicker").value().getFullYear();
+                            return { year: year }
+                        }
+                    </script>
+                    <div class="byexym liZmnb">
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_to")
+                        .Format("yyyy")
+                        .Value(System.DateTime.Now)
+                        .Start(CalendarView.Decade)
+                        .Depth(CalendarView.Decade)
+                        .HtmlAttributes(new { type = "text" })
+                        )
+                    </div>
+                </div>
+                    @*<button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>*@
+                <div class="col-md-9">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Office Name:</span>
+                        </span>
+                    </div>
+
+                    <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                    .Name("RCenter")
+                    .DataTextField("OfficeName")
+                    .DataValueField("FMISOfficeID")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_GetOffice_fmis", "Obligation").Data("office_para");
+                        });
+                    })
+                    .Events(e => e.Change("refrehGrid"))
+                    .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+                </div>
+            </div>
+        <script>
+            var Isreset = false;
+            function click_reset() {
+                Isreset = true;
+                refrehGrid();
+            }
+            function refrehGrid() {
+                startSpin()
+                    $('#div_tracking_3').show()
+                    $('#div_tracking_1').hide()
+                    $('#div_tracking_2').hide()
+                    var grid = $("#grid_obligate_bySector").data("kendoGrid");
+                    grid.dataSource.read()
+                    r_oblig_grid()
+                }
+
+                function summary_para() {
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    var officeid = $("#RCenter").data("kendoDropDownList").value();
+                    return { to: to, officeid: officeid, isReset: Isreset }
+                }
+
+                function Success_event() {
+                    stopSpin()
+                    Isreset = false;
+                    var grid = this;
+                    $(".k-grouping-row").each(function (e) {
+                        grid.collapseGroup(this);
+                    });
+
+                    //$(".k-grouping-row").css("text-align","right");
+
+                    //var firstCell = e.sender.element.find(".k-grouping-row td");
+                    //firstCell.css('text-align', 'right');
+
+                    //$('td.active input, td.active textarea')
+            }
+
+                function Success_event_summary() {
+                    stopSpin()
+                    Isreset = false;
+                }
+
+                function databound() {
+
+                }
+        </script>
+    </div>
+</div>
+<div class="box ">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh" onclick="click_reset()"> Sync  </i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="display:none;padding-top:10px;">
+        <script>
+            function para_coa (){
+                return { IS_id: $("#dp_is_name").data("kendoDropDownList").value() }
+            }
+
+            function r_grid() {
+                var grid = $("#grid_tracking_form").data("kendoGrid");
+                grid.dataSource.read();
+            }
+            function edit_logs() {
+
+            }
+        </script>
+
+        <div class="row">
+           @(Html.Kendo().Grid<WebAOMS.Models.ufn_Oblig_grid_RAAU_Result>()
+                .Name("grid_obligate_bySector")
+                .Excel(excel => excel
+                .FileName("RAAUOP" + System.DateTime.Today.ToString("MM-dd-yyyy") + ".xlsx")
+                .Filterable(true)
+                )
+                .Columns(columns =>
+                {
+                    //columns.Bound("OfficeName").Title("Office Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    //columns.Bound("programName").Title("Program Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    columns.Bound(m => m.AccountName).Title("Account Name").Width(500).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    columns.Bound(m => m.functionCode).Title("Function Code").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    columns.Bound(m => m.Appropropriation).Title("Appropropriation").Width(160).Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#= kendo.toString(sum, 'n') #</div>").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.Allotment).Title("Allotment").Width(160).Format("{0:N2}").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#= kendo.toString(sum, 'n') #</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.Obligation).Title("Obligated").Width(160).Format("{0:N2}").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#= kendo.toString(sum, 'n') #</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.Utilization).Title("Utilized").Width(160).Format("{0:N2}").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#= kendo.toString(sum, 'n') #</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound("OfficeName").Title("Office Name").Width(0).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).ClientGroupHeaderTemplate("#= value#").ClientTemplate("<div></div>").Lockable(false);
+                    columns.Bound("OOEName").Title("OOE").Width(0).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).ClientGroupHeaderTemplate("#= value#").ClientTemplate("<div></div>").Lockable(false);
+                })
+                //.Groupable(g => g.ShowFooter(true))
+                .AutoBind(false)
+
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("Result_RAAU_read", "Obligation").Data("summary_para"))
+                    .PageSize(10000)
+                    .Group(group => group.Add("OfficeName", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                    //.Group(group => group.Add("OOECode", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                    .Group(group => group.Add("OOEName", typeof(string), System.ComponentModel.ListSortDirection.Descending))
+
+                .Aggregates(
+                aggregates =>
+                {
+                    aggregates.Add(a => a.Appropropriation).Sum();
+                    aggregates.Add(a => a.Allotment).Sum();
+                    aggregates.Add(a => a.Obligation).Sum();
+                    aggregates.Add(a => a.Utilization).Sum();
+                }
+                 )
+                )
+                .Events(e => e.DataBound("Success_event"))
+                .Resizable(resize => resize.Columns(true))
+
+        )
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Obligated Transaction</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <script>
+            function param_oblig() {
+                var to = $('#dtp_to').data('kendoDatePicker').value();
+                var officeid = $("#RCenter").data("kendoDropDownList").value();
+                return { to: to, officeid: officeid }
+            }
+
+            function r_oblig_grid() {
+                var grid = $("#grid_obligated").data("kendoGrid");
+                grid.dataSource.read();
+            }
+
+        </script>
+
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.ufn_oblig_transaction_grid_Result>()
+                .Name("grid_obligated")
+                .Excel(excel => excel
+                .FileName("RAAUOP" + System.DateTime.Today.ToString("MM-dd-yyyy") + ".xlsx")
+                .Filterable(true)
+                )
+                .Columns(columns =>
+                {
+                //columns.Bound("OfficeName").Title("Office Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                //columns.Bound("programName").Title("Program Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                columns.Bound(m => m.TransactionDate).Title("Transaction Date").Format("{0:MM/dd/yyyy}").Width(130).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(m => m.Particular).Title("Particular").Width(300).FooterHtmlAttributes(new { style = "text-align:left" }).HtmlAttributes(new { style = "text-align:left", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(m => m.TransactionName).Title("Transaction Name").Width(180).Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:left" }).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(m => m.Obrno).Title("OBR No.").Width(140).Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(m => m.Amount).Title("Amount").Width(120).Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                columns.Template(@<text></text>)
+                .Width(80)
+                .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnewObligation(#=obligID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-print\"></i></button>");
+
+                })
+
+
+                //.Groupable(g => g.ShowFooter(true))
+                .AutoBind(false)
+
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("Result_oblig_transaction_read", "Obligation").Data("param_oblig"))
+                    .PageSize(10000)
+                //.Group(group => group.Add("OfficeName", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                ////.Group(group => group.Add("OOECode", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                //.Group(group => group.Add("OOEName", typeof(string), System.ComponentModel.ListSortDirection.Descending))
+
+                )
+                .Events(e => e.DataBound("Success_event"))
+                .Resizable(resize => resize.Columns(true))
+
+            )
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="btn-group" style="padding-left:10px;padding-bottom:10px;">
+            <button onclick="addnewObligation(0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i>New Obligation</button>
+        </div>
+    </div>
+    <script>
+
+        var mg = new mgsInfo()
+
+    function addnewObligation(obligID) {
+        startSpin()
+        $.post('@Url.Action("_Add_obligation", "Obligation")', { obligID: obligID }
+            , function (r) {
+                //if (r.code == 5) {
+                //    stopSpin()
+                //    mg.warning("" + r.statusName + "", "System Message")
+                //}
+                //else
+                //{
+                    var header = "Add new obligation";
+                    stopSpin()
+                    //if (doc_form_id != 0)
+                    //{
+                    //    header = "Update obligated details"
+                    //}
+                    $("#h_newstatus_id").html(header);
+                    $("#body_newstatus").html(r)
+                    $("#mdl_newstatus").modal("show");
+                //}
+            })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+
+    function print_tracking(refno) {
+        startSpin()
+        $.post('@Url.Content("~/Document/print_tracking")', { refno:refno }
+            , function (r) {
+                stopSpin()
+            })
+    }
+
+
+    </script>
+</div>
+
+
+<script>
+    function removezindex() {
+        $("#mdl_newstatus").removeClass("zdex");
+    }
+</script>
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_dv()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button id="btn_delete" onclick="warn_delete_oblig_transaction()"data-dismiss="modal" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

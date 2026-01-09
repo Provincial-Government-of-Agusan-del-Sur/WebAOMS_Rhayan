@@ -1,0 +1,37 @@
+﻿@using System.Data
+@model DataSet
+@{
+    Layout =null;
+}
+
+    @if (Model.Tables[0].Rows.Count > 0)
+    {
+        <table class="table table-bordered table-striped table-responsive" cellpadding="0" cellspacing="0">
+            <tr>
+                <th class="text-center">Date of Last Status</th>
+                <th class="text-center">Transaction Status</th>
+                <th class="text-center">Location</th>
+            </tr>
+
+            @foreach (DataRow row in Model.Tables[0].Rows)
+            {
+                <tr>
+                    <td class="col-md-4">@row["dte"]</td>
+                    <td class="col-md-6">@row["Status_name"]</td>
+                    <td class="col-md-2">@row["Status_location"]</td>
+                </tr>
+            }
+
+        </table>
+
+    }
+    else
+    {
+        <div>
+            <h2>No Record Found(s)</h2>
+        </div>
+    }
+
+
+
+

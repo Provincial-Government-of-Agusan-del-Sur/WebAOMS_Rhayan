@@ -1,0 +1,280 @@
+﻿
+@{
+    Layout = null;
+}
+
+<script src="@Url.Content("~/Scripts/akot/xls.core.min.js")"></script>
+<script src="@Url.Content("~/Scripts/akot/xlsx.core.min.js")"></script>
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body" style="padding-bottom:0px!important">
+        <div class="row">
+
+                <div class="col-md-12">
+                    <div class="box-head no-padding" style="line-height:20px!important">
+                        <label for="Accountname" class="control-label">Browse Excel file</label>
+                    </div>
+                </div>
+            <script>
+                document.getElementById("excelfile").addEventListener("change", function () {
+                    var fileInput = document.getElementById("excelfile");
+                    var file = fileInput.files[0];
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        var data = e.target.result;
+                        var workbook = XLSX.read(data, { type: 'binary' });
+                        var sheetNames = workbook.SheetNames;
+
+                        // Create the Kendo DropDownList
+                        var dropdown = $("#sheetDropdown").kendoDropDownList({
+                            dataSource: sheetNames,
+                            change: function (e) {
+                                var selectedSheetName = this.value();
+                                ExportToTable(selectedSheetName);
+                            },
+                            databind: function (e) {
+                                var selectedSheetName = this.value();
+                                ExportToTable(selectedSheetName);
+                            }
+                        }).data("kendoDropDownList");
+
+                        // Optional: Set a default value (e.g., the first sheet name) for the DropDownList
+                        dropdown.value(sheetNames[0]);
+                    };
+
+                    reader.readAsBinaryString(file);
+                });
+
+                function load_emp(){
+                    //alert(getarrayoffice())
+                    refresh_import_grid()
+                }
+                function ExportToTable(sheetname) {
+                    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.xlsx|.xls)$/;
+                    /*Checks whether the file is a valid excel file*/
+                    if (regex.test($("#excelfile").val().toLowerCase())) {
+                        var xlsxflag = false; /*Flag for checking whether excel is .xls format or .xlsx format*/
+                        if ($("#excelfile").val().toLowerCase().indexOf(".xlsx") > 0) {
+                            xlsxflag = true;
+                        }
+                        /*Checks whether the browser supports HTML5*/
+                        if (typeof (FileReader) != "undefined") {
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                var data = e.target.result;
+
+                                /*Converts the excel data in to object*/
+                                if (xlsxflag) {
+                                    var workbook = XLSX.read(data, { type: 'binary' });
+                                }
+                                else {
+                                    var workbook = XLS.read(data, { type: 'binary' });
+                                }
+                                var sheet_name_list = workbook.Sheets[sheetname];
+                                var exceljson = XLSX.utils.sheet_to_json(sheet_name_list, { raw: true });
+                                BindTable(exceljson);
+                                $('#grid_import_excel').show();
+                            }
+                            if (xlsxflag) {/*If excel file is .xlsx extension than creates a Array Buffer from excel*/
+                                reader.readAsArrayBuffer($("#excelfile")[0].files[0]);
+                            }
+                            else {
+                                reader.readAsBinaryString($("#excelfile")[0].files[0]);
+                            }
+                        }
+                        else {
+                            alert("Sorry! Your browser does not support HTML5!");
+                        }
+                    }
+                    else {
+                        alert("Please upload a valid Excel file!");
+                    }
+                    //loadBtn()
+                }
+
+
+                function BindTable(jsondata) {
+
+                    var aliasListDataSource = new kendo.data.DataSource({
+                        transport: {
+                            read: function (op) {
+                                op.success(jsondata);
+                            }
+                        },
+                        pageSize: 10
+                    });
+
+                    $("#grid_import_excel").kendoGrid({
+                        dataSource: {
+                            transport: {
+                                read: function (op) {
+                                    op.success(jsondata);
+                                }
+                            },
+                            pageSize: 1000
+                        },
+                        height: 300,
+                        groupable: false,
+                        sortable: true,
+                        pageable: {
+                            refresh: false,
+                            pageSizes: false,
+                            buttonCount: 5
+                        },
+                        columns: [
+                            {
+                                field: "Code",
+                                title: "Code",
+                                filterable: false,
+                                width: 90
+                            }, {
+                                field: "Accountname",
+                                title: "Emp Name",
+                                width: 200
+
+                            }
+                            //, {
+                            //    field: "Amount",
+                            //    title: "Amount",
+                            //    attributes: {
+                            //        "class": "table-cell",
+                            //        style: "text-align: right;"
+                            //    },
+                            //    width: 100
+                            //}
+                        ]
+                    });
+                }
+
+                /*Function used to get all column names from JSON and bind the html table header*/
+                function BindTableHeader(jsondata) {
+                    var columnSet = [];
+                    var headerTr$ = $('<tr/>');
+                    for (var i = 0; i < jsondata.length; i++) {
+                        var rowHash = jsondata[i];
+                        for (var key in rowHash) {
+                            if (rowHash.hasOwnProperty(key)) {
+                                if ($.inArray(key, columnSet) == -1) {/*Adding each unique column names to a variable array*/
+                                    columnSet.push(key);
+                                    headerTr$.append($('<th/>').html(key));
+                                }
+                            }
+                        }
+                    }
+                    return columnSet;
+                }
+
+                function onImport(e) {
+                    // Get the edited/added/removed data items
+                    var data = e.sender.dataSource.data();
+
+                    // Send the data to the server to save
+                    $.ajax({
+                        url: "/ChartOfAccounts/SaveData",
+                        type: "POST",
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(data),
+                        success: function (result) {
+                            if (result.success) {
+                                // Show a success message
+                                alert(result.message);
+                                // Refresh the grid to reflect any changes from the server
+                                $("#grid").data("kendoGrid").dataSource.read();
+                            } else {
+                                // Show an error message
+                                alert(result.message);
+                            }
+                        },
+                        error: function () {
+                            // Show an error message
+                            alert("An error occurred while saving the data.");
+                        }
+                    });
+                }
+
+            </script>
+            <div class="col-md-12"  style="padding-top:5px!important ">
+                <input type="file" id="excelfile" />  
+            </div>
+            
+                <div class="col-md-12" style="padding-top:5px;padding-bottom:5px">
+                    <div class="box-head no-padding" style="line-height:20px!important">
+                        <div id="sheetDropdown" style="width:100%"></div>
+                    </div>
+                </div>
+
+
+            
+                <script>
+
+                </script>                
+                    <div class="col-md-12">
+                        @(Html.Kendo().Grid<dynamic>()
+                        .Name("grid_import_excel")
+                        .Columns(columns =>
+                        {
+                            columns.Bound("ChartAccountID").Hidden();
+                            columns.Bound("code").Width(70).Title("Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                            columns.Bound("Accountname").Width(200);
+                            columns.Bound("Levelno").Width(100);
+                           // columns.Bound("Amount").Width(130).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+
+                        })
+                        .AutoBind(false)
+                        .HtmlAttributes(new { style = "height: 250px;" })
+                        .Scrollable()
+                        .Sortable()
+                        .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .ButtonCount(5))
+
+                        .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .Read(read => read.Action("grid_import_null_grid", "JEV"))
+                            .PageSize(2000)
+                            .ServerOperation(false)
+                            .Sort(sort => sort.Add("Accountname").Ascending())
+                        )
+                        .Events(events => events.Save("onImport")) // Handle the save event
+                        )
+                    </div>
+                </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#saveGridData").click(function () {
+            var grid = $("#grid_import_excel").data("kendoGrid");
+            var data = grid.dataSource.view(); // Get all grid data
+            var selectedParentId = $("#id_chartAccountID").val();
+
+            // Prepare data for saving
+            var requestData = {
+                ParentId: selectedParentId,
+                ImportedData: data
+            };
+
+            // Send AJAX request to save data
+            $.ajax({
+                url: "/ChartOfAccounts/SaveImportedData",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(requestData),
+                success: function (response) {
+                    if (response.success) {
+                        alert("Data saved successfully!");
+                        grid.dataSource.read(); // Refresh grid after save
+                    } else {
+                        alert("Failed to save data.");
+                    }
+                }
+            });
+        });
+    });
+
+    function close_import() {
+        $("#mdl_import").modal("hide");
+    }
+</script>

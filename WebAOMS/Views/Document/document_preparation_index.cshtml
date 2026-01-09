@@ -1,0 +1,210 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+        z-index: 500;
+    }
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <script>
+            function para_coa (){
+                return { IS_id: $("#dp_is_name").data("kendoDropDownList").value() }
+            }
+            function r_grid() {
+                var grid = $("#grid_tracking_form").data("kendoGrid");
+                grid.dataSource.read();
+            }
+            function edit_logs() {
+
+            }
+
+            function para_attach() {
+                return { doc_form_id: $("#doc_form_id").val() }
+            }
+        </script>
+
+        <div class="row">
+            <div class="byexym liZmnb">
+                @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_attach_doc")
+                    .Columns(columns =>
+                    {
+                    columns.Bound("refno").Title("Tracking Reference").Width(100);
+                    columns.Bound("documentType").Title("Document Type").Width(100);
+                    columns.Bound("particular").Title("Particular").Width(300);
+                    columns.Bound("DocStatus").Title("Status").Width(80);
+                    columns.Template(@<text></text>)
+                        .Width(60)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"add_attachment(#=doc_form_id#,#=doc_details_id#,#=report_id#,'#=documentType#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"print_preview(#=doc_details_id#,#=report_id#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-print\"></i></button></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"warn_delete_doc_attach(#=doc_details_id#,'',#=report_id#)\" class=\"btn btn-xs btn-danger btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-trash\"></i></button>");
+                    })
+                    .Scrollable()
+                    .Sortable()
+                     .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .HtmlAttributes(new { style = "height:500px;" })
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .PageSize(200)
+                        .Read(read => read.Action("data_grid_document", "Document"))
+                    )
+                    .AutoBind(true)
+                )
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Add document <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu animation-slide" role="menu" style="text-align: left;">
+
+                    
+                    @*<li><a href="#" onclick="load_dv(0,16,'Activity Design')"><i class="fa fa-file-word-o"></i> Activity Design</a></li>*@
+                    <li><a href="#" onclick="load_dv(0,48,'Activity Design')"><i class="fa fa-file-word-o"></i> Activity Design</a></li>
+                    <li><a href="#" onclick="load_dv(0, 49, 'Training Design')"><i class="fa fa-file-word-o"></i> Training Design</a></li>
+                    <li><a href="#" onclick="load_dv(0, 10, 'NOTICE')"><i class="fa fa-file-word-o"></i> Notice Block</a></li>
+                    <li><a href="#" onclick="load_dv(0, 14, 'LETTER BLOCK')"><i class="fa fa-file-word-o"></i> Letter Block</a></li>
+                    <li><a href="#" onclick="load_dv(0, 13, 'MEMO BLOCK')"><i class="fa fa-file-word-o"></i> MEMO Block</a></li>
+                    <li><a href="#" onclick="load_dv(0, 17, 'CUSTOM')"><i class="fa fa-file-word-o"></i> Custom Template</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function load_dv(id,document_type_id,title){
+            add_attachment(0,id,document_type_id,title)
+        }
+        var mg = new mgsInfo()
+
+    function addnew(doc_form_id) {
+            startSpin()
+            $.post('@Url.Action("_Add_doc", "Document")', { doc_form_id: doc_form_id }
+                , function (r) {
+                    if (r.code == 5) {
+                        stopSpin()
+                        mg.warning("" + r.statusName + "", "System Message")
+                    }
+                    else {
+                        var header = "Add new transaction";
+                        stopSpin()
+                        if (doc_form_id != 0)
+                        {
+                            header = "Update tracking details"
+                        }
+                        $("#h_newstatus_id").html(header);
+
+                        $("#body_newstatus").html(r)
+                        $("#mdl_newstatus").modal("show");
+                    }
+                })
+            .fail(function (jqXHR, textStatus, error) {
+                stopSpin()
+                mg.warning("" + textStatus + "")
+            });
+    }
+
+        function print_tracking(refno) {
+            startSpin()
+            $.post('@Url.Content("~/Document/print_tracking")', { refno:refno }
+            , function (r) {
+                stopSpin()
+            })
+        }
+
+        function add_attachment(doc_form_id, id, document_type_id, title) {
+            startSpin()
+            $.post('@Url.Action("doc_details", "Document")', { doc_form_id: doc_form_id, document_type_id: document_type_id, id: id }
+                , function (r) {
+                    stopSpin()
+
+                    if (r.code == 5) {
+                        mg.warning("" + r.statusName + "", "System Message")
+                    }
+                    else if (r.code == 8) {
+                        window.open(r.statusName)
+                    }
+                    else {
+                        $("#mdl_newstatus").addClass("zdex");
+                        $("#body_doc_form").html("")
+                        var header = "Add new document";
+                        stopSpin()
+                        if (doc_form_id != 0) {
+                            header = "Update " + title + " details"
+                        }
+                        if (doc_form_id == 15) {
+                            $("#mdl_doc_com").html(header);
+
+                            $("#body_doc_com").html(r)
+                            $("#mdl_doc_com ").modal("show");
+                        }
+                        else {
+                            $("#h_doc_form_id").html(header);
+                            $("#body_doc_form").html(r)
+                            $("#mdl_doc_form").modal("show");
+                        }
+                    }
+
+                })
+        }
+    </script>
+    <div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+                </div>
+                <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+                </div>
+                <div class="modal-footer">
+                    <button onclick="btn_save_status_log()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                    <button id="btn_delete" onclick="warn_delete_doc_form()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                    <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal " id="mdl_doc_form" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="removezindex()">x</button>
+                    <h4 id="h_doc_form_id" class="modal-title">Transaction Information</h4>
+                </div>
+                <div id="body_doc_form" class="modal-body" style="height:auto!important">
+                    <div class="demo-section wide">
+                        
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button id="id_dgsign" onclick="btn_signDGSign()" type="button" class="btn btn-success pull-left"><i class="fa fa-pencil"></i> Sign via DGSign</button>
+                    <button id="btn_doc_configure" onclick="cofigure_logo()" type="button" class="btn btn-default"><i class="fa fa-gear"></i> Configure Logo</button>
+                    <button onclick="btn_save_dv()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+
+                    <button type="button" class="btn btn-default" onclick="removezindex()" style="cursor:pointer" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

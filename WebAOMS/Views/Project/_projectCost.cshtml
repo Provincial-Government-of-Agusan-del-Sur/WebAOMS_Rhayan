@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "_projectCost";
+}
+
+
+<div class="div-block" style="border:none">
+    @(Html.Kendo().Grid<WebAOMS.Models.vw_projectEstimatedCost>()
+        .Name("grid_project_Cost")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer" })
+        .Columns(columns =>
+        {
+            columns.Bound(M => M.ProjectCostName).Width(100).Title("Project Cost Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Bound(M => M.EstimatedAmount).Width(100).Title("Estimated Cost").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+        })
+        .Pageable(p => p
+            .Input(true)
+            .Numeric(false)
+            .Refresh(false)
+        )
+        .Sortable()
+        .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single)
+            .Type(GridSelectionType.Row) 
+        )
+        .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(12).Sort(M =>{
+            M.Add("ProjectCostName").Ascending();
+        })
+        .ServerOperation(true)
+        .Model(M => { M.Id(G => G.ProjectEstimatedCostID); })
+        .Read(g => g.Action("GetgridProjectCost", "Project")))
+        .Events(e => e.Change("selectedProjectCost"))
+        )
+</div>

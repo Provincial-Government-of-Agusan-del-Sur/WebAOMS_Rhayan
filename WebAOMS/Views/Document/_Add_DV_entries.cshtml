@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "SL Buildup";
+    Layout = null;
+    ViewBag.Title_mini = "Subsidiary Ledger Buildup";
+}
+<div class="box">
+    <div class="box-body" style="padding-top:10px">
+        <div class="row">
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-6 no-padding">
+                <div class="input-group" style="padding-bottom:5px!important">
+                    <input id="txt_search_account" type="text" class="form-control navbar-input" placeholder="Search Account code or account name">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+
+            </div>
+        <script>
+            $(document).ready(function () {
+                $("#id_dgsign").hide()
+                $(".modal-header").on("mousedown", function (mousedownEvt) {
+                    var $draggable = $(this);
+                    var x = mousedownEvt.pageX - $draggable.offset().left,
+                        y = mousedownEvt.pageY - $draggable.offset().top;
+                    $("body").on("mousemove.draggable", function (mousemoveEvt) {
+                        $draggable.closest(".modal-dialog").offset({
+                            "left": mousemoveEvt.pageX - x,
+                            "top": mousemoveEvt.pageY - y
+                        });
+                    });
+                    $("body").one("mouseup", function () {
+                        $("body").off("mousemove.draggable");
+                    });
+                    $draggable.closest(".modal").one("bs.modal.hide", function () {
+                        $("body").off("mousemove.draggable");
+                    });
+                });
+
+
+            })
+
+            $('#txt_search_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                    if ($('#txt_search_account').val() == "") {
+                        gridData.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("AccountChildName", $('#txt_search_account').val(), 'grid_COA')
+                        gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                    }
+                //}
+            })
+
+            //function addAccount(gridto,gridfrom,ChartAccountChildID,AccountChildName,code) {
+            //    alert(ChartAccountChildID)
+            //}
+
+            function addEntries(ChartAccountChildID) {
+                //$("#mdl_jev_entries").modal("hide");
+               
+                edit_subentries(0, ChartAccountChildID, '0.00')
+            }
+
+            
+        </script>
+        <div class="row">
+        @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_COA")
+        .Columns(columns =>
+        {
+            columns.Template(@<text></text>)
+            .Title("Account Code")
+            .Width(120)
+            .HtmlAttributes(new { style = "text-align:left" })
+            .HeaderHtmlAttributes(new { style = "text-align:center" })
+            .ClientTemplate("<div onclick=\"addEntries('#=ChartAccountChildID#')\"  style=\"width:100% !important;cursor:pointer;text-align:center\" ><i title=\"Add account\" style=\"font-size:15px;cursor:pointer;color:green\" class=\"fa fa-plus fa-lg\"> </i>   #=code#</div>");
+
+            columns.Bound("AccountChildName").Width(350);
+
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 300px;" })
+        .Scrollable()
+        .Sortable()
+            
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_coa", "Document"))
+            .PageSize(200)
+        )
+            )
+        </div>
+    </div>
+</div>
+
+
+

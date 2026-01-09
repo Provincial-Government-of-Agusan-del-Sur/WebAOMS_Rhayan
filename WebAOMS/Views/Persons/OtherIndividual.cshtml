@@ -1,0 +1,182 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+        z-index: 500;
+    }
+</style>
+<div class="box">
+    <div class="box-body" style="padding-top:10px">
+
+        <div class="row" style="padding-bottom:5px">
+            <div class="box-head no-padding">
+                <h4></h4>
+            </div>
+            <div class="col-md-12 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Group Name</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <div class="col-md-6 no-padding">
+                        @(Html.Kendo().DropDownList()
+                        .Name("ddp_person_group_id")
+                        .DataTextField("GroupName")
+                        .DataValueField("person_group_id")
+                        .HtmlAttributes(new { style = "width:100%" })
+                        .Filter("contains")
+                        .SelectedIndex(0)
+                        .DataSource(source =>
+                        {
+                            source.Read(read =>
+                            {
+                                read.Action("get_person_group", "Persons");
+                            })
+                            .ServerFiltering(true);
+                        })
+                    .Events(e =>
+                    {
+                        e.Change("r_grid").DataBound("r_grid");
+                    })
+                        )
+                    </div>
+                   
+                </div>
+            </div>
+
+                <script>
+            function para_person (){
+                return { groupid: $("#ddp_person_group_id").data("kendoDropDownList").value() }
+            }
+            function r_grid() {
+                var grid = $("#grid_persons").data("kendoGrid");
+                grid.dataSource.read();
+            }
+                </script>
+        </div>
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.vw_Persons>()
+            .Name("grid_persons")
+            .Columns(columns =>
+            {
+            columns.Bound(m => m.PersonID).Title("PersonID").Width(70);
+            columns.Bound(m => m.Name).Title("Name").Width(150);
+            columns.Bound(m => m.AccountNo).Title("AccountNo").Width(100);
+            columns.Bound(m => m.AddressName).Title("RHU/Barangay/Address").Width(200);
+            columns.Bound(m => m.ContactNo).Title("Contact No.").Width(100);
+            columns.Bound(m => m.Email).Title("Email").Width(100);
+            columns.Bound(m => m.ClaimantCode).Title("ClaimantCode").Width(100);
+            columns.Template(@<text></text>)
+            .Width(80)
+            .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+            .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnew('#=ClaimantCode#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+
+            })
+            .HtmlAttributes(new { style = "height: 350px;" })
+            .Scrollable()
+            .Sortable()
+            .Pageable(pageable => pageable
+            .Refresh(true)
+            .ButtonCount(5))   
+            .AutoBind(false)     
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Read(read => read.Action("data_grid_persons", "Persons").Data("para_person"))
+                .PageSize(200)
+            )
+            )
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="btn-group" style="padding-left:10px;padding-bottom:10px">
+            <button onclick="addnew()" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
+        </div>
+    </div>
+</div>
+<script>
+
+    var mg = new mgsInfo()
+    function addnew(claimantcode) {
+        startSpin()
+        $.post('@Url.Action("_add_person", "Persons")', { claimantcode: claimantcode }
+            , function (r) {
+                if (r.code == 5) {
+                    stopSpin()
+                    mg.warning("" + r.statusName + "", "System Message")
+                }
+                else {
+                    var header = "Add Person";
+                    stopSpin()
+                    if (claimantcode != "")
+                    {
+                        header = "Add person to " + $("#ddp_person_group_id").data("kendoDropDownList").text();
+                    }
+                    $("#h_newstatus_id").html(header);
+                    $("#body_newstatus").html(r)
+                    $("#mdl_newstatus").modal("show");
+                }
+            })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+
+</script>
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_person()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button id="btn_delete" onclick="warn_delete_doc_form()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="mdl_browse_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Browse Claimant</h4>
+            </div>
+            <div id="body_browse_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button id="btn_add_claimant" style="display:none" onclick="add_claimant()" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add New</button>
+                <button onclick="select_claimant()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Select</button>
+                <button type="button" class="btn btn-default" onclick="close_browse_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mdl_add_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Browse Claimant</h4>
+            </div>
+            <div id="body_add_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_claimant()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-default" onclick="close_add_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

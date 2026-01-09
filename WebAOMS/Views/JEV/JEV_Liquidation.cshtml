@@ -1,0 +1,568 @@
+﻿
+@{
+    ViewBag.Title = "JEV Numbering";
+    ViewBag.Title_mini = "JEV Numbering";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+        @@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}
+</style>
+
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a href="#" onclick="search_trans()" class="btn btn-equal btn-sm btn-" style="width:125px"><i class="fa fa-search"></i> Search Transaction</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+        <div class="col-md-12">
+            <input id="txt_defaultjevdate" value="January, 2019" type="text" hidden  />
+            <div class="row">
+                <div class="box-head">
+                    <h4 class="text-light">Enter <strong>DVNO</strong></h4>
+                </div>
+                <div class="box-body no-padding" style="min-width:350px!important">
+                    <div class="form-group-md col-md-4 no-padding">
+
+                        <div class="input-group no-padding">
+                            <input id="txt_dvno" type="text" class="form-control navbar-input" placeholder="Enter DVNO">
+                            <span class="input-group-btn">
+                                <button class="btn btn-equal" onclick="view_jev_details()" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                            
+                        </div>
+
+                        @*<div class="input-group no-padding">
+                    <div data-toggle="buttons">
+                        <label id="lblcheck_Adjustment" class="btn checkbox-inline btn-checkbox-primary-inverse">
+                            <input id="chck_Adjustment" type="checkbox">Adjustment
+                        </label>
+                    </div>
+                </div>*@
+                        @*<div class="col-md-8">
+                    <div class="col-md-12" style="padding-top:10px">
+                        <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-trash"></i> Delete</button>
+                        <button onclick="btn_save_transaction()" class="btn btn-success pull-right"> <i class="fa fa-save"></i> Save Changes</button>
+                        <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add Account</button>
+
+                    </div>
+                </div>*@
+
+                        <script>
+                            
+                            var mg = new mgsInfo()
+                            function search_trans() {
+                                startSpin()
+                                $.post('@Url.Action("_search_transaction", "JEV")', { }, function (r) {
+                                stopSpin()
+                                mdl_popup.popmodal("", "Search Transaction", r, "", 400);
+                                })
+                            }
+
+                            //function isadjustment(entrytype) {
+                            //    //var value = 0;
+                            //    //if ($('#chck_Adjustment').is(':checked')) {
+                            //    //    value = 1
+                            //    //}
+                            //    //if ($('#chck_reissuance').is(':checked')) {
+                            //    //    value = 2
+                            //    //}
+                            //    //if ($('#chck_postclosing').is(':checked')) {
+                            //    //    value = 3
+                            //    //}
+                            //    return entrytype;
+                            //}
+
+                            $('#txt_dvno').on('keydown', function (e) {
+                                if (e.keyCode == 13) {
+
+                                    show_jev_numbering($('#txt_dvno').val())
+
+                                }
+                            })
+
+                            function view_jev_details(entryType) {
+                                var dvno = $('#txt_dvno').val()
+                                startSpin()
+                                $.post('@Url.Action("_view_jev_liquidation", "JEV")', { dvno: dvno, isadjustment: entryType }, function (r) {
+                                    stopSpin()
+                                    if (r.code == "5" || r.code == "7") {
+                                        mg.warning("" + r.statusName + "")
+                                        $("#div_jevdetails").html("")
+                                    }
+                                    else {
+                                        $("#jev_content").html("")
+                                        stopSpin()
+                                        $("#txt_dvno").val(dvno)
+                                        $("#h_jev_id").html("DVNO: " + dvno)
+                                        $("#jev_content").html(r)
+                                        $("#mdl_jev").modal("show");
+                                    }
+                                })
+                            }
+
+                          
+        function load_JEV(entrytype, entryName) {
+            $('#txt_dvno').val("000-00-00-0000");
+            if (entrytype == 1)
+            {
+                view_jev_details(4);
+            }
+            else if (entrytype == 2) {
+                view_jev_details(5);
+            }
+
+            else if (entrytype == 3) {
+                view_jev_details(6);
+            }
+            else if (entrytype == 4) {
+                view_jev_details(7);
+            }
+            else if (entrytype == 5) {
+                view_jev_details(8);
+            }
+            else if (entrytype == 6) {
+                view_jev_details(9);
+            }
+            else if (entrytype == 7) {
+                $('#txt_dvno').val("0000-00-0000");
+                view_jev_details(1);
+            }
+            else if (entrytype == 8) {
+                $('#txt_dvno').val("000-00-00-0000");
+                view_jev_details(2);
+            }
+
+            else if (entrytype == 9) {
+                $('#txt_dvno').val("0000-00-0000");
+                view_jev_details(3);
+            }
+
+        };
+                        </script>
+                    </div>
+                    <div class="form-group-md col-md-4">
+                        <div class="input-group no-padding">
+                            @*<div>
+                                <button id="btn_Adjustment" type="button" class="btn btn-primary">Adjustment</button>
+                                <button id="btn_Reissuance" type="button" class="btn btn-primary">Reissuance</button>
+                                <button id="btn_PostClosing" type="button" class="btn btn-primary">Post Closing</button>
+                            </div>*@
+                            <div id="btn_attach" class="btn-group dropdown">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    New Entry <i class="fa fa-caret-down"></i>
+                                </button>
+                                <ul class="dropdown-menu animation-slide" role="menu" style="text-align: left;">
+
+                                    <li><a href="#" onclick="load_JEV(1,'Cash Receipts')"><i class="fa fa-file-word-o"></i> Cash Receipts</a></li>
+                                   
+                                    <li><a href="#" onclick="load_JEV(3,'Cash Disbursement')"><i class="fa fa-file-word-o"></i> Cash Disbursement</a></li>
+                                    <li><a href="#" onclick="load_JEV(2, 'Check Disbursement')"><i class="fa fa-file-word-o"></i> Check Disbursement</a></li>
+                                    <li><a href="#" onclick="load_JEV(4, 'General Journal')"><i class="fa fa-file-word-o"></i> General Journal</a></li>
+                                    <li><a href="#" onclick="load_JEV(5, 'Procurement')"><i class="fa fa-file-word-o"></i> Procurement</a></li>
+                                    <li><a href="#" onclick="load_JEV(6, 'ADA Disbursement')"><i class="fa fa-file-word-o"></i> ADA Disbursement</a></li>
+
+                                    <li><a href="#" onclick="load_JEV(7, 'Adjustment')"><i class="fa fa-file-word-o"></i> Adjustment</a></li>
+                                    <li><a href="#" onclick="load_JEV(8, 'Reissuance')"><i class="fa fa-file-word-o"></i> Reissuance</a></li>
+                                    <li><a href="#" onclick="load_JEV(9, 'Post Closing')"><i class="fa fa-file-word-o"></i> Post Closing</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+    
+
+        $(function () {
+
+        // Remove spaces in txt_dvno input
+        $('#txt_dvno').bind('input', function () {
+            $(this).val(function (_, v) {
+                return v.replace(/\s+/g, '');
+            });
+        });
+    });
+                    </script>
+
+
+                            <div id="div_jevdetails" class="form-group-md col-md-12 no-padding" style="padding-top:10px">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+        <hr />
+
+    </div>
+</div>
+<div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Transaction List(For Approval)</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="box-body">
+
+            <div class="box">
+                <div class="box-body" style="padding-top:10px">
+                    <div class="row">
+                        <div class="col-md-8">
+                        From
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_from")
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_trans_account"))
+                            )
+                            To
+                            @(Html.Kendo().DatePicker()
+                        .Name("dtp_to")
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_trans_account"))
+                            )
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group" style="padding-bottom:5px!important">
+                                <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search JEV NO" maxlength="17">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <script>
+                $('#txt_search_dvno').on('keyup', function (e) {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        if ($('#txt_search_dvno').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Jevno", $('#txt_search_dvno').val(), 'grid_transactions')
+                            gridData.dataSource.sort({ field: "Jevno", dir: "asc" });
+                        }
+                    }
+                })
+                function rgrid_trans_account() {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                function rgrid_approved_jev() {
+                    var gridData = $("#grid_Approved_jev").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                function para_transaction() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    return { from: from, to: to }
+                }
+
+                $("#export").click(function (e) {
+                    var grid = $("#grid_transactions").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+
+
+                function show_aprrove_jev(jevid,jevno) {
+                    startSpin()
+                    $.post('@Url.Action("view_approve_jev", "JEV")', { jevid: jevid }, function (r) {
+                        $("#body_approve").html("")
+                        stopSpin()
+                        $("#body_approve").html(r)
+                        $("#mdl_approve").modal("show");
+                    })
+                    //.fail(function (jqXHR, textStatus, error) {
+                    //    stopSpin()
+                    //    mg.warning("" + textStatus + "")
+                    //});
+                }  
+                    </script>
+                    <div class="row">
+                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_transaction_liquidation_byDate_Result>()
+                    .Name("grid_transactions")
+                    .Columns(columns =>
+                    {
+                    columns.Bound(m => m.jevid).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.Jevno).Width(70).Title("JEV Number");
+                    columns.Bound(m => m.Dvno).Width(70);
+                    columns.Bound(m => m.Name).Width(150);
+                    columns.Bound(m => m.Particular).Width(170);
+                    //columns.Bound(m => m).Width(70).Format("{0:dd/MM/yyyy}");
+                    columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                    columns.Template(@<text></text>)
+                    .Width(30)
+                    .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                    .ClientTemplate("<button data-original-title=\"view\" type=\"button\" onclick=\"show_aprrove_jev(#=jevid#,'#=Jevno#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-list\"></i></button>");
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single)
+                    .Type(GridSelectionType.Row))
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_transaction_liquidation_bydate", "JEV").Data("para_transaction"))
+                        .PageSize(200)
+                        .ServerOperation(true)
+                    )
+                    )
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Transaction List(Approved JEV)</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a id="export_approved_jev" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+
+        <div class="box">
+            <div class="box-body" style="padding-top:10px">
+                <div class="row">
+                    <div class="col-md-8">
+                        From
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_from_approved")
+
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_approved_jev"))
+                        )
+                        To
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_to_approved")
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_approved_jev"))
+                        )
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group" style="padding-bottom:5px!important">
+                            <input id="txt_search_jevno" type="text" class="form-control navbar-input" placeholder="Search JEVNO" maxlength="17">
+                            <span class="input-group-btn">
+                                <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <script>
+                    $("#grid_transactions").on("dblclick", "tr.k-state-selected", function (e) {
+                        var row = $(e.target).closest("tr"),
+                        grid = $("#grid_transactions").data("kendoGrid"),
+                        dataItem = grid.dataItem(row);
+                        show_jev_numbering(dataItem.Dvno)
+                    });
+                $('#txt_search_jevno').on('keyup', function (e) {
+                    var gridData = $("#grid_Approved_jev").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                    if ($('#txt_search_jevno').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                        ISfn.applyFilter("Jevno", $('#txt_search_jevno').val(), 'grid_Approved_jev')
+                        gridData.dataSource.sort({ field: "Jevno", dir: "asc" });
+                        }
+                    }
+                })
+                function rgrid_approved_jev() {
+                    var gridData = $("#grid_Approved_jev").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                function para_approved_jev() {
+                    var from = $('#dtp_from_approved').data('kendoDatePicker').value();
+                    var to = $('#dtp_to_approved').data('kendoDatePicker').value();
+                    return { from: from, to: to }
+                }
+
+                $("#export_approved_jev").click(function (e) {
+                    var grid = $("#grid_Approved_jev").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+                </script>
+                <div class="row">
+                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_transaction_liquidation_byDate_Result>()
+                    .Name("grid_Approved_jev")
+                    .Columns(columns =>
+                    {
+                        columns.Bound(m => m.jevid).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.Jevno).Width(70).Title("JEV Number");
+                        columns.Bound(m => m.Dvno).Width(70);
+                        columns.Bound(m => m.Name).Width(150).Title("Approved By");
+                        columns.Bound(m => m.Particular).Width(200);
+                        // columns.Bound(m => m.CheckDate).Width(70).Format("{0:dd/MM/yyyy}");
+                        @*columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                        columns.Template(@<text></text>)
+                        .Width(100)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"warnDelete(#=code#,#=GLChartAccountChildID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-trash\"></i></button>");*@
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable()
+                    .Sortable()
+                     .Selectable(selectable => selectable
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_approved_jev_bydate", "JEV").Data("para_approved_jev"))
+                        .PageSize(200)
+                    )
+                    )
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#grid_Approved_jev").on("dblclick", "tr.k-state-selected", function (e) {
+        var row = $(e.target).closest("tr"),
+        grid = $("#grid_Approved_jev").data("kendoGrid"),
+        dataItem = grid.dataItem(row);
+        show_jev_numbering(dataItem.Dvno)
+    });
+
+    function show_jev_numbering(dvno) {
+        startSpin()
+        $.post('@Url.Action("view_jev_numbering", "JEV")', { dvno: dvno }, function (r) {
+            $("#jev_content").html("")
+            stopSpin()
+            $("#txt_dvno").val(dvno)
+            $("#h_jev_id").html("DVNO: " + dvno)
+            $("#jev_content").html(r)
+            $("#mdl_jev").modal("show");
+            //$("#id_div_cf").hide();
+        })
+
+
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+
+    function show_jev_numbering_byjevid(jevid) {
+        startSpin()
+        $.post('@Url.Action("view_jev_numbering_byjevid", "JEV")', { jevid: jevid }, function (r) {
+            $("#jev_content").html("")
+            stopSpin()
+            $("#h_jev_id").html("Transaction Details")
+            $("#jev_content").html(r)
+            $("#mdl_jev").modal("show");
+            //$("#id_div_cf").hide();
+        })
+
+
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+    function aprrove_jev(jevid,JEVno) {
+        startSpin()
+        $.post('@Url.Action("view_approve_jev", "JEV")', { jevid: jevid }, function (r) {
+            $("#body_approve").html("")
+            stopSpin()
+            $("#body_approve").html(r)
+            $("#mdl_approve").modal("show");
+            $("#h_approve_id").html("JEV No. " + JEVno )
+        })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+</script>
+<div class="modal" id="mdl_approve" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_approve_id" class="modal-title"></h4>
+            </div>
+            <div id="body_approve" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="warnApprove()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Approve</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mdl_jev" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_jev_id" class="modal-title"></h4>
+            </div>
+            <div id="body_jev" class="modal-body" style="height:725px!important">
+                <input type="text" id="txt_dvno" hidden />
+                <div id="jev_content" class="form-group-md col-md-12 no-padding" style="padding-top:10px">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="g_modal" data-backdrop="" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:1040">
+
+</div>
+

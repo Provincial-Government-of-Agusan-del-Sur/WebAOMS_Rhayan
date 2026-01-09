@@ -1,0 +1,418 @@
+﻿ @using WebAOMS.Models;
+    @{
+       
+        fmisEntities fmisdb = new fmisEntities();
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout_Public.cshtml";
+
+        
+    }
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Criteria</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-lg-12" style="border-bottom:1px solid gray">
+                    <div data-toggle="buttons">
+                        <label class="btn radio-inline btn-radio-success-inverse">
+                            <input name="payrollTypeOption" id="payrollTypeOption1" value="1" type="radio"> Period
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse " >
+                            <input name="payrollTypeOption" id="payrollTypeOption2" value="2" type="radio"> DVNO
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse ">
+                            <input name="payrollTypeOption" id="payrollTypeOption4" value="4" type="radio"> OBRNO
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse active">
+                            <input name="payrollTypeOption" id="payrollTypeOption3"   value="3" type="radio"> Claimant
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse">
+                            <input name="payrollTypeOption" id="payrollTypeOption5" value="5" type="radio"> Gross Amount
+                        </label>
+                        <input id="payrollTypeOptionID" value="3" hidden />
+                        <script>
+                                $(function () {
+                                    $('input[name="payrollTypeOption"]').bind('change', function () {
+                                        $("#payrollTypeOptionID").val($(this).val())
+                                        $('.hideoptiondiv').hide();
+                                        $('#txtsearchEmp').val("")
+                                        
+                                        $("#payrollType-" + $(this).val()).show();
+                                    });
+                                });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div  id="payrollType-1"   class="col-lg-6 no-padding hideoptiondiv" style="display: none;">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    From
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                    To
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                    <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+            <div id="payrollType-2" class="col-lg-6 no-padding hideoptiondiv" style="display: none;">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                        <input id="txtsearchEmp" type="text" class="form-control navbar-input" placeholder="Enter DVNO">
+                        <span class="input-group-btn">
+                            <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="payrollType-4" class="col-lg-6 no-padding hideoptiondiv" style="display: none;">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                        <input id="txtsearch_obrno" type="text" class="form-control navbar-input" placeholder="Enter OBRNO">
+                        <span class="input-group-btn">
+                            <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="payrollType-5" class="col-lg-6 no-padding hideoptiondiv" style="display: none;">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                        <input id="txtsearch_amount" type="text" class="form-control navbar-input" placeholder="Enter Gross Amount">
+                        <span class="input-group-btn">
+                            <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>r
+            </div>
+            <script>
+                function para_dp() {
+
+                    return {claimantName:""}
+                }
+            </script>
+            <div id="payrollType-3" class="col-lg-12 no-padding hideoptiondiv" style="display:block">
+                <div data-toggle="buttons">
+                    <label class="btn radio-inline btn-radio-success-inverse active">
+                        <input name="claimantypeOption" id="claimantypeOption1" value="1" type="radio"> Employee
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption2" value="2" type="radio"> Other Individual
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption3" value="3" type="radio"> Company
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption4" value="4" type="radio"> Responsibility Center
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption5" value="5" type="radio"> National Offices
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption6" value="6" type="radio"> Barangay Treasurers
+                    </label>
+                    <input id="claimantypeOptionID" value="1" hidden />
+                    <script>
+                                $(function () {
+                                    $('input[name="claimantypeOption"]').bind('change', function () {
+                                        $("#claimantypeOptionID").val($(this).val())
+                                        var categories = $("#dp_claimant").data("kendoComboBox");
+                                        categories.dataSource.read();
+                                    });
+
+                                });
+                                function para_claimant() {
+                                    
+                                    return { claimantcode: $("#claimantypeOptionID").val() }
+                        }
+                    </script>
+                </div>
+                <div class="col-lg-12" style="padding-bottom:5px">
+                    @(Html.Kendo().ComboBox()
+                      .Name("dp_claimant")
+                      .Placeholder("Select Claimant Name ...")
+                     .HtmlAttributes(new { style = "width:400px; text-align:left;" })
+                    .DataTextField("Name")
+                    .DataValueField("ID")
+                    .AutoBind(true)
+                      .Filter("contains")
+                      
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("get_claimant_name_byClamantmode", "PreAudit").Data("para_claimant"); 
+                          });
+                      })
+                    )
+                    <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+
+            <script>
+
+                function refrehGrid() {
+                    if ($("#gridTypeOptionID").val() ==1){
+                        var grid = $("#grid_tracking").data("kendoGrid");
+                        grid.dataSource.read()
+                    }
+                    else if ($("#gridTypeOptionID").val() == 2) {
+                        var grid = $("#grid_monitoring").data("kendoGrid");
+                        grid.dataSource.read()
+                    }
+                    
+                }
+
+                function summary_para() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    var claimantcode = $('#dp_claimant').data('kendoComboBox').value()                    
+                    if ($("#payrollTypeOptionID").val() == 4) {
+                        dvno = $('#txtsearch_obrno').val();
+                    }
+                    else if ($("#payrollTypeOptionID").val() == 5) {
+                        dvno = $('#txtsearch_amount').val();
+                    }
+                    else {
+                        dvno = $('#txtsearchEmp').val();
+                    }
+                    return { from: from, to: to, dvno: dvno, searchtype: $("#payrollTypeOptionID").val(), claimanttype: $("#claimantypeOptionID").val(), claimantcode: claimantcode, grid_type: $("#gridTypeOptionID").val() }
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Transaction Monitoring</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="col-lg-12 no-padding">
+                <div data-toggle="buttons">
+                    <label class="btn radio-inline btn-radio-success-inverse active">
+                        <input name="gridTypeOption" id="gridTypeOption1" value="1" type="radio"> Tracking Type
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="gridTypeOption" id="gridTypeOption2" value="2" type="radio"> Hourly Type
+                    </label>
+
+                    <input id="gridTypeOptionID" value="1" hidden />
+                    <script>
+                                $(function () {
+                                    $('input[name="gridTypeOption"]').bind('change', function () {
+                                        $("#gridTypeOptionID").val($(this).val())
+                                        $('.gridhideoptiondiv').hide();
+
+                                        $("#div_tracking_" + $(this).val()).show();
+                                    });
+                                });
+                    </script>
+                </div>
+            </div>
+            <div id="div_tracking_1" class="col-lg-12 no-padding gridhideoptiondiv" style="display:block">
+                @(Html.Kendo().Grid<dynamic>()
+                .Name("grid_tracking")
+                .Columns(columns =>
+                {
+                columns.Bound("Transactiondate").Title("Transaction Date").Width(80).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+
+                columns.Template(@<text></text>)
+                    .Width(120).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).HeaderTemplate("DVNO")
+                    .ClientTemplate("<a onclick=\"view_trans_details('#=dvno#')\" style=\"cursor:pointer\" >#=dvno#</a>");
+                    //columns.Bound("Name").Title("Claimant Name").Width(160).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("OfficeMedium").Title("Office").Width(90).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }) ;
+                    columns.Bound("ObrNo").Title("OBRNO").Width(150).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("particular").Title("Particular").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Gamount").Title("Gross Amount").Width(100).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("status").Title("Status").Width(150).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center;color:green" });
+                    columns.Bound("DTE").Title("Date of last Status").Width(150).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("LocationOffice").Title("Location").Width(150).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                })
+                .Filterable()
+                .AutoBind(false)
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("TrackingDuration_List_read", "PreAudit").Data("summary_para"))
+                    .PageSize(50000)
+                )
+                )
+            </div>
+
+            <div id="div_tracking_2" class="col-lg-12 no-padding gridhideoptiondiv" style="display:none">        
+        
+                @(Html.Kendo().Grid<dynamic>()
+                .Name("grid_monitoring")
+                .Columns(columns =>
+                {
+                    columns.Template(@<text></text>)
+                    .Width(120).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).HeaderTemplate("DVNO")
+                    .ClientTemplate("<a onclick=\"view_trans_details('#=dvno#')\" style=\"cursor:pointer\" >#=dvno#</a>").Locked(true).Lockable(false);
+            
+                    //columns.Bound("dvno").Title("DVNO").Width(120).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("particular").Title("Particular").Width(400).Lockable(false).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+
+                    columns.Bound("ReceiveInBudget").Title("ReceivedInPBO").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("ReleasedInBudget").Title("ReleasedInPBO").Width(150).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("BudgetInHours").Title("HoursInPBO").Width(150).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                    columns.Bound("ReceiveInAccounting").Title("ReceiveInPACCO").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("ReleasedInAccounting").Title("ReleasedInPACCO").Width(150).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("AccountingInHours").Title("HoursInPACCO").Width(150).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                    columns.Bound("ReceivedInVerificationPTO").Title("ReceivedInPTO").Lockable(false).Width(150).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("ReleaseInVerificationPTO").Title("ReleaseInPTO").Lockable(false).Width(150).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("VerificationPTOinHours").Title("HoursInPTO").Width(150).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                    columns.Bound("ReceivedInAdmin").Title("ReceivedInAdmin").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("ReleasedInAdmin").Title("ReleasedInAdmin").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("AdminInHours").Title("HoursInAdmin").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                    columns.Bound("ReceivedInPGO").Title("ReceivedInPGO").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("ReleasedInPGO").Title("ReleasedInPGO").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("PGOinHours").Title("HoursInPGO").Width(140).Lockable(false).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                })
+                .AutoBind(false)
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("TrackingDuration_List_read", "PreAudit").Data("summary_para"))
+                    .PageSize(2000)
+
+                )
+                )
+            </div>
+
+
+            <script>
+                $("#export").click(function (e) {
+
+                    if ($("#gridTypeOptionID").val() == 1) {
+                        var grid = $("#grid_tracking").data("kendoGrid");
+                        grid.saveAsExcel();
+                    }
+                    else if ($("#gridTypeOptionID").val() == 2) {
+                        var grid = $("#grid_monitoring").data("kendoGrid");
+                        grid.saveAsExcel();
+                    }
+
+
+
+                    
+                });
+               
+                $('#txtsearchEmp').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+
+                $('#txtsearch_obrno').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+                $('#txtsearch_amount').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+
+            </script>
+        </div>
+        <hr />
+        <div class="box-footer">
+            <div style="height:10px">
+
+            </div>
+        </div>
+    </div>
+
+<script>
+    function view_trans_details(dvno) {
+        startSpin()
+        $.post('@Url.Action("_partial_view_transdetails", "PreAudit")', {dvno:dvno}, function (r) {
+            stopSpin()
+            $("#body_details_grid").html(r)
+            $("#modal_transaction_details").modal("show");
+        })
+    }
+</script>
+
+<div class="modal" id="modal_transaction_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Transaction Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" style="cursor:pointer"  data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

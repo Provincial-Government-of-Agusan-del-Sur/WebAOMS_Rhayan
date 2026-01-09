@@ -1,0 +1,272 @@
+﻿@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+@using System.Data
+@using WebAOMS.Models
+@model DataSet
+
+<link href="~/Content/akot/2018.1.1/bs-stepper.min.css" rel="stylesheet" />
+<script src="~/Scripts/akot/bs-stepper.min.js"></script>
+
+<div class="box" style="width:100%;margin-bottom:0px!important">
+    <div class="box-body" >
+        <div class="col-md-4">
+            <div class="row" style="padding-bottom:15px">
+                <form id="frm_logdetails">
+                    <input id="doc_form_id" name="doc_form_id" value="@ViewBag.doc_form_id" type="text" hidden />
+
+                    <div class="PvCIH" hidden>
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Reference</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_refno" hidden name="refno" value="@ViewBag.refno" type="text" disabled class="form-control k-input" />
+                    </div>
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Office Name</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_office" name="office" value="@ViewBag.office" type="text" disabled class="form-control k-input" />
+                    </div>
+
+                    <div class="PvCIH">
+                        <span data-lokalise="true" hidden class="khIjp">
+                            <span>Liaison Officer(Contact No.)</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb" hidden>
+                        <input id="txt_liaison" hidden name="liaison" value="@ViewBag.liaison" type="text" disabled class="form-control k-input" />
+                    </div>
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Particular</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <textarea id="txt_particular" disabled name="particular" maxlength="2000" type="text" class="form-control k-input" rows="3">@ViewBag.particular</textarea>
+                    </div>
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Log Status</span>
+                        </span>
+                    </div>
+
+
+                    <script>
+                function parastat() {
+                    return { status_code: $("#ddl_status").data("kendoDropDownList").value() }
+                }
+                    </script>
+                    <div class="byexym liZmnb">
+                        @(Html.Kendo().DropDownList()
+                    .Name("dp_status_code")
+                    .DataTextField("Status_name")
+                    .DataValueField("status_code")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_statusname", "Document").Data("parastat");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    .Popup(p => p.AppendTo("#mdl_newstatus"))
+                        )
+                    </div>
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Remark</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <textarea id="txt_remark" name="remark" maxlength="2000" type="text" class="form-control k-input" rows="2">@ViewBag.remark</textarea>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <button onclick="btn_update_status_log()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Update Status</button>
+                        <button onclick="btn_loadreport()" type="button" class="btn btn-success"><i class="fa fa-refresh"></i> Load Report</button>
+                        <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+                    </div>
+
+                </form>   
+            </div>
+            <div class="row" style="height:350px;overflow-y:auto">
+             
+                    <span class="bs-stepper-header" style="padding-top:15px;padding-bottom:15px"><b>Tracking History</b></span>
+                    <div id="stepper4" class="bs-stepper vertical linear">
+                        <div class="bs-stepper-header" role="tablist">
+                            @if (Model.Tables[0].Rows.Count > 0)
+                            {
+                                foreach (DataRow row in Model.Tables[0].Rows)
+                                {
+                                    if (row["user_eid"].ToString() == "0")
+                                    {
+                                        <div class="step" data-target="#test-vl-@row["rowno"]" style="text-align:left">
+                                            <span class="bs-stepper-circle">@row["rowno"]</span>
+                                            <span class="bs-stepper-label" style="max-width:316px">@row["Status_name"]</span>
+                                            @*<div class="row">
+                                        <span class="bs-stepper-label" style="margin-left:45px;font-style:italic">@row["dte"]</span>
+                                    </div>*@
+
+                                            <!-- Your content for "user_eid" equal to "0" goes here -->
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="step active" data-target="#test-vl-@row["rowno"]" style="text-align:left">
+                                            <span class="bs-stepper-circle">@row["rowno"]</span>
+                                            <span class="bs-stepper-label" style="max-width:316px">@row["Status_name"]</span>
+                                            <div class="row">
+                                                <span class="bs-stepper-label" style="margin-left:45px;font-style:italic">@row["dte"]</span>
+                                            </div>
+                                            @if (row["remarks"].ToString() != "")
+                                            {
+                                                <div class="row">
+                                                    <span class="bs-stepper-label" style="margin-left:45px;font-style:italic">Remarks: @row["remarks"]</span>
+                                                </div>
+                                                <div class="row">
+                                                    <span class="bs-stepper-label" style="margin-left:45px;font-style:italic;text-align:right">by @row["NameFML"]</span>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+
+                                    <div class="bs-stepper-line"></div>
+                                }
+                            }
+
+
+                        </div>
+
+                    </div>
+            </div>
+        </div>
+
+        <script>
+            function onShow(e) {
+                btn_loadreport()
+            }
+        </script>
+        <div class="col-md-8" style="height:900px;border:none;">
+
+            @(Html.Kendo().TabStrip()
+        .Name("tabstrip")
+        .Animation(animation =>
+            animation.Open(effect =>
+            effect.Fade(FadeDirection.In)))
+        .Events(events => events
+        .Show("onShow")
+    //.Select("onSelect")
+    //.Activate("onActivate")
+    //.ContentLoad("onContentLoad")
+    //.Error("onError")
+    )
+        .Items(tabstrip =>
+        {
+        fmisEntities fmisdb = new fmisEntities();
+        IEnumerable<vw_docDetails_transaction> docdetails;
+        string refno = ViewBag.refno;
+        docdetails = fmisdb.vw_docDetails_transaction.Where(M => M.refno == refno).OrderByDescending(O=> O.doc_details_id);
+
+        int x = 0;
+        string div_id = "";
+        foreach (var items in docdetails)
+        {
+
+
+            div_id = "id_print_result" + x;
+
+            if (x == 0)
+            {
+                tabstrip.Add().Text(items.report_name)
+                    .Encoded(false)
+                    .Selected(true)
+                    .Content(@<text>
+                        <iframe id="@div_id" class="col-sm-12 no-padding" src="@items.Expr1" style="height:850px;border:none;">@items.report_name</iframe></text>);
+    }
+    else
+    {
+        tabstrip.Add().Text(items.report_name)
+            .Encoded(false)
+            .Selected(false)
+            .Content(@<text>
+                <iframe id="@div_id" class="col-sm-12 no-padding" src="@items.Expr1" style="height:850px;border:none;">@items.report_name</iframe></text>);
+
+                }
+
+                x = x + 1;
+            }
+        })
+)
+     
+             </div>
+    </div>
+</div><script>
+    var mg = new mgsInfo()
+    function btn_update_status_log() {
+        var status_code = $("#dp_status_code").data("kendoDropDownList").value()
+        if (status_code == "")
+        {
+            stopSpin()
+            toastr.warning("Invalid Log Status..", 'System Message');
+            return;
+        }
+        startSpin()
+        $.post('@Url.Action("update_status_log", "Document")',
+           { refno: '@ViewBag.refno', status_code: status_code, remarks: $("#txt_remark").val() }
+        , function (r) {
+            if (r.code == 6) {
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                r_grid()
+                r_grid_released()
+                r_grid_out()
+                $("#mdl_newstatus").modal("hide");
+            }
+            else {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+    function btn_loadreport() {
+        
+        @*startSpin()
+        $.post('@Url.Content("~/Document/load_reportdoc")', { refno: '@ViewBag.refno' }
+            , function (r) {
+
+                $('#id_print_result').attr('src', r)
+                //$('#id_print_result2').attr('src', r)
+                //$('#a_id_link').attr('src', r)
+                // hackishly force iframe to reload
+                //var iframe = document.getElementById("id_print_result1");
+                //iframe.src = iframe.src;
+
+                //var iframe2 = document.getElementById("id_print_result2");
+                //iframe2.src = iframe.src;
+
+                //var alink = document.getElementById("a_id_link");
+                //alink.src = alink.src
+                stopSpin()
+            })*@
+    }
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    $(document).ready(function () {
+        
+        btn_loadreport()
+    
+    })
+</script>

@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="page-block ">
+    <div class="page-block-inside borderAll bg-color3 title-panel " >
+        <span class="bg-dark icon-panel"><i class="fa fa-tasks fa-lg "></i></span><i class="tri-shape"></i>
+        <div style="float:left; font-size:18px; font-family: 'Segoe UI Light_','Open Sans Light',Verdana,Arial,Helvetica,sans-serif; line-height:1.0" >&nbsp;Project Details</div>
+    </div>
+    <div class="borderAll" style="padding:5px">
+        <div class="lfloat" style="width:320px; height:100%; border:1px solid #dadada; margin-right:5px;">
+            @Html.Partial("_Details")
+        </div>
+
+        <div class="lfloat" style="width:453px">
+            @Html.Partial("_grid")
+        </div>
+        <div class="clear topm-5" ></div>
+    </div>
+    </div>  
+    <div class="page-block-inside" >
+        <div class="block m-buttom-bg" style="margin: -5px 0 0px 0; width:100%;">
+            <div class="rfloat" style="margin-right:5px;">
+                <button onclick="addnewproject()" class="k-button" > <i class="fa fa-plus fa-lg"></i> New Project</button>        
+            </div>
+        </div>
+    </div>
+<div id="div_detail_projectCost" style="display:none">
+    <div class="page-block "></div>
+    <div class="page-block ">
+        <div class="page-block-inside borderAll bg-color3 title-panel " >
+            <span class="bg-dark icon-panel"><i class="fa fa-tasks fa-lg "></i></span><i class="tri-shape"></i>
+            <div class="div-sub-title-project" >&nbsp;Estimated Project Cost</div>
+        </div>
+        <div  class="borderAll" style="padding:5px;">
+            <div  class="lfloat" style="width:100%;">
+                @Html.Partial("_gridProjectCost")
+            </div>
+            <div id ="div_detail_projectCostDetails" class="float" style="display:none;width:100%; height:100%; border:1px solid #dadada; margin-right:5px;">
+                @*@Html.Partial("_DetailsProjectCost")*@
+            </div>
+            <div class="clear topm-5" ></div>  
+        </div>
+    </div>  
+    <div class="page-block-inside">
+        <div class="block m-buttom-bg" style="margin: -5px 0 0px 0; width:100%;">
+            <div class="rfloat" style="margin-right:5px;">
+                <button onclick="newProjectEstimatedCost()" class="k-button" > <i class="fa fa-plus fa-lg"></i> New Project Estimated Cost</button>        
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        Index_Title('Project Management');
+    })
+    function reloadProjectEstimatedProjectCost(projectCostName, ProjectID) {
+        if ((ProjectID != "") && (ProjectID > 0)) {
+            $('#div_detail_projectCost').css({ 'display': 'inline-block' })
+            var grid = $("#grid_project_Cost").data("kendoGrid");
+            grid.dataSource.read({ porjectCostName: "", projectID: ProjectID })
+        }
+        else {
+             $('#div_detail_projectCost').css({ 'display': 'none' })
+        }
+    }
+    function newProjectEstimatedCost() {
+        clickProjectCostType(0);
+    }
+</script>

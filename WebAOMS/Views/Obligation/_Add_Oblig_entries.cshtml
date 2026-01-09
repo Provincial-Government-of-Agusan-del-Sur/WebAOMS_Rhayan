@@ -1,0 +1,157 @@
+﻿
+@{
+    ViewBag.Title = "Obligation Expense Details";
+    Layout = null;
+    ViewBag.Title_mini = "Obligation Expense Details";
+}
+<div class="box">
+    <div class="box-body" style="padding-top:10px">
+        <div class="row" style="padding-bottom:5px">
+            
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Program/Accountname/Object of Expenditure</span>
+                    </span>
+                </div>
+            <script>
+                function get_remainingAmount() {
+
+                    var year = $('#dtp_to').data("kendoDatePicker").value().getFullYear();
+                    var obligid = $("#txt_Obligid").val()
+                    var functionid = $("#RCenter").data("kendoDropDownList").value();
+                    var officeProgramAccountid = $("#officeProgramAccountID").data("kendoDropDownList").value();
+
+
+                    $.post('@Url.Action("get_remainingAmount", "Obligation")',
+                        { year: year, officeid: functionid, officeProgramAccountid: officeProgramAccountid, obligID: obligid },
+                        function (r) {
+                            stopSpin()
+                            $("#txt_remainingAmount").val(r.RAmount)
+                        }
+                    )
+                }
+            </script>
+                <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                .Name("officeProgramAccountID")
+                .DataTextField("accountName")
+                .DataValueField("officeProgramAccount_id")
+                .Filter("Contains")
+                .AutoBind(false)
+                .DataSource(source =>
+                {
+                    source.Read(read =>
+                    {
+                        read.Action("DataSource_officeProgram", "Obligation").Data("para_oblig_OPA");
+                    });
+                })
+                .Events(e=> e.Change("get_remainingAmount"))
+                .HtmlAttributes(new { style = "width: 100%" })
+                    )
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input-group" style="padding-bottom:5px!important">
+                    Remaining Amount:
+                    <input id="txt_remainingAmount" disabled type="text" class="form-control navbar-input" style="text-align:right;font-weight:bold;font-size:20px">
+                </div>
+            </div>
+            <div class="col-md-6">
+                Search Account Name:
+                <div class="input-group" style="padding-bottom:5px!important">
+                    <input id="txt_search_account" type="text" class="form-control navbar-input">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+
+            </div>
+        <script>
+            $(document).ready(function () {
+                $('#txt_remainingAmount').number(true, 2);
+                $(".modal-header").on("mousedown", function (mousedownEvt) {
+                    var $draggable = $(this);
+                    var x = mousedownEvt.pageX - $draggable.offset().left,
+                        y = mousedownEvt.pageY - $draggable.offset().top;
+                    $("body").on("mousemove.draggable", function (mousemoveEvt) {
+                        $draggable.closest(".modal-dialog").offset({
+                            "left": mousemoveEvt.pageX - x,
+                            "top": mousemoveEvt.pageY - y
+                        });
+                    });
+                    $("body").one("mouseup", function () {
+                        $("body").off("mousemove.draggable");
+                    });
+                    $draggable.closest(".modal").one("bs.modal.hide", function () {
+                        $("body").off("mousemove.draggable");
+                    });
+                });
+
+
+            })
+
+            $('#txt_search_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                    if ($('#txt_search_account').val() == "") {
+                        gridData.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("AccountChildName", $('#txt_search_account').val(), 'grid_COA')
+                        gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                    }
+                //}
+            })
+
+            //function addAccount(gridto,gridfrom,ChartAccountChildID,AccountChildName,code) {
+            //    alert(ChartAccountChildID)
+            //}
+
+            function addEntries(ChartAccountChildID) {
+                //$("#mdl_jev_entries").modal("hide");
+               
+                edit_subentries(0, ChartAccountChildID, '0.00')
+            }
+
+            
+        </script>
+        <div class="row">
+        @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_COA")
+        .Columns(columns =>
+        {
+            @*columns.Template(@<text></text>)
+            .Title("Account Code")
+            .Width(100)
+            .HtmlAttributes(new { style = "text-align:left" })
+            .HeaderHtmlAttributes(new { style = "text-align:center" })
+            .ClientTemplate("<div onclick=\"addEntries('#=ChartAccountChildID#')\"  style=\"width:100% !important;cursor:pointer;text-align:center\" ><i title=\"Add account\" style=\"font-size:15px;cursor:pointer;color:green\"> </i>   #=code#</div>");*@
+
+            columns.Bound("AccountChildName").Width(350).Title("Account Title");
+            //columns.Bound("Amount").Width(100).Title("Amount").HeaderHtmlAttributes(new { Style = "text-align:center" })
+            //.ClientTemplate("<div id=\"div_cf_#=oblig_expense_detail_id#\" style 'text-align:right'><button type=\"button\" onclick=\"edit_amount(#=Amount#,#=oblig_expense_detail_id#)\" style='display:inline-block;text-align:right' class=\" DebitCredit\">#=addCommas(Amount)#</button></div>")
+            //.ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 300px;" })
+        .Scrollable()
+        .Sortable()
+
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_coa", "Document"))
+            .PageSize(200)
+        )
+            )
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,98 @@
+﻿@*@using WebAOMS.Models;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "User Management";
+    ViewBag.Description = "Manage user access right";
+    ViewBag.menuid = "a8";
+}
+
+<div class="box">
+    <div class="box-head">
+        <header><h4 class="text-light"> <strong>@ViewBag.Title</strong></h4></header>
+    </div>
+    <div class="box-body">
+        <h4>Check nodes</h4>
+        @(Html.Kendo().TreeView()
+            .Name("treeview")
+            .Checkboxes(checkboxes => checkboxes
+                .Name("checkedFiles")
+                .CheckChildren(true)
+            )
+             .Events(events => events
+                .Check("onCheck")
+            )
+            .Items(treeview =>
+            {
+                fmisEntities fmisdb = new fmisEntities();
+                var menu = fmisdb.tbl_l_Menu.Where(m => m.parent_id == 0).OrderBy(M => M.Ordering);
+
+
+                foreach (var rw in menu)
+                {
+                    int? parentid = rw.menu_id;
+                    string strmenu_id;
+                    strmenu_id = rw.menu_id.ToString();
+                    treeview.Add().Text(rw.MenuName).Id(strmenu_id)
+                        .Expanded(true)
+                        .Items(root =>
+                        {
+                            var rmenu = fmisdb.tbl_l_Menu.Where(m => m.parent_id == parentid).OrderBy(M => M.Ordering);
+                            foreach (var rmw in rmenu)
+                            {
+                                root.Add().Text(rmw.MenuName).Id(rmw.menu_id.ToString())
+                                .Expanded(true);
+                                
+                            }
+                        });
+                }
+            })
+        )
+    </div>
+    <div style="padding-top: 2em;">
+        <h4>Status</h4>
+        <p id="result">No nodes checked.</p>
+    </div>
+</div>
+<script>
+
+    // function that gathers IDs of checked nodes
+    function checkedNodeIds(nodes, checkedNodes) {
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].checked) {
+                checkedNodes.push(nodes[i].id);
+            }
+
+            if (nodes[i].hasChildren) {
+                checkedNodeIds(nodes[i].children.view(), checkedNodes);
+            }
+        }
+    }
+
+    // show checked node IDs on datasource change
+    function onCheck() {
+        var checkedNodes = [],
+            treeView = $("#treeview").data("kendoTreeView"),
+            message;
+
+        checkedNodeIds(treeView.dataSource.view(), checkedNodes);
+
+        if (checkedNodes.length > 0) {
+            message = "IDs of checked nodes: " + checkedNodes.join(",");
+        } else {
+            message = "No nodes checked.";
+        }
+
+        $("#result").html(message);
+    }
+</script>
+<style>
+    #treeview .k-sprite {
+        background-image: url("@Url.Content("~/Content/web/treeview/coloricons-sprite.png")");
+    }
+
+    .rootfolder { background-position: 0 0; }
+    .folder     { background-position: 0 -16px; }
+    .pdf        { background-position: 0 -32px; }
+    .html       { background-position: 0 -48px; }
+    .image      { background-position: 0 -64px; }
+</style>*@

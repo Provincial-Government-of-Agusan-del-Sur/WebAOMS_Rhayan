@@ -1,0 +1,304 @@
+﻿
+@{
+    ViewBag.Title = "Incoming Transaction";
+    ViewBag.Title_mini = "Incoming Transaction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    @@media (min-width: 768px) {
+        .modal-xl {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+
+    .bgGreen {
+        background-color: yellowgreen;
+    }
+
+    .bgRed {
+        background-color: red;
+    }
+</style>
+
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+
+        <script>
+            $('#txt_search_rci').on('keydown', function (e) {
+            var gridData = $("#grid_RCI").data("kendoGrid");
+            if (e.keyCode == 13) {
+                if ($('#txt_search_rci').val() == "") {
+                    gridData.dataSource.filter({});
+                }
+                else {
+                    ISfn.applyFilter("RCINo", $('#txt_search_rci').val(), 'grid_RCI')
+                    gridData.dataSource.sort({ field: "RCINo", dir: "asc" });
+                }
+            }
+            })
+            function load_rci() {
+                var gridData = $("#grid_RCI").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+
+            function para_RCI_transaction()
+            {
+                var year = kendo.toString($('#dtp_period').data('kendoDatePicker').value(), 'yyyy').toString();
+                var month = kendo.toString($('#dtp_period').data('kendoDatePicker').value(), 'MM').toString();
+                var fundid = $("#dp_fundtype_rci").data("kendoDropDownList").value();
+                return {fundid:fundid,year:year,month:month}
+            }
+
+            function select_event() {
+                var row = $(this.select()).closest("tr"),
+                grid = $("#grid_RCI").data("kendoGrid"),
+                dataItem = grid.dataItem(row);
+                $("#txt_rci_no").val(dataItem.RCINo)
+                var gridData = $("#grid_transactions").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+        </script>
+        <div class="col-md-8">
+            <label for="Dateperiod" style="width:100%">RCI List</label>
+            @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_cdj_getRCI_Result>()
+                    .Name("grid_RCI")
+                    .Columns(columns =>
+                    {
+                    columns.Bound(m=> m.RCINo).Width(80).Title("RCI No.").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.BankID).Width(80).Title("Bank Name").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.BankAccountNo).Width(80).Title("Account No.").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.AccountName).Width(80).Title("Account Name").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.TotalAmount).Width(80).Title("Total Amount").Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                        @*columns.Template(@<text></text>)
+                        .Width(30)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("<button data-original-title=\"view\" type=\"button\" onclick=\"show_rci('#=RCINo#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-list\"></i></button>");*@
+                    })
+                        .AutoBind(false)
+                        .HtmlAttributes(new { style = "height: 250px;" })
+                        .Scrollable()
+                        .Sortable()
+                        .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .ButtonCount(5))
+                         .Selectable(selectable => selectable
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                            .Events(e=> e.Change("select_event"))
+                        .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .Read(read => read.Action("grid_RCI_transaction", "COA").Data("para_RCI_transaction"))
+                            .PageSize(200)
+                    )
+
+                    )
+        </div>
+        <hr />
+
+    </div>
+</div>
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Transaction List</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <input id="txt_rci_no" hidden type="text" />
+    <div class="box-body">
+
+        <div class="box">
+            <div class="box-body" style="padding-top:10px">
+
+                <script>
+
+                $('#txt_search_dvno').on('keyup', function (e) {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        if ($('#txt_search_dvno').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Jevno", $('#txt_search_dvno').val(), 'grid_transactions')
+                            gridData.dataSource.sort({ field: "Jevno", dir: "asc" });
+                        }
+                    }
+                })
+                function rgrid_trans_account() {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                function rgrid_approved_jev() {
+                    var gridData = $("#grid_Approved_jev").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                function para_rci_details() {
+                    return { rcino: $("#txt_rci_no").val() }
+                }
+
+                $("#export").click(function (e) {
+                    var grid = $("#grid_transactions").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+                function show_aprrove_jev(jevid,jevno) {
+                    startSpin()
+                    $.post('@Url.Action("view_approve_jev", "JEV")', { jevid: jevid }, function (r) {
+                        $("#body_approve").html("")
+                        stopSpin()
+                        $("#body_approve").html(r)
+                        $("#mdl_approve").modal("show");
+                    })
+                    //.fail(function (jqXHR, textStatus, error) {
+                    //    stopSpin()
+                    //    mg.warning("" + textStatus + "")
+                    //});
+                }
+                </script>
+                <div class="row">
+                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_cdj_getRCI_details_Result>()
+                    .Name("grid_transactions")
+                    .Columns(columns =>
+                    {
+                        columns.Bound(m => m.CheckDate).Width(80).Title("CheckDate").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.CheckNo).Width(80).Title("CheckNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.DVNO).Width(80).Title("DVNO").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.PTVNo).Width(80).Title("PTVNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.ResCenterCode).Width(80).Title("R.C").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.Claimantname).Width(200).Title("Payee").HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.NatureofPayment).Width(200).Title("Nature of Payment").HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.CheckAmount).Width(80).Format("{0:N2}").Title("Amount").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable()
+                    .Selectable(selectable => selectable
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_RCI_details", "COA").Data("para_rci_details"))
+                        .PageSize(200)
+                    )
+                    .Events(e => e.DataBound("onDataBound"))
+                    )
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //var a;
+    //function onDataBound() {
+    //    var grid = this;
+    //    a = 0;
+    //    grid.element.on('dblclick', 'tbody tr[data-uid]', function (e) {
+    //        if (a == 0)
+    //        {
+    //            var row = $(e.target).closest("tr"),
+    //            grid = $("#grid_transactions").data("kendoGrid"),
+    //            dataItem = grid.dataItem(row);
+    //            show_jev_numbering(dataItem.DVNO)
+    //            alert('in')
+    //        }
+
+
+    //        a = a + 1;
+    //        alert(a)
+    //        return false;
+    //    })
+    //}
+    function onDataBound() {
+        // get the grid
+        var grid = this;
+        // iterate through each row
+        grid.tbody.find('>tr').each(function () {
+            // get the row item
+            var dataItem = grid.dataItem(this);
+            // check for the condition
+
+            if (dataItem.status=="1") {
+                // add the formatting if condition is met
+                $(this).addClass('bgGreen');
+            }
+            if (dataItem.status == "0") {
+                // add the formatting if condition is met
+                $(this).addClass('bgRed');
+            }
+        })
+    }
+    $("#grid_transactions").on("dblclick", "tr.k-state-selected", function (e) {
+        var row = $(e.target).closest("tr"),
+        grid = $("#grid_transactions").data("kendoGrid"),
+            dataItem = grid.dataItem(row);
+        show_jev_numbering(dataItem.DVNO)
+    });
+
+    function show_jev_numbering(dvno) {
+        startSpin()
+        $.post('@Url.Action("view_jev_numbering", "COA")', { dvno: dvno }, function (r) {
+            $("#jev_content").html("")
+            stopSpin()
+            $("#txt_dvno").val(dvno)
+            $("#h_jev_id").html("DVNO: " + dvno)
+            $("#jev_content").html(r)
+            $("#mdl_jev").modal("show");
+            $("#id_div_cf").hide();
+
+        })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+
+    function isadjustment() {
+        return 0;
+    }
+</script>
+
+<div class="modal" id="mdl_jev" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_jev_id" class="modal-title"></h4>
+            </div>
+            <div id="body_jev" class="modal-body" style="height:725px!important">
+                <input type="text" id="txt_dvno" hidden />
+                <div id="jev_content" class="form-group-md col-md-12 no-padding" style="padding-top:10px">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

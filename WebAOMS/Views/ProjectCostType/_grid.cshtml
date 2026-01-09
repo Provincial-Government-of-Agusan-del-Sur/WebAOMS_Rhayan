@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "_grid";
+}
+
+<div class="row col-lg-12">
+    @(Html.Kendo().Grid<WebAOMS.Models.tbl_reff_ProjectCostType>()
+        .Name("grid_project_cost_type")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer" })
+        .Columns(columns =>
+        {
+            columns.Bound(M => M.ProjectCostName).Width(400).Title("Project Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            columns.Bound(M => M.ParentProjectCostID).Width(100).Title("Parent ID").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+        })
+            .Pageable(p => p
+            .Input(true)
+            .Numeric(false)
+            .Refresh(false)
+        )
+            .Sortable()
+            .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single)
+            .Type(GridSelectionType.Row) 
+        )
+        .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(12).Sort(M =>{
+            M.Add("ProjectCostName").Ascending();
+        })
+        .ServerOperation(true)
+                        .Model(M => { M.Id(G => G.projectCostID); })
+        .Read(g => g.Action("GetgridProjectCostType", "ProjectCostType")))
+        .Events(e => e.Change("selectedProjectCostType"))
+        )
+</div>
+
+<script>
+    function addnewprojectCostType() {
+        $('#txtprojectCostID').val("0");
+        $('#txtProjectCostName').val("");
+        $('#cbo_parentCostType').data('kendoComboBox').value("");
+        $('#divhalfdetail').css(
+            {
+                "display": "inline-block"
+            })
+        $('#btnSaveProjectCostType').show()
+        $('#btnDeleteProjectCostType').hide()
+        $('#btnUpdateProjectCostType').hide()
+    }
+
+    function selectedProjectCostType(e) {
+        grid = e.sender;
+        $('#btnSaveProjectCostType').hide()
+        $('#btnDeleteProjectCostType').show()
+        $('#btnUpdateProjectCostType').show()
+        var currentDataItem = grid.dataItem(this.select());
+        $('#divhalfdetail').css({ 'display': 'inline-block' })
+
+        $('#txtprojectCostID').val(currentDataItem.projectCostID),
+        $('#txtProjectCostName').val(currentDataItem.ProjectCostName),
+        $('#cbo_parentCostType').data('kendoComboBox').value(currentDataItem.ParentProjectCostID);
+    }
+</script>

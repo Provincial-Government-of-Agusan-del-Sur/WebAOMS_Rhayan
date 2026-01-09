@@ -1,0 +1,16 @@
+﻿
+@model string
+@(Html.Kendo().DropDownList()
+    .Name("childcode")
+    .DataTextField("AccountChildName")
+    .DataValueField("ChildCodeDropDown")
+    .BindTo((System.Collections.IEnumerable)ViewData["AccountChildList"])
+    .OptionLabel("Select Child Code...")
+    .DataSource(source =>
+    {
+        source.Read(read =>
+        {
+            read.Action("GetAccountChildList", "PayrollMapped");
+        });
+    })
+)

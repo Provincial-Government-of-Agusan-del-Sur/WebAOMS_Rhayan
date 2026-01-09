@@ -1,0 +1,762 @@
+﻿@{
+    ViewBag.Title = "Special Payroll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+   
+</style>
+@*<input id="txt_dataype_id" type="text" />*@
+<div class="col-lg-12" id="div_main">
+    <div class="box col-lg-12" style="padding-bottom:10px">
+        <div class="box-head">
+            <h4>
+                Special Payroll List
+            </h4>
+        </div>
+        <div class="box-body no-padding">
+            <div class="col-lg-12" style="height:100%">
+                <script>
+                    var col_dataype;
+                    function onclick_create_sp(batchno) {
+                        startSpin()
+                        if (batchno == 0) {
+                            $("#btn_ok").show();
+                        }
+                        else {
+                            $("#btn_ok").hide();
+                        }
+                        $.post('@Url.Action("get_batchDetails", "Payroll")',
+                            {batchno:batchno},
+                            function (r) {
+                                stopSpin()
+                                $("#grid_employee_compensation").data('kendoGrid').dataSource.data([]);
+                                $("#ddp_compensation_col").data('kendoDropDownList').dataSource.data([]);
+
+                                $("#mselect_status").getKendoMultiSelect().value(r.Result)
+                                $("#ddp_compensation").data("kendoDropDownList").value(r.CompensationID)
+                                $("#txt_batchno").val(batchno);
+
+                                var dropdownlist = $("#ddp_compensation").data("kendoDropDownList");
+                                var stat = $("#mselect_status").getKendoMultiSelect()
+
+
+                                if (batchno == 0) {
+                                    dropdownlist.enable(true);
+                                    stat.enable(true);
+                                }
+                                else {
+                                    dropdownlist.enable(false);
+                                    stat.enable(false);
+                                }
+                                onchangeeCompensation();
+                                //loadpara();
+                            }
+                        )
+                        .fail(function (jqXHR, textStatus, error) {
+                            stopSpin()
+                            toastr.warning(error, 'System Message');
+                        });
+                        $("#div_main").hide();
+                        $("#id_specialpayroll_details").show();
+                    }
+
+
+                </script>
+                <div>
+                    @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_employee_special_Payroll")
+                    .Sortable()
+                    .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer;height:400px" })
+                                    .Pageable(pager => pager
+                .Refresh(true))
+                    .Scrollable()
+                            .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single))
+                    .AutoBind(true)
+                    .Columns(columns =>
+                    {
+                    columns.Bound("batchno").Width(50).Title("Batch No.").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("CompensatioName").Width(200).Title("Compensatio Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("employmentStatusText").Width(200).Title("Employment Status").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("MonthYear").Width(80).Title("Month Year").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Template(@<text></text>)
+                        .Width(100)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"removeall('#=batchno#')\"  class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-trash\"></i></button>" +
+                        "<button data-original-title=\"recompute\" type=\"button\"  class=\"btn btn-xs btn-inverse btn-equal\" onclick=\"print_special_payroll(#=batchno#,1,#=compensationid#,#=OfficeID#)\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-print\"></i></button>" +
+                        "<button data-original-title=\"recompute\" type=\"button\" onclick=\"onclick_create_sp(#=batchno#)\"  class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-pencil\"></i></button>");
+                    })
+                    .DataSource(dataSource => dataSource
+                    .Ajax()
+                            .PageSize(1000)
+                    .ServerOperation(false)
+
+                                            .Read(read => read.Action("LoadGrid_Special_Payroll", "Payroll"))
+                    )
+                    .Resizable(resize => resize.Columns(true))
+                    )
+                </div>
+                <div class="row" style="padding-top:10px"></div>
+                <div>
+                    <button onclick="onclick_create_sp(0)" class="btn btn-default"> <i class="fa fa-newspaper-o"></i> Create Special Payroll</button>
+                    <script>
+                        function removeall(batchno) {
+                            mgs.boxYesNo("Do you want to remove all?", "delete_List(" + batchno + ")")
+                        }
+
+
+                        function print_special_payroll(batchno, bankid, compensationid,officeID) {
+
+                            $.post('@Url.Content("~/Payroll/print_pay_special")', { batchno: batchno, bankID: bankid, compensationid: compensationid, officeID: officeID }
+                                , function (r) {
+
+                                    if (r == 5) {
+                                        alert('Payroll not ready for printing')
+                                    }
+                                })
+                        }
+
+                        function onclick_cancel() {
+                            $("#div_main").show();
+                            $("#id_specialpayroll_details").hide();
+                            loadmain()
+                        }
+
+                    </script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div id="id_specialpayroll_details" style="display:none">
+    <div id="id_compensation_details" class="col-sm-12">
+
+        <div class="box" style="padding-bottom:10px">
+            <div class="box-head">
+                <header>
+                    <h4 class="text-bold">Special Payroll</h4>
+                </header>
+            </div>
+            <div class="box-body">
+
+                <div class="col-lg-5 no-padding" style="padding-bottom:5px;margin-bottom:5px">
+                    <div class="col-lg-12">
+                        <div class="box-head no-padding">
+                            <h4></h4>
+                        </div>
+                        <div class="form-group form-group-md">
+                            <div class="col-md-4">
+                                <label for="Compensationname" class="control-label">Special Payroll Name</label>
+                            </div>
+                            <div class="col-md-8 no-padding">
+                                <script>
+                                    function onchangeeCompensation() {
+                                        var ddp = $("#ddp_compensation_col").data("kendoDropDownList");
+                                        ddp.dataSource.read()
+
+                                            //this.select(0);
+
+                                    }
+
+
+                                </script>
+                                @(Html.Kendo().DropDownList()
+                                          .Name("ddp_compensation")
+                                                  .DataTextField("CompensatioName")
+                                                  .DataValueField("compensationID")
+                                          .HtmlAttributes(new { style = "width:100%" })
+                                          .Filter("contains")
+                                          .SelectedIndex(0)
+                                          .OptionLabel("Select...")
+                                          .DataSource(source =>
+                                          {
+                                              source.Read(read =>
+                                              {
+                                                  read.Action("get_ref_CompensationName", "Payroll");
+                                              })
+                                              .ServerFiltering(true);
+                                          })
+                                                .Events(e =>
+                                                {
+                                                    e.Change("onchangeeCompensation");
+                                                })
+                                )
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="box-head no-padding">
+                            <h4></h4>
+                        </div>
+                        <div class="form-group form-group-md">
+                            <div class="col-md-4">
+                                <label class="control-label">Employment Status</label>
+                            </div>
+                            <div class="col-md-8 no-padding">
+                                @(Html.Kendo().MultiSelect()
+                    .Name("mselect_status")
+                    .Placeholder("Select...")
+                    .DataTextField("txt")
+                    .DataValueField("id")
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("get_ref_employmentStatus", "Payroll");
+                        })
+
+                        .ServerFiltering(false);
+                    })
+
+                                )
+                                <script>
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="box-head no-padding">
+                            <h4></h4>
+                        </div>
+                        <div class="form-group form-group-md">
+                            <div class="col-md-4">
+                                <label class="control-label">Applicable Period</label>
+                            </div>
+                            <div class="col-md-8 no-padding">
+                                <script>
+                                        function loadmain() {
+                                            var grid = $("#grid_employee_special_Payroll").data("kendoGrid");
+                                            grid.dataSource.read();
+                                        }
+
+                                        function rowNo () {
+                                            var rows = this.items();
+                                            $(rows).each(function () {
+                                                var index = $(this).index() + 1;
+                                                var rowLabel = $(this).find(".row-number");
+                                                $(rowLabel).html(index);
+                                            });
+                                        }
+
+                                        function getdatypeid() {                                            
+                                            startSpin()
+                                            var datypeid = $("#ddp_compensation_col").data("kendoDropDownList").value();
+                                            if (datypeid < 1)
+                                            {
+                                                return;
+                                            }
+                                            $.post('@Url.Action("get_column_datatype", "Payroll")',
+                                               { col_id: $("#ddp_compensation_col").data("kendoDropDownList").value() },
+                                               function (r) {
+                                                   stopSpin()
+                                                   $("#txt_dataype_id").val(r.datatype_id)
+
+                                                   if (r.datatype_id == 2)
+                                                   {
+
+                                                       //$("#amountOption1").removeClass("active");
+                                                       //$("#amountOption2").removeClass("active");
+                                                       //$("#amountOption3").removeClass("active");
+                                                       //$("#lbl_atype4").attr('checked', 'checked');
+                                                       //$("#amountOption4").addClass("active");
+
+                                                       
+                                                   }
+                                                   
+
+                                                   
+                                                   //$("#amountOption1").addClass("active");
+                                               }
+                                           )
+                                        }
+
+                                        function loadpara() {
+                                            var grid = $("#grid_employee_compensation").data("kendoGrid");
+                                            grid.dataSource.read()
+                                            getdatypeid()
+                                        }
+                                </script>
+                                @(Html.Kendo().DatePicker()
+                                        .Name("DT_printing_period")
+                                        .Start(CalendarView.Year)
+                                        .Depth(CalendarView.Year)
+                                        .Format("MMMM yyyy")
+                                        .Value(DateTime.Now)
+                                        .HtmlAttributes(new { style = "width:100%", type = "text" })
+                                )
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top:10px"></div>
+                    <div class="col-lg-12 text-right" style="padding-top:10px">
+                        <button id="btn_ok" class="btn btn-success"><i class="fa fa-refresh"></i> Generate Batchno</button>
+                    </div>
+                    <div class="row" style="padding-top:10px"></div>
+                    <div class="col-lg-12">
+                        <div class="box-head no-padding">
+                            <h4>
+                                Bacth Number
+                            </h4>
+                        </div>
+                        <div class="col-lg-12 no-padding">
+                            <input id="txt_batchno" type="text" class="form-control control-width-small text-center" disabled style="display:inline-block!important;">
+                        </div>
+                        <script>
+
+                        </script>
+                    </div>
+                    <div class="row" style="padding-top:10px"></div>
+                    <div class="col-lg-12">
+                        <div class="box-head no-padding">
+                            <div class="col-lg-12 no-padding">
+                                <div class="col-lg-6">
+                                    <h4>
+                                        Amount for
+                                    </h4>
+                                </div>
+                                <script>
+                                        function param_col() {
+                                            return { compensationID: $("#ddp_compensation").data("kendoDropDownList").value() };
+                                        }
+
+                                        function col_dataBound(e) {
+                                            this.select(1);
+                                            loadpara();
+                                        }
+                                </script>
+                                <div class="col-lg-6">
+                                    @(Html.Kendo().DropDownList()
+                                          .Name("ddp_compensation_col")
+                                        .DataTextField("Col_description")
+                                        .DataValueField("Col_id")
+                                          .HtmlAttributes(new { style = "width:100%" })
+                                          .Filter("contains")
+                                          .AutoBind(true)
+                                          .OptionLabel("Select Amount Type")
+                                          //.SelectedIndex(1)
+                                          .DataSource(source =>
+                                          {
+                                              source.Read(read =>
+                                              {
+                                                  read.Action("get_ref_CompensationColName", "Payroll").Data("param_col");
+                                              })
+                                              .ServerFiltering(true);
+                                          })
+                                        .Events(e => e.Change("loadpara").DataBound("col_dataBound"))
+                                    )
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div data-toggle="buttons">
+                            <label id="lbl_atype1" class="btn radio-inline btn-radio-success-inverse ">
+                                <input name="amountOption" id="amountOption1" value="1" type="radio"> One month Salary
+                            </label>
+                            <label id="lbl_atype2" class="btn radio-inline btn-radio-success-inverse">
+                                <input name="amountOption" id="amountOption2" value="2" type="radio"> One month or wc ever is higher
+                            </label>
+                            <label id="lbl_atype3" class="btn radio-inline btn-radio-success-inverse">
+                                <input name="amountOption" id="amountOption3" value="3" type="radio"> % Mo. Salary
+                            </label>
+                            <label id="lbl_atype4" class="btn radio-inline btn-radio-success-inverse active">
+                                <input name="amountOption" id="amountOption4" checked value="4" type="radio">    Others
+                            </label>
+                            <input id="amountOptionID" value="4" hidden />
+                        </div>
+                        <script>
+                                $(function () {
+                                    $('input[name="amountOption"]').bind('change', function () {
+                                        $("#amountOptionID").val($(this).val())
+                                        var message = "";
+
+                                        if ($(this).val() == 1) {
+                                            message = "Equevalent of one month Salary";
+                                            $("#txt_value_amount").hide()
+                                        }
+                                        else if ($(this).val() == 2) {
+                                            message = "Equevalent of One month or which ever is higher";
+                                            $("#txt_value_amount").show()
+                                        }
+                                        else if ($(this).val() == 3) {
+                                            message = "Percentage of one month Salary";
+                                            $("#txt_value_amount").show()
+                                        }
+                                        else if ($(this).val() == 4) {
+                                            message = "Equevalent to amount";
+                                            $("#txt_value_amount").show()
+                                        }
+                                        $("#detailsOption").html(message)
+                                    });
+                                });
+                        </script>
+                    </div>
+                    <div class="col-lg-12">
+                        <div>
+                            <div class="col-lg-12 no-padding">
+                                <div class="well">
+                                    <span class="label label-success"><i class="fa fa-info"></i></span>
+                                    <span id="detailsOption">Enter the field value</span>
+                                </div>
+                            </div>
+                            <script>
+
+                                    function populateEmployee() {
+                                        startSpin()
+                                        var url = '@Url.Action("PopulateEmployeetoList_compensation", "Payroll")';
+                                        var col_id = $("#ddp_compensation_col").data("kendoDropDownList").value();
+
+                                        $.post(url, { batchno: $("#txt_batchno").val(), amountType: $("#amountOptionID").val(), col_id: col_id, value: getAmount() }, function (data) {
+                                            stopSpin()
+                                            toastr.success('Success', 'Value Successfully Populated');
+                                            $("#modal_meesage").modal("hide")
+                                            loadpara()
+                                        })
+
+                                        //.fail(function (jqXHR, textStatus, error) {
+                                        //    stopSpin()
+                                        //    toastr.warning(error, 'System Message');
+                                        //});
+                                    }
+                            </script>
+                            <div class="col-lg-12 no-padding">
+                                <div class="col-sm-8" style="padding-top:5px">
+                                    <input id="txt_value_amount" type="text" placeholder="Enter value" class="form-control control-width-large text-right" style="display:inline-block!important;">
+                                </div>
+                                
+                                <div class="col-sm-4" style="padding-top:5px">
+                                    <button class="btn btn-success" id="btn_populateEmployee">  <i class="fa fa-group"></i> Populate</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" style="height:100%">
+                    <div id="div_modal_zoom">
+                        <script>
+                                $("#btn_populateEmployee").click(function () {
+                                    if ($("#ddp_compensation_col").data("kendoDropDownList").value() < 1) {
+                                        toastr.warning('Invalid Amount Type...!', 'System Message');
+                                        return
+                                    }
+                                    mgs.boxYesNo("Do you want to populate amount?", "populateEmployee()")
+                                })
+                                function getAmount() {
+                                    var value = 0;
+                                    if ($("#txt_value_amount").val() != "") {
+                                        value = $("#txt_value_amount").val();
+                                    }
+                                    return value
+                                }
+                                function grid_employee_para() {
+                                    return {
+                                        batchID: $("#txt_batchno").val()
+                                        , col_id: $("#ddp_compensation_col").data("kendoDropDownList").value()
+                                    }
+                                }
+                        </script>
+                        @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_employee_compensation")
+                    .Sortable()
+                    .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer;height:400px" })
+                     
+                    .Scrollable()
+                            .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single))
+                    .AutoBind(false)
+                    .Columns(columns =>
+                    {
+
+                    columns.Bound("rowno").Width(50).Title("No.").ClientTemplate("<span class='row-number'></span>").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("EmpName").Width(200).Title("Employee Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    //columns.Bound("Position").Width(50).Title("Position").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("officeName").Width(200).Title("Office Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("Amount").Width(80).Title("Value").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" });
+                    //columns.Bound("Value_str").Width(80).Title("Value").Format("{0:n2}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" });
+                    //if ($("#ddp_compensation_col").data("kendoDropDownList").value()==28)
+                    //{
+
+                    //    }
+                    columns.Template(@<text></text>)
+                        .Width(100)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"removeIndi_togrid('#=t_compensation_tempID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-trash\"></i></button> <button data-original-title=\"recompute\" type=\"button\" onclick=\"edit_col_amount('#=eid#','#=EmpName#',#=t_compensation_tempID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px;\" data-dismiss=\"modal\"><i class=\"fa fa-pencil\"></i></button>");
+                    })
+                        .DataSource(dataSource => dataSource
+                        .Ajax()
+                                .PageSize(10000)
+                        .ServerOperation(false)
+
+                        .Read(read => read.Action("LoadGrid_Special_Payroll_create", "Payroll").Data("grid_employee_para"))
+                        )
+                        .Events(e=> e.DataBound("rowNo"))
+                        .Resizable(resize => resize.Columns(true))
+                        )
+                    </div>
+                    <script>
+                            function browseEmp() {
+                                if ($("#ddp_compensation_col").data("kendoDropDownList").value() < 1) {
+                                    toastr.warning('Invalid Amount Type...!', 'System Message');
+                                    return
+                                }
+
+                                var year = kendo.toString($('#DT_printing_period').data('kendoDatePicker').value(), 'yyyy').toString();
+                                var month = kendo.toString($('#DT_printing_period').data('kendoDatePicker').value(), 'MM').toString();
+                                startSpin()
+                                $.post('@Url.Action("_employee_list_toadd", "Payroll")',
+                                   { compensationID: $("#ddp_compensation").data("kendoDropDownList").value(), year: year, month: month },
+                                    function (r) {
+                                        stopSpin()
+                                        if (r == 8) {
+                                            toastr.warning('Select employee first', 'System Message');
+                                        }
+                                        else {
+                                            var mymodal = $('#m_view_employee_list');
+                                            mymodal.find('.modal-body').html("");
+                                            mymodal.find('.modal-body').html(r);
+                                            mymodal.modal('show');
+                                        }
+                                    }
+                                )
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    toastr.warning(error, 'System Message');
+                                });
+                            }
+
+                            function edit_col_amount(eid, empname, t_Compensation_col_temp_id) {
+                                startSpin()
+                                if (t_Compensation_col_temp_id == 'null')
+                                {
+                                    t_Compensation_col_temp_id = 0;
+                                }
+
+                                $.post('@Url.Action("_partial_edit_compensation_amount", "Payroll")', { eid: eid, empname: empname, Compensation_col_temp_id: t_Compensation_col_temp_id, batchno: $("#txt_batchno").val() }, function (r) {
+                                    stopSpin()
+                                    $("#body_details_compensation").html(r)
+                                    $("#modal_edit_compensation").modal("show");
+                                })
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    toastr.warning(error, 'System Message');
+                                });
+                            }
+
+                            function delete_List(batchno) {
+                                startSpin()
+                                var url = '@Url.Action("removeEmployeetoList_compensation", "Payroll")';
+                                $.post(url, { batchno: batchno }, function (data) {
+                                    stopSpin()
+                                    toastr.success('Success', 'Successfully Removed..!');
+                                    $("#modal_meesage").modal("hide")
+                                    loadpara()
+                                    loadmain()
+                                })
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    toastr.warning(error, 'System Message');
+                                });
+                            }
+
+                            function removeIndi_togrid(t_compensation_tempID) {
+                                startSpin()
+                                var url = '@Url.Action("removeEmployeeInditoList_compensation", "Payroll")';
+                                $.post(url, { t_compensation_tempID: t_compensation_tempID, col_id: $("#ddp_compensation_col").data("kendoDropDownList").value() }, function (data) {
+                                    stopSpin()
+                                    toastr.success('Success', 'Successfully Removed..!');
+                                    $("#modal_meesage").modal("hide")
+                                    loadpara()
+                                })
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    toastr.warning(error, 'System Message');
+                                });
+                            }
+
+                            function getText() {
+                                var multiselect = $("#mselect_status").data("kendoMultiSelect");
+                                var dataItem = multiselect.dataItems()
+                                var txtdata = "";
+                                var item = dataItem;
+                                $.each(item, function (index, item) {
+                                    txtdata = txtdata + item.txt + ',';
+                                });
+
+                                return txtdata.substring(0, txtdata.length - 1);
+                            }
+
+                            function getValue() {
+                                var multiselect = $("#mselect_status").data("kendoMultiSelect");
+                                var dataItem = multiselect.dataItems()
+                                var txtdata = "";
+                                var item = dataItem;
+                                $.each(item, function (index, item) {
+                                    txtdata = txtdata + item.id + ',';
+                                });
+                                return txtdata.substring(0, txtdata.length - 1);
+                            }
+
+                            $("#btn_ok").click(function () {
+                                generatebatchno()
+                            })
+                            function generatebatchno() {
+                                if ($("#txt_batchno").val() == 0)
+                                {
+                                    var monthYear = kendo.toString($('#DT_printing_period').data('kendoDatePicker').value(), 'MMyyyy').toString();
+                                    var CompensationID = $("#ddp_compensation").data("kendoDropDownList").value();
+                                    var url = '@Url.Action("get_sp_batchno", "Payroll")';
+                                    $.post(url, { CompensationID: CompensationID, yearMonth: monthYear, employmentStatusArray: getValue(), employmentStatusText: getText(), status_id: 1 }
+                                        , function (data) {
+                                            stopSpin()
+                                            toastr.success('Success', 'Done...');
+                                            $("#txt_batchno").val(data)
+                                            loadpara()
+                                            loadmain()
+                                         })
+                                    .fail(function (jqXHR, textStatus, error) {
+                                        stopSpin()
+                                        toastr.warning(error, 'System Message');
+                                    });
+                                }
+                            }
+
+                            function onclick_mk_modal() {
+                                //$("#div_modal_zoom").modal()
+                                //$('#myModal').modal('toggle');
+                                //$('#myModal').modal('show');
+                                //$('#myModal').modal('hide');
+                            }
+                    </script>
+                    <div class="row" style="padding-top:10px"></div>
+                    <div>
+                        <button onclick="browseEmp()" class="btn btn-default"> <i class="fa fa-group"></i> Browse Employee</button>
+                        <button id="btn_back" onclick="onclick_cancel()" class="btn btn-success"><i class="fa fa-backward"></i> Back</button>
+                        @* <button id="btn_mk_modal" onclick="onclick_mk_modal()" class="btn btn-success"><i class="fa fa-binoculars"></i> Full View</button>*@
+                        <script>
+                                $("#btn_post").click(function () {
+                                    alert(getValues());
+                                    alert(getTexts())
+                                })
+                                $("#btn_removeAll").click(function () {
+                                    mgs.boxYesNo("Do you want to delete this batchno?", "delete_List("+ $("#txt_batchno").val() +")")
+                                })
+                        </script>
+                    </div>
+                    <div class="modal" id="m_view_employee_list" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="simpleModalLabel">Employee List</h4>
+                                </div>
+                                <div class="modal-body" style="height:490px">
+                                </div>
+                                <div class="modal-footer" style="margin:0px">
+                                    <button class="btn btn-success" id="btn_addemp">   <i class="fa fa-download"></i> Add selected Employee</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                            $("#btn_addemp").click(function () {
+                                startSpin()
+                                var grid = $("#grid_list_employee").data("kendoGrid");
+                                var data = grid.dataSource.data();
+                                var eidarray = "";
+                                var count;
+
+                                $.each(data, function (i, item) {
+                                    if ($("#chck_list_employee_" + item.eid + "").prop("checked")) {
+                                        eidarray = eidarray + "," + item.eid + ""
+                                    }
+                                });
+                                var url = '@Url.Action("AddEmployeetoList_compensation", "Payroll")';
+                                $.post(url, { eidArray: eidarray , batchno: $("#txt_batchno").val(), col_id: $("#ddp_compensation_col").data("kendoDropDownList").value() }, function (data) {
+                                    toastr.success('Success', 'Selected employee successfully added..');
+                                    loadpara()
+                                    relaodGrid_emp()
+                                    stopSpin()
+                                })
+                                .fail(function (jqXHR, textStatus, error) {
+                                    stopSpin()
+                                    toastr.warning(error, 'System Message');
+                                });
+                            })
+                    </script>
+                    <div class="modal" id="modal_edit_compensation" data-target="#modal_edit_compensation" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none">
+                        <div class="modal-dialog left">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 id="h_header_ref" class="modal-title">Edit special payroll reference</h4>
+                                </div>
+                                <div id="body_details_compensation" class="modal-body" style="height:360px!important">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button onclick="newDeduction(0)" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add Deductions</button>
+                                    @*<button onclick="click_save_edit_special()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>*@
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal" id="m_add_deductions_special" data-target="#m_add_deductions_special" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title fa-italic" id="id_modal_header"></h4>
+                                </div>
+                                <div class="modal-body">
+                                </div>
+                                <div class="modal-footer" style="margin:0px">
+                                    <input id="txt_saveType" value="0" type="text" hidden />
+                                    <button onclick="save_special()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+                                    <button id="del_deduct" onclick="delete_special()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <script>
+                            function save_special() {
+                                if ($("#txt_saveType").val() == 1) {
+                                    save_deduction_special();
+                                }
+                                else if ($("#txt_saveType").val() == 2) {
+                                    save_income_special();
+                                }
+                            }
+                            function delete_special() {
+                                if ($("#txt_saveType").val() == 1) {
+                                    deleteDeduction_special();
+                                }
+                                else if ($("#txt_saveType").val() == 2) {
+                                    toastr.warning("Unable to delete the Compensation", 'System Message');
+                                }
+                            }
+                            
+
+                    </script>
+
+                </div>
+            </div>
+
+        </div>
+        <script>
+            $(document).ready(function () {
+                $("#")
+            })
+
+        </script>
+    </div>
+</div>

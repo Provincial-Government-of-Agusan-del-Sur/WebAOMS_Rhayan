@@ -1,0 +1,141 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="Acountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="cnt" type="xs:long" minOccurs="0" />
+                <xs:element name="tmpjevno" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="obrno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>GENERAL JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of May, 2023</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <Date_>05/05/2023               </Date_>
+    <JEVno>101-23-05-04-0001</JEVno>
+    <jvno>101-23-05-04-0001</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>32400.0000</Debit>
+    <cnt>0</cnt>
+    <tmpjevno />
+    <fundtype>General Fund Proper</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>101-23-05-04-0001</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>32400.0000</credit>
+    <cnt>1</cnt>
+    <tmpjevno>101-23-05-04-0001</tmpjevno>
+    <fundtype>General Fund Proper</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>101-23-05-04-0001</jvno>
+    <Particular>liquidation of cash advance for the provision of meals to individual in halfway house (April 1-30, 2023). CAFOA#101-1011-23-04-1104. VAT of P363.60 OR#0376247 dated 5/4/2023</Particular>
+    <Acountcode />
+    <cnt>1</cnt>
+    <tmpjevno />
+    <fundtype>General Fund Proper</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>101-23-05-04-0001</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>1</cnt>
+    <tmpjevno />
+    <fundtype>General Fund Proper</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>05/08/2023               </Date_>
+    <JEVno>101-23-05-04-0002</JEVno>
+    <jvno>101-23-05-04-0002</jvno>
+    <Particular>Traveling Expenses - Local                        </Particular>
+    <Acountcode>50201010                 </Acountcode>
+    <Debit>14464.8800</Debit>
+    <cnt>2</cnt>
+    <tmpjevno>101-23-05-04-0001</tmpjevno>
+    <fundtype>General Fund Proper</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>101-23-05-04-0002</jvno>
+    <Particular>Advances for Officers and Employees               </Particular>
+    <Acountcode>10305040                 </Acountcode>
+    <credit>14464.8800</credit>
+    <cnt>3</cnt>
+    <tmpjevno>101-23-05-04-0002</tmpjevno>
+    <fundtype>General Fund Proper</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>101-23-05-04-0002</jvno>
+    <Particular>To liquidation of Cash advance for 8th International Travel fair to be conducted on March 24-26, 2023 at Ayala Center, Cebu city. CAFOA#11-8852-23-03-1406.Refund of P455.12 OR#0106209 dated 5/8/2023</Particular>
+    <Acountcode />
+    <cnt>3</cnt>
+    <tmpjevno>101-23-05-04-0001</tmpjevno>
+    <fundtype>General Fund Proper</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>101-23-05-04-0002</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>3</cnt>
+    <tmpjevno>101-23-05-04-0001</tmpjevno>
+    <fundtype>General Fund Proper</fundtype>
+  </Table1>
+</NewDataSet>

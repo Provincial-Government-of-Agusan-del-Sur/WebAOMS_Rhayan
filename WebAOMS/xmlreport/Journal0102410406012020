@@ -1,0 +1,831 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Collection" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Deposits" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="PTVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Acountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="NatureofPayment" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>CASH RECEIPTS JOURNAL</T1>
+    <fundtype>Patin-ay Waterworks System</fundtype>
+    <dateString>For the month of June, 2020</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>0</groupCount>
+  </Table>
+  <Table1>
+    <jevid>279903</jevid>
+    <Date_>06/02/2020</Date_>
+    <JEVNo>104-20-06-01-0001</JEVNo>
+    <Collection>9061.0000</Collection>
+    <Deposits>9061.0000</Deposits>
+    <Rdono>2020-06-2-PAB-2475</Rdono>
+    <Particular>RCD 6/2/2020 with RDONO 2020-06-2-PAB-2475</Particular>
+    <PTVno>104-2020-06-0001-2475</PTVno>
+    <Debit>9061.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-03T00:00:00+08:00</Jevdate>
+    <Gamount>9061.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279903</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9061.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-03T00:00:00+08:00</Jevdate>
+    <Gamount>9061.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279919</jevid>
+    <Date_>06/03/2020</Date_>
+    <JEVNo>104-20-06-01-0002</JEVNo>
+    <Collection>20010.7500</Collection>
+    <Deposits>20010.7500</Deposits>
+    <Rdono>2020-06-3-PAB-2475</Rdono>
+    <Particular>RCD 6/3/2020 with RDONO 2020-06-3-PAB-2475</Particular>
+    <PTVno>104-2020-06-0003-2475</PTVno>
+    <Debit>20010.7500</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-04T00:00:00+08:00</Jevdate>
+    <Gamount>20010.7500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279919</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>20010.7500</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-04T00:00:00+08:00</Jevdate>
+    <Gamount>20010.7500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279922</jevid>
+    <Date_>06/04/2020</Date_>
+    <JEVNo>104-20-06-01-0003</JEVNo>
+    <Collection>55751.3300</Collection>
+    <Deposits>55751.3300</Deposits>
+    <Rdono>2020-06-4-PAB-2475</Rdono>
+    <Particular>RCD 6/4/2020 with RDONO 2020-06-4-PAB-2475</Particular>
+    <PTVno>104-2020-06-0004-2475</PTVno>
+    <Debit>55751.3300</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-05T00:00:00+08:00</Jevdate>
+    <Gamount>55751.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279922</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>55751.3300</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-05T00:00:00+08:00</Jevdate>
+    <Gamount>55751.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279925</jevid>
+    <Date_>06/05/2020</Date_>
+    <JEVNo>104-20-06-01-0004</JEVNo>
+    <Collection>31834.2500</Collection>
+    <Deposits>31834.2500</Deposits>
+    <Rdono>2020-06-5-PAB-2475</Rdono>
+    <Particular>RCD 6/5/2020 with RDONO 2020-06-5-PAB-2475</Particular>
+    <PTVno>104-2020-06-0008-2475</PTVno>
+    <Debit>31834.2500</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-08T00:00:00+08:00</Jevdate>
+    <Gamount>31834.2500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279925</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>31834.2500</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-08T00:00:00+08:00</Jevdate>
+    <Gamount>31834.2500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279928</jevid>
+    <Date_>06/08/2020</Date_>
+    <JEVNo>104-20-06-01-0005</JEVNo>
+    <Collection>28282.3500</Collection>
+    <Deposits>28282.3500</Deposits>
+    <Rdono>2020-06-6-PAB-2475</Rdono>
+    <Particular>RCD 6/8/2020 with RDONO 2020-06-6-PAB-2475</Particular>
+    <PTVno>104-2020-06-0009-2475</PTVno>
+    <Debit>28282.3500</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-09T00:00:00+08:00</Jevdate>
+    <Gamount>28282.3500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279928</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>28282.3500</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-09T00:00:00+08:00</Jevdate>
+    <Gamount>28282.3500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279930</jevid>
+    <Date_>06/09/2020</Date_>
+    <JEVNo>104-20-06-01-0006</JEVNo>
+    <Collection>45046.2000</Collection>
+    <Deposits>45046.2000</Deposits>
+    <Rdono>2020-06-7-PAB-2475</Rdono>
+    <Particular>RCD 6/9/2020 with RDONO 2020-06-7-PAB-2475</Particular>
+    <PTVno>104-2020-06-0013-2475</PTVno>
+    <Debit>45046.2000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-10T00:00:00+08:00</Jevdate>
+    <Gamount>45046.2000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279930</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>45046.2000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-10T00:00:00+08:00</Jevdate>
+    <Gamount>45046.2000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279932</jevid>
+    <Date_>06/10/2020</Date_>
+    <JEVNo>104-20-06-01-0007</JEVNo>
+    <Collection>27928.0000</Collection>
+    <Deposits>27928.0000</Deposits>
+    <Rdono>2020-06-8-PAB-2475</Rdono>
+    <Particular>RCD 6/10/2020 with RDONO 2020-06-8-PAB-2475</Particular>
+    <PTVno>104-2020-06-0015-2475</PTVno>
+    <Debit>27928.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-11T00:00:00+08:00</Jevdate>
+    <Gamount>27928.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0007</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279932</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>27928.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-11T00:00:00+08:00</Jevdate>
+    <Gamount>27928.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0007</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279935</jevid>
+    <Date_>06/11/2020</Date_>
+    <JEVNo>104-20-06-01-0008</JEVNo>
+    <Collection>27603.1100</Collection>
+    <Deposits>27603.1100</Deposits>
+    <Rdono>2020-06-9-PAB-2475</Rdono>
+    <Particular>RCD 6/11/2020 with RDONO 2020-06-9-PAB-2475</Particular>
+    <PTVno>104-2020-06-0016-2475</PTVno>
+    <Debit>27603.1100</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-11T00:00:00+08:00</Jevdate>
+    <Gamount>27603.1100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0008</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279935</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>27603.1100</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-11T00:00:00+08:00</Jevdate>
+    <Gamount>27603.1100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0008</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279936</jevid>
+    <Date_>06/15/2020</Date_>
+    <JEVNo>104-20-06-01-0009</JEVNo>
+    <Collection>24776.5000</Collection>
+    <Deposits>24776.5000</Deposits>
+    <Rdono>2020-06-10-PAB-2475</Rdono>
+    <Particular>RCD 6/15/2020 with RDONO 2020-06-10-PAB-2475</Particular>
+    <PTVno>104-2020-06-0017-2475</PTVno>
+    <Debit>24776.5000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-16T00:00:00+08:00</Jevdate>
+    <Gamount>24776.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0009</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279936</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>24776.5000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-16T00:00:00+08:00</Jevdate>
+    <Gamount>24776.5000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0009</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279937</jevid>
+    <Date_>06/16/2020</Date_>
+    <JEVNo>104-20-06-01-0010</JEVNo>
+    <Collection>11899.0000</Collection>
+    <Deposits>11899.0000</Deposits>
+    <Rdono>2020-06-11-PAB-2475</Rdono>
+    <Particular>RCD 6/16/2020 with RDONO 2020-06-11-PAB-2475</Particular>
+    <PTVno>104-2020-06-0018-2475</PTVno>
+    <Debit>11899.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-18T00:00:00+08:00</Jevdate>
+    <Gamount>11899.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0010</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279937</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11899.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-18T00:00:00+08:00</Jevdate>
+    <Gamount>11899.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0010</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279946</jevid>
+    <Date_>06/18/2020</Date_>
+    <JEVNo>104-20-06-01-0011</JEVNo>
+    <Collection>52318.0000</Collection>
+    <Deposits>52318.0000</Deposits>
+    <Rdono>2020-06-12-PAB-2475</Rdono>
+    <Particular>RCD 6/18/2020 with RDONO 2020-06-12-PAB-2475</Particular>
+    <PTVno>104-20-06-0019-2475</PTVno>
+    <Debit>52318.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-19T00:00:00+08:00</Jevdate>
+    <Gamount>52318.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279946</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>52318.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-19T00:00:00+08:00</Jevdate>
+    <Gamount>52318.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279949</jevid>
+    <Date_>06/18/2020</Date_>
+    <JEVNo>104-20-06-01-0012</JEVNo>
+    <Collection>3651.7500</Collection>
+    <Deposits>3651.7500</Deposits>
+    <Rdono>RCD,2020-05-19-PAB-2475</Rdono>
+    <Particular>RCD,6/1/2020 with RDONO RCD,2020-05-19-PAB-2475</Particular>
+    <PTVno>104-20-06-0023-2475</PTVno>
+    <Debit>3651.7500</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-19T00:00:00+08:00</Jevdate>
+    <Gamount>3651.7500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279949</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3651.7500</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-19T00:00:00+08:00</Jevdate>
+    <Gamount>3651.7500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279950</jevid>
+    <Date_>06/18/2020</Date_>
+    <JEVNo>104-20-06-01-0013</JEVNo>
+    <Collection>10401.7500</Collection>
+    <Deposits>10401.7500</Deposits>
+    <Rdono>RCD,2020-06-1-PAB-2475</Rdono>
+    <Particular>RCD,6/2/2020 with RDONO RCD,2020-06-1-PAB-2475</Particular>
+    <PTVno>104-20-06-0024-2475</PTVno>
+    <Debit>10401.7500</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-19T00:00:00+08:00</Jevdate>
+    <Gamount>10401.7500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279950</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10401.7500</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-19T00:00:00+08:00</Jevdate>
+    <Gamount>10401.7500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279951</jevid>
+    <Date_>06/19/2020</Date_>
+    <JEVNo>104-20-06-01-0014</JEVNo>
+    <Collection>175514.0000</Collection>
+    <Deposits>175514.0000</Deposits>
+    <Rdono>2020-06-13-PAB-2475</Rdono>
+    <Particular>RCD 6/19/2020 with RDONO 2020-06-13-PAB-2475</Particular>
+    <PTVno>104-20-06-0025-2475</PTVno>
+    <Debit>175514.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-22T00:00:00+08:00</Jevdate>
+    <Gamount>175514.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279951</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>175514.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-22T00:00:00+08:00</Jevdate>
+    <Gamount>175514.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279952</jevid>
+    <Date_>06/22/2020</Date_>
+    <JEVNo>104-20-06-01-0015</JEVNo>
+    <Collection>29606.0000</Collection>
+    <Deposits>29606.0000</Deposits>
+    <Rdono>2020-06-14-PAB-2475</Rdono>
+    <Particular>RCD 6/22/2020 with RDONO 2020-06-14-PAB-2475</Particular>
+    <PTVno>104-20-06-0027-2475</PTVno>
+    <Debit>29606.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-23T00:00:00+08:00</Jevdate>
+    <Gamount>29606.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279952</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>29606.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-23T00:00:00+08:00</Jevdate>
+    <Gamount>29606.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279953</jevid>
+    <Date_>06/23/2020</Date_>
+    <JEVNo>104-20-06-01-0016</JEVNo>
+    <Collection>42564.0000</Collection>
+    <Deposits>42564.0000</Deposits>
+    <Rdono>2020-06-15-PAB-2475</Rdono>
+    <Particular>RCD 6/23/2020 with RDONO 2020-06-15-PAB-2475</Particular>
+    <PTVno>104-20-06-0028-2475</PTVno>
+    <Debit>42564.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-23T00:00:00+08:00</Jevdate>
+    <Gamount>42564.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0016</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279953</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>42564.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-23T00:00:00+08:00</Jevdate>
+    <Gamount>42564.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0016</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279954</jevid>
+    <Date_>06/24/2020</Date_>
+    <JEVNo>104-20-06-01-0017</JEVNo>
+    <Collection>24328.0000</Collection>
+    <Deposits>24328.0000</Deposits>
+    <Rdono>2020-06-16-PAB-2475</Rdono>
+    <Particular>RCD 6/24/2020 with RDONO 2020-06-16-PAB-2475</Particular>
+    <PTVno>104-20-06-0029-2475</PTVno>
+    <Debit>24328.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-23T00:00:00+08:00</Jevdate>
+    <Gamount>24328.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279954</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>24328.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-23T00:00:00+08:00</Jevdate>
+    <Gamount>24328.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279955</jevid>
+    <Date_>06/25/2020</Date_>
+    <JEVNo>104-20-06-01-0018</JEVNo>
+    <Collection>42501.0000</Collection>
+    <Deposits>42501.0000</Deposits>
+    <Rdono>2020-06-17-PAB-2475</Rdono>
+    <Particular>RCD 6/25/2020 with RDONO 2020-06-17-PAB-2475</Particular>
+    <PTVno>104-20-06-0030-2475</PTVno>
+    <Debit>42501.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-26T00:00:00+08:00</Jevdate>
+    <Gamount>42501.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279955</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>42501.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-26T00:00:00+08:00</Jevdate>
+    <Gamount>42501.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279970</jevid>
+    <Date_>06/26/2020</Date_>
+    <JEVNo>104-20-06-01-0019</JEVNo>
+    <Collection>19603.6100</Collection>
+    <Deposits>19603.6100</Deposits>
+    <Rdono>2020-06-18-PAB-2475</Rdono>
+    <Particular>RCD 6/26/2020 with RDONO 2020-06-18-PAB-2475</Particular>
+    <PTVno>104-20-06-0032-2475</PTVno>
+    <Debit>19603.6100</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Gamount>19603.6100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0019</jvno>
+  </Table1>
+  <Table1>
+    <jevid>279970</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19603.6100</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Gamount>19603.6100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0019</jvno>
+  </Table1>
+  <Table1>
+    <jevid>280962</jevid>
+    <Date_>06/29/2020</Date_>
+    <JEVNo>104-20-06-01-0020</JEVNo>
+    <Collection>23920.0000</Collection>
+    <Deposits>23920.0000</Deposits>
+    <Rdono>2020-06-19-PAB-2475</Rdono>
+    <Particular>RCD 6/29/2020 with RDONO 2020-06-19-PAB-2475</Particular>
+    <PTVno>104-20-06-0039-2475</PTVno>
+    <Debit>23920.0000</Debit>
+    <Acountcode>10102010-6840-100-119</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Gamount>23920.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0020</jvno>
+  </Table1>
+  <Table1>
+    <jevid>280962</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23920.0000</Credit>
+    <Acountcode>40202090</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Gamount>23920.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>104-20-06-01-0020</jvno>
+  </Table1>
+</NewDataSet>

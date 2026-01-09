@@ -1,0 +1,156 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+  z-index: 500;
+}
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">List of Documents for Log Out</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <script>
+            function para_grid_log() {
+                var from = kendo.toString($('#dtp_from').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+                var to = kendo.toString($('#dtp_to').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+                return { from: from, to: to, status_id: $("#ddl_status").data("kendoDropDownList").value() }
+            }
+            function r_grid() {
+                var grid = $("#grid_tracking_form").data("kendoGrid");
+                grid.dataSource.read();
+            }
+
+            function edit_logs() {
+
+            }
+
+
+            function print_log() {
+                startSpin()
+                var from = kendo.toString($('#dtp_from').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+                var to = kendo.toString($('#dtp_to').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+                var status_id = $("#ddl_status").data("kendoDropDownList").value()
+                $.post('@Url.Content("~/Document/print_log")', { from: from, to: to, status_id: status_id }
+                    , function (r) {
+                        stopSpin()
+                    })
+            }
+        </script>
+        <div class="col-lg-12 no-padding" style="padding-bottom:5px">
+            <div class="col-md-4 no-padding">
+                @(Html.Kendo().DropDownList()
+                    .Name("ddl_status")
+                    .DataTextField("Name")
+                    .DataValueField("ID")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("ddl_log_staus_name", "Document");
+                        });
+                    })
+                    .Events(e => e.Change("r_grid").Select("r_grid"))
+                    .HtmlAttributes(new { style = "width: 100%" })
+                )
+
+            </div>
+
+        </div>
+        <div class="col-lg-12 no-padding">
+            <div class="col-lg-6" style="padding-bottom:5px">
+                From
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("r_grid"))
+                )
+                To
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("r_grid"))
+                )
+
+                <button type="button" onclick="r_grid()" class="btn btn-xxl btn-inverse" style="margin-right:2px"><i class="fa fa-refresh"></i>Load</button>
+            </div>
+        </div>
+
+        
+        <div class="col-lg-12 no-padding">
+            @(Html.Kendo().Grid<WebAOMS.Models.ufn_Log_status_list_Result>()
+        .Name("grid_tracking_form")
+        .Columns(columns =>
+        {
+            //columns.Bound(m => m.doc_form_id).Title("Transation No").Width(100);
+            columns.Template(@<text></text>)
+            .Title("")
+            .Width(40)
+            .HtmlAttributes(new { style = "text-align:left;font-size:13px" })
+            .HeaderHtmlAttributes(new { style = "text-align:left; font-size:13px" })
+            .HeaderTemplate("<div data-toggle='buttons'><label   class='btn checkbox-inline btn-checkbox-primary-inverse'><input id='chk_payroll_2'  type='checkbox'></label></div>")
+            .ClientTemplate("<div data-toggle='buttons'><label onclick='clickPayroll(\"#=Dvno#\")' class='btn checkbox-inline btn-checkbox-primary-inverse'> <input  value='#=Dvno#'  type='checkbox'></label></div>");
+
+            columns.Bound(m => m.Claimantname).Title("Claimant Name").Format("{0:n2}").Width(150);
+            columns.Bound(m => m.Particular).Title("Particular").Width(300);
+            columns.Bound(m => m.Dvno).Title("Dvno").Width(150);
+            columns.Bound(m => m.Checkno).Width(150);
+            columns.Bound(m => m.Amount).Format("{0:n2}").Width(150).HtmlAttributes(new { style = "text-align:right;" });
+        })
+        .HtmlAttributes(new { style = "height: 350px;" })
+        .Scrollable()
+        .Sortable()
+        .AutoBind(true)
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("data_grid_log_list", "Document").Data("para_grid_log"))
+                .PageSize(200)
+            )
+            )
+        </div>
+        <div class="col-md-12" style="padding-top:5px">
+            <button type="button" onclick="print_log()" class="btn btn-xxl btn-inverse" style="margin-right:2px"><i class="fa fa-print"></i>Print</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_update_status_log()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Update Status</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+

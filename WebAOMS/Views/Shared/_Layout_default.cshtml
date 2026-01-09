@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - AOMS</title>
+    <link rel="icon" href="@Url.Content("~/Content/favicon.ico")" />
+    <!-- BEGIN IMPORTANT! GLOBAL MANDATORY JAVASCRIPT -->
+    <link href="@Url.Content("~/Content/kendo/2019.3.1023/kendo.common.min.css")" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="@Url.Content("~/Content/font-awesome-4.2.0/css/font-awesome.css")" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="@Url.Content("~/Content/kendo/2019.3.1023/kendo.bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/Boostrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/akot.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/akot_responsive.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/toastr.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("~/Scripts/akot/spin.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/spin.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/akot/jquery-1.11.0.min.js")"></script>
+    @*<script src="@Url.Content("~/Scripts/jquery-3.1.0.js")"></script>*@
+    <script src="@Url.Content("~/Scripts/akot/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2019.3.1023//kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2019.3.1023//kendo.aspnetmvc.min.js")" )"></script>
+    <script src="@Url.Content("~/Scripts/akot/jquery.slimscroll.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/BootstrapFixed.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/toastr.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/UIMessage.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/App.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/is.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/ifmis.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/jszip.min.js")"></script>
+</head>
+<body >
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="section-body" style="padding-top:60px;">
+            @RenderBody()
+        </div>
+        
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Accounting Operation Management System</p>
+        </footer>
+    </div>
+
+    <script src="@Url.Content("~/Scripts/akot/jquery.number.js")"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

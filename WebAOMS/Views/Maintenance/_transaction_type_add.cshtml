@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<div class="box" style="width:100%">
+    <div class="box-body">
+        <form id="frm_logdetails">
+            <input name="status_code" value="@ViewBag.status_code" type="text" hidden />
+            <input id="IS_id" name="IS_id" type="text" hidden />
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Prerequisite</span>
+                </span>
+            </div>
+            <script>
+                function para_combo() {
+                    return { is_id:$("#dp_is_name").data("kendoDropDownList").value(),status_code:@ViewBag.Status_code}
+                }
+            </script>
+            <div class="byexym liZmnb">
+                @(Html.Kendo().DropDownList()
+                    .Name("account_id")
+                    .DataTextField("AccountName")
+                    .DataValueField("ChartAccountID")
+                    .Filter("Contains")
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_COA", "Maintenance");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                )
+            </div>
+
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Status Name</span>
+                </span>
+            </div>
+            <div class="byexym liZmnb">
+                <input id="txt_status_name" name="Status_name" value="@ViewBag.Status_name" type="text" class="form-control" />
+            </div>
+
+
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Status Description</span>
+                </span>
+            </div>
+            <div class="byexym liZmnb">
+                <textarea id="txt_status_desc" name="Status_Description" type="text" class="form-control" rows="3">@ViewBag.Status_Description</textarea>
+            </div>
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Status Location</span>
+                </span>
+            </div>
+            <div class="byexym liZmnb">
+                <input id="txt_status_location" name="Status_location" value="@ViewBag.Status_location" type="text" class="form-control" />
+            </div>
+            <div class="col-md-5 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Minutes Done</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input id="txt_minutes_done" name="MinutesDone" type="number" value="@ViewBag.MinutesDone" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+
+            <div class="col-md-5 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Order</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input id="txt_orderby" name="orderby" type="number" value="@ViewBag.orderby" class="form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        $("#IS_id").val($("#dp_is_name").data("kendoDropDownList").value())
+    })
+    function btn_save_status_log() {
+        startSpin()
+        var frm = $("#frm_logdetails").serialize();
+        $.post('@Url.Action("save_status_details", "Tracking")',
+            frm
+        , function (r) {
+            if (r.code == 6) {
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                r_grid()
+                $("#mdl_newstatus").modal("hide");
+            }
+            else {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+
+    function delete_status_details() {
+        startSpin()
+        var frm = $("#frm_logdetails").serialize();
+        $.post('@Url.Action("delete_status_details", "Tracking")',
+            {status_code:@ViewBag.Status_code}
+        , function (r) {
+            if (r.code == 6) {
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                r_grid()
+                $("#mdl_newstatus").modal("hide");
+            }
+            else {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
+        });
+    }
+</script>

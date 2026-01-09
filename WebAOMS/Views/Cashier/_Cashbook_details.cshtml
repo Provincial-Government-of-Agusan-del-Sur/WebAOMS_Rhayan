@@ -1,0 +1,191 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="panel panel-default" style="padding-bottom:10px;">
+<form id="frm_jev_details">
+
+
+    <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important;"><h5><bold>Transaction Details</bold></h5></div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 no-padding">
+            <div class="col-md-3 no-padding">
+                <input id="txt_trnno" name="jevid" value="@ViewBag.trnno" type="text" hidden />
+                <input id="txt_isAdjustment" name="isAdjustment" value="@ViewBag.isAdjustment" type="text" hidden />
+                <div class="col-md-12 padding10">
+                    <label for="checkno">Check/Transaction/Deposit Date</label>
+                    @*<input id="txt_checkdate" class="form-control" value="@ViewBag.date_" />*@
+                    @(Html.Kendo().DatePicker()
+                    .Name("Date_")
+                    .Value(ViewBag.transactiondate)
+                    .Format("MMMM dd, yyyy")
+                    .HtmlAttributes(new { style = "width:100%", type = "text", @class = "input-group" })
+                    )
+                </div>
+
+                <div class="col-md-12 padding10">
+                    <label for="ObrNo">DV Number</label>
+                    <input type="text" id="txt_Dvno" name="Dvno" disabled value="@ViewBag.dvno" class="form-control">
+                </div>
+
+  
+
+                <div class="col-md-12 padding10 checkDJ">
+                    <label for="rcino">RCI No.</label>
+                    <input id="txt_rcino" name="RCI" value="@ViewBag.rcino" disabled class="form-control" type="text" />
+                </div>
+
+
+            </div>
+            <div class="col-md-5 no-padding">
+                <div class="col-md-12 padding10">
+                    <label for="claimantname">Claimant Name</label>
+
+                    <input id="txt_claimant" type="text" class="form-control navbar-input" value="@ViewBag.claimantname" disabled style="" placeholder="browse claimant">
+
+
+
+                    <input id="txt_claimant_id" style="display:none" name="Claimantcode" value="@ViewBag.Claimantcode" disabled type="text" class="form-control k-input" />
+                </div>
+                <div class="col-md-12 padding10">
+                    <label for="exampleFormControlTextarea5">Particular</label>
+                    @*<div  class="pull-right">
+                            <a href="#" onclick="addRemark()" style="color:darkseagreen"><b>Edit</b></a>
+                    </div>*@
+
+                    <textarea class="form-control" name="Particular" id="txt_particular" disabled rows="4">@ViewBag.Particular</textarea>
+                </div>
+            </div>
+            <script>
+                @*$(document).ready(function() {
+                    $("#txt_checkdate").kendoDatePicker().HtmlAttributes(new { style = "width:100%", type = "text", @class = "input-group" });
+                })*@
+
+                    function select_claimant() {
+                        var ddl_claimant = $('#dp_claimant').data('kendoComboBox')
+                        if (ddl_claimant.value() == "") {
+                            toastr.warning("Invalid Claimant", 'System Message');
+                            return;
+                        }
+                        $("#txt_claimant_id").val(ddl_claimant.value())
+                        $("#txt_claimant").val(ddl_claimant.text())
+                        close_browse_claimant_popup()
+                    }
+
+                    function close_browse_claimant_popup() {
+                        $("#mdl_browse_claimant_popup").modal("hide");
+                    }
+
+                    function browse_claimant_popup() {
+                        startSpin()
+                        $.post('@Url.Action("_browse_claimant", "Document")', {}
+                            , function (r) {
+                                $("#body_browse_claimant_popup").html(r)
+                                $("#mdl_browse_claimant_popup").modal("show");
+                                stopSpin();
+                            })
+                    }
+                    function loadselected_office() {
+                        var officenam = $("#RCenter").data("kendoDropDownList");
+                        officenam.value(@ViewBag.RCenter)
+                    }
+                    function loadselected_fund() {
+                        var fund = $("#fundID").data("kendoDropDownList");
+                        fund.value(@ViewBag.fundID)
+                    }
+            </script>
+            <div class="col-md-4 no-padding">
+
+                <div class="col-md-12 padding10">
+                    <label for="GAmount">Gross Amount</label>
+                    <input type="text" id="txt_GAmount" name="Gamount" disabled style="text-align:right;padding:4px,4px" value="@ViewBag.Amount" class="form-control">
+                </div>
+                <div class="col-md-12 padding10">
+                    <div class="col-md-12" style="padding:0px!important">
+                        <label for="ptvno">PTV Number/FMISno</label>
+                    </div>
+
+                    <div class="col-md-12" style="padding:0px!important">
+                        <input id="txt_ptvno" name="Ptvno" value="@ViewBag.ptvno" disabled class="form-control" type="text" />
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 padding10 checkDJ">
+                    <label for="checkno">Check No./ADA/RDONO</label>
+                    <input id="txt_checkno" name="Checkno" value="@ViewBag.checkno" disabled class="form-control" type="text" />
+                </div>
+                <input type="text" id="txt_NetAmount" name="Netamount" hidden style="text-align:right" disabled value="@ViewBag.NetAmount">
+                <input type="text" id="txt_VatAmount" name="Vatamount" hidden style="text-align:right" disabled value="@ViewBag.VatAmount">
+                <input id="txt_jevdate" name="Jevdate" type="text" hidden value="@ViewBag.Jevdate" />
+            </div>
+        </div>
+    </div>
+  
+</form>
+</div>
+
+                    <script>
+                        var mg = new mgsInfo()
+
+                        $(document).ready(function () {
+               
+                            $(function () {
+                                $('#txt_GAmount').number(true, 2);
+                            });
+                          
+                        })
+
+
+                        function addRemark(){
+                            startSpin()
+                            $.post('@Url.Action("_pv_reamkarkdetails", "Cashier")', { trnno: @ViewBag.trnno}
+                                , function (r) {
+                                    if (r.code == 5) {
+                                        stopSpin()
+                                        mg.warning("" + r.statusName + "","System Message")
+                                    }
+                                    else {
+                                        stopSpin()
+                                        $("#body_addremarks_grid").html("")
+                                        $("#h_addremarks_edit_id").html("Transaction Approval");
+                                        $("#body_addremarks").html(r)
+                                        $("#mdl_jev_addremarks").modal("show");
+                                    }
+                                })
+                            //.fail(function (jqXHR, textStatus, error) {
+                            //    stopSpin()
+                            //    mg.warning("" + textStatus + "")
+                            //});
+                        }
+                    </script>
+                 
+      
+
+<div class="modal" id="mdl_jev_addremarks" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="close_remarks()" aria-hidden="true">x</button>
+                <h4 id="h_addremarks_id" class="modal-title">Posting</h4>
+            </div>
+            <div id="body_addremarks" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+
+                <button onclick="btn_save_remarks(0)" class="btn btn-warning "> <i class="fa fa-close"></i> For Review</button>
+
+                <button onclick="btn_save_remarks(1)" class="btn btn-success "> <i class="fa fa-check"></i> Post to cashbook</button>
+
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_remarks()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function close_remarks() {
+        $("#mdl_jev_addremarks").modal("hide")
+    }
+</script>

@@ -1,0 +1,158 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout_Public.cshtml";
+}
+
+<style>
+    .zdex {
+        z-index: 500;
+    }
+    .bgRed {
+    
+    background-color:greenyellow;
+    }
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Activity/Training Design Tracking</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <script>
+            function para_coa (){
+                return { IS_id: $("#dp_is_name").data("kendoDropDownList").value() }
+            }
+            function r_grid() {
+                var grid = $("#grid_tracking_form").data("kendoGrid");
+                grid.dataSource.read();
+            }
+            function edit_logs() {
+
+            }
+
+        </script>
+        <div class="row">
+            <div class="col-lg-12 no-padding" style="padding-bottom:5px">
+                <div class="col-md-12">
+                    <h6>
+                        Note: Please click on the reference code to view the document and its tracking history.
+                    </h6>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+          function paraReview() {
+              return { parameter: "test" }
+          }
+
+        </script>
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.vw_Document_Status>()
+            .Name("grid_tracking_form")
+             .ToolBar(t => t.Search())
+            .Columns(columns =>
+            {
+                columns.Template(@<text></text>)
+                .Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).HeaderTemplate("Refference Code")
+                .ClientTemplate("<button class='k-button' onclick=\"open_document('#=refno#')\" style=\"cursor:pointer\" >#=refno#</button>");
+                columns.Bound(m => m.OfficeName).Width(150);
+                columns.Bound(m => m.Title).Width(300);
+                columns.Template(@<text></text>)
+                .Width(200).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).HeaderTemplate("Status")
+                .ClientTemplate("<button class=\"k-button\" onclick=\"open_document('#=refno#')\" style=\"cursor:pointer;width:100%\" >#=Status_name#</button>");
+                columns.Bound(m => m.DateOfLastStatus).Title("Date of Last Status").Width(150);
+                columns.Bound(m => m.InclusiveDate).Title("Inclusive Date").Width(150);
+                columns.Bound(m => m.remarks).Title("Remarks").Width(150);
+            })
+            //          .RowAction(row =>
+            //{
+            //            if (row.DataItem.status_code == 385)
+            //            {
+            //                row.HtmlAttributes["style"] = "background-color: green;"; // Change color as needed
+            //            }
+            //        })
+            .HtmlAttributes(new { style = "height: 500px;" })
+            .Scrollable()
+            .Sortable()
+            .Pageable(pageable => pageable
+            .Refresh(true)
+            .ButtonCount(5))
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Read(read => read.Action("data_grid_tracking", "Document").Data("paraReview"))
+                .PageSize(400)
+            )
+            .Events(e => e.DataBound("onDataBound"))
+)
+        </div>
+    </div>
+</div>
+<script>
+
+    function onDataBound() {
+        // get the grid
+        var grid = this;
+        // iterate through each row
+        grid.tbody.find('>tr').each(function () {
+            // get the row item
+            var dataItem = grid.dataItem(this);
+            // check for the condition
+            if (dataItem.status_code==385) {
+                // add the formatting if condition is met
+                $(this).addClass('bgRed');
+            }
+            
+
+        })
+    }
+
+    function open_document(refno) {
+        startSpin()
+        $.post('@Url.Action("open_document", "PreAudit")', { refno: refno }
+            , function (r) {
+                if (r.code == 5) {
+                    stopSpin()
+                    mg.warning("" + r.statusName + "", "System Message")
+                }
+                else {
+                    var header = "Document History";
+                    stopSpin()
+                    $("#h_trackhistory_id").html(header);
+                    $("#body_trackhistory").html(r)
+                    $("#mdl_trackhistory").modal("show");
+                }
+            })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+            
+        //});
+    }
+</script>
+
+<div class="modal" id="mdl_trackhistory" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg " style="min-width:1200px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_trackhistory_id" class="modal-title">Document History</h4>
+            </div>
+            <div id="body_trackhistory" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+

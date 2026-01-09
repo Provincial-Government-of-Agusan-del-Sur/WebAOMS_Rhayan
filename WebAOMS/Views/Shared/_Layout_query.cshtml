@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AOMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="your,keywords">
+    <meta name="description" content="Short explanation about this website">
+    <link rel="icon" href="@Url.Content("~/Content/favicon.ico")" />
+    <!-- BEGIN IMPORTANT! GLOBAL MANDATORY JAVASCRIPT -->
+    <link href="@Url.Content("~/Content/kendo/2019.3.1023/kendo.common.min.css")" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="@Url.Content("~/Content/font-awesome-4.2.0/css/font-awesome.css")" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="@Url.Content("~/Content/kendo/2019.3.1023/kendo.bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/Boostrap.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/akot.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/akot_responsive.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/toastr.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/akot/2018.1.1/print.min.css")" rel="stylesheet" />
+
+    <script src="@Url.Content("~/Scripts/akot/spin.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/spin.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/akot/jquery-1.11.0.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2019.3.1023//kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2019.3.1023//kendo.aspnetmvc.min.js")" )"></script>
+    <script src="@Url.Content("~/Scripts/akot/jquery.slimscroll.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/BootstrapFixed.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/toastr.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/UIMessage.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/App.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/is.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/ifmis.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/cleave.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/akot/print.min.js")"></script>
+
+    
+
+    <script>
+        function Index_Title_Payroll(smalltitle, h3title) {
+            $('.smalltitle').text(smalltitle)
+            $('.h3title').text(h3title)
+        }
+    </script>
+    <style>
+        .modal-80 {
+    max-width: 80% !important;
+}
+    .liZmnb {
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: 0px;
+        font-style: normal;
+        font-weight: 400;
+        color: rgb(33, 33, 37);
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .PvCIH {
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: 0px;
+        font-style: normal;
+        font-weight: 400;
+        color: #678a67;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .byexym:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+        .DebitCredit {
+                width: 100%;
+                background-color:rgba(0, 0, 0, 0);
+                /*background-color:rgb(250, 255, 189);*/
+                border:none;
+                outline:none;
+                height:25.6px;
+                text-align:right
+            }
+            .txtDebitCredit {
+                width: 100%;
+                background-color:rgb(250, 255, 189);
+                border:none;
+                outline:none;
+                text-align:right
+            }
+
+        
+        /*toast*/
+        .aui-toast {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            border-radius: 0.25rem;
+            color: #ffffff;
+            position: fixed;
+            z-index: 20000;
+            top: 45%;
+            left: 50%;
+            width: 9.5em;
+            min-height: 6em;
+            display: none;
+        }
+
+        .aui-toast .aui-iconfont {
+            margin-top: 0.2rem;
+            display: block;
+            font-size: 2.6rem;
+        }
+
+        .aui-toast-content {
+            margin: 0 0 0.75rem;
+        }
+        .bg-co {
+            content: '';
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+        }
+        .aui-toast-loading {
+
+            
+            background-color: #ffffff;
+            border-radius: 100%;
+            margin: 0.75rem 0;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            border: 2px solid #ffffff;
+            border-bottom-color: transparent;
+            height: 4.25rem;
+            width: 4.25rem;
+            background: transparent !important;
+            display: inline-block;
+            -webkit-animation: rotate 1s 0s linear infinite;
+            animation: rotate 1s 0s linear infinite;
+        }
+        @@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(1);
+        transform: rotate(180deg) scale(1);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+@@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(1);
+        transform: rotate(180deg) scale(1);
+    }
+    100% {
+        -webkit-transform: rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+
+    </style>
+</head>
+<body data-gr-c-s-loaded="true">
+
+
+    <div class="modal" id="loadingspin" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" style="width:205px">
+            <div id="mainload" class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="simpleModalLabel">loading....please wait..</h4>
+                </div>
+                <div id="spinId" class="modal-body"></div>
+
+            </div>
+        </div>
+    </div>
+    <header id="header">
+        @Html.Partial("_Header")
+    </header>
+
+    <div id="base">
+        <!-- BEGIN SIDEBAR-->
+        <div id="sidebar">
+            <div class="sidebar-back"></div>
+            @Html.Partial("_rigthsidebar_public")
+        </div>
+        <!--end #sidebar-->
+        <script>
+            function addCommas(nStr) {
+                if ($.isNumeric(nStr) == true) {
+                    nStr += '';
+                    x = nStr.split('.');
+                    x1 = x[0];
+                    x2 = x.length > 1 ? '.' + x[1] : '.00';
+                    var rgx = /(\d+)(\d{3})/;
+                    while (rgx.test(x1)) {
+                        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+                    }
+                    return x1 + x2;
+                }
+                else {
+                    return '';
+                }
+            }
+        </script>
+        <div id="content">
+            <section>
+                @*<div class="section-header" style="padding-bottom:0px!important">
+                        <h3 class="text-standard"><i class="fa fa-fw fa-arrow-circle-right text-gray-light"></i> <h class="h3title">@ViewBag.Title</h> <small class="smalltitle">@ViewBag.Description</small></h3>
+                </div>*@
+                <div class="section-body">
+                    <div class="row">
+                        <div id="mainContent" class="col-lg-12">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Scripts/akot/jquery.number.js")"></script>
+    <script>
+
+        var spinner;
+
+        function startSpin() {
+            $("#loadercenter").show()
+        }
+
+        function stopSpin() {
+            $("#loadercenter").hide()
+        }
+    </script>
+    @*<div  style="display:none" class="">*@
+        <div id="loadercenter" class="aui-toast" style="display: none;margin-top: -48px;margin-left: -48px;">
+            <div class="aui-toast-loading">
+            </div>
+            <div class="bg-co">
+            </div>
+            <div class="aui-toast-content" style="top:40px">Loading...</div>
+        </div>
+    @*</div>*@
+    @RenderSection("scripts", required: false)
+    <div class="modal" id="modal_delete" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:10000">
+    </div>
+
+    <div class="modal" id="modal_question" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:10000">
+    </div>
+    <div class="modal" id="modal_global" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:10000">
+    </div>
+    <div class="modal" id="modal_meesage" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:10000">
+    </div>
+    <div class="modal" id="modal_warning" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:10000">
+    </div>
+
+
+
+    <script>
+
+        function close_modal_delete() {
+            $('#modal_delete').html("");
+            $('#modal_delete').modal('hide');
+        }
+        function close_modal_warning() {
+            $('#modal_warning').html("");
+            $('#modal_warning').modal('hide');
+        }
+        function close_modal_question() {
+            $('#modal_question').html("");
+            $('#modal_question').modal('hide');
+        }
+        function zdex() {
+            $(".zdex").removeClass("zdex");
+        }
+    </script>
+</body>
+</html>

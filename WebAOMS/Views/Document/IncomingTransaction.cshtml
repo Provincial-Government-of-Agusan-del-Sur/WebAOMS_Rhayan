@@ -1,0 +1,256 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="box">
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Document Obligated</a></li>
+        <li><a href="#tab2" data-toggle="tab">Pending Documents</a></li>
+        <li><a href="#tab3" data-toggle="tab">Completed Transactions</a></li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+        <!-- First Tab (Document Obligated) -->
+        <div class="tab-pane active" id="tab1">
+            <!-- Removed 'fade' -->
+            <div class="box">
+                <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+                    <header>
+                        <h4 class="text-bold">List of Document Obligated from Budget</h4>
+                    </header>
+
+                </div>
+
+                <div class="box-body" style="padding-top:5px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="text" id="searchOBRNo" placeholder="Search using OBR No." class="form-control">
+                                <span class="input-group-btn">
+                                    <button onclick="searchGrid()" class="btn btn-primary">Search</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    @(Html.Kendo().Grid<WebAOMS.Models.vw_t_Incoming_ObligLiquidation>()
+                        .Name("grid_tracking_form")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(c => c.AlobsNo).Title("Control No.").Width(150).HtmlAttributes(new { style = "text-align:center" });
+                            columns.Bound(c => c.OfficeMedium).Title("Office").Width(70);
+                            columns.Bound(c => c.Particulars).Title("Particulars").Width(300);
+                            columns.Bound(c => c.OBRAmount).Title("OBR Amount").Width(100).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                            columns.Bound(c => c.Liquidation).Title("Liquidation").Width(100).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                            columns.Bound(c => c.balance).Title("Balance").Width(100).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                            columns.Bound(c => c.FundType).Title("Fund Type").Width(100);
+                            columns.Bound(c => c.functionID).Title("Function ID").Width(100);
+
+                            columns.Template(@<text></text>)
+                                .Width(80)
+                                .HtmlAttributes(new { style = "text-align:center;" })
+                                .ClientTemplate("<button type=\"button\" onclick=\"receive_doc('#=trans_id#')\" class=\"btn btn-xs btn-primary\"><i class=\"fa fa-list\"></i></button>");
+                        })
+                        .HtmlAttributes(new { style = "height: 450px;" })
+                        .Scrollable()
+                        .Sortable()
+                        .Pageable(pageable => pageable.Refresh(true).ButtonCount(5))
+                        .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .Read(read => read.Action("DataGridTrackingListReview", "Document").Data("filterOBRNo"))
+                            .PageSize(200)
+                            .ServerOperation(true)
+                        )
+                    )
+                </div>
+            </div>
+            <script>
+                var mg = new mgsInfo();
+
+                function filterOBRNo() {
+                    return { obrNo: $("#searchOBRNo").val() };
+                }
+
+                function searchGrid() {
+                    var grid = $("#grid_tracking_form").data("kendoGrid");
+                    grid.dataSource.read();
+                }
+
+                $('#searchOBRNo').on('keyup', function (e) {
+                    if (e.keyCode == 13) {
+                        searchGrid();
+                    }
+                });
+
+                function receive_doc(trans_id) {
+                    startSpin();
+                    $.post('@Url.Action("Receive_OBR", "Document")', { trans_id: trans_id })
+                        .done(function (r) {
+                            stopSpin();
+                            if (r.code == 5) {
+                                mg.warning("" + r.statusName + "", "System Message");
+                            } else {
+                                $("#h_newstatus_id").html("Received Document");
+                                $("#body_newstatus").html(r);
+                                $("#mdl_newstatus").modal("show");
+                            }
+                        })
+                        .fail(function (jqXHR, textStatus) {
+                            stopSpin();
+                            mg.warning(textStatus);
+                        });
+                }
+
+            </script>
+        </div>
+
+        <!-- Second Tab (Pending Documents) -->
+        <div class="tab-pane" id="tab2">
+            <!-- Removed 'fade' -->
+            <div class="box">
+                <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+                    <header>
+                        <h4 class="text-bold">List of Document Received</h4>
+                    </header>
+
+                </div>
+
+                <div class="box-body" style="padding-top:5px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="text" id="searchOBRNo_dv" placeholder="Search using DVNO." class="form-control">
+                                <span class="input-group-btn">
+                                    <button onclick="searchGrid_dv()" class="btn btn-primary">Search</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    @(Html.Kendo().Grid<WebAOMS.Models.vw_Incoming_Received>()
+                        .Name("grid_tracking_form_dv")
+                        .Columns(columns =>
+                        {
+                        columns.Bound(c => c.DVNo).Title("DVNO").Width(150).HtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(c => c.ObrNo).Title("Control No.").Width(150).HtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(c => c.OfficeMedium).Title("Office").Width(70);
+                        columns.Bound(c => c.Particular).Title("Particulars").Width(300);
+                        columns.Bound(c => c.GAmount).Title("OBR Amount").Width(100).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                       
+                        columns.Bound(c => c.FundType).Title("Fund Type").Width(100);
+                        columns.Bound(c => c.functionID).Title("Function ID").Width(100);
+
+                        columns.Template(@<text></text>)
+                                .Width(80)
+                                .HtmlAttributes(new { style = "text-align:center;" })
+                                .ClientTemplate("<button type=\"button\" onclick=\"receive_doc('#=trans_id#')\" class=\"btn btn-xs btn-primary\"><i class=\"fa fa-list\"></i></button>");
+                        })
+                        .HtmlAttributes(new { style = "height: 450px;" })
+                        .Scrollable()
+                        .Sortable()
+                        .Pageable(pageable => pageable.Refresh(true).ButtonCount(5))
+                        .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .Read(read => read.Action("DataGridTrackingListReview_dv", "Document").Data("filterOBRNo_dv"))
+                            .PageSize(200)
+                            .ServerOperation(true)
+                        )
+                    )
+                </div>
+            </div>
+            <script>
+                var mg = new mgsInfo();
+
+                function filterOBRNo_dv() {
+                    return { dvno: $("#searchOBRNo_dv").val() };
+                }
+
+                function searchGrid_dv() {
+                    var grid = $("#grid_tracking_form_dv").data("kendoGrid");
+                    grid.dataSource.read();
+                }
+
+                $('#searchOBRNo_dv').on('keyup', function (e) {
+                    if (e.keyCode == 13) {
+                        searchGrid_dv();
+                    }
+                });
+
+                function receive_doc_dv(trans_id_dv) {
+                    startSpin();
+                    $.post('@Url.Action("Receive_OBR_dv", "Document")', { trans_id: trans_id_dv })
+                        .done(function (r) {
+                            stopSpin();
+                            if (r.code == 5) {
+                                mg.warning("" + r.statusName + "", "System Message");
+                            } else {
+                                $("#h_newstatus_id_dv").html("Received Document");
+                                $("#body_newstatus_dv").html(r);
+                                $("#mdl_newstatus_dv").modal("show");
+                            }
+                        })
+                        .fail(function (jqXHR, textStatus) {
+                            stopSpin();
+                            mg.warning(textStatus);
+                        });
+                }
+
+            </script>
+        </div>
+
+        <!-- Third Tab (Completed Transactions) -->
+        <div class="tab-pane" id="tab3">
+            <!-- Removed 'fade' -->
+            <p>Completed transactions will be displayed here.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    // Refresh Kendo Grid when switching to the tab
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = $(e.target).attr("href");
+        if (target === "#tab1") {
+            $("#grid_tracking_form").data("kendoGrid").dataSource.read();
+        }
+    });
+</script>
+
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_dv()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="mdl_newstatus_dv" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id_dv" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus_dv" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_dv_dv()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

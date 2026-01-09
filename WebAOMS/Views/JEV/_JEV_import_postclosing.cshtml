@@ -1,0 +1,132 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <div class="row">
+            <form id="frm_coa" class="form-horizontal" style="padding-top:4px" role="form">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label for="Address" class="control-label">Year</label>
+                    </div>
+                    <script>
+
+                        function refresh_import_grid() {
+                            var grid_A = $("#grid_AP").data("kendoGrid");
+                            grid_A.dataSource.read();
+                        }
+                    </script>
+                    <div class="col-md-9">
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_payrmentperiod")
+                        .Format("yyyy")
+                        .Start(CalendarView.Decade)
+                        .Depth(CalendarView.Decade)
+                        .Value(DateTime.Now)
+
+                        .HtmlAttributes(new { type = "text", @style = "width:50%" })
+                        .Events(e => e.Change("refresh_import_grid"))
+                        )
+                        <div data-toggle="buttons">
+                            @(Html.Kendo().Button()
+                        .Name("btn_load")
+                        .Content("<i class=\"fa fa-refresh fa-lg \"></i> Load")
+                        .HtmlAttributes(new { type = "button", @class = "k-button" })
+                        .Events(ev => ev.Click("refresh_import_grid")))
+
+                            <label class="btn radio-inline btn-radio-success-inverse active">
+                                <input name="isIncomeExpenseOption" id="isIncomeExpenseOption1" value="4" type="radio">Income
+                            </label>
+                            <label class="btn radio-inline btn-radio-success-inverse">
+                                <input name="isIncomeExpenseOption" id="isIncomeExpenseOption2" value="5" type="radio">Expense
+                            </label>
+                            <label class="btn radio-inline btn-radio-success-inverse">
+                                <input name="isIncomeExpenseOption" id="isIncomeExpenseOption3" value="3" type="radio">Prior Year
+                            </label>
+                            <input id="isIncomeExpense" value="4" hidden />
+                            <script>
+                                $(function () {
+                                    $('input[name="isIncomeExpenseOption"]').bind('change', function () {
+                                        $("#isIncomeExpense").val($(this).val())
+                                        //alert($(this).val())
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                    function param_grid_import() {
+                        var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+                        return { year: year, fundcode: $("#fundID").data("kendoDropDownList").value(),incomeExpenseID:$("#isIncomeExpense").val() }
+                    }
+                </script>
+                <div class="row">
+                    @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_AP")
+                    .Columns(columns =>
+                    {
+                        columns.Bound("Accountcode").Width(100).Title("Accountcode").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:left" });
+                        columns.Bound("Accountname").Width(150);
+                        columns.Bound("Debit").Width(90).HtmlAttributes(new { style = "text-align:right" }).Format("{0:N2}");
+                        columns.Bound("Credit").Width(90).HtmlAttributes(new { style = "text-align:right" }).Format("{0:N2}");
+
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 300px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_import_postclosing", "JEV").Data("param_grid_import"))
+                        .PageSize(1000)
+                        .ServerOperation(false)
+                       )
+                    )
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        @*var datepicker = $("#dtp_post").data("kendoDatePicker");
+        datepicker.value('@ViewBag.postdate');*@
+
+    })
+
+    function save_import_entries() {
+        startSpin()
+        var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+       var fundcode = $("#fundID").data("kendoDropDownList").value()
+        var jevid = $("#txt_jevid").val();
+
+        $.post('@Url.Action("save_import_postclosing", "JEV")',
+            { year: year, fundcode: fundcode,incomeExpenseid: $("#isIncomeExpense").val(), jevid: jevid }
+        , function (r) {
+            if (r.code == 6) {
+                stopSpin()
+                toastr.success(r.statusName, 'System Message');
+                $("#body_import").html("")
+                $("#mdl_import").modal("hide");
+                rgrid_main_account();
+            }
+            else
+            {
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>

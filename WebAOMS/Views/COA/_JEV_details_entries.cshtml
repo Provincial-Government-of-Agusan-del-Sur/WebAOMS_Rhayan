@@ -1,0 +1,421 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+    .padding10 {
+        padding-bottom: 5px
+    }
+</style>
+<div class="panel panel-default" style="padding-bottom:10px;">
+    <form id="frm_jev_details">
+
+
+        <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important;"><h5><bold>Transaction Details</bold></h5></div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 no-padding">
+                <div class="col-md-3 no-padding">
+                    <input id="txt_jevid" name="jevid" value="@ViewBag.jevid" type="text" hidden />
+                    <input id="txt_isAdjustment" name="isAdjustment" value="@ViewBag.isAdjustment" type="text" hidden />
+                    <div class="col-md-12 padding10">
+                        <label for="checkno">Check/Transaction/Deposit Date</label>
+                        @*<input id="txt_checkdate" class="form-control" value="@ViewBag.date_" />*@
+                        @(Html.Kendo().DatePicker()
+                    .Name("Date_")
+                    .Value(ViewBag.date_)
+                    .Format("MMMM dd, yyyy")
+                    .HtmlAttributes(new { style = "width:100%", type = "text", @class = "input-group" })
+                        )
+                    </div>
+
+                    <div class="col-md-12 padding10">
+                        <label for="ObrNo">DV Number</label>
+                        <input type="text" id="txt_Dvno" name="Dvno" disabled value="@ViewBag.dvno" class="form-control">
+                    </div>
+
+                    <div class="col-md-12 padding10">
+                        <label for="ObrNo">OBR NO./NA Description</label>
+                        <input type="text" id="txt_ObrNo" name="Obrno" disabled value="@ViewBag.Obrno" class="form-control">
+                    </div>
+
+                    <div class="col-md-12 padding10 checkDJ">
+                        <label for="rcino">RCI No.</label>
+                        <input id="txt_rcino" name="RCI" value="@ViewBag.rci" disabled class="form-control" type="text" />
+                    </div>
+                    <div class="col-md-12 padding10 checkDJ">
+                        <label for="checkno">Check No.</label>
+                        <input id="txt_checkno" name="Checkno" value="@ViewBag.checkno" disabled class="form-control" type="text" />
+                    </div>
+
+                </div>
+                <div class="col-md-5 no-padding">
+                    <div class="col-md-12 padding10">
+                        <label for="claimantname">Claimant Name</label>
+
+                        <input id="txt_claimant" type="text" class="form-control navbar-input" value="@ViewBag.Name" disabled style="" placeholder="browse claimant">
+
+
+
+                        <input id="txt_claimant_id" style="display:none" name="Claimantcode" value="@ViewBag.Claimantcode" disabled type="text" class="form-control k-input" />
+                    </div>
+                    <div class="col-md-12 padding10">
+                        <label for="exampleFormControlTextarea5">Particular</label>
+                        @*<div  class="pull-right">
+                                <a href="#" onclick="addRemark()" style="color:darkseagreen"><b>Edit</b></a>
+                            </div>*@
+
+                        <textarea class="form-control" name="Particular" id="txt_particular" disabled rows="11">@ViewBag.Particular</textarea>
+                    </div>
+                </div>
+                <script>
+                @*$(document).ready(function() {
+                    $("#txt_checkdate").kendoDatePicker().HtmlAttributes(new { style = "width:100%", type = "text", @class = "input-group" });
+                })*@
+
+                    function select_claimant() {
+                        var ddl_claimant = $('#dp_claimant').data('kendoComboBox')
+                        if (ddl_claimant.value() == "") {
+                            toastr.warning("Invalid Claimant", 'System Message');
+                            return;
+                        }
+                        $("#txt_claimant_id").val(ddl_claimant.value())
+                        $("#txt_claimant").val(ddl_claimant.text())
+                        close_browse_claimant_popup()
+                    }
+
+                    function close_browse_claimant_popup() {
+                        $("#mdl_browse_claimant_popup").modal("hide");
+                    }
+
+                    function browse_claimant_popup() {
+                        startSpin()
+                        $.post('@Url.Action("_browse_claimant", "Document")', {}
+                            , function (r) {
+                                $("#body_browse_claimant_popup").html(r)
+                                $("#mdl_browse_claimant_popup").modal("show");
+                                stopSpin();
+                            })
+                    }
+                    function loadselected_office() {
+                        var officenam = $("#RCenter").data("kendoDropDownList");
+                        officenam.value(@ViewBag.RCenter)
+                    }
+                    function loadselected_fund() {
+                        var fund = $("#fundID").data("kendoDropDownList");
+                        fund.value(@ViewBag.fundID)
+                    }
+                </script>
+                <div class="col-md-4 no-padding">
+                    <div class="col-md-12 padding10">
+                        <label for="officename">Responsibility Center</label>
+                        @*<input type="text" id="txt_officename" disabled value="@ViewBag.officename" class="form-control">*@
+                        @(Html.Kendo().DropDownList()
+                              .Name("RCenter")
+                              .DataTextField("OfficeName")
+                              .DataValueField("FMISOfficeID")
+                              .Filter("Contains")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_GetOffice", "JEV");
+                                  });
+                              })
+                              .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+                    <div class="col-md-12 padding10">
+
+                        <label for="FundType">Fund Type</label>
+                        @(Html.Kendo().DropDownList()
+                              .Name("fundID")
+                              .DataTextField("FundName")
+                              .DataValueField("FundID")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Getfundtype", "JEV");
+                                  });
+                              })
+                              .HtmlAttributes(new { style = "width: 100%" })
+                        )
+
+                    </div>
+                    <div class="col-md-12 padding10">
+                        <label for="GAmount">Gross Amount</label>
+                        <input type="text" id="txt_GAmount" name="Gamount" disabled style="text-align:right;padding:4px,4px" value="@ViewBag.Gamount" class="form-control">
+                    </div>
+                    <div class="col-md-12 padding10">
+                        <div class="col-md-12" style="padding:0px!important">
+                            <label for="ptvno">PTV Number/FMISno</label>
+                        </div>
+
+                        <div class="col-md-6" style="padding:0px!important">
+                            <input id="txt_ptvno" name="Ptvno" value="@ViewBag.ptvno" disabled class="form-control" type="text" />
+                        </div>
+
+                        <div class="col-md-6" style="padding:0px!important">
+                            <input id="txt_fmisno" name="FmisVoucherno" placeholder="FMIS Voucher No." disabled value="@ViewBag.FmisVoucherno" class="form-control" type="text" />
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12 padding10">
+                        <label for="rdono">RDO Number</label>
+                        <input id="txt_rdono" name="Rdono" value="@ViewBag.Rdono" disabled class="form-control" type="text" />
+                    </div>
+                    <input type="text" id="txt_NetAmount" name="Netamount" hidden style="text-align:right" disabled value="@ViewBag.NetAmount">
+                    <input type="text" id="txt_VatAmount" name="Vatamount" hidden style="text-align:right" disabled value="@ViewBag.VatAmount">
+                    <input id="txt_jevdate" name="Jevdate" type="text" hidden value="@ViewBag.Jevdate" />
+                </div>
+            </div>
+        </div>
+        @*<div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 no-padding">
+                    <div class="col-md-4 no-padding">
+
+                    </div>
+                </div>
+            </div>*@
+
+
+        @*<div class="panel panel-default" style="padding-bottom:10px;">
+                <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important;"><h5><bold>Other Details</bold></h5></div>
+                <div class="form-group-md">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="col-md-3 no-padding">
+
+                            </div>
+                            <div class="col-md-5 no-padding" ">
+
+                            </div>
+                            <div class="col-md-4 no-padding" >
+                                <div class="col-md-12 no-padding">
+                                    <div class="col-md-12">
+                                        <label for="GAmount">Amount</label>
+                                        <input type="text" id="txt_GAmount" style="text-align:right;padding:4px,4px" disabled value="@ViewBag.GAmount" class="form-control">
+                                    </div>
+                                    <input type="text" id="txt_NetAmount" hidden style="text-align:right" disabled value="@ViewBag.NetAmount">
+                                    <input type="text" id="txt_VatAmount" hidden style="text-align:right" disabled value="@ViewBag.VatAmount">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        <div class="panel panel-default col-md-12 no-padding" style="padding-bottom:5px!important;min-width:388px">
+            <div class="col-md-12 ">
+                <div class="col-md-4 no-padding">
+                    <h5><bold>JEV Number</bold></h5>
+                    <div class="col-md-12">
+                        <div class="input-group" style="padding-right:10px">
+
+                            <div class="input-group-btn">
+                                <input id="txt_jevno" readonly type="tel" name="JEVno" class="form-control control-width-medium" style="text-align:right" value="@ViewBag.JEVno@ViewBag.jevseries">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-8">
+
+                    <h5><bold>Type of Journal</bold></h5>
+                    <div class="form-group-md">
+                        <div data-toggle="buttons">
+                            <label id="lbl_jtypeOption1" class="btn radio-inline btn-radio-success-inverse">
+                                <input class="jtypeOption" id="jtypeOption1" value="1" type="radio"> Cash Receipt
+                            </label>
+                            <label id="lbl_jtypeOption3" class="btn radio-inline btn-radio-success-inverse ">
+                                <input class="jtypeOption" id="jtypeOption3" value="3" type="radio"> Cash
+                            </label>
+                            <label id="lbl_jtypeOption2" class="btn radio-inline btn-radio-success-inverse">
+                                <input class="jtypeOption" id="jtypeOption2" value="2" type="radio"> Check
+                            </label>
+
+                            <label id="lbl_jtypeOption4" class="btn radio-inline btn-radio-success-inverse">
+                                <input class="jtypeOption" id="jtypeOption4" value="4" type="radio"> General
+                            </label>
+
+                            <label id="lbl_jtypeOption5" class="btn radio-inline btn-radio-success-inverse">
+                                <input class="jtypeOption" id="jtypeOption5" value="5" type="radio"> Procurements Received
+                            </label>
+
+                            <label id="lbl_jtypeOption6" class="btn radio-inline btn-radio-success-inverse">
+                                <input class="jtypeOption" id="jtypeOption6" value="6" type="radio"> ADA Disburesement
+                            </label>
+
+                            <input id="jtypeOptionID" name="Transtype" value="@ViewBag.journalTypeID" hidden />
+                            <script>
+                                    $(document).ready(function () {
+                                        journalTypeid = @ViewBag.journalTypeID
+                                        $("#add_claimant").html("")
+                                        $("#jtypeOption" + journalTypeid).attr('checked', 'checked');
+                                        $("#lbl_jtypeOption" + journalTypeid).addClass("active");
+                                        hidefield(journalTypeid)
+                                    })
+
+                                    function hidefield(journalTypeid) {
+                                        //if (journalTypeid == 2) {
+                                        //    $(".checkDJ").show()
+                                        //}
+                                        //else {
+                                        //    $(".checkDJ").hide()
+                                        //}
+                                    }
+
+                                    $(function () {
+                                        $('input[class="jtypeOption"]').bind('change', function () {
+
+                                            $("#jtypeOptionID").val($(this).val())
+                                            hidefield($(this).val())
+                                        });
+                                    });
+
+                                    function param_grid_entries_sub() {
+                                        return { jevid:$("#txt_jevid").val() };
+                                    }
+                                    function param_grid_entries_cf_sub() {
+                                        return { jevid:'@ViewBag.jevid' };
+                                    }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+<div class="panel panel-default col-md-12 no-padding" style="padding-bottom:5px!important;">
+    <div class="panel-body" style="padding-top:0px!important;padding-bottom:0px!important">
+        <div class="row">
+            <div class="col-sm-6">
+                <h5><bold>Accounting Entries</bold></h5>
+            </div>
+            @*<div class="col-md-6">
+                    <a href="#" class="pull-right">Logs</a>
+                </div>*@
+            <div class="col-sm-6 tools">
+                <div class="btn-group pull-right">
+                    <a href="#" onclick="show_logs()" class="btn btn-equal btn-sm pull-right" style="width:50px;text-align:right"><i class="fa fa-history"></i> logs</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group-md">
+            <div class="row">
+                <div class="col-md-12">
+                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_jev_byDVNO_Result>()
+                            .Name("grid_Entries")
+                            .Columns(columns =>
+                            {
+                                columns.Bound(c => c.code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" })
+                                    .ClientFooterTemplate("<div style='text-align:right'>Row(s) <b>#=count#</b></div>");
+                                columns.Bound(c => c.AccountChildName).Title("Account Name").Width(400);
+
+                                columns.Bound(c => c.debit).Width(100).Title("Debit").Format("{0:N2}").HeaderHtmlAttributes(new { Style = "text-align:center" }).HtmlAttributes(new { Style = "text-align:right" })
+
+                                    .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+
+                                columns.Bound(c => c.credit).Width(100).Title("Credit").Format("{0:N2}").HeaderHtmlAttributes(new { Style = "text-align:center" }).HtmlAttributes(new { Style = "text-align:right" })
+                                //.ClientTemplate("<div style='text-align:right'>#=addCommas(credit)# </div>")
+
+                                .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+
+                            })
+                            .Selectable(selectable => selectable
+                            .Mode(GridSelectionMode.Single))
+                            .AutoBind(true)
+                            .HtmlAttributes(new { style = "height: 200px;" })
+                            .Scrollable()
+                            .Sortable()
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .Read(read => read.Action("grid_entries_byjevid", "JEV").Data("param_grid_entries_sub"))
+                                .PageSize(200)
+                                .Aggregates(aggregates =>
+                                {
+                                    aggregates.Add(p => p.debit).Sum();
+                                    aggregates.Add(p => p.credit).Sum();
+                                    aggregates.Add(p => p.code).Count();
+                                })
+                                .Sort(sort => sort.Add("debit").Descending())
+                            )
+                            
+                                )
+
+                    <script>
+                        var mg = new mgsInfo()
+
+                        $(document).ready(function () {
+                            $(function () {
+                                $('#txt_GAmount').number(true, 2);
+                                //$('#txt_series').numeric(true,2);
+                            });
+
+                        })
+                  
+
+                        function addRemark(){
+                            var jevid = $("#txt_jevid").val()
+                            startSpin()
+                            $.post('@Url.Action("_pv_reamkarkdetails", "COA")', { jevid: jevid}
+                                , function (r) {
+                                    if (r.code == 5) {
+                                        stopSpin()
+                                        mg.warning("" + r.statusName + "","System Message")
+                                    }
+                                    else {
+                                        stopSpin()
+                                        $("#body_addremarks_grid").html("")
+                                        $("#h_addremarks_edit_id").html("Transaction Approval");
+                                        $("#body_addremarks").html(r)
+                                        $("#mdl_jev_addremarks").modal("show");
+                                    }
+                                })
+                            //.fail(function (jqXHR, textStatus, error) {
+                            //    stopSpin()
+                            //    mg.warning("" + textStatus + "")
+                            //});
+                        }
+                    </script>
+                    <div class="col-md-12" style="padding-top:10px">
+                     
+                            <button onclick="addRemark()" class="btn btn-success pull-right"> <i class="fa fa-list"></i> Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal" id="mdl_jev_addremarks" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="close_remarks()" aria-hidden="true">x</button>
+                <h4 id="h_addremarks_id" class="modal-title">Approval and Disapproval of transaction</h4>
+            </div>
+            <div id="body_addremarks" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+              
+            @*<button onclick="btn_save_remarks(0)" class="btn btn-warning "> <i class="fa fa-close"></i> Disapprove</button>*@
+              
+            <button onclick="btn_save_remarks(1)" class="btn btn-success "> <i class="fa fa-check"></i> Post to cashbook</button>
+              
+            <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_remarks()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function close_remarks() {
+        $("#mdl_jev_addremarks").modal("hide")
+    }
+</script>

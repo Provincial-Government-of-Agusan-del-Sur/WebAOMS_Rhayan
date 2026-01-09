@@ -1,0 +1,192 @@
+﻿@{
+    Layout = null;
+}
+<div class="form-horizontal col-sm-12">
+    <form id="frm_laonDetails">
+        <input id="txt_eid" hidden type="text" name="eid" value="@ViewBag.eid" />
+        <h5 style="text-align:left">Name: @ViewBag.EmpName</h5>
+        <h5 hidden>@ViewBag.Compensation_col_temp_id</h5>
+        
+            @*<div class="col-sm-12">
+                <label for="name">Gross Amount:</label>
+                <input id="txt_amount" type="text" placeholder="Enter value" value="@ViewBag.GAmount" class="form-control control-width-medium text-right" style="display:inline-block!important;">
+            </div>*@
+
+            @*<div class="col-lg-12">
+                <label for="Compensationname" class="control-label">Amount: </label>
+                <input id="txt_amount" type="text" placeholder="Enter value" value="@ViewBag.Amount" class="form-control text-right" style="display:inline-block!important;">
+            </div>*@
+            <script>
+                function grid_deduction_para(){
+                    
+                    return {eid:@ViewBag.eid,batchno:$("#txt_batchno").val()}
+                }
+            </script>
+
+        <div class="row" style="padding-bottom:5px">
+            <div class="col-lg-12">
+                @(Html.Kendo().Grid<WebAOMS.Models.t_income_deduct>()
+                    .Name("grid_employee_Income")
+                    .Sortable()
+
+                    .Scrollable()
+                            .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single))
+
+                    .Columns(columns =>
+                    {
+                        columns.Bound(a => a.Description).Width(40).Title("Compensation Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" })
+                        .ClientFooterTemplate("Total Compensation:");
+                        columns.Bound(a => a.Amount).Width(30).Title("Value").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" });
+                        
+                        columns.Template(@<text></text>)
+                        .Width(10)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10px" })
+                        .ClientTemplate("<button data-original-title=\"Edit Compensation\" type=\"button\" onclick=\"newIncome('#=t_Compensation_col_temp_id#','#=Col_id#','#=col_type_id#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" ><i class=\"fa fa-pencil\"></i></button>");
+                    })
+                    .HtmlAttributes(new { style = "color: #000;height:250px; font-size:13px; cursor:pointer" })
+                    .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .ServerOperation(false)
+                    .Read(read => read.Action("LoadGrid_Income_special", "Payroll").Data("grid_deduction_para"))
+                    )
+                    .Resizable(resize => resize.Columns(true))
+                )
+            </div>
+        </div>
+        @*<div class="form-group" style="padding-top:5px">
+            <div class="col-sm-12">
+                <label for="name">Gross Amount:</label>
+                <input id="txt_amount" type="text" placeholder="Enter value" value="@ViewBag.GAmount" class="form-control control-width-medium text-right" style="display:inline-block!important;">
+            </div>
+        </div>*@
+        <div class="row">
+            <div class="col-lg-12">
+                @(Html.Kendo().Grid<WebAOMS.Models.t_income_deduct>()
+                    .Name("grid_employee_Deduction")
+                    .Sortable()
+
+                    .Scrollable()
+                            .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single))
+
+                    .Columns(columns =>
+                    {
+                        columns.Bound(a => a.Description).Width(40).Title("Deduction Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" })
+                        .ClientFooterTemplate("Total Deduction:");
+                        columns.Bound(a => a.Amount).Width(30).Title("Amount").Format("{0:n2}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" })
+                        .ClientFooterTemplate(" #= kendo.format('{0:N2}',sum) #").FooterHtmlAttributes(new { style = "text-align:right;font-size:13px" });
+
+                        columns.Template(@<text></text>)
+                        .Width(10)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10px" })
+                        .ClientTemplate("<button data-original-title=\"Edit deduction\" type=\"button\" onclick=\"newDeduction('#=special_payroll_deductionID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" ><i class=\"fa fa-pencil\"></i></button>");
+                    })
+                        .HtmlAttributes(new { style = "color: #000;height:130px; font-size:13px; cursor:pointer" })
+                        .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                        .Aggregates(aggregates =>
+                        {
+                            aggregates.Add(a => a.Amount).Sum();
+                        })
+                                .Read(read => read.Action("LoadGrid_Deduction_special", "Payroll").Data("grid_deduction_para"))
+                        )
+
+                        .Resizable(resize => resize.Columns(true))
+                )
+            </div>
+
+        </div>
+        <div class="form-group" style="padding-top:5px">
+            <div class="col-sm-12">
+                <label for="name">Net Amount:</label>
+                <input id="txt_net_amount" type="text" placeholder="" disabled value="@ViewBag.NetAmount" class="form-control control-width-medium text-right" style="display:inline-block!important;">
+            </div>
+        </div>
+    </form>
+    <script>
+    $(document).ready(function(){
+        $('#txt_amount').number(true, 2);
+        $('#txt_net_amount').number(true, 2);
+    })
+
+    function click_save_edit_special() {
+        startSpin()
+        var url = '@Url.Action("save_edit_special", "Payroll")';
+        $.post(url, { Compensation_col_temp_id: '@ViewBag.Compensation_col_temp_id', Amount: $("#txt_amount").val(),eid:@ViewBag.eid,batchno:$("#txt_batchno").val() }, function (data) {
+            stopSpin()
+            $('#modal_edit_compensation').modal('hide');
+            loadpara();
+        })
+            .fail(function (jqXHR, textStatus, error) {
+                stopSpin()
+                toastr.warning(error, 'System Message');
+            });
+    }
+
+    function newDeduction(special_payroll_deductionID) {
+        startSpin()
+        $.post('@Url.Action("LoanDetails_special", "Payroll")',
+           { special_payroll_deductionID: special_payroll_deductionID, eid: @ViewBag.eid},
+                function (r) {
+                    stopSpin()
+                    if (r == 8) {
+                        toastr.warning('Select employee first', 'System Message');
+                    }
+                    else {
+                        $("#del_deduct").show();
+                        $("#txt_saveType").val(1);
+                        var mymodal = $('#m_add_deductions_special');
+                        $("#id_modal_header").html("Update Deduction");
+                        mymodal.find('.modal-body').html(r);
+                        mymodal.modal('show');
+                    }
+                }
+            )
+        }
+
+        function newIncome(t_Compensation_col_temp_id,col_id,col_type_id) {
+
+            startSpin()
+            $.post('@Url.Action("IncomeDetails_special", "Payroll")',
+               { t_Compensation_col_temp_id: t_Compensation_col_temp_id, eid: @ViewBag.eid,col_id:col_id,col_type_id:col_type_id},
+                function (r) {
+                    stopSpin()
+                    if (r == 8) {
+                        toastr.warning('Select employee first', 'System Message');
+                    }
+                    else {
+                        $("#del_deduct").hide();
+                        $("#txt_saveType").val(2)
+                        var mymodal = $('#m_add_deductions_special');
+                        $("#id_modal_header").html("Update Compensation");
+                        mymodal.find('.modal-body').html(r);
+                        mymodal.modal('show');
+                    }
+                }
+            )
+
+        }
+
+        function get_netAmount() {
+            var url = '@Url.Action("get_netAount_special", "Payroll")';
+        $.post(url, { eid: '@ViewBag.eid',batchno:$("#txt_batchno").val()}
+            , function (data) {
+
+                $("#txt_net_amount").val(data)
+                //loadpara()
+            })
+        ;
+    }
+    </script>
+    @*<div class="row fa-border">
+            <div class="col-lg-12 text-left" style="padding-top:5px;padding-bottom:5px">
+                <button class=" btn btn-success" onclick="open_dialog_deduction_save()">
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </div>
+        </div>*@
+</div>
+
+

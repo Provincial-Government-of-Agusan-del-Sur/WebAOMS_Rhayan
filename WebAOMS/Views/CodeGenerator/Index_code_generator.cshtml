@@ -1,0 +1,215 @@
+﻿<script>
+    function ToggleChkBox(flag) {
+        $('.chkbxq').each(
+            function () {
+                $(this).attr('checked', flag);
+            });
+    }
+</script>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+    
+    <div class="col-md-4 no-padding" style="padding-bottom:5px">
+        @*<label for="FundType">Tables</label>*@
+        <div class="col-md-12" style="padding-bottom:10px">
+            <div class="col-md-12 no-padding">
+                <label for="FundType">Database</label>
+                @(Html.Kendo().DropDownList()
+                    .Name("dp_is_name")
+                    .DataTextField("name")
+                    .DataValueField("database_id")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_getDatabase", "CodeGenerator");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                .Events(e => e.Change("rgrid"))
+                )
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <div class="fields">
+                <span id="TOSearch"  class="k-textbox k-space-right" style="width:190px;">
+                    <input id="txtTOSearch" class="k-input" type="text" style="width:100%" />
+                    <a id="asearch" href="#" onclick="CallSearch()" class="k-icon k-i-search">&nbsp;</a> @*onmouseover='AhoverSearch("asearch")' onmouseout='AoutSearch("asearch")'*@
+                </span>
+            </div>
+        </div>
+        <input id="txtObjectID" value="1" type="text" style="width:100px; margin-top:2px;float:left;margin-left:20px;display:none;">
+        <div class="col-md-12">
+        @(Html.Kendo().Grid<WebAOMS.Models.l_tables>()
+        .Name("gri_tables")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; Width:100%;cursor: pointer;height: 350px;" })
+        .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single)
+            .Type(GridSelectionType.Row)
+        )
+        .AutoBind(false)
+        .Events(events => events.Change("selectedRow"))
+           .Scrollable()
+        .Columns(columns =>
+        {
+            //columns.Bound(p => p.object_id).HeaderTemplate("<input id='selectall' class='chkbx' style='cursor: pointer;' type='checkbox' onclick='ToggleChkBox(this.checked);' />").ClientTemplate("<input id='checkbox' style='cursor: pointer;' onclick='grdChkBoxClick(this); ' class='chkbxq' type='checkbox' />").Sortable(false).Filterable(false).Width(30);
+            columns.Bound(M => M.object_id).Width(20).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HtmlAttributes(new { style = "text-align:center; font-size:13px" });
+            columns.Bound(M => M.tablename).Width(50).Title("Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            columns.Bound(M => M.schemaname).Width(20).Title("Schema").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+
+        })
+        .Pageable(p => p.Refresh(true))
+        .Sortable()
+
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(200)
+            .ServerOperation(false)
+            .Model(M =>
+            {
+                M.Id(G => G.object_id);
+            })
+            .Read(g => g.Action("grid_tables", "CodeGenerator").Data("Gettable"))
+            
+        )
+)
+        </div>
+        
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('#txtTOSearch').on('keydown', function (e) {
+                if (e.keyCode == 13) {
+                    var grid = $("#gri_tables").data("kendoGrid");
+
+                    if ($('#txtTOSearch').val() == "") {
+                        grid.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("tablename", $('#txtTOSearch').val(), 'gri_tables')
+                        grid.dataSource.sort({ field: "tablename", dir: "asc" });
+                    }
+                }
+            })
+        })
+        function rgrid(){
+            var data = $("#gri_tables").data("kendoGrid");
+            var text = data.dataSource.read();
+        }
+        function Gettable() {
+            var data = $("#dp_is_name").data("kendoDropDownList");
+            var text = data.text();
+            return { datatabasename: text };
+        }
+
+        function GetColumn() {
+            var data = $("#gri_tables").data("kendoGrid");
+            var text = data.dataSource.read();
+            return { datatabasename: text, object_id: $('#txtObjectID').val() };
+        }
+
+        function selectedRow(e) {
+            grid = e.sender;
+            var currentDataItem = grid.dataItem(this.select());
+            var grid = $("#ChildUsermenu").data("kendoGrid");
+            $('#txtObjectID').val(currentDataItem.object_id)
+            kendo.ui.progress($("#ChildUsermenu"), true);
+            setTimeout(function () {
+                grid.dataSource.read();
+                kendo.ui.progress($("#ChildUsermenu"), false);
+            }, 300);
+            view_query(currentDataItem.tablename)           
+            
+        }
+        //$('#ChildUsermenu').on("click", "td", function (e) {
+        //    var selectedTd = $(e.object_id).closest("td");
+        //    var grdChkBox = selectedTd.parents('tr').find("td:first").next("td").find('input:checkbox');
+        //    grdChkBox.prop('checked', !grdChkBox.prop('checked'));
+        //});
+    </script>
+
+    <div class="col-md-8">
+        @(Html.Kendo().Grid<WebAOMS.Models.l_columns>()
+        .Name("ChildUsermenu")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; Width:100%;cursor: pointer;height: 350px;" })
+        .Columns(columns =>
+        {
+            //columns.Template().HeaderTemplate("<input id='selectall' class='chkbx' type='checkbox' onclick='ToggleChkBox(this.checked);' />").ClientTemplate("<input id='checkbox' onclick='grdChkBoxClick(this); ' class='chkbxq' type='checkbox' />").Sortable(false).Filterable(false).Width(30);
+            columns.Bound(p => p.column_id).HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HeaderTemplate("<input id='selectall' class='chkbx' style='cursor: pointer;text-align:center;' type='checkbox'  onclick='ToggleChkBox(this.checked);' />")
+            .ClientTemplate("<input id=\"checkboxx_#=column_id#_#=name#\" style=\"cursor: pointer;\" onclick=\"grdChkBoxClick(this)\" type=\"checkbox\" />").Sortable(false).Filterable(false).Width(30);
+            columns.Bound(M => M.column_id).Width(30).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HtmlAttributes(new { style = "text-align:center; font-size:13px" });
+            columns.Bound(M => M.name).Width(100).Title("Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            columns.Bound(M => M.max_length).Width(30).Title("Max Length").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Template(@<text></text>).Width(100).Title("label Name").HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HtmlAttributes(new { style = "text-align:center;" }).ClientTemplate("<span id=\"span_#=column_id#\"   style=\"width:100%;\"><input id=\"txtName_#=column_id#\" class=\"k-textbox\" value=\"#=name#\" type=\"text\" style=\"width:100%;\"/></span>");
+            columns.Template(@<text></text>).Width(70).Title("Type").HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HtmlAttributes(new { style = "text-align:center;" }).ClientTemplate("<select id=\"d_#=column_id#\" class=\"k-select\" style=\"width:100%;height:100%\"><option value = \"1\">Textbox</option> " +
+               "<option value = \"2\">DropDownList</option>" +
+               "<option value = \"3\">AutoComplete</option> " +
+               "<option value = \"4\">DatePicker</option> " +
+               "<option value = \"5\">Checkbox</option></select>");
+        columns.Template(@<text></text>).Width(60).Title("Width").HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HtmlAttributes(new { style = "text-align:center;" }).ClientTemplate("<select id=\"S_#=column_id#\" class=\"k-select\" style=\"width:100%;height:100%\">" +
+               "<option value = \"2\">75px</option>" +
+               "<option value = \"3\" >150px</option> " +
+               "<option value = \"4\" selected>310px</option> " +
+               "<option value = \"5\">600px</option></select>");
+
+            //columns.Template(@<text></text>).Width(100).Title("Type").HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" }).HtmlAttributes(new { style = "text-align:center;" }).ClientTemplate("<span id=\"cmb_#=column_id#\" unselectable=\"on\" class=\"k-dropdown-wrap k-state-default\"  style=\"width:100%;\"/> span");
+        })
+
+        //.Pageable(p => p.Refresh(fals))
+        .Scrollable()
+        .Sortable()
+        .DataSource(dataSource => dataSource
+            .Ajax()
+        
+            .ServerOperation(false)
+                    .Model(M =>
+                    {
+                        M.Id(G => G.column_id);
+                    })
+            .Read(g => g.Action("grid_coulmns", "CodeGenerator").Data("GetColumn"))
+        )
+        )
+    </div>
+
+
+</div>
+
+</div>
+
+    <div id="id_script">
+
+    </div>
+
+<script>
+    var mg = new mgsInfo()
+    function view_query(tablename) {
+        startSpin()
+        var data = $("#dp_is_name").data("kendoDropDownList");
+        var text = data.text();
+        $.post('@Url.Action("code_script", "CodeGenerator")', { tablename: tablename, databasename: text }
+            , function (r) {
+                stopSpin()
+                $("#id_script").html(r);
+            })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>

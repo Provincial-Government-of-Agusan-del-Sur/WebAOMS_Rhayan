@@ -1,0 +1,286 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Collection" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Deposits" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="PTVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Acountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="NatureofPayment" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>CASH RECEIPTS JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of September, 2020</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevid>306907</jevid>
+    <Date_>09/01/2020</Date_>
+    <JEVNo>128-20-09-01-0001</JEVNo>
+    <Collection>17951.0000</Collection>
+    <Deposits>17951.0000</Deposits>
+    <Rdono>2020-09-1-PAB-2495</Rdono>
+    <Particular>RCD 9/1/2020 with RDONO 2020-09-1-PAB-2495</Particular>
+    <PTVno>101-20-09-0002-2495</PTVno>
+    <Debit>17951.0000</Debit>
+    <Acountcode>10102010-505-100-101-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-02T00:00:00+08:00</Jevdate>
+    <Gamount>17951.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>128-20-09-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306907</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>17951.0000</Credit>
+    <Acountcode>40202200-1-27</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-02T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>17951.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>128-20-09-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306910</jevid>
+    <Date_>09/01/2020</Date_>
+    <JEVNo>128-20-09-01-0002</JEVNo>
+    <Collection>10866.0000</Collection>
+    <Deposits>10866.0000</Deposits>
+    <Rdono>2020-08-8-PAB-2495</Rdono>
+    <Particular>RCD 9/1/20 with RDONO 2020-08-8-PAB-2495</Particular>
+    <PTVno>101-20-09-0001-2495</PTVno>
+    <Debit>10866.0000</Debit>
+    <Acountcode>10102010-505-100-101-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-02T00:00:00+08:00</Jevdate>
+    <Gamount>10866.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>128-20-09-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306902</jevid>
+    <Date_>09/02/2020</Date_>
+    <JEVNo>132-20-09-01-0001</JEVNo>
+    <Collection>21668.7600</Collection>
+    <Deposits>21668.7600</Deposits>
+    <Rdono>2020-09-1-PAB-2496</Rdono>
+    <Particular>RCD 9/2/2020 with RDONO 2020-09-1-PAB-2496</Particular>
+    <PTVno>101-20-09-0001-2496</PTVno>
+    <Debit>21668.7600</Debit>
+    <Acountcode>10102010-505-100-101-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>LORETO DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-03T00:00:00+08:00</Jevdate>
+    <Gamount>21668.7600</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>132-20-09-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306902</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>21668.7600</Credit>
+    <Acountcode>40202200-1-30</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>LORETO DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-03T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>21668.7600</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>132-20-09-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306882</jevid>
+    <Date_>09/01/2020</Date_>
+    <JEVNo>129-20-09-01-0001</JEVNo>
+    <Collection>5.0000</Collection>
+    <Deposits>5.0000</Deposits>
+    <Rdono>2020-08-9-PAB-2497</Rdono>
+    <Particular>RCD 9/1/20 with RDONO 2020-08-9-PAB-2497</Particular>
+    <PTVno>101-20-09-0001-2497</PTVno>
+    <Debit>5.0000</Debit>
+    <Acountcode>10102010-505-100-101-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-01T00:00:00+08:00</Jevdate>
+    <Gamount>5.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>129-20-09-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306882</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5.0000</Credit>
+    <Acountcode>40202200-1-29</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-01T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>5.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>129-20-09-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306892</jevid>
+    <Date_>09/01/2020</Date_>
+    <JEVNo>129-20-09-01-0002</JEVNo>
+    <Collection>15938.6000</Collection>
+    <Deposits>15938.6000</Deposits>
+    <Rdono>2020-08-8-PAB-2497</Rdono>
+    <Particular>RCD 9/1/20 with RDONO 2020-08-8-PAB-2497</Particular>
+    <PTVno>101-20-09-0002-2497</PTVno>
+    <Debit>15938.6000</Debit>
+    <Acountcode>10102010-505-100-101-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-01T00:00:00+08:00</Jevdate>
+    <Gamount>15938.6000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>129-20-09-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306892</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>15938.6000</Credit>
+    <Acountcode>40202200-1-29</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-01T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>15938.6000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>129-20-09-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306896</jevid>
+    <Date_>09/02/2020</Date_>
+    <JEVNo>129-20-09-01-0003</JEVNo>
+    <Collection>71985.8300</Collection>
+    <Deposits>71985.8300</Deposits>
+    <Rdono>2020-09-1-PAB-2497</Rdono>
+    <Particular>RCD 9/2/2020 with RDONO 2020-09-1-PAB-2497</Particular>
+    <PTVno>101-20-09-0007-2497</PTVno>
+    <Debit>71985.8300</Debit>
+    <Acountcode>10102010-505-100-101-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-03T00:00:00+08:00</Jevdate>
+    <Gamount>71985.8300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>129-20-09-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>306896</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>71985.8300</Credit>
+    <Acountcode>40202200-1-29</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-09-03T00:00:00+08:00</Jevdate>
+    <NatureofPayment />
+    <Gamount>71985.8300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>129-20-09-01-0003</jvno>
+  </Table1>
+</NewDataSet>

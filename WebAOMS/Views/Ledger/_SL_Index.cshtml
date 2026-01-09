@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<script>
+    var arrayID = [];
+    var arrayName=[];
+    var arrayChildCode = [];
+    var parent_code;
+    var lvlid = 0;
+    var chartAccountID  = 0;
+
+</script>
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                @*<li class="breadcrumb-item"><a href="#" onclick="clicksubAccount(@ViewBag.ChartAccountChildID)">@ViewBag.AccountChildName</a><input id="@ViewBag.ChartAccountChildID"hidden type="text"/></li>*@
+                <li id="li_title" class="breadcrumb-item"></li>
+
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="input-group control-width-large pull-right" style="padding-bottom:5px!important">
+                <input id="txt_search_sub_account" type="text" class="form-control navbar-input" placeholder="Search Account code or account name">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <script>
+            function clickNewSubAccount(){
+                edit_subaccount(0,arrayID[lvlid])
+            }
+            function clicksubAccount(ChartAccountChildID) {
+                chartAccountID = ChartAccountChildID
+                refreshGrid();
+            }
+
+            function getAccountNameComplete(){
+                var str='@ViewBag.AccountChildName';
+                for (x=1;x <= lvlid;x++){
+                    str = str + " > " + arrayName[x];
+                }
+                $("#h_subaccount_id").html(arrayChildCode[lvlid])
+                $("#li_title").text(str)
+                $("#lbl_Accountname_full").html(str);
+            }
+            function btn_back(){
+                var i = lvlid - 1;
+                var x;
+                var txt;
+                if (i >= 0){
+                    lvlid = i;
+                    chartAccountID =arrayID[i]
+                    removeSearch();
+                    refreshGrid();
+                    getAccountNameComplete()
+                }
+                else{
+                    //$("#body_details_subaccount").html("")
+                    $("#modal_subaccount").modal("hide");
+                }
+            }
+            function refreshGrid() {
+                $("#txt_1stload").val(1)
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+
+            $('#txt_search_sub_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                if ($('#txt_search_sub_account').val().length > 0) {
+                        ISfn.applyFilter("AccountChildName", $('#txt_search_sub_account').val(), 'grid_COA_sub')
+                        //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                    }
+                    else {
+                        gridData.dataSource.filter({});
+                    }
+                //}
+            })
+
+            function param_grid_COA_sub() {
+                return { chartAccountID: chartAccountID};
+            }
+
+            function view_subChildAccount(ChartAccountChildID, AccountChildName,code,childcode,AccountChildParentID) {
+                lvlid = parseInt(lvlid) + 1;
+
+                arrayID[lvlid] = ChartAccountChildID
+                arrayName[lvlid] = AccountChildName
+                arrayChildCode[lvlid] = childcode
+                chartAccountID =ChartAccountChildID;
+                removeSearch();
+                refreshGrid();
+                getAccountNameComplete()
+            }
+
+            function removeSearch(){
+                $('#txt_search_sub_account').val('');
+                var gridData = $("#grid_COA_sub").data("kendoGrid");
+                gridData.dataSource.filter({});
+            }
+        </script>
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_ChartOfAccountsChild>()
+            .Name("grid_COA_sub")
+            .Columns(columns =>
+            {
+                columns.Bound(m => m.code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(m => m.AccountChildName).Width(400);
+                columns.Template(@<text></text>)
+                .Width(100)
+                .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"view_subChildAccount(#=ChartAccountChildID#, '#=AccountChildName#','#=code#','#=ChildCode#',#=AccountChildParentID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-list\"></i></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"clickOK_sub('#=ChildCode#', '#=AccountChildName#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-check\"></i></button>");
+            })
+            .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single))
+            .AutoBind(true)
+            .HtmlAttributes(new { style = "height: 400px;" })
+            .Scrollable()
+            .Sortable()
+            .Pageable(pageable => pageable
+            .Refresh(true)
+            .ButtonCount(5))
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Read(read => read.Action("COA_read", "ChartOfAccounts").Data("param_grid_COA_sub"))
+                .PageSize(200)
+            )
+            )
+        </div>
+    </div>
+</div>

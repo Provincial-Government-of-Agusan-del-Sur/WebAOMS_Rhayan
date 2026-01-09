@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "SL Buildup";
+    Layout = null;
+    ViewBag.Title_mini = "Subsidiary Ledger Buildup";
+}
+
+<div class="box">
+    <div class="box-body" style="padding-top:10px">
+        <div class="row">
+            <div class="col-md-8">
+                From
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("rgrid_trans_account"))
+                )
+                To
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("rgrid_trans_account"))
+                )
+            </div>
+            <div class="col-md-4">
+                <div class="input-group" style="padding-bottom:5px!important">
+                    <input id="txt_search_account" type="text" class="form-control navbar-input" placeholder="Search Account code or account name">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+
+            </div>
+        <script>
+            $('#txt_search_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                    if ($('#txt_search_account').val() == "") {
+                        gridData.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("AccountFullName", $('#txt_search_account').val(), 'grid_COA')
+                        gridData.dataSource.sort({ field: "AccountFullName", dir: "asc" });
+                    }
+                //}
+            })
+            function rgrid_trans_account() {
+                var gridData = $("#grid_transactions").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+            function para_transaction() {
+                var from = $('#dtp_from').data('kendoDatePicker').value();
+                var to = $('#dtp_to').data('kendoDatePicker').value();
+                return { from: from, to: to }
+            }
+        </script>
+        <div class="row">
+        @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_transaction_byDate_Result>()
+        .Name("grid_transactions")
+        .Columns(columns =>
+        {
+
+            columns.Bound(m => m.Dvno).Width(450);
+            columns.Bound(m => m.Obrno).Width(450);
+            columns.Bound(m => m.Name).Width(450);
+            columns.Bound(m => m.Particular).Width(450);
+            columns.Bound(m => m.CheckDate).Width(450);
+            columns.Bound(m => m.CheckDate).Width(450);
+            columns.Bound(m => m.Gamount).Width(450);
+
+            @*columns.Template(@<text></text>)
+            .Title("Account Code")
+            .Width(100)
+            .HtmlAttributes(new { style = "text-align:left" })
+            .HeaderHtmlAttributes(new { style = "text-align:center" })
+            .ClientTemplate("<div onclick=\"addEntries('#=ChartAccountChildID#')\"  style=\"width:100% !important;cursor:pointer;\" ><i title=\"Add for payroll generation\" style=\"font-size:15px;cursor:pointer;color:green\" class=\"fa fa-plus fa-lg\"> </i>  #=code#</div>");*@
+            })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 350px;" })
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_transaction_bydate", "JEV").Data("para_transaction"))
+            .PageSize(200)
+        )
+            )
+        </div>
+    </div>
+</div>
+
+
+

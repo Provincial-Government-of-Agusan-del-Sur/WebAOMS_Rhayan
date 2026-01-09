@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PODetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pono" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PODetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PODetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="POItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="programid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PPMPAmountResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="programid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PPMPItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPLumpsum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="programid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPLumpsumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PPMPLumpsumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPNonOffice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="accountid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPNonOfficeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PPMPNonOfficeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllPPMPItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllPPMPItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllPPMPItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Items">
+        <s:complexType />
+      </s:element>
+      <s:element name="ItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllItems">
+        <s:complexType />
+      </s:element>
+      <s:element name="AllItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllItemsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveBarcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="itemid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveBarcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveBarcodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPRStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="prid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPRStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPRStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cyear" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPRResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PRStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="prid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PRStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PRStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bytes" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdatesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="officeid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eid" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="uniquerefno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPRStatusdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPRStatusdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPRStatusdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPUtilization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cyear" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PPMPUtilizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PPMPUtilizationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PODetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:PODetails" />
+  </wsdl:message>
+  <wsdl:message name="PODetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:PODetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="POItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:POItems" />
+  </wsdl:message>
+  <wsdl:message name="POItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:POItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PPMPAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:PPMPAmount" />
+  </wsdl:message>
+  <wsdl:message name="PPMPAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:PPMPAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="PPMPItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:PPMPItems" />
+  </wsdl:message>
+  <wsdl:message name="PPMPItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:PPMPItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PPMPLumpsumSoapIn">
+    <wsdl:part name="parameters" element="tns:PPMPLumpsum" />
+  </wsdl:message>
+  <wsdl:message name="PPMPLumpsumSoapOut">
+    <wsdl:part name="parameters" element="tns:PPMPLumpsumResponse" />
+  </wsdl:message>
+  <wsdl:message name="PPMPNonOfficeSoapIn">
+    <wsdl:part name="parameters" element="tns:PPMPNonOffice" />
+  </wsdl:message>
+  <wsdl:message name="PPMPNonOfficeSoapOut">
+    <wsdl:part name="parameters" element="tns:PPMPNonOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItems" />
+  </wsdl:message>
+  <wsdl:message name="GetItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllPPMPItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:AllPPMPItems" />
+  </wsdl:message>
+  <wsdl:message name="AllPPMPItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:AllPPMPItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeySoapIn">
+    <wsdl:part name="parameters" element="tns:GetKey" />
+  </wsdl:message>
+  <wsdl:message name="GetKeySoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:Items" />
+  </wsdl:message>
+  <wsdl:message name="ItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:ItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:AllItems" />
+  </wsdl:message>
+  <wsdl:message name="AllItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:AllItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveBarcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveBarcode" />
+  </wsdl:message>
+  <wsdl:message name="SaveBarcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItem" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPRStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPRStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetPRStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPRStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPRSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPR" />
+  </wsdl:message>
+  <wsdl:message name="GetPRSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPRResponse" />
+  </wsdl:message>
+  <wsdl:message name="PRStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:PRStatus" />
+  </wsdl:message>
+  <wsdl:message name="PRStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:PRStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdates" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocument" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPRStatusdateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPRStatusdate" />
+  </wsdl:message>
+  <wsdl:message name="GetPRStatusdateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPRStatusdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="PPMPUtilizationSoapIn">
+    <wsdl:part name="parameters" element="tns:PPMPUtilization" />
+  </wsdl:message>
+  <wsdl:message name="PPMPUtilizationSoapOut">
+    <wsdl:part name="parameters" element="tns:PPMPUtilizationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="serviceSoap">
+    <wsdl:operation name="PODetails">
+      <wsdl:input message="tns:PODetailsSoapIn" />
+      <wsdl:output message="tns:PODetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="POItems">
+      <wsdl:input message="tns:POItemsSoapIn" />
+      <wsdl:output message="tns:POItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PPMPAmount">
+      <wsdl:input message="tns:PPMPAmountSoapIn" />
+      <wsdl:output message="tns:PPMPAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PPMPItems">
+      <wsdl:input message="tns:PPMPItemsSoapIn" />
+      <wsdl:output message="tns:PPMPItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PPMPLumpsum">
+      <wsdl:input message="tns:PPMPLumpsumSoapIn" />
+      <wsdl:output message="tns:PPMPLumpsumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PPMPNonOffice">
+      <wsdl:input message="tns:PPMPNonOfficeSoapIn" />
+      <wsdl:output message="tns:PPMPNonOfficeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <wsdl:input message="tns:GetTransactionsSoapIn" />
+      <wsdl:output message="tns:GetTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <wsdl:input message="tns:GetItemsSoapIn" />
+      <wsdl:output message="tns:GetItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllPPMPItems">
+      <wsdl:input message="tns:AllPPMPItemsSoapIn" />
+      <wsdl:output message="tns:AllPPMPItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <wsdl:input message="tns:GetKeySoapIn" />
+      <wsdl:output message="tns:GetKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Items">
+      <wsdl:input message="tns:ItemsSoapIn" />
+      <wsdl:output message="tns:ItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllItems">
+      <wsdl:input message="tns:AllItemsSoapIn" />
+      <wsdl:output message="tns:AllItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBarcode">
+      <wsdl:input message="tns:SaveBarcodeSoapIn" />
+      <wsdl:output message="tns:SaveBarcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <wsdl:input message="tns:GetItemSoapIn" />
+      <wsdl:output message="tns:GetItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPRStatus">
+      <wsdl:input message="tns:GetPRStatusSoapIn" />
+      <wsdl:output message="tns:GetPRStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPR">
+      <wsdl:input message="tns:GetPRSoapIn" />
+      <wsdl:output message="tns:GetPRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PRStatus">
+      <wsdl:input message="tns:PRStatusSoapIn" />
+      <wsdl:output message="tns:PRStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdates">
+      <wsdl:input message="tns:GetUpdatesSoapIn" />
+      <wsdl:output message="tns:GetUpdatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentSoapIn" />
+      <wsdl:output message="tns:SaveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPRStatusdate">
+      <wsdl:input message="tns:GetPRStatusdateSoapIn" />
+      <wsdl:output message="tns:GetPRStatusdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PPMPUtilization">
+      <wsdl:input message="tns:PPMPUtilizationSoapIn" />
+      <wsdl:output message="tns:PPMPUtilizationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="serviceSoap" type="tns:serviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PODetails">
+      <soap:operation soapAction="http://tempuri.org/PODetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POItems">
+      <soap:operation soapAction="http://tempuri.org/POItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPAmount">
+      <soap:operation soapAction="http://tempuri.org/PPMPAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPItems">
+      <soap:operation soapAction="http://tempuri.org/PPMPItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPLumpsum">
+      <soap:operation soapAction="http://tempuri.org/PPMPLumpsum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPNonOffice">
+      <soap:operation soapAction="http://tempuri.org/PPMPNonOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap:operation soapAction="http://tempuri.org/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap:operation soapAction="http://tempuri.org/GetItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllPPMPItems">
+      <soap:operation soapAction="http://tempuri.org/AllPPMPItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap:operation soapAction="http://tempuri.org/GetKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Items">
+      <soap:operation soapAction="http://tempuri.org/Items" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllItems">
+      <soap:operation soapAction="http://tempuri.org/AllItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBarcode">
+      <soap:operation soapAction="http://tempuri.org/SaveBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <soap:operation soapAction="http://tempuri.org/GetItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPRStatus">
+      <soap:operation soapAction="http://tempuri.org/GetPRStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPR">
+      <soap:operation soapAction="http://tempuri.org/GetPR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PRStatus">
+      <soap:operation soapAction="http://tempuri.org/PRStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdates">
+      <soap:operation soapAction="http://tempuri.org/GetUpdates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPRStatusdate">
+      <soap:operation soapAction="http://tempuri.org/GetPRStatusdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPUtilization">
+      <soap:operation soapAction="http://tempuri.org/PPMPUtilization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="serviceSoap12" type="tns:serviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PODetails">
+      <soap12:operation soapAction="http://tempuri.org/PODetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POItems">
+      <soap12:operation soapAction="http://tempuri.org/POItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPAmount">
+      <soap12:operation soapAction="http://tempuri.org/PPMPAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPItems">
+      <soap12:operation soapAction="http://tempuri.org/PPMPItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPLumpsum">
+      <soap12:operation soapAction="http://tempuri.org/PPMPLumpsum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPNonOffice">
+      <soap12:operation soapAction="http://tempuri.org/PPMPNonOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactions">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItems">
+      <soap12:operation soapAction="http://tempuri.org/GetItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllPPMPItems">
+      <soap12:operation soapAction="http://tempuri.org/AllPPMPItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKey">
+      <soap12:operation soapAction="http://tempuri.org/GetKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Items">
+      <soap12:operation soapAction="http://tempuri.org/Items" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllItems">
+      <soap12:operation soapAction="http://tempuri.org/AllItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBarcode">
+      <soap12:operation soapAction="http://tempuri.org/SaveBarcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItem">
+      <soap12:operation soapAction="http://tempuri.org/GetItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPRStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetPRStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPR">
+      <soap12:operation soapAction="http://tempuri.org/GetPR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PRStatus">
+      <soap12:operation soapAction="http://tempuri.org/PRStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdates">
+      <soap12:operation soapAction="http://tempuri.org/GetUpdates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap12:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPRStatusdate">
+      <soap12:operation soapAction="http://tempuri.org/GetPRStatusdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PPMPUtilization">
+      <soap12:operation soapAction="http://tempuri.org/PPMPUtilization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port name="serviceSoap" binding="tns:serviceSoap">
+      <soap:address location="https://192.168.101.56/epsws/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="serviceSoap12" binding="tns:serviceSoap12">
+      <soap12:address location="https://192.168.101.56/epsws/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

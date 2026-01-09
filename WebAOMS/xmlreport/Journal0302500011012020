@@ -1,0 +1,4429 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="_x0031_0305020" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_x0031_06" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_x0031_0305010" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="Dbt" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Crdt" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Claimantname" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="dvno" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>CASH DISBURSEMENT JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of November, 2020</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevid>342960</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0001</JEVNo>
+    <_x0031_06>39960.0000</_x0031_06>
+    <_x0031_0305010>39960.0000</_x0031_0305010>
+    <Particular>(33P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 to October 4,2020- Mabuhay Holding Area).</Particular>
+    <Dbt>39960.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(33P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 to October 4,2020- Mabuhay Holding Area).</Claimantname>
+    <Obrno>101-1011-20-10-0429</Obrno>
+    <dvno>101-20-10-0464</dvno>
+    <jvno>101-20-11-03-0001</jvno>
+    <Gamount>39960.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342961</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0002</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1011-20-10-0439</Obrno>
+    <dvno>101-20-10-0467</dvno>
+    <jvno>101-20-11-03-0002</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342962</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0003</JEVNo>
+    <_x0031_06>4500.0000</_x0031_06>
+    <_x0031_0305010>4500.0000</_x0031_0305010>
+    <Particular>(6P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 to October 4,2020- New Leyte QF ).</Particular>
+    <Dbt>4500.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 to October 4,2020- New Leyte QF ).</Claimantname>
+    <Obrno>101-1011-20-10-0426</Obrno>
+    <dvno>101-20-10-0470</dvno>
+    <jvno>101-20-11-03-0003</jvno>
+    <Gamount>4500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342963</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0004</JEVNo>
+    <_x0031_06>5100.0000</_x0031_06>
+    <_x0031_0305010>5100.0000</_x0031_0305010>
+    <Particular>(5P), payment of subsistence allownce for the month of June, July &amp; August, 2020 </Particular>
+    <Dbt>5100.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of subsistence allownce for the month of June, July &amp; August, 2020 </Claimantname>
+    <Obrno>101-7611-20-10-0515</Obrno>
+    <dvno>101-20-10-0472</dvno>
+    <jvno>101-20-11-03-0004</jvno>
+    <Gamount>5100.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342964</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0005</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>(13P)- payment of Meals of COVID 19 Task force for EOC dated Sept. 29 to Oct. 5,2020.</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(13P)- payment of Meals of COVID 19 Task force for EOC dated Sept. 29 to Oct. 5,2020.</Claimantname>
+    <Obrno>101-1011-20-10-0464</Obrno>
+    <dvno>101-20-10-0473</dvno>
+    <jvno>101-20-11-03-0005</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342965</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0006</JEVNo>
+    <_x0031_06>5280.0000</_x0031_06>
+    <_x0031_0305010>5280.0000</_x0031_0305010>
+    <Particular>(12P)- payment of Meals for EOC personnel dtd. October 6-12,2020.</Particular>
+    <Dbt>5280.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(12P)- payment of Meals for EOC personnel dtd. October 6-12,2020.</Claimantname>
+    <Obrno>101-1011-20-10-0438</Obrno>
+    <dvno>101-20-10-0474</dvno>
+    <jvno>101-20-11-03-0006</jvno>
+    <Gamount>5280.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342966</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0007</JEVNo>
+    <_x0031_06>3240.0000</_x0031_06>
+    <_x0031_0305010>3240.0000</_x0031_0305010>
+    <Particular>(6P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 -30 ,2020- De Luxer Inn QF ).</Particular>
+    <Dbt>3240.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 -30 ,2020- De Luxer Inn QF ).</Claimantname>
+    <Obrno>101-1011-20-10-0428</Obrno>
+    <dvno>101-20-10-0475</dvno>
+    <jvno>101-20-11-03-0007</jvno>
+    <Gamount>3240.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342967</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-188-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0008</JEVNo>
+    <_x0031_06>13140.0000</_x0031_06>
+    <_x0031_0305010>13140.0000</_x0031_0305010>
+    <Particular>(16P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 to October 4,2020- De Luxe Inn QF ).</Particular>
+    <Dbt>13140.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(16P )- payment of Meals for COVID 19 Task force of CCCM personnel ( Sept. 28 to October 4,2020- De Luxe Inn QF ).</Claimantname>
+    <Obrno>101-1011-20-10-0427</Obrno>
+    <dvno>101-20-10-0476</dvno>
+    <jvno>101-20-11-03-0008</jvno>
+    <Gamount>13140.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342968</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0009</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0445</Obrno>
+    <dvno>101-20-10-0573</dvno>
+    <jvno>101-20-11-03-0009</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342969</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0010</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0459</Obrno>
+    <dvno>101-20-10-0574</dvno>
+    <jvno>101-20-11-03-0010</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342971</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0011</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0456</Obrno>
+    <dvno>101-20-10-0575</dvno>
+    <jvno>101-20-11-03-0011</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342973</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0012</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0446</Obrno>
+    <dvno>101-20-10-0576</dvno>
+    <jvno>101-20-11-03-0012</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342974</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0013</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0449</Obrno>
+    <dvno>101-20-10-0579</dvno>
+    <jvno>101-20-11-03-0013</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342975</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0014</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0448</Obrno>
+    <dvno>101-20-10-0580</dvno>
+    <jvno>101-20-11-03-0014</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342976</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0015</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0454</Obrno>
+    <dvno>101-20-10-0585</dvno>
+    <jvno>101-20-11-03-0015</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342977</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0016</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0444</Obrno>
+    <dvno>101-20-10-0586</dvno>
+    <jvno>101-20-11-03-0016</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342978</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0017</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0451</Obrno>
+    <dvno>101-20-10-0613</dvno>
+    <jvno>101-20-11-03-0017</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342979</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-192-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0018</JEVNo>
+    <_x0031_06>12000.0000</_x0031_06>
+    <_x0031_0305010>12000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium ( October 2020 ).</Particular>
+    <Dbt>12000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium ( October 2020 ).</Claimantname>
+    <Obrno>101-1011-20-10-0453</Obrno>
+    <dvno>101-20-10-0643</dvno>
+    <jvno>101-20-11-03-0018</jvno>
+    <Gamount>12000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342980</jevid>
+    <Date_>10/19/2020</Date_>
+    <Rdono>RFR-RD-194-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0019</JEVNo>
+    <_x0031_06>120740.0000</_x0031_06>
+    <_x0031_0305010>120740.0000</_x0031_0305010>
+    <Particular>(20P) payment of SPES 60% for the month pf September 7- October 2, 2020.</Particular>
+    <Dbt>120740.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(20P) payment of SPES 60% for the month pf September 7- October 2, 2020.</Claimantname>
+    <Obrno>101-1031-20-10-0626</Obrno>
+    <dvno>101-20-10-0640</dvno>
+    <jvno>101-20-11-03-0019</jvno>
+    <Gamount>120740.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342981</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>RFR-RD-199-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0020</JEVNo>
+    <_x0031_06>500.0000</_x0031_06>
+    <_x0031_0305010>500.0000</_x0031_0305010>
+    <Particular>payment of Honorarium during Catholic Mass dtd. September 9,2020.</Particular>
+    <Dbt>500.0000</Dbt>
+    <Accountcode>50202010-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium during Catholic Mass dtd. September 9,2020.</Claimantname>
+    <Obrno>101-9997-20-10-0719</Obrno>
+    <dvno>101-20-10-0741</dvno>
+    <jvno>101-20-11-03-0020</jvno>
+    <Gamount>500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342983</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>RFR-RD-199-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0021</JEVNo>
+    <_x0031_06>10800.0000</_x0031_06>
+    <_x0031_0305010>10800.0000</_x0031_0305010>
+    <Particular>(2P), Honorarium for ASESDC Committee and CCSO Members for rendered services for the month July to September, 2020.</Particular>
+    <Dbt>10800.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P), Honorarium for ASESDC Committee and CCSO Members for rendered services for the month July to September, 2020.</Claimantname>
+    <Obrno>101-8971-20-10-0755</Obrno>
+    <dvno>101-20-10-0745</dvno>
+    <jvno>101-20-11-03-0021</jvno>
+    <Gamount>10800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342984</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>RFR-RD-199-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0022</JEVNo>
+    <_x0031_06>28000.0000</_x0031_06>
+    <_x0031_0305010>28000.0000</_x0031_0305010>
+    <Particular>(3P) payment of Job Order for the period August 1-31, 2020 (Support to Small-scale Falcata Tree Farm Development Project)</Particular>
+    <Dbt>28000.0000</Dbt>
+    <Accountcode>50299990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(3P) payment of Job Order for the period August 1-31, 2020 (Support to Small-scale Falcata Tree Farm Development Project)</Claimantname>
+    <Obrno>101-8971-20-10-0769</Obrno>
+    <dvno>101-20-10-0768</dvno>
+    <jvno>101-20-11-03-0022</jvno>
+    <Gamount>28000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342985</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>RFR-RD-199-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0023</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>(5P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-8721-20-10-0621</Obrno>
+    <dvno>101-20-10-0783</dvno>
+    <jvno>101-20-11-03-0023</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342986</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>RFR-RD-199-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0024</JEVNo>
+    <_x0031_06>10680.0000</_x0031_06>
+    <_x0031_0305010>10680.0000</_x0031_0305010>
+    <Particular>payment of meal stipend IMT Officers and Members (Oct.17-23,2020)</Particular>
+    <Dbt>10680.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of meal stipend IMT Officers and Members (Oct.17-23,2020)</Claimantname>
+    <Obrno>101-1011-20-10-0832</Obrno>
+    <dvno>101-20-10-0818</dvno>
+    <jvno>101-20-11-03-0024</jvno>
+    <Gamount>10680.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342989</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>RFR-RD-199-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0025</JEVNo>
+    <_x0031_06>9000.0000</_x0031_06>
+    <_x0031_0305010>9000.0000</_x0031_0305010>
+    <Particular>(8P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>9000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(8P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-8731-20-10-0782</Obrno>
+    <dvno>101-20-10-0826</dvno>
+    <jvno>101-20-11-03-0025</jvno>
+    <Gamount>9000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342991</jevid>
+    <Date_>10/27/2020</Date_>
+    <Rdono>RFR-RD-201-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0026</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance for the month of October 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance for the month of October 2020.</Claimantname>
+    <Obrno>101-8999-20-10-1281</Obrno>
+    <dvno>101-20-10-1241</dvno>
+    <jvno>101-20-11-03-0026</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342994</jevid>
+    <Date_>10/27/2020</Date_>
+    <Rdono>RFR-RD-202-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0027</JEVNo>
+    <_x0031_0305020>7500.0000</_x0031_0305020>
+    <_x0031_06>7500.0000</_x0031_06>
+    <Particular>PAYMENT of Transportation Allowance for the month of September, 2020.</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>PAYMENT of Transportation Allowance for the month of September, 2020.</Claimantname>
+    <Obrno>101-8751-20-10-0730</Obrno>
+    <dvno>101-20-10-0703</dvno>
+    <jvno>101-20-11-03-0027</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342996</jevid>
+    <Date_>10/27/2020</Date_>
+    <Rdono>RFR-RD-202-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0028</JEVNo>
+    <_x0031_06>76000.0000</_x0031_06>
+    <_x0031_0305010>76000.0000</_x0031_0305010>
+    <Particular>(19P) payment of SPES 60% Counterpart for the period of September 7-18, 2020</Particular>
+    <Dbt>76000.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(19P) payment of SPES 60% Counterpart for the period of September 7-18, 2020</Claimantname>
+    <Obrno>101-1031-20-10-1099</Obrno>
+    <dvno>101-20-10-1043</dvno>
+    <jvno>101-20-11-03-0028</jvno>
+    <Gamount>76000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342998</jevid>
+    <Date_>10/27/2020</Date_>
+    <Rdono>RFR-RD-202-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0029</JEVNo>
+    <_x0031_06>90555.0000</_x0031_06>
+    <_x0031_0305010>90555.0000</_x0031_0305010>
+    <Particular>(15P) payment of SPES 60% Counterpart for the month of September 7-October 2, 2020</Particular>
+    <Dbt>90555.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(15P) payment of SPES 60% Counterpart for the month of September 7-October 2, 2020</Claimantname>
+    <Obrno>101-1031-20-10-1098</Obrno>
+    <dvno>101-20-10-1044</dvno>
+    <jvno>101-20-11-03-0029</jvno>
+    <Gamount>90555.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342999</jevid>
+    <Date_>10/28/2020</Date_>
+    <Rdono>RFR-RD-203-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0030</JEVNo>
+    <_x0031_06>94600.0000</_x0031_06>
+    <_x0031_0305010>94600.0000</_x0031_0305010>
+    <Particular>(10P) payment of Job Order fort he period August 1-31, 2020 (cleaning/brushing)</Particular>
+    <Dbt>94600.0000</Dbt>
+    <Accountcode>50299990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P) payment of Job Order fort he period August 1-31, 2020 (cleaning/brushing)</Claimantname>
+    <Obrno>101-8971-20-10-0882</Obrno>
+    <dvno>101-20-10-0877</dvno>
+    <jvno>101-20-11-03-0030</jvno>
+    <Gamount>94600.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>343000</jevid>
+    <Date_>10/28/2020</Date_>
+    <Rdono>RFR-RD-203-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0031</JEVNo>
+    <_x0031_06>28000.0000</_x0031_06>
+    <_x0031_0305010>28000.0000</_x0031_0305010>
+    <Particular>(4P) payment of Job Order for the period August 1-31, 2020.</Particular>
+    <Dbt>28000.0000</Dbt>
+    <Accountcode>50299990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P) payment of Job Order for the period August 1-31, 2020.</Claimantname>
+    <Obrno>101-8971-20-10-0881</Obrno>
+    <dvno>101-20-10-0878</dvno>
+    <jvno>101-20-11-03-0031</jvno>
+    <Gamount>28000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>343001</jevid>
+    <Date_>10/28/2020</Date_>
+    <Rdono>RFR-RD-203-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0032</JEVNo>
+    <_x0031_06>36752.0000</_x0031_06>
+    <_x0031_0305010>36752.0000</_x0031_0305010>
+    <Particular>(6P) payment of Job Order for the period August 1-31, 2020 (potting/bagging)</Particular>
+    <Dbt>36752.0000</Dbt>
+    <Accountcode>50299990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P) payment of Job Order for the period August 1-31, 2020 (potting/bagging)</Claimantname>
+    <Obrno>101-8971-20-10-0883</Obrno>
+    <dvno>101-20-10-0881</dvno>
+    <jvno>101-20-11-03-0032</jvno>
+    <Gamount>36752.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>343002</jevid>
+    <Date_>10/28/2020</Date_>
+    <Rdono>RFR-RD-204-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0033</JEVNo>
+    <_x0031_06>50500.0000</_x0031_06>
+    <_x0031_0305010>50500.0000</_x0031_0305010>
+    <Particular>(6P) payment of Honorarium of Enumerators for the period  August 19-27, 2020</Particular>
+    <Dbt>50500.0000</Dbt>
+    <Accountcode>50299990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P) payment of Honorarium of Enumerators for the period  August 19-27, 2020</Claimantname>
+    <Obrno>101-8971-20-10-0880</Obrno>
+    <dvno>101-20-10-1144</dvno>
+    <jvno>101-20-11-03-0033</jvno>
+    <Gamount>50500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>343003</jevid>
+    <Date_>11/05/2020</Date_>
+    <Rdono>RFR-RD-205-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0034</JEVNo>
+    <_x0031_06>80500.0000</_x0031_06>
+    <_x0031_0305010>80500.0000</_x0031_0305010>
+    <Particular>(11P)- payment of Hazard Pay during ECQ dtd. April 6-30,2020.</Particular>
+    <Dbt>80500.0000</Dbt>
+    <Accountcode>50212990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(11P)- payment of Hazard Pay during ECQ dtd. April 6-30,2020.</Claimantname>
+    <Obrno>101-1011-20-10-1497</Obrno>
+    <dvno>101-20-10-1379</dvno>
+    <jvno>101-20-11-03-0034</jvno>
+    <Gamount>80500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>343008</jevid>
+    <Date_>11/05/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0035</JEVNo>
+    <_x0031_06>34740.0000</_x0031_06>
+    <_x0031_0305010>34740.0000</_x0031_0305010>
+    <Particular>(28P)- payment of Meals for COVID 19 Task Force dtd. October 12-18,2020- Mabuhay HA.</Particular>
+    <Dbt>34740.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-16T00:00:00+08:00</Jevdate>
+    <Claimantname>(28P)- payment of Meals for COVID 19 Task Force dtd. October 12-18,2020- Mabuhay HA.</Claimantname>
+    <Obrno>101-1011-20-10-1292</Obrno>
+    <dvno>101-20-10-1321</dvno>
+    <jvno>101-20-11-03-0035</jvno>
+    <Gamount>34740.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363595</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0036</JEVNo>
+    <_x0031_06>8000.0000</_x0031_06>
+    <_x0031_0305010>8000.0000</_x0031_0305010>
+    <Particular>(7P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>8000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(7P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1061-20-10-0308</Obrno>
+    <dvno>101-20-10-0367</dvno>
+    <jvno>101-20-11-03-0036</jvno>
+    <Gamount>8000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363597</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0037</JEVNo>
+    <_x0031_06>4000.0000</_x0031_06>
+    <_x0031_0305010>4000.0000</_x0031_0305010>
+    <Particular>(3P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>4000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(3P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1131-20-10-0371</Obrno>
+    <dvno>101-20-10-0401</dvno>
+    <jvno>101-20-11-03-0037</jvno>
+    <Gamount>4000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363599</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0038</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>(2P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1031-20-10-0370</Obrno>
+    <dvno>101-20-10-0402</dvno>
+    <jvno>101-20-11-03-0038</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363600</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0039</JEVNo>
+    <_x0031_06>2500.0000</_x0031_06>
+    <_x0031_0305010>2500.0000</_x0031_0305010>
+    <Particular>payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>2500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1031-20-10-0373</Obrno>
+    <dvno>101-20-10-0403</dvno>
+    <jvno>101-20-11-03-0039</jvno>
+    <Gamount>2500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363601</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0040</JEVNo>
+    <_x0031_06>11000.0000</_x0031_06>
+    <_x0031_0305010>11000.0000</_x0031_0305010>
+    <Particular>(9P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>11000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(9P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1041-20-10-0372</Obrno>
+    <dvno>101-20-10-0404</dvno>
+    <jvno>101-20-11-03-0040</jvno>
+    <Gamount>11000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363603</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0041</JEVNo>
+    <_x0031_06>6500.0000</_x0031_06>
+    <_x0031_0305010>6500.0000</_x0031_0305010>
+    <Particular>(5P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>6500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1123-20-10-0369</Obrno>
+    <dvno>101-20-10-0405</dvno>
+    <jvno>101-20-11-03-0041</jvno>
+    <Gamount>6500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363604</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0042</JEVNo>
+    <_x0031_06>7000.0000</_x0031_06>
+    <_x0031_0305010>7000.0000</_x0031_0305010>
+    <Particular>(6P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>7000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-1032-20-10-0362</Obrno>
+    <dvno>101-20-10-0406</dvno>
+    <jvno>101-20-11-03-0042</jvno>
+    <Gamount>7000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363605</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0043</JEVNo>
+    <_x0031_06>6500.0000</_x0031_06>
+    <_x0031_0305010>6500.0000</_x0031_0305010>
+    <Particular>(6P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>6500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-7611-20-10-0361</Obrno>
+    <dvno>101-20-10-0407</dvno>
+    <jvno>101-20-11-03-0043</jvno>
+    <Gamount>6500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363607</jevid>
+    <Date_>10/09/2020</Date_>
+    <Rdono>RFR-RD-187-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0044</JEVNo>
+    <_x0031_06>5000.0000</_x0031_06>
+    <_x0031_0305010>5000.0000</_x0031_0305010>
+    <Particular>(4P), payment of office supplies (cellcard) for the month of October 2020.</Particular>
+    <Dbt>5000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P), payment of office supplies (cellcard) for the month of October 2020.</Claimantname>
+    <Obrno>101-8852-20-10-0421</Obrno>
+    <dvno>101-20-10-0423</dvno>
+    <jvno>101-20-11-03-0044</jvno>
+    <Gamount>5000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363610</jevid>
+    <Date_>11/06/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0045</JEVNo>
+    <_x0031_06>41504.1000</_x0031_06>
+    <_x0031_0305010>41504.1000</_x0031_0305010>
+    <Particular>(10P), payment of SPES 75% for the period of October 16-31, 2020 </Particular>
+    <Dbt>41504.1000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P), payment of SPES 75% for the period of October 16-31, 2020 </Claimantname>
+    <Obrno>101-1031-20-11-0112</Obrno>
+    <dvno>101-20-11-0152</dvno>
+    <jvno>101-20-11-03-0045</jvno>
+    <Gamount>41504.1000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363611</jevid>
+    <Date_>11/06/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0046</JEVNo>
+    <_x0031_06>20752.0500</_x0031_06>
+    <_x0031_0305010>20752.0500</_x0031_0305010>
+    <Particular>(5P), payment of SPES 75% for the period of September 7 to October 2, 2020 </Particular>
+    <Dbt>20752.0500</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of SPES 75% for the period of September 7 to October 2, 2020 </Claimantname>
+    <Obrno>101-1031-20-11-0113</Obrno>
+    <dvno>101-20-11-0153</dvno>
+    <jvno>101-20-11-03-0046</jvno>
+    <Gamount>20752.0500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363614</jevid>
+    <Date_>11/06/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0047</JEVNo>
+    <_x0031_06>20000.0000</_x0031_06>
+    <_x0031_0305010>20000.0000</_x0031_0305010>
+    <Particular>(5P), payment of SPES 100% for the period of September 17-30, 2020 </Particular>
+    <Dbt>20000.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of SPES 100% for the period of September 17-30, 2020 </Claimantname>
+    <Obrno>101-1031-20-11-0111</Obrno>
+    <dvno>101-20-11-0158</dvno>
+    <jvno>101-20-11-03-0047</jvno>
+    <Gamount>20000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373603</jevid>
+    <Date_>11/05/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0048</JEVNo>
+    <_x0031_0305020>101000.0000</_x0031_0305020>
+    <_x0031_06>101000.0000</_x0031_06>
+    <Particular>(12P )- payment of Hazard Pay during ECQ dated April 6-30,2020.</Particular>
+    <Dbt>101000.0000</Dbt>
+    <Accountcode>50102110</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(12P )- payment of Hazard Pay during ECQ dated April 6-30,2020.</Claimantname>
+    <Obrno>101-9931-20-10-1496</Obrno>
+    <dvno>101-20-10-1378</dvno>
+    <jvno>101-20-11-03-0048</jvno>
+    <Gamount>101000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373605</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0049</JEVNo>
+    <_x0031_06>6480.0000</_x0031_06>
+    <_x0031_0305010>6480.0000</_x0031_0305010>
+    <Particular>(11P) payment of meals stipend for COVID-19 Task Force at Deluxe Inn (Oct. 26-31, 2020)</Particular>
+    <Dbt>6480.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(11P) payment of meals stipend for COVID-19 Task Force at Deluxe Inn (Oct. 26-31, 2020)</Claimantname>
+    <Obrno>101-1011-20-11-0088</Obrno>
+    <dvno>101-20-11-0133</dvno>
+    <jvno>101-20-11-03-0049</jvno>
+    <Gamount>6480.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373606</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0050</JEVNo>
+    <_x0031_06>10980.0000</_x0031_06>
+    <_x0031_0305010>10980.0000</_x0031_0305010>
+    <Particular>(11P) payment of Meals for COVID 19 task Force for Response Cluster (October 26-31, 2020 - De Luxe Inn Q.F)</Particular>
+    <Dbt>10980.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(11P) payment of Meals for COVID 19 task Force for Response Cluster (October 26-31, 2020 - De Luxe Inn Q.F)</Claimantname>
+    <Obrno>101-1011-20-11-0123</Obrno>
+    <dvno>101-20-11-0160</dvno>
+    <jvno>101-20-11-03-0050</jvno>
+    <Gamount>10980.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373607</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0051</JEVNo>
+    <_x0031_06>5880.0000</_x0031_06>
+    <_x0031_0305010>5880.0000</_x0031_0305010>
+    <Particular>(14P) payment of Meals for COVID 19 PGAS Task Force dtd November 2-8, 2020</Particular>
+    <Dbt>5880.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(14P) payment of Meals for COVID 19 PGAS Task Force dtd November 2-8, 2020</Claimantname>
+    <Obrno>101-1011-20-11-0121</Obrno>
+    <dvno>101-20-11-0161</dvno>
+    <jvno>101-20-11-03-0051</jvno>
+    <Gamount>5880.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373608</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0052</JEVNo>
+    <_x0031_06>7560.0000</_x0031_06>
+    <_x0031_0305010>7560.0000</_x0031_0305010>
+    <Particular>(7P) payment of Meals for COVID 19 task Force for Response Cluster (October 26-31, 2020 - 401 Brigade)</Particular>
+    <Dbt>7560.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(7P) payment of Meals for COVID 19 task Force for Response Cluster (October 26-31, 2020 - 401 Brigade)</Claimantname>
+    <Obrno>101-1011-20-11-0122</Obrno>
+    <dvno>101-20-11-0162</dvno>
+    <jvno>101-20-11-03-0052</jvno>
+    <Gamount>7560.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373609</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0053</JEVNo>
+    <_x0031_06>19876.6800</_x0031_06>
+    <_x0031_0305010>19876.6800</_x0031_0305010>
+    <Particular>(6P), payment of Job Order services (extra work) for the month of October, 2020 </Particular>
+    <Dbt>19876.6800</Dbt>
+    <Accountcode>50212990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P), payment of Job Order services (extra work) for the month of October, 2020 </Claimantname>
+    <Obrno>101-1121-20-11-0148</Obrno>
+    <dvno>101-20-11-0188</dvno>
+    <jvno>101-20-11-03-0053</jvno>
+    <Gamount>19876.6800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373610</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0054</JEVNo>
+    <_x0031_06>22680.0000</_x0031_06>
+    <_x0031_0305010>22680.0000</_x0031_0305010>
+    <Particular>(24P) payment of meals stipend for COVID19 Task Force at Langkilaan Holding Area (Oct. 19-25, 2020)</Particular>
+    <Dbt>22680.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(24P) payment of meals stipend for COVID19 Task Force at Langkilaan Holding Area (Oct. 19-25, 2020)</Claimantname>
+    <Obrno>101-1011-20-11-0167</Obrno>
+    <dvno>101-20-11-0229</dvno>
+    <jvno>101-20-11-03-0054</jvno>
+    <Gamount>22680.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373611</jevid>
+    <Date_>11/09/2020</Date_>
+    <Rdono>RFR-RD-207-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0055</JEVNo>
+    <_x0031_06>8640.0000</_x0031_06>
+    <_x0031_0305010>8640.0000</_x0031_0305010>
+    <Particular>(8P) payment of Meals for COVID 19 task Force for Response Cluster (October 26-31, 2020 -Nendotel Q.F)</Particular>
+    <Dbt>8640.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(8P) payment of Meals for COVID 19 task Force for Response Cluster (October 26-31, 2020 -Nendotel Q.F)</Claimantname>
+    <Obrno>101-1011-20-11-0130</Obrno>
+    <dvno>101-20-11-0230</dvno>
+    <jvno>101-20-11-03-0055</jvno>
+    <Gamount>8640.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373613</jevid>
+    <Date_>11/10/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0056</JEVNo>
+    <_x0031_06>36000.0000</_x0031_06>
+    <_x0031_0305010>36000.0000</_x0031_0305010>
+    <Particular> (18P) payment of Communication allowance  (November 2020)</Particular>
+    <Dbt>36000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> (18P) payment of Communication allowance  (November 2020)</Claimantname>
+    <Obrno>101-9997-20-11-0382</Obrno>
+    <dvno>101-20-11-0432</dvno>
+    <jvno>101-20-11-03-0056</jvno>
+    <Gamount>36000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373615</jevid>
+    <Date_>11/10/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0057</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>(2P), payment of office supplies (cellcard) for the month of November, 2020 </Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P), payment of office supplies (cellcard) for the month of November, 2020 </Claimantname>
+    <Obrno>101-9997-20-11-0372</Obrno>
+    <dvno>101-20-11-0431</dvno>
+    <jvno>101-20-11-03-0057</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373617</jevid>
+    <Date_>11/10/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0058</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>(2P), payment of office supplies (cellcard) for the month of November, 2020 
+</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P), payment of office supplies (cellcard) for the month of November, 2020 
+</Claimantname>
+    <Obrno>101-1031-20-11-0371</Obrno>
+    <dvno>101-20-11-0430</dvno>
+    <jvno>101-20-11-03-0058</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373618</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0059</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1121-20-11-0448</Obrno>
+    <dvno>101-20-11-0466</dvno>
+    <jvno>101-20-11-03-0059</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373619</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0060</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of the month of November, 2020.</Claimantname>
+    <Obrno>101-7611-20-11-0449</Obrno>
+    <dvno>101-20-11-0474</dvno>
+    <jvno>101-20-11-03-0060</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373622</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0061</JEVNo>
+    <_x0031_0305020>10000.0000</_x0031_0305020>
+    <_x0031_06>10000.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>10000.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1016-20-11-0500</Obrno>
+    <dvno>101-20-11-0501</dvno>
+    <jvno>101-20-11-03-0061</jvno>
+    <Gamount>10000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373624</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0062</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1022-20-11-0498</Obrno>
+    <dvno>101-20-11-0502</dvno>
+    <jvno>101-20-11-03-0062</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373625</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0063</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of RA for the month November 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RA for the month November 2020</Claimantname>
+    <Obrno>101-1081-20-11-0521</Obrno>
+    <dvno>101-20-11-0522</dvno>
+    <jvno>101-20-11-03-0063</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373626</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0064</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payment of Representation &amp; Transportation Allowance (RATA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation &amp; Transportation Allowance (RATA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1123-20-11-0503</Obrno>
+    <dvno>101-20-11-0528</dvno>
+    <jvno>101-20-11-03-0064</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373626</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation &amp; Transportation Allowance (RATA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1123-20-11-0503</Obrno>
+    <dvno>101-20-11-0528</dvno>
+    <jvno>101-20-11-03-0064</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373627</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0065</JEVNo>
+    <_x0031_0305020>4250.0000</_x0031_0305020>
+    <_x0031_06>4250.0000</_x0031_06>
+    <Particular>payment of transportation allowance (TA) for the period of October 1,2,6,7,9,14,27,28 and 29, 2020.</Particular>
+    <Dbt>4250.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of transportation allowance (TA) for the period of October 1,2,6,7,9,14,27,28 and 29, 2020.</Claimantname>
+    <Obrno>101-1071-20-11-0434</Obrno>
+    <dvno>101-20-11-0555</dvno>
+    <jvno>101-20-11-03-0065</jvno>
+    <Gamount>4250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373628</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-209-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0066</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1071-20-11-0435</Obrno>
+    <dvno>101-20-11-0556</dvno>
+    <jvno>101-20-11-03-0066</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373631</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0067</JEVNo>
+    <_x0031_06>8500.0000</_x0031_06>
+    <_x0031_0305010>8500.0000</_x0031_0305010>
+    <Particular>payment of Representation Expenses (RE) for the month of October, 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50299030-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Expenses (RE) for the month of October, 2020</Claimantname>
+    <Obrno>101-1041-20-11-0394</Obrno>
+    <dvno>101-20-11-0387</dvno>
+    <jvno>101-20-11-03-0067</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373635</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0068</JEVNo>
+    <_x0031_0305020>106250.0000</_x0031_0305020>
+    <_x0031_06>106250.0000</_x0031_06>
+    <Particular>(12P) payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(12P) payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1021-20-11-0499</Obrno>
+    <dvno>101-20-11-0503</dvno>
+    <jvno>101-20-11-03-0068</jvno>
+    <Gamount>106250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373635</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>97750.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(12P) payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1021-20-11-0499</Obrno>
+    <dvno>101-20-11-0503</dvno>
+    <jvno>101-20-11-03-0068</jvno>
+    <Gamount>106250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373638</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0069</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payment of Representation &amp; Transportation Allowance (RATA) for the month November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation &amp; Transportation Allowance (RATA) for the month November, 2020.</Claimantname>
+    <Obrno>101-1012-20-11-0504</Obrno>
+    <dvno>101-20-11-0540</dvno>
+    <jvno>101-20-11-03-0069</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373638</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation &amp; Transportation Allowance (RATA) for the month November, 2020.</Claimantname>
+    <Obrno>101-1012-20-11-0504</Obrno>
+    <dvno>101-20-11-0540</dvno>
+    <jvno>101-20-11-03-0069</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373639</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0070</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular> payment of RATA for the month of November 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-1031-20-11-0525</Obrno>
+    <dvno>101-20-11-0549</dvno>
+    <jvno>101-20-11-03-0070</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373639</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-1031-20-11-0525</Obrno>
+    <dvno>101-20-11-0549</dvno>
+    <jvno>101-20-11-03-0070</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373641</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0071</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-8852-20-11-0511</Obrno>
+    <dvno>101-20-11-0558</dvno>
+    <jvno>101-20-11-03-0071</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373643</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0072</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payment of RATA for the month of November 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-9993-20-11-0527</Obrno>
+    <dvno>101-20-11-0559</dvno>
+    <jvno>101-20-11-03-0072</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373643</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-9993-20-11-0527</Obrno>
+    <dvno>101-20-11-0559</dvno>
+    <jvno>101-20-11-03-0072</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373645</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0073</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payment of RATA for the month of November 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-1101-20-11-0509</Obrno>
+    <dvno>101-20-11-0562</dvno>
+    <jvno>101-20-11-03-0073</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373645</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-1101-20-11-0509</Obrno>
+    <dvno>101-20-11-0562</dvno>
+    <jvno>101-20-11-03-0073</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373647</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0074</JEVNo>
+    <_x0031_0305020>15000.0000</_x0031_0305020>
+    <_x0031_06>15000.0000</_x0031_06>
+    <Particular>payment of RATA for the month of November 2020</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-1101-20-11-0512</Obrno>
+    <dvno>101-20-11-0563</dvno>
+    <jvno>101-20-11-03-0074</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373647</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of November 2020</Claimantname>
+    <Obrno>101-1101-20-11-0512</Obrno>
+    <dvno>101-20-11-0563</dvno>
+    <jvno>101-20-11-03-0074</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373648</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0075</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of RA for the month of November 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RA for the month of November 2020</Claimantname>
+    <Obrno>101-1011-20-11-0526</Obrno>
+    <dvno>101-20-11-0564</dvno>
+    <jvno>101-20-11-03-0075</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373649</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0076</JEVNo>
+    <_x0031_0305020>7500.0000</_x0031_0305020>
+    <_x0031_06>7500.0000</_x0031_06>
+    <Particular>payment of Transportation Allowance (TA) for the month of October, 2020.</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Transportation Allowance (TA) for the month of October, 2020.</Claimantname>
+    <Obrno>101-8751-20-11-0579</Obrno>
+    <dvno>101-20-11-0628</dvno>
+    <jvno>101-20-11-03-0076</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373650</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-211-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0077</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-8751-20-11-0580</Obrno>
+    <dvno>101-20-11-0629</dvno>
+    <jvno>101-20-11-03-0077</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373651</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-212-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0078</JEVNo>
+    <_x0031_06>5880.0000</_x0031_06>
+    <_x0031_0305010>5880.0000</_x0031_0305010>
+    <Particular>(14P )- payment of Meals for COVID 19 Task Force of Emergency Operation Center dtd. Nov. 23-29,2020.</Particular>
+    <Dbt>5880.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(14P )- payment of Meals for COVID 19 Task Force of Emergency Operation Center dtd. Nov. 23-29,2020.</Claimantname>
+    <Obrno>101-1011-20-11-0470</Obrno>
+    <dvno>101-20-11-0525</dvno>
+    <jvno>101-20-11-03-0078</jvno>
+    <Gamount>5880.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373652</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-212-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0079</JEVNo>
+    <_x0031_06>2500.0000</_x0031_06>
+    <_x0031_0305010>2500.0000</_x0031_0305010>
+    <Particular>(4P)-payment of cellcard allowance (Oct.2020)</Particular>
+    <Dbt>2500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P)-payment of cellcard allowance (Oct.2020)</Claimantname>
+    <Obrno>101-9997-20-11-0480</Obrno>
+    <dvno>101-20-11-0527</dvno>
+    <jvno>101-20-11-03-0079</jvno>
+    <Gamount>2500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373653</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-212-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0080</JEVNo>
+    <_x0031_06>13320.0000</_x0031_06>
+    <_x0031_0305010>13320.0000</_x0031_0305010>
+    <Particular>(10P )- payment of meals for COVID 19 PGAS Task Force (November 1-8,2020- De Luxe Inn QF ).</Particular>
+    <Dbt>13320.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P )- payment of meals for COVID 19 PGAS Task Force (November 1-8,2020- De Luxe Inn QF ).</Claimantname>
+    <Obrno>101-1011-20-11-0535</Obrno>
+    <dvno>101-20-11-0553</dvno>
+    <jvno>101-20-11-03-0080</jvno>
+    <Gamount>13320.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373654</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>RFR-RD-212-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0081</JEVNo>
+    <_x0031_06>5000.0000</_x0031_06>
+    <_x0031_0305010>5000.0000</_x0031_0305010>
+    <Particular>payment of Office Supplies (Cellcard) for the month of November, 2020.</Particular>
+    <Dbt>5000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Office Supplies (Cellcard) for the month of November, 2020.</Claimantname>
+    <Obrno>101-8852-20-11-0497</Obrno>
+    <dvno>101-20-11-0557</dvno>
+    <jvno>101-20-11-03-0081</jvno>
+    <Gamount>5000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373662</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0082</JEVNo>
+    <_x0031_06>117600.0000</_x0031_06>
+    <_x0031_0305010>117600.0000</_x0031_0305010>
+    <Particular>( 42P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Loreto, ADS ).</Particular>
+    <Dbt>117600.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 42P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Loreto, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1275</Obrno>
+    <dvno>101-20-10-1261</dvno>
+    <jvno>101-20-11-03-0082</jvno>
+    <Gamount>117600.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373669</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0083</JEVNo>
+    <_x0031_06>154000.0000</_x0031_06>
+    <_x0031_0305010>154000.0000</_x0031_0305010>
+    <Particular>( 55P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. La Paz, ADS ).</Particular>
+    <Dbt>154000.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 55P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. La Paz, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1274</Obrno>
+    <dvno>101-20-10-1262</dvno>
+    <jvno>101-20-11-03-0083</jvno>
+    <Gamount>154000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373670</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0084</JEVNo>
+    <_x0031_06>78400.0000</_x0031_06>
+    <_x0031_0305010>78400.0000</_x0031_0305010>
+    <Particular>( 28P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Josefa, ADS ).</Particular>
+    <Dbt>78400.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 28P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Josefa, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1273</Obrno>
+    <dvno>101-20-10-1263</dvno>
+    <jvno>101-20-11-03-0084</jvno>
+    <Gamount>78400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373671</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0085</JEVNo>
+    <_x0031_06>226800.0000</_x0031_06>
+    <_x0031_0305010>226800.0000</_x0031_0305010>
+    <Particular>( 28P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Bayugan, ADS ).</Particular>
+    <Dbt>226800.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 28P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Bayugan, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1276</Obrno>
+    <dvno>101-20-10-1264</dvno>
+    <jvno>101-20-11-03-0085</jvno>
+    <Gamount>226800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373672</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0086</JEVNo>
+    <_x0031_06>168000.0000</_x0031_06>
+    <_x0031_0305010>168000.0000</_x0031_0305010>
+    <Particular>( 60P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Prosperidad, ADS ).</Particular>
+    <Dbt>168000.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 60P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Prosperidad, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1277</Obrno>
+    <dvno>101-20-10-1266</dvno>
+    <jvno>101-20-11-03-0086</jvno>
+    <Gamount>168000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373673</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0087</JEVNo>
+    <_x0031_06>112000.0000</_x0031_06>
+    <_x0031_0305010>112000.0000</_x0031_0305010>
+    <Particular>( 40P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Veruela, ADS ).</Particular>
+    <Dbt>112000.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 40P )- payment of Day Care Workers Honorarium ( June to Sept. 2020- Sta. Veruela, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1272</Obrno>
+    <dvno>101-20-10-1267</dvno>
+    <jvno>101-20-11-03-0087</jvno>
+    <Gamount>112000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373674</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0088</JEVNo>
+    <_x0031_06>110600.0000</_x0031_06>
+    <_x0031_0305010>110600.0000</_x0031_0305010>
+    <Particular>(40P)- payment of Day Care workers Honorarium ( June to Sept. 2020- Talacogon ).</Particular>
+    <Dbt>110600.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(40P)- payment of Day Care workers Honorarium ( June to Sept. 2020- Talacogon ).</Claimantname>
+    <Obrno>101-9997-20-10-1494</Obrno>
+    <dvno>101-20-10-1399</dvno>
+    <jvno>101-20-11-03-0088</jvno>
+    <Gamount>110600.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373675</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0089</JEVNo>
+    <_x0031_06>2800.0000</_x0031_06>
+    <_x0031_0305010>2800.0000</_x0031_0305010>
+    <Particular>JESSEL V. BESOL ,payment of Day Care workers Honorarium ( June to Sept. 2020 - Bunawan, ADS).</Particular>
+    <Dbt>2800.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>JESSEL V. BESOL ,payment of Day Care workers Honorarium ( June to Sept. 2020 - Bunawan, ADS).</Claimantname>
+    <Obrno>101-9997-20-10-1484</Obrno>
+    <dvno>101-20-10-1400</dvno>
+    <jvno>101-20-11-03-0089</jvno>
+    <Gamount>2800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373676</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0090</JEVNo>
+    <_x0031_06>111300.0000</_x0031_06>
+    <_x0031_0305010>111300.0000</_x0031_0305010>
+    <Particular>(40P)- payment of Day Care workers Honorarium ( June to Sept. 2020 ).</Particular>
+    <Dbt>111300.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(40P)- payment of Day Care workers Honorarium ( June to Sept. 2020 ).</Claimantname>
+    <Obrno>101-9997-20-10-1492</Obrno>
+    <dvno>101-20-10-1401</dvno>
+    <jvno>101-20-11-03-0090</jvno>
+    <Gamount>111300.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373677</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0091</JEVNo>
+    <_x0031_06>106400.0000</_x0031_06>
+    <_x0031_0305010>106400.0000</_x0031_0305010>
+    <Particular> (39P), payment of Day Care workers Honorarium ( June to Sept. 2020-Rosario, ADS ).</Particular>
+    <Dbt>106400.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> (39P), payment of Day Care workers Honorarium ( June to Sept. 2020-Rosario, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1485</Obrno>
+    <dvno>101-20-10-1402</dvno>
+    <jvno>101-20-11-03-0091</jvno>
+    <Gamount>109200.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373678</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0092</JEVNo>
+    <_x0031_06>134400.0000</_x0031_06>
+    <_x0031_0305010>134400.0000</_x0031_0305010>
+    <Particular>(48P)- payment of Day Care workers Honorarium ( June to Sept. 2020-San Luis, ADS).</Particular>
+    <Dbt>134400.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(48P)- payment of Day Care workers Honorarium ( June to Sept. 2020-San Luis, ADS).</Claimantname>
+    <Obrno>101-9997-20-10-1486</Obrno>
+    <dvno>101-20-10-1403</dvno>
+    <jvno>101-20-11-03-0092</jvno>
+    <Gamount>134400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373679</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0093</JEVNo>
+    <_x0031_06>123200.0000</_x0031_06>
+    <_x0031_0305010>123200.0000</_x0031_0305010>
+    <Particular>(44P)- payment of Day Care workers Honorarium ( June to Sept. 2020-Sibagat, ADS ).</Particular>
+    <Dbt>123200.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(44P)- payment of Day Care workers Honorarium ( June to Sept. 2020-Sibagat, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1491</Obrno>
+    <dvno>101-20-10-1404</dvno>
+    <jvno>101-20-11-03-0093</jvno>
+    <Gamount>123200.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373680</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0094</JEVNo>
+    <_x0031_06>189000.0000</_x0031_06>
+    <_x0031_0305010>189000.0000</_x0031_0305010>
+    <Particular>(69P)- payment of Day Care workers Honorarium ( June to Sept. 2020- Esperanza, ADS ).</Particular>
+    <Dbt>189000.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(69P)- payment of Day Care workers Honorarium ( June to Sept. 2020- Esperanza, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1490</Obrno>
+    <dvno>101-20-10-1407</dvno>
+    <jvno>101-20-11-03-0094</jvno>
+    <Gamount>189000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373681</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-213-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0095</JEVNo>
+    <_x0031_06>140000.0000</_x0031_06>
+    <_x0031_0305010>140000.0000</_x0031_0305010>
+    <Particular>(50P)- payment of Day Care workers Honorarium ( June to Sept. 2020 ).</Particular>
+    <Dbt>140000.0000</Dbt>
+    <Accountcode>50211990</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(50P)- payment of Day Care workers Honorarium ( June to Sept. 2020 ).</Claimantname>
+    <Obrno>101-9997-20-10-1493</Obrno>
+    <dvno>101-20-10-1410</dvno>
+    <jvno>101-20-11-03-0095</jvno>
+    <Gamount>140000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373682</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-214-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0096</JEVNo>
+    <_x0031_06>5920.0000</_x0031_06>
+    <_x0031_0305010>5920.0000</_x0031_0305010>
+    <Particular>(2P) reimb of TEV (August 6 to October16, 2020 San Luis ADS etc.)</Particular>
+    <Dbt>5920.0000</Dbt>
+    <Accountcode>50203050</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P) reimb of TEV (August 6 to October16, 2020 San Luis ADS etc.)</Claimantname>
+    <Obrno>101-9997-20-11-0245</Obrno>
+    <dvno>101-20-11-0463</dvno>
+    <jvno>101-20-11-03-0096</jvno>
+    <Gamount>5920.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373683</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-214-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0097</JEVNo>
+    <_x0031_06>4400.0000</_x0031_06>
+    <_x0031_0305010>4400.0000</_x0031_0305010>
+    <Particular>payment of reimb of TEV (3/4 to 9/9/20 San Luis ADS etc.)</Particular>
+    <Dbt>4400.0000</Dbt>
+    <Accountcode>50203050</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of reimb of TEV (3/4 to 9/9/20 San Luis ADS etc.)</Claimantname>
+    <Obrno>101-9997-20-11-0243</Obrno>
+    <dvno>101-20-11-0464</dvno>
+    <jvno>101-20-11-03-0097</jvno>
+    <Gamount>4400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373684</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-214-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0098</JEVNo>
+    <_x0031_06>2240.0000</_x0031_06>
+    <_x0031_0305010>2240.0000</_x0031_0305010>
+    <Particular>payment of  reimb of TEV (9/2-24/20- San Luis ADS , etc.)</Particular>
+    <Dbt>2240.0000</Dbt>
+    <Accountcode>50203050</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  reimb of TEV (9/2-24/20- San Luis ADS , etc.)</Claimantname>
+    <Obrno>101-9997-20-11-0244</Obrno>
+    <dvno>101-20-11-0465</dvno>
+    <jvno>101-20-11-03-0098</jvno>
+    <Gamount>2240.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373685</jevid>
+    <Date_>11/16/2020</Date_>
+    <Rdono>RFR-RD-215-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0099</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-1061-20-11-0574</Obrno>
+    <dvno>101-20-11-0621</dvno>
+    <jvno>101-20-11-03-0099</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373686</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-216-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0100</JEVNo>
+    <_x0031_06>48600.0000</_x0031_06>
+    <_x0031_0305010>48600.0000</_x0031_0305010>
+    <Particular>(5P) payment of labor services for Rehabilitation/ maintenance (Clearing/ Brushing) for the period of August 1-31, 2020 (Support to Small-scale Falcata)</Particular>
+    <Dbt>48600.0000</Dbt>
+    <Accountcode>50299990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of labor services for Rehabilitation/ maintenance (Clearing/ Brushing) for the period of August 1-31, 2020 (Support to Small-scale Falcata)</Claimantname>
+    <Obrno>101-8971-20-11-0401</Obrno>
+    <dvno>101-20-11-0391</dvno>
+    <jvno>101-20-11-03-0100</jvno>
+    <Gamount>48600.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373687</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-216-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0101</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>(5P) payment of office supplies (cellcard) for the month of November, 2020.</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of office supplies (cellcard) for the month of November, 2020.</Claimantname>
+    <Obrno>101-8721-20-11-0671</Obrno>
+    <dvno>101-20-11-0681</dvno>
+    <jvno>101-20-11-03-0101</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373688</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-216-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0102</JEVNo>
+    <_x0031_06>1500.0000</_x0031_06>
+    <_x0031_0305010>1500.0000</_x0031_0305010>
+    <Particular>(2P )- payment of office supplies (November 2020 ).</Particular>
+    <Dbt>1500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P )- payment of office supplies (November 2020 ).</Claimantname>
+    <Obrno>101-9997-20-11-0674</Obrno>
+    <dvno>101-20-11-0684</dvno>
+    <jvno>101-20-11-03-0102</jvno>
+    <Gamount>1500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373689</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-216-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0103</JEVNo>
+    <_x0031_06>10000.0000</_x0031_06>
+    <_x0031_0305010>10000.0000</_x0031_0305010>
+    <Particular>(9P) payment of office supplies (cellcard) for the month of November, 2020.</Particular>
+    <Dbt>10000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(9P) payment of office supplies (cellcard) for the month of November, 2020.</Claimantname>
+    <Obrno>101-8711-20-11-0675</Obrno>
+    <dvno>101-20-11-0691</dvno>
+    <jvno>101-20-11-03-0103</jvno>
+    <Gamount>10000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373690</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-216-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0104</JEVNo>
+    <_x0031_06>7200.0000</_x0031_06>
+    <_x0031_0305010>7200.0000</_x0031_0305010>
+    <Particular>(5P )- payment of meals for COVID 19 PGAS Task Force (November 1-8,2020- 401st Brigade, New Leyte, QF).</Particular>
+    <Dbt>7200.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P )- payment of meals for COVID 19 PGAS Task Force (November 1-8,2020- 401st Brigade, New Leyte, QF).</Claimantname>
+    <Obrno>101-1011-20-11-0546</Obrno>
+    <dvno>101-20-11-0733</dvno>
+    <jvno>101-20-11-03-0104</jvno>
+    <Gamount>7200.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373691</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-216-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0105</JEVNo>
+    <_x0031_06>57000.0000</_x0031_06>
+    <_x0031_0305010>57000.0000</_x0031_0305010>
+    <Particular>(6P) payment of Honorarium of PMRB Board Members for the month of September 10-24, October 29, 2020</Particular>
+    <Dbt>57000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P) payment of Honorarium of PMRB Board Members for the month of September 10-24, October 29, 2020</Claimantname>
+    <Obrno>101-8971-20-11-0588</Obrno>
+    <dvno>101-20-11-0742</dvno>
+    <jvno>101-20-11-03-0105</jvno>
+    <Gamount>57000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373692</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-217-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0106</JEVNo>
+    <_x0031_06>7500.0000</_x0031_06>
+    <_x0031_0305010>7500.0000</_x0031_0305010>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>101-8751-20-11-0578</Obrno>
+    <dvno>101-20-11-0694</dvno>
+    <jvno>101-20-11-03-0106</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373693</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-217-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0107</JEVNo>
+    <_x0031_06>8500.0000</_x0031_06>
+    <_x0031_0305010>8500.0000</_x0031_0305010>
+    <Particular>payment of RA for the month November 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RA for the month November 2020</Claimantname>
+    <Obrno>101-1041-20-11-0519</Obrno>
+    <dvno>101-20-11-0696</dvno>
+    <jvno>101-20-11-03-0107</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373694</jevid>
+    <Date_>11/17/2020</Date_>
+    <Rdono>RFR-RD-217-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0108</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Transportation Allowance (TA) for the month of November, 2020</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Transportation Allowance (TA) for the month of November, 2020</Claimantname>
+    <Obrno>101-7611-20-11-0908</Obrno>
+    <dvno>101-20-11-0791</dvno>
+    <jvno>101-20-11-03-0108</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373695</jevid>
+    <Date_>11/19/2020</Date_>
+    <Rdono>RFR-RD-218-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0109</JEVNo>
+    <_x0031_06>5880.0000</_x0031_06>
+    <_x0031_0305010>5880.0000</_x0031_0305010>
+    <Particular>(14P )- payment of meals for COVID 19 Task Force ( EOC personnel ) dtd. Nov. 9-15,2020.</Particular>
+    <Dbt>5880.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(14P )- payment of meals for COVID 19 Task Force ( EOC personnel ) dtd. Nov. 9-15,2020.</Claimantname>
+    <Obrno>101-1011-20-11-0536</Obrno>
+    <dvno>101-20-11-0745</dvno>
+    <jvno>101-20-11-03-0109</jvno>
+    <Gamount>5880.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373696</jevid>
+    <Date_>11/19/2020</Date_>
+    <Rdono>RFR-RD-218-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0110</JEVNo>
+    <_x0031_06>12960.0000</_x0031_06>
+    <_x0031_0305010>12960.0000</_x0031_0305010>
+    <Particular>(9P) payment of meals for COVID 19 Task Force (November 1-8, 2020 - Nendotel QF)</Particular>
+    <Dbt>12960.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(9P) payment of meals for COVID 19 Task Force (November 1-8, 2020 - Nendotel QF)</Claimantname>
+    <Obrno>101-1011-20-11-0749</Obrno>
+    <dvno>101-20-11-0794</dvno>
+    <jvno>101-20-11-03-0110</jvno>
+    <Gamount>12960.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373697</jevid>
+    <Date_>11/19/2020</Date_>
+    <Rdono>RFR-RD-218-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0111</JEVNo>
+    <_x0031_06>114000.0000</_x0031_06>
+    <_x0031_0305010>114000.0000</_x0031_0305010>
+    <Particular>(100P)- payment of Meals/Transportation during Tribal Dialogue of Higaonon, Esperanza, ADS.</Particular>
+    <Dbt>114000.0000</Dbt>
+    <Accountcode>50202010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(100P)- payment of Meals/Transportation during Tribal Dialogue of Higaonon, Esperanza, ADS.</Claimantname>
+    <Obrno>101-9997-20-11-1067</Obrno>
+    <dvno>101-20-11-1028</dvno>
+    <jvno>101-20-11-03-0111</jvno>
+    <Gamount>114000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373698</jevid>
+    <Date_>10/27/2020</Date_>
+    <Rdono>LDT-RD-96-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0112</JEVNo>
+    <_x0031_0305020>11260.3400</_x0031_0305020>
+    <_x0031_06>11260.3400</_x0031_06>
+    <Particular>payment of salary differential for the period September 1-30, 2020</Particular>
+    <Dbt>12374.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period September 1-30, 2020</Claimantname>
+    <Obrno>101-4421-20-10-0526</Obrno>
+    <dvno>101-20-10-0603</dvno>
+    <jvno>101-20-11-03-0112</jvno>
+    <Gamount>13858.8800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373698</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>1484.8800</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period September 1-30, 2020</Claimantname>
+    <Obrno>101-4421-20-10-0526</Obrno>
+    <dvno>101-20-10-0603</dvno>
+    <jvno>101-20-11-03-0112</jvno>
+    <Gamount>13858.8800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373698</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>1113.6600</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period September 1-30, 2020</Claimantname>
+    <Obrno>101-4421-20-10-0526</Obrno>
+    <dvno>101-20-10-0603</dvno>
+    <jvno>101-20-11-03-0112</jvno>
+    <Gamount>13858.8800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373698</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1484.8800</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period September 1-30, 2020</Claimantname>
+    <Obrno>101-4421-20-10-0526</Obrno>
+    <dvno>101-20-10-0603</dvno>
+    <jvno>101-20-11-03-0112</jvno>
+    <Gamount>13858.8800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373699</jevid>
+    <Date_>10/27/2020</Date_>
+    <Rdono>LDT-RD-96-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0113</JEVNo>
+    <_x0031_0305020>15000.0000</_x0031_0305020>
+    <_x0031_06>15000.0000</_x0031_06>
+    <Particular> Representation and Transportation Allowance for the month of October 1-31, 2020.</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> Representation and Transportation Allowance for the month of October 1-31, 2020.</Claimantname>
+    <Obrno>101-4421-20-10-0732</Obrno>
+    <dvno>101-20-10-0779</dvno>
+    <jvno>101-20-11-03-0113</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373699</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> Representation and Transportation Allowance for the month of October 1-31, 2020.</Claimantname>
+    <Obrno>101-4421-20-10-0732</Obrno>
+    <dvno>101-20-10-0779</dvno>
+    <jvno>101-20-11-03-0113</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373700</jevid>
+    <Date_>11/10/2020</Date_>
+    <Rdono>LDT-RD-100-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0114</JEVNo>
+    <_x0031_0305020>3564.1400</_x0031_0305020>
+    <_x0031_06>3564.1400</_x0031_06>
+    <Particular>TON WEDRAW OVERPAYMENT OF HDMF LOAN REPAYMENT  OCT. 2020</Particular>
+    <Dbt>3564.1400</Dbt>
+    <Accountcode>20201030-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>TON WEDRAW OVERPAYMENT OF HDMF LOAN REPAYMENT  OCT. 2020</Claimantname>
+    <Obrno>NA-6</Obrno>
+    <dvno>101-20-10-1490</dvno>
+    <jvno>101-20-11-03-0114</jvno>
+    <Gamount>3564.1400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374186</jevid>
+    <Date_>11/06/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0115</JEVNo>
+    <_x0031_06>44000.0000</_x0031_06>
+    <_x0031_0305010>44000.0000</_x0031_0305010>
+    <Particular>(11P), payment of SPES 100% for the period of September 7 -18, 2020 (11P)</Particular>
+    <Dbt>44000.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(11P), payment of SPES 100% for the period of September 7 -18, 2020 (11P)</Claimantname>
+    <Obrno>101-1031-20-11-0110</Obrno>
+    <dvno>101-20-11-0165</dvno>
+    <jvno>101-20-11-03-0115</jvno>
+    <Gamount>44000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374187</jevid>
+    <Date_>11/06/2020</Date_>
+    <Rdono>RFR-RD-206-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0116</JEVNo>
+    <_x0031_06>42259.0000</_x0031_06>
+    <_x0031_0305010>42259.0000</_x0031_0305010>
+    <Particular>(7P), payment of SPES 60% for the period of September 7 to October 2, 2020 </Particular>
+    <Dbt>42259.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(7P), payment of SPES 60% for the period of September 7 to October 2, 2020 </Claimantname>
+    <Obrno>101-1031-20-11-0109</Obrno>
+    <dvno>101-20-11-0167</dvno>
+    <jvno>101-20-11-03-0116</jvno>
+    <Gamount>42259.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374188</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-210-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0117</JEVNo>
+    <_x0031_06>78900.0000</_x0031_06>
+    <_x0031_0305010>78900.0000</_x0031_0305010>
+    <Particular>(12P )- reimb of Provincial Scholar Tuition fee for the month of August to October SY 2020-2021.</Particular>
+    <Dbt>78900.0000</Dbt>
+    <Accountcode>50202020-1-7</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(12P )- reimb of Provincial Scholar Tuition fee for the month of August to October SY 2020-2021.</Claimantname>
+    <Obrno>101-3999-20-10-1574</Obrno>
+    <dvno>101-20-10-1409</dvno>
+    <jvno>101-20-11-03-0117</jvno>
+    <Gamount>78900.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374189</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-210-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0118</JEVNo>
+    <_x0031_0305020>2000.0000</_x0031_0305020>
+    <_x0031_06>2000.0000</_x0031_06>
+    <Particular>CHILD SUPPORT REMITTANCE FOR THE MONTH OF OCT. 2020</Particular>
+    <Dbt>2000.0000</Dbt>
+    <Accountcode>29999990-5-8-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>CHILD SUPPORT REMITTANCE FOR THE MONTH OF OCT. 2020</Claimantname>
+    <Obrno>NA-10</Obrno>
+    <dvno>101-20-11-0330</dvno>
+    <jvno>101-20-11-03-0118</jvno>
+    <Gamount>2000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374191</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-210-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0119</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>(5P), payment of office supplies (cellcard) for the month of November, 2020 
+</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of office supplies (cellcard) for the month of November, 2020 
+</Claimantname>
+    <Obrno>101-1012-20-11-0302</Obrno>
+    <dvno>101-20-11-0412</dvno>
+    <jvno>101-20-11-03-0119</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374192</jevid>
+    <Date_>11/25/2020</Date_>
+    <Rdono>RFR-RD-219-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0120</JEVNo>
+    <_x0031_06>6037.0000</_x0031_06>
+    <_x0031_0305010>6037.0000</_x0031_0305010>
+    <Particular>payment of 60% counterpart for the period July 20 to August 17,  2020</Particular>
+    <Dbt>6037.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of 60% counterpart for the period July 20 to August 17,  2020</Claimantname>
+    <Obrno>101-1031-20-11-0734</Obrno>
+    <dvno>101-20-11-0798</dvno>
+    <jvno>101-20-11-03-0120</jvno>
+    <Gamount>6037.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374193</jevid>
+    <Date_>11/25/2020</Date_>
+    <Rdono>RFR-RD-219-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0121</JEVNo>
+    <_x0031_06>18111.0000</_x0031_06>
+    <_x0031_0305010>18111.0000</_x0031_0305010>
+    <Particular>(3P), payment of 60% counterpart for the period September 7 to October 2, 2020</Particular>
+    <Dbt>18111.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(3P), payment of 60% counterpart for the period September 7 to October 2, 2020</Claimantname>
+    <Obrno>101-1031-20-11-0733</Obrno>
+    <dvno>101-20-11-0799</dvno>
+    <jvno>101-20-11-03-0121</jvno>
+    <Gamount>18111.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374196</jevid>
+    <Date_>11/25/2020</Date_>
+    <Rdono>RFR-RD-219-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0122</JEVNo>
+    <_x0031_06>40000.0000</_x0031_06>
+    <_x0031_0305010>40000.0000</_x0031_0305010>
+    <Particular>(10P), payment of  SPES  for the period of September 7-30, 2020</Particular>
+    <Dbt>40000.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P), payment of  SPES  for the period of September 7-30, 2020</Claimantname>
+    <Obrno>101-1031-20-11-0628</Obrno>
+    <dvno>101-20-11-0800</dvno>
+    <jvno>101-20-11-03-0122</jvno>
+    <Gamount>40000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374197</jevid>
+    <Date_>11/25/2020</Date_>
+    <Rdono>RFR-RD-219-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0123</JEVNo>
+    <_x0031_06>40000.0000</_x0031_06>
+    <_x0031_0305010>40000.0000</_x0031_0305010>
+    <Particular>(10P), payment of SPES 100% for the period September 17-30, 2020</Particular>
+    <Dbt>40000.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P), payment of SPES 100% for the period September 17-30, 2020</Claimantname>
+    <Obrno>101-1031-20-11-0912</Obrno>
+    <dvno>101-20-11-0844</dvno>
+    <jvno>101-20-11-03-0123</jvno>
+    <Gamount>40000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374202</jevid>
+    <Date_>11/25/2020</Date_>
+    <Rdono>RFR-RD-219-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0124</JEVNo>
+    <_x0031_06>20374.7400</_x0031_06>
+    <_x0031_0305010>20374.7400</_x0031_0305010>
+    <Particular>(6P), payment of SPES 75% </Particular>
+    <Dbt>20374.7400</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P), payment of SPES 75% </Claimantname>
+    <Obrno>101-1031-20-11-1160</Obrno>
+    <dvno>101-20-11-1176</dvno>
+    <jvno>101-20-11-03-0124</jvno>
+    <Gamount>20374.7400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374203</jevid>
+    <Date_>11/25/2020</Date_>
+    <Rdono>RFR-RD-219-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0125</JEVNo>
+    <_x0031_06>33957.9000</_x0031_06>
+    <_x0031_0305010>33957.9000</_x0031_0305010>
+    <Particular>(10P),  payment of SPES 75% </Particular>
+    <Dbt>33957.9000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P),  payment of SPES 75% </Claimantname>
+    <Obrno>101-1031-20-11-1159</Obrno>
+    <dvno>101-20-11-1178</dvno>
+    <jvno>101-20-11-03-0125</jvno>
+    <Gamount>33957.9000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374208</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0126</JEVNo>
+    <_x0031_06>7200.0000</_x0031_06>
+    <_x0031_0305010>7200.0000</_x0031_0305010>
+    <Particular>payment of Meals of COVID 19 PGAS Task Force @ Mabuhay Holding Area dtd. October 26-31,2020.</Particular>
+    <Dbt>7200.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Meals of COVID 19 PGAS Task Force @ Mabuhay Holding Area dtd. October 26-31,2020.</Claimantname>
+    <Obrno>101-1011-20-10-1044</Obrno>
+    <dvno>101-20-10-1179</dvno>
+    <jvno>101-20-11-03-0126</jvno>
+    <Gamount>7200.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374209</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0127</JEVNo>
+    <_x0031_06>9900.0000</_x0031_06>
+    <_x0031_0305010>9900.0000</_x0031_0305010>
+    <Particular>payment of Meals of COVID 19 PGAS Task Force @ Langkilaan Holding Area dtd. October 26-31,2020.</Particular>
+    <Dbt>9900.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Meals of COVID 19 PGAS Task Force @ Langkilaan Holding Area dtd. October 26-31,2020.</Claimantname>
+    <Obrno>101-1011-20-10-1043</Obrno>
+    <dvno>101-20-10-1180</dvno>
+    <jvno>101-20-11-03-0127</jvno>
+    <Gamount>9900.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374212</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0128</JEVNo>
+    <_x0031_06>2800.0000</_x0031_06>
+    <_x0031_0305010>2800.0000</_x0031_0305010>
+    <Particular>payment of reimb of Meal Allowance ( Jan 9 to March 14,2020-Loreto,etc. ).</Particular>
+    <Dbt>1040.0000</Dbt>
+    <Accountcode>50203050</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of reimb of Meal Allowance ( Jan 9 to March 14,2020-Loreto,etc. ).</Claimantname>
+    <Obrno>101-9997-20-10-1295</Obrno>
+    <dvno>101-20-10-1304</dvno>
+    <jvno>101-20-11-03-0128</jvno>
+    <Gamount>2800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374212</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1760.0000</Dbt>
+    <Accountcode>50299040</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of reimb of Meal Allowance ( Jan 9 to March 14,2020-Loreto,etc. ).</Claimantname>
+    <Obrno>101-9997-20-10-1295</Obrno>
+    <dvno>101-20-10-1304</dvno>
+    <jvno>101-20-11-03-0128</jvno>
+    <Gamount>2800.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374216</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0129</JEVNo>
+    <_x0031_06>9820.0000</_x0031_06>
+    <_x0031_0305010>9820.0000</_x0031_0305010>
+    <Particular>(2P )- payment of Meal Allowance ( August 11 to Sept. 25,2020-Vereuela, ADS,etc. ).</Particular>
+    <Dbt>8160.0000</Dbt>
+    <Accountcode>50203050</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P )- payment of Meal Allowance ( August 11 to Sept. 25,2020-Vereuela, ADS,etc. ).</Claimantname>
+    <Obrno>101-9997-20-10-1293</Obrno>
+    <dvno>101-20-10-1354</dvno>
+    <jvno>101-20-11-03-0129</jvno>
+    <Gamount>9820.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374216</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1660.0000</Dbt>
+    <Accountcode>50299040</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(2P )- payment of Meal Allowance ( August 11 to Sept. 25,2020-Vereuela, ADS,etc. ).</Claimantname>
+    <Obrno>101-9997-20-10-1293</Obrno>
+    <dvno>101-20-10-1354</dvno>
+    <jvno>101-20-11-03-0129</jvno>
+    <Gamount>9820.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374222</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0130</JEVNo>
+    <_x0031_06>11340.0000</_x0031_06>
+    <_x0031_0305010>11340.0000</_x0031_0305010>
+    <Particular> (14P)- payment of Meals for COVID 19 task force ( October 12-18,2020- De Luxe Inn Q.F ).</Particular>
+    <Dbt>11340.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> (14P)- payment of Meals for COVID 19 task force ( October 12-18,2020- De Luxe Inn Q.F ).</Claimantname>
+    <Obrno>101-1011-20-10-1289</Obrno>
+    <dvno>101-20-10-1358</dvno>
+    <jvno>101-20-11-03-0130</jvno>
+    <Gamount>11340.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374224</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0131</JEVNo>
+    <_x0031_06>1280.0000</_x0031_06>
+    <_x0031_0305010>1280.0000</_x0031_0305010>
+    <Particular>payment of reimb of Meal Allowance ( August 5 to Sept. 25,2020-Butuan City, Loreto,etc ).</Particular>
+    <Dbt>1280.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of reimb of Meal Allowance ( August 5 to Sept. 25,2020-Butuan City, Loreto,etc ).</Claimantname>
+    <Obrno>101-9997-20-10-1294</Obrno>
+    <dvno>101-20-10-1361</dvno>
+    <jvno>101-20-11-03-0131</jvno>
+    <Gamount>1280.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374225</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-250-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0132</JEVNo>
+    <_x0031_06>11700.0000</_x0031_06>
+    <_x0031_0305010>11700.0000</_x0031_0305010>
+    <Particular>(10P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- De Luxe Inn QF )</Particular>
+    <Dbt>11700.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- De Luxe Inn QF )</Claimantname>
+    <Obrno>101-1011-20-10-1379</Obrno>
+    <dvno>101-20-10-1367</dvno>
+    <jvno>101-20-11-03-0132</jvno>
+    <Gamount>11700.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374226</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-251-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0133</JEVNo>
+    <_x0031_06>31320.0000</_x0031_06>
+    <_x0031_0305010>31320.0000</_x0031_0305010>
+    <Particular> (26P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- Mabuhay Holding Area ).</Particular>
+    <Dbt>31320.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> (26P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- Mabuhay Holding Area ).</Claimantname>
+    <Obrno>101-1011-20-10-1405</Obrno>
+    <dvno>101-20-10-1368</dvno>
+    <jvno>101-20-11-03-0133</jvno>
+    <Gamount>31320.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374227</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-251-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0134</JEVNo>
+    <_x0031_06>10080.0000</_x0031_06>
+    <_x0031_0305010>10080.0000</_x0031_0305010>
+    <Particular>(8P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- Nendotel QF )</Particular>
+    <Dbt>10080.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(8P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- Nendotel QF )</Claimantname>
+    <Obrno>101-1011-20-10-1382</Obrno>
+    <dvno>101-20-10-1373</dvno>
+    <jvno>101-20-11-03-0134</jvno>
+    <Gamount>10080.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374229</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-251-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0135</JEVNo>
+    <_x0031_06>8280.0000</_x0031_06>
+    <_x0031_0305010>8280.0000</_x0031_0305010>
+    <Particular> (7P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- 401st Brigade ).</Particular>
+    <Dbt>8280.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname> (7P)- payment of Meals for COVID 19 Task Force ( October 19-25,2020- 401st Brigade ).</Claimantname>
+    <Obrno>101-1011-20-10-1383</Obrno>
+    <dvno>101-20-10-1374</dvno>
+    <jvno>101-20-11-03-0135</jvno>
+    <Gamount>8280.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374230</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-251-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0136</JEVNo>
+    <_x0031_06>7560.0000</_x0031_06>
+    <_x0031_0305010>7560.0000</_x0031_0305010>
+    <Particular>( 11P ), payment of Meals for COVID 19 Task Force ( October 19-25,2020- De Luxe Inn QF ).</Particular>
+    <Dbt>7560.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>( 11P ), payment of Meals for COVID 19 Task Force ( October 19-25,2020- De Luxe Inn QF ).</Claimantname>
+    <Obrno>101-1011-20-10-1396</Obrno>
+    <dvno>101-20-10-1375</dvno>
+    <jvno>101-20-11-03-0136</jvno>
+    <Gamount>7560.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374231</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-251-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0137</JEVNo>
+    <_x0031_06>5700.0000</_x0031_06>
+    <_x0031_0305010>5700.0000</_x0031_0305010>
+    <Particular>payment of reimbursement of Meal Allowance ( 2/28 to 9/25/20- Veruela, ADS ).</Particular>
+    <Dbt>4800.0000</Dbt>
+    <Accountcode>50203050</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of reimbursement of Meal Allowance ( 2/28 to 9/25/20- Veruela, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1480</Obrno>
+    <dvno>101-20-10-1382</dvno>
+    <jvno>101-20-11-03-0137</jvno>
+    <Gamount>5700.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374231</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>900.0000</Dbt>
+    <Accountcode>50299040</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of reimbursement of Meal Allowance ( 2/28 to 9/25/20- Veruela, ADS ).</Claimantname>
+    <Obrno>101-9997-20-10-1480</Obrno>
+    <dvno>101-20-10-1382</dvno>
+    <jvno>101-20-11-03-0137</jvno>
+    <Gamount>5700.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374232</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-251-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0138</JEVNo>
+    <_x0031_06>11357.5000</_x0031_06>
+    <_x0031_0305010>11357.5000</_x0031_0305010>
+    <Particular>PAYMENT OF COMMISSION FOR THE MONTH OF SEPT. 2020</Particular>
+    <Dbt>11357.5000</Dbt>
+    <Accountcode>29999990-5-11</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>PAYMENT OF COMMISSION FOR THE MONTH OF SEPT. 2020</Claimantname>
+    <Obrno>NA-9</Obrno>
+    <dvno>101-20-10-1398</dvno>
+    <jvno>101-20-11-03-0138</jvno>
+    <Gamount>11357.5000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374233</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-252-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0139</JEVNo>
+    <_x0031_06>7000.0000</_x0031_06>
+    <_x0031_0305010>7000.0000</_x0031_0305010>
+    <Particular>payment for honorarium on Tapping Management Training</Particular>
+    <Dbt>7000.0000</Dbt>
+    <Accountcode>50202010-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment for honorarium on Tapping Management Training</Claimantname>
+    <Obrno>101-9997-20-09-1529</Obrno>
+    <dvno>101-20-09-1449</dvno>
+    <jvno>101-20-11-03-0139</jvno>
+    <Gamount>7000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374234</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-252-2020-101-2487</Rdono>
+    <JEVNo>101-20-11-03-0140</JEVNo>
+    <_x0031_06>21000.0000</_x0031_06>
+    <_x0031_0305010>21000.0000</_x0031_0305010>
+    <Particular>payment of Honorarium during Tapping Management Training dtd August 18-19, 2020</Particular>
+    <Dbt>21000.0000</Dbt>
+    <Accountcode>50202010-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Honorarium during Tapping Management Training dtd August 18-19, 2020</Claimantname>
+    <Obrno>101-9997-20-09-1767</Obrno>
+    <dvno>101-20-09-1666</dvno>
+    <jvno>101-20-11-03-0140</jvno>
+    <Gamount>21000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374170</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-7-2020-104-2475</Rdono>
+    <JEVNo>104-20-11-03-0001</JEVNo>
+    <_x0031_06>1000.0000</_x0031_06>
+    <_x0031_0305010>1000.0000</_x0031_0305010>
+    <Particular>payment of office supplies (cellcard) for the month of October, 2020.</Particular>
+    <Dbt>1000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Patin-ay Waterworks System</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of office supplies (cellcard) for the month of October, 2020.</Claimantname>
+    <Obrno>119-8771-20-10-0873</Obrno>
+    <dvno>119-20-10-0016</dvno>
+    <jvno>104-20-11-03-0001</jvno>
+    <Gamount>1000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363570</jevid>
+    <Date_>11/10/2020</Date_>
+    <Rdono>LDT-RD-99-2020-101-2487</Rdono>
+    <JEVNo>109-20-11-03-0001</JEVNo>
+    <_x0031_0305020>7145.8900</_x0031_0305020>
+    <_x0031_06>7145.8900</_x0031_06>
+    <Particular>payment of salary &amp; hazard pay differential for the month of September 2020.</Particular>
+    <Dbt>901.6800</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay differential for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1590</Obrno>
+    <dvno>109-20-10-0079</dvno>
+    <jvno>109-20-11-03-0001</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363570</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>901.6800</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay differential for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1590</Obrno>
+    <dvno>109-20-10-0079</dvno>
+    <jvno>109-20-11-03-0001</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363570</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>676.2600</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay differential for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1590</Obrno>
+    <dvno>109-20-10-0079</dvno>
+    <jvno>109-20-11-03-0001</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363570</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>308.1500</Dbt>
+    <Accountcode>50102110</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay differential for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1590</Obrno>
+    <dvno>109-20-10-0079</dvno>
+    <jvno>109-20-11-03-0001</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363570</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7514.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay differential for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1590</Obrno>
+    <dvno>109-20-10-0079</dvno>
+    <jvno>109-20-11-03-0001</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363578</jevid>
+    <Date_>11/20/2020</Date_>
+    <Rdono>LDT-RD-101-2020-101-2487</Rdono>
+    <JEVNo>109-20-11-03-0002</JEVNo>
+    <_x0031_0305020>15000.0000</_x0031_0305020>
+    <_x0031_06>15000.0000</_x0031_06>
+    <Particular>payment of Representation and Transportation Allowance (RATA) for the month of November, 2020						
+</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation and Transportation Allowance (RATA) for the month of November, 2020						
+</Claimantname>
+    <Obrno>109-4421-20-11-0858</Obrno>
+    <dvno>109-20-11-0032</dvno>
+    <jvno>109-20-11-03-0002</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363578</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-18T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation and Transportation Allowance (RATA) for the month of November, 2020						
+</Claimantname>
+    <Obrno>109-4421-20-11-0858</Obrno>
+    <dvno>109-20-11-0032</dvno>
+    <jvno>109-20-11-03-0002</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363582</jevid>
+    <Date_>11/20/2020</Date_>
+    <Rdono>LDT-RD-102-2020-101-2487</Rdono>
+    <JEVNo>109-20-11-03-0003</JEVNo>
+    <_x0031_0305020>7145.8900</_x0031_0305020>
+    <_x0031_06>7145.8900</_x0031_06>
+    <Particular>payment of salary &amp; hazard pay for the month of September 2020.</Particular>
+    <Crdt>901.6800</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1588</Obrno>
+    <dvno>109-20-10-0080</dvno>
+    <jvno>109-20-11-03-0003</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363582</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>676.2600</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1588</Obrno>
+    <dvno>109-20-10-0080</dvno>
+    <jvno>109-20-11-03-0003</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363582</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>901.6800</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1588</Obrno>
+    <dvno>109-20-10-0080</dvno>
+    <jvno>109-20-11-03-0003</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363582</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>308.1500</Dbt>
+    <Accountcode>50102110</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1588</Obrno>
+    <dvno>109-20-10-0080</dvno>
+    <jvno>109-20-11-03-0003</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363582</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7514.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary &amp; hazard pay for the month of September 2020.</Claimantname>
+    <Obrno>109-4421-20-10-1588</Obrno>
+    <dvno>109-20-10-0080</dvno>
+    <jvno>109-20-11-03-0003</jvno>
+    <Gamount>8723.8300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363598</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-8-2020-114-2473</Rdono>
+    <JEVNo>114-20-11-03-0001</JEVNo>
+    <_x0031_06>1500.0000</_x0031_06>
+    <_x0031_0305010>1500.0000</_x0031_0305010>
+    <Particular>et. al, payt of office supplies (cellcard) for the month of November, 2020 (2P)
+</Particular>
+    <Dbt>1500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Provincial Learning Center</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-23T00:00:00+08:00</Jevdate>
+    <Claimantname>et. al, payt of office supplies (cellcard) for the month of November, 2020 (2P)
+</Claimantname>
+    <Obrno>119-8859-20-11-0315</Obrno>
+    <dvno>119-20-11-0020</dvno>
+    <jvno>114-20-11-03-0001</jvno>
+    <Gamount>1500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374168</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-12-2020-114-2473</Rdono>
+    <JEVNo>114-20-11-03-0002</JEVNo>
+    <_x0031_06>1500.0000</_x0031_06>
+    <_x0031_0305010>1500.0000</_x0031_0305010>
+    <Particular>payment of office supplies (cellcard) for the month of October, 2020.</Particular>
+    <Dbt>1500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Provincial Learning Center</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of office supplies (cellcard) for the month of October, 2020.</Claimantname>
+    <Obrno>119-8859-20-10-0874</Obrno>
+    <dvno>119-20-10-0017</dvno>
+    <jvno>114-20-11-03-0002</jvno>
+    <Gamount>1500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374164</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-7-2020-124-2476</Rdono>
+    <JEVNo>124-20-11-03-0001</JEVNo>
+    <_x0031_06>2000.0000</_x0031_06>
+    <_x0031_0305010>2000.0000</_x0031_0305010>
+    <Particular>payment of office supplies (cellcard) for the month of October, 2020.</Particular>
+    <Dbt>2000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Agricultural Resource Center</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of office supplies (cellcard) for the month of October, 2020.</Claimantname>
+    <Obrno>119-8713-20-10-0875</Obrno>
+    <dvno>119-20-10-0018</dvno>
+    <jvno>124-20-11-03-0001</jvno>
+    <Gamount>2000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>374167</jevid>
+    <Date_>11/03/2020</Date_>
+    <Rdono>EDC-RD-7-2020-124-2476</Rdono>
+    <JEVNo>124-20-11-03-0002</JEVNo>
+    <_x0031_06>2000.0000</_x0031_06>
+    <_x0031_0305010>2000.0000</_x0031_0305010>
+    <Particular>payment of honorarium for the month of October, 2020.</Particular>
+    <Dbt>2000.0000</Dbt>
+    <Accountcode>50102100-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Agricultural Resource Center</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of honorarium for the month of October, 2020.</Claimantname>
+    <Obrno>119-8713-20-10-0891</Obrno>
+    <dvno>119-20-10-0019</dvno>
+    <jvno>124-20-11-03-0002</jvno>
+    <Gamount>2000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>373604</jevid>
+    <Date_>09/01/2020</Date_>
+    <Rdono>RFR-RD-1-2020-127-36083</Rdono>
+    <JEVNo>127-20-11-03-0001</JEVNo>
+    <_x0031_06>136000.0000</_x0031_06>
+    <_x0031_0305010>136000.0000</_x0031_0305010>
+    <Particular>et. al (32P )- payment of Incident Management Team Honorarium for Enhancement on Incident Command System ( ICS ) &amp; Deployment of Local responders during naliyagan Festival Celebration.</Particular>
+    <Dbt>136000.0000</Dbt>
+    <Accountcode>50202010-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Local Disaster Risk Reduction and Management Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-23T00:00:00+08:00</Jevdate>
+    <Claimantname>et. al (32P )- payment of Incident Management Team Honorarium for Enhancement on Incident Command System ( ICS ) &amp; Deployment of Local responders during naliyagan Festival Celebration.</Claimantname>
+    <Obrno>127-9998-19-12-2449</Obrno>
+    <dvno>127-20-08-0004</dvno>
+    <jvno>127-20-11-03-0001</jvno>
+    <Gamount>140000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>PBS-RD-43-2020-101-2487</Rdono>
+    <JEVNo>128-20-11-03-0001</JEVNo>
+    <_x0031_0305020>5782.5300</_x0031_0305020>
+    <_x0031_06>5782.5300</_x0031_06>
+    <Particular>(5P) payment of Salary Differential October 1-31, 2020</Particular>
+    <Crdt>76.7100</Crdt>
+    <Accountcode>20201040-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>613.9200</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>460.4400</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>102.3200</Crdt>
+    <Accountcode>20201030-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>102.3200</Crdt>
+    <Accountcode>20201030-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>76.7100</Crdt>
+    <Accountcode>20201040-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>76.7100</Dbt>
+    <Accountcode>50103030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1306.0000</Dbt>
+    <Accountcode>50102110</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>5116.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>613.9200</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363529</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>102.3200</Dbt>
+    <Accountcode>50103020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P) payment of Salary Differential October 1-31, 2020</Claimantname>
+    <Obrno>128-4421-20-10-1508</Obrno>
+    <dvno>128-20-10-0026</dvno>
+    <jvno>128-20-11-03-0001</jvno>
+    <Gamount>7214.9500</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363546</jevid>
+    <Date_>12/01/2020</Date_>
+    <Rdono>PBS-RD-44-2020-101-2487</Rdono>
+    <JEVNo>128-20-11-03-0002</JEVNo>
+    <_x0031_0305020>5000.0000</_x0031_0305020>
+    <_x0031_06>5000.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of November, 2020.</Particular>
+    <Dbt>5000.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>BUNAWAN DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of November, 2020.</Claimantname>
+    <Obrno>128-4421-20-11-0585</Obrno>
+    <dvno>128-20-11-0007</dvno>
+    <jvno>128-20-11-03-0002</jvno>
+    <Gamount>5000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363551</jevid>
+    <Date_>10/20/2020</Date_>
+    <Rdono>VCE-RD-7-2020-101-2487</Rdono>
+    <JEVNo>129-20-11-03-0001</JEVNo>
+    <_x0031_06>20370.0000</_x0031_06>
+    <_x0031_0305010>20370.0000</_x0031_0305010>
+    <Particular>(4P) Honorarium for the period of September 1-30, 2020.</Particular>
+    <Dbt>21000.0000</Dbt>
+    <Accountcode>50102100-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P) Honorarium for the period of September 1-30, 2020.</Claimantname>
+    <Obrno>129-4421-20-10-0656</Obrno>
+    <dvno>129-20-10-0011</dvno>
+    <jvno>129-20-11-03-0001</jvno>
+    <Gamount>21000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363551</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>630.0000</Crdt>
+    <Accountcode>20201010-1-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P) Honorarium for the period of September 1-30, 2020.</Claimantname>
+    <Obrno>129-4421-20-10-0656</Obrno>
+    <dvno>129-20-10-0011</dvno>
+    <jvno>129-20-11-03-0001</jvno>
+    <Gamount>21000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363559</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>VCE-RD-8-2020-101-2487</Rdono>
+    <JEVNo>129-20-11-03-0002</JEVNo>
+    <_x0031_06>4500.0000</_x0031_06>
+    <_x0031_0305010>4500.0000</_x0031_0305010>
+    <Particular>(4P),  payment of office supplies (cellcard) for the month of November, 2020 
+</Particular>
+    <Dbt>4500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P),  payment of office supplies (cellcard) for the month of November, 2020 
+</Claimantname>
+    <Obrno>129-4421-20-11-0391</Obrno>
+    <dvno>129-20-11-0002</dvno>
+    <jvno>129-20-11-03-0002</jvno>
+    <Gamount>4500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363560</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>VCE-RD-8-2020-101-2487</Rdono>
+    <JEVNo>129-20-11-03-0003</JEVNo>
+    <_x0031_06>20370.0000</_x0031_06>
+    <_x0031_0305010>20370.0000</_x0031_0305010>
+    <Particular>(4P) payment of Honorarium for the month of October 1-31, 2020.</Particular>
+    <Dbt>21000.0000</Dbt>
+    <Accountcode>50102100-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P) payment of Honorarium for the month of October 1-31, 2020.</Claimantname>
+    <Obrno>129-4421-20-11-0518</Obrno>
+    <dvno>129-20-11-0008</dvno>
+    <jvno>129-20-11-03-0003</jvno>
+    <Gamount>21000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363560</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>630.0000</Crdt>
+    <Accountcode>20201010-1-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P) payment of Honorarium for the month of October 1-31, 2020.</Claimantname>
+    <Obrno>129-4421-20-11-0518</Obrno>
+    <dvno>129-20-11-0008</dvno>
+    <jvno>129-20-11-03-0003</jvno>
+    <Gamount>21000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363562</jevid>
+    <Date_>11/13/2020</Date_>
+    <Rdono>VCE-RD-9-2020-101-2487</Rdono>
+    <JEVNo>129-20-11-03-0004</JEVNo>
+    <_x0031_0305020>36010.4300</_x0031_0305020>
+    <_x0031_06>36010.4300</_x0031_06>
+    <Particular>(22P), payment of overtime pay (regular) for the month of September, 2020</Particular>
+    <Crdt>837.7700</Crdt>
+    <Accountcode>20201010-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(22P), payment of overtime pay (regular) for the month of September, 2020</Claimantname>
+    <Obrno>129-4421-20-11-0182</Obrno>
+    <dvno>129-20-11-0001</dvno>
+    <jvno>129-20-11-03-0004</jvno>
+    <Gamount>36848.2000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>363562</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>36848.2000</Dbt>
+    <Accountcode>50102130-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>TALACOGON DISTRICT HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-27T00:00:00+08:00</Jevdate>
+    <Claimantname>(22P), payment of overtime pay (regular) for the month of September, 2020</Claimantname>
+    <Obrno>129-4421-20-11-0182</Obrno>
+    <dvno>129-20-11-0001</dvno>
+    <jvno>129-20-11-03-0004</jvno>
+    <Gamount>36848.2000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342691</jevid>
+    <Date_>10/29/2020</Date_>
+    <Rdono>VCE-RD-7-2020-301-36109</Rdono>
+    <JEVNo>301-20-11-03-0001</JEVNo>
+    <_x0031_0305020>348989.1500</_x0031_0305020>
+    <_x0031_06>348989.1500</_x0031_06>
+    <Particular>TO PAYMENT OF MEDICARE SHARE OCT. 14, 2020 OCTOBERM 28, 2020</Particular>
+    <Crdt>19240.8500</Crdt>
+    <Accountcode>20201010-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-19T00:00:00+08:00</Jevdate>
+    <Claimantname>TO PAYMENT OF MEDICARE SHARE OCT. 14, 2020 OCTOBERM 28, 2020</Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-10-0091</dvno>
+    <jvno>301-20-11-03-0001</jvno>
+    <Gamount>368230.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>342691</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>368230.0000</Dbt>
+    <Accountcode>20401010-8-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-19T00:00:00+08:00</Jevdate>
+    <Claimantname>TO PAYMENT OF MEDICARE SHARE OCT. 14, 2020 OCTOBERM 28, 2020</Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-10-0091</dvno>
+    <jvno>301-20-11-03-0001</jvno>
+    <Gamount>368230.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384580</jevid>
+    <Date_>11/19/2020</Date_>
+    <Rdono>PBS-RD-10-2020-301-36105</Rdono>
+    <JEVNo>301-20-11-03-0002</JEVNo>
+    <_x0031_0305020>1239491.5600</_x0031_0305020>
+    <_x0031_06>1239491.5600</_x0031_06>
+    <Particular>medicare share-november, 2020
+bdh-pf nov 2020</Particular>
+    <Crdt>116691.4400</Crdt>
+    <Accountcode>20201010-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>medicare share-november, 2020
+bdh-pf nov 2020</Claimantname>
+    <Obrno>Trust Fund</Obrno>
+    <dvno>301-20-11-0030</dvno>
+    <jvno>301-20-11-03-0002</jvno>
+    <Gamount>1356183.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384580</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1356183.0000</Dbt>
+    <Accountcode>20401010-8-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>medicare share-november, 2020
+bdh-pf nov 2020</Claimantname>
+    <Obrno>Trust Fund</Obrno>
+    <dvno>301-20-11-0030</dvno>
+    <jvno>301-20-11-03-0002</jvno>
+    <Gamount>1356183.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384550</jevid>
+    <Date_>11/11/2020</Date_>
+    <Rdono>VCE-RD-9-2020-301-36109</Rdono>
+    <JEVNo>301-20-11-03-0003</JEVNo>
+    <_x0031_0305020>269840.6500</_x0031_0305020>
+    <_x0031_06>269840.6500</_x0031_06>
+    <Particular>PAYMENT OF  MEDICARE SHARE OCT. 29,2020</Particular>
+    <Dbt>283830.0000</Dbt>
+    <Accountcode>20401010-8-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>PAYMENT OF  MEDICARE SHARE OCT. 29,2020</Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-11-0018</dvno>
+    <jvno>301-20-11-03-0003</jvno>
+    <Gamount>283830.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384550</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>13989.3500</Crdt>
+    <Accountcode>20201010-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>PAYMENT OF  MEDICARE SHARE OCT. 29,2020</Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-11-0018</dvno>
+    <jvno>301-20-11-03-0003</jvno>
+    <Gamount>283830.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384569</jevid>
+    <Date_>11/12/2020</Date_>
+    <Rdono>RFR-RD-9-2020-301-527</Rdono>
+    <JEVNo>301-20-11-03-0004</JEVNo>
+    <_x0031_0305020>187839.8700</_x0031_0305020>
+    <_x0031_06>187839.8700</_x0031_06>
+    <Particular>BIDS AND AWARDS COMMITTEE PAYROL CY 2020 HONORARIOUM FOR THE MONTH OCTOBER 2020</Particular>
+    <Dbt>250199.0000</Dbt>
+    <Accountcode>20401010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>BIDS AND AWARDS COMMITTEE PAYROL CY 2020 HONORARIOUM FOR THE MONTH OCTOBER 2020</Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-11-0017</dvno>
+    <jvno>301-20-11-03-0004</jvno>
+    <Gamount>250199.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384569</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>62359.1300</Crdt>
+    <Accountcode>20201010-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>BIDS AND AWARDS COMMITTEE PAYROL CY 2020 HONORARIOUM FOR THE MONTH OCTOBER 2020</Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-11-0017</dvno>
+    <jvno>301-20-11-03-0004</jvno>
+    <Gamount>250199.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384579</jevid>
+    <Date_>11/18/2020</Date_>
+    <Rdono>VCE-RD-8-2020-301-36109</Rdono>
+    <JEVNo>301-20-11-03-0005</JEVNo>
+    <_x0031_0305020>303023.2500</_x0031_0305020>
+    <_x0031_06>303023.2500</_x0031_06>
+    <Particular>medicare share-
+nov11 To nov.18 2020 TDH-PF </Particular>
+    <Crdt>16699.7500</Crdt>
+    <Accountcode>20201010-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>medicare share-
+nov11 To nov.18 2020 TDH-PF </Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-11-0029</dvno>
+    <jvno>301-20-11-03-0005</jvno>
+    <Gamount>319723.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>384579</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>319723.0000</Dbt>
+    <Accountcode>20401010-8-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>Trust Fund</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-11-25T00:00:00+08:00</Jevdate>
+    <Claimantname>medicare share-
+nov11 To nov.18 2020 TDH-PF </Claimantname>
+    <Obrno>NA-1</Obrno>
+    <dvno>301-20-11-0029</dvno>
+    <jvno>301-20-11-03-0005</jvno>
+    <Gamount>319723.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+</NewDataSet>

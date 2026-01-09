@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Pie Summary";
+    Layout = null;
+}
+<script>
+ 
+</script>
+@(Html.Kendo().Grid<dynamic>()
+        .Name("grid_monitoring_summary")
+        .Columns(columns =>
+        {
+            columns.Bound("Received").Title("For Audit").Width(60).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("ForAudit").Title("On Audit").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Audited").Title("Audited").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("ApprovedAndLogout").Title("Approved And Logout").Width(30).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Returned").Title("Returned").Width(30).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Total").Title("Total").Width(30).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+        })
+        .AutoBind(true)
+        .Sortable()
+        .HtmlAttributes(new { style = "height: 60px;" })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("Audit_monitoring_summary_read", "PreAudit").Data("summary_para"))
+        )
+)
+<script>
+
+</script>
+

@@ -1,0 +1,733 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+    @model WebAOMS.Models.tbl_t_DocEvents
+}
+<style>
+    html, body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        box-sizing: border-box;
+        font-size: 10pt;
+        font-family: Arial;
+        margin-top: -1px;
+        padding: 5px .4em 0;
+        word-wrap: break-word;
+        -webkit-nbsp-mode: space;
+        -webkit-line-break: after-white-space;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: .67em 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.16em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    h5 {
+        font-size: .83em;
+    }
+
+    h6 {
+        font-size: .7em;
+    }
+
+    p {
+        margin: 0 0 1em;
+    }
+
+    .k-marker {
+        display: none;
+    }
+
+    .k-paste-container, .Apple-style-span {
+        position: absolute;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    ul, ol {
+        padding-left: 2.5em;
+    }
+
+    span {
+        -ms-high-contrast-adjust: none;
+    }
+
+    a {
+        color: #00a;
+    }
+
+    code {
+        font-size: 1.23em;
+    }
+
+    telerik\3Ascript {
+        display: none;
+    }
+
+    .k-table {
+        width: 100%;
+        border-spacing: 0;
+        margin: 0 0 1em;
+    }
+
+        .k-table td {
+            min-width: 1px;
+            padding: .2em .3em;
+        }
+
+        .k-table, .k-table td {
+            outline: 0;
+            border: 1px dotted #ccc;
+        }
+
+            .k-table p {
+                margin: 0;
+                padding: 0;
+            }
+
+    .k-column-resize-handle-wrapper {
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        cursor: col-resize;
+        z-index: 2;
+    }
+
+    .k-column-resize-handle {
+        width: 100%;
+        height: 100%;
+    }
+
+        .k-column-resize-handle > .k-column-resize-marker {
+            width: 2px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #00b0ff;
+            display: none;
+            opacity: 0.8;
+        }
+
+    .k-row-resize-handle-wrapper {
+        position: absolute;
+        cursor: row-resize;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+    }
+
+    .k-row-resize-handle {
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+
+    .k-row-resize-marker-wrapper {
+        display: table-cell;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+    }
+
+    .k-row-resize-marker {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #00b0ff;
+        opacity: 0.8;
+        display: none;
+    }
+
+    .k-table-resize-handle-wrapper {
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #000;
+        z-index: 100;
+        width: 5px;
+        height: 5px;
+    }
+
+    .k-table-resize-handle {
+        width: 100%;
+        height: 100%;
+    }
+
+        .k-table-resize-handle.k-resize-east {
+            cursor: e-resize;
+        }
+
+        .k-table-resize-handle.k-resize-north {
+            cursor: n-resize;
+        }
+
+        .k-table-resize-handle.k-resize-northeast {
+            cursor: ne-resize;
+        }
+
+        .k-table-resize-handle.k-resize-northwest {
+            cursor: nw-resize;
+        }
+
+        .k-table-resize-handle.k-resize-south {
+            cursor: s-resize;
+        }
+
+        .k-table-resize-handle.k-resize-southeast {
+            cursor: se-resize;
+        }
+
+        .k-table-resize-handle.k-resize-southwest {
+            cursor: sw-resize;
+        }
+
+        .k-table-resize-handle.k-resize-west {
+            cursor: w-resize;
+        }
+
+    .k-table.k-table-resizing {
+        opacity: 0.6;
+    }
+
+    k\:script {
+        display: none;
+    }
+
+    #navbar {
+        /*background-color: #333;*/
+        position: fixed;
+        top: 40px;
+        right: -50px;
+        width: 40px;
+        display: block;
+        font-size: 8pt;
+        font-family: Verdana;
+        height: 40px;
+        /*border: 1px solid #4f4f4f;*/
+        z-index: 500;
+    }
+
+    .k-grid .k-edit-cell .description-textarea {
+        width: 100%;
+        height: 100%;
+        resize: none; /* Optional: To prevent users from resizing the textarea */
+    }
+</style>
+
+
+<div id="navbar">
+    <button onclick="print_preview(@ViewBag.doc_details_id, @ViewBag.report_id)" type="button" class="btn btn-success"><i class="fa fa-print"></i> Preview</button>
+</div>
+
+<div id="div_details" class="box" style="width:100%;margin-bottom:0px!important">
+    <div id="div_" class="box-body">
+        @Html.Raw(ViewBag.script)
+
+        <form id="frm_doc_details_value" style="min-width:15.9258cm">
+            <input name="report_id" value="@ViewBag.report_id" type="text" hidden />
+            <input id="txt_doc_details_id" name="doc_details_id" value="@ViewBag.doc_details_id" type="text" hidden />
+            <input name="doc_form_id" value="@ViewBag.doc_form_id" type="text" hidden />
+
+            <input id="txt_refno_sub" name="refno" type="text" hidden />
+            <input id="txt_officeid_sub" name="officeid" type="text" hidden />
+            <input id="txt_particular_sub" name="particular" type="text" hidden />
+            <div class="row">
+                <script>
+                    function para_wfp(){
+                        return {year:2023,officeid:$("#officeChargewfp").data("kendoDropDownList").value()}
+                    }
+
+                    function r_wfp(){
+                        var r_l = $("#wpfAccount").data("kendoDropDownList")
+                        r_l.dataSource.read();
+                    }
+
+                    function loaded(){
+                        stopSpin()
+                    }
+
+                </script>
+
+                <div class="form-group col-md-6">
+                    <label for="title">Office Charge:</label>
+                    @(Html.Kendo().DropDownList()
+                    .Name("officeChargewfp")
+                    .DataTextField("OfficeName")
+                    .DataValueField("OfficeID")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_GetOffice_fmis_pmis", "Document");
+                        });
+                    })
+                    .Events(e => e.Change("r_wfp"))
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    .Popup(p => p.AppendTo("#mdl_doc_form"))
+                    )
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="title">WFP Account:</label>
+                    @(Html.Kendo().DropDownList()
+                    .Name("wpfAccount")
+                    .DataTextField("wfp_description")
+                    .DataValueField("wfp_description")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_GetWFP_details_new", "Document").Data("para_wfp");
+                        });
+                    })
+                    .Events(e => e.DataBound("loaded"))
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    .Popup(p => p.AppendTo("#mdl_doc_form"))
+                    )
+                </div>
+
+            </div>
+            <div id="div_doc_content" class="row">
+
+
+                <div class="form-group col-md-6">
+                    <label for="estimated-amount">Title</label>
+                    <input id="txt_title" type="text" name="Title" style="font-family:Candara;font-size:12pt" value="@ViewBag.Activitytitle" class="form-control" />
+                </div>
+               
+                <div class="form-group col-md-6">
+                    <label for="estimated-amount">Venue</label>
+                        @(Html.Kendo().DropDownList()
+                        .Name("Venue")
+                        .DataTextField("VENUE_NAME")
+                        .DataValueField("VENUE_ID")
+                        .Filter("Contains")
+                        .AutoBind(false)
+                        .DataSource(source =>
+                        {
+                            source.Read(read =>
+                            {
+                                read.Action("DataSource_GetVenue", "Document");
+                            });
+                        })
+                        .HtmlAttributes(new { style = "width: 100%" })
+                        .Popup(p => p.AppendTo("#mdl_doc_form"))
+                        )
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="estimated-amount">Inclusive Date</label>
+                    <div style="font-family:Arial;font-style:italic;color:darkgreen;padding-bottom:10px">The inclusive date must be at least 14 days in advance for acceptance.</div>
+                    <div class="input-group">
+                        <script>
+                            function mutli_para(){
+
+                                return { doc_details_id: @ViewBag.doc_details_id }
+                            }
+                            function deselectdate(e) {
+                                var dataItem = e.dataItem;
+                                removeFromDatabase(dataItem.doc_details_id_incl);
+                            }
+
+                        </script>
+                        <input id="txt_inclusive_date" type="text" name="InclusiveDate" style="font-family:Candara;font-size:12pt" readonly value="@ViewBag.InclusiveDate" class="form-control" />
+                        <span class="input-group-btn dropup" style="padding-left:4px">
+                            <button id="openModal" class="btn btn-equal" type="button"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+                <script>
+                    function removeFromDatabase(docdetailsidincl) {
+                        $.ajax({
+                            url: '@Url.Action("RemoveInclusiveDate", "Document")', // Replace with your actual controller and action method for database removal
+                            type: 'POST',
+                            data: { doc_details_id_incl: docdetailsidincl },
+                            success: function() {
+                                toastr.success("Successfully removed", 'System Message')
+                                r_grid_inclusive()
+                            },
+                            error: function() {
+                                toastr.warning("Error removing item from database.", 'System Message')
+
+                            }
+                        });
+                    }
+
+
+
+                    $(document).ready(function() {
+                        $("#insertBtn").click(function(event) {
+
+                            var selectedDate = $("#datepicker").data("kendoDatePicker").value();
+                            if (selectedDate) {
+                                insertData(selectedDate);
+                            } else {
+                                toastr.warning("Please select a date.", 'System Message')
+                            }
+                        });
+
+                        $("#openModal").click(function() {
+                            r_grid_inclusive()
+                            $("#myModal").modal("show");
+                        });
+                        $("#closeDate").click(function() {
+                            $("#myModal").modal("hide");
+                        });
+
+                        function insertData(date) {
+                            var grid = $("#grid_inclusivedate").data("kendoGrid");
+                            var newDate = kendo.toString(date, "MM/dd/yyyy")
+
+                            // Get the data items from the Grid
+                            var gridData = grid.dataSource.data();
+
+                            // Check if the new date already exists in the Grid
+                            var dateExists = false;
+                            for (var i = 0; i < gridData.length; i++) {
+                                if (newDate === gridData[i].InclusiveDate) {
+                                    dateExists = true;
+                                    break;
+                                }
+                            }
+
+                            // Show a validation message if the date already exists
+                            if (dateExists) {
+                                toastr.warning("The selected date already exists in the grid.", 'System Message')
+                            } else {
+                                // Perform any other actions if the date is valid
+                                // For example, you can add the new date to the Grid
+                                $.post('@Url.Action("InsertInclusiveDate", "Document")',
+                                   { InclusiveDate: kendo.toString(date, "MM/dd/yyyy"),
+                                       doc_details_id: @ViewBag.doc_details_id// Format the date as needed}
+                                   }
+                               , function (r) {
+                                   if (r.success)
+                                   {
+                                       toastr.success("Data inserted successfully.", 'System Message')
+                                       r_grid_inclusive()
+                                   }
+
+                               })
+                               .fail(function (jqXHR, textStatus, error) {
+                                   stopSpin()
+                                   mg.warning("" + textStatus + "")
+                               });
+                            }
+                        }
+
+                    });
+                    function get_inclusiveFromGrid(){
+                        var grid = $("#grid_inclusivedate").data("kendoGrid");
+
+                        var str='';
+                        // Get the data items from the Grid
+                        var gridData = grid.dataSource.data();
+
+                        // Check if the new date already exists in the Grid
+                        var dateExists = false;
+                        for (var i = 0; i < gridData.length; i++) {
+                            if(i==0)
+                            {
+                                str=str+ gridData[i].InclusiveDate
+                            }
+                            else{
+
+                                str=str+ ', '+gridData[i].InclusiveDate
+                            }
+                        }
+                        $("#txt_inclusive_date").val(str)
+                    }
+                    function gridtppara(){
+                        return {doc_details_id:@ViewBag.doc_details_id}
+                    }
+                </script>
+                    <div class="form-group col-md-12">
+                        <label for="estimated-amount">Process Design</label>
+                        @(Html.Kendo().Grid<WebAOMS.Models.t_DocEvents_process_design>()
+                        .Name("Grid_t_DocEvents_process_design")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(p => p.DTE).Title("DTE").Width(120).Title("Date/Time");
+                            columns.Bound(p => p.LearningObjectives).Title("LearningObjectives").Width(120);
+                            columns.Bound(p => p.Activity).Title("Activity").Width(120);
+                            columns.Bound(p => p.ExpectedOutput).Title("ExpectedOutput").Width(120);
+                            columns.Bound(p => p.LearningMethodology).Title("LearningMethodology").Width(120);
+                            columns.Bound(p => p.ResourcesNeeded).Title("ResourcesNeeded").Width(120);
+                            columns.Bound(p => p.AssignPerson).Title("AssignPerson").Width(120);
+
+                            columns.Bound(p => p.orderby).Title("orderby").Width(120);
+                            columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
+                        })
+                        .ToolBar(toolbar => toolbar.Create())
+                        .Editable(editable => editable.Mode(GridEditMode.InLine).CreateAt(GridInsertRowPosition.Bottom).ConfirmDelete("Continue to delete this record?").DisplayDeleteConfirmation("Continue to delete this record?"))
+                        .Pageable()
+                        .Sortable()
+                        .Scrollable()
+                        .HtmlAttributes(new { style = "height:300px;" })
+                        .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .PageSize(20)
+
+                        .Model(model => model.Id(p => p.processD_Id))
+                        .Create(update => update.Action("t_DocEvents_process_designEditingInline_Create", "Document").Data("gridtppara"))
+                        .Read(read => read.Action("t_DocEvents_process_designEditingInline_Read", "Document").Data("gridtppara"))
+                        .Update(update => update.Action("t_DocEvents_process_designEditingInline_Create", "Document").Data("gridtppara"))
+                        .Destroy(update => update.Action("t_DocEvents_process_designEditingInline_Destroy", "Document"))
+                    ))
+                    </div>
+               
+
+                <div class="row" style="padding-top:15px">
+                    <div class="col-md-6">
+                        <input type="hidden" name="recommendApproval" id="recommendApprovalHidden" />
+                        <label for="recommendApproval">Recommending Approval:</label>
+                            @(Html.Kendo().MultiSelect()
+                            .Name("MrecommendApproval")
+                            .DataTextField("NameFML")
+                            .DataValueField("eid")
+                            .Filter("contains")
+                            .Placeholder("Select employees...")
+                            .AutoBind(true)
+                            .DataSource(source =>
+                            {
+                                source.Read(read =>
+                                {
+                                    read.Action("DataSource_employee_recommendingApprove", "Document");
+                                });
+                            })
+                            .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="title">Approved by:</label>
+                        @(Html.Kendo().ComboBox()
+                        .Name("SigApproved")
+                        .DataTextField("NameFML")
+                        .DataValueField("eid")
+                        .Filter("Contains")
+                        .AutoBind(true)
+                        .DataSource(source =>
+                        {
+                            source.Read(read =>
+                            {
+                                read.Action("DataSource_DGSignApproved", "Document").Data("DGSignApproved_para");
+
+                            }).ServerFiltering(true);
+                        })
+                        .HtmlAttributes(new { style = "width: 100%" })
+
+                        )
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function Close_mdl_doc_form(){
+        removezindex();
+        $("#body_doc_form").html("");
+        $("#mdl_doc_form").modal("hide");
+    }
+
+    function btn_signDGSign()
+    {
+        startSpin()
+        var txt_doc_details_id = $("#txt_doc_details_id").val()
+        $.post('@Url.Action("SignViaDG", "DGSign")',
+            { doc_details_id: txt_doc_details_id,code:$("#txt_refno,reportid").val(),reportid: @ViewBag.report_id}
+        , function(r) {
+            if (r.code == 6)
+            {
+                stopSpin()
+                toastr.success(r.statusName, 'System Message')
+                Close_mdl_doc_form()
+            }
+            else
+            {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+    }
+
+</script>
+<script>
+
+    var mg = new mgsInfo()
+
+    function btn_save_dv()
+    {
+        startSpin()
+        var orderedValues = $("#MrecommendApproval").getKendoMultiSelect().value(); // gets in user-selected order
+        $("#recommendApprovalHidden").val(orderedValues.join(',')); // write to hidden input
+        var frm = $("#frm_doc_details_value").serialize();
+        $.post('@Url.Action("save_Doc_details", "Document")',
+            frm
+        , function(r) {
+            if (r.code == 6)
+            {
+                toastr.success(r.statusName, 'System Message')
+                $("#txt_doc_details_id").val(r.doc_details_id)
+                stopSpin()
+                r_grid_attach_doc()
+                print_preview(@ViewBag.doc_details_id, @ViewBag.report_id)
+            }
+            else
+            {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        @*.fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+            print_preview(@ViewBag.doc_details_id, @ViewBag.report_id)
+        });*@
+    }
+
+
+    $(document).ready(function () {
+        startSpin()
+        $("#txt_refno_sub").val($("#txt_refno").val())
+        $("#txt_officeid_sub").val($("#officeId").data("kendoDropDownList").value())
+        $("#txt_particular_sub").val($("#txt_particular").val())
+
+        $("#officeChargewfp").data("kendoDropDownList").value(@ViewBag.officeCharge)
+
+        $("#MrecommendApproval").getKendoMultiSelect().value('@ViewBag.recommendingApprove'.split(','))
+        //$("#recommendApproval").data("kendoDropDownList").value(@ViewBag.recommendingApprove)
+         $("#SigApproved").data("kendoComboBox").value(@ViewBag.approveby)
+        r_wfp()
+        setTimeout(function(){
+            $("#wpfAccount").data("kendoDropDownList").value('@ViewBag.wfpAccount')
+
+        },2000)
+
+    })
+
+    function cofigure_logo() {
+        startSpin()
+        $.post('@Url.Action("_configure_logo", "Document")', {doc_details_id: $("#txt_doc_details_id").val()}
+        , function (r) {
+            $("#body_configure_logo").html(r)
+            $("#mdl_configure_logo").modal("show");
+            stopSpin();
+        })
+    }
+
+
+</script>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Inclusive Date</h5>
+
+            </div>
+            <div class="modal-body">
+                <div class="box-body">
+                    @(Html.Kendo().DatePicker()
+                      .Name("datepicker")
+                      .Value(System.DateTime.Now)
+                      .WeekNumber(true)
+                    )
+                    <button id="insertBtn">Add Date</button>
+                    @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_inclusivedate")
+                    .AutoBind(false)
+                    .Scrollable()
+                    .Columns(columns =>
+                    {
+                        columns.Bound("InclusiveDate").Title("Inclusive Date").Format("{0:MM/dd/yyyy}").Width(100);
+                        columns.Template(@<text></text>)
+                        .Width(60)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("</button><button data-original-title=\"recompute\" type=\"button\" onclick=\"removeFromDatabase(#=doc_details_id_incl#)\" class=\"btn btn-xs btn-danger btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-trash\"></i></button>");
+                    })
+                    .HtmlAttributes(new { style = "height: 300px!important;" })
+                    .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("get_grid_inclusive_date", "Document").Data("mutli_para"))
+                    )
+                    .Events(e => e.DataBound("get_inclusiveFromGrid"))
+                    )
+                </div>
+                <script>
+                    function r_grid_inclusive() {
+                        var grid = $("#grid_inclusivedate").data("kendoGrid");
+                        grid.dataSource.read();
+                    }
+
+                </script>
+            </div>
+            <div class="modal-footer">
+                <button id="closeDate" type="button" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mdl_configure_logo" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;z-index:9999;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-hidden="true" onclick="close_mdl_configure_logo()">x</button>
+                <h4 class="modal-title">Configure Document Logo</h4>
+            </div>
+            <div id="body_configure_logo" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_custom_logo()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Update Logo</button>
+                <button type="button" class="btn btn-default" onclick="close_mdl_configure_logo()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="m_change_picture" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="simpleModalLabel">Change Picture</h4>
+            </div>
+            <div class="modal-body" style="min-height:370px">
+            </div>
+            <div class="modal-footer" style="margin:0px">
+                <a class="btn file-btn">
+                    <span>Upload</span>
+                    <input type="file" id="upload" value="Choose a file" accept="image/*">
+                </a>
+                <button id="btn_save_2file" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

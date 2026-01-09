@@ -1,0 +1,125 @@
+﻿
+<script>
+
+    function list_param() {
+              var monthYear = kendo.toString($('#DT_printing_period').data('kendoDatePicker').value(), 'MMyyyy').toString();
+              return { monthYear: monthYear, batchno: $("#txt_batchno").val(), officeID: $("#SearchOffices").data("kendoComboBox").value(), col_id: $("#ddp_compensation_col").data("kendoDropDownList").value() }
+    }
+    function relaodGrid_emp() {
+        var grid = $("#grid_list_employee").data("kendoGrid");
+        grid.dataSource.read()
+    }
+
+    $(function () {
+        $('#chk_head_list_employee').change(function () {
+            if ($('#chk_head_list_employee').is(':checked')) {
+                $(".checkEmp").addClass('active');
+                getallemployeeChecked(true)
+            } else {
+                $('.checkEmp').removeClass('active');
+                getallemployeeChecked(false)
+            }            
+        })
+
+    })
+    function SelectedEmployee() {
+        var eidArray = ' ';
+        $("#grid_list_employee input[type=checkbox]").each(function () {
+            if ($(this).prop("checked")) {
+                if ($(this).prop("value") != 'on') {
+                    eidArray = eidArray + ',' + $(this).prop("value")
+                }
+            }
+        });
+        var lnt = eidArray.length;
+        return eidArray.substring(2, lnt)
+    }
+
+    function getallemployeeChecked(bol) {
+        $("#grid_list_employee input[type=checkbox]").each(function () {
+            $(this).prop('checked', bol)
+        });
+    }
+    $('#txtsearchEmp').on('keydown', function (e) {
+        var gridData = $("#grid_list_employee").data("kendoGrid");
+        if (e.keyCode == 13) {
+            if ($('#txtsearchEmp').val() == "") {
+                gridData.dataSource.filter({});
+            }
+            else {
+                ISfn.applyFilter("EmpName", $('#txtsearchEmp').val(), 'grid_list_employee')
+                gridData.dataSource.sort({ field: "EmpName", dir: "asc" });
+            }
+        }
+    })
+    function changeoffice() {
+        var gridData = $("#grid_list_employee").data("kendoGrid");
+        gridData.dataSource.read();
+    }
+</script>
+<input id="txt_reffno" value="@ViewBag.reffno" hidden type="text" />
+<div class="col-lg-12">
+    <div  style="padding-bottom:5px!important">
+        @(Html.Kendo().ComboBox()
+              .Name("SearchOffices")
+              .Placeholder("Select Office Name ...")
+             .HtmlAttributes(new { style = "width:100%; text-align:left;" })
+            .DataTextField("txt")
+            .DataValueField("val")
+            .AutoBind(true)
+              .Filter("contains")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("loand_payrollOffice", "Payroll");
+
+                  });
+              })
+              .Events(ev => ev.Change("changeoffice")))
+
+    </div>
+
+
+    <div class="input-group left" style="padding-bottom:5px!important">
+        <input id="txtsearchEmp" type="text" class="form-control navbar-input" placeholder="Search employee name">
+        <span class="input-group-btn">
+            <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+        </span>
+    </div>
+</div>
+
+<div style="height:400px" class="col-lg-12">
+    @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_list_employee")
+        .Sortable()
+        .Pageable(pager => pager
+        .Refresh(true))
+        .AutoBind(false)
+        .Scrollable()
+        .HtmlAttributes(new { style = "height:100% " })
+        .Columns(columns =>
+        {
+            columns.Template(@<text></text>)
+                .Title(" ")
+                .Width(160)
+                .HtmlAttributes(new { style = "text-align:center;font-size:9px" })
+                .HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" })
+                .HeaderTemplate("<div data-toggle='buttons' class='text-center'><label id='lblcheck_list_employee' class='btn checkbox-inline btn-checkbox-primary-inverse'><input id='chk_head_list_employee'  type='checkbox'></label></div>").Width(10)
+                .ClientTemplate("<div data-toggle='buttons' class='text-center'><label id='lblcheck_list_employee#=eid#' class='checkEmp btn checkbox-inline btn-checkbox-primary-inverse'><input id='chck_list_employee_#=eid#' class='chk_office' value='#=eid#' type='checkbox'></label></div>").Width(20);
+            columns.Bound("EmpName").Width(160).Title("Employee Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            columns.Bound("OfficeName").Width(100).Title("Office Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            //columns.Bound("Amount").Width(70).Title("Amount").Format("{0:n2}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" });
+        })
+
+            .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(1000)
+            .ServerOperation(false)
+            .Read(read => read.Action("LoadGrid_Compensation_list_toAdd", "Payroll").Data("list_param"))
+                    )
+                     
+                .Resizable(resize => resize.Columns(true))
+    )
+
+</div>

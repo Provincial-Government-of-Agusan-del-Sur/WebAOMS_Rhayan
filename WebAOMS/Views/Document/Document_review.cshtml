@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+  z-index: 500;
+}
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Received Review</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        @(Html.Kendo().TabStrip()
+              .Name("tabstrip")
+              .HtmlAttributes(new { style = "height: 500px!important;" })
+              .Items(tabstrip =>
+              {
+                  tabstrip.Add().Text("For Review")
+                      .Selected(true)
+                      .LoadContentFrom(Url.Action("Document", "review_for_received"));
+                  tabstrip.Add().Text("Engine")
+                      .LoadContentFrom(Url.Action("Document", "review_for_received"));
+
+                  tabstrip.Add().Text("Chassis")
+                      .LoadContentFrom(Url.Action("Document", "review_for_received"));
+              })
+        )
+    </div>
+</div>
+
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_update_status_log()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Update Status</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+

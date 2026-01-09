@@ -1,0 +1,2350 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="amount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="FullAccountname" type="xs:string" minOccurs="0" />
+                <xs:element name="GLChartAccountChildID" type="xs:int" minOccurs="0" />
+                <xs:element name="levelNo" type="xs:unsignedByte" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>SCHEDULES</T1>
+    <fundtype>General Fund Combined</fundtype>
+    <dateString>As of March 31, 2025</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <Name>10101010Cash Local Treasury</Name>
+    <amount>10939.1600</amount>
+    <Accountcode>10101010</Accountcode>
+    <FullAccountname>10101010 - Cash Local Treasury</FullAccountname>
+    <GLChartAccountChildID>242</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10101020Petty Cash</Name>
+    <amount>100000.0000</amount>
+    <Accountcode>10101020</Accountcode>
+    <FullAccountname>10101020 - Petty Cash</FullAccountname>
+    <GLChartAccountChildID>243</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10102010Cash in Bank - Local Currency, Current Account</Name>
+    <amount>1647444469.4400</amount>
+    <Accountcode>10102010</Accountcode>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10102020Cash in Bank - Local Currency, Savings Account</Name>
+    <amount>828540361.8600</amount>
+    <Accountcode>10102020</Accountcode>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10205020Guaranty Deposits</Name>
+    <amount>1294469.8800</amount>
+    <Accountcode>10205020</Accountcode>
+    <FullAccountname>10205020 - Guaranty Deposits</FullAccountname>
+    <GLChartAccountChildID>261</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10301010Accounts Receivable</Name>
+    <amount>226584.4200</amount>
+    <Accountcode>10301010</Accountcode>
+    <FullAccountname>10301010 - Accounts Receivable</FullAccountname>
+    <GLChartAccountChildID>268</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10301020Real Property Tax Receivable</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10301020</Accountcode>
+    <FullAccountname>10301020 - Real Property Tax Receivable</FullAccountname>
+    <GLChartAccountChildID>270</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10301060Loans Receivable - Local Government Units</Name>
+    <amount>2040000.0000</amount>
+    <Accountcode>10301060</Accountcode>
+    <FullAccountname>10301060 - Loans Receivable - Local Government Units</FullAccountname>
+    <GLChartAccountChildID>278</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10301990Loans Receivable - Others</Name>
+    <amount>16897952.3900</amount>
+    <Accountcode>10301990</Accountcode>
+    <FullAccountname>10301990 - Loans Receivable - Others</FullAccountname>
+    <GLChartAccountChildID>284</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10303010Due from National Government Agencies</Name>
+    <amount>5901140.8100</amount>
+    <Accountcode>10303010</Accountcode>
+    <FullAccountname>10303010 - Due from National Government Agencies</FullAccountname>
+    <GLChartAccountChildID>290</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10303020Due from Government-Owned and/or Controlled Corporations</Name>
+    <amount>330647.3100</amount>
+    <Accountcode>10303020</Accountcode>
+    <FullAccountname>10303020 - Due from Government-Owned and/or Controlled Corporations</FullAccountname>
+    <GLChartAccountChildID>292</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10303030Due from Local Government Units</Name>
+    <amount>82979765.7200</amount>
+    <Accountcode>10303030</Accountcode>
+    <FullAccountname>10303030 - Due from Local Government Units</FullAccountname>
+    <GLChartAccountChildID>294</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10303031Allowance for Impairment - Due from LGUs</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10303031</Accountcode>
+    <FullAccountname>10303031 - Allowance for Impairment - Due from LGUs</FullAccountname>
+    <GLChartAccountChildID>295</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10304050Due from Other Funds</Name>
+    <amount>17127434.4700</amount>
+    <Accountcode>10304050</Accountcode>
+    <FullAccountname>10304050 - Due from Other Funds</FullAccountname>
+    <GLChartAccountChildID>298</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10304060Due from Special Accounts</Name>
+    <amount>40001240.6500</amount>
+    <Accountcode>10304060</Accountcode>
+    <FullAccountname>10304060 - Due from Special Accounts</FullAccountname>
+    <GLChartAccountChildID>299</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10304070Due from Local Economic Enterprise</Name>
+    <amount>5775811.7200</amount>
+    <Accountcode>10304070</Accountcode>
+    <FullAccountname>10304070 - Due from Local Economic Enterprise</FullAccountname>
+    <GLChartAccountChildID>300</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10305010Advances for Operating Expenses</Name>
+    <amount>2323385.1500</amount>
+    <Accountcode>10305010</Accountcode>
+    <FullAccountname>10305010 - Advances for Operating Expenses</FullAccountname>
+    <GLChartAccountChildID>301</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10305020Advances for Payroll</Name>
+    <amount>100335.6300</amount>
+    <Accountcode>10305020</Accountcode>
+    <FullAccountname>10305020 - Advances for Payroll</FullAccountname>
+    <GLChartAccountChildID>302</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10305030Advances to Special Disbursing Officer</Name>
+    <amount>17500000.0000</amount>
+    <Accountcode>10305030</Accountcode>
+    <FullAccountname>10305030 - Advances to Special Disbursing Officer</FullAccountname>
+    <GLChartAccountChildID>303</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10305040Advances for Officers and Employees</Name>
+    <amount>1977102.9800</amount>
+    <Accountcode>10305040</Accountcode>
+    <FullAccountname>10305040 - Advances for Officers and Employees</FullAccountname>
+    <GLChartAccountChildID>304</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10306010Receivables - Disallowances/Charges</Name>
+    <amount>183430.1400</amount>
+    <Accountcode>10306010</Accountcode>
+    <FullAccountname>10306010 - Receivables - Disallowances/Charges</FullAccountname>
+    <GLChartAccountChildID>305</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10306020Due from Officers and Employees</Name>
+    <amount>168647.5200</amount>
+    <Accountcode>10306020</Accountcode>
+    <FullAccountname>10306020 - Due from Officers and Employees</FullAccountname>
+    <GLChartAccountChildID>307</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10306030Due from Non-Government Organizations/People's Organizations</Name>
+    <amount>45461691.4400</amount>
+    <Accountcode>10306030</Accountcode>
+    <FullAccountname>10306030 - Due from Non-Government Organizations/People's Organizations</FullAccountname>
+    <GLChartAccountChildID>309</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10306990Other Receivables</Name>
+    <amount>20600418.3100</amount>
+    <Accountcode>10306990</Accountcode>
+    <FullAccountname>10306990 - Other Receivables</FullAccountname>
+    <GLChartAccountChildID>311</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402010Food Supplies for Distribution</Name>
+    <amount>1126263.7200</amount>
+    <Accountcode>10402010</Accountcode>
+    <FullAccountname>10402010 - Food Supplies for Distribution</FullAccountname>
+    <GLChartAccountChildID>314</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402020Welfare Goods for Distribution</Name>
+    <amount>11777318.2900</amount>
+    <Accountcode>10402020</Accountcode>
+    <FullAccountname>10402020 - Welfare Goods for Distribution</FullAccountname>
+    <GLChartAccountChildID>315</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402030Drugs and Medicines for Distribution</Name>
+    <amount>1455100.2900</amount>
+    <Accountcode>10402030</Accountcode>
+    <FullAccountname>10402030 - Drugs and Medicines for Distribution</FullAccountname>
+    <GLChartAccountChildID>316</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402040Medical, Dental and Laboratory Supplies for Distribution</Name>
+    <amount>9068771.2800</amount>
+    <Accountcode>10402040</Accountcode>
+    <FullAccountname>10402040 - Medical, Dental and Laboratory Supplies for Distribution</FullAccountname>
+    <GLChartAccountChildID>317</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402050Agricultural and Marine Supplies for Distribution</Name>
+    <amount>12903261.1800</amount>
+    <Accountcode>10402050</Accountcode>
+    <FullAccountname>10402050 - Agricultural and Marine Supplies for Distribution</FullAccountname>
+    <GLChartAccountChildID>318</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402060Agricultural Produce for Distribution</Name>
+    <amount>11978642.0000</amount>
+    <Accountcode>10402060</Accountcode>
+    <FullAccountname>10402060 - Agricultural Produce for Distribution</FullAccountname>
+    <GLChartAccountChildID>319</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402070Textbooks and Instructional Materials for Distribution</Name>
+    <amount>98470.0000</amount>
+    <Accountcode>10402070</Accountcode>
+    <FullAccountname>10402070 - Textbooks and Instructional Materials for Distribution</FullAccountname>
+    <GLChartAccountChildID>320</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402080Construction Materials for Distribution</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10402080</Accountcode>
+    <FullAccountname>10402080 - Construction Materials for Distribution</FullAccountname>
+    <GLChartAccountChildID>321</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402090Property and Equipment for Distribution</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10402090</Accountcode>
+    <FullAccountname>10402090 - Property and Equipment for Distribution</FullAccountname>
+    <GLChartAccountChildID>322</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10402990Other Supplies and Materials for Distribution</Name>
+    <amount>22788453.1000</amount>
+    <Accountcode>10402990</Accountcode>
+    <FullAccountname>10402990 - Other Supplies and Materials for Distribution</FullAccountname>
+    <GLChartAccountChildID>323</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10403030Finished Goods Inventory</Name>
+    <amount>218126.8700</amount>
+    <Accountcode>10403030</Accountcode>
+    <FullAccountname>10403030 - Finished Goods Inventory</FullAccountname>
+    <GLChartAccountChildID>326</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404010Office Supplies Inventory</Name>
+    <amount>10702449.6600</amount>
+    <Accountcode>10404010</Accountcode>
+    <FullAccountname>10404010 - Office Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>327</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404020Accountable Forms, Plates and Stickers</Name>
+    <amount>951294.0300</amount>
+    <Accountcode>10404020</Accountcode>
+    <FullAccountname>10404020 - Accountable Forms, Plates and Stickers</FullAccountname>
+    <GLChartAccountChildID>328</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404030Non-Accountable Forms Inventory</Name>
+    <amount>535554.4000</amount>
+    <Accountcode>10404030</Accountcode>
+    <FullAccountname>10404030 - Non-Accountable Forms Inventory</FullAccountname>
+    <GLChartAccountChildID>329</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404040Animal/Zoological Supplies Inventory</Name>
+    <amount>28542624.0000</amount>
+    <Accountcode>10404040</Accountcode>
+    <FullAccountname>10404040 - Animal/Zoological Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>330</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404050Food Supplies Inventory</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10404050</Accountcode>
+    <FullAccountname>10404050 - Food Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>331</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404060Drugs and Medicines Inventory</Name>
+    <amount>97201174.1900</amount>
+    <Accountcode>10404060</Accountcode>
+    <FullAccountname>10404060 - Drugs and Medicines Inventory</FullAccountname>
+    <GLChartAccountChildID>332</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404070Medical, Dental and Laboratory Supplies Inventory</Name>
+    <amount>421386160.0400</amount>
+    <Accountcode>10404070</Accountcode>
+    <FullAccountname>10404070 - Medical, Dental and Laboratory Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>333</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404080Fuel, Oil and Lubricants Inventory</Name>
+    <amount>10997450.3200</amount>
+    <Accountcode>10404080</Accountcode>
+    <FullAccountname>10404080 - Fuel, Oil and Lubricants Inventory</FullAccountname>
+    <GLChartAccountChildID>334</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404090Agricultural and Marine Supplies Inventory</Name>
+    <amount>64807474.4900</amount>
+    <Accountcode>10404090</Accountcode>
+    <FullAccountname>10404090 - Agricultural and Marine Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>335</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404100Textbooks and Instructional Materials Inventory</Name>
+    <amount>329956.0000</amount>
+    <Accountcode>10404100</Accountcode>
+    <FullAccountname>10404100 - Textbooks and Instructional Materials Inventory</FullAccountname>
+    <GLChartAccountChildID>336</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404110Military, Police and Traffic Supplies Inventory</Name>
+    <amount>6784668.4000</amount>
+    <Accountcode>10404110</Accountcode>
+    <FullAccountname>10404110 - Military, Police and Traffic Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>337</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404120Chemical and Filtering Supplies Inventory</Name>
+    <amount>616610.0000</amount>
+    <Accountcode>10404120</Accountcode>
+    <FullAccountname>10404120 - Chemical and Filtering Supplies Inventory</FullAccountname>
+    <GLChartAccountChildID>338</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404130Construction Materials Inventory</Name>
+    <amount>15336964.2000</amount>
+    <Accountcode>10404130</Accountcode>
+    <FullAccountname>10404130 - Construction Materials Inventory</FullAccountname>
+    <GLChartAccountChildID>339</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10404990Other Supplies and Materials Inventory</Name>
+    <amount>23071460.5500</amount>
+    <Accountcode>10404990</Accountcode>
+    <FullAccountname>10404990 - Other Supplies and Materials Inventory</FullAccountname>
+    <GLChartAccountChildID>340</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10501010Advances to Contractors</Name>
+    <amount>49733870.3900</amount>
+    <Accountcode>10501010</Accountcode>
+    <FullAccountname>10501010 - Advances to Contractors</FullAccountname>
+    <GLChartAccountChildID>341</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10501020Prepaid Rent</Name>
+    <amount>977528.0000</amount>
+    <Accountcode>10501020</Accountcode>
+    <FullAccountname>10501020 - Prepaid Rent</FullAccountname>
+    <GLChartAccountChildID>342</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10501050Prepaid Insurance</Name>
+    <amount>6191354.5700</amount>
+    <Accountcode>10501050</Accountcode>
+    <FullAccountname>10501050 - Prepaid Insurance</FullAccountname>
+    <GLChartAccountChildID>345</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10501990Other Prepayments</Name>
+    <amount>10205822.8400</amount>
+    <Accountcode>10501990</Accountcode>
+    <FullAccountname>10501990 - Other Prepayments</FullAccountname>
+    <GLChartAccountChildID>346</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10701010Land</Name>
+    <amount>71114179.9700</amount>
+    <Accountcode>10701010</Accountcode>
+    <FullAccountname>10701010 - Land</FullAccountname>
+    <GLChartAccountChildID>354</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10702010Land Improvements,  Aquaculture Structures</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10702010</Accountcode>
+    <FullAccountname>10702010 - Land Improvements,  Aquaculture Structures</FullAccountname>
+    <GLChartAccountChildID>356</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10702990Other Land Improvements</Name>
+    <amount>180766956.1300</amount>
+    <Accountcode>10702990</Accountcode>
+    <FullAccountname>10702990 - Other Land Improvements</FullAccountname>
+    <GLChartAccountChildID>359</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10702991Accumulated Depreciation - Other Land Improvements</Name>
+    <amount>26591435.3300</amount>
+    <Accountcode>10702991</Accountcode>
+    <FullAccountname>10702991 - Accumulated Depreciation - Other Land Improvements</FullAccountname>
+    <GLChartAccountChildID>360</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703010Road Networks</Name>
+    <amount>6547002557.6900</amount>
+    <Accountcode>10703010</Accountcode>
+    <FullAccountname>10703010 - Road Networks</FullAccountname>
+    <GLChartAccountChildID>362</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703011Accumulated Depreciation - Road Networks</Name>
+    <amount>1595855774.6700</amount>
+    <Accountcode>10703011</Accountcode>
+    <FullAccountname>10703011 - Accumulated Depreciation - Road Networks</FullAccountname>
+    <GLChartAccountChildID>363</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703020Flood Control Systems</Name>
+    <amount>245975101.9700</amount>
+    <Accountcode>10703020</Accountcode>
+    <FullAccountname>10703020 - Flood Control Systems</FullAccountname>
+    <GLChartAccountChildID>365</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703021Accumulated Depreciation - Flood Control Systems</Name>
+    <amount>132022265.3600</amount>
+    <Accountcode>10703021</Accountcode>
+    <FullAccountname>10703021 - Accumulated Depreciation - Flood Control Systems</FullAccountname>
+    <GLChartAccountChildID>366</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703030Sewer Systems</Name>
+    <amount>629714.0000</amount>
+    <Accountcode>10703030</Accountcode>
+    <FullAccountname>10703030 - Sewer Systems</FullAccountname>
+    <GLChartAccountChildID>368</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703031Accumulated Depreciation - Sewer Systems</Name>
+    <amount>209904.6500</amount>
+    <Accountcode>10703031</Accountcode>
+    <FullAccountname>10703031 - Accumulated Depreciation - Sewer Systems</FullAccountname>
+    <GLChartAccountChildID>369</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703040Water Supply Systems</Name>
+    <amount>347826315.0500</amount>
+    <Accountcode>10703040</Accountcode>
+    <FullAccountname>10703040 - Water Supply Systems</FullAccountname>
+    <GLChartAccountChildID>371</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703041Accumulated Depreciation - Water Supply Systems</Name>
+    <amount>97816498.9300</amount>
+    <Accountcode>10703041</Accountcode>
+    <FullAccountname>10703041 - Accumulated Depreciation - Water Supply Systems</FullAccountname>
+    <GLChartAccountChildID>372</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703050Power Supply Systems</Name>
+    <amount>54470035.0500</amount>
+    <Accountcode>10703050</Accountcode>
+    <FullAccountname>10703050 - Power Supply Systems</FullAccountname>
+    <GLChartAccountChildID>374</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703051Accumulated Depreciation - Power Supply Systems</Name>
+    <amount>23033322.9200</amount>
+    <Accountcode>10703051</Accountcode>
+    <FullAccountname>10703051 - Accumulated Depreciation - Power Supply Systems</FullAccountname>
+    <GLChartAccountChildID>375</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703060Communication Networks</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10703060</Accountcode>
+    <FullAccountname>10703060 - Communication Networks</FullAccountname>
+    <GLChartAccountChildID>377</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703090Parks, Plazas and Monuments</Name>
+    <amount>107694947.1900</amount>
+    <Accountcode>10703090</Accountcode>
+    <FullAccountname>10703090 - Parks, Plazas and Monuments</FullAccountname>
+    <GLChartAccountChildID>386</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703091Accumulated Depreciation - Parks, Plazas and Monuments</Name>
+    <amount>63230271.0800</amount>
+    <Accountcode>10703091</Accountcode>
+    <FullAccountname>10703091 - Accumulated Depreciation - Parks, Plazas and Monuments</FullAccountname>
+    <GLChartAccountChildID>387</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703990Other Infrastructure Assets</Name>
+    <amount>437133892.7200</amount>
+    <Accountcode>10703990</Accountcode>
+    <FullAccountname>10703990 - Other Infrastructure Assets</FullAccountname>
+    <GLChartAccountChildID>389</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10703991Accumulated Depreciation - Other Infrastructure Assets</Name>
+    <amount>47787872.4600</amount>
+    <Accountcode>10703991</Accountcode>
+    <FullAccountname>10703991 - Accumulated Depreciation - Other Infrastructure Assets</FullAccountname>
+    <GLChartAccountChildID>390</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704010Buildings</Name>
+    <amount>1254620785.0600</amount>
+    <Accountcode>10704010</Accountcode>
+    <FullAccountname>10704010 - Buildings</FullAccountname>
+    <GLChartAccountChildID>392</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704011Accumulated Depreciation - Buildings</Name>
+    <amount>47972584.2700</amount>
+    <Accountcode>10704011</Accountcode>
+    <FullAccountname>10704011 - Accumulated Depreciation - Buildings</FullAccountname>
+    <GLChartAccountChildID>393</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704020School Buildings</Name>
+    <amount>36676948.4900</amount>
+    <Accountcode>10704020</Accountcode>
+    <FullAccountname>10704020 - School Buildings</FullAccountname>
+    <GLChartAccountChildID>395</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704021Accumulated Depreciation - School Buildings</Name>
+    <amount>7820304.5800</amount>
+    <Accountcode>10704021</Accountcode>
+    <FullAccountname>10704021 - Accumulated Depreciation - School Buildings</FullAccountname>
+    <GLChartAccountChildID>396</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704030Hospitals and Health Centers</Name>
+    <amount>416109168.2900</amount>
+    <Accountcode>10704030</Accountcode>
+    <FullAccountname>10704030 - Hospitals and Health Centers</FullAccountname>
+    <GLChartAccountChildID>398</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704031Accumulated Depreciation - Hospitals and Health Centers</Name>
+    <amount>42636739.3400</amount>
+    <Accountcode>10704031</Accountcode>
+    <FullAccountname>10704031 - Accumulated Depreciation - Hospitals and Health Centers</FullAccountname>
+    <GLChartAccountChildID>399</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704990Other Structures</Name>
+    <amount>246176685.3400</amount>
+    <Accountcode>10704990</Accountcode>
+    <FullAccountname>10704990 - Other Structures</FullAccountname>
+    <GLChartAccountChildID>410</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10704991Accumulated Depreciation - Other Structures</Name>
+    <amount>36085875.4500</amount>
+    <Accountcode>10704991</Accountcode>
+    <FullAccountname>10704991 - Accumulated Depreciation - Other Structures</FullAccountname>
+    <GLChartAccountChildID>411</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705010Machinery</Name>
+    <amount>66918861.0400</amount>
+    <Accountcode>10705010</Accountcode>
+    <FullAccountname>10705010 - Machinery</FullAccountname>
+    <GLChartAccountChildID>413</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705011Accumulated Depreciation - Machinery</Name>
+    <amount>23344512.5700</amount>
+    <Accountcode>10705011</Accountcode>
+    <FullAccountname>10705011 - Accumulated Depreciation - Machinery</FullAccountname>
+    <GLChartAccountChildID>414</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705020Office Equipment</Name>
+    <amount>197798864.3600</amount>
+    <Accountcode>10705020</Accountcode>
+    <FullAccountname>10705020 - Office Equipment</FullAccountname>
+    <GLChartAccountChildID>416</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705021Accumulated Depreciation - Office Equipment</Name>
+    <amount>117135708.6000</amount>
+    <Accountcode>10705021</Accountcode>
+    <FullAccountname>10705021 - Accumulated Depreciation - Office Equipment</FullAccountname>
+    <GLChartAccountChildID>417</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705030Information and Communication Technology  Equipment</Name>
+    <amount>174615089.9600</amount>
+    <Accountcode>10705030</Accountcode>
+    <FullAccountname>10705030 - Information and Communication Technology  Equipment</FullAccountname>
+    <GLChartAccountChildID>419</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705031Accumulated Depreciation - Information and Communication Technology  Equipment</Name>
+    <amount>74654135.7500</amount>
+    <Accountcode>10705031</Accountcode>
+    <FullAccountname>10705031 - Accumulated Depreciation - Information and Communication Technology  Equipment</FullAccountname>
+    <GLChartAccountChildID>420</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705040Agricultural and  Forestry Equipment</Name>
+    <amount>218772145.1700</amount>
+    <Accountcode>10705040</Accountcode>
+    <FullAccountname>10705040 - Agricultural and  Forestry Equipment</FullAccountname>
+    <GLChartAccountChildID>422</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705041Accumulated Depreciation - Agricultural  and Forestry Equipment</Name>
+    <amount>72818925.1600</amount>
+    <Accountcode>10705041</Accountcode>
+    <FullAccountname>10705041 - Accumulated Depreciation - Agricultural  and Forestry Equipment</FullAccountname>
+    <GLChartAccountChildID>423</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705070Communication Equipment</Name>
+    <amount>73258372.2300</amount>
+    <Accountcode>10705070</Accountcode>
+    <FullAccountname>10705070 - Communication Equipment</FullAccountname>
+    <GLChartAccountChildID>431</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705071Accumulated Depreciation - Communication Equipment</Name>
+    <amount>23116796.9900</amount>
+    <Accountcode>10705071</Accountcode>
+    <FullAccountname>10705071 - Accumulated Depreciation - Communication Equipment</FullAccountname>
+    <GLChartAccountChildID>432</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705080Construction and Heavy Equipment</Name>
+    <amount>209862069.3700</amount>
+    <Accountcode>10705080</Accountcode>
+    <FullAccountname>10705080 - Construction and Heavy Equipment</FullAccountname>
+    <GLChartAccountChildID>434</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705081Accumulated Depreciation - Construction and Heavy Equipment</Name>
+    <amount>97620719.9000</amount>
+    <Accountcode>10705081</Accountcode>
+    <FullAccountname>10705081 - Accumulated Depreciation - Construction and Heavy Equipment</FullAccountname>
+    <GLChartAccountChildID>435</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705090Disaster Response and Rescue Equipment</Name>
+    <amount>86240748.4100</amount>
+    <Accountcode>10705090</Accountcode>
+    <FullAccountname>10705090 - Disaster Response and Rescue Equipment</FullAccountname>
+    <GLChartAccountChildID>437</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705091Accumulated Depreciation - Disaster Response and Rescue Equipment</Name>
+    <amount>14724434.9400</amount>
+    <Accountcode>10705091</Accountcode>
+    <FullAccountname>10705091 - Accumulated Depreciation - Disaster Response and Rescue Equipment</FullAccountname>
+    <GLChartAccountChildID>438</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705100Military, Police and Security Equipment</Name>
+    <amount>2434197.7600</amount>
+    <Accountcode>10705100</Accountcode>
+    <FullAccountname>10705100 - Military, Police and Security Equipment</FullAccountname>
+    <GLChartAccountChildID>440</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705101Accumulated Depreciation - Military, Police and Security Equipment</Name>
+    <amount>1865720.5400</amount>
+    <Accountcode>10705101</Accountcode>
+    <FullAccountname>10705101 - Accumulated Depreciation - Military, Police and Security Equipment</FullAccountname>
+    <GLChartAccountChildID>441</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705110Medical Equipment</Name>
+    <amount>468371802.4400</amount>
+    <Accountcode>10705110</Accountcode>
+    <FullAccountname>10705110 - Medical Equipment</FullAccountname>
+    <GLChartAccountChildID>443</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705111Accumulated Depreciation - Medical Equipment</Name>
+    <amount>164836613.4300</amount>
+    <Accountcode>10705111</Accountcode>
+    <FullAccountname>10705111 - Accumulated Depreciation - Medical Equipment</FullAccountname>
+    <GLChartAccountChildID>444</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705130Sports Equipment</Name>
+    <amount>6341507.1400</amount>
+    <Accountcode>10705130</Accountcode>
+    <FullAccountname>10705130 - Sports Equipment</FullAccountname>
+    <GLChartAccountChildID>449</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705131Accumulated Depreciation - Sports Equipment</Name>
+    <amount>948256.4300</amount>
+    <Accountcode>10705131</Accountcode>
+    <FullAccountname>10705131 - Accumulated Depreciation - Sports Equipment</FullAccountname>
+    <GLChartAccountChildID>450</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705140Technical and Scientific  Equipment</Name>
+    <amount>3772663.7500</amount>
+    <Accountcode>10705140</Accountcode>
+    <FullAccountname>10705140 - Technical and Scientific  Equipment</FullAccountname>
+    <GLChartAccountChildID>452</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705141Accumulated Depreciation - Technical and Scientific  Equipment</Name>
+    <amount>2228693.6400</amount>
+    <Accountcode>10705141</Accountcode>
+    <FullAccountname>10705141 - Accumulated Depreciation - Technical and Scientific  Equipment</FullAccountname>
+    <GLChartAccountChildID>453</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705990Other Machinery and Equipment</Name>
+    <amount>14799843.0200</amount>
+    <Accountcode>10705990</Accountcode>
+    <FullAccountname>10705990 - Other Machinery and Equipment</FullAccountname>
+    <GLChartAccountChildID>455</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10705991Accumulated Depreciation - Other Machinery and Equipment</Name>
+    <amount>5640395.0600</amount>
+    <Accountcode>10705991</Accountcode>
+    <FullAccountname>10705991 - Accumulated Depreciation - Other Machinery and Equipment</FullAccountname>
+    <GLChartAccountChildID>456</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10706010Motor Vehicles</Name>
+    <amount>419830246.5900</amount>
+    <Accountcode>10706010</Accountcode>
+    <FullAccountname>10706010 - Motor Vehicles</FullAccountname>
+    <GLChartAccountChildID>458</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10706011Accumulated Depreciation - Motor Vehicles</Name>
+    <amount>139994211.9100</amount>
+    <Accountcode>10706011</Accountcode>
+    <FullAccountname>10706011 - Accumulated Depreciation - Motor Vehicles</FullAccountname>
+    <GLChartAccountChildID>459</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10706040Watercrafts</Name>
+    <amount>3215144.0000</amount>
+    <Accountcode>10706040</Accountcode>
+    <FullAccountname>10706040 - Watercrafts</FullAccountname>
+    <GLChartAccountChildID>467</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10706041Accumulated Depreciation - Watercrafts</Name>
+    <amount>2838163.5400</amount>
+    <Accountcode>10706041</Accountcode>
+    <FullAccountname>10706041 - Accumulated Depreciation - Watercrafts</FullAccountname>
+    <GLChartAccountChildID>468</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10706990Other Transportation Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>10706990</Accountcode>
+    <FullAccountname>10706990 - Other Transportation Equipment</FullAccountname>
+    <GLChartAccountChildID>470</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10707010Furniture and Fixtures</Name>
+    <amount>41709383.9200</amount>
+    <Accountcode>10707010</Accountcode>
+    <FullAccountname>10707010 - Furniture and Fixtures</FullAccountname>
+    <GLChartAccountChildID>473</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10707011Accumulated Depreciation - Furniture and Fixtures</Name>
+    <amount>16992033.6800</amount>
+    <Accountcode>10707011</Accountcode>
+    <FullAccountname>10707011 - Accumulated Depreciation - Furniture and Fixtures</FullAccountname>
+    <GLChartAccountChildID>474</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10707020Books</Name>
+    <amount>536880.9300</amount>
+    <Accountcode>10707020</Accountcode>
+    <FullAccountname>10707020 - Books</FullAccountname>
+    <GLChartAccountChildID>476</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10707021Accumulated Depreciation - Books</Name>
+    <amount>361768.9200</amount>
+    <Accountcode>10707021</Accountcode>
+    <FullAccountname>10707021 - Accumulated Depreciation - Books</FullAccountname>
+    <GLChartAccountChildID>477</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10710010Construction in Progress - Land Improvements</Name>
+    <amount>2090225.0400</amount>
+    <Accountcode>10710010</Accountcode>
+    <FullAccountname>10710010 - Construction in Progress - Land Improvements</FullAccountname>
+    <GLChartAccountChildID>502</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10710020Construction in Progress - Infrastructure Assets</Name>
+    <amount>924685257.3200</amount>
+    <Accountcode>10710020</Accountcode>
+    <FullAccountname>10710020 - Construction in Progress - Infrastructure Assets</FullAccountname>
+    <GLChartAccountChildID>503</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10710030Construction in Progress - Buildings and Other Structures</Name>
+    <amount>845023951.9500</amount>
+    <Accountcode>10710030</Accountcode>
+    <FullAccountname>10710030 - Construction in Progress - Buildings and Other Structures</FullAccountname>
+    <GLChartAccountChildID>504</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10799010Work/Zoo Animals</Name>
+    <amount>93000.0000</amount>
+    <Accountcode>10799010</Accountcode>
+    <FullAccountname>10799010 - Work/Zoo Animals</FullAccountname>
+    <GLChartAccountChildID>510</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10799990Other Property, Plant and Equipment</Name>
+    <amount>54572242.8800</amount>
+    <Accountcode>10799990</Accountcode>
+    <FullAccountname>10799990 - Other Property, Plant and Equipment</FullAccountname>
+    <GLChartAccountChildID>513</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10799991Accumulated Depreciation - Other Property, Plant and Equipment</Name>
+    <amount>22960294.1400</amount>
+    <Accountcode>10799991</Accountcode>
+    <FullAccountname>10799991 - Accumulated Depreciation - Other Property, Plant and Equipment</FullAccountname>
+    <GLChartAccountChildID>514</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10801010Breeding Stocks</Name>
+    <amount>1727771.7900</amount>
+    <Accountcode>10801010</Accountcode>
+    <FullAccountname>10801010 - Breeding Stocks</FullAccountname>
+    <GLChartAccountChildID>516</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10901020Computer Software</Name>
+    <amount>200000.0000</amount>
+    <Accountcode>10901020</Accountcode>
+    <FullAccountname>10901020 - Computer Software</FullAccountname>
+    <GLChartAccountChildID>523</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10901021Accumulated Amortization - Computer Software</Name>
+    <amount>61222.2300</amount>
+    <Accountcode>10901021</Accountcode>
+    <FullAccountname>10901021 - Accumulated Amortization - Computer Software</FullAccountname>
+    <GLChartAccountChildID>524</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20101010Accounts Payable</Name>
+    <amount>162259026.1600</amount>
+    <Accountcode>20101010</Accountcode>
+    <FullAccountname>20101010 - Accounts Payable</FullAccountname>
+    <GLChartAccountChildID>530</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20101020Due to Officers and Employees</Name>
+    <amount>10373226.7700</amount>
+    <Accountcode>20101020</Accountcode>
+    <FullAccountname>20101020 - Due to Officers and Employees</FullAccountname>
+    <GLChartAccountChildID>531</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20101050Interest Payable</Name>
+    <amount>0.0000</amount>
+    <Accountcode>20101050</Accountcode>
+    <FullAccountname>20101050 - Interest Payable</FullAccountname>
+    <GLChartAccountChildID>533</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20101080Awards and Rewards Payable</Name>
+    <amount>0.0000</amount>
+    <Accountcode>20101080</Accountcode>
+    <FullAccountname>20101080 - Awards and Rewards Payable</FullAccountname>
+    <GLChartAccountChildID>536</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20102040Loans Payable - Domestic</Name>
+    <amount>239501393.9700</amount>
+    <Accountcode>20102040</Accountcode>
+    <FullAccountname>20102040 - Loans Payable - Domestic</FullAccountname>
+    <GLChartAccountChildID>544</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201010Due to BIR</Name>
+    <amount>10839561.3000</amount>
+    <Accountcode>20201010</Accountcode>
+    <FullAccountname>20201010 - Due to BIR</FullAccountname>
+    <GLChartAccountChildID>546</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201020Due to GSIS</Name>
+    <amount>21532867.2500</amount>
+    <Accountcode>20201020</Accountcode>
+    <FullAccountname>20201020 - Due to GSIS</FullAccountname>
+    <GLChartAccountChildID>547</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201030Due to Pag-IBIG</Name>
+    <amount>361458.4200</amount>
+    <Accountcode>20201030</Accountcode>
+    <FullAccountname>20201030 - Due to Pag-IBIG</FullAccountname>
+    <GLChartAccountChildID>548</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201040Due to PhilHealth</Name>
+    <amount>5819749.2600</amount>
+    <Accountcode>20201040</Accountcode>
+    <FullAccountname>20201040 - Due to PhilHealth</FullAccountname>
+    <GLChartAccountChildID>549</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201050Due to NGAs</Name>
+    <amount>9104236.9100</amount>
+    <Accountcode>20201050</Accountcode>
+    <FullAccountname>20201050 - Due to NGAs</FullAccountname>
+    <GLChartAccountChildID>550</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201060Due to GOCCs</Name>
+    <amount>47294.2900</amount>
+    <Accountcode>20201060</Accountcode>
+    <FullAccountname>20201060 - Due to GOCCs</FullAccountname>
+    <GLChartAccountChildID>551</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20201070Due to LGUs</Name>
+    <amount>4645465.3200</amount>
+    <Accountcode>20201070</Accountcode>
+    <FullAccountname>20201070 - Due to LGUs</FullAccountname>
+    <GLChartAccountChildID>552</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20301010Due to Other Funds</Name>
+    <amount>50898872.7400</amount>
+    <Accountcode>20301010</Accountcode>
+    <FullAccountname>20301010 - Due to Other Funds</FullAccountname>
+    <GLChartAccountChildID>554</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20301020Due to Special Accounts</Name>
+    <amount>10391732.3500</amount>
+    <Accountcode>20301020</Accountcode>
+    <FullAccountname>20301020 - Due to Special Accounts</FullAccountname>
+    <GLChartAccountChildID>555</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20301030Due to Local Economic Enterprises</Name>
+    <amount>38820.1100</amount>
+    <Accountcode>20301030</Accountcode>
+    <FullAccountname>20301030 - Due to Local Economic Enterprises</FullAccountname>
+    <GLChartAccountChildID>556</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20401020Trust Liabilities - Disaster Risk Reduction and Management Fund</Name>
+    <amount>906999.9900</amount>
+    <Accountcode>20401020</Accountcode>
+    <FullAccountname>20401020 - Trust Liabilities - Disaster Risk Reduction and Management Fund</FullAccountname>
+    <GLChartAccountChildID>558</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20401040Guaranty/Security Deposits Payable</Name>
+    <amount>80335839.4000</amount>
+    <Accountcode>20401040</Accountcode>
+    <FullAccountname>20401040 - Guaranty/Security Deposits Payable</FullAccountname>
+    <GLChartAccountChildID>560</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20501990Other Deferred Credits</Name>
+    <amount>0.0000</amount>
+    <Accountcode>20501990</Accountcode>
+    <FullAccountname>20501990 - Other Deferred Credits</FullAccountname>
+    <GLChartAccountChildID>567</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>29999990Other Payables</Name>
+    <amount>62168035.9700</amount>
+    <Accountcode>29999990</Accountcode>
+    <FullAccountname>29999990 - Other Payables</FullAccountname>
+    <GLChartAccountChildID>570</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>30101010Government Equity</Name>
+    <amount>13228003045.8100</amount>
+    <Accountcode>30101010</Accountcode>
+    <FullAccountname>30101010 - Government Equity</FullAccountname>
+    <GLChartAccountChildID>571</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>30101020Prior Period Adjustment</Name>
+    <amount>-124138135.4400</amount>
+    <Accountcode>30101020</Accountcode>
+    <FullAccountname>30101020 - Prior Period Adjustment</FullAccountname>
+    <GLChartAccountChildID>572</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>30201010Income and Expense Summary</Name>
+    <amount>0.0000</amount>
+    <Accountcode>30201010</Accountcode>
+    <FullAccountname>30201010 - Income and Expense Summary</FullAccountname>
+    <GLChartAccountChildID>573</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40101020Professional Tax</Name>
+    <amount>112071.0000</amount>
+    <Accountcode>40101020</Accountcode>
+    <FullAccountname>40101020 - Professional Tax</FullAccountname>
+    <GLChartAccountChildID>576</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40102040Real Property Tax- Basic</Name>
+    <amount>20299532.9900</amount>
+    <Accountcode>40102040</Accountcode>
+    <FullAccountname>40102040 - Real Property Tax- Basic</FullAccountname>
+    <GLChartAccountChildID>578</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40102041Discount on Real Property Tax- Basic</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40102041</Accountcode>
+    <FullAccountname>40102041 - Discount on Real Property Tax- Basic</FullAccountname>
+    <GLChartAccountChildID>579</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40102080Real Property Transfer Tax</Name>
+    <amount>1410079.1200</amount>
+    <Accountcode>40102080</Accountcode>
+    <FullAccountname>40102080 - Real Property Transfer Tax</FullAccountname>
+    <GLChartAccountChildID>584</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40103040Tax on Sand, Gravel and Other Quarry Products</Name>
+    <amount>2620674.1700</amount>
+    <Accountcode>40103040</Accountcode>
+    <FullAccountname>40103040 - Tax on Sand, Gravel and Other Quarry Products</FullAccountname>
+    <GLChartAccountChildID>586</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40103050Tax on Delivery  Trucks and Vans</Name>
+    <amount>730000.0000</amount>
+    <Accountcode>40103050</Accountcode>
+    <FullAccountname>40103050 - Tax on Delivery  Trucks and Vans</FullAccountname>
+    <GLChartAccountChildID>587</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40103060Amusement Tax</Name>
+    <amount>26500.0000</amount>
+    <Accountcode>40103060</Accountcode>
+    <FullAccountname>40103060 - Amusement Tax</FullAccountname>
+    <GLChartAccountChildID>588</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40103070Franchise Tax</Name>
+    <amount>245914.9300</amount>
+    <Accountcode>40103070</Accountcode>
+    <FullAccountname>40103070 - Franchise Tax</FullAccountname>
+    <GLChartAccountChildID>589</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40103080Printing and Publication Tax</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40103080</Accountcode>
+    <FullAccountname>40103080 - Printing and Publication Tax</FullAccountname>
+    <GLChartAccountChildID>590</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40104990Other Taxes</Name>
+    <amount>7529675.0000</amount>
+    <Accountcode>40104990</Accountcode>
+    <FullAccountname>40104990 - Other Taxes</FullAccountname>
+    <GLChartAccountChildID>591</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40105010Tax Revenue - Fines and Penalties - Taxes on Individual and Corporation</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40105010</Accountcode>
+    <FullAccountname>40105010 - Tax Revenue - Fines and Penalties - Taxes on Individual and Corporation</FullAccountname>
+    <GLChartAccountChildID>592</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40105020Tax Revenue - Fines and Penalties - Property Taxes</Name>
+    <amount>2299883.7600</amount>
+    <Accountcode>40105020</Accountcode>
+    <FullAccountname>40105020 - Tax Revenue - Fines and Penalties - Property Taxes</FullAccountname>
+    <GLChartAccountChildID>593</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40105030Tax Revenue - Fines and Penalties - Taxes on Goods and Services</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40105030</Accountcode>
+    <FullAccountname>40105030 - Tax Revenue - Fines and Penalties - Taxes on Goods and Services</FullAccountname>
+    <GLChartAccountChildID>594</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40105040Tax Revenue - Fines and Penalties - Other Taxes</Name>
+    <amount>389012.8600</amount>
+    <Accountcode>40105040</Accountcode>
+    <FullAccountname>40105040 - Tax Revenue - Fines and Penalties - Other Taxes</FullAccountname>
+    <GLChartAccountChildID>595</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40106010Share from Internal Revenue Collections (IRA)</Name>
+    <amount>895020849.0000</amount>
+    <Accountcode>40106010</Accountcode>
+    <FullAccountname>40106010 - Share from Internal Revenue Collections (IRA)</FullAccountname>
+    <GLChartAccountChildID>596</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40106030Share from National Wealth</Name>
+    <amount>2846659.1900</amount>
+    <Accountcode>40106030</Accountcode>
+    <FullAccountname>40106030 - Share from National Wealth</FullAccountname>
+    <GLChartAccountChildID>598</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40106040Share from Tobacco Excise Tax (RA 7171 and 8240)</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40106040</Accountcode>
+    <FullAccountname>40106040 - Share from Tobacco Excise Tax (RA 7171 and 8240)</FullAccountname>
+    <GLChartAccountChildID>599</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201010Permit Fees</Name>
+    <amount>111500.0000</amount>
+    <Accountcode>40201010</Accountcode>
+    <FullAccountname>40201010 - Permit Fees</FullAccountname>
+    <GLChartAccountChildID>601</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201020Registration Fees</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40201020</Accountcode>
+    <FullAccountname>40201020 - Registration Fees</FullAccountname>
+    <GLChartAccountChildID>602</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201030Registration Plates, Tags and Stickers Fees</Name>
+    <amount>73000.0000</amount>
+    <Accountcode>40201030</Accountcode>
+    <FullAccountname>40201030 - Registration Plates, Tags and Stickers Fees</FullAccountname>
+    <GLChartAccountChildID>603</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201040Clearance and Certification Fees</Name>
+    <amount>212062.0000</amount>
+    <Accountcode>40201040</Accountcode>
+    <FullAccountname>40201040 - Clearance and Certification Fees</FullAccountname>
+    <GLChartAccountChildID>604</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201070Supervision and Regulation Enforcement Fees</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40201070</Accountcode>
+    <FullAccountname>40201070 - Supervision and Regulation Enforcement Fees</FullAccountname>
+    <GLChartAccountChildID>605</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201100Inspection Fees</Name>
+    <amount>400.0000</amount>
+    <Accountcode>40201100</Accountcode>
+    <FullAccountname>40201100 - Inspection Fees</FullAccountname>
+    <GLChartAccountChildID>606</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201110Verification and Authentication Fees</Name>
+    <amount>992194.0900</amount>
+    <Accountcode>40201110</Accountcode>
+    <FullAccountname>40201110 - Verification and Authentication Fees</FullAccountname>
+    <GLChartAccountChildID>607</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201140Occupation Fees</Name>
+    <amount>153151.8800</amount>
+    <Accountcode>40201140</Accountcode>
+    <FullAccountname>40201140 - Occupation Fees</FullAccountname>
+    <GLChartAccountChildID>609</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201980Fines and Penalties - Service Income</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40201980</Accountcode>
+    <FullAccountname>40201980 - Fines and Penalties - Service Income</FullAccountname>
+    <GLChartAccountChildID>612</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40201990Other Service Income</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40201990</Accountcode>
+    <FullAccountname>40201990 - Other Service Income</FullAccountname>
+    <GLChartAccountChildID>613</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202050Rent Income</Name>
+    <amount>14874.4200</amount>
+    <Accountcode>40202050</Accountcode>
+    <FullAccountname>40202050 - Rent Income</FullAccountname>
+    <GLChartAccountChildID>617</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202060Communication Network Fees</Name>
+    <amount>376295.0000</amount>
+    <Accountcode>40202060</Accountcode>
+    <FullAccountname>40202060 - Communication Network Fees</FullAccountname>
+    <GLChartAccountChildID>618</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202090Waterworks System Fees</Name>
+    <amount>2949725.6800</amount>
+    <Accountcode>40202090</Accountcode>
+    <FullAccountname>40202090 - Waterworks System Fees</FullAccountname>
+    <GLChartAccountChildID>621</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202170Receipts from Printing and Publication</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40202170</Accountcode>
+    <FullAccountname>40202170 - Receipts from Printing and Publication</FullAccountname>
+    <GLChartAccountChildID>629</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202190Garbage Fees</Name>
+    <amount>15181.7200</amount>
+    <Accountcode>40202190</Accountcode>
+    <FullAccountname>40202190 - Garbage Fees</FullAccountname>
+    <GLChartAccountChildID>632</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202200Hospital Fees</Name>
+    <amount>62946672.2000</amount>
+    <Accountcode>40202200</Accountcode>
+    <FullAccountname>40202200 - Hospital Fees</FullAccountname>
+    <GLChartAccountChildID>633</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202220Interest Income</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40202220</Accountcode>
+    <FullAccountname>40202220 - Interest Income</FullAccountname>
+    <GLChartAccountChildID>635</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40202990Other Business Income</Name>
+    <amount>21731591.0000</amount>
+    <Accountcode>40202990</Accountcode>
+    <FullAccountname>40202990 - Other Business Income</FullAccountname>
+    <GLChartAccountChildID>641</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40301020Subsidy  from Local Government Units</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40301020</Accountcode>
+    <FullAccountname>40301020 - Subsidy  from Local Government Units</FullAccountname>
+    <GLChartAccountChildID>643</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40301050Subsidy from General Fund Proper/Other Special Accounts</Name>
+    <amount>1500000.0000</amount>
+    <Accountcode>40301050</Accountcode>
+    <FullAccountname>40301050 - Subsidy from General Fund Proper/Other Special Accounts</FullAccountname>
+    <GLChartAccountChildID>646</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40301060Subsidy from Other Local Economic Enterprise</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40301060</Accountcode>
+    <FullAccountname>40301060 - Subsidy from Other Local Economic Enterprise</FullAccountname>
+    <GLChartAccountChildID>647</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40302030Transfers from National Government</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40302030</Accountcode>
+    <FullAccountname>40302030 - Transfers from National Government</FullAccountname>
+    <GLChartAccountChildID>124575</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40401020Share from PCSO</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40401020</Accountcode>
+    <FullAccountname>40401020 - Share from PCSO</FullAccountname>
+    <GLChartAccountChildID>651</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40402010Grants and Donations in Cash</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40402010</Accountcode>
+    <FullAccountname>40402010 - Grants and Donations in Cash</FullAccountname>
+    <GLChartAccountChildID>652</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40402020Grants and Donations in Kind</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40402020</Accountcode>
+    <FullAccountname>40402020 - Grants and Donations in Kind</FullAccountname>
+    <GLChartAccountChildID>653</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40501050Gain on Sale of Property, Plant and Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>40501050</Accountcode>
+    <FullAccountname>40501050 - Gain on Sale of Property, Plant and Equipment</FullAccountname>
+    <GLChartAccountChildID>659</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>40601010Miscellaneous Income</Name>
+    <amount>2310660.8400</amount>
+    <Accountcode>40601010</Accountcode>
+    <FullAccountname>40601010 - Miscellaneous Income</FullAccountname>
+    <GLChartAccountChildID>668</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50101010Salaries and Wages - Regular</Name>
+    <amount>109603683.3900</amount>
+    <Accountcode>50101010</Accountcode>
+    <FullAccountname>50101010 - Salaries and Wages - Regular</FullAccountname>
+    <GLChartAccountChildID>670</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50101020Salaries and Wages - Casual/Contractual</Name>
+    <amount>40421859.1500</amount>
+    <Accountcode>50101020</Accountcode>
+    <FullAccountname>50101020 - Salaries and Wages - Casual/Contractual</FullAccountname>
+    <GLChartAccountChildID>671</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102010Personal Economic Relief Allowance (PERA)</Name>
+    <amount>8498097.0400</amount>
+    <Accountcode>50102010</Accountcode>
+    <FullAccountname>50102010 - Personal Economic Relief Allowance (PERA)</FullAccountname>
+    <GLChartAccountChildID>672</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102020Representation Allowance (RA)</Name>
+    <amount>1238260.0000</amount>
+    <Accountcode>50102020</Accountcode>
+    <FullAccountname>50102020 - Representation Allowance (RA)</FullAccountname>
+    <GLChartAccountChildID>673</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102030Transportation Allowance (TA)</Name>
+    <amount>133500.0000</amount>
+    <Accountcode>50102030</Accountcode>
+    <FullAccountname>50102030 - Transportation Allowance (TA)</FullAccountname>
+    <GLChartAccountChildID>674</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102040Clothing/Uniform Allowance</Name>
+    <amount>11361000.0000</amount>
+    <Accountcode>50102040</Accountcode>
+    <FullAccountname>50102040 - Clothing/Uniform Allowance</FullAccountname>
+    <GLChartAccountChildID>675</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102050Subsistence Allowance</Name>
+    <amount>1807868.2000</amount>
+    <Accountcode>50102050</Accountcode>
+    <FullAccountname>50102050 - Subsistence Allowance</FullAccountname>
+    <GLChartAccountChildID>676</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102060Laundry Allowance</Name>
+    <amount>188078.0700</amount>
+    <Accountcode>50102060</Accountcode>
+    <FullAccountname>50102060 - Laundry Allowance</FullAccountname>
+    <GLChartAccountChildID>677</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102070Quarters Allowance</Name>
+    <amount>15506.2500</amount>
+    <Accountcode>50102070</Accountcode>
+    <FullAccountname>50102070 - Quarters Allowance</FullAccountname>
+    <GLChartAccountChildID>678</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102080Productivity Incentive Allowance</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50102080</Accountcode>
+    <FullAccountname>50102080 - Productivity Incentive Allowance</FullAccountname>
+    <GLChartAccountChildID>679</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102100Honoraria</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50102100</Accountcode>
+    <FullAccountname>50102100 - Honoraria</FullAccountname>
+    <GLChartAccountChildID>681</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102110Hazard Pay</Name>
+    <amount>13592646.0900</amount>
+    <Accountcode>50102110</Accountcode>
+    <FullAccountname>50102110 - Hazard Pay</FullAccountname>
+    <GLChartAccountChildID>682</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102120Longevity Pay</Name>
+    <amount>185000.0000</amount>
+    <Accountcode>50102120</Accountcode>
+    <FullAccountname>50102120 - Longevity Pay</FullAccountname>
+    <GLChartAccountChildID>683</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102130Overtime and Night Pay</Name>
+    <amount>652570.7200</amount>
+    <Accountcode>50102130</Accountcode>
+    <FullAccountname>50102130 - Overtime and Night Pay</FullAccountname>
+    <GLChartAccountChildID>684</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102140Year End Bonus</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50102140</Accountcode>
+    <FullAccountname>50102140 - Year End Bonus</FullAccountname>
+    <GLChartAccountChildID>685</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102150Cash Gift</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50102150</Accountcode>
+    <FullAccountname>50102150 - Cash Gift</FullAccountname>
+    <GLChartAccountChildID>686</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50102990Other Bonuses and Allowances</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50102990</Accountcode>
+    <FullAccountname>50102990 - Other Bonuses and Allowances</FullAccountname>
+    <GLChartAccountChildID>687</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50103010Retirement and Life Insurance Premiums</Name>
+    <amount>19086131.1400</amount>
+    <Accountcode>50103010</Accountcode>
+    <FullAccountname>50103010 - Retirement and Life Insurance Premiums</FullAccountname>
+    <GLChartAccountChildID>688</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50103020Pag-IBIG Contributions</Name>
+    <amount>1016500.0000</amount>
+    <Accountcode>50103020</Accountcode>
+    <FullAccountname>50103020 - Pag-IBIG Contributions</FullAccountname>
+    <GLChartAccountChildID>689</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50103030PhilHealth Contributions</Name>
+    <amount>3895594.8700</amount>
+    <Accountcode>50103030</Accountcode>
+    <FullAccountname>50103030 - PhilHealth Contributions</FullAccountname>
+    <GLChartAccountChildID>690</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50103040Employees Compensation Insurance Premiums</Name>
+    <amount>509700.0000</amount>
+    <Accountcode>50103040</Accountcode>
+    <FullAccountname>50103040 - Employees Compensation Insurance Premiums</FullAccountname>
+    <GLChartAccountChildID>691</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50104030Terminal Leave Benefits</Name>
+    <amount>13248841.7400</amount>
+    <Accountcode>50104030</Accountcode>
+    <FullAccountname>50104030 - Terminal Leave Benefits</FullAccountname>
+    <GLChartAccountChildID>695</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50104990Other Personnel Benefits</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50104990</Accountcode>
+    <FullAccountname>50104990 - Other Personnel Benefits</FullAccountname>
+    <GLChartAccountChildID>696</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50201010Traveling Expenses - Local</Name>
+    <amount>2605544.5200</amount>
+    <Accountcode>50201010</Accountcode>
+    <FullAccountname>50201010 - Traveling Expenses - Local</FullAccountname>
+    <GLChartAccountChildID>697</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50201020Traveling Expenses - Foreign</Name>
+    <amount>826618.9900</amount>
+    <Accountcode>50201020</Accountcode>
+    <FullAccountname>50201020 - Traveling Expenses - Foreign</FullAccountname>
+    <GLChartAccountChildID>698</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50202010Training Expenses</Name>
+    <amount>8294545.6500</amount>
+    <Accountcode>50202010</Accountcode>
+    <FullAccountname>50202010 - Training Expenses</FullAccountname>
+    <GLChartAccountChildID>699</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50202020Scholarship Grants/Expenses</Name>
+    <amount>11954332.4000</amount>
+    <Accountcode>50202020</Accountcode>
+    <FullAccountname>50202020 - Scholarship Grants/Expenses</FullAccountname>
+    <GLChartAccountChildID>700</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203010Office Supplies Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203010</Accountcode>
+    <FullAccountname>50203010 - Office Supplies Expenses</FullAccountname>
+    <GLChartAccountChildID>701</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203020Accountable Forms Expenses</Name>
+    <amount>164380.0000</amount>
+    <Accountcode>50203020</Accountcode>
+    <FullAccountname>50203020 - Accountable Forms Expenses</FullAccountname>
+    <GLChartAccountChildID>702</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203030Non-Accountable Forms Expenses</Name>
+    <amount>8845.0000</amount>
+    <Accountcode>50203030</Accountcode>
+    <FullAccountname>50203030 - Non-Accountable Forms Expenses</FullAccountname>
+    <GLChartAccountChildID>703</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203040Animal/Zoological Supplies Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203040</Accountcode>
+    <FullAccountname>50203040 - Animal/Zoological Supplies Expenses</FullAccountname>
+    <GLChartAccountChildID>704</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203050Food Supplies Expenses</Name>
+    <amount>7861365.1600</amount>
+    <Accountcode>50203050</Accountcode>
+    <FullAccountname>50203050 - Food Supplies Expenses</FullAccountname>
+    <GLChartAccountChildID>705</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203060Welfare Goods Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203060</Accountcode>
+    <FullAccountname>50203060 - Welfare Goods Expenses</FullAccountname>
+    <GLChartAccountChildID>706</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203070Drugs and Medicines Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203070</Accountcode>
+    <FullAccountname>50203070 - Drugs and Medicines Expenses</FullAccountname>
+    <GLChartAccountChildID>707</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203080Medical, Dental and Laboratory Supplies Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203080</Accountcode>
+    <FullAccountname>50203080 - Medical, Dental and Laboratory Supplies Expenses</FullAccountname>
+    <GLChartAccountChildID>708</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203090Fuel, Oil and Lubricants Expenses</Name>
+    <amount>34115638.0000</amount>
+    <Accountcode>50203090</Accountcode>
+    <FullAccountname>50203090 - Fuel, Oil and Lubricants Expenses</FullAccountname>
+    <GLChartAccountChildID>709</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203100Agricultural and Marine Supplies Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203100</Accountcode>
+    <FullAccountname>50203100 - Agricultural and Marine Supplies Expenses</FullAccountname>
+    <GLChartAccountChildID>710</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203110Textbooks and Instructional Materials Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203110</Accountcode>
+    <FullAccountname>50203110 - Textbooks and Instructional Materials Expenses</FullAccountname>
+    <GLChartAccountChildID>711</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203120Military, Police and Traffic Supplies Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50203120</Accountcode>
+    <FullAccountname>50203120 - Military, Police and Traffic Supplies Expenses</FullAccountname>
+    <GLChartAccountChildID>712</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50203990Other Supplies and Materials Expenses</Name>
+    <amount>2024268.5000</amount>
+    <Accountcode>50203990</Accountcode>
+    <FullAccountname>50203990 - Other Supplies and Materials Expenses</FullAccountname>
+    <GLChartAccountChildID>714</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50204010Water Expenses</Name>
+    <amount>1002505.9300</amount>
+    <Accountcode>50204010</Accountcode>
+    <FullAccountname>50204010 - Water Expenses</FullAccountname>
+    <GLChartAccountChildID>715</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50204020Electricity Expenses</Name>
+    <amount>9926501.3700</amount>
+    <Accountcode>50204020</Accountcode>
+    <FullAccountname>50204020 - Electricity Expenses</FullAccountname>
+    <GLChartAccountChildID>716</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50205010Postage and Courier Services</Name>
+    <amount>49500.0000</amount>
+    <Accountcode>50205010</Accountcode>
+    <FullAccountname>50205010 - Postage and Courier Services</FullAccountname>
+    <GLChartAccountChildID>717</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50205020Telephone Expenses</Name>
+    <amount>426138.6700</amount>
+    <Accountcode>50205020</Accountcode>
+    <FullAccountname>50205020 - Telephone Expenses</FullAccountname>
+    <GLChartAccountChildID>718</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50205030Internet Subscription Expenses</Name>
+    <amount>849915.9200</amount>
+    <Accountcode>50205030</Accountcode>
+    <FullAccountname>50205030 - Internet Subscription Expenses</FullAccountname>
+    <GLChartAccountChildID>719</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50205040Cable, Satellite, Telegraph and Radio Expenses</Name>
+    <amount>28655.6600</amount>
+    <Accountcode>50205040</Accountcode>
+    <FullAccountname>50205040 - Cable, Satellite, Telegraph and Radio Expenses</FullAccountname>
+    <GLChartAccountChildID>720</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50206010Awards/Rewards Expenses</Name>
+    <amount>270000.0000</amount>
+    <Accountcode>50206010</Accountcode>
+    <FullAccountname>50206010 - Awards/Rewards Expenses</FullAccountname>
+    <GLChartAccountChildID>721</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50206020Prizes</Name>
+    <amount>270000.0000</amount>
+    <Accountcode>50206020</Accountcode>
+    <FullAccountname>50206020 - Prizes</FullAccountname>
+    <GLChartAccountChildID>722</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50207010Survey Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50207010</Accountcode>
+    <FullAccountname>50207010 - Survey Expenses</FullAccountname>
+    <GLChartAccountChildID>723</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50207020Research, Exploration and Development Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50207020</Accountcode>
+    <FullAccountname>50207020 - Research, Exploration and Development Expenses</FullAccountname>
+    <GLChartAccountChildID>724</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50208020Desilting and Dredging Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50208020</Accountcode>
+    <FullAccountname>50208020 - Desilting and Dredging Expenses</FullAccountname>
+    <GLChartAccountChildID>726</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50210010Confidential Expenses</Name>
+    <amount>17500000.0000</amount>
+    <Accountcode>50210010</Accountcode>
+    <FullAccountname>50210010 - Confidential Expenses</FullAccountname>
+    <GLChartAccountChildID>728</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50210030Extraordinary and Miscellaneous Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50210030</Accountcode>
+    <FullAccountname>50210030 - Extraordinary and Miscellaneous Expenses</FullAccountname>
+    <GLChartAccountChildID>730</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50211010Legal Services</Name>
+    <amount>330000.0000</amount>
+    <Accountcode>50211010</Accountcode>
+    <FullAccountname>50211010 - Legal Services</FullAccountname>
+    <GLChartAccountChildID>731</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50211020Auditing Services</Name>
+    <amount>63806.2500</amount>
+    <Accountcode>50211020</Accountcode>
+    <FullAccountname>50211020 - Auditing Services</FullAccountname>
+    <GLChartAccountChildID>732</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50211030Consultancy Services</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50211030</Accountcode>
+    <FullAccountname>50211030 - Consultancy Services</FullAccountname>
+    <GLChartAccountChildID>733</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50211990Other Professional Services</Name>
+    <amount>8343835.5900</amount>
+    <Accountcode>50211990</Accountcode>
+    <FullAccountname>50211990 - Other Professional Services</FullAccountname>
+    <GLChartAccountChildID>734</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50212020Janitorial Services</Name>
+    <amount>878948.1200</amount>
+    <Accountcode>50212020</Accountcode>
+    <FullAccountname>50212020 - Janitorial Services</FullAccountname>
+    <GLChartAccountChildID>736</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50212030Security Services</Name>
+    <amount>2629742.0000</amount>
+    <Accountcode>50212030</Accountcode>
+    <FullAccountname>50212030 - Security Services</FullAccountname>
+    <GLChartAccountChildID>737</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50212990Other General Services</Name>
+    <amount>15789223.5600</amount>
+    <Accountcode>50212990</Accountcode>
+    <FullAccountname>50212990 - Other General Services</FullAccountname>
+    <GLChartAccountChildID>738</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213020Repairs and Maintenance - Land Improvements</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50213020</Accountcode>
+    <FullAccountname>50213020 - Repairs and Maintenance - Land Improvements</FullAccountname>
+    <GLChartAccountChildID>740</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213030Repairs and Maintenance - Infrastructure Assets</Name>
+    <amount>966398.6000</amount>
+    <Accountcode>50213030</Accountcode>
+    <FullAccountname>50213030 - Repairs and Maintenance - Infrastructure Assets</FullAccountname>
+    <GLChartAccountChildID>741</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213040Repairs and Maintenance - Buildings and Other Structures</Name>
+    <amount>520858.0000</amount>
+    <Accountcode>50213040</Accountcode>
+    <FullAccountname>50213040 - Repairs and Maintenance - Buildings and Other Structures</FullAccountname>
+    <GLChartAccountChildID>742</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213050Repairs and Maintenance - Machinery and Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50213050</Accountcode>
+    <FullAccountname>50213050 - Repairs and Maintenance - Machinery and Equipment</FullAccountname>
+    <GLChartAccountChildID>743</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213060Repairs and Maintenance - Transportation Equipment</Name>
+    <amount>413019.5700</amount>
+    <Accountcode>50213060</Accountcode>
+    <FullAccountname>50213060 - Repairs and Maintenance - Transportation Equipment</FullAccountname>
+    <GLChartAccountChildID>744</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213070Repairs and Maintenance - Furniture and  Fixtures</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50213070</Accountcode>
+    <FullAccountname>50213070 - Repairs and Maintenance - Furniture and  Fixtures</FullAccountname>
+    <GLChartAccountChildID>745</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50213990Repairs and Maintenance - Other Property, Plant and Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50213990</Accountcode>
+    <FullAccountname>50213990 - Repairs and Maintenance - Other Property, Plant and Equipment</FullAccountname>
+    <GLChartAccountChildID>748</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50214020Subsidy to NGAs</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50214020</Accountcode>
+    <FullAccountname>50214020 - Subsidy to NGAs</FullAccountname>
+    <GLChartAccountChildID>749</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50214030Subsidy to Other Local Government Units</Name>
+    <amount>390135.5000</amount>
+    <Accountcode>50214030</Accountcode>
+    <FullAccountname>50214030 - Subsidy to Other Local Government Units</FullAccountname>
+    <GLChartAccountChildID>750</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50214060Subsidy to Other  Funds</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50214060</Accountcode>
+    <FullAccountname>50214060 - Subsidy to Other  Funds</FullAccountname>
+    <GLChartAccountChildID>751</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50214080Subsidy to Local Economic Enterprises</Name>
+    <amount>1500000.0000</amount>
+    <Accountcode>50214080</Accountcode>
+    <FullAccountname>50214080 - Subsidy to Local Economic Enterprises</FullAccountname>
+    <GLChartAccountChildID>753</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50214990Subsidies - Others</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50214990</Accountcode>
+    <FullAccountname>50214990 - Subsidies - Others</FullAccountname>
+    <GLChartAccountChildID>754</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50215010Transfers of Unspent Current Year DRRM Funds to the Trust Funds</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50215010</Accountcode>
+    <FullAccountname>50215010 - Transfers of Unspent Current Year DRRM Funds to the Trust Funds</FullAccountname>
+    <GLChartAccountChildID>755</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50215020Transfers for Project Equity Share /LGU Counterpart</Name>
+    <amount>4310494.0000</amount>
+    <Accountcode>50215020</Accountcode>
+    <FullAccountname>50215020 - Transfers for Project Equity Share /LGU Counterpart</FullAccountname>
+    <GLChartAccountChildID>756</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50216010Taxes, Duties and Licenses</Name>
+    <amount>450266.5900</amount>
+    <Accountcode>50216010</Accountcode>
+    <FullAccountname>50216010 - Taxes, Duties and Licenses</FullAccountname>
+    <GLChartAccountChildID>757</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50216020Fidelity Bond Premiums</Name>
+    <amount>106425.0000</amount>
+    <Accountcode>50216020</Accountcode>
+    <FullAccountname>50216020 - Fidelity Bond Premiums</FullAccountname>
+    <GLChartAccountChildID>758</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50216030Insurance Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50216030</Accountcode>
+    <FullAccountname>50216030 - Insurance Expenses</FullAccountname>
+    <GLChartAccountChildID>759</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299010Advertising Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50299010</Accountcode>
+    <FullAccountname>50299010 - Advertising Expenses</FullAccountname>
+    <GLChartAccountChildID>760</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299020Printing and Publication Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50299020</Accountcode>
+    <FullAccountname>50299020 - Printing and Publication Expenses</FullAccountname>
+    <GLChartAccountChildID>761</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299030Representation Expenses</Name>
+    <amount>25000.0000</amount>
+    <Accountcode>50299030</Accountcode>
+    <FullAccountname>50299030 - Representation Expenses</FullAccountname>
+    <GLChartAccountChildID>762</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299040Transportation and Delivery Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50299040</Accountcode>
+    <FullAccountname>50299040 - Transportation and Delivery Expenses</FullAccountname>
+    <GLChartAccountChildID>763</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299050Rent Expenses</Name>
+    <amount>220000.0000</amount>
+    <Accountcode>50299050</Accountcode>
+    <FullAccountname>50299050 - Rent Expenses</FullAccountname>
+    <GLChartAccountChildID>764</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299060Membership Dues and Contributions to Organizations</Name>
+    <amount>717300.0000</amount>
+    <Accountcode>50299060</Accountcode>
+    <FullAccountname>50299060 - Membership Dues and Contributions to Organizations</FullAccountname>
+    <GLChartAccountChildID>765</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299070Subscription Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50299070</Accountcode>
+    <FullAccountname>50299070 - Subscription Expenses</FullAccountname>
+    <GLChartAccountChildID>766</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299080Donations</Name>
+    <amount>21003010.8600</amount>
+    <Accountcode>50299080</Accountcode>
+    <FullAccountname>50299080 - Donations</FullAccountname>
+    <GLChartAccountChildID>767</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50299990Other Maintenance and Operating Expenses</Name>
+    <amount>1080844.0000</amount>
+    <Accountcode>50299990</Accountcode>
+    <FullAccountname>50299990 - Other Maintenance and Operating Expenses</FullAccountname>
+    <GLChartAccountChildID>768</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50301020Interest Expenses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50301020</Accountcode>
+    <FullAccountname>50301020 - Interest Expenses</FullAccountname>
+    <GLChartAccountChildID>770</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50301040Bank Charges</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50301040</Accountcode>
+    <FullAccountname>50301040 - Bank Charges</FullAccountname>
+    <GLChartAccountChildID>772</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50301990Other Financial Charges</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50301990</Accountcode>
+    <FullAccountname>50301990 - Other Financial Charges</FullAccountname>
+    <GLChartAccountChildID>774</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501020Depreciation - Land Improvements</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501020</Accountcode>
+    <FullAccountname>50501020 - Depreciation - Land Improvements</FullAccountname>
+    <GLChartAccountChildID>780</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501030Depreciation - Infrastructure Assets</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501030</Accountcode>
+    <FullAccountname>50501030 - Depreciation - Infrastructure Assets</FullAccountname>
+    <GLChartAccountChildID>781</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501040Depreciation - Buildings and Other Structures</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501040</Accountcode>
+    <FullAccountname>50501040 - Depreciation - Buildings and Other Structures</FullAccountname>
+    <GLChartAccountChildID>782</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501050Depreciation - Machinery  and Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501050</Accountcode>
+    <FullAccountname>50501050 - Depreciation - Machinery  and Equipment</FullAccountname>
+    <GLChartAccountChildID>783</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501060Depreciation - Transportation Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501060</Accountcode>
+    <FullAccountname>50501060 - Depreciation - Transportation Equipment</FullAccountname>
+    <GLChartAccountChildID>784</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501070Depreciation - Furniture, Fixtures and Books</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501070</Accountcode>
+    <FullAccountname>50501070 - Depreciation - Furniture, Fixtures and Books</FullAccountname>
+    <GLChartAccountChildID>785</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50501990Depreciation - Other Property, Plant and Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50501990</Accountcode>
+    <FullAccountname>50501990 - Depreciation - Other Property, Plant and Equipment</FullAccountname>
+    <GLChartAccountChildID>789</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50502010Amortization - Intangible Assets</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50502010</Accountcode>
+    <FullAccountname>50502010 - Amortization - Intangible Assets</FullAccountname>
+    <GLChartAccountChildID>790</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50504040Loss on Sale of Propery, Plant and Equipment</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50504040</Accountcode>
+    <FullAccountname>50504040 - Loss on Sale of Propery, Plant and Equipment</FullAccountname>
+    <GLChartAccountChildID>804</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>50504990Other Losses</Name>
+    <amount>0.0000</amount>
+    <Accountcode>50504990</Accountcode>
+    <FullAccountname>50504990 - Other Losses</FullAccountname>
+    <GLChartAccountChildID>811</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+</NewDataSet>

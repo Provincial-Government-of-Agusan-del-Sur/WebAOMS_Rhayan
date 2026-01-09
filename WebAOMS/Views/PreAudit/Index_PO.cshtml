@@ -1,0 +1,156 @@
+﻿ @using WebAOMS.Models;
+    @{
+       
+        fmisEntities fmisdb = new fmisEntities();
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout_Public.cshtml";
+
+        
+    }
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Criteria</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+
+            <div  class="col-lg-6 no-padding">
+                <div class="col-lg-12" style="padding-bottom:5px">
+                    Year
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+                    
+                    .Format("yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                   
+                </div>
+
+            </div>
+            
+            <script>
+                $(document).ready(function (){
+                
+                })
+              
+                function refrehGrid() {
+                    var grid = $("#grid_monitoring").data("kendoGrid");
+                    grid.dataSource.read()
+                }
+                function summary_para() {
+                    var year = kendo.toString($('#dtp_from').data('kendoDatePicker').value(), 'yyyy').toString();;
+                    return { year: year }
+                }
+            </script>
+          
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">PO Transaction Monitoring</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="col-lg-12 no-padding">
+                <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                    <input id="txtsearchEmp" type="text" class="form-control navbar-input" placeholder="Search claimant">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                
+                @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_monitoring")
+        .Columns(columns =>
+        {
+            columns.Bound("TransactionDate").Title("TransactionDate").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("POno").Title("PONo").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("ObrNo").Title("ObrNo").Width(80).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Name").Title("Name").Width(80).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Particular").Title("Particular").Width(150).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Amount").Title("Amount").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("DVNo").Title("DVNo").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("CheckNo").Title("CheckNo").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("CheckDate").Title("CheckDate").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("NetAmount").Title("NetAmount").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Released").Title("Released").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 500px;" })
+        .Scrollable()
+
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            
+            )
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("PO_monitoring_read", "PreAudit").Data("summary_para"))
+            .PageSize(5000)
+        )
+                )
+            </div>
+
+
+            <script>
+                $("#export").click(function (e) {
+                    var grid = $("#grid_monitoring").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+               
+                $('#txtsearchEmp').on('keydown', function (e) {
+                    var gridData = $("#grid_monitoring").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        if ($('#txtsearchEmp').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Particular", $('#txtsearchEmp').val(), 'grid_monitoring')
+                            gridData.dataSource.sort({ field: "DTE", dir: "asc" });
+                        }
+                    }
+                })
+            </script>
+        </div>
+        <hr />
+        <div class="box-footer">
+            <div style="height:10px">
+
+            </div>
+        </div>
+    </div>

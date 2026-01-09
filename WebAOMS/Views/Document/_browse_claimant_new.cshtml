@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<div class="box" style="width:100%;margin-bottom:0px!important">
+    <div class="box-body">
+        <form id="frm_add_claimant">
+            <input id="idclamantType" name="clamantType" type="text" hidden/> 
+            <input name="ClaimantCode" type="text" hidden /> 
+            <div id="idnameCompany" class="col-md-6 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span id="spanlname" >Last Name</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input name="LastName" class="form-control text-left " placeholder="" type="text">
+                </div>
+             </div>
+            <div id="idname">
+                <div class="col-md-6 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>First Name</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input name="Firstname" class="form-control text-left " placeholder="" type="text">
+                    </div>
+                </div>
+
+                <div class="col-md-6 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Middle Name</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input name="MI" class="form-control text-left " maxlength="10" placeholder="" type="text">
+                    </div>
+                </div>
+                <div class="col-md-6 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Suffix</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input name="Suffix" class="form-control text-left " placeholder="" type="text">
+                    </div>
+                </div>
+            </div>
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Address</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input name="Address" maxlength="500" class="form-control text-left " placeholder="" type="text">
+                </div>
+            <div class="col-md-6 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Contact No.</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input name="ContactNo" class="form-control text-left " placeholder="" type="text">
+                </div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>TIN No.</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input name="TIN" class="form-control text-left " placeholder="" type="text">
+                </div>
+            </div>
+
+</form>
+        <script>
+            function btn_save_claimant() {
+                startSpin()
+                var frm = $("#frm_add_claimant").serialize();
+                $.post('@Url.Action("save_claimant", "Document")',
+                    frm
+                , function (r) {
+                    if (r.code == 6) {
+                        toastr.success(r.statusName, 'System Message')
+                        stopSpin()
+                        var cliamant = $("#dp_claimant").data("kendoComboBox");
+                        cliamant.dataSource.read();
+                        $("#dp_claimant").data("kendoComboBox").value(r.Claimantcode)
+                    }
+                    else {
+                        stopSpin()
+                        toastr.warning(r.statusName, 'System Message');
+                    }
+
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    mg.warning("" + textStatus + "")
+                });
+            }
+
+            $(document).ready(function () {
+                var claimanttype = $("#claimantypeOptionID").val();
+                $("#idclamantType").val($("#claimantypeOptionID").val());
+                if (claimanttype == 2)
+                {
+                    $("#idnameCompany").removeClass("col-md-12").addClass("col-md-6"); // Reset to original class
+                    $("#spanlname").text("Last Name"); // Reset span text
+                    $("#idname").show();
+                }
+                if (claimanttype == 3) {
+                    $("#idnameCompany").removeClass("col-md-6").addClass("col-md-12"); // Change class
+                    $("#spanlname").text("Company Name:"); // Update the span text
+                    $("#idname").hide();
+                } 
+              
+            })
+        </script>
+    </div>
+</div>
+<script>
+
+</script>

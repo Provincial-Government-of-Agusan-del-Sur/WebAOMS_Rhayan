@@ -1,0 +1,147 @@
+﻿<div class="box">
+    <div class="col-lg-6">
+        <div class="box">
+            <div class="box-head">
+                <header><h4 class="text-light">Available <strong>Offices</strong> </h4></header>
+            </div>
+
+            <div class="box-body">
+                <script>
+                            function availOfficePara() {
+                                var eid = $('#cbo_employee').data("kendoComboBox").value();
+
+                                return { GridSourceID: 4004, para1: eid, para2: 0 }
+                            }
+                            function click_unpostedCheck() {
+                                var chk = document.getElementById('chk_Unposted');
+                                if (chk.checked == true) {
+
+                                    $("#gridAvailOffice input[type=checkbox]").each(function () {
+                                        $(this).prop("checked", true);
+                                    });
+                                }
+                                else {
+                                    $("#gridAvailOffice input[type=checkbox]").each(function () {
+                                        $(this).prop("checked", false);
+                                    });
+                                }
+                            }
+                </script>
+                <div class="form-footer" style="padding-left:0px;padding-top:0px!important">
+                    <button onclick="click_post()" type="button" class="btn btn-primary"><i class="fa fa-plus"></i> Add</button>
+                </div>
+                <div class="row">
+                    @(Html.Kendo().Grid<dynamic>()
+                        .Name("gridAvailOffice")
+                            .Sortable()
+                            .Pageable()
+                            .Scrollable()
+                            .AutoBind(false)
+                            //.Filterable()
+                        .HtmlAttributes(new { style = "height:450px" })
+                                .Selectable(m => m
+                                .Mode(GridSelectionMode.Single)
+                                .Type(GridSelectionType.Row)
+                            )
+                        .Columns(columns =>
+                        {
+                        columns.Template(@<text></text>)
+                            .Title(" ")
+                            .Width(160)
+                            .HtmlAttributes(new { style = "text-align:center;font-size:13px" })
+                            .HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" })
+                            .HeaderTemplate("<input id='chk_Unposted' type='checkbox' onclick='click_unpostedCheck(this.checked)' />").Width(10)
+                             .ClientTemplate("<input id='chk_#=officeID#' type='checkbox'/>").Width(10);
+                            columns.Bound("OfficeName").Width(105).Title("Office Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                        })
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .PageSize(400)
+                                .ServerOperation(false)
+                                .Read(read => read.Action("LoadGridDatasource", "RegularPayroll").Data("availOfficePara"))
+                                )
+                            .Resizable(resize => resize.Columns(true))
+                            )
+
+                    <script>
+                    function onChange(arg) {
+                        kendoConsole.log("The selected product ids are: [" + this.selectedKeyNames().join(", ") + "]");
+                    }
+                    </script> 
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="box">
+            <div class="box-head">
+                <header><h4 class="text-light">List of offices that can be accessed by the user</h4></header>
+            </div>
+            <script>
+                        function userOfficePara() {
+                            var eid = $('#cbo_employee').data("kendoComboBox").value();
+                            return { GridSourceID: 4004, para1: eid, para2: 1 }
+                        }
+                        function click_postedCheck() {
+                            var chk = document.getElementById('chk_posted');
+                            if (chk.checked == true) {
+                                $("#griduserOffice input[type=checkbox]").each(function () {
+                                    $(this).prop("checked", true);
+                                });
+                            }
+
+                            else {
+                                $("#griduserOffice input[type=checkbox]").each(function () {
+                                    $(this).prop("checked", false);
+                                });
+                            }
+                        }
+            </script>
+            <div class="box-body">
+                <div class="form-footer" style="padding-left:0px;padding-top:0px!important">
+                    <button onclick="click_remove()" type="button" class="btn btn-primary"><i class="fa fa-trash"></i> Remove</button>
+                </div>
+                <div class="row">
+                    @(Html.Kendo().Grid<WebAOMS.Models.AvailableOffice>()
+                .Name("griduserOffice")
+                    .Sortable()
+                    .Pageable()
+                    .Scrollable()
+                    .AutoBind(false)
+                    //.Filterable()
+                    .HtmlAttributes(new { style = "height:450px" })
+                            .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row)
+                        )
+                .Columns(columns =>
+                {
+                columns.Template(@<text></text>)
+                    .Title(" ")
+                    .Width(160)
+                    .HtmlAttributes(new { style = "text-align:center;font-size:13px" })
+                    .HeaderHtmlAttributes(new { style = "text-align:center; font-size:13px" })
+                    .HeaderTemplate("<input id='chk_posted' type='checkbox' onclick='click_postedCheck(this.checked)' />").Width(10)
+                     .ClientTemplate("<input id='chkp_#=OfficeID#' type='checkbox'/>").Width(10);
+                    columns.Bound(M => M.Officename).Width(105).Title("Office Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                })
+                    .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .PageSize(400)
+                    .ServerOperation(true)
+                    .Model(M =>
+                    {
+                        M.Id(G => G.OfficeID);
+                    })
+                            .Read(read => read.Action("LoadGridDatasource", "RegularPayroll").Data("userOfficePara"))
+                    )
+                    .Resizable(resize => resize.Columns(true))
+                    )
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

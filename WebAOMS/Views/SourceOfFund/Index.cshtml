@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-block ">
+    <div class="page-block-inside borderAll bg-color3 title-panel " >
+        <span class="bg-dark icon-panel"><i class="fa fa-tasks fa-lg "></i></span><i class="tri-shape"></i>
+        <div style="float:left; font-size:18px; font-family: 'Segoe UI Light_','Open Sans Light',Verdana,Arial,Helvetica,sans-serif; line-height:1.0" >&nbsp;Source of Fund</div>
+    </div>
+    <div class="borderAll" style="padding:5px">
+        <div class="lfloat" style="width:320px; height:100%; border:1px solid #dadada; margin-right:5px;">
+            @Html.Partial("_Details")
+        </div>
+        <div class="lfloat" style="width:453px">
+            @Html.Partial("_grid")
+        </div>
+        <div class="clear topm-5" ></div>  
+    </div>
+</div>  
+<div class="page-block-inside">
+    <div class="block m-buttom-bg" style="margin: -5px 0 0px 0; width:100%;">
+        <div class="rfloat" style="margin-right:5px;">
+            <button onclick="onewSOF()" class="k-button" > <i class="fa fa-plus fa-lg"></i> New Source of fund</button>        
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

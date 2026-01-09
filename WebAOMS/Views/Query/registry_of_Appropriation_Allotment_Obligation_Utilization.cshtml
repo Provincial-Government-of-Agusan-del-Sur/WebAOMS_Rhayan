@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "Status of Appropriation, Allotment, Obligation and Utilization";
+    ViewBag.Title_mini = "SAAOU";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box col-md-12 no-padding">
+                    <div class="box-head">
+                        <header>
+                            <h4 class="text-bold">Criteria</h4>
+                        </header>
+                        <div class="tools">
+                            <div class="btn-group ">
+                                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh" onclick="click_reset()"></i></a>
+                                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                                    /*.k-loading-mask {
+                            display: none !important;
+                        }*/
+                    </style>
+                    <div class="box-body">
+
+                        <div id="payrollType-1" class="col-lg-6 no-padding">
+                            <div class="col-lg-12 no-padding">
+                                Period
+                            </div>
+                            <div class="col-lg-12 no-padding" style="padding-bottom:10px!important">
+
+                                @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(System.DateTime.Now)
+                    .Start(CalendarView.Year)
+                    .Depth(CalendarView.Month)
+                    .HtmlAttributes(new { type = "text" })
+                                )
+                                @*<button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>*@
+                            </div>
+
+                        </div>
+
+                        <script>
+                function para_dp() {
+                    return {claimantName:""}
+                }
+                        </script>
+                        <div id="payrollType-3" class="col-lg-12 no-padding" style="display:block">
+                            <div class="col-lg-12 no-padding">
+                                Query Name
+                            </div>
+                            <div class="col-lg-12 no-padding">
+                                @(Html.Kendo().ComboBox()
+                      .Name("dp_criteria")
+                      .Placeholder("Select Criteria...")
+                     .HtmlAttributes(new { style = "width:100%; text-align:left;" })
+                    .DataTextField("Name")
+                    .DataValueField("ID")
+                    .AutoBind(true)
+                      .Filter("contains")
+
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("get_criteria_raaou", "Query");
+
+                          });
+                      })
+                    //  .Events (e=> e.Change("refrehGrid"))
+                                )
+
+                            </div>
+                            <div class="col-lg-12 no-padding" style="padding-top:10px">
+
+                                <button class="btn btn-default" onclick="print_report()" type="button"><i class="fa fa-print"></i></button>
+                            </div>
+                        </div>
+
+                        <script>
+            var Isreset = false;
+            function click_reset() {
+                Isreset = true;
+                refrehGrid();
+            }
+
+                function summary_para() {
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    var criteria = $('#dp_criteria').data('kendoComboBox').value()
+                    return { to: to, ID: criteria,isreset:Isreset }
+                }
+
+                function Success_event() {
+                    stopSpin()
+                    Isreset = false;
+            }
+                        </script>
+                    </div>
+                </div>
+
+
+
+<div class="box col-lg-12 no-padding" >
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body no-padding">
+
+            <iframe id="id_print_result"  class="col-sm-12 no-padding" style="height:900px;border:none;" >
+
+            </iframe>
+            <a id="a_id_link" href="" target="iframe_a">Maximized</a>
+    <script>
+        function print_report() {
+            var to = kendo.toString($('#dtp_to').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString(); 
+            startSpin()
+            $.post('@Url.Content("~/Query/get_raauo_url")', { fundid: 101,to:to,rptid:$('#dp_criteria').data('kendoComboBox').value() }
+                , function (r) {
+
+                    $('#id_print_result').attr('src', r)
+                    $('#a_id_link').attr('src', r)
+                    // hackishly force iframe to reload
+                    var iframe = document.getElementById("id_print_result");
+                    iframe.src = iframe.src;
+
+                    var alink = document.getElementById("a_id_link");
+                    alink.src = alink.src
+                    stopSpin()
+                })
+        }
+    </script>
+    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    </div>
+    <hr />
+    <div class="box-footer">
+        <div style="height:20px">
+            
+        </div>
+    </div>
+<script>
+    function view_trans_details(dvno) {
+        startSpin()
+        $.post('@Url.Action("_partial_view_transdetails", "PreAudit")', {dvno:dvno}, function (r) {
+            stopSpin()
+            $("#body_details_grid").html(r)
+            $("#modal_transaction_details").modal("show");
+        })
+    }
+</script>
+
+<div class="modal" id="modal_transaction_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Transaction Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

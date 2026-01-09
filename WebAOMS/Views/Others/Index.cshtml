@@ -1,0 +1,96 @@
+﻿
+
+        <script>
+
+                $(document).ready(function (){
+
+                })
+
+                function refrehGrid() {
+                    var grid = $("#grid_monitoring").data("kendoGrid");
+                    grid.dataSource.read()
+                }
+                function summary_para() {
+                    return { name: $("#txtsearchEmp").val() }
+                }
+        </script>
+
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Search Name</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body">
+        <div class="col-lg-12 no-padding">
+            <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                <input id="txtsearchEmp" type="text" class="form-control navbar-input" placeholder="Search claimant">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-12 no-padding">
+            <button id="export">Export to Excel</button>
+            @(Html.Kendo().Grid<dynamic>()
+.Name("grid_monitoring")
+.Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single))
+        .Columns(columns =>
+         {
+             columns.Bound("name").Title("Particular").Width(150).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+             columns.Bound("Precinct").Title("DVNo").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+             columns.Bound("purok").Title("CheckDate").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+         })
+        .AutoBind(false)
+        .HtmlAttributes(new { style = "height: 500px;" })
+        .Scrollable()
+
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+
+            )
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("v_List_read", "Others").Data("summary_para"))
+            .PageSize(5000)
+        )
+            )
+        </div>
+
+
+        <script>
+            $("#export").click(function (e) {
+                var grid = $("#grid_monitoring").data("kendoGrid");
+                grid.saveAsExcel();
+            });
+
+            $('#txtsearchEmp').on('keydown', function (e) {
+                var gridData = $("#grid_monitoring").data("kendoGrid");
+                if (e.keyCode == 13) {
+                    refrehGrid()
+                }
+            })
+        </script>
+    </div>
+    <hr />
+    <div class="box-footer">
+        <div style="height:10px">
+
+        </div>
+    </div>
+</div>

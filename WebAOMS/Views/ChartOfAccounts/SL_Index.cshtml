@@ -1,0 +1,160 @@
+﻿
+@{
+    ViewBag.Title = "SL Buildup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title_mini = "Subsidiary Ledger Buildup";
+}
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <div class="row">
+            <div class="input-group control-width-large pull-right" style="padding-bottom:5px!important">
+                <input id="txt_search_account" type="text" class="form-control navbar-input" placeholder="Search Account code or account name">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <script>
+            $('#txt_search_account').on('keydown', function (e) {
+                var gridData = $("#grid_COA").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                    if ($('#txt_search_account').val() == "") {
+                        gridData.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("AccountChildName", $('#txt_search_account').val(), 'grid_COA')
+                        gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                    }
+                //}
+            })
+
+
+        </script>
+        <div class="row">
+         @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_ChartOfAccountsChild>()
+        .Name("grid_COA")
+        .Columns(columns =>
+        {
+            columns.Bound(m => m.code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Bound(m => m.AccountChildName).Width(450);
+            columns.Bound("").Width(150).Title("Beginning Balance");
+            columns.Template(@<text></text>)
+            .Width(150)
+            .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+            .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"view_subaccount(#=ChartAccountChildID#, '#=AccountChildName#','#=code#','#=ChildCode#')\" class=\"btn btn-md btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-list\"></i></button> ");
+        })
+        //.Selectable(selectable => selectable
+        //.Mode(GridSelectionMode.Single))
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 400px;" })
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("COA_read", "ChartOfAccounts"))
+            .PageSize(200)
+        )
+        )
+        </div>
+    </div>
+    <hr />
+    <div class="box-footer">
+        <div style="height:10px">
+
+        </div>
+    </div>
+</div>
+<script>
+    function view_subaccount(ChartAccountChildID, AccountChildName,code,childcode) {
+        startSpin()
+        $.post('@Url.Action("_partial_view_subaccount", "ChartOfAccounts")', { ChartAccountChildID: ChartAccountChildID, code: code, AccountChildName: AccountChildName, ChildCode: childcode }
+            , function (r) {
+            stopSpin()
+            $("#id_chartAccountID").val(ChartAccountChildID)
+            $("#body_details_subaccount").html(r)
+            
+            $("#modal_subaccount").modal("show");
+        })
+    }
+
+    function show_import_excel() {
+        startSpin()
+        $.post('@Url.Action("import_account_excel", "ChartOfAccounts")', {}, function (r) {
+            $("#body_import").html("")
+            stopSpin()
+            $("#body_import").html(r)
+            $("#mdl_import").modal("show");
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+
+</script>
+<div class="modal" id="modal_subaccount" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title"></h4>
+                <input id="id_chartAccountID" hidden type="text" />
+                <input id="id_leveLno" hidden />
+            </div>
+            <div id="body_details_subaccount" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_back()" type="button" class="btn btn-success pull-left"><i class="fa fa-backward"></i> Back</button>
+                <button onclick="clickNewSubAccount()" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
+                <button onclick="show_import_excel()" type="button" class="btn btn-default"><i class="fa fa-file-excel-o"></i> Import Excel</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mdl_import" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_import_id" class="modal-title">Import Account via Excel</h4>
+            </div>
+            <div id="body_import" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer" style="border-top:none!important">
+                <div class="col-md-6">
+                    <div class="input-group no-padding col-md-12">
+                        <input id="txt_total" type="text" style="text-align:right" disabled class="form-control navbar-input" placeholder="Total">
+                        <span class="input-group-btn">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button onclick="save_import_entries()" type="button" class="btn btn-success"><i class="fa fa-download"></i> Import</button>
+                    <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_import()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

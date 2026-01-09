@@ -1,0 +1,266 @@
+﻿
+@{
+    ViewBag.Title = "Status of Appropriation, Allotment, Obligation and Utilization";
+    ViewBag.Title_mini = "SAAOU";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Criteria</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh" onclick="click_reset()"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body">
+
+        <div id="payrollType-1" class="col-lg-6 no-padding">
+            <div class="col-lg-12 no-padding">
+                Period
+            </div>
+            <div class="col-lg-12 no-padding" style="padding-bottom:10px!important">
+                
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM yyyy")
+                    .Value(System.DateTime.Now)
+                    .Start(CalendarView.Year)
+                    .Depth(CalendarView.Year)
+                    .HtmlAttributes(new { type = "text" })
+                     .Events(e => e.Change("refrehGrid"))
+                )
+                @*<button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>*@
+            </div>
+
+        </div>
+        <div id="payrollType-3" class="col-lg-12 no-padding" style="display:block">
+            <div class="col-lg-12 no-padding">
+                Query Name
+            </div>
+            <div class="col-lg-12 no-padding">
+                @(Html.Kendo().ComboBox()
+                      .Name("dp_criteria")
+                      .Placeholder("Select Criteria...")
+                     .HtmlAttributes(new { style = "width:100%; text-align:left;" })
+                    .DataTextField("Name")
+                    .DataValueField("ID")
+                    .AutoBind(true)
+                    .SelectedIndex(0)
+                      .Filter("contains")
+
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("get_criteria_bir_remit", "Query");
+
+                          });
+                      })
+                      .Events(e => e.Change("refrehGrid"))
+                )
+
+            </div>
+            @*<div class="col-lg-12 no-padding" style="padding-top:10px">
+
+                <button class="btn btn-default" onclick="print_report()" type="button"><i class="fa fa-print"></i></button>
+            </div>*@
+        </div>
+        <script>
+                function para_dp() {
+                    return {claimantName:""}
+                }
+        </script>
+ 
+
+        <script>
+            var Isreset = false;
+            function click_reset() {
+                Isreset = true;
+                refrehGrid();
+            }
+            function refrehGrid() {
+                    startSpin()
+                    var grid = $("#grid_bir_remittance").data("kendoGrid");
+                    grid.dataSource.read()
+            }
+
+            function summary_para() {
+                var to = $('#dtp_to').data('kendoDatePicker').value();
+                var criteria = $('#dp_criteria').data('kendoComboBox').value()
+                return { to: to, criteria : criteria }
+            }
+
+            function Success_event_summary() {
+                stopSpin()
+            }
+
+        </script>
+    </div>
+</div>
+
+<div class="box" >
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Results</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body">
+        <div id="div_tracking_1" class="col-lg-12 no-padding gridhideoptiondiv" >
+            @(Html.Kendo().Grid<dynamic>()
+                .Name("grid_bir_remittance")
+                .Columns(columns =>
+                {
+                    columns.Bound("DVNO").Title("DVNO").Width(130).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("CheckNo").Title("CheckNo").Width(120).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("CheckDate").Title("CheckDate").Width(100).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    //columns.Bound("Particular").Title("Particular").Width(250).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("ClaimantName").Title("ClaimantName").Width(160).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("formcode").Title("formcode").Width(80).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("GrossAmount").Title("GrossAmount").Width(160).Format("{0:N2}").Width(130).HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("deduction").Title("Tax").Width(160).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("otherdetails").Title("TaxDesciption").Width(190).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("remittanceDate").Title("Remittance Date").Format("{0:dd/MM/yyyy}").Width(120).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("jevdate").Title("JEV Date").Width(140).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                })
+                .Filterable()
+                .AutoBind(true)
+
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("Result_Criteria_bir_remit_read", "Query").Data("summary_para"))
+                .PageSize(20000)
+                )
+                .Events(e=> e.DataBound("Success_event_summary"))
+            )
+        </div>
+       
+        
+
+    </div>
+    <script>
+       
+            @*function call_grid(id) {
+                $(document).ready(function () {
+                    var url = "@Url.Action("Result_Criteria_raaou_read", "Query")";
+                    $("#grid_obligate").kendoGrid({
+                        dataSource: {
+                            type: "odata",
+                            transport: {
+                                read: url
+                            },
+                            schema: {
+                                model: {
+                                    fields: {
+                                        UnitsInStock: { type: "number" },
+                                        ProductName: { type: "string" },
+                                        UnitPrice: { type: "number" },
+                                        UnitsOnOrder: { type: "number" },
+                                        UnitsInStock: { type: "number" }
+                                    }
+                                }
+                            },
+                            pageSize: 7,
+                            group: {
+                                field: "UnitsInStock", aggregates: [
+                                    { field: "ProductName", aggregate: "count" },
+                                    { field: "UnitPrice", aggregate: "sum" },
+                                    { field: "UnitsOnOrder", aggregate: "average" },
+                                    { field: "UnitsInStock", aggregate: "count" }
+                                ]
+                            },
+
+                            aggregate: [{ field: "ProductName", aggregate: "count" },
+                            { field: "UnitPrice", aggregate: "sum" },
+                            { field: "UnitsOnOrder", aggregate: "average" },
+                            { field: "UnitsInStock", aggregate: "min" },
+                            { field: "UnitsInStock", aggregate: "max" }]
+                        },
+                        sortable: true,
+                        scrollable: false,
+                        pageable: true,
+                        columns: [
+                            { field: "ProductName", title: "Product Name", aggregates: ["count"], footerTemplate: "Total Count: #=count#", groupFooterTemplate: "Count: #=count#" },
+                            { field: "UnitPrice", title: "Unit Price", aggregates: ["sum"], groupHeaderColumnTemplate: "Sum: #=sum#" },
+                            {
+                                field: "UnitsOnOrder", title: "Units On Order", aggregates: ["average"], footerTemplate: "Average: #=average#",
+                                groupFooterTemplate: "Average: #=average#"
+                            },
+                            {
+                                field: "UnitsInStock", title: "Units In Stock", aggregates: ["min", "max", "count"], footerTemplate: "<div>Min: #= min #</div><div>Max: #= max #</div>",
+                                groupHeaderTemplate: "Units In Stock: #= value # (Count: #= count#)"
+                            } 
+                        ]
+                    });
+                });
+
+            }*@
+
+-
+    </script>
+    </div>
+    <hr />
+    <div class="box-footer">
+        <div style="height:20px">
+            
+        </div>
+    </div>
+<script>
+    function view_trans_details(dvno) {
+        startSpin()
+        $.post('@Url.Action("_partial_view_transdetails", "PreAudit")', {dvno:dvno}, function (r) {
+            stopSpin()
+            $("#body_details_grid").html(r)
+            $("#modal_transaction_details").modal("show");
+        })
+    }
+</script>
+
+<div class="modal" id="modal_transaction_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Transaction Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,400 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CatName" type="xs:string" minOccurs="0" />
+                <xs:element name="OfficeName" type="xs:string" minOccurs="0" />
+                <xs:element name="OOEName" type="xs:string" minOccurs="0" />
+                <xs:element name="programName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Allotment" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Obligation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableAmount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableUtilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderOOE" type="xs:string" minOccurs="0" />
+                <xs:element name="OOECode" type="xs:int" minOccurs="0" />
+                <xs:element name="CatNameOrder" type="xs:string" minOccurs="0" />
+                <xs:element name="OOEName2" type="xs:string" minOccurs="0" />
+                <xs:element name="functionID" type="xs:int" minOccurs="0" />
+                <xs:element name="FMISOfficeID" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OOEName" type="xs:string" minOccurs="0" />
+                <xs:element name="Allotment" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Obligation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableAmount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableUtilization" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>STATUS OF APPROPRIATIONS, ALLOTMENTS, OBLIGATIONS, CONSUMMATED OBLIGATIONS AND COMMITMENTS(Special Education Fund)</T1>
+    <fundtype>CURRENT LEGISLATIVE APPROPRIATIONS</fundtype>
+    <dateString>As of October 26, 2021</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Acquisition and Titling of School Sites</OOEName>
+    <programName>Acquisition and Titling of School Sites</programName>
+    <AccountName>Acquisition and Titling of School Sites_MOOE</AccountName>
+    <Appropropriation>1300000.00</Appropropriation>
+    <Allotment>1300000.00</Allotment>
+    <Obligation>1300000.00</Obligation>
+    <Utilization>1300000.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1300000.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Construction/Improvement of School Buildings and other Facilities</OOEName>
+    <programName>Construction/Improvement of School Buildings and other Facilities</programName>
+    <AccountName>Construction of Handwashing Facilities</AccountName>
+    <Appropropriation>1760000.00</Appropropriation>
+    <Allotment>1760000.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>3</orderOOE>
+    <OOECode>3</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Capital Outlay</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Health and Sanitation Project</OOEName>
+    <programName>Health and Sanitation Project</programName>
+    <AccountName>Gulayan sa Paaralan</AccountName>
+    <Appropropriation>3623400.00</Appropropriation>
+    <Allotment>3623400.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Operation and Maintenance of Public Schools</OOEName>
+    <programName>Operation and Maintenance of Public Schools</programName>
+    <AccountName>Honorarium for Duplo Operators</AccountName>
+    <Appropropriation>2640000.00</Appropropriation>
+    <Allotment>1980000.00</Allotment>
+    <Obligation>1980000.00</Obligation>
+    <Utilization>1980000.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1980000.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Operation and Maintenance of Public Schools</OOEName>
+    <programName>Operation and Maintenance of Public Schools</programName>
+    <AccountName>Honorarium for Learning Support Aides</AccountName>
+    <Appropropriation>5280000.00</Appropropriation>
+    <Allotment>3960000.00</Allotment>
+    <Obligation>3960000.00</Obligation>
+    <Utilization>3960000.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>3960000.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Operation and Maintenance of Public Schools</OOEName>
+    <programName>Operation and Maintenance of Public Schools</programName>
+    <AccountName>Honorarium for Non-Teaching Positions</AccountName>
+    <Appropropriation>3600000.00</Appropropriation>
+    <Allotment>2700000.00</Allotment>
+    <Obligation>2700000.00</Obligation>
+    <Utilization>2700000.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2700000.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Acquisition of School Facilities and Equipment</OOEName>
+    <programName>Acquisition of School Facilities and Equipment</programName>
+    <AccountName>Procurement of Radio Transistors for RBI Learners</AccountName>
+    <Appropropriation>1485000.00</Appropropriation>
+    <Allotment>1485000.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Acquisition of School Facilities and Equipment</OOEName>
+    <programName>Acquisition of School Facilities and Equipment</programName>
+    <AccountName>Procurement of Radio-Based Instruction Equipment</AccountName>
+    <Appropropriation>2128500.00</Appropropriation>
+    <Allotment>2128500.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>3</orderOOE>
+    <OOECode>3</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Capital Outlay</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Health and Sanitation Project</OOEName>
+    <programName>Health and Sanitation Project</programName>
+    <AccountName>Provision of equipment for the promotion of health and wellbeing (Other Supplies &amp; Materials)</AccountName>
+    <Appropropriation>379500.00</Appropropriation>
+    <Allotment>379500.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Health and Sanitation Project</OOEName>
+    <programName>Health and Sanitation Project</programName>
+    <AccountName>Provision of equipment for the promotion of health and wellbeing (Sports Equipment)</AccountName>
+    <Appropropriation>621000.00</Appropropriation>
+    <Allotment>621000.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>3</orderOOE>
+    <OOECode>3</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Capital Outlay</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Health and Sanitation Project</OOEName>
+    <programName>Health and Sanitation Project</programName>
+    <AccountName>Provision of Micronutrients-Vitamin C for Grades 1-3 Learners</AccountName>
+    <Appropropriation>4320000.00</Appropropriation>
+    <Allotment>4320000.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Construction/Improvement of School Buildings and other Facilities</OOEName>
+    <programName>Construction/Improvement of School Buildings and other Facilities</programName>
+    <AccountName>Provision of Rainwater Collector</AccountName>
+    <Appropropriation>2000000.00</Appropropriation>
+    <Allotment>2000000.00</Allotment>
+    <Obligation>0.00</Obligation>
+    <Utilization>0.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>0.00</PayableUtilization>
+    <orderOOE>3</orderOOE>
+    <OOECode>3</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Capital Outlay</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Operation and Maintenance of Public Schools</OOEName>
+    <programName>Operation and Maintenance of Public Schools</programName>
+    <AccountName>Reproduction of Kindergarten Toolkit for Parents</AccountName>
+    <Appropropriation>1646770.00</Appropropriation>
+    <Allotment>1646770.00</Allotment>
+    <Obligation>1646770.00</Obligation>
+    <Utilization>1646770.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1646770.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Special Projects/Activities</OOEName>
+    <programName>Special Projects/Activities</programName>
+    <AccountName>Support to Special Projects_CO</AccountName>
+    <Appropropriation>2276837.18</Appropropriation>
+    <Allotment>2276837.18</Allotment>
+    <Obligation>2276837.18</Obligation>
+    <Utilization>2276837.18</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2276837.18</PayableUtilization>
+    <orderOOE>3</orderOOE>
+    <OOECode>3</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Capital Outlay</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Special Projects/Activities</OOEName>
+    <programName>Special Projects/Activities</programName>
+    <AccountName>Support to Special Projects_MOOE</AccountName>
+    <Appropropriation>973162.82</Appropropriation>
+    <Allotment>973162.82</Allotment>
+    <Obligation>973162.82</Obligation>
+    <Utilization>973162.82</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>973162.82</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES-SEF</CatName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <OOEName>Operation and Maintenance of Public Schools</OOEName>
+    <programName>Operation and Maintenance of Public Schools</programName>
+    <AccountName>Teachers Honorarium</AccountName>
+    <Appropropriation>13500000.00</Appropropriation>
+    <Allotment>10125000.00</Allotment>
+    <Obligation>10125000.00</Obligation>
+    <Utilization>10125000.00</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>10125000.00</PayableUtilization>
+    <orderOOE>2</orderOOE>
+    <OOECode>2</OOECode>
+    <CatNameOrder>8</CatNameOrder>
+    <OOEName2>Maintenance and Other Operating Expenses</OOEName2>
+    <functionID>3999</functionID>
+    <FMISOfficeID>104</FMISOfficeID>
+  </Table1>
+  <Table2>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <Allotment>32492832.82</Allotment>
+    <Appropropriation>38747832.82</Appropropriation>
+    <Obligation>22684932.82</Obligation>
+    <Utilization>22684932.82</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>22684932.82</PayableUtilization>
+  </Table2>
+  <Table2>
+    <OOEName>Capital Outlay</OOEName>
+    <Allotment>8786337.18</Allotment>
+    <Appropropriation>8786337.18</Appropropriation>
+    <Obligation>2276837.18</Obligation>
+    <Utilization>2276837.18</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2276837.18</PayableUtilization>
+  </Table2>
+</NewDataSet>

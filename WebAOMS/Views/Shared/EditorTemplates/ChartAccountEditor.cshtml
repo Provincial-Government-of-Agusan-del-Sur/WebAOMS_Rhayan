@@ -1,0 +1,19 @@
+﻿@model int? 
+
+@(Html.Kendo().ComboBoxFor(m => m) // Binds the ComboBox to the model property
+    .Name("ChartAccountID") // Sets the name attribute correctly for binding
+    .DataTextField("AccountName") // Field to display in the ComboBox
+    .DataValueField("ChartAccountID") // Field to bind as the value in the model
+    .Placeholder("Select Account") // Placeholder text
+    .BindTo((System.Collections.IEnumerable)ViewData["AccountChildList"])
+    .DataSource(source =>
+    {
+        source.Read(read =>
+        {
+            read.Action("GetChartAccounts", "TransactionTypes"); // Controller action to fetch data
+        });
+    })
+    .Filter("contains") // Allows filtering within the ComboBox
+    .Suggest(true) // Enables suggestion as the user types
+    .HtmlAttributes(new { style = "width: 100%;" }) // Optional: styling for improved UX
+)

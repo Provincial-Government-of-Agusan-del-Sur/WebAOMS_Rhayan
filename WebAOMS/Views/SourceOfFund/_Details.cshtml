@@ -1,0 +1,106 @@
+﻿<div class="box col-md-12">
+    <form id="frm_fund">
+        <input  hidden type="text" name="fundID" value="@ViewBag.fundID" />
+        <script>
+           function para_fund(){
+               return { datasourceid:52}
+            }
+        </script>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Code</label>
+                <input id="txtcodeSOF" class="form-control" name="code" value="@ViewBag.code" style="width:100%;font-family:'Segoe UI' !important;text-align:center" />
+            </div>
+            <div class="form-group col-md-6">
+                <label>Mother Fund</label>
+                @(Html.Kendo().DropDownList()
+                .Name("fundcode")
+                .HtmlAttributes(new { style = "width: 100%" })
+                .DataTextField("txt")
+                .DataValueField("val")
+                //.AutoBind(true)
+                .Filter("contains")
+
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("LoadComboDatasource", "PrivateShared").Data("para_fund");
+                  })
+                  .ServerFiltering(true);
+              }))
+            </div>
+        </div>
+        <div class="row">
+          
+            <div class="form-group col-md-12">
+                <label for="estimated-amount">Source of Fund Name:</label>
+                <input id="txtSourceName" type="text" name="SourceName" value="@ViewBag.SourceName" class="form-control" />
+            </div>
+        </div>
+
+    </form>
+</div>
+<script>
+    var mg = new mgsInfo()
+    function warn_delete_savefund() {
+        mg.bsyesNoWithRemarks("Are you sure you want to delete this Source of Fund <b>@ViewBag.SourceName?</b>", "delete_fund()")
+    }
+
+    function delete_fund() {
+        var remarks = $("#txt_remarks").val()
+        $.post('@Url.Action("DeleteSOF", "SourceOfFund")',
+              { fundID: @ViewBag.fundid },
+               function (r) {
+                   stopSpin()
+                   if (r.success) {
+
+                       var grid = $("#grid_SOF").data("kendoGrid");
+                       grid.dataSource.read();
+
+
+                       var dp = $("#fundcode").data("kendoDropDownList");
+                       dp.dataSource.read()
+                       toastr.success(r.message, 'System Message')
+                       $("#mdl_fund_details").modal("hide");
+                   }
+                   else {
+
+                       toastr.warning(r.message, 'System Message')
+                   }
+               }
+            )
+    }
+
+    function savefund() {
+        startSpin()
+
+        var frm = $("#frm_fund").serialize();
+        $.post('@Url.Action("SaveSOF", "SourceOfFund")',
+               frm
+               //int projectYear = 0, string projectName = "", string location = "", int fundID = 0, int projectID = 0)
+      ,
+            function (r) {
+                stopSpin()
+                if (r.success) {
+
+                    var grid = $("#grid_SOF").data("kendoGrid");
+                    grid.dataSource.read();
+
+
+                    var dp = $("#fundcode").data("kendoDropDownList");
+                    dp.dataSource.read()
+
+                    toastr.success(r.message, 'System Message')
+                    $("#mdl_fund_details").modal("hide");
+                }
+                else {
+
+                    toastr.warning(r.message, 'System Message')
+                }
+
+            }
+        )
+    }
+
+</script>

@@ -1,0 +1,1372 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountCode" type="xs:string" minOccurs="0" />
+                <xs:element name="debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="AccountName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>TRIAL BALANCE</T1>
+    <fundtype>General Fund Proper</fundtype>
+    <dateString>As of November 07, 2023</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <AccountCode>10101010                      </AccountCode>
+    <debit>3000200.9500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Cash Local Treasury</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10101020                      </AccountCode>
+    <debit>5012.5000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Petty Cash</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10102010                      </AccountCode>
+    <debit>713660981.1700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Cash in Bank - Local Currency, Current Account</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10102020                      </AccountCode>
+    <debit>734304734.8600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Cash in Bank - Local Currency, Savings Account</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10205020                      </AccountCode>
+    <debit>244469.8800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Guaranty Deposits</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10301010                      </AccountCode>
+    <debit>476684.1700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Accounts Receivable</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10301060                      </AccountCode>
+    <debit>2040000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Loans Receivable - Local Government Units</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10301990                      </AccountCode>
+    <debit>13368577.7500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Loans Receivable - Others</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10303010                      </AccountCode>
+    <debit>3012014.9700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from National Government Agencies</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10303020                      </AccountCode>
+    <debit>75447.3100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Government-Owned and/or Controlled Corporations</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10303030                      </AccountCode>
+    <debit>37731296.0200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Local Government Units</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10304050                      </AccountCode>
+    <debit>4457061.0500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Other Funds</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10304060                      </AccountCode>
+    <debit>25834213.1500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Special Accounts</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10304070                      </AccountCode>
+    <debit>2506673.0800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Local Economic Enterprise</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10305010                      </AccountCode>
+    <debit>1872048.2800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Advances for Operating Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10305020                      </AccountCode>
+    <debit>221335.6500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Advances for Payroll</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10305030                      </AccountCode>
+    <debit>17500000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Advances to Special Disbursing Officer</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10305040                      </AccountCode>
+    <debit>136312.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Advances for Officers and Employees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10306010                      </AccountCode>
+    <debit>7408.4100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Receivables - Disallowances/Charges</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10306020                      </AccountCode>
+    <debit>124195.1800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Officers and Employees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10306030                      </AccountCode>
+    <debit>34455811.2800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Due from Non-Government Organizations/People's Organizations</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10306990                      </AccountCode>
+    <debit>19862154.6000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Receivables</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402020                      </AccountCode>
+    <debit>3417623.9100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Welfare Goods for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402030                      </AccountCode>
+    <debit>484936.7900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Drugs and Medicines for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402040                      </AccountCode>
+    <debit>2372266.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Medical, Dental and Laboratory Supplies for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402050                      </AccountCode>
+    <debit>8318477.1800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Agricultural and Marine Supplies for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402060                      </AccountCode>
+    <debit>1649283.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Agricultural Produce for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402070                      </AccountCode>
+    <debit>98470.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Textbooks and Instructional Materials for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402090                      </AccountCode>
+    <debit>11391725.3000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Property and Equipment for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10402990                      </AccountCode>
+    <debit>12232308.1600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Supplies and Materials for Distribution</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10403030                      </AccountCode>
+    <debit>218126.8700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Finished Goods Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404010                      </AccountCode>
+    <debit>4372986.4600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Office Supplies Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404020                      </AccountCode>
+    <debit>1149201.8300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Accountable Forms, Plates and Stickers</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404030                      </AccountCode>
+    <debit>460564.4000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Non-Accountable Forms Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404040                      </AccountCode>
+    <debit>33349058.4900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Animal/Zoological Supplies Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404060                      </AccountCode>
+    <debit>24210416.1900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Drugs and Medicines Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404070                      </AccountCode>
+    <debit>203057995.4800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Medical, Dental and Laboratory Supplies Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404080                      </AccountCode>
+    <debit>1667467.1400</debit>
+    <credit>0.0000</credit>
+    <AccountName>Fuel, Oil and Lubricants Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404090                      </AccountCode>
+    <debit>55201922.4000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Agricultural and Marine Supplies Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404100                      </AccountCode>
+    <debit>329956.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Textbooks and Instructional Materials Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404110                      </AccountCode>
+    <debit>6784668.4000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Military, Police and Traffic Supplies Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404120                      </AccountCode>
+    <debit>83986.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Chemical and Filtering Supplies Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404130                      </AccountCode>
+    <debit>23877191.0100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Construction Materials Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10404990                      </AccountCode>
+    <debit>5341083.3800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Supplies and Materials Inventory</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10501010                      </AccountCode>
+    <debit>11713996.1900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Advances to Contractors</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10501020                      </AccountCode>
+    <debit>2911839.8900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Prepaid Rent</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10501050                      </AccountCode>
+    <debit>7968291.3000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Prepaid Insurance</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10501990                      </AccountCode>
+    <debit>4337097.4700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Prepayments</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10701010                      </AccountCode>
+    <debit>71196179.9700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Land</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10702990                      </AccountCode>
+    <debit>54141464.2300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Land Improvements</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10702991                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>18466195.7500</credit>
+    <AccountName>Accumulated Depreciation - Other Land Improvements</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703010                      </AccountCode>
+    <debit>3503246468.8100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Road Networks</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703011                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>701005646.3100</credit>
+    <AccountName>Accumulated Depreciation - Road Networks</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703020                      </AccountCode>
+    <debit>131387399.6300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Flood Control Systems</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703021                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>87427561.2500</credit>
+    <AccountName>Accumulated Depreciation - Flood Control Systems</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703040                      </AccountCode>
+    <debit>292558220.1200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Water Supply Systems</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703041                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>44451236.8400</credit>
+    <AccountName>Accumulated Depreciation - Water Supply Systems</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703050                      </AccountCode>
+    <debit>33080340.1000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Power Supply Systems</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703051                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>14962295.9400</credit>
+    <AccountName>Accumulated Depreciation - Power Supply Systems</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703090                      </AccountCode>
+    <debit>89084769.8600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Parks, Plazas and Monuments</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703091                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>41426873.8400</credit>
+    <AccountName>Accumulated Depreciation - Parks, Plazas and Monuments</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703990                      </AccountCode>
+    <debit>188653446.0900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Infrastructure Assets</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10703991                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>22634079.6400</credit>
+    <AccountName>Accumulated Depreciation - Other Infrastructure Assets</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704010                      </AccountCode>
+    <debit>513383987.9900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Buildings</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704011                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>23326880.8500</credit>
+    <AccountName>Accumulated Depreciation - Buildings</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704020                      </AccountCode>
+    <debit>26078287.2000</debit>
+    <credit>0.0000</credit>
+    <AccountName>School Buildings</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704021                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>3082259.7200</credit>
+    <AccountName>Accumulated Depreciation - School Buildings</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704030                      </AccountCode>
+    <debit>173236654.7000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Hospitals and Health Centers</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704031                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>18122437.5000</credit>
+    <AccountName>Accumulated Depreciation - Hospitals and Health Centers</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704990                      </AccountCode>
+    <debit>132571865.7700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Structures</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10704991                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>10999097.4700</credit>
+    <AccountName>Accumulated Depreciation - Other Structures</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705010                      </AccountCode>
+    <debit>57970863.0400</debit>
+    <credit>0.0000</credit>
+    <AccountName>Machinery</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705011                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>19702811.8600</credit>
+    <AccountName>Accumulated Depreciation - Machinery</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705020                      </AccountCode>
+    <debit>172381946.9800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Office Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705021                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>94653507.1700</credit>
+    <AccountName>Accumulated Depreciation - Office Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705030                      </AccountCode>
+    <debit>143469062.0400</debit>
+    <credit>0.0000</credit>
+    <AccountName>Information and Communication Technology  Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705031                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>52137436.1700</credit>
+    <AccountName>Accumulated Depreciation - Information and Communication Technology  Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705040                      </AccountCode>
+    <debit>46989757.1700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Agricultural and  Forestry Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705041                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>22752449.5600</credit>
+    <AccountName>Accumulated Depreciation - Agricultural  and Forestry Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705070                      </AccountCode>
+    <debit>70941994.9800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Communication Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705071                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>12616889.0600</credit>
+    <AccountName>Accumulated Depreciation - Communication Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705080                      </AccountCode>
+    <debit>157782069.3700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Construction and Heavy Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705081                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>88107974.0700</credit>
+    <AccountName>Accumulated Depreciation - Construction and Heavy Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705090                      </AccountCode>
+    <debit>9554544.8100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Disaster Response and Rescue Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705091                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>112883.7600</credit>
+    <AccountName>Accumulated Depreciation - Disaster Response and Rescue Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705100                      </AccountCode>
+    <debit>2439997.7600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Military, Police and Security Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705101                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>1741209.7400</credit>
+    <AccountName>Accumulated Depreciation - Military, Police and Security Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705110                      </AccountCode>
+    <debit>99941352.0700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Medical Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705111                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>33312892.6300</credit>
+    <AccountName>Accumulated Depreciation - Medical Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705130                      </AccountCode>
+    <debit>550081.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Sports Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705131                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>513990.6300</credit>
+    <AccountName>Accumulated Depreciation - Sports Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705140                      </AccountCode>
+    <debit>3555656.7500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Technical and Scientific  Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705141                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>1694903.2200</credit>
+    <AccountName>Accumulated Depreciation - Technical and Scientific  Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10705990                      </AccountCode>
+    <debit>499990.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Machinery and Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10706010                      </AccountCode>
+    <debit>313439326.0600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Motor Vehicles</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10706011                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>72057794.5900</credit>
+    <AccountName>Accumulated Depreciation - Motor Vehicles</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10706040                      </AccountCode>
+    <debit>2516200.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Watercrafts</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10706041                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>2390390.0000</credit>
+    <AccountName>Accumulated Depreciation - Watercrafts</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10707010                      </AccountCode>
+    <debit>32472635.1600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Furniture and Fixtures</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10707011                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>14363337.5200</credit>
+    <AccountName>Accumulated Depreciation - Furniture and Fixtures</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10707020                      </AccountCode>
+    <debit>796268.0100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Books</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10707021                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>598976.6700</credit>
+    <AccountName>Accumulated Depreciation - Books</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10710010                      </AccountCode>
+    <debit>374565.8000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Construction in Progress - Land Improvements</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10710020                      </AccountCode>
+    <debit>624961566.3200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Construction in Progress - Infrastructure Assets</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10710030                      </AccountCode>
+    <debit>849375526.7200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Construction in Progress - Buildings and Other Structures</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10799010                      </AccountCode>
+    <debit>245091.3500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Work/Zoo Animals</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10799990                      </AccountCode>
+    <debit>41979909.8400</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Property, Plant and Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10799991                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>9639856.4600</credit>
+    <AccountName>Accumulated Depreciation - Other Property, Plant and Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>10801010                      </AccountCode>
+    <debit>2689451.7900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Breeding Stocks</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20101010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>81799260.3800</credit>
+    <AccountName>Accounts Payable</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20101020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>3954908.1200</credit>
+    <AccountName>Due to Officers and Employees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20102040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>310988674.2800</credit>
+    <AccountName>Loans Payable - Domestic</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>5758231.5700</credit>
+    <AccountName>Due to BIR</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>3255363.2700</credit>
+    <AccountName>Due to GSIS</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201030                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>785063.6100</credit>
+    <AccountName>Due to Pag-IBIG</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>2808333.1600</credit>
+    <AccountName>Due to PhilHealth</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201050                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>9104236.9100</credit>
+    <AccountName>Due to NGAs</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201060                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>30054.7300</credit>
+    <AccountName>Due to GOCCs</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20201070                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>7479800.3100</credit>
+    <AccountName>Due to LGUs</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20301010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>16632959.1900</credit>
+    <AccountName>Due to Other Funds</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20301020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>4202580.1500</credit>
+    <AccountName>Due to Special Accounts</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20301030                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>24575.9600</credit>
+    <AccountName>Due to Local Economic Enterprises</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>20401040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>50913298.2900</credit>
+    <AccountName>Guaranty/Security Deposits Payable</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>29999990                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>52388725.9100</credit>
+    <AccountName>Other Payables</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>30101010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>6880688370.2100</credit>
+    <AccountName>Government Equity</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>30101020                      </AccountCode>
+    <debit>123007942.5900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Prior Period Adjustment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40101020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>159604.7000</credit>
+    <AccountName>Professional Tax</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40102040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>27976975.3300</credit>
+    <AccountName>Real Property Tax- Basic</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40102080                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>2525703.4000</credit>
+    <AccountName>Real Property Transfer Tax</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40103040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>13612308.4400</credit>
+    <AccountName>Tax on Sand, Gravel and Other Quarry Products</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40103050                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>771075.0000</credit>
+    <AccountName>Tax on Delivery  Trucks and Vans</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40103060                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>81000.0000</credit>
+    <AccountName>Amusement Tax</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40103070                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>201347.0700</credit>
+    <AccountName>Franchise Tax</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40103080                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>7000.0000</credit>
+    <AccountName>Printing and Publication Tax</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40104990                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>30269277.0000</credit>
+    <AccountName>Other Taxes</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40105020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>2494165.9700</credit>
+    <AccountName>Tax Revenue - Fines and Penalties - Property Taxes</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40106010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>1891117020.0000</credit>
+    <AccountName>Share from Internal Revenue Collections (IRA)</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40106030                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>14468217.7600</credit>
+    <AccountName>Share from National Wealth</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40106040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>70226.5000</credit>
+    <AccountName>Share from Tobacco Excise Tax (RA 7171 and 8240)</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40201010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>128000.0000</credit>
+    <AccountName>Permit Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40201020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>1000.0000</credit>
+    <AccountName>Registration Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40201030                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>76450.0000</credit>
+    <AccountName>Registration Plates, Tags and Stickers Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40201040                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>1327640.8600</credit>
+    <AccountName>Clearance and Certification Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40201110                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>4615240.0400</credit>
+    <AccountName>Verification and Authentication Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40201140                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>112657.5000</credit>
+    <AccountName>Occupation Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40202050                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>2347337.7700</credit>
+    <AccountName>Rent Income</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40202060                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>1427969.0000</credit>
+    <AccountName>Communication Network Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40202200                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>20386.8000</credit>
+    <AccountName>Hospital Fees</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40202220                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>2161981.0800</credit>
+    <AccountName>Interest Income</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40202990                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>58420.0000</credit>
+    <AccountName>Other Business Income</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40401020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>459468.3200</credit>
+    <AccountName>Share from PCSO</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40402020                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>4078450.0000</credit>
+    <AccountName>Grants and Donations in Kind</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>40601010                      </AccountCode>
+    <debit>0.0000</debit>
+    <credit>12462262.2300</credit>
+    <AccountName>Miscellaneous Income</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50101010                      </AccountCode>
+    <debit>197429202.6000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Salaries and Wages - Regular</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50101020                      </AccountCode>
+    <debit>70950038.0400</debit>
+    <credit>0.0000</credit>
+    <AccountName>Salaries and Wages - Casual/Contractual</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102010                      </AccountCode>
+    <debit>18087827.3000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Personnel Economic Relief Allowance (PERA)</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102020                      </AccountCode>
+    <debit>3596000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Representation Allowance (RA)</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102030                      </AccountCode>
+    <debit>474500.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Transportation Allowance (TA)</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102040                      </AccountCode>
+    <debit>5928000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Clothing/Uniform Allowance</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102050                      </AccountCode>
+    <debit>493650.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Subsistence Allowance</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102060                      </AccountCode>
+    <debit>58350.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Laundry  Allowance</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102070                      </AccountCode>
+    <debit>51687.5000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Quarters Allowance</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102110                      </AccountCode>
+    <debit>2866608.6800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Hazard Pay</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102120                      </AccountCode>
+    <debit>1015000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Longevity Pay</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102130                      </AccountCode>
+    <debit>1046649.2900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Overtime and Night Pay</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102140                      </AccountCode>
+    <debit>123383.6500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Year End Bonus</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102150                      </AccountCode>
+    <debit>11750.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Cash Gift</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50102990                      </AccountCode>
+    <debit>28460633.9000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Bonuses and Allowances</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50103010                      </AccountCode>
+    <debit>32805541.1200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Retirement and Life Insurance Premiums</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50103020                      </AccountCode>
+    <debit>975600.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Pag-IBIG Contributions</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50103030                      </AccountCode>
+    <debit>5215652.9700</debit>
+    <credit>0.0000</credit>
+    <AccountName>PhilHealth Contributions</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50103040                      </AccountCode>
+    <debit>975200.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Employees Compensation Insurance Premiums</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50104030                      </AccountCode>
+    <debit>26762641.4900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Terminal Leave Benefits</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50201010                      </AccountCode>
+    <debit>8197464.8300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Traveling Expenses - Local</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50201020                      </AccountCode>
+    <debit>1487222.1300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Traveling Expenses - Foreign</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50202010                      </AccountCode>
+    <debit>38174385.5000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Training Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50202020                      </AccountCode>
+    <debit>22039712.5400</debit>
+    <credit>0.0000</credit>
+    <AccountName>Scholarship Grants/Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203010                      </AccountCode>
+    <debit>12392555.1600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Office Supplies Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203020                      </AccountCode>
+    <debit>47500.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Accountable Forms Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203030                      </AccountCode>
+    <debit>99811.8000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Non-Accountable Forms Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203040                      </AccountCode>
+    <debit>569650.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Animal/Zoological Supplies Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203050                      </AccountCode>
+    <debit>8464907.9500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Food Supplies Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203070                      </AccountCode>
+    <debit>2861455.7500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Drugs and Medicines Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203080                      </AccountCode>
+    <debit>16517323.9300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Medical, Dental and Laboratory Supplies Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203090                      </AccountCode>
+    <debit>28521800.3800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Fuel, Oil and Lubricants Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203100                      </AccountCode>
+    <debit>20369155.6800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Agricultural and Marine Supplies Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203110                      </AccountCode>
+    <debit>285399.5000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Textbooks and Instructional Materials Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50203990                      </AccountCode>
+    <debit>17216414.9600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Supplies and Materials Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50204010                      </AccountCode>
+    <debit>1585132.7700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Water Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50204020                      </AccountCode>
+    <debit>29568039.0100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Electricity Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50205010                      </AccountCode>
+    <debit>25938.1200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Postage and Courier Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50205020                      </AccountCode>
+    <debit>2975614.2000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Telephone Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50205030                      </AccountCode>
+    <debit>2087843.9900</debit>
+    <credit>0.0000</credit>
+    <AccountName>Internet Subscription Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50205040                      </AccountCode>
+    <debit>101342.2000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Cable, Satellite, Telegraph and Radio Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50206010                      </AccountCode>
+    <debit>732610.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Awards/Rewards Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50206020                      </AccountCode>
+    <debit>390820.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Prizes</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50210010                      </AccountCode>
+    <debit>52500000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Confidential Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50211010                      </AccountCode>
+    <debit>1225959.3300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Legal Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50211020                      </AccountCode>
+    <debit>494483.0100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Auditing Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50211990                      </AccountCode>
+    <debit>17756477.7000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Professional Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50212020                      </AccountCode>
+    <debit>27400.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Janitorial Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50212030                      </AccountCode>
+    <debit>7345228.4600</debit>
+    <credit>0.0000</credit>
+    <AccountName>Security Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50212990                      </AccountCode>
+    <debit>40944659.5700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other General Services</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50213020                      </AccountCode>
+    <debit>374565.8000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Repairs and Maintenance - Land Improvements</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50213030                      </AccountCode>
+    <debit>9060227.8100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Repairs and Maintenance - Infrastructure Assets</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50213040                      </AccountCode>
+    <debit>8332540.4800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Repairs and Maintenance - Buildings and Other Structures</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50213050                      </AccountCode>
+    <debit>200245.3200</debit>
+    <credit>0.0000</credit>
+    <AccountName>Repairs and Maintenance - Machinery and Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50213060                      </AccountCode>
+    <debit>3450876.9800</debit>
+    <credit>0.0000</credit>
+    <AccountName>Repairs and Maintenance - Transportation Equipment</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50214030                      </AccountCode>
+    <debit>15103306.5000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Subsidy to Other Local Government Units</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50214080                      </AccountCode>
+    <debit>1500000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Subsidy to Local Economic Enterprises</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50215020                      </AccountCode>
+    <debit>6098784.5100</debit>
+    <credit>0.0000</credit>
+    <AccountName>Transfers for Project Equity Share /LGU Counterpart</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50216010                      </AccountCode>
+    <debit>1259471.8300</debit>
+    <credit>0.0000</credit>
+    <AccountName>Taxes, Duties and Licenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50216020                      </AccountCode>
+    <debit>185887.5000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Fidelity Bond Premiums</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50299020                      </AccountCode>
+    <debit>100.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Printing and Publication Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50299030                      </AccountCode>
+    <debit>76500.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Representation Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50299060                      </AccountCode>
+    <debit>794892.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Membership Dues and Contributions to Organizations</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50299080                      </AccountCode>
+    <debit>46493569.8700</debit>
+    <credit>0.0000</credit>
+    <AccountName>Donations</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50299990                      </AccountCode>
+    <debit>22276758.4500</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Maintenance and Operating Expenses</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50301040                      </AccountCode>
+    <debit>48000.0000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Bank Charges</AccountName>
+  </Table1>
+  <Table1>
+    <AccountCode>50504990                      </AccountCode>
+    <debit>105081.4000</debit>
+    <credit>0.0000</credit>
+    <AccountName>Other Losses</AccountName>
+  </Table1>
+</NewDataSet>

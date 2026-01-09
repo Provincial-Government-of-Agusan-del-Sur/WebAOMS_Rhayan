@@ -1,0 +1,7 @@
+﻿@model WebAOMS.Models.tbl_l_PMISOffice
+
+@(Html.Kendo().DropDownListFor(m => m)
+        .DataValueField("OfficeID")
+        .DataTextField("OfficeAbbr")
+        .BindTo((System.Collections.IEnumerable)ViewData["offices"])
+)

@@ -1,0 +1,538 @@
+﻿@using WebAOMS.Models;
+@{
+
+    fmisEntities fmisdb = new fmisEntities();
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Mapping Criteria</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body">
+        <script>
+                function para_dp() {
+                    return {claimantName:""}
+                }
+        </script>
+        <div id="payrollType-3" class="col-lg-12 no-padding hideoptiondiv" style="display:block">
+            <div data-toggle="buttons">
+                @*<label class="btn radio-inline btn-radio-success-inverse ">
+                    <input name="claimantypeOption" id="claimantypeOption1" value="1" type="radio"> Employee
+                </label>
+                <label class="btn radio-inline btn-radio-success-inverse">
+                    <input name="claimantypeOption" id="claimantypeOption2" value="2" type="radio"> Other Individual
+                </label>*@
+                <label class="btn radio-inline btn-radio-success-inverse active">
+                    <input name="claimantypeOption" id="claimantypeOption3" value="3" type="radio"> Company
+                </label>
+                @*<label class="btn radio-inline btn-radio-success-inverse">
+                    <input name="claimantypeOption" id="claimantypeOption4" value="4" type="radio"> Responsibility Center
+                </label>
+                <label class="btn radio-inline btn-radio-success-inverse">
+                    <input name="claimantypeOption" id="claimantypeOption5" value="5" type="radio"> National Offices
+                </label>
+                <label class="btn radio-inline btn-radio-success-inverse">
+                    <input name="claimantypeOption" id="claimantypeOption6" value="6" type="radio"> Barangay Treasurers
+                </label>*@
+                <input id="claimantypeOptionID" value="3" hidden />
+                
+                <script>
+                                $(function () {
+                                    $('input[name="claimantypeOption"]').bind('change', function () {
+                                        $("#claimantypeOptionID").val($(this).val())
+                                     refrehGrid()
+                                    });
+                                });
+                     
+                </script>
+            </div>
+
+
+        </div>
+
+        <script>
+
+                function refrehGrid() {
+                    var grid = $("#grid_claimant").data("kendoGrid");
+                        grid.dataSource.read()
+                 
+                }
+                function refrehGrid_eproc() {
+                    var grid = $("#grid_claimant_eproc").data("kendoGrid");
+                    grid.dataSource.read()
+
+                }
+
+                function grid_para_claimant() {
+
+                    return { claimantCode: $("#claimantypeOptionID").val(), name: $("#txt_search_name").val() }
+                }
+                function grid_para_claimant_eproc() {
+                    return { claimantCode: $("#claimantypeOptionID").val(), name: $("#txt_search_name_eproc").val() }
+                }
+        </script>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-head col-lg-6">
+        <header>
+            <h4 class="text-bold">Company from FMIS</h4>
+        </header>
+
+    </div>
+    <div class="box-head col-lg-6">
+        <header>
+            <h4 class="text-bold">Company from EProc</h4>
+        </header>
+
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body  col-lg-6">
+        <div class="row">
+            <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                <input id="txt_search_name" type="text" class="form-control navbar-input" placeholder="Search the name of the Payee">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <div id="div_tracking_1" class="row gridhideoptiondiv" style="display:block">
+            @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_claimant>()
+                    .Name("grid_claimant")
+                    .Columns(columns =>
+                    {
+                    //columns.Bound("ID").Width(60).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                   // columns.Select().Width(50).HtmlAttributes(new { @class = "checkbox-align" }).HeaderHtmlAttributes(new { @class = "checkbox-align" });
+                    columns.Bound(m=> m.Name).Width(250);
+                        @*columns.Template(@<text></text>)
+                    .Width(130)
+                    .Title("Credit")
+                    .HtmlAttributes(new { style = "text-align:right;font-size:10" })
+                    .ClientTemplate("<div id=\"div_credit_#=ChartAccountChildID#\"><button type=\"button\" id=\"btn_credit_#=ChartAccountChildID#\" onclick=\"edit_amount(#=credit#,#=ChartAccountChildID#,'credit',#=hasChild#,'#=AccountChildName#',#=code#,'#=ChildCode#',#=AccountChildParentID#)\" class=\"k-button DebitCredit\">#=addCommas(credit)#</button></div>");*@
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 500px;" })
+                                    .Selectable(m => m
+                        .Mode(GridSelectionMode.Single)
+                        .Type(GridSelectionType.Row))
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_claimant_byClaimantType_server_search", "Maintenance").Data("grid_para_claimant"))
+                        .PageSize(500)
+                        .ServerOperation(true)
+                        .Model(model => model.Id(p => p.ID))
+                        .Sort(sort => sort.Add("Name").Ascending())
+                    //.Sort(s => s.Add("ChartAccountChildID").Descending())
+                    )
+            .Events(ev => ev.Change("onChange"))
+            )
+        </div>
+
+        <script>
+            var claimantcode;
+
+            function onChange(arg) {
+                claimantcode = this.selectedKeyNames().join(",");
+            }
+                $("#export").click(function (e) {
+
+                        var grid = $("#grid_tracking").data("kendoGrid");
+                        grid.saveAsExcel();
+                });
+
+                $('#txt_search_name').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+
+             
+
+                $('#txtsearch_obrno').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+                $('#txtsearch_amount').on('keydown', function (e) {
+
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+
+                })
+
+
+
+            function click_sync() {
+                 startSpin()
+                    $.post('@Url.Action("insert_eproc_supplier", "Maintenance")', {}, function (r) {
+                        stopSpin()
+                        if (r.code == 6) {
+                            toastr.success(r.statusName, 'System Message');
+                        }
+                        else {
+                            toastr.warning(r.statusName, 'System Message');
+
+                        }
+                    })
+                }
+            function click_download() {
+                 startSpin()
+                    $.post('@Url.Action("insert_eproc_transaction", "Maintenance")', {}, function (r) {
+                        stopSpin()
+                        if (r.code == 6) {
+                            toastr.success(r.statusName, 'System Message');
+                        }
+                        else {
+                            toastr.warning(r.statusName, 'System Message');
+
+                        }
+                    })
+                }
+            $('#btn_process').click(function () {
+
+
+            });
+        </script>
+    </div>
+    <div class="box-body  col-lg-6">
+        <div class="row">
+            <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                <input id="txt_search_name_eproc" type="text" class="form-control navbar-input" placeholder="Search the name of the Payee">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                
+                    @*<button class="btn" onclick="click_sync()" style="margin-left:5px!important" type="button"><i class="fa fa-refresh"></i>Sync</button>
+
+                    <button class="btn" onclick="click_download()" style="margin-left:5px!important" type="button"><i class="fa fa-refresh"></i>Sync</button>*@
+                </span>
+
+            </div>
+
+        </div>
+        <div id="div_tracking_1" class="row gridhideoptiondiv" style="display:block">
+            @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_claimant_eproc>()
+                    .Name("grid_claimant_eproc")
+                    .Columns(columns =>
+                    {
+                    //columns.Bound("ID").Width(60).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.supplierid).Width(70);
+                    columns.Bound(m => m.supplier).Width(250);
+                        @*columns.Template(@<text></text>)
+                            .Width(130)
+                            .Title("Credit")
+                            .HtmlAttributes(new { style = "text-align:right;font-size:10" })
+                            .ClientTemplate("<div id=\"div_credit_#=ChartAccountChildID#\"><button type=\"button\" id=\"btn_credit_#=ChartAccountChildID#\" onclick=\"edit_amount(#=credit#,#=ChartAccountChildID#,'credit',#=hasChild#,'#=AccountChildName#',#=code#,'#=ChildCode#',#=AccountChildParentID#)\" class=\"k-button DebitCredit\">#=addCommas(credit)#</button></div>");*@
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 500px;" })
+                    .Selectable(m => m
+                    .Mode(GridSelectionMode.Multiple)
+                    .Type(GridSelectionType.Row))
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_claimant_byClaimantType_server_search_eproc", "Maintenance").Data("grid_para_claimant_eproc"))
+                        .PageSize(500)
+                        .ServerOperation(true)
+                        .Model(model => model.Id(p => p.supplierid))
+                        .Sort(sort => sort.Add("supplier").Ascending())
+                    //.Sort(s => s.Add("ChartAccountChildID").Descending())
+                    )
+            .Events(ev => ev.Change("onChange_eproc"))
+            )
+        </div>
+
+        <script>
+            var claimantcode_eproc;
+
+            function onChange_eproc(arg) {
+                claimantcode_eproc = this.selectedKeyNames().join(",");
+            }
+           
+        </script>
+    </div>
+    <div class="box-footer">
+        <div class="col-lg-12" style="height:50px">
+            <button id="btn_process" onclick="process_mapping()" type="button" class="btn btn-success"><i class="fa fa-gears"></i> Process</button>
+            @*<button id="btn_set" onclick="SetActive()" type="button" class="btn btn-success"><i class="fa fa-gears"></i> Set As Active</button>*@
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="mdl_add_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Select the primary name </h4>
+            </div>
+            <div id="body_add_claimant" class="modal-body" style="height:auto!important">
+                <div class="box" style="width:100%;margin-bottom:0px!important">
+                    <div class="box-body">
+
+                        <script>
+                            function refrehGrid_eproc() {
+                                var grid = $("#grid_claimant_eproc").data("kendoGrid");
+                                grid.dataSource.read()
+
+                            }
+                            $('#txt_search_name_eproc').on('keydown', function (e) {
+                                if (e.keyCode == 13) {
+                                    refrehGrid_eproc()
+                                }
+                            })
+                                $(function () {
+                                    $('input[name="claimantypeOption"]').bind('change', function () {
+                                        $("#claimantypeOptionID").val($(this).val())
+                                        if ($(this).val() == 2) {
+                                            $("#btn_add_claimant").show();
+                                        }
+                                        else {
+                                            $("#btn_add_claimant").hide()
+                                        }
+                                        //var categories = $("#grid_claimant").data("kendoGrid");
+                                        //categories.dataSource.read();
+                                        refreshGrid()
+                                    });
+                                });
+
+                                function refreshGrid_claimant() {
+                                    var gridData = $("#grid_claimant_mapping").data("kendoGrid");
+                                    gridData.dataSource.read();
+                                }
+
+                                function refreshGrid_claimant_eproc() {
+                                    var gridData = $("#grid_claimant_mapping_eproc").data("kendoGrid");
+                                    gridData.dataSource.read();
+                                }
+
+                                function close_add_claimant() {
+                                    $("#grid_claimant_mapping").data("kendoGrid").dataSource.data([]);
+                                    $("#grid_claimant_mapping_eproc").data("kendoGrid").dataSource.data([]);
+                            $("#mdl_add_claimant").modal("hide");
+                        }
+
+
+                        </script>
+                        <div class="col-lg-12" style="padding-bottom:5px">
+
+                            <div class="row">
+                               <div id="grid_claimant_mapping"></div>
+                                <div id="grid_claimant_mapping_eproc"></div>
+                            </div>
+
+                            @*<button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>*@
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    var selected_claimantcode;
+                    var selected_claimantcode_eproc;
+                    function onFirstTDClick() {
+
+                    }
+
+                        $("#grid_claimant_mapping").kendoGrid({
+                            selectable:"single, row",
+                            dataSource: {
+                                data: [],
+                                schema: {
+                                    model: {
+                                        id: "ID"
+                                    }
+                                }
+                            },
+                           
+                            
+                            columns: [
+                            //    {
+                            //    title: "select",
+                            //    template: '<input class="k-checkbox k-checkbox-md k-rounded-md" type="checkbox" />',
+                            //    width: 50
+                            //},
+                              {
+                                  field: "ID",
+                                  title: "ID",
+                                  width: 50
+                              },
+                              {
+                                  field: "Name",
+                                  width:250
+                              }
+                            ],
+
+                            dataBound: function (e) {
+                                $(".checkbox").bind("click", function (e) {
+                                    e.stopPropagation();
+                                    $(e.target).closest("tr").toggleClass("k-state-selected");
+                                });
+
+                                var rows = e.sender.element.find("tr");
+                                rows.each(function(e){
+                                    $(this).children().first().on("click", onFirstTDClick);
+                                })
+                            }
+                        });
+                
+                        $("#grid_claimant_mapping_eproc").kendoGrid({
+                            dataSource: {
+                                data: [],
+                                schema: {
+                                    model: {
+                                        id: "supplierid"
+                                    }
+                                }
+                            },
+      
+
+
+
+
+                            columns: [
+                            //    {
+                            //    title: "select",
+                            //    template: '<input class="k-checkbox k-checkbox-md k-rounded-md" type="checkbox" />',
+                            //    width: 50
+                            //},
+                              {
+                                  field: "supplierid",
+                                  title: "ID",
+                                  width: 50
+                              },
+                              {
+                                  field: "supplier",
+                                  width: 250
+                              }
+                            ],
+
+                            dataBound: function (e) {
+                                $(".checkbox").bind("click", function (e) {
+                                    e.stopPropagation();
+                                    $(e.target).closest("tr").toggleClass("k-state-selected");
+                                });
+
+                                var rows = e.sender.element.find("tr");
+                                rows.each(function (e) {
+                                    $(this).children().first().on("click", onFirstTDClick);
+                                })
+                            }
+                        });
+
+                        function click_search_claimant() {
+                            if ($('#txt_search_name').val().length > 0) {
+                                ISfn.applyFilter("Name", $('#txt_search_name').val(), 'grid_claimant')
+                                //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                            }
+                            else {
+                                gridData.dataSource.filter({});
+                            }
+                        }
+                        function select_claimant() {
+                            //var ddl_claimant = $('#dp_claimant').data('kendoComboBox')
+                            //if (ddl_claimant.selectedIndex == -1) {
+                            //    toastr.warning("Invalid Claimant", 'System Message');
+                            //    return;
+                            //}
+
+                            var grid = $('#grid_claimant').data('kendoGrid');
+                            var selectedItem = grid.dataItem(grid.select());
+
+                            $("#txt_claimant_id").val(selectedItem.ID)
+                            $("#txt_claimant").val(selectedItem.Name)
+                            close_browse_claimant()
+                        }
+
+
+                        function save_mapped() {
+
+                            startSpin()
+                            $.post('@Url.Action("_Save_claimant_mapp_eproc", "Maintenance")', { supplierid_array: claimantcode_eproc, claimantcode: claimantcode }, function (r) {
+                                stopSpin()
+                                if (r.code == 6) {
+                                    toastr.success(r.statusName, 'System Message');
+                                    $("#mdl_add_claimant").modal("hide");
+                                    $("#grid_claimant_mapping").data("kendoGrid").dataSource.data([]);
+                                    refrehGrid()
+                                }
+                                else {
+                                    toastr.warning(r.statusName, 'System Message');
+                                }
+                            })
+                        }
+                    function process_mapping() {
+                        //startSpin()
+                        if (claimantcode == "") {
+                            toastr.warning(r.statusName, 'Please select a claimant from FMIS.');
+                            return;
+                        }
+                       
+
+               var sourcegrid = $('#grid_claimant').data('kendoGrid');        //SOURCE GRID
+                   var destinationgrid = $('#grid_claimant_mapping').data('kendoGrid'); // DESTINATION GRID
+
+                   sourcegrid.select().each(function () {
+                       var dataItem = sourcegrid.dataItem($(this));
+                       destinationgrid.dataSource.add(dataItem);       // DESTINATION DATASOURCE
+                   });
+                   destinationgrid.refresh();                          // MUST REFRESH THE DESTINATION GRID
+
+
+                   var sourcegrideproc = $('#grid_claimant_eproc').data('kendoGrid');        //SOURCE GRIDin Eproc
+                   var destinationgrid_eproc = $('#grid_claimant_mapping_eproc').data('kendoGrid'); // DESTINATION GRID
+
+                   sourcegrideproc.select().each(function () {
+                       var dataItem_eproc = sourcegrideproc.dataItem($(this));
+                       destinationgrid_eproc.dataSource.add(dataItem_eproc);       // DESTINATION DATASOURCE
+                   });
+
+                   destinationgrid_eproc.refresh();
+
+                   $("#mdl_add_claimant").modal("show");
+
+                   //})
+               }
+                </script>
+            </div>
+            <div class="modal-footer">
+                <button onclick="save_mapped()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Set as primary</button>
+                <button type="button" class="btn btn-default" onclick="close_add_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

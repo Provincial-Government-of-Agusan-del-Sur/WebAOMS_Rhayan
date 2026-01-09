@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout_Public.cshtml";
+}
+
+
+
+<h2>Flowchart</h2>
+<div id="toolbar">
+    <button id="zoomIn">Zoom In</button>
+    <button id="zoomOut">Zoom Out</button>
+    <button id="fitToContent">Fit to Content</button>
+    <button id="printDiagram">Print</button>
+</div>
+<div id="diagram"></div>
+<div id="shapePalette">
+    <div class="shape" draggable="true" data-shape="rectangle">Rectangle</div>
+    <div class="shape" draggable="true" data-shape="circle">Circle</div>
+</div>
+
+<script>
+        $(document).ready(function() {
+            var diagram = $("#diagram").kendoDiagram().data("kendoDiagram");
+
+            $("#toolbar").kendoToolBar({
+                items: [
+                    { type: "button", text: "Zoom In", click: zoomIn },
+                    { type: "button", text: "Zoom Out", click: zoomOut },
+                    { type: "button", text: "Fit to Content", click: fitToContent },
+                     { type: "button", text: "Print", click: printDiagram }
+
+                ]
+            });
+
+            var shapePalette = document.getElementById("shapePalette");
+            var shapes = document.querySelectorAll(".shape");
+
+            shapes.forEach(function(shape) {
+                shape.addEventListener("dragstart", function(e) {
+                    e.dataTransfer.setData("text/plain", shape.getAttribute("data-shape"));
+                });
+            });
+
+            diagram.wrapper[0].addEventListener("dragover", function(e) {
+                e.preventDefault();
+            });
+
+            diagram.wrapper[0].addEventListener("drop", function(e) {
+                e.preventDefault();
+                var shapeType = e.dataTransfer.getData("text/plain");
+                var position = diagram.documentToModel({ x: e.clientX, y: e.clientY });
+
+                if (shapeType === "rectangle") {
+                    diagram.addShape({ x: position.x, y: position.y, width: 100, height: 60 });
+                } else if (shapeType === "circle") {
+                    diagram.addShape({ x: position.x, y: position.y, width: 60, height: 60, type: "circle" });
+                }
+            });
+
+            function zoomIn() {
+                diagram.zoom(1.2);
+            }
+
+            function zoomOut() {
+                diagram.zoom(0.8);
+            }
+
+            function fitToContent() {
+                diagram.bringIntoView(diagram.shapes);
+            }
+            function printDiagram() {
+                var printableContent = document.getElementById("diagram").outerHTML;
+                var printWindow = window.open("", "_blank");
+                printWindow.document.open();
+                printWindow.document.write('<html><head><title>Print Diagram</title></head><body>');
+                printWindow.document.write(printableContent);
+                printWindow.document.write('</body></html>');
+                printWindow.document.close();
+                printWindow.print();
+            }
+        });
+</script>

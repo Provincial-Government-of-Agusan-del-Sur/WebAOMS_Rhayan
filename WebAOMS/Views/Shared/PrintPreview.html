@@ -1,0 +1,464 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+            /*<![CDATA[*/
+            
+            div.html-root > ol, div.html-root > ul, div.html-root > p {
+                margin-top: 0px;
+            }
+
+            .sheet .error {
+                border: 1px solid red;
+                color: red;
+            }
+            /* interactive page */
+            .interactive-page .sheet {
+                margin: 10px;
+            }
+            /* print preview page */
+            .print-page {
+                background-color: #ccc;
+                top:10px;
+            }
+
+                .print-page > .sheet {
+                    border: 2px solid darkblue;
+                    /* centers the DIV horizontally */
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    -moz-box-shadow: 5px 5px 5px #888!important;
+                    -webkit-box-shadow: 5px 5px 5px #888!important;
+                    box-shadow: 5px 5px 5px #888;
+                }
+
+            .sheet .layers {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+            }
+
+            .sheet .action {
+                cursor: pointer;
+            }
+
+            .sheet div.action:hover {
+                border: 1px solid #ddd;
+                /*
+        -moz-box-shadow: 1px 1px 3px #888 inset
+        -webkit-box-shadow: 1px 1px 3px #888 inset
+        box-shadow: 1px 1px 3px #888 inset
+        z-index: 99
+        */
+            }
+
+            .sheet {
+                position: relative;
+                text-rendering: geometricPrecision;
+            }
+
+            .sheet {
+                background-color: White;
+            }
+
+            .s0- {
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+            .s1- {
+                font-family: "Arial";
+                font-size: 12pt!important;
+                color: Black;
+                text-align: start;
+                padding-left: 3px;
+                padding-right: 1px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+
+            .s2- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: center;
+                position: absolute;
+                word-wrap: normal;
+                white-space: nowrap;
+            }
+
+            .s3- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: center;
+                word-wrap: normal;
+            }
+
+            .s4- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                font-weight: bold;
+                text-align: center;
+                word-wrap: normal;
+            }
+
+            .s5- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                font-weight: bold;
+                text-align: center;
+                word-wrap: normal;
+            }
+
+            .s6- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: start;
+                position: absolute;
+                word-wrap: normal;
+                white-space: nowrap;
+            }
+
+            .s7- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                font-weight: bold;
+                text-align: start;
+                word-wrap: normal;
+            }
+
+            .s8- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: start;
+                word-wrap: normal;
+            }
+
+            .s9- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: justify;
+                position: absolute;
+                word-wrap: normal;
+                width: 596px;
+            }
+
+                .s9-:after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                }
+
+            .s10- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: justify;
+                word-wrap: normal;
+            }
+
+            .s11- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: justify;
+                position: absolute;
+                word-wrap: normal;
+                width: 372px;
+            }
+
+                .s11-:after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                }
+
+            .s12- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: justify;
+                position: absolute;
+                word-wrap: normal;
+                width: 547px;
+            }
+
+                .s12-:after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                }
+
+            .s13- {
+                font-family: "Arial";
+                font-size: 12pt;
+                color: Black;
+                text-align: start;
+            }
+       #navbar {
+      /*background-color: #333;*/
+      position: fixed;
+      top: 10px;
+      left:10px;
+      width: 40px;
+      display: block;
+        font-size: 8pt;
+        font-family: Verdana;
+        height: 40px;
+        /*border: 1px solid #4f4f4f;*/
+        z-index:500
+}
+       .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.428571429;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+       .btn-success {
+  color: #ffffff;
+  background-color: #339933;
+  border-color: #2d862d;
+
+}
+      .btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #297a29;
+  border-color: #1d581d;
+}
+
+table {
+        font-size:12pt!important;
+      font-family:Arial!important;
+    border-collapse:collapse;
+    border:1px solid #000000;
+
+      width:100%;
+      max-width:601px;
+}
+
+        span {
+            font-size:12pt!important;
+            font-family:Arial!important;
+        }
+table td{
+border:1px solid #000000;
+}
+
+table#tbl_signatory {
+border:none;
+      
+}
+table#tbl_signatory td {
+  border: none;
+}
+
+             /*]]>*/
+
+/*table tr td p {
+    padding : 0;
+    margin : 0;
+}*/
+
+/*#tbl_signatory tr td p {
+    margin-bottom : 1em;
+}*/
+
+/*table   
+{
+  font-size:12pt;
+  font-family:Arial;
+  border:.5pt solid black;
+    border-spacing:0!important;
+  width:auto!important;
+   width:auto!important
+}*/
+       
+/*td {
+  border: 1px solid black!important;
+}*/
+
+ /*table#tbl_signatory {
+    border:0!important;
+}
+
+ table#tbl_signatory td {
+  border: 1px solid black!important;
+}*/
+
+    </style>
+    <!--<link href="D:/PGAS/PIMOSVN/Project/WebAOMS/WebAOMS/Content/font-awesome-4.2.0/css/font-awesome.css" rel="stylesheet" type="text/css" id="style_color" />
+    <script src="D:/PGAS/PIMOSVN/Project/WebAOMS/WebAOMS/Scripts/akot/jquery-1.11.0.min.js"></script>
+    <link href="D:/PGAS/PIMOSVN/Project/WebAOMS/WebAOMS/Content/akot/2018.1.1/print.min.css" rel="stylesheet" />
+    <script src="D:/PGAS/PIMOSVN/Project/WebAOMS/WebAOMS/Scripts/akot/print.min.js"></script>-->
+    
+</head>
+<body id="id_body" class="print-page" style="height:296.99966mm">
+    <div class="sheet page1" style="padding-left:96px;padding-right:96px;padding-top:96px;padding-bottom:48px;width:15.9258cm;height:100%;">
+        <div id="navbar">
+            <button onclick="print_div()" type="button" class="btn btn-success"><i class="fa fa-print"></i> Print</button>
+        </div>
+        <div class="layers">
+            <div id="" class="htmlTextBox2 s1-" style="position:absolute;left:96px;top:96px;width:15.9258cm;height:280.19mm;">
+                <div id="div_sheet" class="print" style="position:absolute;width:15.9258cm;overflow:visible;">
+
+                    <style type="text/css" media="print">
+                        @page {
+                            size: A4;
+                            margin: 25.4mm 25.4mm 25.4mm 25.4mm; /* this affects the margin in the printer settings */
+                                            
+                        }
+
+                        @media screen {
+                            div.divFooter {
+                                display: none !important;
+                            }
+                        }
+
+                        @media print {
+                                            
+							div.divFooter {
+                                position: fixed;
+                                bottom: 0;
+                            }
+                            title {
+                                color: transparent;
+                            }
+                        }
+                    </style>
+
+                    <table style="height:100%">
+                        <thead>
+
+                        </thead>
+                        <tbody>
+                            <p style="text-align:center;margin:0px;">Republic of the Philippines<br><strong>PROVINCE OF AGUSAN DEL SUR</strong><br>Gov. D.O. Plaza Government Center, Patin-ay, Prosperidad </p>
+                            <p style="text-align:center;margin:0px;">Republic of the Philippines<br><strong>PROVINCE OF AGUSAN DEL SUR</strong><br>Gov. D.O. Plaza Government Center, Patin-ay, Prosperidad </p>
+                            <p style="text-align:center;margin:0px;">Republic of the Philippines<br><strong>PROVINCE OF AGUSAN DEL SUR</strong><br>Gov. D.O. Plaza Government Center, Patin-ay, Prosperidad </p>
+                            <p style="text-align:center;margin:0px;">Republic of the Philippines<br><strong>PROVINCE OF AGUSAN DEL SUR</strong><br>Gov. D.O. Plaza Government Center, Patin-ay, Prosperidad </p>
+                            <p style="text-align:center;margin:0px;">Republic of the Philippines<br><strong>PROVINCE OF AGUSAN DEL SUR</strong><br>Gov. D.O. Plaza Government Center, Patin-ay, Prosperidad </p>
+                            <p style="text-align:center;"><strong>-<span style="text-align:center;">------</span>o0o------</strong><br><span style="font-size:large;font-size:12pt!important;"><strong>PROVINCIAL INFORMATION MANAGEMENT OFFICE</strong></span></p>
+                            <hr style="border:2px solid black;">
+                            <p style="text-align:center;"><span style="font-size:large;font-size:12pt!important;"><strong>ACTIVITY DESIGN</strong></span></p>
+                            <b>Title</b>&nbsp;&nbsp;&nbsp;&nbsp;:  Lorem ipsum
+                            <br>
+                            <br>
+                            <b>Inclusive Date</b>&nbsp;&nbsp;&nbsp;&nbsp;:  1/1/2020
+                            <br>
+                            <br>
+                            <b>Venue</b>&nbsp;&nbsp;&nbsp;&nbsp;:  Lorem ipsum dolor
+                            <br>
+                            <br>
+                            <b>Rationale</b>&nbsp;&nbsp;&nbsp;&nbsp;:
+                            <p style="text-align:justify;">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autesdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfdfsdfsdfsd
+                                sdfsdf
+                                sdf
+                                sdf
+                                sdfs
+                                df
+                                sdfs
+                                f irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <br>
+                            <br>
+                            <b>Objectives</b>&nbsp;&nbsp;&nbsp;&nbsp;: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
+                            <br>
+                            <br>
+                            <b>Expected Ouput</b>&nbsp;&nbsp;&nbsp;&nbsp;:
+                            <ol><li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</li><li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</li><li>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</li></ol>
+                            <br>
+                            <br>
+                            <b>Target Participant</b>&nbsp;&nbsp;&nbsp;&nbsp;:
+                            <table><tbody><tr style="height:50%;"><td style="width:25%;">&nbsp;</td><td style="width:25%;">&nbsp;</td><td style="width:25%;">&nbsp;</td><td style="width:25%;">&nbsp;</td></tr><tr style="height:50%;"><td style="width:25%;">&nbsp;</td><td style="width:25%;">&nbsp;</td><td style="width:25%;">&nbsp;</td><td style="width:25%;">&nbsp;</td></tr></tbody></table>
+                            <br>
+                            <br>
+                            <b>Budgetary Requirement</b>&nbsp;&nbsp;&nbsp;&nbsp;:
+                            <table style="height:136px;"><colgroup><col style="width:371px;"><col style="width:132px;"></colgroup> <tbody><tr height="40" style="height:27px;"><td>Snacks - light</td><td>&nbsp;</td></tr><tr height="160" style="height:29px;"><td><span lang="EN-PH">2 snacks (@ P100.00/snack) x 50 pax x 1 day</span></td><td>5,000.00</td></tr><tr height="100" style="height:26px;"><td>Lunch</td><td>&nbsp;</td></tr><tr height="140" style="height:32px;"><td><span lang="EN-PH">1 meal (@P250/day/person) x 50 pax&nbsp; x 1 day&nbsp;   &nbsp;&nbsp;</span></td><td>12,500.00</td></tr><tr height="19" style="height:20px;"><td>Total</td><td>17,500.00</td></tr></tbody></table>
+                            <br>
+                            <br>
+                            <b>Source Of Fund</b>&nbsp;&nbsp;&nbsp;&nbsp;: General Fund
+                            <br>
+                            <br>
+                            <p>&nbsp;</p>
+                            <table id="tbl_signatory" style="width:100%;font-size:12pt;"><tbody><tr></tr><tr><td style="width:50%;"><p>Prepared by</p><p>&nbsp;</p><p><br></p><p style="margin:0px;padding:0px;text-align:left;"><strong>JOIKREZSA B. BALBON </strong></p><p style="margin:0px;padding:0px;text-align:left;">Technical Assistant</p></td><td style="width:50%;"><p>Recommending Approval</p><p>&nbsp;</p><p><strong>&nbsp;</strong></p><p style="margin:0px;padding:0px;text-align:left;"><strong>NEPHTALI F. MORGADO </strong></p><p style="margin:0px;padding:0px;text-align:left;">Provincial Government Department Head</p></td></tr></tbody></table>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;">&nbsp;</p>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;">Approved:</p>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;">&nbsp;</p>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;"><strong>BY THE AUTHORITY OF THE GOVERNOR</strong></p>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;"><strong>&nbsp;</strong></p>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;"><strong></strong><br></p>
+                            <p style="margin-bottom:0px;padding:0px;text-align:left;"><strong>RONULFO R. PALER</strong></p>
+                            <p style="margin:0px;padding:0px;text-align:left;border:none;">Acting Provincial Administrator</p>
+
+                        </tbody>
+                        <tfoot>
+
+                        </tfoot>
+                    </table>
+                    
+
+                    <!-- @*<div class="divFooter" style="position:fixed;top:270mm"> -->
+                        <!-- <div style="margin-bottom:500px!important"> -->
+                            <!-- pagenumbersample -->
+                        <!-- </div> -->
+                    <!-- </div>*@ -->
+                    
+                    <script>
+    $(document).ready(function () {
+        $("#id_body").height($("#div_sheet").height()+66);
+    })
+                    </script>
+
+                    
+                </div>
+                
+        </div>
+
+        </div>
+    </div>
+        <script>
+            function print_div() {
+                printJS({
+                    printable: 'div_sheet',
+                    type: 'html',
+                    header: '<div style="height:15.4mm;width:100%;text-align:center;"><p style="margin:10mm;padding:0px;text-align:center;border:none;">Acting Provincial Administrator</p></div>',
+                    repeatTableHeader: true,
+                    targetStyles: ['*'],
+                    
+                })
+            }
+        </script>
+</body>
+</html>
+                    

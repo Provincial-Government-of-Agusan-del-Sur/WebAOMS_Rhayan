@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "Porject Esmtimated Cost";
+}
+
+        <script>
+            function projectCostPara() {
+                var projectid = $('#txtprojectID').val()
+                return { porjectCostName: "", projectID: projectid }
+            }
+            function reloadProjectEstimatedProjectCost(projectCostName, ProjectID) {
+         
+                    var grid = $("#grid_project_Cost").data("kendoGrid");
+                    grid.dataSource.read({ porjectCostName: "", projectID: ProjectID })
+            
+            }
+        </script>
+   <input id="txtprojectID" name="projectid" class="k-input autoselect" hidden value="@ViewBag.projectid" style="width:100%;font-family:'Segoe UI' !important;text-align:center" />
+        <div class="box col-md-12">
+             @(Html.Kendo().Grid<WebAOMS.Models.vw_projectEstimatedCost>()
+        .Name("grid_project_Cost")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; " })
+        .Columns(columns =>
+        {
+        columns.Bound(M => M.ProjectCostName).Width(300).Title("Project Cost Type").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+        columns.Bound(M => M.trancheDesc).Width(100).Title("Tranche").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+
+
+
+        columns.Bound(M => M.EstimatedAmount).Format("{0:N2}").Width(100).Title("Estimated Cost").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" })
+        .ClientTemplate("#= kendo.format('{0:N2}',EstimatedAmount) #")
+        .ClientFooterTemplate("<div style='text-align:right'><b>Total: #= kendo.format('{0:N2}',sum) #</b></div>");
+
+        columns.Bound(M => M.DateReceived).Format("{0:MM-dd-yyyy}").Width(100).Title("Date Received").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+
+        columns.Template(@<text></text>)
+                   .Width(50)
+                   .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                   //.HeaderHtmlAttributes(new { style = "text-align:center; font-size:10" })
+                   .ClientTemplate("<button data-toggle =\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"clickProjectCostType('#=ProjectEstimatedCostID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+        })
+        .Pageable(p => p
+            .Input(true)
+            .Numeric(false)
+            .Refresh(false)
+        )
+        .Sortable()
+        //.Selectable(selectable => selectable
+        //    .Mode(GridSelectionMode.Single)
+        //    .Type(GridSelectionType.Row)
+        //)
+        .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(20).Sort(M =>
+        {
+            M.Add("ProjectCostName").Ascending();
+        })
+        .Aggregates(aggregates =>
+        {
+            aggregates.Add(p => p.EstimatedAmount).Sum();
+        })
+        .ServerOperation(true)
+        .Model(M => { M.Id(G => G.ProjectEstimatedCostID); })
+        .Read(g => g.Action("GetgridProjectCost", "Project").Data("projectCostPara")))
+                //.Events(e => e.Change("selectedProjectCost"))
+                )
+            </div>
+
+           
+        
+    
+
+
+     <script>
+
+  
+
+    function addnewprojectCost() {
+        //$('#div_detail_projectCostDetails').css({ 'display': 'inline-block' });
+        //$("#divhalfdetailProjectCost").data("kendoWindow").center().open();
+        //$('#btnSaveProjectCost').show();
+        //$('#btnDeleteProjectCost').hide();
+        //$('#btnUpdateProjectCost').hide();
+
+        //$("#cbo_projectCostEstimated").data("kendoComboBox").value("");
+        //$("#cmb_tranche").data("kendoComboBox").value("");
+        //$('#txtEstimatedAmount').val("");
+        //clickProjectCostType(0)
+        //$('#txtProjectEstimatedCostID').val("0");
+    }
+    function selectedProjectCost(e) {
+        grid = e.sender;
+        $('#btnSaveProjectCost').hide()
+        $('#btnDeleteProjectCost').show()
+        $('#btnUpdateProjectCost').show()
+
+        var currentDataItem = grid.dataItem(this.select());
+        $("#cbo_projectCostEstimated").data("kendoComboBox").value(currentDataItem.projectCostID);
+        $("#cmb_tranche").data("kendoComboBox").value(currentDataItem.Tranche);
+        $('#DT_Project_dateReceive').data("kendoDatePicker").value(currentDataItem.DateReceived);
+        $('#txtEstimatedAmount').val(currentDataItem.EstimatedAmount);
+        $('#txtProjectEstimatedCostID').val(currentDataItem.ProjectEstimatedCostID);
+        $('#div_detail_projectCostDetails').css({ 'display': 'inline-block' });
+    }
+
+    
+
+         function clickProjectCostType(projectEstimatiedID) {
+             startSpin()
+         $.post('@Url.Action("EstimatedProjectCostDetails","Project")',
+            { ProjectEstimatedCostID: projectEstimatiedID },
+             function (r) {
+                 stopSpin()
+
+                 if (projectEstimatiedID == 0) {
+                     $('#btnDeletecost').hide()
+                     $("#h_cost_details").html("Add Project cost");
+                 }
+                 else {
+                     $('#btnDeletecost').show()
+                     $("#h_cost_details").html("Project Details");
+                 }
+
+                 $("#body_cost_details").html(r)
+                 $("#mdl_cost_details").modal("show");
+            }
+         )
+    }
+
+
+
+         $(document).ready(function () {
+             $('.ui-draggable').draggable({
+                 handle: ".modal-header"
+             });
+         });
+</script>

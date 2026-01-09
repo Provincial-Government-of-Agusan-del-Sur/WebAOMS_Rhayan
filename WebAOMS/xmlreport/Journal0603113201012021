@@ -1,0 +1,363 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevID" type="xs:int" minOccurs="0" />
+                <xs:element name="Date_" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ADANo" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="debit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundryDebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CreditAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="CreditAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="credit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundrycredit" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="debit1" type="xs:int" minOccurs="0" />
+                <xs:element name="debit2" type="xs:int" minOccurs="0" />
+                <xs:element name="debit3" type="xs:int" minOccurs="0" />
+                <xs:element name="credit1" type="xs:int" minOccurs="0" />
+                <xs:element name="credit2" type="xs:int" minOccurs="0" />
+                <xs:element name="credit3" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Sdebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Scredit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderby" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>AUTHORITY  TO DEBIT ACCOUNT DISBURSEMENTS  JOURNAL</T1>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <dateString>For the month of January, 2021</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>0</groupCount>
+  </Table>
+  <Table1>
+    <jevID>0</jevID>
+    <Particular>Totals Carried Forward</Particular>
+  </Table1>
+  <Table1>
+    <jevID>389262</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7011</ADANo>
+    <JEVno>132-21-01-06-0001</JEVno>
+    <Particular>(8P) to payment of CASUAL for the period of December 1-15, 2020.ADA BATCH NO:2021-7011</Particular>
+    <TotalSundryDebit>96236.47</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>35,077.52#=6,529.08#=4,896.81</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>96,236.47</DebitAmount>
+    <credit1>49733.06</credit1>
+    <TotalSundrycredit>46503.41</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389264</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7014</ADANo>
+    <JEVno>132-21-01-06-0002</JEVno>
+    <Particular>(3P),To payment of CONTRACT OF SERVICE for the month of November 1-30, 2020.ADA BATCH NO:2021-7014</Particular>
+    <TotalSundryDebit>81669.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>700.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>81,669.00</DebitAmount>
+    <credit1>73525.60</credit1>
+    <credit2>4383.40</credit2>
+    <credit3>3060.00</credit3>
+    <TotalSundrycredit>700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389266</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7030</ADANo>
+    <JEVno>132-21-01-06-0003</JEVno>
+    <Particular> to payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2021-7030</Particular>
+    <TotalSundryDebit>4400.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>4,400.00</DebitAmount>
+    <credit1>3700.00</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389267</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7030</ADANo>
+    <JEVno>132-21-01-06-0004</JEVno>
+    <Particular> (4P) to payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2021-7030</Particular>
+    <TotalSundryDebit>18064.75</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>746.32</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>18,064.75</DebitAmount>
+    <credit1>15518.43</credit1>
+    <credit3>1800.00</credit3>
+    <TotalSundrycredit>746.32</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389270</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7043</ADANo>
+    <JEVno>132-21-01-06-0005</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2021-7043</Particular>
+    <TotalSundryDebit>17600.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>400.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>17,600.00</DebitAmount>
+    <credit1>14800.00</credit1>
+    <credit3>2400.00</credit3>
+    <TotalSundrycredit>400.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389274</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7044</ADANo>
+    <JEVno>132-21-01-06-0006</JEVno>
+    <Particular>(5P) to payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2021-7044</Particular>
+    <TotalSundryDebit>20400.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>20,400.00</DebitAmount>
+    <credit1>16900.00</credit1>
+    <credit3>3000.00</credit3>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389259</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-1</ADANo>
+    <JEVno>132-21-01-06-0007</JEVno>
+    <Particular>paymt. of Wages Novemeber 1-30, 2020.ADA BATCH NO:2021-1</Particular>
+    <TotalSundryDebit>12673.98</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>446.32</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>12,673.98</DebitAmount>
+    <credit1>12227.66</credit1>
+    <TotalSundrycredit>446.32</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389876</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7089</ADANo>
+    <JEVno>132-21-01-06-0008</JEVno>
+    <Particular>to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2021-7089</Particular>
+    <TotalSundryDebit>4400.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>4,400.00</DebitAmount>
+    <credit1>4400.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389877</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7090</ADANo>
+    <JEVno>132-21-01-06-0009</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2021-7090</Particular>
+    <TotalSundryDebit>20400.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>20,400.00</DebitAmount>
+    <credit1>20400.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389879</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7091</ADANo>
+    <JEVno>132-21-01-06-0010</JEVno>
+    <Particular>(8P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2021-7091</Particular>
+    <TotalSundryDebit>76320.28</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>76,320.28</DebitAmount>
+    <credit1>76320.28</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389880</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7092</ADANo>
+    <JEVno>132-21-01-06-0011</JEVno>
+    <Particular> (2P) to payment of JOB ORDER for the month of December 1-31, 2020.ADA BATCH NO:2021-7092
+</Particular>
+    <TotalSundryDebit>16800.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>16,800.00</DebitAmount>
+    <credit1>16600.00</credit1>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389883</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7099</ADANo>
+    <JEVno>132-21-01-06-0012</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2021-7099</Particular>
+    <TotalSundryDebit>19600.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>19,600.00</DebitAmount>
+    <credit1>19600.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389881</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7100</ADANo>
+    <JEVno>132-21-01-06-0013</JEVno>
+    <Particular>(3P),To payment of CONTRACT OF SERVICE for the month of December 1-31, 2020.ADA BATCH NO:2021-7100
+</Particular>
+    <TotalSundryDebit>83107.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>700.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>83,107.00</DebitAmount>
+    <credit1>74920.46</credit1>
+    <credit2>4426.54</credit2>
+    <credit3>3060.00</credit3>
+    <TotalSundrycredit>700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389999</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>132-21-01-06-0014</JEVno>
+    <Particular>(27P), payment of salaries for the month of January 2021.</Particular>
+    <debit1>682932.00</debit1>
+    <debit3>54000.00</debit3>
+    <TotalSundryDebit>305303.67</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>209,106.36#=29,517.28#=19,945.44</CreditAmount>
+    <DebitAccountcode>50102050#=50102060#=50102110#=50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>40,500.00#=4,050.00#=152,470.41#=81,951.84#=13,658.64#=9,972.78#=2,700.00</DebitAmount>
+    <credit1>556604.51</credit1>
+    <credit2>53058.35</credit2>
+    <credit3>174003.73</credit3>
+    <TotalSundrycredit>258569.08</TotalSundrycredit>
+  </Table1>
+  <Table2>
+    <debit1>50101011</debit1>
+    <debit2>50101021</debit2>
+    <debit3>50102011</debit3>
+    <credit1>10102011</credit1>
+    <credit2>20201011</credit2>
+    <credit3>29999991</credit3>
+  </Table2>
+  <Table3>
+    <Accountcode>Totals Carried Forward</Accountcode>
+    <orderby>1</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20101010</Accountcode>
+    <Sdebit>299114.73</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20101020</Accountcode>
+    <Sdebit>172556.75</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201020</Accountcode>
+    <Scredit>244183.88</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201030</Accountcode>
+    <Scredit>39839.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201040</Accountcode>
+    <Scredit>24842.25</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102050</Accountcode>
+    <Sdebit>40500.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102060</Accountcode>
+    <Sdebit>4050.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102110</Accountcode>
+    <Sdebit>152470.41</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103010</Accountcode>
+    <Sdebit>81951.84</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103020</Accountcode>
+    <Sdebit>13658.64</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103030</Accountcode>
+    <Sdebit>9972.78</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103040</Accountcode>
+    <Sdebit>2700.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+</NewDataSet>

@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "Add Person";
+    Layout = null;
+    
+}
+
+<div class="box" style="width:100%;margin-bottom:0px!important">
+    <div class="box-body">
+        <form id="frm_add_cperson">
+            <div class="col-md-12 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Name</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    @*<input id="txt_claimant" name="claimantname" value="@ViewBag.claimantname" type="text" class="form-control k-input" />*@
+                    <div class="input-group" style="padding-bottom:5px!important">
+                        <input id="txt_claimant" type="text" class="form-control navbar-input" value="@ViewBag.Name" style="" placeholder="Browse Name" disabled>
+                        <span class="input-group-btn dropup">
+                            <button class="btn btn-equal" type="button" onclick="browse_claimant()"><i class="fa fa-group"></i></button>
+                        </span>
+
+                        @*<input type="text" class="form-control navbar-input control-width-tiny" style="text-align:center"/>*@
+
+                    </div>
+                    <input id="txt_claimant_id" style="display:none" name="ClaimantCode" value="@ViewBag.ClaimantCode" type="text" class="form-control k-input" />
+                    <input id="txt_person_group_id" name="person_group_id" type="text" style="display:none"/>
+                </div>
+            </div>
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>RHU/Barangay</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                    .Name("brgyid")
+                    .DataTextField("AddressName")
+                    .DataValueField("brgyid")
+                    .HtmlAttributes(new { style = "width:100%" })
+                    .Filter("contains")
+                    .SelectedIndex(0)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("get_person_address", "Persons");
+                        })
+                        .ServerFiltering(false);
+                    })
+                    )
+                </div>
+            <div class="col-md-6 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Contact No.</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input name="ContactNo" class="form-control text-left " value="@ViewBag.ContactNo" placeholder="" type="text">
+                </div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Land Bank Account No.</span>
+                    </span>
+                </div>
+
+                <div class="byexym liZmnb">
+                    @*<input name="AccountNo" class="form-control text-left" disabled value="@ViewBag.AccountNo" placeholder="" type="text">*@
+                    @{ 
+                        string userRole = "ATMIncharge"; // Set the user's role here
+
+                        // Check if the user's role matches the specified role
+                        bool isInRole = false;
+                        var identity = User.Identity as System.Security.Claims.ClaimsIdentity;
+                        if (identity != null)
+                        {
+                            foreach (var claim in identity.Claims)
+                            {
+                                if (claim.Type == System.Security.Claims.ClaimTypes.Role && claim.Value == userRole)
+                                {
+                                    isInRole = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    <input name="AccountNo" class="form-control text-left"
+                           @(isInRole ? "" : "disabled")
+                           value="@ViewBag.AccountNo" placeholder="" type="text">
+                </div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Email</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <input name="Email" class="form-control text-left " value="@ViewBag.Email" placeholder="" type="text">
+                </div>
+            </div>
+</form>
+        <script>
+            function btn_save_person() {
+                startSpin()
+                var frm = $("#frm_add_cperson").serialize();
+                $.post('@Url.Action("save_person", "Persons")',
+                    frm
+                , function (r) {
+                    if (r.code == 6) {
+                        toastr.success(r.statusName, 'System Message')
+                        stopSpin()
+                        r_grid()
+                    }
+                    else {
+                        stopSpin()
+                        toastr.warning(r.statusName, 'System Message');
+                    }
+
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    mg.warning("" + textStatus + "")
+                });
+            }
+        </script>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#txt_person_group_id").val($("#ddp_person_group_id").data("kendoDropDownList").value())
+    })
+    function browse_claimant() {
+        startSpin()
+        $.post('@Url.Action("_browse_claimant", "Document")', {}
+            , function (r) {
+                $("#body_browse_claimant").html(r)
+                $("#mdl_browse_claimant").modal("show");
+                stopSpin();
+            })
+    }
+    function close_browse_claimant() {
+        $("#mdl_browse_claimant").modal("hide");
+    }
+</script>

@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="IFMISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_B_ProjectEstimatedCost">
+          <Key>
+            <PropertyRef Name="ProjectEstimatedCostID" />
+          </Key>
+          <Property Name="ProjectEstimatedCostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fundID" Type="int" />
+          <Property Name="ProjectID" Type="int" />
+          <Property Name="ProjectCostID" Type="int" />
+          <Property Name="EstimatedAmount" Type="money" />
+          <Property Name="Tranche" Type="tinyint" />
+          <Property Name="DateReceived" Type="date" />
+          <Property Name="active" Type="tinyint" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_Budget_ObligationPreparation">
+          <Key>
+            <PropertyRef Name="ObligID" />
+          </Key>
+          <Property Name="ObligID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionTypeID" Type="int" />
+          <Property Name="Obrno" Type="char" MaxLength="19" />
+          <Property Name="SeqNo" Type="int" />
+          <Property Name="particulars" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Rcenter" Type="int" />
+          <Property Name="DateObligated" Type="date" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="projectID" Type="int" />
+          <Property Name="projectCostID" Type="int" />
+          <Property Name="fundcode" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="LogDetails" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IFMIS.dbo.tbl_reff_Fund' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbl_reff_Fund">
+          <Key>
+            <PropertyRef Name="FundID" />
+            <PropertyRef Name="Fundcode" />
+            <PropertyRef Name="Fundname" />
+          </Key>
+          <Property Name="FundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentFundID" Type="int" />
+          <Property Name="Fundcode" Type="int" Nullable="false" />
+          <Property Name="Fundname" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Display" Type="bit" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IFMIS.dbo.tbl_reff_motherCOA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tbl_reff_motherCOA">
+          <Key>
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="ClassID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="motherID" Type="int" />
+          <Property Name="classname" Type="varchar" MaxLength="1000" />
+          <Property Name="code" Type="int" />
+          <Property Name="lvl" Type="int" />
+          <Property Name="active" Type="bit" />
+          <Property Name="source" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Project">
+          <Key>
+            <PropertyRef Name="projectID" />
+          </Key>
+          <Property Name="projectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="project_year" Type="decimal" Precision="4" Scale="0" />
+          <Property Name="date_NADAI" Type="date" />
+          <Property Name="programTypeId" Type="int" />
+          <Property Name="mechanismId" Type="int" />
+          <Property Name="project_name" Type="varchar" MaxLength="500" />
+          <Property Name="Location" Type="varchar" MaxLength="500" />
+          <Property Name="date_completion" Type="date" />
+          <Property Name="fundID" Type="int" />
+          <Property Name="userID" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Active" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Project_mechanism">
+          <Key>
+            <PropertyRef Name="mechanismId" />
+          </Key>
+          <Property Name="mechanismId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mechanismName" Type="varchar" MaxLength="200" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Project_programType">
+          <Key>
+            <PropertyRef Name="programTypeId" />
+          </Key>
+          <Property Name="programTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProgramTypeName" Type="varchar" MaxLength="200" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_reff_ProjectCostType">
+          <Key>
+            <PropertyRef Name="projectCostID" />
+          </Key>
+          <Property Name="projectCostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentProjectCostID" Type="int" />
+          <Property Name="ProjectCostName" Type="varchar" MaxLength="200" />
+          <Property Name="userID" Type="int" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_reff_SignatoryType">
+          <Key>
+            <PropertyRef Name="SignatoryTypeID" />
+          </Key>
+          <Property Name="SignatoryTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeName" Type="varchar" MaxLength="50" />
+          <Property Name="ColName" Type="varchar" MaxLength="50" />
+          <Property Name="isActive" Type="tinyint" />
+          <Property Name="changeDate" Type="datetime" />
+          <Property Name="ChangerID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_reff_SourceOfFund">
+          <Key>
+            <PropertyRef Name="fundID" />
+          </Key>
+          <Property Name="fundID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SourceName" Type="varchar" MaxLength="200" />
+          <Property Name="fundcode" Type="int" />
+          <Property Name="code" Type="int" />
+          <Property Name="userID" Type="int" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbl_reff_TransactionType">
+          <Key>
+            <PropertyRef Name="TransactionTypeID" />
+          </Key>
+          <Property Name="TransactionTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransactionTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="PartialName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IFMIS.dbo.vw_Project_grid' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_Project_grid">
+          <Key>
+            <PropertyRef Name="projectID" />
+            <PropertyRef Name="TotalReceived" />
+            <PropertyRef Name="Balance" />
+          </Key>
+          <Property Name="fundID" Type="int" />
+          <Property Name="projectID" Type="int" Nullable="false" />
+          <Property Name="SourceName" Type="varchar" MaxLength="200" />
+          <Property Name="date_NADAI" Type="date" />
+          <Property Name="ProgramTypeName" Type="varchar" MaxLength="200" />
+          <Property Name="project_name" Type="varchar" MaxLength="500" />
+          <Property Name="Location" Type="varchar" MaxLength="500" />
+          <Property Name="mechanismName" Type="varchar" MaxLength="200" />
+          <Property Name="project_year" Type="int" />
+          <Property Name="TotalReceived" Type="money" Nullable="false" />
+          <Property Name="ProjectedAmount" Type="numeric" Precision="21" Scale="4" />
+          <Property Name="Balance" Type="money" Nullable="false" />
+          <Property Name="date_completion" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IFMIS.dbo.vw_projectEstimatedCost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_projectEstimatedCost">
+          <Key>
+            <PropertyRef Name="projectID" />
+            <PropertyRef Name="projectCostID" />
+            <PropertyRef Name="ProjectEstimatedCostID" />
+          </Key>
+          <Property Name="projectID" Type="int" Nullable="false" />
+          <Property Name="ProjectCostName" Type="varchar" MaxLength="200" />
+          <Property Name="projectCostID" Type="int" Nullable="false" />
+          <Property Name="ProjectEstimatedCostID" Type="int" Nullable="false" />
+          <Property Name="EstimatedAmount" Type="money" />
+          <Property Name="DateReceived" Type="date" />
+          <Property Name="Tranche" Type="tinyint" />
+          <Property Name="trancheDesc" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'IFMIS.dbo.vw_ProjectRecapDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_ProjectRecapDetails">
+          <Key>
+            <PropertyRef Name="Claimed" />
+            <PropertyRef Name="projectCostID" />
+          </Key>
+          <Property Name="Claimed" Type="money" Nullable="false" />
+          <Property Name="TotalEstimated" Type="money" />
+          <Property Name="ProjectCostName" Type="varchar" MaxLength="200" />
+          <Property Name="projectCostID" Type="int" Nullable="false" />
+          <Property Name="ProjectID" Type="int" />
+        </EntityType>
+        <Association Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project">
+          <End Role="tbl_reff_Project" Type="Self.tbl_reff_Project" Multiplicity="0..1" />
+          <End Role="tbl_B_ProjectEstimatedCost" Type="Self.tbl_B_ProjectEstimatedCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_Project">
+              <PropertyRef Name="projectID" />
+            </Principal>
+            <Dependent Role="tbl_B_ProjectEstimatedCost">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType">
+          <End Role="tbl_reff_ProjectCostType" Type="Self.tbl_reff_ProjectCostType" Multiplicity="0..1" />
+          <End Role="tbl_B_ProjectEstimatedCost" Type="Self.tbl_B_ProjectEstimatedCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_ProjectCostType">
+              <PropertyRef Name="projectCostID" />
+            </Principal>
+            <Dependent Role="tbl_B_ProjectEstimatedCost">
+              <PropertyRef Name="ProjectCostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund">
+          <End Role="tbl_reff_SourceOfFund" Type="Self.tbl_reff_SourceOfFund" Multiplicity="0..1" />
+          <End Role="tbl_B_ProjectEstimatedCost" Type="Self.tbl_B_ProjectEstimatedCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_SourceOfFund">
+              <PropertyRef Name="fundID" />
+            </Principal>
+            <Dependent Role="tbl_B_ProjectEstimatedCost">
+              <PropertyRef Name="fundID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_Project">
+          <End Role="tbl_reff_Project" Type="Self.tbl_reff_Project" Multiplicity="0..1" />
+          <End Role="tbl_Budget_ObligationPreparation" Type="Self.tbl_Budget_ObligationPreparation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_Project">
+              <PropertyRef Name="projectID" />
+            </Principal>
+            <Dependent Role="tbl_Budget_ObligationPreparation">
+              <PropertyRef Name="projectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType">
+          <End Role="tbl_reff_ProjectCostType" Type="Self.tbl_reff_ProjectCostType" Multiplicity="0..1" />
+          <End Role="tbl_Budget_ObligationPreparation" Type="Self.tbl_Budget_ObligationPreparation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_ProjectCostType">
+              <PropertyRef Name="projectCostID" />
+            </Principal>
+            <Dependent Role="tbl_Budget_ObligationPreparation">
+              <PropertyRef Name="projectCostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType">
+          <End Role="tbl_reff_TransactionType" Type="Self.tbl_reff_TransactionType" Multiplicity="0..1" />
+          <End Role="tbl_Budget_ObligationPreparation" Type="Self.tbl_Budget_ObligationPreparation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_TransactionType">
+              <PropertyRef Name="TransactionTypeID" />
+            </Principal>
+            <Dependent Role="tbl_Budget_ObligationPreparation">
+              <PropertyRef Name="TransactionTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_reff_Project_tbl_reff_SourceOfFund">
+          <End Role="tbl_reff_SourceOfFund" Type="Self.tbl_reff_SourceOfFund" Multiplicity="0..1" />
+          <End Role="tbl_reff_Project" Type="Self.tbl_reff_Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_SourceOfFund">
+              <PropertyRef Name="fundID" />
+            </Principal>
+            <Dependent Role="tbl_reff_Project">
+              <PropertyRef Name="fundID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType">
+          <End Role="tbl_reff_ProjectCostType" Type="Self.tbl_reff_ProjectCostType" Multiplicity="0..1" />
+          <End Role="tbl_reff_ProjectCostType1" Type="Self.tbl_reff_ProjectCostType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_ProjectCostType">
+              <PropertyRef Name="projectCostID" />
+            </Principal>
+            <Dependent Role="tbl_reff_ProjectCostType1">
+              <PropertyRef Name="ParentProjectCostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IFMISModelStoreContainer">
+          <EntitySet Name="tbl_B_ProjectEstimatedCost" EntityType="Self.tbl_B_ProjectEstimatedCost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Budget_ObligationPreparation" EntityType="Self.tbl_Budget_ObligationPreparation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_Project" EntityType="Self.tbl_reff_Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_Project_mechanism" EntityType="Self.tbl_reff_Project_mechanism" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_Project_programType" EntityType="Self.tbl_reff_Project_programType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_ProjectCostType" EntityType="Self.tbl_reff_ProjectCostType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_SignatoryType" EntityType="Self.tbl_reff_SignatoryType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_SourceOfFund" EntityType="Self.tbl_reff_SourceOfFund" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_TransactionType" EntityType="Self.tbl_reff_TransactionType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reff_Fund" EntityType="Self.tbl_reff_Fund" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbl_reff_Fund].[FundID] AS [FundID], 
+    [tbl_reff_Fund].[ParentFundID] AS [ParentFundID], 
+    [tbl_reff_Fund].[Fundcode] AS [Fundcode], 
+    [tbl_reff_Fund].[Fundname] AS [Fundname], 
+    [tbl_reff_Fund].[Active] AS [Active], 
+    [tbl_reff_Fund].[UserID] AS [UserID], 
+    [tbl_reff_Fund].[ModifiedDate] AS [ModifiedDate], 
+    [tbl_reff_Fund].[Display] AS [Display]
+    FROM [dbo].[tbl_reff_Fund] AS [tbl_reff_Fund]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tbl_reff_motherCOA" EntityType="Self.tbl_reff_motherCOA" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tbl_reff_motherCOA].[ClassID] AS [ClassID], 
+    [tbl_reff_motherCOA].[motherID] AS [motherID], 
+    [tbl_reff_motherCOA].[classname] AS [classname], 
+    [tbl_reff_motherCOA].[code] AS [code], 
+    [tbl_reff_motherCOA].[lvl] AS [lvl], 
+    [tbl_reff_motherCOA].[active] AS [active], 
+    [tbl_reff_motherCOA].[source] AS [source]
+    FROM [dbo].[tbl_reff_motherCOA] AS [tbl_reff_motherCOA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_Project_grid" EntityType="Self.vw_Project_grid" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_Project_grid].[fundID] AS [fundID], 
+    [vw_Project_grid].[projectID] AS [projectID], 
+    [vw_Project_grid].[SourceName] AS [SourceName], 
+    [vw_Project_grid].[date_NADAI] AS [date_NADAI], 
+    [vw_Project_grid].[ProgramTypeName] AS [ProgramTypeName], 
+    [vw_Project_grid].[project_name] AS [project_name], 
+    [vw_Project_grid].[Location] AS [Location], 
+    [vw_Project_grid].[mechanismName] AS [mechanismName], 
+    [vw_Project_grid].[project_year] AS [project_year], 
+    [vw_Project_grid].[TotalReceived] AS [TotalReceived], 
+    [vw_Project_grid].[ProjectedAmount] AS [ProjectedAmount], 
+    [vw_Project_grid].[Balance] AS [Balance], 
+    [vw_Project_grid].[date_completion] AS [date_completion]
+    FROM [dbo].[vw_Project_grid] AS [vw_Project_grid]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_projectEstimatedCost" EntityType="Self.vw_projectEstimatedCost" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_projectEstimatedCost].[projectID] AS [projectID], 
+    [vw_projectEstimatedCost].[ProjectCostName] AS [ProjectCostName], 
+    [vw_projectEstimatedCost].[projectCostID] AS [projectCostID], 
+    [vw_projectEstimatedCost].[ProjectEstimatedCostID] AS [ProjectEstimatedCostID], 
+    [vw_projectEstimatedCost].[EstimatedAmount] AS [EstimatedAmount], 
+    [vw_projectEstimatedCost].[DateReceived] AS [DateReceived], 
+    [vw_projectEstimatedCost].[Tranche] AS [Tranche], 
+    [vw_projectEstimatedCost].[trancheDesc] AS [trancheDesc]
+    FROM [dbo].[vw_projectEstimatedCost] AS [vw_projectEstimatedCost]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_ProjectRecapDetails" EntityType="Self.vw_ProjectRecapDetails" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_ProjectRecapDetails].[Claimed] AS [Claimed], 
+    [vw_ProjectRecapDetails].[TotalEstimated] AS [TotalEstimated], 
+    [vw_ProjectRecapDetails].[ProjectCostName] AS [ProjectCostName], 
+    [vw_ProjectRecapDetails].[projectCostID] AS [projectCostID], 
+    [vw_ProjectRecapDetails].[ProjectID] AS [ProjectID]
+    FROM [dbo].[vw_ProjectRecapDetails] AS [vw_ProjectRecapDetails]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project" Association="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project">
+            <End Role="tbl_reff_Project" EntitySet="tbl_reff_Project" />
+            <End Role="tbl_B_ProjectEstimatedCost" EntitySet="tbl_B_ProjectEstimatedCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType" Association="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType">
+            <End Role="tbl_reff_ProjectCostType" EntitySet="tbl_reff_ProjectCostType" />
+            <End Role="tbl_B_ProjectEstimatedCost" EntitySet="tbl_B_ProjectEstimatedCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund" Association="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund">
+            <End Role="tbl_reff_SourceOfFund" EntitySet="tbl_reff_SourceOfFund" />
+            <End Role="tbl_B_ProjectEstimatedCost" EntitySet="tbl_B_ProjectEstimatedCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_Project" Association="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_Project">
+            <End Role="tbl_reff_Project" EntitySet="tbl_reff_Project" />
+            <End Role="tbl_Budget_ObligationPreparation" EntitySet="tbl_Budget_ObligationPreparation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType" Association="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType">
+            <End Role="tbl_reff_ProjectCostType" EntitySet="tbl_reff_ProjectCostType" />
+            <End Role="tbl_Budget_ObligationPreparation" EntitySet="tbl_Budget_ObligationPreparation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType" Association="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType">
+            <End Role="tbl_reff_TransactionType" EntitySet="tbl_reff_TransactionType" />
+            <End Role="tbl_Budget_ObligationPreparation" EntitySet="tbl_Budget_ObligationPreparation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_reff_Project_tbl_reff_SourceOfFund" Association="Self.FK_tbl_reff_Project_tbl_reff_SourceOfFund">
+            <End Role="tbl_reff_SourceOfFund" EntitySet="tbl_reff_SourceOfFund" />
+            <End Role="tbl_reff_Project" EntitySet="tbl_reff_Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType" Association="Self.FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType">
+            <End Role="tbl_reff_ProjectCostType" EntitySet="tbl_reff_ProjectCostType" />
+            <End Role="tbl_reff_ProjectCostType1" EntitySet="tbl_reff_ProjectCostType" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IFMISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_B_ProjectEstimatedCost">
+          <Key>
+            <PropertyRef Name="ProjectEstimatedCostID" />
+          </Key>
+          <Property Name="ProjectEstimatedCostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fundID" Type="Int32" />
+          <Property Name="ProjectID" Type="Int32" />
+          <Property Name="ProjectCostID" Type="Int32" />
+          <Property Name="EstimatedAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Tranche" Type="Byte" />
+          <Property Name="DateReceived" Type="DateTime" Precision="0" />
+          <Property Name="active" Type="Byte" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tbl_reff_Project" Relationship="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project" FromRole="tbl_B_ProjectEstimatedCost" ToRole="tbl_reff_Project" />
+          <NavigationProperty Name="tbl_reff_ProjectCostType" Relationship="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType" FromRole="tbl_B_ProjectEstimatedCost" ToRole="tbl_reff_ProjectCostType" />
+          <NavigationProperty Name="tbl_reff_SourceOfFund" Relationship="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund" FromRole="tbl_B_ProjectEstimatedCost" ToRole="tbl_reff_SourceOfFund" />
+        </EntityType>
+        <EntityType Name="tbl_Budget_ObligationPreparation">
+          <Key>
+            <PropertyRef Name="ObligID" />
+          </Key>
+          <Property Name="ObligID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionTypeID" Type="Int32" />
+          <Property Name="Obrno" Type="String" MaxLength="19" FixedLength="true" Unicode="false" />
+          <Property Name="SeqNo" Type="Int32" />
+          <Property Name="particulars" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Rcenter" Type="Int32" />
+          <Property Name="DateObligated" Type="DateTime" Precision="0" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="projectID" Type="Int32" />
+          <Property Name="projectCostID" Type="Int32" />
+          <Property Name="fundcode" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="LogDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tbl_reff_Project" Relationship="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_Project" FromRole="tbl_Budget_ObligationPreparation" ToRole="tbl_reff_Project" />
+          <NavigationProperty Name="tbl_reff_ProjectCostType" Relationship="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType" FromRole="tbl_Budget_ObligationPreparation" ToRole="tbl_reff_ProjectCostType" />
+          <NavigationProperty Name="tbl_reff_TransactionType" Relationship="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType" FromRole="tbl_Budget_ObligationPreparation" ToRole="tbl_reff_TransactionType" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Project">
+          <Key>
+            <PropertyRef Name="projectID" />
+          </Key>
+          <Property Name="projectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="project_year" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="date_NADAI" Type="DateTime" Precision="0" />
+          <Property Name="programTypeId" Type="Int32" />
+          <Property Name="mechanismId" Type="Int32" />
+          <Property Name="project_name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="date_completion" Type="DateTime" Precision="0" />
+          <Property Name="fundID" Type="Int32" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Byte" />
+          <NavigationProperty Name="tbl_B_ProjectEstimatedCost" Relationship="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project" FromRole="tbl_reff_Project" ToRole="tbl_B_ProjectEstimatedCost" />
+          <NavigationProperty Name="tbl_Budget_ObligationPreparation" Relationship="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_Project" FromRole="tbl_reff_Project" ToRole="tbl_Budget_ObligationPreparation" />
+          <NavigationProperty Name="tbl_reff_SourceOfFund" Relationship="Self.FK_tbl_reff_Project_tbl_reff_SourceOfFund" FromRole="tbl_reff_Project" ToRole="tbl_reff_SourceOfFund" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Project_mechanism">
+          <Key>
+            <PropertyRef Name="mechanismId" />
+          </Key>
+          <Property Name="mechanismId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mechanismName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Project_programType">
+          <Key>
+            <PropertyRef Name="programTypeId" />
+          </Key>
+          <Property Name="programTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProgramTypeName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_reff_ProjectCostType">
+          <Key>
+            <PropertyRef Name="projectCostID" />
+          </Key>
+          <Property Name="projectCostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentProjectCostID" Type="Int32" />
+          <Property Name="ProjectCostName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tbl_B_ProjectEstimatedCost" Relationship="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType" FromRole="tbl_reff_ProjectCostType" ToRole="tbl_B_ProjectEstimatedCost" />
+          <NavigationProperty Name="tbl_Budget_ObligationPreparation" Relationship="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType" FromRole="tbl_reff_ProjectCostType" ToRole="tbl_Budget_ObligationPreparation" />
+          <NavigationProperty Name="tbl_reff_ProjectCostType1" Relationship="Self.FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType" FromRole="tbl_reff_ProjectCostType" ToRole="tbl_reff_ProjectCostType1" />
+          <NavigationProperty Name="tbl_reff_ProjectCostType2" Relationship="Self.FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType" FromRole="tbl_reff_ProjectCostType1" ToRole="tbl_reff_ProjectCostType" />
+        </EntityType>
+        <EntityType Name="tbl_reff_SignatoryType">
+          <Key>
+            <PropertyRef Name="SignatoryTypeID" />
+          </Key>
+          <Property Name="SignatoryTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ColName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isActive" Type="Byte" />
+          <Property Name="changeDate" Type="DateTime" Precision="3" />
+          <Property Name="ChangerID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_reff_SourceOfFund">
+          <Key>
+            <PropertyRef Name="fundID" />
+          </Key>
+          <Property Name="fundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SourceName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="fundcode" Type="Int32" />
+          <Property Name="code" Type="Int32" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="tbl_B_ProjectEstimatedCost" Relationship="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund" FromRole="tbl_reff_SourceOfFund" ToRole="tbl_B_ProjectEstimatedCost" />
+          <NavigationProperty Name="tbl_reff_Project" Relationship="Self.FK_tbl_reff_Project_tbl_reff_SourceOfFund" FromRole="tbl_reff_SourceOfFund" ToRole="tbl_reff_Project" />
+        </EntityType>
+        <EntityType Name="tbl_reff_TransactionType">
+          <Key>
+            <PropertyRef Name="TransactionTypeID" />
+          </Key>
+          <Property Name="TransactionTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransactionTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="PartialName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_Budget_ObligationPreparation" Relationship="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType" FromRole="tbl_reff_TransactionType" ToRole="tbl_Budget_ObligationPreparation" />
+        </EntityType>
+        <EntityType Name="tbl_reff_Fund">
+          <Key>
+            <PropertyRef Name="FundID" />
+            <PropertyRef Name="Fundcode" />
+            <PropertyRef Name="Fundname" />
+          </Key>
+          <Property Name="FundID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentFundID" Type="Int32" />
+          <Property Name="Fundcode" Type="Int32" Nullable="false" />
+          <Property Name="Fundname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Display" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_reff_motherCOA">
+          <Key>
+            <PropertyRef Name="ClassID" />
+          </Key>
+          <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="motherID" Type="Int32" />
+          <Property Name="classname" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="code" Type="Int32" />
+          <Property Name="lvl" Type="Int32" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="source" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project">
+          <End Role="tbl_reff_Project" Type="Self.tbl_reff_Project" Multiplicity="0..1" />
+          <End Role="tbl_B_ProjectEstimatedCost" Type="Self.tbl_B_ProjectEstimatedCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_Project">
+              <PropertyRef Name="projectID" />
+            </Principal>
+            <Dependent Role="tbl_B_ProjectEstimatedCost">
+              <PropertyRef Name="ProjectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType">
+          <End Role="tbl_reff_ProjectCostType" Type="Self.tbl_reff_ProjectCostType" Multiplicity="0..1" />
+          <End Role="tbl_B_ProjectEstimatedCost" Type="Self.tbl_B_ProjectEstimatedCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_ProjectCostType">
+              <PropertyRef Name="projectCostID" />
+            </Principal>
+            <Dependent Role="tbl_B_ProjectEstimatedCost">
+              <PropertyRef Name="ProjectCostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund">
+          <End Role="tbl_reff_SourceOfFund" Type="Self.tbl_reff_SourceOfFund" Multiplicity="0..1" />
+          <End Role="tbl_B_ProjectEstimatedCost" Type="Self.tbl_B_ProjectEstimatedCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_SourceOfFund">
+              <PropertyRef Name="fundID" />
+            </Principal>
+            <Dependent Role="tbl_B_ProjectEstimatedCost">
+              <PropertyRef Name="fundID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_Project">
+          <End Role="tbl_reff_Project" Type="Self.tbl_reff_Project" Multiplicity="0..1" />
+          <End Role="tbl_Budget_ObligationPreparation" Type="Self.tbl_Budget_ObligationPreparation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_Project">
+              <PropertyRef Name="projectID" />
+            </Principal>
+            <Dependent Role="tbl_Budget_ObligationPreparation">
+              <PropertyRef Name="projectID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType">
+          <End Role="tbl_reff_ProjectCostType" Type="Self.tbl_reff_ProjectCostType" Multiplicity="0..1" />
+          <End Role="tbl_Budget_ObligationPreparation" Type="Self.tbl_Budget_ObligationPreparation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_ProjectCostType">
+              <PropertyRef Name="projectCostID" />
+            </Principal>
+            <Dependent Role="tbl_Budget_ObligationPreparation">
+              <PropertyRef Name="projectCostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType">
+          <End Role="tbl_reff_TransactionType" Type="Self.tbl_reff_TransactionType" Multiplicity="0..1" />
+          <End Role="tbl_Budget_ObligationPreparation" Type="Self.tbl_Budget_ObligationPreparation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_TransactionType">
+              <PropertyRef Name="TransactionTypeID" />
+            </Principal>
+            <Dependent Role="tbl_Budget_ObligationPreparation">
+              <PropertyRef Name="TransactionTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_reff_Project_tbl_reff_SourceOfFund">
+          <End Role="tbl_reff_SourceOfFund" Type="Self.tbl_reff_SourceOfFund" Multiplicity="0..1" />
+          <End Role="tbl_reff_Project" Type="Self.tbl_reff_Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_SourceOfFund">
+              <PropertyRef Name="fundID" />
+            </Principal>
+            <Dependent Role="tbl_reff_Project">
+              <PropertyRef Name="fundID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType">
+          <End Role="tbl_reff_ProjectCostType" Type="Self.tbl_reff_ProjectCostType" Multiplicity="0..1" />
+          <End Role="tbl_reff_ProjectCostType1" Type="Self.tbl_reff_ProjectCostType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_reff_ProjectCostType">
+              <PropertyRef Name="projectCostID" />
+            </Principal>
+            <Dependent Role="tbl_reff_ProjectCostType1">
+              <PropertyRef Name="ParentProjectCostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ifmisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_B_ProjectEstimatedCost" EntityType="Self.tbl_B_ProjectEstimatedCost" />
+          <EntitySet Name="tbl_Budget_ObligationPreparation" EntityType="Self.tbl_Budget_ObligationPreparation" />
+          <EntitySet Name="tbl_reff_Project" EntityType="Self.tbl_reff_Project" />
+          <EntitySet Name="tbl_reff_Project_mechanism" EntityType="Self.tbl_reff_Project_mechanism" />
+          <EntitySet Name="tbl_reff_Project_programType" EntityType="Self.tbl_reff_Project_programType" />
+          <EntitySet Name="tbl_reff_ProjectCostType" EntityType="Self.tbl_reff_ProjectCostType" />
+          <EntitySet Name="tbl_reff_SignatoryType" EntityType="Self.tbl_reff_SignatoryType" />
+          <EntitySet Name="tbl_reff_SourceOfFund" EntityType="Self.tbl_reff_SourceOfFund" />
+          <EntitySet Name="tbl_reff_TransactionType" EntityType="Self.tbl_reff_TransactionType" />
+          <EntitySet Name="tbl_reff_Fund" EntityType="Self.tbl_reff_Fund" />
+          <EntitySet Name="tbl_reff_motherCOA" EntityType="Self.tbl_reff_motherCOA" />
+          <AssociationSet Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project" Association="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project">
+            <End Role="tbl_reff_Project" EntitySet="tbl_reff_Project" />
+            <End Role="tbl_B_ProjectEstimatedCost" EntitySet="tbl_B_ProjectEstimatedCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType" Association="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType">
+            <End Role="tbl_reff_ProjectCostType" EntitySet="tbl_reff_ProjectCostType" />
+            <End Role="tbl_B_ProjectEstimatedCost" EntitySet="tbl_B_ProjectEstimatedCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund" Association="Self.FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund">
+            <End Role="tbl_reff_SourceOfFund" EntitySet="tbl_reff_SourceOfFund" />
+            <End Role="tbl_B_ProjectEstimatedCost" EntitySet="tbl_B_ProjectEstimatedCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_Project" Association="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_Project">
+            <End Role="tbl_reff_Project" EntitySet="tbl_reff_Project" />
+            <End Role="tbl_Budget_ObligationPreparation" EntitySet="tbl_Budget_ObligationPreparation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType" Association="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType">
+            <End Role="tbl_reff_ProjectCostType" EntitySet="tbl_reff_ProjectCostType" />
+            <End Role="tbl_Budget_ObligationPreparation" EntitySet="tbl_Budget_ObligationPreparation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType" Association="Self.FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType">
+            <End Role="tbl_reff_TransactionType" EntitySet="tbl_reff_TransactionType" />
+            <End Role="tbl_Budget_ObligationPreparation" EntitySet="tbl_Budget_ObligationPreparation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_reff_Project_tbl_reff_SourceOfFund" Association="Self.FK_tbl_reff_Project_tbl_reff_SourceOfFund">
+            <End Role="tbl_reff_SourceOfFund" EntitySet="tbl_reff_SourceOfFund" />
+            <End Role="tbl_reff_Project" EntitySet="tbl_reff_Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType" Association="Self.FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType">
+            <End Role="tbl_reff_ProjectCostType" EntitySet="tbl_reff_ProjectCostType" />
+            <End Role="tbl_reff_ProjectCostType1" EntitySet="tbl_reff_ProjectCostType" />
+          </AssociationSet>
+          <EntitySet Name="vw_projectEstimatedCost" EntityType="IFMISModel.vw_projectEstimatedCost" />
+          <EntitySet Name="vw_ProjectRecapDetails" EntityType="IFMISModel.vw_ProjectRecapDetails" />
+          <EntitySet Name="vw_Project_grid" EntityType="IFMISModel.vw_Project_grid" />
+        </EntityContainer>
+        <EntityType Name="vw_projectEstimatedCost">
+          <Key>
+            <PropertyRef Name="projectID" />
+            <PropertyRef Name="projectCostID" />
+            <PropertyRef Name="ProjectEstimatedCostID" />
+          </Key>
+          <Property Name="projectID" Type="Int32" Nullable="false" />
+          <Property Name="ProjectCostName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="projectCostID" Type="Int32" Nullable="false" />
+          <Property Name="ProjectEstimatedCostID" Type="Int32" Nullable="false" />
+          <Property Name="EstimatedAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DateReceived" Type="DateTime" Precision="0" />
+          <Property Name="Tranche" Type="Byte" />
+          <Property Name="trancheDesc" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vw_ProjectRecapDetails">
+          <Key>
+            <PropertyRef Name="Claimed" />
+            <PropertyRef Name="projectCostID" />
+          </Key>
+          <Property Name="Claimed" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="TotalEstimated" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ProjectCostName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="projectCostID" Type="Int32" Nullable="false" />
+          <Property Name="ProjectID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="vw_Project_grid">
+          <Key>
+            <PropertyRef Name="projectID" />
+            <PropertyRef Name="TotalReceived" />
+            <PropertyRef Name="Balance" />
+          </Key>
+          <Property Name="fundID" Type="Int32" />
+          <Property Name="projectID" Type="Int32" Nullable="false" />
+          <Property Name="SourceName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="date_NADAI" Type="DateTime" Precision="0" />
+          <Property Name="ProgramTypeName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="project_name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="mechanismName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="project_year" Type="Int32" />
+          <Property Name="TotalReceived" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ProjectedAmount" Type="Decimal" Precision="21" Scale="4" />
+          <Property Name="Balance" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="date_completion" Type="DateTime" Precision="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IFMISModelStoreContainer" CdmEntityContainer="ifmisEntities">
+          <EntitySetMapping Name="tbl_B_ProjectEstimatedCost">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_B_ProjectEstimatedCost">
+              <MappingFragment StoreEntitySet="tbl_B_ProjectEstimatedCost">
+                <ScalarProperty Name="ProjectEstimatedCostID" ColumnName="ProjectEstimatedCostID" />
+                <ScalarProperty Name="fundID" ColumnName="fundID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ProjectCostID" ColumnName="ProjectCostID" />
+                <ScalarProperty Name="EstimatedAmount" ColumnName="EstimatedAmount" />
+                <ScalarProperty Name="Tranche" ColumnName="Tranche" />
+                <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Budget_ObligationPreparation">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_Budget_ObligationPreparation">
+              <MappingFragment StoreEntitySet="tbl_Budget_ObligationPreparation">
+                <ScalarProperty Name="ObligID" ColumnName="ObligID" />
+                <ScalarProperty Name="TransactionTypeID" ColumnName="TransactionTypeID" />
+                <ScalarProperty Name="Obrno" ColumnName="Obrno" />
+                <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+                <ScalarProperty Name="particulars" ColumnName="particulars" />
+                <ScalarProperty Name="Rcenter" ColumnName="Rcenter" />
+                <ScalarProperty Name="DateObligated" ColumnName="DateObligated" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="projectID" ColumnName="projectID" />
+                <ScalarProperty Name="projectCostID" ColumnName="projectCostID" />
+                <ScalarProperty Name="fundcode" ColumnName="fundcode" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LogDetails" ColumnName="LogDetails" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_Project">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_Project">
+              <MappingFragment StoreEntitySet="tbl_reff_Project">
+                <ScalarProperty Name="projectID" ColumnName="projectID" />
+                <ScalarProperty Name="project_year" ColumnName="project_year" />
+                <ScalarProperty Name="date_NADAI" ColumnName="date_NADAI" />
+                <ScalarProperty Name="programTypeId" ColumnName="programTypeId" />
+                <ScalarProperty Name="mechanismId" ColumnName="mechanismId" />
+                <ScalarProperty Name="project_name" ColumnName="project_name" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="date_completion" ColumnName="date_completion" />
+                <ScalarProperty Name="fundID" ColumnName="fundID" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_Project_mechanism">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_Project_mechanism">
+              <MappingFragment StoreEntitySet="tbl_reff_Project_mechanism">
+                <ScalarProperty Name="mechanismId" ColumnName="mechanismId" />
+                <ScalarProperty Name="mechanismName" ColumnName="mechanismName" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_Project_programType">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_Project_programType">
+              <MappingFragment StoreEntitySet="tbl_reff_Project_programType">
+                <ScalarProperty Name="programTypeId" ColumnName="programTypeId" />
+                <ScalarProperty Name="ProgramTypeName" ColumnName="ProgramTypeName" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_ProjectCostType">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_ProjectCostType">
+              <MappingFragment StoreEntitySet="tbl_reff_ProjectCostType">
+                <ScalarProperty Name="projectCostID" ColumnName="projectCostID" />
+                <ScalarProperty Name="ParentProjectCostID" ColumnName="ParentProjectCostID" />
+                <ScalarProperty Name="ProjectCostName" ColumnName="ProjectCostName" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_SignatoryType">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_SignatoryType">
+              <MappingFragment StoreEntitySet="tbl_reff_SignatoryType">
+                <ScalarProperty Name="SignatoryTypeID" ColumnName="SignatoryTypeID" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="ColName" ColumnName="ColName" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="changeDate" ColumnName="changeDate" />
+                <ScalarProperty Name="ChangerID" ColumnName="ChangerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_SourceOfFund">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_SourceOfFund">
+              <MappingFragment StoreEntitySet="tbl_reff_SourceOfFund">
+                <ScalarProperty Name="fundID" ColumnName="fundID" />
+                <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+                <ScalarProperty Name="fundcode" ColumnName="fundcode" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_TransactionType">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_TransactionType">
+              <MappingFragment StoreEntitySet="tbl_reff_TransactionType">
+                <ScalarProperty Name="TransactionTypeID" ColumnName="TransactionTypeID" />
+                <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="PartialName" ColumnName="PartialName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_Fund">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_Fund">
+              <MappingFragment StoreEntitySet="tbl_reff_Fund">
+                <ScalarProperty Name="FundID" ColumnName="FundID" />
+                <ScalarProperty Name="ParentFundID" ColumnName="ParentFundID" />
+                <ScalarProperty Name="Fundcode" ColumnName="Fundcode" />
+                <ScalarProperty Name="Fundname" ColumnName="Fundname" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reff_motherCOA">
+            <EntityTypeMapping TypeName="IFMISModel.tbl_reff_motherCOA">
+              <MappingFragment StoreEntitySet="tbl_reff_motherCOA">
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="motherID" ColumnName="motherID" />
+                <ScalarProperty Name="classname" ColumnName="classname" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="lvl" ColumnName="lvl" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="source" ColumnName="source" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_projectEstimatedCost">
+            <EntityTypeMapping TypeName="IFMISModel.vw_projectEstimatedCost">
+              <MappingFragment StoreEntitySet="vw_projectEstimatedCost">
+                <ScalarProperty Name="trancheDesc" ColumnName="trancheDesc" />
+                <ScalarProperty Name="Tranche" ColumnName="Tranche" />
+                <ScalarProperty Name="DateReceived" ColumnName="DateReceived" />
+                <ScalarProperty Name="EstimatedAmount" ColumnName="EstimatedAmount" />
+                <ScalarProperty Name="ProjectEstimatedCostID" ColumnName="ProjectEstimatedCostID" />
+                <ScalarProperty Name="projectCostID" ColumnName="projectCostID" />
+                <ScalarProperty Name="ProjectCostName" ColumnName="ProjectCostName" />
+                <ScalarProperty Name="projectID" ColumnName="projectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_ProjectRecapDetails">
+            <EntityTypeMapping TypeName="IFMISModel.vw_ProjectRecapDetails">
+              <MappingFragment StoreEntitySet="vw_ProjectRecapDetails">
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="projectCostID" ColumnName="projectCostID" />
+                <ScalarProperty Name="ProjectCostName" ColumnName="ProjectCostName" />
+                <ScalarProperty Name="TotalEstimated" ColumnName="TotalEstimated" />
+                <ScalarProperty Name="Claimed" ColumnName="Claimed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_Project_grid">
+            <EntityTypeMapping TypeName="IFMISModel.vw_Project_grid">
+              <MappingFragment StoreEntitySet="vw_Project_grid">
+                <ScalarProperty Name="date_completion" ColumnName="date_completion" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="ProjectedAmount" ColumnName="ProjectedAmount" />
+                <ScalarProperty Name="TotalReceived" ColumnName="TotalReceived" />
+                <ScalarProperty Name="project_year" ColumnName="project_year" />
+                <ScalarProperty Name="mechanismName" ColumnName="mechanismName" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="project_name" ColumnName="project_name" />
+                <ScalarProperty Name="ProgramTypeName" ColumnName="ProgramTypeName" />
+                <ScalarProperty Name="date_NADAI" ColumnName="date_NADAI" />
+                <ScalarProperty Name="SourceName" ColumnName="SourceName" />
+                <ScalarProperty Name="projectID" ColumnName="projectID" />
+                <ScalarProperty Name="fundID" ColumnName="fundID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

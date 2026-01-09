@@ -1,0 +1,287 @@
+﻿ @using WebAOMS.Models;
+    @{
+       
+        fmisEntities fmisdb = new fmisEntities();
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout_Public.cshtml";
+
+        
+    }
+
+    @*<div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Criteria</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-lg-12" style="border-bottom:1px solid gray">
+                    <div data-toggle="buttons">
+                        <label class="btn radio-inline btn-radio-success-inverse">
+                            <input name="payrollTypeOption" id="payrollTypeOption1" value="1" type="radio"> Period
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse" >
+                            <input name="payrollTypeOption" id="payrollTypeOption2" value="2" type="radio"> DVNO
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse">
+                            <input name="payrollTypeOption" id="payrollTypeOption3"   value="3" type="radio"> Claimant
+                        </label>
+                        <input id="payrollTypeOptionID" value="1" hidden />
+                        <script>
+                                $(function () {
+                                    $('input[name="payrollTypeOption"]').bind('change', function () {
+                                        $("#payrollTypeOptionID").val($(this).val())
+                                        $('.hideoptiondiv').hide();
+                                        $('#txtsearchEmp').val("")
+
+                                        $("#payrollType-" + $(this).val()).show();
+                                    });
+                                });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div  id="payrollType-1"   class="col-lg-6 no-padding hideoptiondiv">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    From
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                    To
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                    <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+            <div id="payrollType-2" class="col-lg-6 no-padding hideoptiondiv">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                        <input id="txtsearchEmp" type="text" class="form-control navbar-input" placeholder="Enter DVNO">
+                        <span class="input-group-btn">
+                            <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                function para_dp() {
+
+                    return {claimantName:""}
+                }
+            </script>
+            <div id="payrollType-3" class="col-lg-12 no-padding hideoptiondiv">
+                <div data-toggle="buttons">
+                    <label class="btn radio-inline btn-radio-success-inverse active">
+                        <input name="claimantypeOption" id="claimantypeOption1" value="1" type="radio"> Employee
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption2" value="2" type="radio"> Other Individual
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption3" value="3" type="radio"> Company
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption4" value="4" type="radio"> Responsibility Center
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption5" value="5" type="radio"> National Offices
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption6" value="6" type="radio"> Barangay Treasurers
+                    </label>
+                    <input id="claimantypeOptionID" value="1" hidden />
+                    <script>
+                                $(function () {
+                                    $('input[name="claimantypeOption"]').bind('change', function () {
+                                        $("#claimantypeOptionID").val($(this).val())
+                                        var categories = $("#dp_claimant").data("kendoComboBox");
+                                        categories.dataSource.read();
+                                    });
+
+                                });
+
+                                function para_claimant() {
+
+                                    return { claimantcode: $("#claimantypeOptionID").val() }
+                        }
+                    </script>
+                </div>
+                <div class="col-lg-12" style="padding-bottom:5px">
+                    @(Html.Kendo().ComboBox()
+                      .Name("dp_claimant")
+                      .Placeholder("Select Claimant Name ...")
+                     .HtmlAttributes(new { style = "width:400px; text-align:left;" })
+                    .DataTextField("Name")
+                    .DataValueField("ID")
+                    .AutoBind(true)
+                      .Filter("contains")
+
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("get_claimant_name_byClamantmode", "PreAudit").Data("para_claimant");
+
+                          });
+                      })
+
+                    )
+                    <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+
+            <script>
+                $(document).ready(function (){
+                    $('.hideoptiondiv').hide();
+                })
+
+                function refrehGrid() {
+                    var grid = $("#grid_usad_cbms_mapping").data("kendoGrid");
+                    grid.dataSource.read()
+                }
+
+                function summary_para() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    var claimantcode = $('#dp_claimant').data('kendoComboBox').value()
+                    return { from: from, to: to, dvno: $('#txtsearchEmp').val(), searchtype: $("#payrollTypeOptionID").val(), claimanttype: $("#claimantypeOptionID").val(), claimantcode: claimantcode }
+                }
+            </script>
+        </div>
+    </div>*@
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">USAD and CBMS MAPPING</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="col-lg-12 no-padding">
+                
+            </div>
+            <div class="col-lg-8 no-padding">        
+        
+        @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_usad_cbms_mapping")
+        .Columns(columns =>
+        {
+            columns.Bound("trnno").Title("Row No.").Width(50).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("USADName").Title("USADName").Width(200).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("USADBdate").Title("USADBdate").Width(70).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("CBMSName").Title("CBMSName").Width(200).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("CBMSBdate").Title("CBMSBdate").Width(70).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Template(@<text></text>)
+                .Width(30)
+                .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                .ClientTemplate("<button data-original-title=\"view\" type=\"button\" onclick=\"clickMapped(#=resid#,#=UsadID#,#=munid#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-check\"></i></button>");
+
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 100%;" })
+
+        .Selectable(m => m
+                    .Mode(GridSelectionMode.Single)
+                    .Type(GridSelectionType.Row))
+        .Sortable()
+        //.Pageable(pageable => pageable
+        //    .Refresh(true)
+        //    )
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_USAD_CBMS_mapping", "PreAudit"))
+        //.PageSize(2000)
+
+        )
+        )
+            </div>
+
+
+            <script>
+                $("#export").click(function (e) {
+                    var grid = $("#grid_usad_cbms_mapping").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+               
+                $('#txtsearchEmp').on('keydown', function (e) {
+                    var gridData = $("#grid_usad_cbms_mapping").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+            </script>
+        </div>
+        <hr />
+        <div class="box-footer">
+            <div style="height:10px">
+
+            </div>
+        </div>
+    </div>
+<script>
+    function clickMapped(cbmsid,usadid,munid) {
+        startSpin()
+        $.post('@Url.Action("mapped_cbms_usad", "PreAudit")', { cbmsid: cbmsid, usadid:usadid, munid:munid }, function (r) {
+            stopSpin()
+            var gridData = $("#grid_usad_cbms_mapping").data("kendoGrid");
+            gridData.dataSource.read();
+            toastr.success("Data successfully mapped...!", 'System Message');
+        })
+    }
+</script>
+
+@*<div class="modal" id="modal_transaction_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Transaction Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" style="cursor:pointer"  data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>*@

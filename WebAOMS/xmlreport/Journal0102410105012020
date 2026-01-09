@@ -1,0 +1,6359 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Collection" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Deposits" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="PTVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Acountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="NatureofPayment" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>Cash Receipts Journal</T1>
+    <fundtype>General Fund Proper</fundtype>
+    <dateString>For the month of May, 2020</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <jevid>276819</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0001</JEVNo>
+    <Collection>2802.0000</Collection>
+    <Deposits>2802.0000</Deposits>
+    <Rdono>2020-04-11--2487</Rdono>
+    <Particular>RCD - 5/4/20 with RDONO 2020-04-11--2487</Particular>
+    <PTVno>101-20-05-4226-2487</PTVno>
+    <Debit>2802.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>2802.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276819</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2802.0000</Credit>
+    <Acountcode>10305040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>2802.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0001</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276822</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0002</JEVNo>
+    <Collection>3308.8400</Collection>
+    <Deposits>3308.8400</Deposits>
+    <Rdono>2020-05-1-PAB-2487</Rdono>
+    <Particular>RCD-5/6/20 with RDONO 2020-05-1-PAB-2487</Particular>
+    <PTVno>101-20-05-4227-2487</PTVno>
+    <Debit>3308.8400</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>3308.8400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276822</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3308.8400</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>3308.8400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0002</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276840</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0003</JEVNo>
+    <Collection>3706.1900</Collection>
+    <Deposits>3706.1900</Deposits>
+    <Rdono>2020-05-2-PAB-2487</Rdono>
+    <Particular>RCD - 5/7/20 with RDONO 2020-05-2-PAB-2487</Particular>
+    <PTVno>101-20-05-4228-2487</PTVno>
+    <Debit>3706.1900</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>3706.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276840</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2986.0500</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>3706.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276840</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>720.1400</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>3706.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0003</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276843</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0004</JEVNo>
+    <Collection>10529.4000</Collection>
+    <Deposits>10529.4000</Deposits>
+    <Rdono>2020-05-3-PAB-2487</Rdono>
+    <Particular>RCD - 5/8/20 with RDONO 2020-05-3-PAB-2487</Particular>
+    <PTVno>101-20-05-4229-2487</PTVno>
+    <Debit>10529.4000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>10529.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276843</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6000.0000</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>10529.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276843</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4529.4000</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>10529.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0004</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276846</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0005</JEVNo>
+    <Collection>5971.2400</Collection>
+    <Deposits>5971.2400</Deposits>
+    <Rdono>2020-05-4-PAB-2487</Rdono>
+    <Particular>RCD - 5/11/20 with RDONO 2020-05-4-PAB-2487</Particular>
+    <PTVno>101-20-05-4230-2487</PTVno>
+    <Debit>5971.2400</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>5971.2400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276846</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>728.5300</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>5971.2400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276846</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5242.7100</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>5971.2400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0005</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276847</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0006</JEVNo>
+    <Collection>5654.1000</Collection>
+    <Deposits>5654.1000</Deposits>
+    <Rdono>2020-05-5-PAB-2487</Rdono>
+    <Particular>RCD - 5/12/20 with RDONO 2020-05-5-PAB-2487</Particular>
+    <PTVno>101-20-05-4231-2487</PTVno>
+    <Debit>5654.1000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>5654.1000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276847</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1982.7700</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>5654.1000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276847</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3671.3300</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>5654.1000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0006</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276851</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0007</JEVNo>
+    <Collection>4375.0000</Collection>
+    <Deposits>4375.0000</Deposits>
+    <Rdono>2020-04-4-PAB-36112</Rdono>
+    <Particular>RCD - 5/4/20 with RDONO 2020-04-4-PAB-36112</Particular>
+    <PTVno>101-20-05-0026-36112</PTVno>
+    <Debit>4375.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>4375.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0007</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276851</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4375.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>4375.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0007</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276854</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0008</JEVNo>
+    <Collection>10416.0000</Collection>
+    <Deposits>10416.0000</Deposits>
+    <Rdono>2020-05-1-PAB-36112</Rdono>
+    <Particular>RCD - 5/7/20 with RDONO 2020-05-1-PAB-36112</Particular>
+    <PTVno>101-20-05-0027-36112</PTVno>
+    <Debit>10416.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>10416.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0008</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276854</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10416.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>10416.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0008</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276857</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0009</JEVNo>
+    <Collection>8750.0000</Collection>
+    <Deposits>8750.0000</Deposits>
+    <Rdono>2020-05-2-PAB-36112</Rdono>
+    <Particular>RCD - 5/8/20 with RDONO 2020-05-2-PAB-36112</Particular>
+    <PTVno>101-20-05-0028-36112</PTVno>
+    <Debit>8750.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>8750.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0009</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276857</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8750.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>8750.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0009</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276858</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0010</JEVNo>
+    <Collection>480.0000</Collection>
+    <Deposits>480.0000</Deposits>
+    <Rdono>2020-05-1-PAB-2471</Rdono>
+    <Particular>RCD - 5/11/20 with RDONO 2020-05-1-PAB-2471</Particular>
+    <PTVno>101-20-05-0071-36112</PTVno>
+    <Debit>480.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>480.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0010</jvno>
+  </Table1>
+  <Table1>
+    <jevid>276858</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>480.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>480.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0010</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0011</JEVNo>
+    <Collection>7591085.2800</Collection>
+    <Deposits>7591085.2800</Deposits>
+    <Rdono>2020-04-21-PAB-2489</Rdono>
+    <Particular>RCD - 5/4/20 with RDONO 2020-04-21-PAB-2489</Particular>
+    <PTVno>101-20-05-0134-2489</PTVno>
+    <Debit>7591085.2800</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>16905.2800</Debit>
+    <Credit>16905.2800</Credit>
+    <Acountcode>10301020-13</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3248.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>25984.0000</Credit>
+    <Acountcode>20201070-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4463.0400</Credit>
+    <Acountcode>40102040-1-1-13</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7906.4300</Credit>
+    <Acountcode>40102040-2-1-13</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12528.0000</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7500000.0000</Credit>
+    <Acountcode>40104990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4535.8100</Credit>
+    <Acountcode>40105020-2-1-13</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>20.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277631</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>32400.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-04T00:00:00+08:00</Jevdate>
+    <Gamount>7591085.2800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0011</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277632</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0012</JEVNo>
+    <Collection>3428.4000</Collection>
+    <Deposits>3428.4000</Deposits>
+    <Rdono>2020-05-1-PAB-2489</Rdono>
+    <Particular>RCD - 5/5/20 with RDONO 2020-05-1-PAB-2489</Particular>
+    <PTVno>101-20-05-0135-2489</PTVno>
+    <Debit>3428.4000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-05T00:00:00+08:00</Jevdate>
+    <Gamount>3428.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277632</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2224.8800</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-05T00:00:00+08:00</Jevdate>
+    <Gamount>3428.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277632</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>953.5200</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-05T00:00:00+08:00</Jevdate>
+    <Gamount>3428.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277632</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>250.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-05T00:00:00+08:00</Jevdate>
+    <Gamount>3428.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0012</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277633</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0013</JEVNo>
+    <Collection>84297.1900</Collection>
+    <Deposits>84297.1900</Deposits>
+    <Rdono>2020-05-2-PAB-2489</Rdono>
+    <Particular>RCD - 5/6/20 with RDONO 2020-05-2-PAB-2489</Particular>
+    <PTVno>101-20-05-0136-2489</PTVno>
+    <Debit>84297.1900</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>84297.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277633</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6431.0400</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>84297.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277633</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19488.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>84297.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277633</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11108.1600</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>84297.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277633</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>47249.9900</Credit>
+    <Acountcode>40103040-2-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>84297.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277633</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>20.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-06T00:00:00+08:00</Jevdate>
+    <Gamount>84297.1900</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0013</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0014</JEVNo>
+    <Collection>285100.0100</Collection>
+    <Deposits>285100.0100</Deposits>
+    <Rdono>2020-05-8-PAB-2489</Rdono>
+    <Particular>RCD - 5/7/20 with RDONO 2020-05-8-PAB-2489</Particular>
+    <PTVno>101-20-05-0137-2489</PTVno>
+    <Debit>285100.0100</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>35983.6200</Debit>
+    <Credit>35983.6200</Credit>
+    <Acountcode>10301020-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19488.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>123943.6800</Credit>
+    <Acountcode>20201070-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11270.5600</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8574.7200</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>300.0000</Credit>
+    <Acountcode>40101020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>15869.7100</Credit>
+    <Acountcode>40102040-1-1-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>14440.5500</Credit>
+    <Acountcode>40102040-2-1-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11296.5900</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>69975.8400</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3.9800</Credit>
+    <Acountcode>40105020-1-1-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5669.3800</Credit>
+    <Acountcode>40105020-2-1-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3520.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>100.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277634</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>647.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-07T00:00:00+08:00</Jevdate>
+    <Gamount>285100.0100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0014</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0015</JEVNo>
+    <Collection>69358.0300</Collection>
+    <Deposits>69358.0300</Deposits>
+    <Rdono>2020-05-10-PAB-2489</Rdono>
+    <Particular>RCD - 5/8/20 with RDONO 2020-05-10-PAB-2489</Particular>
+    <PTVno>101-20-05-0138-2489</PTVno>
+    <Debit>69358.0300</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23872.8000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>16240.0000</Credit>
+    <Acountcode>20201070-1-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>25586.8100</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2849.4200</Credit>
+    <Acountcode>40105040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>210.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277639</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>599.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-08T00:00:00+08:00</Jevdate>
+    <Gamount>69358.0300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0015</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277643</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0016</JEVNo>
+    <Collection>612.0000</Collection>
+    <Deposits>612.0000</Deposits>
+    <Rdono>2020-05-12-PAB-2489</Rdono>
+    <Particular>RCD - 5/11/20 with RDONO 2020-05-12-PAB-2489</Particular>
+    <PTVno>101-20-05-0139-2489</PTVno>
+    <Debit>612.0000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>612.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0016</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277643</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>612.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>612.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0016</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0017</JEVNo>
+    <Collection>3377396.8100</Collection>
+    <Deposits>3377396.8100</Deposits>
+    <Rdono>2020-05-11-PAB-2489</Rdono>
+    <Particular>RCD - 5/11/20 with RDONO 2020-05-11-PAB-2489</Particular>
+    <PTVno>101-20-05-0140-2489</PTVno>
+    <Debit>3377396.8100</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>48953.5100</Debit>
+    <Credit>48953.5100</Credit>
+    <Acountcode>10301020-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>1141889.4100</Debit>
+    <Credit>1141889.4100</Credit>
+    <Acountcode>10301020-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>1984007.7000</Debit>
+    <Credit>1984007.7000</Credit>
+    <Acountcode>10301020-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>35728.0000</Credit>
+    <Acountcode>20201070-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6496.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12992.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>21821.9300</Credit>
+    <Acountcode>40102040-1-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1125582.3100</Credit>
+    <Acountcode>40102040-1-1-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1304769.9700</Credit>
+    <Acountcode>40102040-1-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>17926.9600</Credit>
+    <Acountcode>40102040-2-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10288.5600</Credit>
+    <Acountcode>40102040-2-1-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>501876.6100</Credit>
+    <Acountcode>40102040-2-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>18754.8000</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23664.0000</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3383.3900</Credit>
+    <Acountcode>40105020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9204.6200</Credit>
+    <Acountcode>40105020-2-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6018.5400</Credit>
+    <Acountcode>40105020-2-1-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>177361.1200</Credit>
+    <Acountcode>40105020-2-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1000.0000</Credit>
+    <Acountcode>40201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>350.0000</Credit>
+    <Acountcode>40201030</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1250.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>97250.0000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>50.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277648</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1628.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-11T00:00:00+08:00</Jevdate>
+    <Gamount>3377396.8100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0017</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_>05/12/2020</Date_>
+    <JEVNo>101-20-05-01-0018</JEVNo>
+    <Collection>225740.5100</Collection>
+    <Deposits>225740.5100</Deposits>
+    <Rdono>2020-05-13-PAB-2489</Rdono>
+    <Particular>RCD - 5/12/20 with RDONO 2020-05-13-PAB-2489</Particular>
+    <PTVno>101-20-05-0141-2489</PTVno>
+    <Debit>225740.5100</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>13167.0900</Debit>
+    <Credit>13167.0900</Credit>
+    <Acountcode>10301020-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>82824.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19341.8400</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4817.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3780.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4410.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4351.9900</Credit>
+    <Acountcode>40102040-1-1-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5386.2200</Credit>
+    <Acountcode>40102040-2-1-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>43785.3600</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>90.7300</Credit>
+    <Acountcode>40105020-1-1-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3338.1500</Credit>
+    <Acountcode>40105020-2-1-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>280.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>46096.1200</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277661</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2514.1000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-12T00:00:00+08:00</Jevdate>
+    <Gamount>225740.5100</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0018</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277809</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0019</JEVNo>
+    <Collection>8000.0000</Collection>
+    <Deposits>8000.0000</Deposits>
+    <Rdono>2020-05-3-PAB-36112</Rdono>
+    <Particular>RCD - 5/14/20 with RDONO 2020-05-3-PAB-36112</Particular>
+    <PTVno>101-20-05-0029-36112</PTVno>
+    <Debit>8000.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>8000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0019</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277809</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8000.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>8000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0019</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277810</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0020</JEVNo>
+    <Collection>120312.0000</Collection>
+    <Deposits>120312.0000</Deposits>
+    <Rdono>2020-05-4-PAB-36112</Rdono>
+    <Particular>RCD - 5/21/20 with RDONO 2020-05-4-PAB-36112</Particular>
+    <PTVno>101-20-05-0030-36112</PTVno>
+    <Debit>120312.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>120312.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0020</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277810</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>120312.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>120312.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0020</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277827</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0021</JEVNo>
+    <Collection>4375.0000</Collection>
+    <Deposits>4375.0000</Deposits>
+    <Rdono>2020-05-5-PAB-36112</Rdono>
+    <Particular>RCD - 5/27/20 with RDONO 2020-05-5-PAB-36112</Particular>
+    <PTVno>101-20-05-0031-36112</PTVno>
+    <Debit>4375.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-27T00:00:00+08:00</Jevdate>
+    <Gamount>4375.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0021</jvno>
+  </Table1>
+  <Table1>
+    <jevid>277827</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4375.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-27T00:00:00+08:00</Jevdate>
+    <Gamount>4375.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0021</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278343</jevid>
+    <Date_>05/18/2020</Date_>
+    <JEVNo>101-20-05-01-0022</JEVNo>
+    <Collection>1156754.6400</Collection>
+    <Deposits>1156754.6400</Deposits>
+    <Rdono>2020-05-6-PAB-2487</Rdono>
+    <Particular>RCD - 5/15/20 with RDONO 2020-05-6-PAB-2487</Particular>
+    <PTVno>101-20-05-4428-2487</PTVno>
+    <Debit>1156754.6400</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>1156754.6400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0022</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278343</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1156754.6400</Credit>
+    <Acountcode>10304050-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>1156754.6400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0022</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278371</jevid>
+    <Date_>05/18/2020</Date_>
+    <JEVNo>101-20-05-01-0023</JEVNo>
+    <Collection>7174.0800</Collection>
+    <Deposits>7174.0800</Deposits>
+    <Rdono>2020-05-7-PAB-2487</Rdono>
+    <Particular>RCD - 5/18/20 with RDONO 2020-05-7-PAB-2487</Particular>
+    <PTVno>101-20-05-4429-2487</PTVno>
+    <Debit>7174.0800</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>7174.0800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0023</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278371</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>132.0000</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>7174.0800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0023</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278371</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7042.0800</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>7174.0800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0023</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278375</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0024</JEVNo>
+    <Collection>130597.0000</Collection>
+    <Deposits>130597.0000</Deposits>
+    <Rdono>2020-05-8-PAB-2487</Rdono>
+    <Particular>RCD - 5/21/20 with RDONO 2020-05-8-PAB-2487</Particular>
+    <PTVno>101-20-05-4651-2487</PTVno>
+    <Debit>130597.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>130597.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0024</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278375</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>130000.0000</Credit>
+    <Acountcode>10301990-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>130597.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0024</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278375</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>597.0000</Credit>
+    <Acountcode>10305020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>130597.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0024</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278378</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0025</JEVNo>
+    <Collection>6350.4000</Collection>
+    <Deposits>6350.4000</Deposits>
+    <Rdono>2020-05-9-PAB-2487</Rdono>
+    <Particular>RCD - 5/26/20 with RDONO 2020-05-9-PAB-2487</Particular>
+    <PTVno>101-20-05-4652-2487</PTVno>
+    <Debit>6350.4000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>6350.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0025</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278378</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1860.0000</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>6350.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0025</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278378</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4490.4000</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>6350.4000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0025</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278543</jevid>
+    <Date_>05/29/2020</Date_>
+    <JEVNo>101-20-05-01-0026</JEVNo>
+    <Collection>26250.0000</Collection>
+    <Deposits>26250.0000</Deposits>
+    <Rdono>2020-05-6-PAB-36112</Rdono>
+    <Particular>RCD - 5/28/20 with RDONO 2020-05-6-PAB-36112</Particular>
+    <PTVno>101-20-05-0032-36112</PTVno>
+    <Debit>26250.0000</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-28T00:00:00+08:00</Jevdate>
+    <Gamount>26250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0026</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278543</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>26250.0000</Credit>
+    <Acountcode>10301990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-28T00:00:00+08:00</Jevdate>
+    <Gamount>26250.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0026</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0027</JEVNo>
+    <Collection>1143249.3300</Collection>
+    <Deposits>1143249.3300</Deposits>
+    <Rdono>2020-05-14-PAB-2489</Rdono>
+    <Particular>RCD - 5/13/20 with RDONO 2020-05-14-PAB-2489</Particular>
+    <PTVno>101-20-05-0142-2489</PTVno>
+    <Debit>1143249.3300</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>672936.5700</Debit>
+    <Credit>672936.5700</Credit>
+    <Acountcode>10301020-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8120.0000</Credit>
+    <Acountcode>20201070-1-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>87988.3200</Credit>
+    <Acountcode>20201070-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23028.3200</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>16240.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3172.5000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2560.2500</Credit>
+    <Acountcode>29999990-5-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3780.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>413547.3900</Credit>
+    <Acountcode>40102040-1-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1010.1400</Credit>
+    <Acountcode>40102040-2-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>169192.5100</Credit>
+    <Acountcode>40102040-2-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>173305.9400</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>81226.8800</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3295.0000</Credit>
+    <Acountcode>40105020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>534.9900</Credit>
+    <Acountcode>40105020-2-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>90196.6700</Credit>
+    <Acountcode>40105020-2-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>290.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10739.7500</Credit>
+    <Acountcode>40202060</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>47655.6700</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278618</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2640.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-13T00:00:00+08:00</Jevdate>
+    <Gamount>1143249.3300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0027</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0028</JEVNo>
+    <Collection>612195.8000</Collection>
+    <Deposits>612195.8000</Deposits>
+    <Rdono>2020-05-15-PAB-2489</Rdono>
+    <Particular>RCD - 5/14/20 with RDONO 2020-05-15-PAB-2489</Particular>
+    <PTVno>101-20-05-0143-2489</PTVno>
+    <Debit>612195.8000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>492128.8000</Debit>
+    <Credit>492128.8000</Credit>
+    <Acountcode>10301020-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12992.0000</Credit>
+    <Acountcode>20201070-1-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4935.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3780.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2835.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3780.0000</Credit>
+    <Acountcode>29999990-5-42-2-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>261850.7500</Credit>
+    <Acountcode>40102040-1-1-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>166399.7400</Credit>
+    <Acountcode>40102040-2-1-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5568.0000</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>104.5600</Credit>
+    <Acountcode>40105020-1-1-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>66733.7500</Credit>
+    <Acountcode>40105020-2-1-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2835.0000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12800.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278621</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>64747.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-14T00:00:00+08:00</Jevdate>
+    <Gamount>612195.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0028</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0029</JEVNo>
+    <Collection>278148.7700</Collection>
+    <Deposits>278148.7700</Deposits>
+    <Rdono>2020-05-16-PAB-2489</Rdono>
+    <Particular>RCD - 5/15/20 with RDONO 2020-05-16-PAB-2489</Particular>
+    <PTVno>101-20-05-0144-2489</PTVno>
+    <Debit>278148.7700</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>26386.5900</Debit>
+    <Credit>26386.5900</Credit>
+    <Acountcode>10301020-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>25471.7600</Debit>
+    <Credit>25471.7600</Credit>
+    <Acountcode>10301020-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>61712.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>454.7200</Credit>
+    <Acountcode>20201070-1-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11010.7200</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1925.0000</Credit>
+    <Acountcode>29999990-5-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8117.0800</Credit>
+    <Acountcode>40102040-1-1-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19748.4500</Credit>
+    <Acountcode>40102040-1-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11012.2000</Credit>
+    <Acountcode>40102040-2-1-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3950.8900</Credit>
+    <Acountcode>40102040-2-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>123989.1400</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6149.7000</Credit>
+    <Acountcode>40105020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>46.3100</Credit>
+    <Acountcode>40105020-1-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7257.3100</Credit>
+    <Acountcode>40105020-2-1-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1726.1100</Credit>
+    <Acountcode>40105020-2-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1190.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8075.0000</Credit>
+    <Acountcode>40202060</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11135.1400</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278660</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>649.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-15T00:00:00+08:00</Jevdate>
+    <Gamount>278148.7700</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0029</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0030</JEVNo>
+    <Collection>408640.4200</Collection>
+    <Deposits>408640.4200</Deposits>
+    <Rdono>2020-05-17-PAB-2489</Rdono>
+    <Particular>RCD - 5/18/20 with RDONO 2020-05-17-PAB-2489</Particular>
+    <PTVno>101-20-05-0145-2489</PTVno>
+    <Debit>408640.4200</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>192419.2300</Debit>
+    <Credit>192419.2300</Credit>
+    <Acountcode>10301020-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12992.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23246.0000</Credit>
+    <Acountcode>20201070-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>64960.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3525.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3780.0000</Credit>
+    <Acountcode>29999990-5-42-2-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>300.0000</Credit>
+    <Acountcode>40101020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>47595.4900</Credit>
+    <Acountcode>40102040-1-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>79672.6200</Credit>
+    <Acountcode>40102040-2-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>29618.9800</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>51948.9600</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>14277.2300</Credit>
+    <Acountcode>40105020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>50.9800</Credit>
+    <Acountcode>40105020-1-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>45499.6500</Credit>
+    <Acountcode>40105020-2-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>680.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>15685.5100</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278664</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9138.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-18T00:00:00+08:00</Jevdate>
+    <Gamount>408640.4200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0030</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0031</JEVNo>
+    <Collection>645764.8200</Collection>
+    <Deposits>645764.8200</Deposits>
+    <Rdono>2020-05-18-PAB-2489</Rdono>
+    <Particular>RCD - 5/19/20 with RDONO 2020-05-18-PAB-2489</Particular>
+    <PTVno>101-20-05-0146-2489</PTVno>
+    <Debit>645764.8200</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>13191.5000</Debit>
+    <Credit>13191.5000</Credit>
+    <Acountcode>10301020-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>106088.4000</Debit>
+    <Credit>106088.4000</Credit>
+    <Acountcode>10301020-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>6564.9100</Debit>
+    <Credit>6564.9100</Credit>
+    <Acountcode>10301020-12</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>93708.0400</Debit>
+    <Credit>93708.0400</Credit>
+    <Acountcode>10301020-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>35728.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19488.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>7050.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6737.5000</Credit>
+    <Acountcode>29999990-5-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4725.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9450.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10500.0000</Credit>
+    <Acountcode>40101020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6647.6900</Credit>
+    <Acountcode>40102040-1-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>96256.4700</Credit>
+    <Acountcode>40102040-1-1-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1893.2200</Credit>
+    <Acountcode>40102040-1-1-12</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>44889.4500</Credit>
+    <Acountcode>40102040-1-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3879.1400</Credit>
+    <Acountcode>40102040-2-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6289.6400</Credit>
+    <Acountcode>40102040-2-1-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2977.0000</Credit>
+    <Acountcode>40102040-2-1-12</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>31850.8300</Credit>
+    <Acountcode>40102040-2-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>136771.6600</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23664.0000</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1875.0000</Credit>
+    <Acountcode>40104990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>19.0000</Credit>
+    <Acountcode>40105020-1-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>27.5700</Credit>
+    <Acountcode>40105020-1-1-12</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>59.1700</Credit>
+    <Acountcode>40105020-1-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2645.6700</Credit>
+    <Acountcode>40105020-2-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3542.2900</Credit>
+    <Acountcode>40105020-2-1-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1667.1200</Credit>
+    <Acountcode>40105020-2-1-12</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>16908.5900</Credit>
+    <Acountcode>40105020-2-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10355.3100</Credit>
+    <Acountcode>40105040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>140.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>28262.5000</Credit>
+    <Acountcode>40202060</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278697</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>126740.0000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-19T00:00:00+08:00</Jevdate>
+    <Gamount>645764.8200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0031</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278720</jevid>
+    <Date_>05/29/2020</Date_>
+    <JEVNo>101-20-05-01-0032</JEVNo>
+    <Collection>53865.0500</Collection>
+    <Deposits>53865.0500</Deposits>
+    <Rdono>2020-05-10-PAB-2487</Rdono>
+    <Particular>RCD - 5/29/20 with RDONO 2020-05-10-PAB-2487</Particular>
+    <PTVno>101-20-05-4891-2487</PTVno>
+    <Debit>53865.0500</Debit>
+    <Acountcode>10102010-6840-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-29T00:00:00+08:00</Jevdate>
+    <Gamount>53865.0500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278720</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>38024.3900</Credit>
+    <Acountcode>10305010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-29T00:00:00+08:00</Jevdate>
+    <Gamount>53865.0500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278720</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3000.0000</Credit>
+    <Acountcode>10305020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-29T00:00:00+08:00</Jevdate>
+    <Gamount>53865.0500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278720</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>9.2000</Debit>
+    <Acountcode>10306020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-29T00:00:00+08:00</Jevdate>
+    <Gamount>53865.0500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278720</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1619.8600</Credit>
+    <Acountcode>20201010-1-20-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-29T00:00:00+08:00</Jevdate>
+    <Gamount>53865.0500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278720</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>11230.0000</Credit>
+    <Acountcode>50101010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-29T00:00:00+08:00</Jevdate>
+    <Gamount>53865.0500</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0032</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0033</JEVNo>
+    <Collection>206567.8000</Collection>
+    <Deposits>206567.8000</Deposits>
+    <Rdono>2020-05-19-PAB-2489</Rdono>
+    <Particular>RCD - 5/20/20 with RDONO 2020-05-19-PAB-2489</Particular>
+    <PTVno>101-20-05-0147-2489</PTVno>
+    <Debit>206567.8000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>105560.0000</Credit>
+    <Acountcode>20201070-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>21826.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6057.5200</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3055.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>5355.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>59185.2800</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>340.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1755.0000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278746</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>599.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>206567.8000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0033</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278756</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0034</JEVNo>
+    <Collection>3208.0000</Collection>
+    <Deposits>3208.0000</Deposits>
+    <Rdono>2020-05-20-PAB-2489</Rdono>
+    <Particular>RCD - 5/20/20 with RDONO 2020-05-20-PAB-2489</Particular>
+    <PTVno>101-20-05-0148-2489</PTVno>
+    <Debit>3208.0000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>3208.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0034</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278756</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2068.0000</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>3208.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0034</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278756</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1140.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-20T00:00:00+08:00</Jevdate>
+    <Gamount>3208.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0034</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0035</JEVNo>
+    <Collection>232702.1300</Collection>
+    <Deposits>232702.1300</Deposits>
+    <Rdono>2020-05-21-PAB-2489</Rdono>
+    <Particular>RCD - 5/21/20 with RDONO 2020-05-21-PAB-2489</Particular>
+    <PTVno>101-20-05-0149-2489</PTVno>
+    <Debit>232702.1300</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Debit>79948.1300</Debit>
+    <Credit>79948.1300</Credit>
+    <Acountcode>10301020-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8120.0000</Credit>
+    <Acountcode>20201070-1-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>22736.0000</Credit>
+    <Acountcode>20201070-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>38976.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>24067.6800</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1762.5000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-4</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1890.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>79939.8800</Credit>
+    <Acountcode>40102040-1-1-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>40718.3200</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8.2500</Credit>
+    <Acountcode>40105020-1-1-5</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2140.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278768</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9508.5000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-21T00:00:00+08:00</Jevdate>
+    <Gamount>232702.1300</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0035</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278769</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0036</JEVNo>
+    <Collection>3000000.0000</Collection>
+    <Deposits>3000000.0000</Deposits>
+    <Rdono>2020-05-23-PAB-2489</Rdono>
+    <Particular>RCD - 5/26/20 with RDONO 2020-05-23-PAB-2489</Particular>
+    <PTVno>101-20-05-0151-2489</PTVno>
+    <Debit>3000000.0000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>3000000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0036</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278769</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3000000.0000</Credit>
+    <Acountcode>20301010-301</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>3000000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0036</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0037</JEVNo>
+    <Collection>104380.0000</Collection>
+    <Deposits>104380.0000</Deposits>
+    <Rdono>2020-05-21-PAB-2489</Rdono>
+    <Particular>RCD - 5/22/20 with RDONO 2020-05-21-PAB-2489</Particular>
+    <PTVno>101-20-05-0150-2489</PTVno>
+    <Debit>104380.0000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>16240.0000</Credit>
+    <Acountcode>20201070-1-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>38976.0000</Credit>
+    <Acountcode>20201070-1-8</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2820.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1443.7600</Credit>
+    <Acountcode>29999990-5-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3780.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-6</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>300.0000</Credit>
+    <Acountcode>40101020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>23664.0000</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>900.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6056.2400</Credit>
+    <Acountcode>40202060</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1620.0000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278772</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>4800.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>104380.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0037</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0038</JEVNo>
+    <Collection>97246.3200</Collection>
+    <Deposits>97246.3200</Deposits>
+    <Rdono>2020-05-22-PAB-2489</Rdono>
+    <Particular>RCD - 5/26/20 with RDONO 2020-05-22-PAB-2489</Particular>
+    <PTVno>101-20-05-0152-2489</PTVno>
+    <Debit>97246.3200</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>33519.3600</Credit>
+    <Acountcode>20201070-1-14</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12992.0000</Credit>
+    <Acountcode>20201070-1-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2350.0000</Credit>
+    <Acountcode>20301010-301-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>0.0000</Credit>
+    <Acountcode>29999990-5-11</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-1</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-10</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>630.0000</Credit>
+    <Acountcode>29999990-5-42-2-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6820.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-7</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>945.0000</Credit>
+    <Acountcode>29999990-5-42-2-9</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1200.0000</Credit>
+    <Acountcode>40101020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2062.6800</Credit>
+    <Acountcode>40102080</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>30622.2800</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>500.0000</Credit>
+    <Acountcode>40201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1420.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278780</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1350.0000</Credit>
+    <Acountcode>40202990</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>97246.3200</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0038</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278788</jevid>
+    <Date_>05/27/2020</Date_>
+    <JEVNo>101-20-05-01-0039</JEVNo>
+    <Collection>80473.0000</Collection>
+    <Deposits>80473.0000</Deposits>
+    <Rdono>2020-05-24-PAB-2489</Rdono>
+    <Particular>RCD - 5/27/20 with RDONO 2020-05-24-PAB-2489</Particular>
+    <PTVno>101-20-05-0153-2489</PTVno>
+    <Debit>80473.0000</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>80473.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278788</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>43000.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>80473.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278788</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>33872.0000</Credit>
+    <Acountcode>40103040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>80473.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278788</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>500.0000</Credit>
+    <Acountcode>40201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>80473.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278788</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1160.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>80473.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278788</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>1941.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>80473.0000</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0039</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278790</jevid>
+    <Date_>05/29/2020</Date_>
+    <JEVNo>101-20-05-01-0040</JEVNo>
+    <Collection>239069.8800</Collection>
+    <Deposits>239069.8800</Deposits>
+    <Rdono>2020-05-25-PAB-2489</Rdono>
+    <Particular>RCD - 5/22/21 with RDONO 2020-05-25-PAB-2489</Particular>
+    <PTVno>101-20-05-0155-2489</PTVno>
+    <Debit>239069.8800</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>239069.8800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278790</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9000.0000</Credit>
+    <Acountcode>29999990-5-42-2-3</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>239069.8800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278790</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>213945.8800</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>239069.8800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278790</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>10406.0000</Credit>
+    <Acountcode>40105020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>239069.8800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278790</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>3520.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>239069.8800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278790</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2198.0000</Credit>
+    <Acountcode>40601010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>239069.8800</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0040</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_>05/29/2020</Date_>
+    <JEVNo>101-20-05-01-0041</JEVNo>
+    <Collection>95156.0400</Collection>
+    <Deposits>95156.0400</Deposits>
+    <Rdono>2020-05-26-PAB-2489</Rdono>
+    <Particular>RCD - 5/29/20 with RDONO 2020-05-26-PAB-2489</Particular>
+    <PTVno>101-20-05-0156-2489</PTVno>
+    <Debit>95156.0400</Debit>
+    <Acountcode>10102010-505-100-101</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>12195.0000</Credit>
+    <Acountcode>29999990-5-42</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>54945.9500</Credit>
+    <Acountcode>40103040-1-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2000.0000</Credit>
+    <Acountcode>40103050</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>9795.0900</Credit>
+    <Acountcode>40105020</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>2000.0000</Credit>
+    <Acountcode>40201010</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>200.0000</Credit>
+    <Acountcode>40201030</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>8020.0000</Credit>
+    <Acountcode>40201040</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+  <Table1>
+    <jevid>278798</jevid>
+    <Date_ />
+    <JEVNo />
+    <Rdono />
+    <Particular />
+    <PTVno />
+    <Credit>6000.0000</Credit>
+    <Acountcode>40202990-2</Acountcode>
+    <Transtype>1</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-05-26T00:00:00+08:00</Jevdate>
+    <Gamount>95156.0400</Gamount>
+    <row />
+    <SpecialAccount />
+    <jvno>101-20-05-01-0041</jvno>
+  </Table1>
+</NewDataSet>

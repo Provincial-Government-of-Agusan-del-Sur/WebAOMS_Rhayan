@@ -1,0 +1,100 @@
+﻿@using System.Data
+@model DataSet
+           @{
+               
+               Layout ="/Views/Shared/_Layout.cshtml";
+           }
+<div class="container" style="padding-top:10px">
+    @*<h1>Financial Tracking System</h1>
+        <p class="lead">FTS is a free web framework to locate financial transaction.</p>*@
+
+    <div class="row col-md-12">
+
+        @*<input id="txt_dvno_search" class="form-control" placeholder="Enter DVNO" type="text" />*@
+        <div class="">
+            <div class="input-group">
+                <div class="input-group">
+                    <input id="txt_dvno_search" type="text" value="@ViewBag.dvno" class="form-control" name="x" placeholder="Enter DVNO...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" onclick="getdata()" type="button"><span>Search</span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script>
+                    $(document).ready(function () {
+                        var cleave = new Cleave('#txt_dvno_search', {
+
+                            delimiter: '-',
+                            blocks: [3, 2, 2, 4],
+                            uppercase:true
+                        });
+
+                        $("#txt_dvno_search").val(@ViewBag.dvno);
+                    })
+                    $("#txt_dvno_search").on('keydown', function (e) {
+                        if (e.keyCode == 13) {
+                            getdata()
+                        }
+                    })
+                    function getdata()
+                    {
+                        var dvno = $("#txt_dvno_search").val()
+                        $.get('@Url.Action("_result", "S")',
+                            { dvno: dvno },
+                            function (r) {
+                                $("#id_result").html("")
+                                $("#id_result").html(r);
+                            }
+                        )
+                    }
+</script>
+        <div id="id_result" class="row" style="padding-top:10px">
+            <div class="container">
+                @if (Model.Tables[0].Rows.Count > 0)
+                {
+                    <table class="table table-bordered table-striped table-responsive" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th class="text-left">Name</th>
+                            <th class="text-left">Particular</th>
+                            <th class="text-left">Amount</th>
+                        </tr>
+                        <tr>
+                            <th class="text-left">@ViewBag.claimantname</th>
+                            <th class="text-left">@ViewBag.Particular</th>
+                            <th class="text-right">@ViewBag.GAmount</th>
+                        </tr>
+                    </table>
+
+                    <div class="row col-md-12" style="padding-top:5px"></div>
+                    <table class="table table-bordered table-striped table-responsive" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th class="text-center">Date of Last Status</th>
+                            <th class="text-center">Transaction Status</th>
+                            <th class="text-center">Location</th>
+                        </tr>
+
+                        @foreach (DataRow row in Model.Tables[0].Rows)
+                        {
+                            <tr>
+                                <td class="col-md-4">@row["DTS"]</td>
+                                <td class="col-md-6">@row["status"]</td>
+                                <td class="col-md-2">@row["LocationOffice"]</td>
+                            </tr>
+                        }
+
+                    </table>
+                }
+                else
+                {
+                    <div>
+                        <h2>No Record Found(s)</h2>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

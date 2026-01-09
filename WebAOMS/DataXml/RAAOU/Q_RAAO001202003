@@ -1,0 +1,495 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OfficeName" type="xs:string" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:string" minOccurs="0" />
+                <xs:element name="Allotment" type="xs:string" minOccurs="0" />
+                <xs:element name="Obligation" type="xs:string" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:string" minOccurs="0" />
+                <xs:element name="PayableAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="PayableUtilization" type="xs:string" minOccurs="0" />
+                <xs:element name="OfficeID" type="xs:int" minOccurs="0" />
+                <xs:element name="year_" type="xs:int" minOccurs="0" />
+                <xs:element name="month_" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <OfficeName>Agricultural Resource Center</OfficeName>
+    <Appropropriation>3,823,588.00</Appropropriation>
+    <Allotment>708,395.50</Allotment>
+    <Obligation>393,566.40</Obligation>
+    <Utilization>305,093.33</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>305,093.33</PayableUtilization>
+    <OfficeID>41</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Bunawan District Hospital</OfficeName>
+    <Appropropriation>99,723,354.00</Appropropriation>
+    <Allotment>32,908,200.00</Allotment>
+    <Obligation>9,034,869.36</Obligation>
+    <Utilization>8,075,588.64</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>8,075,588.64</PayableUtilization>
+    <OfficeID>27</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>DOP Memorial Hospital</OfficeName>
+    <Appropropriation>250,393,237.00</Appropropriation>
+    <Allotment>81,191,866.35</Allotment>
+    <Obligation>24,672,900.35</Obligation>
+    <Utilization>21,099,855.57</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>21,099,855.57</PayableUtilization>
+    <OfficeID>26</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Esperanza Medicare Community Hospital</OfficeName>
+    <Appropropriation>30,421,552.00</Appropropriation>
+    <Allotment>10,547,419.41</Allotment>
+    <Obligation>3,251,449.35</Obligation>
+    <Utilization>2,946,444.85</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,946,444.85</PayableUtilization>
+    <OfficeID>28</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Loreto District Hospital</OfficeName>
+    <Appropropriation>32,455,898.50</Appropropriation>
+    <Allotment>9,414,957.80</Allotment>
+    <Obligation>3,170,097.55</Obligation>
+    <Utilization>2,711,334.99</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,711,334.99</PayableUtilization>
+    <OfficeID>30</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Moral Recovery and Values Formation Services</OfficeName>
+    <Appropropriation>9,003,952.50</Appropropriation>
+    <Allotment>2,260,442.26</Allotment>
+    <Obligation>983,930.52</Obligation>
+    <Utilization>854,441.82</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>854,441.82</PayableUtilization>
+    <OfficeID>53</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>NON-OFFICE</OfficeName>
+    <Appropropriation>1,097,097,916.20</Appropropriation>
+    <Allotment>569,631,042.93</Allotment>
+    <Obligation>32,902,709.26</Obligation>
+    <Utilization>17,673,080.64</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>17,673,080.64</PayableUtilization>
+    <OfficeID>43</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the  Provincial Environment and Natural Resources</OfficeName>
+    <Appropropriation>21,589,870.00</Appropropriation>
+    <Allotment>4,546,723.94</Allotment>
+    <Obligation>2,677,726.25</Obligation>
+    <Utilization>2,321,924.59</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,321,924.59</PayableUtilization>
+    <OfficeID>35</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the  Provincial General Services</OfficeName>
+    <Appropropriation>54,822,484.00</Appropropriation>
+    <Allotment>23,972,559.50</Allotment>
+    <Obligation>3,502,246.85</Obligation>
+    <Utilization>2,603,221.11</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,603,221.11</PayableUtilization>
+    <OfficeID>16</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the  Provincial Health</OfficeName>
+    <Appropropriation>45,596,334.50</Appropropriation>
+    <Allotment>12,849,193.50</Allotment>
+    <Obligation>3,211,687.45</Obligation>
+    <Utilization>2,446,683.33</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,446,683.33</PayableUtilization>
+    <OfficeID>25</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the  Provincial Social Welfare and Development</OfficeName>
+    <Appropropriation>23,763,521.00</Appropropriation>
+    <Allotment>8,808,124.07</Allotment>
+    <Obligation>3,342,045.95</Obligation>
+    <Utilization>3,018,358.97</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>3,018,358.97</PayableUtilization>
+    <OfficeID>24</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Accountant</OfficeName>
+    <Appropropriation>16,711,510.50</Appropropriation>
+    <Allotment>4,359,883.43</Allotment>
+    <Obligation>2,349,289.70</Obligation>
+    <Utilization>2,102,497.95</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,102,497.95</PayableUtilization>
+    <OfficeID>22</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Administrator</OfficeName>
+    <Appropropriation>15,554,705.00</Appropropriation>
+    <Allotment>3,089,539.01</Allotment>
+    <Obligation>1,619,143.99</Obligation>
+    <Utilization>1,474,431.44</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,474,431.44</PayableUtilization>
+    <OfficeID>5</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Agriculturist</OfficeName>
+    <Appropropriation>35,987,219.50</Appropropriation>
+    <Allotment>8,626,572.50</Allotment>
+    <Obligation>3,312,881.85</Obligation>
+    <Utilization>3,222,175.05</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>3,222,175.05</PayableUtilization>
+    <OfficeID>33</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Assessor</OfficeName>
+    <Appropropriation>22,204,871.00</Appropropriation>
+    <Allotment>6,189,258.94</Allotment>
+    <Obligation>2,786,363.13</Obligation>
+    <Utilization>2,632,873.03</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,632,873.03</PayableUtilization>
+    <OfficeID>31</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Budget</OfficeName>
+    <Appropropriation>11,636,095.50</Appropropriation>
+    <Allotment>2,505,777.10</Allotment>
+    <Obligation>1,333,436.17</Obligation>
+    <Utilization>1,112,848.31</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,112,848.31</PayableUtilization>
+    <OfficeID>21</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Engineer</OfficeName>
+    <Appropropriation>90,254,818.00</Appropropriation>
+    <Allotment>29,471,700.00</Allotment>
+    <Obligation>7,939,632.67</Obligation>
+    <Utilization>6,693,350.74</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>6,693,350.74</PayableUtilization>
+    <OfficeID>23</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Governor</OfficeName>
+    <Appropropriation>152,390,585.50</Appropropriation>
+    <Allotment>43,494,609.73</Allotment>
+    <Obligation>29,970,516.16</Obligation>
+    <Utilization>25,231,159.86</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>25,231,159.86</PayableUtilization>
+    <OfficeID>1</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Human Resource Management</OfficeName>
+    <Appropropriation>21,875,331.00</Appropropriation>
+    <Allotment>7,895,232.28</Allotment>
+    <Obligation>2,456,986.77</Obligation>
+    <Utilization>2,313,813.96</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,313,813.96</PayableUtilization>
+    <OfficeID>15</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Internal Audit</OfficeName>
+    <Appropropriation>9,258,062.50</Appropropriation>
+    <Allotment>1,622,112.73</Allotment>
+    <Obligation>931,570.36</Obligation>
+    <Utilization>854,377.30</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>854,377.30</PayableUtilization>
+    <OfficeID>65</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Legal</OfficeName>
+    <Appropropriation>7,693,420.00</Appropropriation>
+    <Allotment>1,536,839.68</Allotment>
+    <Obligation>710,803.85</Obligation>
+    <Utilization>572,519.10</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>572,519.10</PayableUtilization>
+    <OfficeID>18</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Planning and Development Coordinator</OfficeName>
+    <Appropropriation>26,867,850.50</Appropropriation>
+    <Allotment>7,587,228.29</Allotment>
+    <Obligation>3,127,619.04</Obligation>
+    <Utilization>2,645,651.63</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,645,651.63</PayableUtilization>
+    <OfficeID>19</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Treasurer</OfficeName>
+    <Appropropriation>21,506,644.00</Appropropriation>
+    <Allotment>3,943,494.76</Allotment>
+    <Obligation>2,467,318.85</Obligation>
+    <Utilization>2,372,084.19</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,372,084.19</PayableUtilization>
+    <OfficeID>32</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Provincial Veterinarian</OfficeName>
+    <Appropropriation>23,383,299.00</Appropropriation>
+    <Allotment>10,786,789.35</Allotment>
+    <Obligation>1,639,977.91</Obligation>
+    <Utilization>1,346,177.65</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,346,177.65</PayableUtilization>
+    <OfficeID>36</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Sangguniang Panlalawigan</OfficeName>
+    <Appropropriation>70,939,243.50</Appropropriation>
+    <Allotment>15,169,369.66</Allotment>
+    <Obligation>7,655,286.99</Obligation>
+    <Utilization>5,946,012.07</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>5,946,012.07</PayableUtilization>
+    <OfficeID>14</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Office of the Vice-Governor</OfficeName>
+    <Appropropriation>14,069,661.50</Appropropriation>
+    <Allotment>3,896,063.20</Allotment>
+    <Obligation>2,250,971.74</Obligation>
+    <Utilization>1,534,249.55</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,534,249.55</PayableUtilization>
+    <OfficeID>49</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Patin-ay Waterworks System</OfficeName>
+    <Appropropriation>12,611,975.00</Appropropriation>
+    <Allotment>1,342,211.22</Allotment>
+    <Obligation>1,049,203.87</Obligation>
+    <Utilization>732,120.08</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>732,120.08</PayableUtilization>
+    <OfficeID>38</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Correctional and Security Management Office </OfficeName>
+    <Appropropriation>29,006,909.00</Appropropriation>
+    <Allotment>7,358,892.65</Allotment>
+    <Obligation>3,798,966.38</Obligation>
+    <Utilization>3,269,124.18</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>3,269,124.18</PayableUtilization>
+    <OfficeID>69</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Disaster Risk Reduction Management Office</OfficeName>
+    <Appropropriation>15,390,220.00</Appropropriation>
+    <Allotment>3,940,354.42</Allotment>
+    <Obligation>1,932,308.42</Obligation>
+    <Utilization>1,559,462.25</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,559,462.25</PayableUtilization>
+    <OfficeID>63</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Economic and Enterprise Development Office (Services)</OfficeName>
+    <Appropropriation>20,221,651.00</Appropropriation>
+    <Allotment>3,617,046.21</Allotment>
+    <Obligation>1,543,560.48</Obligation>
+    <Utilization>1,369,659.68</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,369,659.68</PayableUtilization>
+    <OfficeID>39</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Information Management Office</OfficeName>
+    <Appropropriation>49,599,051.00</Appropropriation>
+    <Allotment>30,499,147.51</Allotment>
+    <Obligation>2,461,434.75</Obligation>
+    <Utilization>2,062,451.36</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,062,451.36</PayableUtilization>
+    <OfficeID>4</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Learning Center</OfficeName>
+    <Appropropriation>40,405,820.00</Appropropriation>
+    <Allotment>22,902,833.66</Allotment>
+    <Obligation>4,771,274.94</Obligation>
+    <Utilization>1,349,393.07</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,349,393.07</PayableUtilization>
+    <OfficeID>37</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Public Information Office</OfficeName>
+    <Appropropriation>45,418,278.00</Appropropriation>
+    <Allotment>23,883,993.19</Allotment>
+    <Obligation>2,507,110.81</Obligation>
+    <Utilization>1,602,290.45</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,602,290.45</PayableUtilization>
+    <OfficeID>70</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>PROVINCIAL SECRETARY OFFICE</OfficeName>
+    <Appropropriation>16,355,329.00</Appropropriation>
+    <Allotment>3,394,956.00</Allotment>
+    <Obligation>2,160,767.69</Obligation>
+    <Utilization>2,065,782.97</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>2,065,782.97</PayableUtilization>
+    <OfficeID>57</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Provincial Tourism Office</OfficeName>
+    <Appropropriation>10,009,603.00</Appropropriation>
+    <Allotment>3,448,542.84</Allotment>
+    <Obligation>779,616.10</Obligation>
+    <Utilization>673,432.38</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>673,432.38</PayableUtilization>
+    <OfficeID>51</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Public Employment Services Office</OfficeName>
+    <Appropropriation>8,657,244.00</Appropropriation>
+    <Allotment>2,073,221.82</Allotment>
+    <Obligation>681,263.06</Obligation>
+    <Utilization>444,880.07</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>444,880.07</PayableUtilization>
+    <OfficeID>12</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Sports and Youth Development Services</OfficeName>
+    <Appropropriation>5,408,555.00</Appropropriation>
+    <Allotment>3,193,787.24</Allotment>
+    <Obligation>384,209.08</Obligation>
+    <Utilization>364,138.52</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>364,138.52</PayableUtilization>
+    <OfficeID>7</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>SUBSTANCE USE RECOVERY  AND ENLIGHTENMENT PROGRAM</OfficeName>
+    <Appropropriation>13,801,887.00</Appropropriation>
+    <Allotment>2,704,900.00</Allotment>
+    <Obligation>1,543,663.36</Obligation>
+    <Utilization>1,138,086.30</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>1,138,086.30</PayableUtilization>
+    <OfficeID>93</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+  <Table>
+    <OfficeName>Talacogon District Hospital</OfficeName>
+    <Appropropriation>65,701,008.00</Appropropriation>
+    <Allotment>23,920,637.86</Allotment>
+    <Obligation>5,913,910.93</Obligation>
+    <Utilization>5,141,969.58</Utilization>
+    <PayableAmount>0.00</PayableAmount>
+    <PayableUtilization>5,141,969.58</PayableUtilization>
+    <OfficeID>29</OfficeID>
+    <year_>2020</year_>
+    <month_>3</month_>
+  </Table>
+</NewDataSet>

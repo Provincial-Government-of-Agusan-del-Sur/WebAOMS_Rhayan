@@ -1,0 +1,140 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal col-sm-12">
+    <form id="frm_laonDetails">
+        <input id="txt_t_Base_deductionID" hidden type="text" name="t_Base_deductionID" value="@ViewBag.special_payroll_deductionID" />
+        <input id="txt_eid" hidden type="text" name="eid" value="@ViewBag.eid" />
+        
+        <div class="row">
+            <div class="col-lg-12 no-padding">
+                <div class="col-lg-12">
+                    <div class="box-head no-padding">
+                        <h4>
+                            Loan Details
+                        </h4>
+                    </div>
+                    <div>
+
+                        <div class="form-group form-group-md">
+                            <div class="col-md-3">
+                                <label class="control-label">Deduction</label>
+                            </div>
+                            <script>
+                                function deduct_para() {
+                                            return { eid: @ViewBag.eid, year:2018,month: 5,isEdit: @ViewBag.isEdit };
+                                }
+                            </script>
+                            <div class="col-md-9">
+
+                                @(Html.Kendo().DropDownList()
+                                .Name("DeductionID")
+                                .DataTextField("Description")
+                                .DataValueField("deductID")
+                                .HtmlAttributes(new { style = "width:100%", @readonly = "readonly" })
+                                .OptionLabel("Select Deduction")
+                                .Filter("contains")
+                                .DataSource(source =>
+                                {
+                                    source.Read(read =>
+                                    {
+                                        read.Action("get_ref_Employee_Deduction_special", "Payroll").Data("deduct_para");
+                                    })
+                                    .ServerFiltering(false);
+                                }))
+                                <script>
+                                    function changeDeduction(e) {
+                                        var dataItem = this.dataItem(e.item.index());
+                                        toastr('Message', 'Deduction Change')
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                       
+                        <div class="form-group form-group-md">
+
+                            <div class="col-md-3">
+                                <label class="control-label control-width-small">Amount</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input name="MonthlyAmount" id="txt_monthlyAmount" class="form-control text-right " placeholder="" value="@ViewBag.Amount" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                            <script>
+    $(document).ready(function () {
+        var istrue = true;
+        var dropdownlist = $("#DeductionID").data("kendoDropDownList")
+        dropdownlist.value(@ViewBag.DeductionID)
+
+        if ("@ViewBag.isEdit" == "1") {
+            dropdownlist.readonly()
+            $("#del_deduct").show()
+        }
+        else {
+            $("#del_deduct").hide()
+            dropdownlist.readonly(false)
+        }
+
+        $(function () {
+            $('#txt_monthlyAmount').number(true, 2);
+        });
+    })
+
+    function deleteDeduction_special() {
+        $.post('@Url.Action("delete_employee_deduction_special", "Payroll")',
+                {
+                    special_payroll_deductionID: $("#txt_t_Base_deductionID").val()
+                }, function (r) {
+                    if (r == 6) {
+                        var grid = $("#grid_employee_Deduction").data("kendoGrid");
+                        grid.dataSource.read();
+
+                        toastr.success('Deduction deleted successfully', 'Done');
+                        $("#m_add_deductions_special").modal("hide")
+
+                        var gridData_c = $("#grid_employee_compensation").data("kendoGrid");
+                        gridData_c.dataSource.read();
+                        get_netAmount();
+                        //get_payrollSummary()
+                    }
+                    else if (r == 4) {
+                        alert('Can`t save entry as it already exists');
+                    }
+                    else if (r == 8) {
+                        toastr.warning('Some fields are empty or contain a improper value.', 'System Message');;
+                    }
+                    else {
+                        alert(r);
+                    }
+                }
+            )
+    }
+    function save_deduction_special() {
+        var url = '@Url.Action("save_deduction_special", "Payroll")';
+        $.post(url, { special_payroll_deductionID: '@ViewBag.special_payroll_deductionID', Amount: $("#txt_monthlyAmount").val(),eid:@ViewBag.eid,deduction_id:$("#DeductionID").data("kendoDropDownList").value(),batchno:$("#txt_batchno").val() }, function (data) {
+
+            $('#m_add_deductions_special').modal('hide');
+            var gridData = $("#grid_employee_Deduction").data("kendoGrid");
+            gridData.dataSource.read();
+            var gridData_c = $("#grid_employee_compensation").data("kendoGrid");
+            gridData_c.dataSource.read();
+            get_netAmount();
+            //loadpara()
+        })
+            .fail(function (jqXHR, textStatus, error) {
+                stopSpin()
+                toastr.warning(error, 'System Message');
+            });
+    }
+                                
+                        </script>
+                </div>
+        </div>
+    </form>
+</div>
+

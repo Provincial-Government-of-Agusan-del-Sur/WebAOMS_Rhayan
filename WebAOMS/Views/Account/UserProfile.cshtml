@@ -1,0 +1,265 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
+}
+<style>
+.containerforPic {
+  /*position: absolute;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;*/
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.containerforPic:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.buttonForPic {
+  position: absolute;
+  width: 100%;
+  /*padding-bottom:50px;*/
+  top:80%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.buttonForPic a {
+  width: 200px;
+  padding: 12px 12px 12px 12px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.containerforPic:hover .buttonForPic {
+  opacity: 1;
+}
+</style>
+<div class="box style-transparent">
+    <!-- START PROFILE TABS -->
+    <div class="box-head">
+        <ul class="nav nav-tabs tabs-transparent" data-toggle="tabs">
+            <li class="active"><a href="#overview"><i class="fa fa-inbox"></i> Manage Profile</a></li>
+            @*<li class=""><a href="#editDetails"><i class="fa fa-edit"></i> Change details</a></li>*@
+        </ul>
+    </div>
+    <!-- END PROFILE TABS -->
+
+    <div class="tab-content">
+
+        <!-- START PROFILE OVERVIEW -->
+        <div class="tab-pane active" id="overview">
+            <div class="box-tiles style-white">
+                <div class="row">
+                   
+
+
+                        <!-- START PROFILE SIDEBAR -->
+                        <div class="col-sm-3 style-inverse">
+                            <div class="holder" style="padding-bottom:40px">
+                                <div>
+                                    <div class="containerforPic" style="height:302px">
+                                        <img class="img-rounded img-responsive" src="@ViewBag.pictureLocation" alt="">
+                                        <div class="overlay">
+                                            <div class="buttonForPic">
+                                                <a href="#" onclick="browsePicutre()"> Change Picture </a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <script>
+                                    function changePic() {
+                                        alert('')
+                                    }
+                                </script>
+                                </div>
+                            <div class="box-body style-inverse">
+                                <p class="text-support5-alt">
+                                    <span class="text-xl text-light">@ViewBag.empname</span><br>
+                                    <span class="text-sm">@ViewBag.position at PGAS</span>
+                                </p>
+                            </div>
+                           
+                            @*<div class="box-body style-inverse">
+                                <address class="text-support5-alt">
+                                    <abbr title="Place"><i class="fa fa-inbox fa-fw"></i></abbr> @ViewBag.birthplace<br> 
+                                    <abbr title="Phone"><i class="fa fa-phone fa-fw"></i>@ViewBag.phoneNumber</abbr> <br>
+                                    <abbr title="Birthday"><i class="fa fa-gift fa-fw"></i></abbr> @ViewBag.birthdate
+                                </address>
+                            </div>*@
+                        </div><!--end .col-sm-3 -->
+                        <!-- END PROFILE SIDEBAR -->
+                        <!-- START PROFILE CONTENT -->
+                        <div class="col-sm-9">
+                            <div class="alert alert-warning">
+                                <i class="fa fa-comments"></i> 
+                                <a href="#" class="link-default">Read comments</a>
+                            </div>
+                            <div class="box-body">
+                               
+                            </div>
+                        </div><!--end .col-sm-9 -->
+                    
+                    <!-- END PROFILE CONTENT -->
+
+                </div><!--end .row -->
+            </div><!--end .box-body -->
+        </div><!--end .tab-pane -->
+        <!-- END PROFILE OVERVIEW -->
+        <!-- START PROFILE EDITOR -->
+       @* <div class="tab-pane" id="editDetails">
+        <div class="box-body style-white">
+            <div class="well">
+                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                <span>Add a personal message here.</span>
+            </div>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <div class="col-lg-1 col-md-2 col-sm-3">
+                        <label for="email1" class="control-label">Email</label>
+                    </div>
+                    <div class="col-lg-11 col-md-10 col-sm-9">
+                        <input type="email" name="email1" id="email1" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <label for="password1" class="control-label">Password</label>
+                            </div>
+                            <div class="col-lg-10 col-md-8 col-sm-6">
+                                <input type="password" name="password1" id="password1" class="form-control" placeholder="Password">
+                                <p class="help-block">Use Alphanumeric characters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                <label for="repeatpassword1" class="control-label">Repeat</label>
+                            </div>
+                            <div class="col-lg-10 col-md-8 col-sm-6">
+                                <input type="password" name="repeatpassword1" id="repeatpassword1" class="form-control" placeholder="Repeat password">
+                                <p class="help-block">Retype your password.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-1 col-md-2 col-sm-3">
+                        <label for="select1" class="control-label">Select</label>
+                    </div>
+                    <div class="col-lg-11 col-md-10 col-sm-9">
+                        <select name="select1" id="select1" class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <p class="help-block">This is supporting text for this field.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-1 col-md-2 col-sm-3">
+                        <label for="textarea1" class="control-label">
+                            Textarea
+                            <small>Info about this field</small>
+                        </label>
+                    </div>
+                    <div class="col-lg-11 col-md-10 col-sm-9">
+                        <textarea name="textarea1" id="textarea1" class="form-control" rows="3" placeholder="Textarea"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-1 col-md-2 col-sm-3">
+                        <label class="control-label">
+                            Checkboxes
+                        </label>
+                    </div>
+                    <div class="col-lg-11 col-md-10 col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="cb1"> Check me out
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-footer col-lg-offset-1 col-md-offset-2 col-sm-offset-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-default">Reset</button>
+                </div>
+            </form>
+
+        </div><!--end .box-body -->
+    </div><!--end .tab-pane -->*@
+        <!-- END PROFILE EDITOR -->
+
+    </div><!--end .tab-content -->
+</div>
+
+<div class="modal" id="m_change_picture" data-focus-on="input:first" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="simpleModalLabel">Change Picture</h4>
+            </div>
+            <div class="modal-body" style="min-height:370px">
+            </div>
+            <div class="modal-footer" style="margin:0px">
+                <a class="btn file-btn">
+                    <span>Upload</span>
+                    <input type="file" id="upload" value="Choose a file" accept="image/*">
+                </a>
+                <button id="btn_save_2file" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function reloadimage() {
+
+        d = new Date();
+        $("#myimg").attr("src", "/myimg.jpg?" + d.getTime());
+    }
+
+
+    function browsePicutre() {
+        startSpin()
+        $.post('@Url.Action("partial_changePicture", "Account")',
+           { },
+            function (r) {
+                stopSpin()
+                if (r == 8) {
+                    toastr.warning('Select employee first', 'System Message');
+                }
+                else {
+                    var mymodal = $('#m_change_picture');
+                    mymodal.find('.modal-body').html(r);
+                    mymodal.modal('show');
+                }
+            }
+        )
+
+    }
+</script>

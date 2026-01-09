@@ -1,0 +1,1244 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevID" type="xs:int" minOccurs="0" />
+                <xs:element name="Date_" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ADANo" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="debit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundryDebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CreditAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="CreditAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="credit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundrycredit" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="debit1" type="xs:int" minOccurs="0" />
+                <xs:element name="debit2" type="xs:int" minOccurs="0" />
+                <xs:element name="debit3" type="xs:int" minOccurs="0" />
+                <xs:element name="credit1" type="xs:int" minOccurs="0" />
+                <xs:element name="credit2" type="xs:int" minOccurs="0" />
+                <xs:element name="credit3" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Sdebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Scredit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderby" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>AUTHORITY  TO DEBIT ACCOUNT DISBURSEMENTS  JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of February, 2022</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevID>0</jevID>
+    <Particular>Totals Carried Forward</Particular>
+    <debit1>30707608.00</debit1>
+    <debit2>1997923.91</debit2>
+    <debit3>1756000.00</debit3>
+    <TotalSundryDebit>37127433.02</TotalSundryDebit>
+    <credit1>41556959.29</credit1>
+    <credit2>3791079.75</credit2>
+    <credit3>8144070.73</credit3>
+    <TotalSundrycredit>18096855.16</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544610</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9362</ADANo>
+    <JEVno>101-22-02-06-0001</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022. ADA BATCH NO:2022-9362</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>8398.96</credit1>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544611</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9363</ADANo>
+    <JEVno>101-22-02-06-0002</JEVno>
+    <Particular> (291P) payment of Provincial Scholars Allowance, Board &amp; Lodging, Tuition Fee and Other School Fees feed for the month of January to December 2021. ADA BATCH NO:2022-9363</Particular>
+    <TotalSundryDebit>237000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>237,000.00</DebitAmount>
+    <credit1>237000.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544612</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9364</ADANo>
+    <JEVno>101-22-02-06-0003</JEVno>
+    <Particular> (291P) payment of Provincial Scholars Allowance, Board &amp; Lodging, Tuition Fee and Other School Fees feed for the month of January to December 2021. ADA BATCH NO:2022-9364</Particular>
+    <TotalSundryDebit>43000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>43,000.00</DebitAmount>
+    <credit1>43000.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544613</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9365</ADANo>
+    <JEVno>101-22-02-06-0004</JEVno>
+    <Particular>(34P) payment for COVID-19 Hazard Pay 2021 (TDH- Abrea, J. et al.(3P) ; BDH- Osigan, W. ; SP- Benluta, J.et al.(4P) ; SURE- Baldicantos, R. et al.(2P) ;
+PGO- Adalem, W. Jr. et al.(14P) ; AGRI- Tana, N. ; USAD -Calva, Ariel A, et al.(8P); PEEDO- Miladona, K.)</Particular>
+    <TotalSundryDebit>15000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>15,000.00</DebitAmount>
+    <credit1>15000.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544614</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9366</ADANo>
+    <JEVno>101-22-02-06-0005</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of January 1-15, 2022.ADA BATCH NO:2022-9366</Particular>
+    <TotalSundryDebit>6400.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>6,400.00</DebitAmount>
+    <credit1>4880.00</credit1>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544640</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9366</ADANo>
+    <JEVno>101-22-02-06-0006</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-15, 2022.ADA BATCH NO:2022-9366</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3061.76</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544641</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9366</ADANo>
+    <JEVno>101-22-02-06-0007</JEVno>
+    <Particular>(5P) to payment of CASUAL for the period of January 1-15, 2022.ADA BATCH NO:2022-9366</Particular>
+    <debit2>31290.32</debit2>
+    <TotalSundryDebit>13837.52</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>19,225.71#=3,441.96#=2,581.45</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>10,325.81#=1,720.98#=1,290.73#=500.00</DebitAmount>
+    <credit1>19878.72</credit1>
+    <TotalSundrycredit>25249.12</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544642</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9366</ADANo>
+    <JEVno>101-22-02-06-0008</JEVno>
+    <Particular>(7P),To payment of CASUAL for the period  of January 1-15, 2022.ADA BATCH NO:2022-9366</Particular>
+    <debit2>46120.16</debit2>
+    <TotalSundryDebit>20358.76</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>28,134.41#=5,208.22#=3,804.91</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>15,219.67#=2,536.62#=1,902.47#=700.00</DebitAmount>
+    <credit1>29110.47</credit1>
+    <credit2>70.91</credit2>
+    <credit3>150.00</credit3>
+    <TotalSundrycredit>37147.54</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544643</jevID>
+    <Date_>2022-02-07T00:00:00+08:00</Date_>
+    <ADANo>2022-9366</ADANo>
+    <JEVno>101-22-02-06-0009</JEVno>
+    <Particular>To payment of CASUAL for the period of January 1-15, 2022.ADA BATCH NO:2022-9366</Particular>
+    <debit2>4650.88</debit2>
+    <TotalSundryDebit>1965.27</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>2,627.14#=481.36#=361.02</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>1,444.08#=240.68#=180.51#=100.00</DebitAmount>
+    <credit1>3146.63</credit1>
+    <TotalSundrycredit>3469.52</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544697</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9372</ADANo>
+    <JEVno>101-22-02-06-0010</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period  of January 1-15, 2022. ADA BATCH NO:2022-9372</Particular>
+    <debit2>11405.32</debit2>
+    <TotalSundryDebit>4535.63</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>6,074.06#=1,118.88#=839.15</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>3,356.61#=559.44#=419.58#=200.00</DebitAmount>
+    <credit1>7908.86</credit1>
+    <TotalSundrycredit>8032.09</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544698</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9372</ADANo>
+    <JEVno>101-22-02-06-0011</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of January 16-31, 2022.ADA BATCH NO:2022-9372</Particular>
+    <debit2>16762.90</debit2>
+    <debit3>3454.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>3,770.59#=465.39</CreditAmount>
+    <credit1>15581.12</credit1>
+    <credit3>400.00</credit3>
+    <TotalSundrycredit>4235.98</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544705</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9372</ADANo>
+    <JEVno>101-22-02-06-0012</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022</Particular>
+    <TotalSundryDebit>10032.12</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>10,032.12</DebitAmount>
+    <credit1>9272.12</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544707</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9372</ADANo>
+    <JEVno>101-22-02-06-0013</JEVno>
+    <Particular>(9P),To payment of CASUAL for the period  of January 16-31, 2022.ADA BATCH NO:2022-9372</Particular>
+    <debit2>70431.46</debit2>
+    <debit3>15453.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,051.07</CreditAmount>
+    <credit1>84833.39</credit1>
+    <TotalSundrycredit>1051.07</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544709</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9372</ADANo>
+    <JEVno>101-22-02-06-0014</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of January 16-31, 2022.ADA BATCH NO:2022-9372</Particular>
+    <debit2>33538.56</debit2>
+    <debit3>8635.50</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>6,943.85#=2,965.96</CreditAmount>
+    <credit1>32034.25</credit1>
+    <credit3>230.00</credit3>
+    <TotalSundrycredit>9909.81</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544711</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0015</JEVno>
+    <Particular>(18P),To payment of JOB ORDER for the period of January 1-15, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>57888.08</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,800.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>57,888.08</DebitAmount>
+    <credit1>44208.08</credit1>
+    <credit3>11880.00</credit3>
+    <TotalSundrycredit>1800.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544713</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0016</JEVno>
+    <Particular>(2P),To payment of CONTRACT OF SERVICE for the period  of January 1-15, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>14007.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>760.28</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>14,007.00</DebitAmount>
+    <credit1>11506.50</credit1>
+    <credit2>420.22</credit2>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>760.28</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544717</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0017</JEVno>
+    <Particular>(2P),To payment of CONTRACT OF SERVICE for the period  of January 1-15, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>15272.73</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>15,272.73</DebitAmount>
+    <credit1>13272.73</credit1>
+    <credit2>480.00</credit2>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544720</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0018</JEVno>
+    <Particular>To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>4000.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>4,000.00</DebitAmount>
+    <credit1>4000.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544721</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0019</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the month of January 16-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>22731.60</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>22,731.60</DebitAmount>
+    <credit1>22731.60</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544724</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0020</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>14670.98</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>14,670.98</DebitAmount>
+    <credit1>14670.98</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544727</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0021</JEVno>
+    <Particular>(7P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>33918.12</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>33,918.12</DebitAmount>
+    <credit1>33918.12</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544729</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0022</JEVno>
+    <Particular>
+(4P),To payment of JOB ORDER for the period  of January 16-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>19309.84</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>146.65</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>19,309.84</DebitAmount>
+    <credit1>19163.19</credit1>
+    <TotalSundrycredit>146.65</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544731</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0023</JEVno>
+    <Particular> (2P) to payment of JOB ORDER for the period of January 1-15, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>7021.76</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>300.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,021.76</DebitAmount>
+    <credit1>5401.76</credit1>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>300.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544734</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0024</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>25753.36</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>300.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>25,753.36</DebitAmount>
+    <credit1>23473.36</credit1>
+    <credit3>1980.00</credit3>
+    <TotalSundrycredit>300.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544737</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0025</JEVno>
+    <Particular> payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>9076.68</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>9,076.68</DebitAmount>
+    <credit1>8316.68</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544738</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0026</JEVno>
+    <Particular>To payment of CASUAL for the period of January 16-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <debit2>6785.90</debit2>
+    <debit3>1908.90</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>8694.80</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544740</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9373</ADANo>
+    <JEVno>101-22-02-06-0027</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9373</Particular>
+    <TotalSundryDebit>40128.48</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>750.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>40,128.48</DebitAmount>
+    <credit1>36738.48</credit1>
+    <credit3>2640.00</credit3>
+    <TotalSundrycredit>750.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544742</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9375</ADANo>
+    <JEVno>101-22-02-06-0028</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period  of January 16-31, 2022.ADA BATCH NO:2022-9375</Particular>
+    <debit2>23012.77</debit2>
+    <debit3>5181.30</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>2,455.56</CreditAmount>
+    <credit1>25738.51</credit1>
+    <TotalSundrycredit>2455.56</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544744</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9377</ADANo>
+    <JEVno>101-22-02-06-0029</JEVno>
+    <Particular>To payment of CASUAL for the period  of January 16-31, 2022.ADA BATCH NO:2022-9375</Particular>
+    <debit2>6785.90</debit2>
+    <debit3>1908.90</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>8694.80</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544745</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9377</ADANo>
+    <JEVno>101-22-02-06-0030</JEVno>
+    <Particular>(10P),To payment of CASUAL for the period  of January 16-31, 2022.ADA BATCH NO:2022-9375</Particular>
+    <debit2>67550.67</debit2>
+    <debit3>19089.00</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030</CreditAccountcode>
+    <CreditAmount>3,600.00#=1,147.91</CreditAmount>
+    <credit1>80051.76</credit1>
+    <credit3>1840.00</credit3>
+    <TotalSundrycredit>4747.91</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544748</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0031</JEVno>
+    <Particular>(9P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <TotalSundryDebit>43019.68</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>43,019.68</DebitAmount>
+    <credit1>43019.68</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544749</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0032</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <TotalSundryDebit>8699.48</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,699.48</DebitAmount>
+    <credit1>8699.48</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544750</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0033</JEVno>
+    <Particular>(10P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <TotalSundryDebit>44854.92</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>440.64</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>44,854.92</DebitAmount>
+    <credit1>44414.28</credit1>
+    <TotalSundrycredit>440.64</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544752</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0034</JEVno>
+    <Particular>(2P),To payment of CASUAL for the  period  of January 16-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <debit2>15375.36</debit2>
+    <debit3>3454.20</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>3,284.60</CreditAmount>
+    <credit1>15544.96</credit1>
+    <TotalSundrycredit>3284.60</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544755</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0035</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <TotalSundryDebit>10509.84</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>10,509.84</DebitAmount>
+    <credit1>10509.84</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544756</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0036</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the period  of January 16-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <TotalSundryDebit>21654.92</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>21,654.92</DebitAmount>
+    <credit1>21654.92</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544757</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9378</ADANo>
+    <JEVno>101-22-02-06-0037</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9378</Particular>
+    <TotalSundryDebit>9076.68</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>9,076.68</DebitAmount>
+    <credit1>8316.68</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544760</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0038</JEVno>
+    <Particular>(9P),To payment of CONTRACT OF SERVICE for the period  of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>69040.50</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>69,040.50</DebitAmount>
+    <credit1>66963.74</credit1>
+    <credit2>2076.76</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544763</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0039</JEVno>
+    <Particular>(10P),To payment of JOB ORDER for the period  of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>46941.96</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>46,941.96</DebitAmount>
+    <credit1>46941.96</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544765</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0040</JEVno>
+    <Particular>To payment of CASUAL for the period  of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <debit2>7637.41</debit2>
+    <debit3>1727.10</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <credit1>7414.51</credit1>
+    <credit3>1950.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544766</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0041</JEVno>
+    <Particular>To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>5254.92</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>5,254.92</DebitAmount>
+    <credit1>5254.92</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544768</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0042</JEVno>
+    <Particular>To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>5254.92</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>5,254.92</DebitAmount>
+    <credit1>5254.92</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544770</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0043</JEVno>
+    <Particular>(13P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>58054.92</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>58,054.92</DebitAmount>
+    <credit1>58054.92</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544771</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0044</JEVno>
+    <Particular>To payment of JOB ORDER for the period of January 1-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>7600.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>7,600.00</DebitAmount>
+    <credit1>6840.00</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544772</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0045</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>9076.68</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>9,076.68</DebitAmount>
+    <credit1>8316.68</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544773</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0046</JEVno>
+    <Particular>(3P),To payment of CONTRACT OF SERVICE for the period  of January 16-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>23727.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>23,727.00</DebitAmount>
+    <credit1>23727.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544774</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0047</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>57243.52</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,250.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>57,243.52</DebitAmount>
+    <credit1>53353.52</credit1>
+    <credit3>2640.00</credit3>
+    <TotalSundrycredit>1250.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544775</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0048</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>9076.68</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>9,076.68</DebitAmount>
+    <credit1>8316.68</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544778</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0049</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>30531.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,000.00</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>30,531.00</DebitAmount>
+    <credit1>27761.12</credit1>
+    <credit2>1109.88</credit2>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>1000.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544781</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0050</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>9076.68</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>9,076.68</DebitAmount>
+    <credit1>8316.68</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544784</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0051</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the period of January 16-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>7003.50</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>7,003.50</DebitAmount>
+    <credit1>6793.39</credit1>
+    <credit2>210.11</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544787</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0052</JEVno>
+    <Particular>To payment of JOB ORDER for the period  of January 16-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>5254.92</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>5,254.92</DebitAmount>
+    <credit1>5254.92</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544794</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0053</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>20064.24</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>20,064.24</DebitAmount>
+    <credit1>18544.24</credit1>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544796</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0054</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>25753.36</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>25,753.36</DebitAmount>
+    <credit1>23273.36</credit1>
+    <credit3>1980.00</credit3>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544798</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0055</JEVno>
+    <Particular>(13P),To payment of JOB ORDER for the period of January 16-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>65618.50</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,157.41</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>65,618.50</DebitAmount>
+    <credit1>63851.09</credit1>
+    <credit3>610.00</credit3>
+    <TotalSundrycredit>1157.41</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544807</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0056</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>7838.96</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544808</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0057</JEVno>
+    <Particular>(2P),To payment of CONTRACT OF SERVICE for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>50580.00</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>50,580.00</DebitAmount>
+    <credit1>49741.74</credit1>
+    <credit2>178.26</credit2>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544809</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0058</JEVno>
+    <Particular>(53P),To payment of JOB ORDER for the period  of January 16-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>236384.94</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>355.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>236,384.94</DebitAmount>
+    <credit1>236029.94</credit1>
+    <TotalSundrycredit>355.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544816</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0059</JEVno>
+    <Particular>(13P),To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>111308.76</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>2,726.50</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>111,308.76</DebitAmount>
+    <credit1>99592.26</credit1>
+    <credit3>8990.00</credit3>
+    <TotalSundrycredit>2726.50</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544820</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0060</JEVno>
+    <Particular>(6P),To payment of JOB ORDER for the period of January 16-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>30335.22</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>30,335.22</DebitAmount>
+    <credit1>29775.22</credit1>
+    <credit3>360.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544821</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9381</ADANo>
+    <JEVno>101-22-02-06-0061</JEVno>
+    <Particular>(2P),To payment of CONTRACT OF SERVICE for the period  of January 16-31, 2022..ADA BATCH NO:2022-9381</Particular>
+    <TotalSundryDebit>13818.19</TotalSundryDebit>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>13,818.19</DebitAmount>
+    <credit1>13338.19</credit1>
+    <credit2>480.00</credit2>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544824</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9382</ADANo>
+    <JEVno>101-22-02-06-0062</JEVno>
+    <Particular>(34P),To payment of CASUAL for the period of January 1-15, 2022.ADA BATCH NO:2022-9382</Particular>
+    <debit2>261340.29</debit2>
+    <TotalSundryDebit>101272.66</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>139,566.41#=25,257.60#=18,943.07</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>75,772.31#=12,628.80#=9,471.55#=3,400.00</DebitAmount>
+    <credit1>171406.33</credit1>
+    <credit2>7139.54</credit2>
+    <credit3>300.00</credit3>
+    <TotalSundrycredit>183767.08</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544831</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9382</ADANo>
+    <JEVno>101-22-02-06-0063</JEVno>
+    <Particular>(3P),To payment of CASUAL for the month of January 16-31, 2022..ADA BATCH NO:2022-9382</Particular>
+    <debit2>21209.21</debit2>
+    <debit3>5181.30</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>600.00</CreditAmount>
+    <credit1>24285.00</credit1>
+    <credit3>1505.51</credit3>
+    <TotalSundrycredit>600.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544833</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9382</ADANo>
+    <JEVno>101-22-02-06-0064</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of January 16-31, 2022..ADA BATCH NO:2022-9382</Particular>
+    <debit2>58889.82</debit2>
+    <debit3>9544.50</debit3>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201020</CreditAccountcode>
+    <CreditAmount>2,594.93</CreditAmount>
+    <credit1>65159.39</credit1>
+    <credit3>680.00</credit3>
+    <TotalSundrycredit>2594.93</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544834</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9382</ADANo>
+    <JEVno>101-22-02-06-0065</JEVno>
+    <Particular>(3P),To payment of CASUAL for the month of January 1-31, 2022..ADA BATCH NO:2022-9382</Particular>
+    <debit2>38104.88</debit2>
+    <debit3>5181.30</debit3>
+    <TotalSundryDebit>7138.84</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>16,967.68#=1,764.88#=1,323.63</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>5,294.58#=882.44#=661.82#=300.00</DebitAmount>
+    <credit1>30028.83</credit1>
+    <credit3>340.00</credit3>
+    <TotalSundrycredit>20056.19</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544835</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9382</ADANo>
+    <JEVno>101-22-02-06-0066</JEVno>
+    <Particular>To payment of CASUAL for the period of January 1-15, 2022..ADA BATCH NO:2022-9382</Particular>
+    <debit2>6169.00</debit2>
+    <TotalSundryDebit>2203.64</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>2,950.08#=542.88#=407.15</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>1,628.62#=271.44#=203.58#=100.00</DebitAmount>
+    <credit1>4472.53</credit1>
+    <TotalSundrycredit>3900.11</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544836</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9383</ADANo>
+    <JEVno>101-22-02-06-0067</JEVno>
+    <Particular>(5P),To payment of CONTRACT OF SERVICE for the period  of January 16-31, 2022..ADA BATCH NO:2022-9383</Particular>
+    <TotalSundryDebit>41426.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,078.10</CreditAmount>
+    <DebitAccountcode>50211990</DebitAccountcode>
+    <DebitAmount>41,426.00</DebitAmount>
+    <credit1>39105.10</credit1>
+    <credit2>1242.80</credit2>
+    <TotalSundrycredit>1078.10</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544839</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9383</ADANo>
+    <JEVno>101-22-02-06-0068</JEVno>
+    <Particular>(2P),To payment of CASUAL for the month of January 1-31, 2022..ADA BATCH NO:2022-9383</Particular>
+    <debit2>37372.02</debit2>
+    <debit3>3817.80</debit3>
+    <TotalSundryDebit>6268.51</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>11,521.84#=1,566.08#=1,174.54</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>4,698.20#=783.04#=587.27#=200.00</DebitAmount>
+    <credit1>27476.97</credit1>
+    <credit3>5718.90</credit3>
+    <TotalSundrycredit>14262.46</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544844</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0069</JEVno>
+    <Particular>To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>10032.12</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>10,032.12</DebitAmount>
+    <credit1>9272.12</credit1>
+    <credit3>660.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544845</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0070</JEVno>
+    <Particular>(12P),To payment of JOB ORDER for the period  of January 16-31, 2022..ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>57929.52</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>57,929.52</DebitAmount>
+    <credit1>57929.52</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544848</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0071</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of January 1-31, 2022..ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>11943.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>11,943.00</DebitAmount>
+    <credit1>10423.00</credit1>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544850</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0072</JEVno>
+    <Particular> (8P) to payment of JOB ORDER for the period of January 1-15, 2022..ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>31863.20</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>800.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>31,863.20</DebitAmount>
+    <credit1>26443.20</credit1>
+    <credit3>4620.00</credit3>
+    <TotalSundrycredit>800.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544856</jevID>
+    <Date_>2022-02-09T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0073</JEVno>
+    <Particular>(40P),To payment of JOB ORDER for the period  of January 16-31, 2022..ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>193953.32</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>193,953.32</DebitAmount>
+    <credit1>193953.32</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544909</jevID>
+    <Date_>2022-02-10T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0074</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of January 1-15, 2022.ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>9600.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>300.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>9,600.00</DebitAmount>
+    <credit1>7320.00</credit1>
+    <credit3>1980.00</credit3>
+    <TotalSundrycredit>300.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544913</jevID>
+    <Date_>2022-02-10T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0075</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of January 16-31, 2022.ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>13200.00</TotalSundryDebit>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>13,200.00</DebitAmount>
+    <credit1>13200.00</credit1>
+    <TotalSundrycredit>0.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>544938</jevID>
+    <Date_>2022-02-10T00:00:00+08:00</Date_>
+    <ADANo>2022-9385</ADANo>
+    <JEVno>101-22-02-06-0076</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of January 1-31, 2022.ADA BATCH NO:2022-9385</Particular>
+    <TotalSundryDebit>0.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <credit1>20371.42</credit1>
+    <credit3>1320.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table2>
+    <debit1>50101010</debit1>
+    <debit2>50101020</debit2>
+    <debit3>50102010</debit3>
+    <credit1>10102010</credit1>
+    <credit2>20201010</credit2>
+    <credit3>29999990</credit3>
+  </Table2>
+  <Table3>
+    <Accountcode>Totals Carried Forward</Accountcode>
+    <Sdebit>37127433.02</Sdebit>
+    <Scredit>18096855.16</Scredit>
+    <orderby>1</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20101010</Accountcode>
+    <Sdebit>295000.00</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201020</Accountcode>
+    <Sdebit>0.00</Sdebit>
+    <Scredit>250316.86</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201030</Accountcode>
+    <Sdebit>0.00</Sdebit>
+    <Scredit>61076.77</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201040</Accountcode>
+    <Sdebit>0.00</Sdebit>
+    <Scredit>29434.92</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103010</Accountcode>
+    <Sdebit>117739.88</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103020</Accountcode>
+    <Sdebit>19623.44</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103030</Accountcode>
+    <Sdebit>14717.51</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103040</Accountcode>
+    <Sdebit>5500.00</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50211990</Accountcode>
+    <Sdebit>265405.92</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50212990</Accountcode>
+    <Sdebit>1440587.60</Sdebit>
+    <Scredit>0.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+</NewDataSet>

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "_grid";
+}
+
+<div class="box col-md-12">
+    @(Html.Kendo().Grid<WebAOMS.Models.tbl_reff_SourceOfFund>()
+        .Name("grid_SOF")
+        .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer" })
+        .Columns(columns =>
+        {
+            columns.Bound(M => M.code).Width(100).Title("Code").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Bound(M => M.SourceName).Width(400).Title("Source fund name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+            columns.Bound(M => M.fundID).Width(100).Title("Fund code").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Template(@<text></text>)
+                   .Width(50)
+                   .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                   //.HeaderHtmlAttributes(new { style = "text-align:center; font-size:10" })
+                   .ClientTemplate("<button data-toggle =\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnewFund_details('#=fundID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+        })
+        .Pageable(p => p
+            .Input(true)
+            .Numeric(false)
+            .Refresh(false)
+        )
+        .Sortable()
+        .Selectable(selectable => selectable
+            .Mode(GridSelectionMode.Single)
+            .Type(GridSelectionType.Row)
+        )
+        .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(100).Sort(M =>
+        {
+            M.Add("SourceName").Ascending();
+        })
+        .ServerOperation(true)
+                .Model(M => { M.Id(G => G.fundID); })
+        .Read(g => g.Action("GetgridSource", "SourceOfFund")))
+    //.Events(e => e.Change("selectedsof"))
+    )
+</div>
+
+<script>
+    function addnewFund_details(id) {
+        startSpin()
+        $.get('@Url.Action("_Add_reff_SourceOfFund", "SourceOfFund")', { fundid: id }, function (r) {
+            stopSpin()
+
+            $("#h_fund_details").html("Add/Edit Source of Fund");
+
+            $("#body_fund_details").html(r)
+            $("#mdl_fund_details").modal("show");
+        });
+    }
+</script>

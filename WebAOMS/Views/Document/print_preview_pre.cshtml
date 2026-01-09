@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Print Preview";
+    Layout = "~/Views/Shared/PrintPreview_pre.cshtml";
+    ViewBag.margin = "25.4mm 25.4mm 25.4mm 25.4mm";
+}
+<style type="text/css" media="print">
+   @@page {
+        size:A4; /* auto is the initial value */
+        
+        margin:  25.4mm 25.4mm 25.4mm 25.4mm; /*this affects the margin in the printer settings*/ 
+      
+    }
+@@media screen {
+  div {
+    transform:scale(-1,1)
+  }
+}
+
+/*@@media print {
+  div.divFooter {
+    position: fixed;
+  
+  }
+    title {
+     color: transparent;
+    }
+}*/
+
+</style>
+
+<div class="" style="position:absolute;overflow:hidden;left:0px;top:0px;width:72px;height:72px;">
+    <img alt="" src="@ViewBag.CompanyLogo" style="position:absolute;width:72px;height:72px;left:0px;top:0px;">
+</div>
+<div class="" style="position:absolute;right:0;overflow:hidden;top:0px;width:100%;height:72px;background-size:100%;">
+    <img alt="" src="@ViewBag.officeLogo" style="width:auto;height:72px;top:0px;position:absolute;right:0;background-size:100%">
+</div>
+@Html.Raw(ViewBag.script)
+<div style="position:absolute;padding-top:10px; right:0;width:72px;height:72px;">
+    <img src="@ViewBag.qrcode" style="width:72px;height:72px;">
+
+    <div style="width:100%;text-align:center" >
+        <span style="font-size:7pt!important;text-align:center;margin:0 auto;width:72px">@ViewBag.refno</span>
+    </div>
+</div>
+<form id="frm_doc_pdf" >
+    <input id="id_pdfstr" type="text" hidden name="file" />
+    <input id="txt_refno_pre" name="code" type="text" hidden value="@ViewBag.refno" />
+    
+</form>
+    <script>
+        $(document).ready(function () {
+            $("#id_body").height($("#div_sheet").height() + 66);
+
+
+            //var d_canvas = document.getElementById('id_layer');
+            //var context = d_canvas.getContext('2d');
+            //context.moveTo(20, 20);
+            //context.lineTo(100, 20);
+            //context.fillStyle = "#999";
+            //context.beginPath();
+            //context.arc(100, 100, 75, 0, 2 * Math.PI);
+            //context.fill();
+            //context.fillStyle = "orange";
+            //context.fillRect(20, 20, 50, 50);
+            //context.font = "24px Helvetica";
+            //context.fillStyle = "#000";
+            //context.fillText("Canvas", 50, 130);
+
+            //$('#yourButtonId').click(function (canvas) {
+            //    html2canvas($("#id_layer"), {
+            //        onrendered: function (id_layer) {
+            //            var imgData = canvas.toDataURL(
+            //                'image/png');
+            //            var doc = new jsPDF('p', 'mm');
+            //            doc.addImage(imgData, 'PNG', 10, 10);
+            //            doc.save('sample-file.pdf');
+            //        }
+            //    });
+            //});
+
+
+            //$("#yourButtonId").click(function () {
+
+                     @*html2canvas($("#id_layer")[0]).then(function (canvas) {
+                    var imgData = canvas.toDataURL('image/png');
+                    var pdf = new jsPDF();
+                    pdf.addImage(imgData, 'PNG', 0, 0);
+
+                   // var pdfstr = pdf.output('datauristring');
+                    
+                    pdf.save("test.pdf");
+                    $.post('@Url.Action("SignViaDG", "DGSign")',
+                    {file: pdf.output('datauristring'), code: '@ViewBag.refno'}
+               , function (r) {
+
+               })*@
+                    
+
+                    
+                    @*$.ajax({
+                        url: '@Url.Action("SignViaDG", "DGSign")',
+                        type: 'POST',
+                        data: { file: "", code: '@ViewBag.refno' },
+                        success: function () {
+                            // close the modal
+                            // reload the table
+                          alert('success')
+                        }
+                    });*@
+
+
+
+                    @*$.post('@Url.Action("SignViaDG", "DGSign")',
+                    { file: pdfBase64,code:'@ViewBag.refno'}
+                , function (r) {
+                    if (r.code == 6) {
+
+
+                    }
+                    else {
+
+                    }
+                })*@
+                    @*.fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    mg.warning("" + textStatus + "")
+                    print_preview(@ViewBag.doc_details_id, @ViewBag.report_id)
+                });*@
+
+                //});
+            //});
+        })
+    </script>

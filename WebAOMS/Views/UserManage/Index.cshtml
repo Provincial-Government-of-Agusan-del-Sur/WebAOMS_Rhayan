@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+@model IEnumerable<WebAOMS.Models.AspNetUserViewModel>
+    <script>
+        function paraM() {
+            return {para:''}
+        }
+        function EditAccount() {
+
+        }
+    </script>  
+<div class="box">
+    <div class="box-head">
+        <header><h4 class="text-light"><strong> User Access Right</strong></h4></header>
+        <hr />
+    </div>
+    <div class="box-body" style="padding:20px">
+    @(Html.Kendo().Grid<WebAOMS.Models.AspNetUserViewModel>()
+        .Name("grid")
+        .ToolBar(t => t.Search())
+        .Columns(columns =>
+        {
+        columns.Bound(c => c.Id).Hidden();
+        columns.Bound(c => c.UserID).Width(70).Title("User ID");
+        columns.Bound(c => c.UserName).Width(120).Title("User Name");
+        columns.Bound(c => c.Email).Width(200).Title("Email");
+
+        columns.Bound(c => c.PhoneNumber).Width(120).Title("Phone Number");
+        columns.Bound(c => c.EmailConfirmed).Width(50).Title("Email Confirmed")
+        .ClientTemplate("<input type='checkbox' #= EmailConfirmed ? 'checked=checked' : '' # class='toggle-button' data-id='#=Id#'/>");
+        columns.Template(@<text></text>)
+        .Width(80)
+        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+        .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit account\" onclick=\"EditAccount('#=Id#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+        })
+        .HtmlAttributes(new { style = "height: 550px;" })
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            .PageSizes(true)
+            .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+             .PageSize(400)
+             .ServerOperation(false)
+            .Read(read => read.Action("GetUsers", "UserManage").Data("paraM"))
+        )
+     )
+        </div>
+    </div>
+        <script>
+    $(document).ready(function () {
+        $(document).on('change', '.toggle-button', function () {
+            var id = $(this).data('id');
+            var emailConfirmed = $(this).is(':checked');
+
+            $.ajax({
+                url: '@Url.Action("UpdateEmailConfirmed", "UserManage")',
+                type: 'POST',
+                data: {
+                    id: id,
+                    emailConfirmed: emailConfirmed
+                },
+                success: function (result) {
+                    if (result.success) {
+                        
+                        toastr.success('Email Confirmed status updated successfully', 'System Message')
+                    } else {
+                        toastr.warning('Failed to update Email Confirmed status: ' + result.message, 'System Message')
+                    }
+                },
+                error: function (xhr, status, error) {
+                    toastr.warning('Error updating Email Confirmed status: ' + error, 'System Message');
+                }
+            });
+        });
+    });
+</script>.
+
+<div id="modalsContainer">
+    <div class="modal" id="mdl_user" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg" style="min-width:1200px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 id="id_title" class="modal-title"></h4>
+                </div>
+                <div id="body_content" class="modal-body" style="height:auto!important">
+                    <!-- Content will be injected here -->
+                </div>
+                <div class="modal-footer">
+                    <!-- Optional footer content -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+           function EditAccount(id) {
+            startSpin()
+            $.post('@Url.Action("user_management", "UserManage")', { Id: id }
+            , function (r) {
+                $("#body_content").html(r)
+                $("#mdl_user").modal("show");
+                stopSpin();
+            })
+        }
+</script>

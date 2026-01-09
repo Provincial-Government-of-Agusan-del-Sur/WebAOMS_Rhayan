@@ -1,0 +1,212 @@
+﻿
+@{
+    ViewBag.Title = "Buildup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title_mini = "Status Log Buildup";
+}
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <script>
+            function para_coa (){
+                return { IS_id: $("#dp_is_name").data("kendoDropDownList").value() }
+            }
+            function r_grid() {
+                var grid = $("#grid_statusname").data("kendoGrid");
+                grid.dataSource.read();
+            }
+            function edit_logs() {
+
+            }
+        </script>
+        <div class="row" style="padding-bottom:10px">
+            <div class="col-md-6 no-padding">
+                <label for="FundType">IS Name</label>
+                @(Html.Kendo().DropDownList()
+                    .Name("dp_is_name")
+                    .DataTextField("is_name")
+                    .DataValueField("IS_id")
+                    .Filter("Contains")
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_getISName", "Tracking");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    .Events(e=> e.Change("r_grid"))
+                )
+            </div>
+
+        </div>
+        <div class="row">
+            <label for="FundType">List</label>
+            @(Html.Kendo().Grid<WebAOMS.Models.l_StatusDescription>()
+        .Name("grid_statusname")
+        .Columns(columns =>
+        {
+            columns.Bound(m => m.status_code).Width(60);
+            columns.Bound(m => m.prerequisite_id).Width(90);
+            columns.Bound(m => m.Status_name).Width(200);
+            columns.Bound(m => m.Status_Description).Width(200);
+            columns.Bound(m => m.Status_location).Width(120);
+            columns.Bound(m => m.MinutesDone).Width(60);
+            columns.Bound(m => m.orderby).Title("Order").Width(60);
+            columns.Template(@<text></text>)
+                .Width(50)
+                .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"addnew(#=status_code#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+
+        })
+        .AutoBind(false)
+        .HtmlAttributes(new { style = "height: 350px;" })
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_Statusname", "Tracking").Data("para_coa"))
+            .PageSize(200)
+        )
+)
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="btn-group" style="padding-left:10px;padding-bottom:10px">
+            <button onclick="addnew(0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
+        </div>
+    </div>
+</div>
+<div class="box box-underline">
+    <div class="box-head">
+        <header><h4 class="text-bold">How it works?</h4></header>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <h6>1.) First you nee to add Service reference to your project at seen below.</h6>
+        <pre>1.) local(recommended): <span style="text-decoration: underline;"><a href="http://192.168.2.104/wsifmis/tracking.asmx">http://192.168.2.104/wsifmis/tracking.asmx</a><br /></span>2.) internet: http://eportal.agusandelsur.gov.ph:82/wsifmis/tracking.asmx</pre>
+
+        <p class="intro">The following operations are supported. For a formal definition, please review the&nbsp;<a href="http://192.168.2.104/wsifmis/tracking.asmx?WSDL">Service Description</a>.</p>
+        <ul>
+            <li> 
+                <h2><a href="http://192.168.2.104/wsifmis/tracking.asmx?op=get_unique_refno" style="color: #3366ff;">get_unique_refno</a></h2>
+            </li>
+        </ul>
+        <p style="padding-left: 60px;"><em>parameter</em>: <strong>(IS_reffno, IS_ID, key_code,&nbsp;particular,&nbsp;amount)</strong></p>
+        <p style="padding-left: 90px;"><strong>IS_reffno:&nbsp;</strong><em>the reference number of your application ex. Travel No., payroll batchno, PO, or transaction number of the table.</em></p>
+        <p style="padding-left: 90px;"><strong>IS_ID</strong><em><strong>: </strong>Please find&nbsp;your&nbsp;<strong>IS_ID&nbsp;</strong>at track and trace module on IS name dropdown list.</em></p>
+        <p style="padding-left: 120px;"><em>ex. Accounting Operations Management System(<strong>1</strong>) (15E3)</em></p>
+        <p style="padding-left: 90px;"><strong>key_code:&nbsp;</strong><em>Please&nbsp;find your&nbsp;<strong>key_code&nbsp;</strong>at track and trace module on IS name dropdown list on the last 4 digits.</em></p>
+        <p style="padding-left: 120px;"><em>ex. Accounting Operations Management System(1) (<strong>15E3</strong>)</em></p>
+        <p style="padding-left: 90px;"><strong>particular: </strong><em>Particular ex. "Payroll for contract of service for the month of August", "Transfer of Knowledge in the Management and Maintenance of HRIS CSC Central Office, Manila Purpose: Transfer of Knowledge in the Management and Maintenance of HRIS"</em></p>
+        <p style="padding-left: 90px;"><strong>amount: </strong><em>Amount(Optionnal)</em></p>
+        <p style="padding-left: 90px;">&nbsp;</p>
+        <p style="padding-left: 60px;"><em>return (string):&nbsp;"<strong>unique_refno" </strong></em><strong>or</strong><em><strong>"invalid"</strong></em></p>
+        <p style="padding-left: 90px;"><strong>unique_refno: ex.&nbsp;<em>15194YWL7P</em></strong></p>
+        <p style="padding-left: 120px;"><em>-first 2 digit is the IS_id</em></p>
+        <p style="padding-left: 120px;"><em>-the 3rd and 4th digit are the years</em></p>
+        <p style="padding-left: 120px;"><em>-and the last 6 digits are the unique random number and character.</em></p>
+        <p style="padding-left: 90px;"><strong>invalid: </strong><em>invalid parameter</em></p>
+        <p style="padding-left: 90px;">&nbsp;</p>
+        <ul>
+            <li>
+                <h2><a href="http://192.168.2.104/wsifmis/tracking.asmx?op=get_tracking_link" style="color: #3366ff;">get_tracking_link</a></h2>
+            </li>
+        </ul>
+        <p style="padding-left: 60px;"><em>parameter</em>: <strong>unique_refno</strong></p>
+        <p style="padding-left: 60px;"><em>return (string):"<strong>invalid</strong>" or "<strong>tracking link</strong>"</em></p>
+        <p style="padding-left: 60px;"><strong>invalid</strong><em>: invalid reference no.</em></p>
+        <p style="padding-left: 60px;"><strong>tracking link</strong><em>: ex.&nbsp;<a href="http://eportal.agusandelsur.gov.ph:82/aoms/f/r?r=15194YWL7P">http://eportal.agusandelsur.gov.ph:82/aoms/f/r?r=15194YWL7P</a></em></p>
+        <p style="padding-left: 60px;">&nbsp;</p>
+        <form style="padding-left: 60px;" action="http://localhost:59401/Tracking.asmx/get_unique_refno" method="POST" target="_blank"></form>
+        <ul>
+            <li>
+                <h2><a href="http://192.168.2.104/wsifmis/tracking.asmx?op=save_status_log" style="color: #3366ff;">save_status_log</a></h2>
+            </li>
+        </ul>
+        <p style="padding-left: 60px;"><em>parameter</em>:<em>(<strong>unique_refno,status_code,remarks,userid</strong>)</em></p>
+        <p style="padding-left: 90px;"><strong>unique_refno: </strong><em>unique reference number</em></p>
+        <p style="padding-left: 90px;"><strong>status_code:&nbsp;</strong><em>generated&nbsp;code after saving the status description</em></p>
+        <p style="padding-left: 90px;"><strong>remarks: </strong><em>remarks of the transaction</em></p>
+        <p style="padding-left: 90px;"><strong>userid: </strong><em>eid of the employee</em></p>
+        <p style="padding-left: 90px;">&nbsp;</p>
+        <p style="padding-left: 60px;"><em>return(string): <strong>"invalid", "success" , "already" and status description</strong></em></p>
+        <p style="padding-left: 90px;"><strong><em>invalid: </em></strong><em>invalid parameter</em></p>
+        <p style="padding-left: 90px;"><strong><em>success:</em></strong><em> successfully save</em></p>
+        <p style="padding-left: 90px;"><strong><em>already: </em></strong><em>active status_code and status_code parameter are equal</em><strong><em>.</em></strong></p>
+        <p style="padding-left: 90px;"><strong><em>status description:</em></strong><em> if the parameter status code is not&nbsp;</em><em>equal to the active prerequisite_id</em></p>
+        <p style="padding-left: 60px;">&nbsp;</p>
+        <ul>
+            <li>                
+                <h2><a href="http://192.168.2.104/wsifmis/tracking.asmx?op=get_log_transactions" style="color: #3366ff;">get_log_transactions</a></h2>
+            </li>
+        </ul>
+        <p style="padding-left: 60px;"><em>parameter</em>:<em>(<strong>unique_refno</strong>)</em></p>
+        <p style="padding-left: 90px;"><strong>unique_refno:&nbsp;</strong><em>unique reference number</em></p>
+        <p style="padding-left: 60px;"><em>return(Dataset):&nbsp;<strong>Dataset Table[0]</strong></em></p>
+        <p style="padding-left: 90px;"><em><strong>&nbsp;column: dte(dateTime),Status_name(string),status_location(string)</strong></em></p>
+        <p style="padding-left: 90px;">&nbsp;</p>
+        <p style="padding-left: 60px;">&nbsp;</p>
+    </div>
+</div>
+
+<script>
+    var mg = new mgsInfo()
+    function addnew(id) {
+        startSpin()
+        $.post('@Url.Action("_Add", "Tracking")', { id: id }
+            , function (r) {
+                if (r.code == 5) {
+                    stopSpin()
+                    mg.warning("" + r.statusName + "", "System Message")
+                }
+                else {
+                    var header = "Add new log status";
+                    stopSpin()
+                    if (id!=0)
+                    {
+                        header = "Update log status"
+                    }
+                    $("#h_newstatus_id").html(header);
+                    $("#body_newstatus").html(r)
+                    $("#mdl_newstatus").modal("show");
+                }
+            })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_status_log()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button onclick="delete_status_details()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+

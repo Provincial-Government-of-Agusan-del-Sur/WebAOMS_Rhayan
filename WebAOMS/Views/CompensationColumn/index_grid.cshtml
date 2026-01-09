@@ -1,0 +1,55 @@
+﻿
+<div id="grid"></div>
+<script>
+    $("#grid").kendoGrid({
+        height: 400,
+        columns: [
+            {field: "Col_name"},
+            {field: "Col_description"},
+            {field: "CompensationID"},
+            {field: "Datatype"},
+            {field: "isIncome"},
+            {command: [ "edit" , "destroy"], width: 180 }
+        ],
+        toolbar: ["create"],
+        dataSource: {
+            type: "aspnetmvc-ajax", 
+            transport: {
+                read: {
+                     url: "tbl_l_Compensation_Column_Read"
+                }, 
+				create: { 
+					url: "tbl_l_Compensation_Column_Create"
+				},
+				update: { 
+					url: "tbl_l_Compensation_Column_Update"
+				},
+				destroy: { 
+					url: "tbl_l_Compensation_Column_Destroy"
+				}
+			},
+            schema: {
+                data: "Data",
+                model: {
+                    id: "Col_id",
+					fields: {
+						Col_id: { type: "number"},
+						Col_name: { type: "string"},
+						Col_description: { type: "string"},
+						CompensationID: { type: "number"},
+						Datatype: { type: "number"},
+						isIncome: { type: "number"}
+					}
+                }
+            }, 
+			serverPaging: true,
+			serverSorting: true,
+			serverSorting: true,
+        },
+        columnMenu: true,
+        editable: "inline",
+        selectable: "single row",
+        scrollable: true
+    })
+
+</script>

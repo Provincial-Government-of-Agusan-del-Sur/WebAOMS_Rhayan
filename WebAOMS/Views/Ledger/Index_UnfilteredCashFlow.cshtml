@@ -1,0 +1,388 @@
+﻿
+@{
+    ViewBag.Title = "JEV Numbering";
+    ViewBag.Title_mini = "Generate Cash Flow Entries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+        @@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}
+</style>
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+        <div class="col-md-12">
+            <input id="txt_defaultjevdate" value="January, 2019" type="text" hidden />
+            <div class="row">
+
+                <div class="box-body no-padding" style="min-width:350px!important">
+                    <div class="form-group-md">
+                        <div class="col-md-4">
+                            <div class="box-head no-padding">
+                                <h5 class="text-light">Select <strong>Date</strong></h5>
+                            </div>
+                            @(Html.Kendo().DatePicker()
+                            .Name("dtp_period")
+                            .Start(CalendarView.Year)
+                            .Depth(CalendarView.Year)
+                            .Format("MMMM, yyyy")
+                            .Value(DateTime.Now)
+                            .HtmlAttributes(new { type = "text" })
+                            .Events(ev => ev.Change("rgrid_trans_account"))
+                                )
+                            <button onclick="btn_generateCF()" class="btn btn-success"> <i class="fa fa-gear"></i> Generate</button>
+                        </div>
+
+                
+                        <script>
+                        </script>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>
+
+<div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">No Cash Flow Entries</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="box-body">
+            <div class="box">
+                <div class="box-body" style="padding-top:10px">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="input-group" style="padding-bottom:5px!important">
+                                <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search DVNO">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <script>
+                        function btn_generateCF() {
+                            startSpin()
+                            var year = kendo.toString($('#dtp_period').data('kendoDatePicker').value(), 'yyyy').toString();
+                            var month = kendo.toString($('#dtp_period').data('kendoDatePicker').value(), 'MM').toString();
+                            $.post('@Url.Action("generateCF", "Ledger")', { year: year,month:month }, function (r) {
+                                stopSpin()
+                                if (r.code == 6) {
+                                    toastr.success(r.statusName, 'System Message');
+                                    rgrid_trans_account();
+                                }
+                                else {
+                                    toastr.warning(r.statusName, 'System Message');
+                                }
+                            })
+                            //.fail(function (jqXHR, textStatus, error) {
+                            //    stopSpin()
+                                
+                            //    toastr.warning(textStatus, 'System Message');
+                            //});
+                        }
+
+
+                $('#txt_search_dvno').on('keyup', function (e) {
+                    var gridData = $("#grid_nocashflow_entry").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        if ($('#txt_search_dvno').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Dvno", $('#txt_search_dvno').val(), 'grid_nocashflow_entry')
+                            gridData.dataSource.sort({ field: "Dvno", dir: "asc" });
+                        }
+                    }
+                })
+                function rgrid_trans_account() {
+                    var gridData = $("#grid_nocashflow_entry").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+
+                function rgrid_trans_account_tb() {
+                    var gridData = $("#grid_recap_jev").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                $("#export").click(function (e) {
+                    var grid = $("#grid_nocashflow_entry").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+
+                
+
+                function view_subaccount() {
+                    startSpin()
+                    $.post('@Url.Action("view_account", "Ledger")', { }, function (r) {
+                        stopSpin()
+                        $("#body_details_subaccount").html("")
+                        $("#h_subaccount_id").html("");
+                        $("#body_details_subaccount").html(r)
+
+                        $("#modal_subaccount").modal("show");
+                    })
+                }
+                function clickclose() {
+                    $("#body_details_subaccount").html("");
+                    $("#modal_subaccount").modal("hide");
+                }
+                function para_nocashflow() {
+                    var year = kendo.toString($('#dtp_period').data('kendoDatePicker').value(), 'yyyy').toString();
+                    var month = kendo.toString($('#dtp_period').data('kendoDatePicker').value(), 'MM').toString();
+                    return {year:year,month:month}
+                }
+
+                function show_jev_numbering_byjevid(jevid) {
+                    startSpin()
+                    $.post('@Url.Action("view_jev_numbering_byjevid", "JEV")', { jevid: jevid }, function (r) {
+                        $("#jev_content").html("")
+                        stopSpin()
+                        $("#h_jev_id").html("Transaction Details")
+                        $("#jev_content").html(r)
+                        $("#mdl_jev").modal("show");
+                        //$("#id_div_cf").hide();
+                    })
+                }
+
+
+                    </script>
+                    <div class="row">
+                        @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_NoCashFlow_entry_Result>()
+                    .Name("grid_nocashflow_entry")
+                    .Columns(columns =>
+                    {
+                    columns.Bound(m => m.jevid).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.JEVno).Width(70).Title("JEV Number");
+                    columns.Bound(m => m.Dvno).Width(70);                    
+                    columns.Bound(m => m.Particular).Width(200);
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+
+                    .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single)
+                    .Type(GridSelectionType.Row))
+
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_nocashflow", "JEV").Data("para_nocashflow"))
+                        .PageSize(5000)
+                    )
+                        )
+                    </div>
+                    <script>
+                        $("#grid_nocashflow_entry").on("dblclick", "tr.k-state-selected", function (e) {
+                            var row = $(e.target).closest("tr"),
+                            grid = $("#grid_nocashflow_entry").data("kendoGrid"),
+                            dataItem = grid.dataItem(row);
+                            show_jev_numbering_byjevid(dataItem.jevid)
+                        });
+                    </script>
+                    <div class="col-md-12" style="padding-top:10px">
+                        <button onclick="print_sl()" class="btn btn-default pull-right"> <i class="fa fa-print"></i> Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Cash Flow Trial Balance</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a id="export_cf" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+   
+            <div class="box-body" style="padding-top:10px">
+                <script>
+                $('#txt_search_jevno').on('keyup', function (e) {
+                    var gridData = $("#grid_recap_jev").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                    if ($('#txt_search_jevno').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Jevno", $('#txt_search_jevno').val(), 'grid_recap_jev')
+                            gridData.dataSource.sort({ field: "JEVno", dir: "asc" });
+                        }
+                    }
+                })
+
+
+                $("#export_cf").click(function (e) {
+                    var grid = $("#grid_recap_jev").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+                </script>
+                <script>
+                    function para_transaction() {
+                        var to = $('#dtp_to').data('kendoDatePicker').value();
+                        var fundid = $("#dp_fundtype").data("kendoDropDownList").value();
+
+                        return {to: to, fundid: fundid }
+                    }
+                </script>
+                <div class="form-group-md no-padding" style="padding-bottom:10px!important"> 
+                    <div class="col-md-4">
+                        <div class="box-head no-padding">
+                            <h5 class="text-light">Select <strong>Fundtype</strong></h5>
+                        </div>
+                        @(Html.Kendo().DropDownList()
+                              .Name("dp_fundtype")
+                              .DataTextField("FundName")
+                              .DataValueField("FundID")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Getfundtype", "Journals");
+                                  });
+                              })
+                              .Events(ev => ev.Change("rgrid_trans_account_tb"))
+                              .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box-head no-padding">
+                            <h5 class="text-light"><strong>To</strong></h5>
+                        </div>
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_to")
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_trans_account_tb"))
+                        )
+                    </div>
+                    <script>
+                    </script>
+                </div>
+                <div class="row col-md-12" style="padding-top:10px!important">
+                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_RF_CashFlow_TrialBalance_Result>()
+                    .Name("grid_recap_jev")
+                    .Columns(columns =>
+                    {
+
+                        columns.Bound(m => m.Accountcode).Width(70).Title("Account Code").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }); ;
+                        columns.Bound(m => m.AccountName).Width(200).Format("{0:n2}").Title("Account Name");
+                        columns.Bound(c => c.Debit).Width(100).Title("Debit").Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:right" })
+                         .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+                        columns.Bound(c => c.Credit).Width(100).Title("Credit").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:right" })
+                         .ClientFooterTemplate("#=addCommas(sum)#");
+                    })
+                    .AutoBind(false)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_cash_flow_trial_balance", "Ledger").Data("para_transaction"))
+                        .Aggregates(aggregates =>
+                        {
+                            aggregates.Add(p => p.Debit).Sum();
+                            aggregates.Add(p => p.Credit).Sum();
+                        })
+                        .PageSize(2000)
+                    )
+                    )
+                </div>
+            </div>
+        </div>
+
+    <script>
+ 
+    </script>
+    <div class="modal" id="modal_subaccount" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <h4 id="h_subaccount_id" class="modal-title"></h4>
+                </div>
+                <div id="body_details_subaccount" class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button onclick="btn_back()" type="button" class="btn btn-success pull-left"><i class="fa fa-backward"></i> Back</button>
+                    <button onclick="clickOK()" type="button" class="btn btn-default"><i class="fa fa-check"></i>OK</button>
+                    <button type="button" class="btn btn-default" onclick="clickclose()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal" id="mdl_jev" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_jev_id" class="modal-title"></h4>
+            </div>
+            <div id="body_jev" class="modal-body" style="height:725px!important">
+                <input type="text" id="txt_dvno" hidden />
+                <div id="jev_content" class="form-group-md col-md-12 no-padding" style="padding-top:10px">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    @*sdf
+        sdf
+        sdf
+        sdf
+        sd
+        sdf
+        sdfs
+        df*@

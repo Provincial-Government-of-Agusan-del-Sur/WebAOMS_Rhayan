@@ -1,0 +1,85 @@
+﻿@{ 
+    Layout = null;
+}
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-12 no-padding" style="padding-bottom:5px">
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Search By</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                    .Name("searchfield")
+                    .DataTextField("name")
+                    .DataValueField("column")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_search_field", "JEV");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    )
+                </div>
+            </div>
+            <div class="input-group pull-right" style="padding-bottom:5px!important">
+                <input id="txt_search_trans" type="text" class="form-control navbar-input" placeholder="Search Field">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <script>
+            $('#txt_search_trans').on('keyup', function (e) {
+                var gridData = $("#grid_search_results").data("kendoGrid");
+                if (e.keyCode == 13) {
+                    gridData.dataSource.read();
+                }
+            })
+
+            function para_search() {
+                return { field: $("#searchfield").data("kendoDropDownList").text(), value: $("#txt_search_trans").val() }
+            }
+        </script>
+        <div class="row">
+           @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_search_results")
+                    .Columns(columns =>
+                    {
+                        columns.Bound("jevid").Width(30).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound("Field").Width(150);
+                    })
+                    .AutoBind(false)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single)
+                    .Type(GridSelectionType.Row))
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_search_trans_byfield", "JEV").Data("para_search"))
+                        .PageSize(200)
+                        .ServerOperation(true)
+                    )
+        )
+            <script>
+                $("#grid_search_results").on("dblclick", "tr.k-state-selected", function (e) {
+                    var row = $(e.target).closest("tr"),
+                    grid = $("#grid_search_results").data("kendoGrid"),
+                    dataItem = grid.dataItem(row);
+                    show_jev_numbering_byjevid(dataItem.jevid)
+                });
+            </script>
+        </div>
+    </div>
+</div>

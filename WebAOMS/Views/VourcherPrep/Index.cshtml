@@ -1,0 +1,255 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+        z-index: 500;
+    }
+
+    .modal-dialog-full {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content-full {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <div class="row">
+            <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                <input id="txt_search_name_refno" type="text" class="form-control navbar-input" placeholder="Search by tracking reference">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_attach_doc")
+                    .Columns(columns =>
+                    {
+                        columns.Bound("transactionType").Title("Tracking Reference").Format("{0:n2}").Width(230);
+                        columns.Template(@<text></text>)
+                        .Width(60)
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"load_dv(#=DVid#,#=report_id#,#=report_id#,'')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"print_preview(#=DVid#,#=report_id#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-print\"></i></button></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"warn_delete_doc_attach(#=DVid#,'#=transactionType#',#=report_id#)\" class=\"btn btn-xs btn-danger btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-trash\"></i></button>");
+                    })
+                    .HtmlAttributes(new { style = "height: 100%!important;" })
+                    .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("data_grid_attach_doc", "Document").Data("para_attach"))
+                    )
+            )
+            </div>
+        </div>
+    <div class="box-footer">
+        <div class="btn-group" style="padding-left:10px;padding-bottom:10px;">
+            <button onclick="addnew(0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
+        </div>
+    </div>
+    </div>
+
+        <script>
+            var mg = new mgsInfo()
+            function r_grid_attach_doc() {
+                var grid = $("#grid_attach_doc").data("kendoGrid");
+                grid.dataSource.read();
+            }
+
+            $(document).ready(function () {
+
+            })
+
+
+
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script>
+        <script>
+            function load_dv(id,document_type_id,title){
+                const documentTypeIdsToHide = [48, 49, 53, 54, 55];
+                if ($("#doc_form_id").val() > 0){
+
+                    if (documentTypeIdsToHide.includes(document_type_id)) {
+                        $("#id_dgsign").hide()
+                        $("#id_forreview").show()
+                        $("#btn_doc_configure").hide()
+                        $("#btn_proceed").hide()
+                    }
+                    else if (document_type_id==50)
+                    {
+                        $("#id_dgsign").show()
+                        $("#id_forreview").hide()
+                        $("#btn_doc_configure").hide()
+                        $("#btn_proceed").hide()
+                    }
+                    else
+                    {
+                        $("#id_dgsign").hide()
+                        $("#id_forreview").hide()
+                        $("#btn_doc_configure").hide()
+                        $("#btn_proceed").hide()
+                    }
+                    add_attachment(@ViewBag.doc_form_id,id,document_type_id,title)
+                }
+                else
+                {
+
+
+                    if (documentTypeIdsToHide.includes(document_type_id)) {
+                        $("#id_dgsign").hide()
+                        $("#id_forreview").show()
+                        $("#btn_doc_configure").hide()
+                        $("#btn_proceed").hide()
+
+
+                    }
+                    else
+                    {
+                        $("#id_dgsign").hide()
+                        $("#id_forreview").hide()
+                        $("#btn_doc_configure").hide()
+                        $("#btn_proceed").hide()
+
+                    }
+
+                    mg.warning("Please save first before you can add the document.")
+                }
+            }
+
+            function add_attachment(doc_form_id,id,document_type_id,title) {
+
+                startSpin()
+                $.post('@Url.Action("_Add_attachment", "Document")', { doc_form_id: $("#doc_form_id").val(),document_type_id:document_type_id,id:id}
+                    , function (r) {
+                        stopSpin()
+                        r_grid_attach_doc()
+                        if (r.code == 5) {
+                            mg.warning("" + r.statusName + "", "System Message")
+                        }
+                        else if (r.code==6)
+                        {
+                            mg.warning("" + r.statusName + "", "System Message")
+                        }
+                        else if (r.code==8)
+                        {
+                            window.open(r.statusName)
+                        }
+                        else
+                        {
+                            $("#mdl_newstatus").addClass("zdex");
+                            $("#body_doc_form").html("")
+                            var header = "Add new document";
+                            stopSpin()
+                            if (doc_form_id != 0) {
+                                header = "Update details"
+                            }
+
+                            if (doc_form_id ==15){
+                                $("#mdl_doc_com").html(header);
+
+                                $("#body_doc_com").html(r)
+                                $("#mdl_doc_com ").modal("show");
+                            }
+                            else
+                            {
+                                if (document_type_id==50)
+                                {
+
+                                    $("#div_doc_id").removeClass("modal-dialog");
+                                    $("#div_doc_id").removeClass("modal-lg");
+                                    $("#div_doc_id").addClass("modal-dialog-xl");
+                                }
+                                else
+                                {
+                                    $("#div_doc_id").removeClass("modal-dialog-xl");
+                                    $("#div_doc_id").addClass("modal-dialog");
+                                    $("#div_doc_id").addClass("modal-lg");
+
+                                }
+
+                                $("#h_doc_form_id").html(header);
+                                $("#body_doc_form").html(r)
+                                $("#mdl_doc_form").modal("show");
+                            }
+                        }
+
+                    })
+
+                //.fail(function (jqXHR, textStatus, error) {
+                //    stopSpin()
+                //    mg.warning("" + textStatus + "")
+                //});
+            }
+
+
+            function print_preview(id,document_type_id) {
+                //$("#mdl_doc_form").addClass("zdex");
+                startSpin()
+                $.post('@Url.Action("_print_priview", "Document")', { doc_form_id: @ViewBag.doc_form_id,document_type_id:document_type_id,id:id,refno:'@ViewBag.refno'}
+                    , function (r) {
+                        stopSpin()
+                    })
+                //.fail(function (jqXHR, textStatus, error) {
+                //    stopSpin()
+                //    mg.warning("" + textStatus + "")
+                //});
+            }
+
+            function warn_delete_doc_attach(doc_details_id,attachname,report_id){
+                $(".modal").addClass("zdex");
+                mg.bsyesNoWithRemarks("Are you sure you want to delete this attachment <b>"+attachname+"?</b>", "delete_doc_attach("+doc_details_id+","+report_id+")")
+            }
+
+            function delete_doc_attach(doc_details_id,report_id) {
+                startSpin()
+                remarks = $("#txt_remarks").val()
+                $.post('@Url.Action("delete_doc_details", "Document")',
+                    {doc_details_id:doc_details_id,remark:remarks,report_id:report_id}
+                , function (r) {
+                    if (r.code == 6) {
+                        toastr.success(r.statusName, 'System Message')
+                        stopSpin()
+                        r_grid_attach_doc();
+                        $('#modal_delete').modal('hide');
+                    }
+                    else {
+                        stopSpin()
+                        toastr.warning(r.statusName, 'System Message');
+                    }
+                    zdex()
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    zdex()
+                    toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
+                });
+            }
+
+            function close_mdl_configure_logo(){
+                $("#body_configure_logo").html("")
+                $("#mdl_configure_logo").modal("hide");
+            }
+        </script>
+

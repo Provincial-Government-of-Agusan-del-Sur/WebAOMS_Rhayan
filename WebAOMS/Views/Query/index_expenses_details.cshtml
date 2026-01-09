@@ -1,0 +1,101 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+    .zdex {
+        z-index: 500;
+    }
+
+    .modal-dialog-full {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content-full {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+</style>
+<script>
+    function summary_para_details() {
+
+        return { year: @ViewBag.year,childcode:'@ViewBag.childcode',rcenterid:@ViewBag.rcenterid,accountname:'@ViewBag.accountname' }
+    }
+</script>
+<div class="box">
+    <div class="box-body" style="padding-top:10px;">
+        <div class="row">
+           @(Html.Kendo().Grid<WebAOMS.Models.ufn_expenses_byyear_details_Result>()
+                .Name("grid_expenses_details")
+                .Excel(excel => excel
+                .FileName("Expenses-" + System.DateTime.Today.ToString("MM-dd-yyyy") + ".xlsx")
+                .Filterable(true)
+                )
+                .Columns(columns =>
+                {
+                    columns.Bound(m => m.JEVno).Title("JEV No.").Width(150).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                    columns.Bound(m => m.Name).Title("Claimant Name").Width(200).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.Particular).Title("Particular").Width(300).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound(m => m.Amount).Title("Amount").Width(120).Format("{0:N2}").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").FooterHtmlAttributes(new { style = "text-align:right" }).HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                })
+                //.Groupable(g => g.ShowFooter(true))
+                .AutoBind(true)
+
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                .Mode(GridSelectionMode.Single)
+                .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("_expenses_details_byoffice", "Query").Data("summary_para_details"))
+                    .PageSize(10000)
+                    .Aggregates(
+                aggregates =>
+                {
+                    aggregates.Add(a => a.Amount).Sum();
+                  
+                }
+                 )
+                )
+                .Resizable(resize => resize.Columns(true))
+
+        )
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function removezindex() {
+        $("#mdl_newstatus").removeClass("zdex");
+    }
+</script>
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_dv()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
+                <button id="btn_delete" onclick="warn_delete_oblig_transaction()"data-dismiss="modal" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

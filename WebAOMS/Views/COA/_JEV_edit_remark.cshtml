@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                @*<li class="breadcrumb-item"><a href="#" onclick="clicksubAccount(@ViewBag.ChartAccountChildID)">@ViewBag.AccountChildName</a><input id="@ViewBag.ChartAccountChildID"hidden type="text"/></li>*@
+                <li id="li_title" class="breadcrumb-item"></li>
+
+            </ul>
+        </nav>
+        <div class="row"> 
+            <form id="frm_coa" class="form-horizontal" style="padding-top:10px" role="form">
+
+                <div class="col-md-12 padding10">
+                    <label for="exampleFormControlTextarea5">Remarks</label>
+                    @*<div  class="pull-right">
+                <a href="#" onclick="addRemark()" style="color:darkseagreen"><b>Edit</b></a>
+            </div>*@
+
+                    <textarea class="form-control" name="remark" id="txt_remark" rows="11">@ViewBag.Remarks</textarea>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
+<script>
+
+    function btn_save_remarks(isApprove) {
+        startSpin()
+        $.post('@Url.Action("SaveRemarks", "COA")',
+            { jevid: $("#txt_jevid").val(), remark: $("#txt_remark").val(), isApprove: isApprove }
+        , function (r) {
+            if (r.code == 6) {
+               
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                $("#mdl_jev_addremarks").modal("hide");
+                rgrid_trans_account()
+            }
+            else {
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>

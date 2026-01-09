@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Supporting Document Collection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Supporting Document Lookup</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <div class="row">
+            <div class="byexym liZmnb">
+                @(Html.Kendo().Grid<WebAOMS.Models.tbl_Attachment>()
+                        .Name("Grid_Attachment")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(p => p.attach_name).Title("Attachment Name").Width(120);
+                            columns.Bound(p => p.attach_description).Title("Description").Width(120);
+                            columns.Bound(p => p.IsPrerequisite).Title("Prerequisite").Width(120);
+                            columns.Bound(p => p.orderby).Title("Order").Width(120);
+                            
+                            columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
+                        })
+                        .ToolBar(toolbar => toolbar.Create())
+                        .Editable(editable => editable.Mode(GridEditMode.InLine).ConfirmDelete("Continue to delete this record?").DisplayDeleteConfirmation("Continue to delete this record?"))
+                        .Pageable()
+                        .Sortable()
+                        .Scrollable()
+                        .HtmlAttributes(new { style = "height:500px;" })
+                        .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .PageSize(20)
+                        //.Events(events => events.Error("error_handler"))
+                        .Model(model => model.Id(p => p.attach_id))
+                        .Create(update => update.Action("AttachmentEditingInline_Create", "PayrollDocCollection"))
+                        .Read(read => read.Action("AttachmentEditingInline_Read", "PayrollDocCollection"))
+                        .Update(update => update.Action("AttachmentEditingInline_Create", "PayrollDocCollection"))
+                        .Destroy(update => update.Action("AttachmentEditingInline_Destroy", "PayrollDocCollection"))
+                    ))
+                
+            </div>
+        </div>
+
+    </div>
+</div>

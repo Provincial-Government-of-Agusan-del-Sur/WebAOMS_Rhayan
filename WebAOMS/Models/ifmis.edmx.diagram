@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4b7ee26a6f684ec59d23628140ed72ca" Name="Diagram1">
+        <EntityTypeShape EntityType="IFMISModel.tbl_B_ProjectEstimatedCost" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_Budget_ObligationPreparation" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_Project" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_Project_mechanism" Width="1.5" PointX="5.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_Project_programType" Width="1.5" PointX="7.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_ProjectCostType" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_SignatoryType" Width="1.5" PointX="8.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_SourceOfFund" Width="1.5" PointX="1.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_TransactionType" Width="1.5" PointX="3.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_Fund" Width="1.5" PointX="3.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IFMISModel.tbl_reff_motherCOA" Width="1.5" PointX="5.75" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_B_ProjectEstimatedCost_tbl_reff_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_B_ProjectEstimatedCost_tbl_reff_ProjectCostType" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_B_ProjectEstimatedCost_tbl_reff_SourceOfFund" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_Budget_ObligationPreparation_tbl_reff_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_Budget_ObligationPreparation_tbl_reff_ProjectCostType" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_Budget_ObligationPreparation_tbl_reff_TransactionType" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_reff_Project_tbl_reff_SourceOfFund" ManuallyRouted="false" />
+        <AssociationConnector Association="IFMISModel.FK_tbl_reff_ProjectCostType_tbl_reff_ProjectCostType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="IFMISModel.vw_projectEstimatedCost" Width="3.25" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="IFMISModel.vw_ProjectRecapDetails" Width="1.5" PointX="10.375" PointY="9.75" />
+        <EntityTypeShape EntityType="IFMISModel.vw_Project_grid" Width="1.5" PointX="11.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

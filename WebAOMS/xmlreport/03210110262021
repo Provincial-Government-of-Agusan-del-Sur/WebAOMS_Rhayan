@@ -1,0 +1,1347 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CatName" type="xs:string" minOccurs="0" />
+                <xs:element name="OOEName" type="xs:string" minOccurs="0" />
+                <xs:element name="OfficeName" type="xs:string" minOccurs="0" />
+                <xs:element name="originalAmount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DiffOriginalFinal" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DiffFinalUtilize" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CatNameOrder" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OOEName" type="xs:string" minOccurs="0" />
+                <xs:element name="originalAmount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DiffOriginalFinal" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="DiffFinalUtilize" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>STATEMENT OF COMPARISON OF BUDGET AND ACTUAL AMOUNTS</T1>
+    <fundtype>GENERAL FUND</fundtype>
+    <dateString>For the period ended October, 2021</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Education Development Services</OfficeName>
+    <originalAmount>2363155.00</originalAmount>
+    <Appropropriation>2363155.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>989915.08</Utilization>
+    <DiffFinalUtilize>1373239.92</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Moral Recovery and Values Formation Services</OfficeName>
+    <originalAmount>6513107.00</originalAmount>
+    <Appropropriation>5848639.00</Appropropriation>
+    <DiffOriginalFinal>-664468.00</DiffOriginalFinal>
+    <Utilization>3495865.58</Utilization>
+    <DiffFinalUtilize>2352773.42</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the  Provincial General Services</OfficeName>
+    <originalAmount>21724441.00</originalAmount>
+    <Appropropriation>20214711.00</Appropropriation>
+    <DiffOriginalFinal>-1509730.00</DiffOriginalFinal>
+    <Utilization>12152648.54</Utilization>
+    <DiffFinalUtilize>8062062.46</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Accountant</OfficeName>
+    <originalAmount>15678459.00</originalAmount>
+    <Appropropriation>14815861.00</Appropropriation>
+    <DiffOriginalFinal>-862598.00</DiffOriginalFinal>
+    <Utilization>9636662.18</Utilization>
+    <DiffFinalUtilize>5179198.82</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Administrator</OfficeName>
+    <originalAmount>14120094.00</originalAmount>
+    <Appropropriation>12195118.00</Appropropriation>
+    <DiffOriginalFinal>-1924976.00</DiffOriginalFinal>
+    <Utilization>6851641.19</Utilization>
+    <DiffFinalUtilize>5343476.81</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Assessor</OfficeName>
+    <originalAmount>17373953.00</originalAmount>
+    <Appropropriation>16982610.00</Appropropriation>
+    <DiffOriginalFinal>-391343.00</DiffOriginalFinal>
+    <Utilization>11292178.67</Utilization>
+    <DiffFinalUtilize>5690431.33</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Budget</OfficeName>
+    <originalAmount>11486000.00</originalAmount>
+    <Appropropriation>11218796.00</Appropropriation>
+    <DiffOriginalFinal>-267204.00</DiffOriginalFinal>
+    <Utilization>7570270.12</Utilization>
+    <DiffFinalUtilize>3648525.88</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Governor</OfficeName>
+    <originalAmount>69585749.00</originalAmount>
+    <Appropropriation>89694733.98</Appropropriation>
+    <DiffOriginalFinal>20108984.98</DiffOriginalFinal>
+    <Utilization>72205387.49</Utilization>
+    <DiffFinalUtilize>17489346.49</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Human Resource Management</OfficeName>
+    <originalAmount>18202290.00</originalAmount>
+    <Appropropriation>17010431.00</Appropropriation>
+    <DiffOriginalFinal>-1191859.00</DiffOriginalFinal>
+    <Utilization>10751624.86</Utilization>
+    <DiffFinalUtilize>6258806.14</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Internal Audit</OfficeName>
+    <originalAmount>8620695.00</originalAmount>
+    <Appropropriation>7664814.00</Appropropriation>
+    <DiffOriginalFinal>-955881.00</DiffOriginalFinal>
+    <Utilization>4636258.89</Utilization>
+    <DiffFinalUtilize>3028555.11</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Legal</OfficeName>
+    <originalAmount>4343839.00</originalAmount>
+    <Appropropriation>4018678.00</Appropropriation>
+    <DiffOriginalFinal>-325161.00</DiffOriginalFinal>
+    <Utilization>2717362.86</Utilization>
+    <DiffFinalUtilize>1301315.14</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Planning and Development Coordinator</OfficeName>
+    <originalAmount>21747399.00</originalAmount>
+    <Appropropriation>20986760.00</Appropropriation>
+    <DiffOriginalFinal>-760639.00</DiffOriginalFinal>
+    <Utilization>14112520.52</Utilization>
+    <DiffFinalUtilize>6874239.48</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Treasurer</OfficeName>
+    <originalAmount>18527815.00</originalAmount>
+    <Appropropriation>17842218.00</Appropropriation>
+    <DiffOriginalFinal>-685597.00</DiffOriginalFinal>
+    <Utilization>10516205.03</Utilization>
+    <DiffFinalUtilize>7326012.97</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Sangguniang Panlalawigan</OfficeName>
+    <originalAmount>40598468.00</originalAmount>
+    <Appropropriation>41883469.00</Appropropriation>
+    <DiffOriginalFinal>1285001.00</DiffOriginalFinal>
+    <Utilization>28211046.17</Utilization>
+    <DiffFinalUtilize>13672422.83</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Vice-Governor</OfficeName>
+    <originalAmount>8998997.00</originalAmount>
+    <Appropropriation>8998997.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>5822782.72</Utilization>
+    <DiffFinalUtilize>3176214.28</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Correctional and Security Management Office </OfficeName>
+    <originalAmount>29614044.00</originalAmount>
+    <Appropropriation>29279922.00</Appropropriation>
+    <DiffOriginalFinal>-334122.00</DiffOriginalFinal>
+    <Utilization>17737576.72</Utilization>
+    <DiffFinalUtilize>11542345.28</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Disaster Risk Reduction Management Office</OfficeName>
+    <originalAmount>12315269.00</originalAmount>
+    <Appropropriation>12315269.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>7272498.16</Utilization>
+    <DiffFinalUtilize>5042770.84</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Information Management Office</OfficeName>
+    <originalAmount>14943597.00</originalAmount>
+    <Appropropriation>13891860.00</Appropropriation>
+    <DiffOriginalFinal>-1051737.00</DiffOriginalFinal>
+    <Utilization>8897570.39</Utilization>
+    <DiffFinalUtilize>4994289.61</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Public Information Office</OfficeName>
+    <originalAmount>15240143.00</originalAmount>
+    <Appropropriation>14006008.00</Appropropriation>
+    <DiffOriginalFinal>-1234135.00</DiffOriginalFinal>
+    <Utilization>8509925.16</Utilization>
+    <DiffFinalUtilize>5496082.84</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>PROVINCIAL SECRETARY OFFICE</OfficeName>
+    <originalAmount>17739417.00</originalAmount>
+    <Appropropriation>17098613.00</Appropropriation>
+    <DiffOriginalFinal>-640804.00</DiffOriginalFinal>
+    <Utilization>9028550.10</Utilization>
+    <DiffFinalUtilize>8070062.90</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Public Employment Services Office</OfficeName>
+    <originalAmount>3851627.00</originalAmount>
+    <Appropropriation>3673641.00</Appropropriation>
+    <DiffOriginalFinal>-177986.00</DiffOriginalFinal>
+    <Utilization>2427346.56</Utilization>
+    <DiffFinalUtilize>1246294.44</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Sports and Youth Development Services</OfficeName>
+    <originalAmount>2919165.00</originalAmount>
+    <Appropropriation>2919165.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>2047259.16</Utilization>
+    <DiffFinalUtilize>871905.84</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>SUBSTANCE USE RECOVERY  AND ENLIGHTENMENT PROGRAM</OfficeName>
+    <originalAmount>7382647.00</originalAmount>
+    <Appropropriation>6245802.00</Appropropriation>
+    <DiffOriginalFinal>-1136845.00</DiffOriginalFinal>
+    <Utilization>3555568.40</Utilization>
+    <DiffFinalUtilize>2690233.60</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Education Development Services</OfficeName>
+    <originalAmount>25483623.00</originalAmount>
+    <Appropropriation>24844166.50</Appropropriation>
+    <DiffOriginalFinal>-639456.50</DiffOriginalFinal>
+    <Utilization>10294385.03</Utilization>
+    <DiffFinalUtilize>14549781.47</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Moral Recovery and Values Formation Services</OfficeName>
+    <originalAmount>4015000.00</originalAmount>
+    <Appropropriation>3092368.00</Appropropriation>
+    <DiffOriginalFinal>-922632.00</DiffOriginalFinal>
+    <Utilization>1492727.00</Utilization>
+    <DiffFinalUtilize>1599641.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the  Provincial General Services</OfficeName>
+    <originalAmount>27661866.00</originalAmount>
+    <Appropropriation>36126523.32</Appropropriation>
+    <DiffOriginalFinal>8464657.32</DiffOriginalFinal>
+    <Utilization>17581239.94</Utilization>
+    <DiffFinalUtilize>18545283.38</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Accountant</OfficeName>
+    <originalAmount>3346709.00</originalAmount>
+    <Appropropriation>3009209.00</Appropropriation>
+    <DiffOriginalFinal>-337500.00</DiffOriginalFinal>
+    <Utilization>1393763.37</Utilization>
+    <DiffFinalUtilize>1615445.63</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Administrator</OfficeName>
+    <originalAmount>2410260.00</originalAmount>
+    <Appropropriation>1616128.50</Appropropriation>
+    <DiffOriginalFinal>-794131.50</DiffOriginalFinal>
+    <Utilization>410892.62</Utilization>
+    <DiffFinalUtilize>1205235.88</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Assessor</OfficeName>
+    <originalAmount>5350000.00</originalAmount>
+    <Appropropriation>4772879.50</Appropropriation>
+    <DiffOriginalFinal>-577120.50</DiffOriginalFinal>
+    <Utilization>2844766.29</Utilization>
+    <DiffFinalUtilize>1928113.21</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Budget</OfficeName>
+    <originalAmount>1747355.50</originalAmount>
+    <Appropropriation>1279855.50</Appropropriation>
+    <DiffOriginalFinal>-467500.00</DiffOriginalFinal>
+    <Utilization>378560.94</Utilization>
+    <DiffFinalUtilize>901294.56</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Governor</OfficeName>
+    <originalAmount>531237610.50</originalAmount>
+    <Appropropriation>557476066.65</Appropropriation>
+    <DiffOriginalFinal>26238456.15</DiffOriginalFinal>
+    <Utilization>242837832.28</Utilization>
+    <DiffFinalUtilize>314638234.37</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Human Resource Management</OfficeName>
+    <originalAmount>7891000.00</originalAmount>
+    <Appropropriation>6685760.00</Appropropriation>
+    <DiffOriginalFinal>-1205240.00</DiffOriginalFinal>
+    <Utilization>1412462.83</Utilization>
+    <DiffFinalUtilize>5273297.17</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Internal Audit</OfficeName>
+    <originalAmount>807587.00</originalAmount>
+    <Appropropriation>715047.96</Appropropriation>
+    <DiffOriginalFinal>-92539.04</DiffOriginalFinal>
+    <Utilization>338036.40</Utilization>
+    <DiffFinalUtilize>377011.56</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Legal</OfficeName>
+    <originalAmount>2486288.00</originalAmount>
+    <Appropropriation>2849500.00</Appropropriation>
+    <DiffOriginalFinal>363212.00</DiffOriginalFinal>
+    <Utilization>911656.88</Utilization>
+    <DiffFinalUtilize>1937843.12</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Planning and Development Coordinator</OfficeName>
+    <originalAmount>47709486.00</originalAmount>
+    <Appropropriation>50139486.00</Appropropriation>
+    <DiffOriginalFinal>2430000.00</DiffOriginalFinal>
+    <Utilization>4901333.09</Utilization>
+    <DiffFinalUtilize>45238152.91</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Treasurer</OfficeName>
+    <originalAmount>3000000.00</originalAmount>
+    <Appropropriation>2635200.00</Appropropriation>
+    <DiffOriginalFinal>-364800.00</DiffOriginalFinal>
+    <Utilization>1030624.69</Utilization>
+    <DiffFinalUtilize>1604575.31</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Sangguniang Panlalawigan</OfficeName>
+    <originalAmount>34807070.88</originalAmount>
+    <Appropropriation>26604467.44</Appropropriation>
+    <DiffOriginalFinal>-8202603.44</DiffOriginalFinal>
+    <Utilization>13946401.94</Utilization>
+    <DiffFinalUtilize>12658065.50</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Vice-Governor</OfficeName>
+    <originalAmount>7348403.67</originalAmount>
+    <Appropropriation>7207796.33</Appropropriation>
+    <DiffOriginalFinal>-140607.34</DiffOriginalFinal>
+    <Utilization>4385744.24</Utilization>
+    <DiffFinalUtilize>2822052.09</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Correctional and Security Management Office </OfficeName>
+    <originalAmount>3514243.00</originalAmount>
+    <Appropropriation>3611743.00</Appropropriation>
+    <DiffOriginalFinal>97500.00</DiffOriginalFinal>
+    <Utilization>1339012.49</Utilization>
+    <DiffFinalUtilize>2272730.51</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Disaster Risk Reduction Management Office</OfficeName>
+    <originalAmount>5400000.00</originalAmount>
+    <Appropropriation>5328191.50</Appropropriation>
+    <DiffOriginalFinal>-71808.50</DiffOriginalFinal>
+    <Utilization>2053364.78</Utilization>
+    <DiffFinalUtilize>3274826.72</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Information Management Office</OfficeName>
+    <originalAmount>11650000.00</originalAmount>
+    <Appropropriation>11388398.00</Appropropriation>
+    <DiffOriginalFinal>-261602.00</DiffOriginalFinal>
+    <Utilization>4397077.37</Utilization>
+    <DiffFinalUtilize>6991320.63</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Public Information Office</OfficeName>
+    <originalAmount>9837730.00</originalAmount>
+    <Appropropriation>9529730.00</Appropropriation>
+    <DiffOriginalFinal>-308000.00</DiffOriginalFinal>
+    <Utilization>4060766.69</Utilization>
+    <DiffFinalUtilize>5468963.31</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>PROVINCIAL SECRETARY OFFICE</OfficeName>
+    <originalAmount>1100000.00</originalAmount>
+    <Appropropriation>1059000.00</Appropropriation>
+    <DiffOriginalFinal>-41000.00</DiffOriginalFinal>
+    <Utilization>344338.10</Utilization>
+    <DiffFinalUtilize>714661.90</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Public Employment Services Office</OfficeName>
+    <originalAmount>11118117.00</originalAmount>
+    <Appropropriation>11051617.00</Appropropriation>
+    <DiffOriginalFinal>-66500.00</DiffOriginalFinal>
+    <Utilization>3509675.59</Utilization>
+    <DiffFinalUtilize>7541941.41</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Sports and Youth Development Services</OfficeName>
+    <originalAmount>1740229.00</originalAmount>
+    <Appropropriation>553412.30</Appropropriation>
+    <DiffOriginalFinal>-1186816.70</DiffOriginalFinal>
+    <Utilization>39260.00</Utilization>
+    <DiffFinalUtilize>514152.30</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>SUBSTANCE USE RECOVERY  AND ENLIGHTENMENT PROGRAM</OfficeName>
+    <originalAmount>6500000.00</originalAmount>
+    <Appropropriation>6407500.00</Appropropriation>
+    <DiffOriginalFinal>-92500.00</DiffOriginalFinal>
+    <Utilization>2125311.04</Utilization>
+    <DiffFinalUtilize>4282188.96</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Education Development Services</OfficeName>
+    <originalAmount>67000.00</originalAmount>
+    <Appropropriation>303000.00</Appropropriation>
+    <DiffOriginalFinal>236000.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>303000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Moral Recovery and Values Formation Services</OfficeName>
+    <originalAmount>295000.00</originalAmount>
+    <Appropropriation>295000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>295000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the  Provincial General Services</OfficeName>
+    <originalAmount>8260000.00</originalAmount>
+    <Appropropriation>11760000.00</Appropropriation>
+    <DiffOriginalFinal>3500000.00</DiffOriginalFinal>
+    <Utilization>5709225.00</Utilization>
+    <DiffFinalUtilize>6050775.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Accountant</OfficeName>
+    <originalAmount>90000.00</originalAmount>
+    <Appropropriation>90000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>90000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Administrator</OfficeName>
+    <originalAmount>110000.00</originalAmount>
+    <Appropropriation>110000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>110000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Assessor</OfficeName>
+    <originalAmount>50000.00</originalAmount>
+    <Appropropriation>50000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>50000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Governor</OfficeName>
+    <originalAmount>555414000.00</originalAmount>
+    <Appropropriation>601046841.00</Appropropriation>
+    <DiffOriginalFinal>45632841.00</DiffOriginalFinal>
+    <Utilization>119811076.45</Utilization>
+    <DiffFinalUtilize>481235764.55</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Human Resource Management</OfficeName>
+    <originalAmount>80000.00</originalAmount>
+    <Appropropriation>667000.00</Appropropriation>
+    <DiffOriginalFinal>587000.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>667000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Internal Audit</OfficeName>
+    <originalAmount>130000.00</originalAmount>
+    <Appropropriation>117340.00</Appropropriation>
+    <DiffOriginalFinal>-12660.00</DiffOriginalFinal>
+    <Utilization>117340.00</Utilization>
+    <DiffFinalUtilize>0.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Legal</OfficeName>
+    <originalAmount>200000.00</originalAmount>
+    <Appropropriation>200000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>200000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Planning and Development Coordinator</OfficeName>
+    <originalAmount>272500.00</originalAmount>
+    <Appropropriation>272500.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>272500.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Sangguniang Panlalawigan</OfficeName>
+    <originalAmount>2096000.00</originalAmount>
+    <Appropropriation>3016700.00</Appropropriation>
+    <DiffOriginalFinal>920700.00</DiffOriginalFinal>
+    <Utilization>92988.00</Utilization>
+    <DiffFinalUtilize>2923712.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Correctional and Security Management Office </OfficeName>
+    <originalAmount>256000.00</originalAmount>
+    <Appropropriation>866200.00</Appropropriation>
+    <DiffOriginalFinal>610200.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>866200.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Disaster Risk Reduction Management Office</OfficeName>
+    <originalAmount>391530.00</originalAmount>
+    <Appropropriation>391530.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>391530.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Information Management Office</OfficeName>
+    <originalAmount>11350000.00</originalAmount>
+    <Appropropriation>11976750.00</Appropropriation>
+    <DiffOriginalFinal>626750.00</DiffOriginalFinal>
+    <Utilization>571360.00</Utilization>
+    <DiffFinalUtilize>11405390.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Public Information Office</OfficeName>
+    <originalAmount>6906800.00</originalAmount>
+    <Appropropriation>6906800.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>6906800.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Public Employment Services Office</OfficeName>
+    <originalAmount>128357.00</originalAmount>
+    <Appropropriation>128357.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>128357.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Sports and Youth Development Services</OfficeName>
+    <originalAmount>110000.00</originalAmount>
+    <Appropropriation>110000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>110000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>GENERAL PUBLIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>SUBSTANCE USE RECOVERY  AND ENLIGHTENMENT PROGRAM</OfficeName>
+    <originalAmount>3000000.00</originalAmount>
+    <Appropropriation>3000000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>3000000.00</DiffFinalUtilize>
+    <CatNameOrder>1</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <originalAmount>38747832.82</originalAmount>
+    <Appropropriation>38747832.82</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>22684932.82</Utilization>
+    <DiffFinalUtilize>16062900.00</DiffFinalUtilize>
+    <CatNameOrder>2</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>EDUCATION SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Special Education Fund</OfficeName>
+    <originalAmount>8786337.18</originalAmount>
+    <Appropropriation>8786337.18</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>2276837.18</Utilization>
+    <DiffFinalUtilize>6509500.00</DiffFinalUtilize>
+    <CatNameOrder>2</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Bunawan District Hospital</OfficeName>
+    <originalAmount>70016383.00</originalAmount>
+    <Appropropriation>71977131.00</Appropropriation>
+    <DiffOriginalFinal>1960748.00</DiffOriginalFinal>
+    <Utilization>48080384.46</Utilization>
+    <DiffFinalUtilize>23896746.54</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>DOP Memorial Hospital</OfficeName>
+    <originalAmount>179814299.00</originalAmount>
+    <Appropropriation>184513736.94</Appropropriation>
+    <DiffOriginalFinal>4699437.94</DiffOriginalFinal>
+    <Utilization>117818123.08</Utilization>
+    <DiffFinalUtilize>66695613.86</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Esperanza Medicare Community Hospital</OfficeName>
+    <originalAmount>23825570.00</originalAmount>
+    <Appropropriation>23907942.00</Appropropriation>
+    <DiffOriginalFinal>82372.00</DiffOriginalFinal>
+    <Utilization>13347219.38</Utilization>
+    <DiffFinalUtilize>10560722.62</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Loreto District Hospital</OfficeName>
+    <originalAmount>23347691.00</originalAmount>
+    <Appropropriation>22868976.00</Appropropriation>
+    <DiffOriginalFinal>-478715.00</DiffOriginalFinal>
+    <Utilization>15766588.06</Utilization>
+    <DiffFinalUtilize>7102387.94</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the  Provincial Health</OfficeName>
+    <originalAmount>32103805.00</originalAmount>
+    <Appropropriation>32647016.00</Appropropriation>
+    <DiffOriginalFinal>543211.00</DiffOriginalFinal>
+    <Utilization>16627508.02</Utilization>
+    <DiffFinalUtilize>16019507.98</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Talacogon District Hospital</OfficeName>
+    <originalAmount>45552403.00</originalAmount>
+    <Appropropriation>46798867.00</Appropropriation>
+    <DiffOriginalFinal>1246464.00</DiffOriginalFinal>
+    <Utilization>29795211.46</Utilization>
+    <DiffFinalUtilize>17003655.54</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Bunawan District Hospital</OfficeName>
+    <originalAmount>32792000.00</originalAmount>
+    <Appropropriation>34449637.98</Appropropriation>
+    <DiffOriginalFinal>1657637.98</DiffOriginalFinal>
+    <Utilization>14469109.31</Utilization>
+    <DiffFinalUtilize>19980528.67</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>DOP Memorial Hospital</OfficeName>
+    <originalAmount>82522300.00</originalAmount>
+    <Appropropriation>113557604.30</Appropropriation>
+    <DiffOriginalFinal>31035304.30</DiffOriginalFinal>
+    <Utilization>39767591.46</Utilization>
+    <DiffFinalUtilize>73790012.84</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Esperanza Medicare Community Hospital</OfficeName>
+    <originalAmount>12950000.00</originalAmount>
+    <Appropropriation>15405463.00</Appropropriation>
+    <DiffOriginalFinal>2455463.00</DiffOriginalFinal>
+    <Utilization>5168985.33</Utilization>
+    <DiffFinalUtilize>10236477.67</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Loreto District Hospital</OfficeName>
+    <originalAmount>12354063.00</originalAmount>
+    <Appropropriation>13241877.00</Appropropriation>
+    <DiffOriginalFinal>887814.00</DiffOriginalFinal>
+    <Utilization>4630858.49</Utilization>
+    <DiffFinalUtilize>8611018.51</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the  Provincial Health</OfficeName>
+    <originalAmount>47980083.00</originalAmount>
+    <Appropropriation>71300473.94</Appropropriation>
+    <DiffOriginalFinal>23320390.94</DiffOriginalFinal>
+    <Utilization>17171237.97</Utilization>
+    <DiffFinalUtilize>54129235.97</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Talacogon District Hospital</OfficeName>
+    <originalAmount>29300000.00</originalAmount>
+    <Appropropriation>33803016.00</Appropropriation>
+    <DiffOriginalFinal>4503016.00</DiffOriginalFinal>
+    <Utilization>10755510.77</Utilization>
+    <DiffFinalUtilize>23047505.23</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Bunawan District Hospital</OfficeName>
+    <originalAmount>5441000.00</originalAmount>
+    <Appropropriation>12111000.00</Appropropriation>
+    <DiffOriginalFinal>6670000.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>12111000.00</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>DOP Memorial Hospital</OfficeName>
+    <originalAmount>10000000.00</originalAmount>
+    <Appropropriation>15920350.00</Appropropriation>
+    <DiffOriginalFinal>5920350.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>15920350.00</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Esperanza Medicare Community Hospital</OfficeName>
+    <originalAmount>195000.00</originalAmount>
+    <Appropropriation>319100.00</Appropropriation>
+    <DiffOriginalFinal>124100.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>319100.00</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Loreto District Hospital</OfficeName>
+    <originalAmount>300000.00</originalAmount>
+    <Appropropriation>300000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>300000.00</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the  Provincial Health</OfficeName>
+    <originalAmount>3390940.00</originalAmount>
+    <Appropropriation>7363099.00</Appropropriation>
+    <DiffOriginalFinal>3972159.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>7363099.00</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>HEALTH, NUTRITION AND POPULATION CONTROL</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Talacogon District Hospital</OfficeName>
+    <originalAmount>0.00</originalAmount>
+    <Appropropriation>2678000.00</Appropropriation>
+    <DiffOriginalFinal>2678000.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>2678000.00</DiffFinalUtilize>
+    <CatNameOrder>3</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>SOCIAL SERVICES AND SOCIAL WELFARE</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the  Provincial Social Welfare and Development</OfficeName>
+    <originalAmount>17467218.00</originalAmount>
+    <Appropropriation>17058861.00</Appropropriation>
+    <DiffOriginalFinal>-408357.00</DiffOriginalFinal>
+    <Utilization>8946921.37</Utilization>
+    <DiffFinalUtilize>8111939.63</DiffFinalUtilize>
+    <CatNameOrder>4</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>SOCIAL SERVICES AND SOCIAL WELFARE</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the  Provincial Social Welfare and Development</OfficeName>
+    <originalAmount>38017710.45</originalAmount>
+    <Appropropriation>42719506.45</Appropropriation>
+    <DiffOriginalFinal>4701796.00</DiffOriginalFinal>
+    <Utilization>22249106.19</Utilization>
+    <DiffFinalUtilize>20470400.26</DiffFinalUtilize>
+    <CatNameOrder>4</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>SOCIAL SERVICES AND SOCIAL WELFARE</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the  Provincial Social Welfare and Development</OfficeName>
+    <originalAmount>12591700.00</originalAmount>
+    <Appropropriation>20091700.00</Appropropriation>
+    <DiffOriginalFinal>7500000.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>20091700.00</DiffFinalUtilize>
+    <CatNameOrder>4</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Agricultural Resource Center</OfficeName>
+    <originalAmount>1244489.00</originalAmount>
+    <Appropropriation>1244489.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>573433.92</Utilization>
+    <DiffFinalUtilize>671055.08</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the  Provincial Environment and Natural Resources</OfficeName>
+    <originalAmount>18225512.00</originalAmount>
+    <Appropropriation>17898205.00</Appropropriation>
+    <DiffOriginalFinal>-327307.00</DiffOriginalFinal>
+    <Utilization>12327358.41</Utilization>
+    <DiffFinalUtilize>5570846.59</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Agriculturist</OfficeName>
+    <originalAmount>30746751.00</originalAmount>
+    <Appropropriation>25421886.80</Appropropriation>
+    <DiffOriginalFinal>-5324864.20</DiffOriginalFinal>
+    <Utilization>14032395.62</Utilization>
+    <DiffFinalUtilize>11389491.18</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Engineer</OfficeName>
+    <originalAmount>59698798.00</originalAmount>
+    <Appropropriation>57404934.40</Appropropriation>
+    <DiffOriginalFinal>-2293863.60</DiffOriginalFinal>
+    <Utilization>38670101.76</Utilization>
+    <DiffFinalUtilize>18734832.64</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Office of the Provincial Veterinarian</OfficeName>
+    <originalAmount>10946515.00</originalAmount>
+    <Appropropriation>10234572.00</Appropropriation>
+    <DiffOriginalFinal>-711943.00</DiffOriginalFinal>
+    <Utilization>5931880.45</Utilization>
+    <DiffFinalUtilize>4302691.55</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Patin-ay Waterworks System</OfficeName>
+    <originalAmount>6135534.00</originalAmount>
+    <Appropropriation>6135534.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>1453789.94</Utilization>
+    <DiffFinalUtilize>4681744.06</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Economic and Enterprise Development Office (Services)</OfficeName>
+    <originalAmount>12790908.00</originalAmount>
+    <Appropropriation>11856987.00</Appropropriation>
+    <DiffOriginalFinal>-933921.00</DiffOriginalFinal>
+    <Utilization>6698837.20</Utilization>
+    <DiffFinalUtilize>5158149.80</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Learning Center</OfficeName>
+    <originalAmount>7378804.00</originalAmount>
+    <Appropropriation>7378804.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>2923060.41</Utilization>
+    <DiffFinalUtilize>4455743.59</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Personal Services</OOEName>
+    <OfficeName>Provincial Tourism Office</OfficeName>
+    <originalAmount>8079944.00</originalAmount>
+    <Appropropriation>6672769.00</Appropropriation>
+    <DiffOriginalFinal>-1407175.00</DiffOriginalFinal>
+    <Utilization>3474848.00</Utilization>
+    <DiffFinalUtilize>3197921.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Agricultural Resource Center</OfficeName>
+    <originalAmount>2918511.00</originalAmount>
+    <Appropropriation>2918511.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>1074443.78</Utilization>
+    <DiffFinalUtilize>1844067.22</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the  Provincial Environment and Natural Resources</OfficeName>
+    <originalAmount>2752361.00</originalAmount>
+    <Appropropriation>5018997.05</Appropropriation>
+    <DiffOriginalFinal>2266636.05</DiffOriginalFinal>
+    <Utilization>895054.50</Utilization>
+    <DiffFinalUtilize>4123942.55</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Agriculturist</OfficeName>
+    <originalAmount>15161314.00</originalAmount>
+    <Appropropriation>14985060.18</Appropropriation>
+    <DiffOriginalFinal>-176253.82</DiffOriginalFinal>
+    <Utilization>3807689.33</Utilization>
+    <DiffFinalUtilize>11177370.85</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Engineer</OfficeName>
+    <originalAmount>14289633.00</originalAmount>
+    <Appropropriation>13092373.00</Appropropriation>
+    <DiffOriginalFinal>-1197260.00</DiffOriginalFinal>
+    <Utilization>2262740.49</Utilization>
+    <DiffFinalUtilize>10829632.51</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Office of the Provincial Veterinarian</OfficeName>
+    <originalAmount>14550000.00</originalAmount>
+    <Appropropriation>14252750.00</Appropropriation>
+    <DiffOriginalFinal>-297250.00</DiffOriginalFinal>
+    <Utilization>2613308.66</Utilization>
+    <DiffFinalUtilize>11639441.34</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Patin-ay Waterworks System</OfficeName>
+    <originalAmount>5044466.00</originalAmount>
+    <Appropropriation>5779827.94</Appropropriation>
+    <DiffOriginalFinal>735361.94</DiffOriginalFinal>
+    <Utilization>3234208.59</Utilization>
+    <DiffFinalUtilize>2545619.35</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Economic and Enterprise Development Office (Services)</OfficeName>
+    <originalAmount>8419805.00</originalAmount>
+    <Appropropriation>14667929.73</Appropropriation>
+    <DiffOriginalFinal>6248124.73</DiffOriginalFinal>
+    <Utilization>3470190.61</Utilization>
+    <DiffFinalUtilize>11197739.12</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Learning Center</OfficeName>
+    <originalAmount>38622196.00</originalAmount>
+    <Appropropriation>38622196.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>3223771.58</Utilization>
+    <DiffFinalUtilize>35398424.42</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <OfficeName>Provincial Tourism Office</OfficeName>
+    <originalAmount>6286032.00</originalAmount>
+    <Appropropriation>6409226.00</Appropropriation>
+    <DiffOriginalFinal>123194.00</DiffOriginalFinal>
+    <Utilization>3989197.49</Utilization>
+    <DiffFinalUtilize>2420028.51</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the  Provincial Environment and Natural Resources</OfficeName>
+    <originalAmount>2310288.00</originalAmount>
+    <Appropropriation>2310288.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>2310288.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Agriculturist</OfficeName>
+    <originalAmount>1149500.00</originalAmount>
+    <Appropropriation>4879500.00</Appropropriation>
+    <DiffOriginalFinal>3730000.00</DiffOriginalFinal>
+    <Utilization>27298.00</Utilization>
+    <DiffFinalUtilize>4852202.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Engineer</OfficeName>
+    <originalAmount>23189633.00</originalAmount>
+    <Appropropriation>123008670.00</Appropropriation>
+    <DiffOriginalFinal>99819037.00</DiffOriginalFinal>
+    <Utilization>5081187.18</Utilization>
+    <DiffFinalUtilize>117927482.82</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Office of the Provincial Veterinarian</OfficeName>
+    <originalAmount>748458.00</originalAmount>
+    <Appropropriation>1263458.00</Appropropriation>
+    <DiffOriginalFinal>515000.00</DiffOriginalFinal>
+    <Utilization>141360.00</Utilization>
+    <DiffFinalUtilize>1122098.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Patin-ay Waterworks System</OfficeName>
+    <originalAmount>2070000.00</originalAmount>
+    <Appropropriation>2070000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>2070000.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Economic and Enterprise Development Office (Services)</OfficeName>
+    <originalAmount>132000.00</originalAmount>
+    <Appropropriation>132000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>132000.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Learning Center</OfficeName>
+    <originalAmount>4000000.00</originalAmount>
+    <Appropropriation>4000000.00</Appropropriation>
+    <DiffOriginalFinal>0.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>4000000.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table1>
+    <CatName>ECONOMIC SERVICES</CatName>
+    <OOEName>Capital Outlay</OOEName>
+    <OfficeName>Provincial Tourism Office</OfficeName>
+    <originalAmount>68500.00</originalAmount>
+    <Appropropriation>2418500.00</Appropropriation>
+    <DiffOriginalFinal>2350000.00</DiffOriginalFinal>
+    <Utilization>0.00</Utilization>
+    <DiffFinalUtilize>2418500.00</DiffFinalUtilize>
+    <CatNameOrder>5</CatNameOrder>
+  </Table1>
+  <Table2>
+    <OOEName>Personal Services</OOEName>
+    <originalAmount>931264994.00</originalAmount>
+    <Appropropriation>935189982.12</Appropropriation>
+    <DiffOriginalFinal>3924988.12</DiffOriginalFinal>
+    <Utilization>596906326.09</Utilization>
+    <DiffFinalUtilize>338283656.03</DiffFinalUtilize>
+  </Table2>
+  <Table2>
+    <OOEName>Maintenance and Other Operating Expenses</OOEName>
+    <originalAmount>1158870885.82</originalAmount>
+    <Appropropriation>1256956328.89</Appropropriation>
+    <DiffOriginalFinal>98085443.07</DiffOriginalFinal>
+    <Utilization>483497170.97</Utilization>
+    <DiffFinalUtilize>773459157.92</DiffFinalUtilize>
+  </Table2>
+  <Table2>
+    <OOEName>Capital Outlay</OOEName>
+    <originalAmount>663580543.18</originalAmount>
+    <Appropropriation>848960020.18</Appropropriation>
+    <DiffOriginalFinal>185379477.00</DiffOriginalFinal>
+    <Utilization>133828671.81</Utilization>
+    <DiffFinalUtilize>715131348.37</DiffFinalUtilize>
+  </Table2>
+</NewDataSet>

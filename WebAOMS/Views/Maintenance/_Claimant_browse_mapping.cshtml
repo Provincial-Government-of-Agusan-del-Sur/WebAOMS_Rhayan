@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Claimant";
+    Layout = null;
+}
+
+
+<div class="box" style="width:100%;margin-bottom:0px!important">
+    <div class="box-body">
+        
+                <script>
+                                $(function () {
+                                    $('input[name="claimantypeOption"]').bind('change', function () {
+                                        $("#claimantypeOptionID").val($(this).val())
+                                        if ($(this).val() == 2) {
+                                            $("#btn_add_claimant").show();
+                                        }
+                                        else {
+                                            $("#btn_add_claimant").hide()
+                                        }
+                                        //var categories = $("#grid_claimant").data("kendoGrid");
+                                        //categories.dataSource.read();
+                                        refreshGrid()
+                                    });
+
+                                });
+
+
+                                function refreshGrid_claimant() {
+                                    var gridData = $("#grid_claimant_mapping").data("kendoGrid");
+                                    gridData.dataSource.read();
+                                }
+
+                        function close_add_claimant() {
+                            $("#mdl_add_claimant").modal("hide");
+                        }
+
+
+                </script>
+            <div class="col-lg-12" style="padding-bottom:5px">
+              
+                <div class="row">
+                    @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_claimant>()
+                    .Name("grid_claimant_mapping")
+                    .Columns(columns =>
+                    {
+                    //columns.Bound("ID").Width(60).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Select().Width(75).HtmlAttributes(new { @class = "checkbox-align" }).HeaderHtmlAttributes(new { @class = "checkbox-align" });
+                    columns.Bound(m => m.Name).Width(250);
+                    columns.Bound(m => m.Address).Width(350);
+                   
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                        .Selectable(m => m
+                        .Mode(GridSelectionMode.Multiple)
+                        .Type(GridSelectionType.Row))
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_claimant_byClaimantType_server_search", "Maintenance").Data("grid_para_claimant"))
+                        .PageSize(500)
+                        .ServerOperation(true)
+                        .Model(model => model.Id(p => p.ID))
+                        .Sort(sort => sort.Add("Name").Ascending())
+                    //.Sort(s => s.Add("ChartAccountChildID").Descending())
+                    )
+                    .Events(ev => ev.Change("onChange"))
+                    )
+                  
+                </div>
+
+                @*<button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>*@
+            </div>
+        </div>
+    </div>
+<script>
+
+
+    function click_search_claimant() {
+        if ($('#txt_search_name').val().length > 0) {
+            ISfn.applyFilter("Name", $('#txt_search_name').val(), 'grid_claimant')
+            //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+        }
+        else {
+            gridData.dataSource.filter({});
+        }
+    }
+    function select_claimant() {
+        //var ddl_claimant = $('#dp_claimant').data('kendoComboBox')
+        //if (ddl_claimant.selectedIndex == -1) {
+        //    toastr.warning("Invalid Claimant", 'System Message');
+        //    return;
+        //}
+
+        var grid = $('#grid_claimant').data('kendoGrid');
+        var selectedItem = grid.dataItem(grid.select());
+
+        $("#txt_claimant_id").val(selectedItem.ID)
+        $("#txt_claimant").val(selectedItem.Name)
+        close_browse_claimant()
+    }
+
+</script>

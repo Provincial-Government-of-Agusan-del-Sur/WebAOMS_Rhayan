@@ -1,0 +1,274 @@
+﻿@model IEnumerable<WebAOMS.Models.tbl_l_Transaction_type>
+@{
+    ViewBag.Title = "Transaction Types";
+}
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Transaction type buildup</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group">
+                <button type="button" class="btn btn-equal btn-sm btn-refresh" aria-label="Refresh">
+                    <i class="fa fa-refresh"></i>
+                </button>
+                <button type="button" class="btn btn-equal btn-sm btn-collapse" aria-label="Collapse">
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <button type="button" class="btn btn-equal btn-sm btn-close" aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+
+        @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_Transaction_type>()
+            .Name("TransactionTypesGrid")
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.TransactionName).Title("Transaction Name").Width(300);
+                columns.Bound(p => p.isActive).Title("Is Active").Width(80);
+                columns.Command(command =>
+                {
+                    command.Custom("CheckList").Click("showCheckList").Text("CheckList");
+                     command.Custom("ExpenseDetails").Click("showExpenseDetails").Text("Expense Details");
+                    command.Edit();
+                    command.Destroy();
+                }).Width(300); // Added custom buttons for CheckList and Expense Details
+            })
+            .ToolBar(toolbar => toolbar.Create().Text("Add New Transaction Type"))
+            .Editable(editable => editable.Mode(GridEditMode.InLine).CreateAt(GridInsertRowPosition.Bottom))
+            .Sortable()
+            .Scrollable()
+            .HtmlAttributes(new { style = "height:400px;" })
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Model(model => model.Id(p => p.Transtype_id))
+                .Read(read => read.Action("Read", "TransactionTypes"))
+                .Create(create => create.Action("Create", "TransactionTypes"))
+                .Update(update => update.Action("Update", "TransactionTypes"))
+                .Destroy(destroy => destroy.Action("Delete", "TransactionTypes"))
+                .Events(events => events.Error("onError")) // Handle errors with a JavaScript function
+            )
+        )
+    </div>
+
+</div>
+
+<!-- Bootstrap Modal for CheckList and ExpenseDetails -->
+<div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsModalLabel">Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" id="detailsTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="checklist-tab" data-toggle="tab" href="#checklist" role="tab" aria-controls="checklist" aria-selected="true">CheckList</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="expense-details-tab" data-toggle="tab" href="#expense-details" role="tab" aria-controls="expense-details" aria-selected="false">Expense Details</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="detailsTabContent">
+                    <div class="tab-pane active" id="checklist" role="tabpanel" aria-labelledby="checklist-tab">
+                        <div class="col-md-12" style="padding-top:10px">
+                            @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_Transaction_CheckList>()
+                            .Name("CheckListGrid")
+                            .Columns(columns =>
+                            {
+                                columns.Bound(p => p.CheckListName).Title("CheckList Name").Width(300);
+                                columns.Bound(p => p.isActive).Title("Is Active").Width(70);
+                                columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
+                            })
+                            .ToolBar(toolbar => toolbar.Create().Text("Add New CheckList"))
+                            .Editable(editable => editable.Mode(GridEditMode.InLine).CreateAt(GridInsertRowPosition.Bottom))
+                            .Pageable()
+                            .Sortable()
+                            .Scrollable()
+                            .HtmlAttributes(new { style = "height:400px;" })
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .Model(model =>
+                                {
+                                    model.Id(c => c.checklist_id);
+                                    model.Field(c => c.Transtype_id).DefaultValue(0); // Default value set, will be updated dynamically
+                                })
+                                .Read(read => read.Action("ReadCheckList", "TransactionTypes", new { transtypeId = 0 })) // Placeholder for transtypeId
+                                .Create(create => create.Action("CreateCheckList", "TransactionTypes").Data("getCheckListData"))
+                                .Update(update => update.Action("UpdateCheckList", "TransactionTypes").Data("getCheckListData"))
+                                .Destroy(destroy => destroy.Action("DeleteCheckList", "TransactionTypes"))
+                            )
+
+                            )
+                        </div>
+                       
+                    </div>
+                    <script>
+
+                        function getExpenseDetailsData() {
+                            return {
+
+                                transtypeId: selectedTranstypeId
+                            };
+                        }
+                    </script>
+                    <div class="tab-pane" id="expense-details" role="tabpanel" aria-labelledby="expense-details-tab">
+                        <div class="col-md-12" style="padding-top:10px">
+                            @(Html.Kendo().Grid<WebAOMS.Models.tbl_l_Transaction_ExpenseDetails>()
+                            .Name("ExpenseDetailsGrid")
+                            .Columns(columns =>
+                            {
+                                columns.Bound("AccountCode").Title("Account Code").Width(70);
+                                columns.Bound(p => p.ChartAccountID).Title("Chart Account").EditorTemplateName("ChartAccountEditor").Width(300).ClientTemplate("#=AccountName#"); // Use a custom editor template for dropdown
+                                columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
+                            })
+                            .ToolBar(toolbar => toolbar.Create().Text("Add New Expense"))
+                            .Editable(editable => editable.Mode(GridEditMode.InLine).CreateAt(GridInsertRowPosition.Bottom))
+                            .Pageable()
+                            .Sortable()
+                            .Scrollable()
+                            .HtmlAttributes(new { style = "height:400px;" })
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .Model(model =>
+                            {
+                                model.Id(c => c.expenseDetails_id);
+                                model.Field(c => c.ChartAccountID).DefaultValue(0);
+                                model.Field(c => c.Transtype_id); // Default value set, will be updated dynamically
+                                model.Field(c => c.AccountCode).Editable(false);
+                            })
+                            .Read(read => read.Action("ReadExpenseDetails", "TransactionTypes", new { transtypeId = 0 })) // Placeholder for transtypeId
+                            .Create(create => create.Action("CreateExpenseDetails", "TransactionTypes").Data("getExpenseDetailsData"))
+                            .Update(update => update.Action("UpdateExpenseDetails", "TransactionTypes").Data("getExpenseDetailsData"))
+                            .Destroy(destroy => destroy.Action("DeleteExpenseDetails", "TransactionTypes"))
+                            .Events(events => events.RequestEnd("onRequestEnd")) // Hook into the request end event to refresh the grid
+                            )
+                            )
+                            </div>
+                        </div>
+                    <script>
+                        // Event handler for refreshing the grid after any create, update, or delete operation
+                        function onRequestEnd(e) {
+                            if (e.type === "create" || e.type === "update" || e.type === "destroy") {
+                                // Refresh the grid after successful CRUD operation
+                                $("#ExpenseDetailsGrid").data("kendoGrid").dataSource.read();
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Kendo Notification for error messages -->
+<div id="notification"></div>
+
+<style>
+    .box-head {
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .box-body {
+        padding-top: 10px;
+    }
+
+    .btn-group .btn {
+        margin-right: 5px;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $("#notification").kendoNotification({
+            autoHideAfter: 3000,
+            position: {
+                top: 20,
+                right: 20
+            },
+            stacking: "down",
+            templates: [{
+                type: "error",
+                template: "<div class='notification-error'><i class='fa fa-exclamation-triangle'></i> #: message #</div>"
+            }]
+        });
+    });
+
+    var selectedTranstypeId = 0;
+
+    function showCheckList(e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        selectedTranstypeId = dataItem.Transtype_id;
+        var checklistGrid = $("#CheckListGrid").data("kendoGrid");
+
+        checklistGrid.dataSource.transport.options.read.url = "@Url.Action("ReadCheckList", "TransactionTypes")" + "?transtypeId=" + selectedTranstypeId;
+        checklistGrid.dataSource.read();
+
+        $("#detailsModal").modal("show");
+        $('#detailsTab a[href="#checklist"]').tab('show');
+    }
+
+    function showExpenseDetails(e) {
+        e.preventDefault();
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        selectedTranstypeId = dataItem.Transtype_id;
+        var expenseDetailsGrid = $("#ExpenseDetailsGrid").data("kendoGrid");
+
+        expenseDetailsGrid.dataSource.transport.options.read.url = "@Url.Action("ReadExpenseDetails", "TransactionTypes")" + "?transtypeId=" + selectedTranstypeId;
+        expenseDetailsGrid.dataSource.read();
+
+        $("#detailsModal").modal("show");
+        $('#detailsTab a[href="#expense-details"]').tab('show');
+    }
+
+    function getCheckListData() {
+        return {
+            transtypeId: selectedTranstypeId
+        };
+    }
+
+
+
+    function onError(e) {
+        if (e.errors) {
+            var message = "";
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    message += value.errors.join("<br>");
+                }
+            });
+            $("#notification").data("kendoNotification").show(message, "error");
+        }
+    }
+
+    document.querySelectorAll('.btn-refresh').forEach(button => {
+        button.addEventListener('click', () => {
+            $("#TransactionTypesGrid").data("kendoGrid").dataSource.read();
+        });
+    });
+
+    document.querySelectorAll('.btn-collapse').forEach(button => {
+        button.addEventListener('click', () => {
+            const boxBody = button.closest('.box').querySelector('.box-body');
+            boxBody.classList.toggle('d-none');
+            button.querySelector('i').classList.toggle('fa-angle-down');
+            button.querySelector('i').classList.toggle('fa-angle-up');
+        });
+    });
+
+    document.querySelectorAll('.btn-close').forEach(button => {
+        button.addEventListener('click', () => {
+            button.closest('.box').remove();
+        });
+    });
+</script>

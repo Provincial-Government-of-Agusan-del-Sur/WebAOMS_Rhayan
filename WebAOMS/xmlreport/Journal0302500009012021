@@ -1,0 +1,1502 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="_x0031_0305020" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_x0031_06" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_x0031_0305010" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="Dbt" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Crdt" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Claimantname" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="dvno" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>CASH DISBURSEMENT JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of September, 2021</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevid>481708</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0001</JEVNo>
+    <_x0031_06>13000.0000</_x0031_06>
+    <_x0031_0305010>13000.0000</_x0031_0305010>
+    <Particular>(10P), payment of office supplies (cellcard) for the month of September, 2021 
+</Particular>
+    <Dbt>13000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>(10P), payment of office supplies (cellcard) for the month of September, 2021 
+</Claimantname>
+    <Obrno>101-1041-21-09-0237</Obrno>
+    <dvno>101-21-09-0212</dvno>
+    <jvno>101-21-09-03-0001</jvno>
+    <Gamount>13000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481709</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0002</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (2P)
+</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (2P)
+</Claimantname>
+    <Obrno>101-1011-21-09-0195</Obrno>
+    <dvno>101-21-09-0222</dvno>
+    <jvno>101-21-09-03-0002</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481710</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0003</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (2P)</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (2P)</Claimantname>
+    <Obrno>101-1011-21-09-0208</Obrno>
+    <dvno>101-21-09-0234</dvno>
+    <jvno>101-21-09-03-0003</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481711</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0004</JEVNo>
+    <_x0031_06>6500.0000</_x0031_06>
+    <_x0031_0305010>6500.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (5P)
+</Particular>
+    <Dbt>6500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (5P)
+</Claimantname>
+    <Obrno>101-1123-21-09-0234</Obrno>
+    <dvno>101-21-09-0237</dvno>
+    <jvno>101-21-09-03-0004</jvno>
+    <Gamount>6500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481712</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0005</JEVNo>
+    <_x0031_06>7000.0000</_x0031_06>
+    <_x0031_0305010>7000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (6P)
+</Particular>
+    <Dbt>7000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (6P)
+</Claimantname>
+    <Obrno>101-1032-21-09-0197</Obrno>
+    <dvno>101-21-09-0242</dvno>
+    <jvno>101-21-09-03-0005</jvno>
+    <Gamount>7000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481713</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0006</JEVNo>
+    <_x0031_06>2000.0000</_x0031_06>
+    <_x0031_0305010>2000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (3P)
+</Particular>
+    <Dbt>2000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (3P)
+</Claimantname>
+    <Obrno>101-1011-21-09-0201</Obrno>
+    <dvno>101-21-09-0243</dvno>
+    <jvno>101-21-09-03-0006</jvno>
+    <Gamount>2000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481715</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0007</JEVNo>
+    <_x0031_06>10000.0000</_x0031_06>
+    <_x0031_0305010>10000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (8P)
+</Particular>
+    <Dbt>10000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (8P)
+</Claimantname>
+    <Obrno>101-1101-21-09-0199</Obrno>
+    <dvno>101-21-09-0244</dvno>
+    <jvno>101-21-09-03-0007</jvno>
+    <Gamount>10000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481716</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0008</JEVNo>
+    <_x0031_06>9500.0000</_x0031_06>
+    <_x0031_0305010>9500.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (8P)
+</Particular>
+    <Dbt>9500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (8P)
+</Claimantname>
+    <Obrno>101-1091-21-09-0198</Obrno>
+    <dvno>101-21-09-0245</dvno>
+    <jvno>101-21-09-03-0008</jvno>
+    <Gamount>9500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481717</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-133-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0009</JEVNo>
+    <_x0031_06>5000.0000</_x0031_06>
+    <_x0031_0305010>5000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (4P)
+</Particular>
+    <Dbt>5000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (4P)
+</Claimantname>
+    <Obrno>101-1012-21-09-0196</Obrno>
+    <dvno>101-21-09-0246</dvno>
+    <jvno>101-21-09-03-0009</jvno>
+    <Gamount>5000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481718</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-134-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0010</JEVNo>
+    <_x0031_0305020>51333.0000</_x0031_0305020>
+    <_x0031_06>51333.0000</_x0031_06>
+    <Particular> payt of salary for the month of September, 2021</Particular>
+    <Dbt>51333.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname> payt of salary for the month of September, 2021</Claimantname>
+    <Obrno>101-1021-21-09-0203</Obrno>
+    <dvno>101-21-09-0196</dvno>
+    <jvno>101-21-09-03-0010</jvno>
+    <Gamount>51333.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481720</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-134-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0011</JEVNo>
+    <_x0031_0305020>2000.0000</_x0031_0305020>
+    <_x0031_06>2000.0000</_x0031_06>
+    <Particular>CHILD SUPPORT REMITTANCE FOR THE MOTH OF AUGUST, 2021</Particular>
+    <Dbt>2000.0000</Dbt>
+    <Accountcode>29999990-5-8-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>CHILD SUPPORT REMITTANCE FOR THE MOTH OF AUGUST, 2021</Claimantname>
+    <Obrno>NA-10</Obrno>
+    <dvno>101-21-09-0210</dvno>
+    <jvno>101-21-09-03-0011</jvno>
+    <Gamount>2000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481722</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-135-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0012</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>EDGAR O. GA et. al, payt of office supplies (cellcard) for the month of September, 2021 (2P)</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>EDGAR O. GA et. al, payt of office supplies (cellcard) for the month of September, 2021 (2P)</Claimantname>
+    <Obrno>101-1011-21-09-0200</Obrno>
+    <dvno>101-21-09-0254</dvno>
+    <jvno>101-21-09-03-0012</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481723</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-135-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0013</JEVNo>
+    <_x0031_06>6500.0000</_x0031_06>
+    <_x0031_0305010>6500.0000</_x0031_0305010>
+    <Particular>RONULFO R. PALER et. al, payt of office supplies (cellcard) for the month of September, 2021 (4P)
+</Particular>
+    <Dbt>6500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>RONULFO R. PALER et. al, payt of office supplies (cellcard) for the month of September, 2021 (4P)
+</Claimantname>
+    <Obrno>101-1031-21-09-0279</Obrno>
+    <dvno>101-21-09-0255</dvno>
+    <jvno>101-21-09-03-0013</jvno>
+    <Gamount>6500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481724</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-135-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0014</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (5P)
+</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (5P)
+</Claimantname>
+    <Obrno>101-8721-21-09-0235</Obrno>
+    <dvno>101-21-09-0259</dvno>
+    <jvno>101-21-09-03-0014</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481725</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-135-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0015</JEVNo>
+    <_x0031_06>9000.0000</_x0031_06>
+    <_x0031_0305010>9000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (8P)
+</Particular>
+    <Dbt>9000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (8P)
+</Claimantname>
+    <Obrno>101-8731-21-09-0286</Obrno>
+    <dvno>101-21-09-0285</dvno>
+    <jvno>101-21-09-03-0015</jvno>
+    <Gamount>9000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481726</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-136-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0016</JEVNo>
+    <_x0031_0305020>23500.0000</_x0031_0305020>
+    <_x0031_06>23500.0000</_x0031_06>
+    <Particular>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021 (2P)						
+</Particular>
+    <Dbt>16000.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021 (2P)						
+</Claimantname>
+    <Obrno>101-1091-21-09-0210</Obrno>
+    <dvno>101-21-09-0252</dvno>
+    <jvno>101-21-09-03-0016</jvno>
+    <Gamount>23500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481726</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021 (2P)						
+</Claimantname>
+    <Obrno>101-1091-21-09-0210</Obrno>
+    <dvno>101-21-09-0252</dvno>
+    <jvno>101-21-09-03-0016</jvno>
+    <Gamount>23500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481727</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-137-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0017</JEVNo>
+    <_x0031_06>5500.0000</_x0031_06>
+    <_x0031_0305010>5500.0000</_x0031_0305010>
+    <Particular>(4P) payment of office supplies (Cellcard) for the month of September, 2021.</Particular>
+    <Dbt>5500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>(4P) payment of office supplies (Cellcard) for the month of September, 2021.</Claimantname>
+    <Obrno>101-9993-21-09-0310</Obrno>
+    <dvno>101-21-09-0268</dvno>
+    <jvno>101-21-09-03-0017</jvno>
+    <Gamount>5500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481728</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-137-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0018</JEVNo>
+    <_x0031_06>7000.0000</_x0031_06>
+    <_x0031_0305010>7000.0000</_x0031_0305010>
+    <Particular>payt of office supplies (cellcard) for the month of September, 2021 (6P)
+</Particular>
+    <Dbt>7000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of office supplies (cellcard) for the month of September, 2021 (6P)
+</Claimantname>
+    <Obrno>101-1011-21-09-0280</Obrno>
+    <dvno>101-21-09-0271</dvno>
+    <jvno>101-21-09-03-0018</jvno>
+    <Gamount>7000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481730</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-137-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0019</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular> (5P) payment of office supplies (cellcard) for the month of September, 2021.</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname> (5P) payment of office supplies (cellcard) for the month of September, 2021.</Claimantname>
+    <Obrno>101-1071-21-09-0313</Obrno>
+    <dvno>101-21-09-0294</dvno>
+    <jvno>101-21-09-03-0019</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481731</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-137-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0020</JEVNo>
+    <_x0031_06>10500.0000</_x0031_06>
+    <_x0031_0305010>10500.0000</_x0031_0305010>
+    <Particular>(8P), payment of office supplies (cellcard) for the month of September, 2021.</Particular>
+    <Dbt>10500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-06T00:00:00+08:00</Jevdate>
+    <Claimantname>(8P), payment of office supplies (cellcard) for the month of September, 2021.</Claimantname>
+    <Obrno>101-8751-21-09-0323</Obrno>
+    <dvno>101-21-09-0299</dvno>
+    <jvno>101-21-09-03-0020</jvno>
+    <Gamount>10500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481732</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-138-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0021</JEVNo>
+    <_x0031_0305020>15000.0000</_x0031_0305020>
+    <_x0031_06>15000.0000</_x0031_06>
+    <Particular>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Claimantname>
+    <Obrno>101-1101-21-09-0214</Obrno>
+    <dvno>101-21-09-0253</dvno>
+    <jvno>101-21-09-03-0021</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481732</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Claimantname>
+    <Obrno>101-1101-21-09-0214</Obrno>
+    <dvno>101-21-09-0253</dvno>
+    <jvno>101-21-09-03-0021</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481733</jevid>
+    <Date_>09/07/2021</Date_>
+    <Rdono>EDC-RD-138-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0022</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Claimantname>
+    <Obrno>101-1101-21-09-0212</Obrno>
+    <dvno>101-21-09-0266</dvno>
+    <jvno>101-21-09-03-0022</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481733</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Claimantname>
+    <Obrno>101-1101-21-09-0212</Obrno>
+    <dvno>101-21-09-0266</dvno>
+    <jvno>101-21-09-03-0022</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481734</jevid>
+    <Date_>09/08/2021</Date_>
+    <Rdono>EDC-RD-139-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0023</JEVNo>
+    <_x0031_06>7500.0000</_x0031_06>
+    <_x0031_0305010>7500.0000</_x0031_0305010>
+    <Particular>(7P) payment of office supplies (cellcard) for the month of September, 2021.</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>(7P) payment of office supplies (cellcard) for the month of September, 2021.</Claimantname>
+    <Obrno>101-1121-21-09-0373</Obrno>
+    <dvno>101-21-09-0348</dvno>
+    <jvno>101-21-09-03-0023</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481735</jevid>
+    <Date_>09/08/2021</Date_>
+    <Rdono>EDC-RD-140-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0024</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Claimantname>
+    <Obrno>101-1123-21-09-0194</Obrno>
+    <dvno>101-21-09-0221</dvno>
+    <jvno>101-21-09-03-0024</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481735</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of Representation and Transportation Allowance (RATA) for the month of September, 2021						
+</Claimantname>
+    <Obrno>101-1123-21-09-0194</Obrno>
+    <dvno>101-21-09-0221</dvno>
+    <jvno>101-21-09-03-0024</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481736</jevid>
+    <Date_>09/08/2021</Date_>
+    <Rdono>EDC-RD-140-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0025</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular> payment of Representation Allowance (RA) for the month of September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of Representation Allowance (RA) for the month of September, 2021.</Claimantname>
+    <Obrno>101-1071-21-09-0314</Obrno>
+    <dvno>101-21-09-0277</dvno>
+    <jvno>101-21-09-03-0025</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481737</jevid>
+    <Date_>09/08/2021</Date_>
+    <Rdono>EDC-RD-140-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0026</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of September, 2021.</Claimantname>
+    <Obrno>101-1011-21-09-0361</Obrno>
+    <dvno>101-21-09-0342</dvno>
+    <jvno>101-21-09-03-0026</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481738</jevid>
+    <Date_>09/08/2021</Date_>
+    <Rdono>EDC-RD-140-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0027</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Representation Allowance (RA) for the month of September 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation Allowance (RA) for the month of September 2021.</Claimantname>
+    <Obrno>101-8731-21-09-0382</Obrno>
+    <dvno>101-21-09-0407</dvno>
+    <jvno>101-21-09-03-0027</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481740</jevid>
+    <Date_>09/09/2021</Date_>
+    <Rdono>EDC-RD-141-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0028</JEVNo>
+    <_x0031_06>100000.0000</_x0031_06>
+    <_x0031_0305010>100000.0000</_x0031_0305010>
+    <Particular>4P payment of Honorarium  8/16-20/21 during AVP production for  Tourism Related Establishment.</Particular>
+    <Dbt>100000.0000</Dbt>
+    <Accountcode>50202010-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>4P payment of Honorarium  8/16-20/21 during AVP production for  Tourism Related Establishment.</Claimantname>
+    <Obrno>101-8852-21-08-1722</Obrno>
+    <dvno>101-21-08-1581</dvno>
+    <jvno>101-21-09-03-0028</jvno>
+    <Gamount>100000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481741</jevid>
+    <Date_>09/09/2021</Date_>
+    <Rdono>EDC-RD-141-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0029</JEVNo>
+    <_x0031_06>13500.0000</_x0031_06>
+    <_x0031_0305010>13500.0000</_x0031_0305010>
+    <Particular>(7P)- payment of Office suuplies (cellcard ) for the month of September 2021.</Particular>
+    <Dbt>13500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>(7P)- payment of Office suuplies (cellcard ) for the month of September 2021.</Claimantname>
+    <Obrno>101-1011-21-09-0397</Obrno>
+    <dvno>101-21-09-0399</dvno>
+    <jvno>101-21-09-03-0029</jvno>
+    <Gamount>13500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481742</jevid>
+    <Date_>09/09/2021</Date_>
+    <Rdono>EDC-RD-141-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0030</JEVNo>
+    <_x0031_06>5500.0000</_x0031_06>
+    <_x0031_0305010>5500.0000</_x0031_0305010>
+    <Particular>payment of  Office Supplies (cellcard) for the month of September, 2021 4P.</Particular>
+    <Dbt>5500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-10T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Office Supplies (cellcard) for the month of September, 2021 4P.</Claimantname>
+    <Obrno>101-8852-21-09-0378</Obrno>
+    <dvno>101-21-09-0408</dvno>
+    <jvno>101-21-09-03-0030</jvno>
+    <Gamount>5500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481744</jevid>
+    <Date_>09/09/2021</Date_>
+    <Rdono>EDC-RD-142-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0031</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>Buquir, Dannah Rufalyn Magbanua payment of RA for the month of September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>Buquir, Dannah Rufalyn Magbanua payment of RA for the month of September, 2021.</Claimantname>
+    <Obrno>101-8852-21-09-0406</Obrno>
+    <dvno>101-21-09-0392</dvno>
+    <jvno>101-21-09-03-0031</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481746</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-143-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0032</JEVNo>
+    <_x0031_06>7500.0000</_x0031_06>
+    <_x0031_0305010>7500.0000</_x0031_0305010>
+    <Particular>(7P) payment of office supplies (cellcard) for the month of September, 2021.</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>(7P) payment of office supplies (cellcard) for the month of September, 2021.</Claimantname>
+    <Obrno>101-8999-21-09-0458</Obrno>
+    <dvno>101-21-09-0477</dvno>
+    <jvno>101-21-09-03-0032</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481747</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-143-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0033</JEVNo>
+    <_x0031_06>8000.0000</_x0031_06>
+    <_x0031_0305010>8000.0000</_x0031_0305010>
+    <Particular>payment of Office Supplies (cellcard) for the month of September, 2021  </Particular>
+    <Dbt>8000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Office Supplies (cellcard) for the month of September, 2021  </Claimantname>
+    <Obrno>101-1061-21-09-0457</Obrno>
+    <dvno>101-21-09-0481</dvno>
+    <jvno>101-21-09-03-0033</jvno>
+    <Gamount>8000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481749</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-143-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0034</JEVNo>
+    <_x0031_06>6500.0000</_x0031_06>
+    <_x0031_0305010>6500.0000</_x0031_0305010>
+    <Particular>(6P) payment of office supplies (cellcard) for the month of September, 2021.</Particular>
+    <Dbt>6500.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>(6P) payment of office supplies (cellcard) for the month of September, 2021.</Claimantname>
+    <Obrno>101-7611-21-09-0466</Obrno>
+    <dvno>101-21-09-0488</dvno>
+    <jvno>101-21-09-03-0034</jvno>
+    <Gamount>6500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481750</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0035</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of Transportation Allowance (TA) for the month of August, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Transportation Allowance (TA) for the month of August, 2021.</Claimantname>
+    <Obrno>101-1071-21-09-0315</Obrno>
+    <dvno>101-21-09-0303</dvno>
+    <jvno>101-21-09-03-0035</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481751</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0036</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of representation allowance (RA) for the month of September 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of representation allowance (RA) for the month of September 2021.</Claimantname>
+    <Obrno>101-8999-21-09-0456</Obrno>
+    <dvno>101-21-09-0478</dvno>
+    <jvno>101-21-09-03-0036</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481754</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0037</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular>payment of RATA for the month of September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of September, 2021.</Claimantname>
+    <Obrno>101-1031-21-09-0464</Obrno>
+    <dvno>101-21-09-0479</dvno>
+    <jvno>101-21-09-03-0037</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481754</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RATA for the month of September, 2021.</Claimantname>
+    <Obrno>101-1031-21-09-0464</Obrno>
+    <dvno>101-21-09-0479</dvno>
+    <jvno>101-21-09-03-0037</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481756</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0038</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular> payment of RA for the month of  Sept. 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of RA for the month of  Sept. 2021.</Claimantname>
+    <Obrno>101-1061-21-09-0455</Obrno>
+    <dvno>101-21-09-0482</dvno>
+    <jvno>101-21-09-03-0038</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481757</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0039</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular> payment of Representation Allowance (RA) for the month of September 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of Representation Allowance (RA) for the month of September 2021.</Claimantname>
+    <Obrno>101-7611-21-09-0467</Obrno>
+    <dvno>101-21-09-0487</dvno>
+    <jvno>101-21-09-03-0039</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481758</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0040</JEVNo>
+    <_x0031_0305020>17000.0000</_x0031_0305020>
+    <_x0031_06>17000.0000</_x0031_06>
+    <Particular> payment of Representation and Transportation Allowance (RATA) for the month of September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of Representation and Transportation Allowance (RATA) for the month of September, 2021.</Claimantname>
+    <Obrno>101-9993-21-09-0472</Obrno>
+    <dvno>101-21-09-0490</dvno>
+    <jvno>101-21-09-03-0040</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481758</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of Representation and Transportation Allowance (RATA) for the month of September, 2021.</Claimantname>
+    <Obrno>101-9993-21-09-0472</Obrno>
+    <dvno>101-21-09-0490</dvno>
+    <jvno>101-21-09-03-0040</jvno>
+    <Gamount>17000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481759</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0041</JEVNo>
+    <_x0031_0305020>7500.0000</_x0031_0305020>
+    <_x0031_06>7500.0000</_x0031_06>
+    <Particular>payment of TA for the month of August, 2021</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of TA for the month of August, 2021</Claimantname>
+    <Obrno>101-8751-21-09-0476</Obrno>
+    <dvno>101-21-09-0492</dvno>
+    <jvno>101-21-09-03-0041</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481761</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0042</JEVNo>
+    <_x0031_0305020>7500.0000</_x0031_0305020>
+    <_x0031_06>7500.0000</_x0031_06>
+    <Particular>payment of RA for the month of September, 2021</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RA for the month of September, 2021</Claimantname>
+    <Obrno>101-8751-21-09-0477</Obrno>
+    <dvno>101-21-09-0493</dvno>
+    <jvno>101-21-09-03-0042</jvno>
+    <Gamount>7500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481763</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-144-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0043</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of RA for the month September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RA for the month September, 2021.</Claimantname>
+    <Obrno>101-1022-21-09-0479</Obrno>
+    <dvno>101-21-09-0507</dvno>
+    <jvno>101-21-09-03-0043</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481765</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-145-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0044</JEVNo>
+    <_x0031_06>8500.0000</_x0031_06>
+    <_x0031_0305010>8500.0000</_x0031_0305010>
+    <Particular> payment of Representation Expenses (RE) for the  
+month of August, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50299030-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of Representation Expenses (RE) for the  
+month of August, 2021.</Claimantname>
+    <Obrno>101-1041-21-09-0446</Obrno>
+    <dvno>101-21-09-0470</dvno>
+    <jvno>101-21-09-03-0044</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481767</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-145-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0045</JEVNo>
+    <_x0031_06>1000.0000</_x0031_06>
+    <_x0031_0305010>1000.0000</_x0031_0305010>
+    <Particular> payment of office supplies ( cellcard ) for the month of September 2021.</Particular>
+    <Dbt>1000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of office supplies ( cellcard ) for the month of September 2021.</Claimantname>
+    <Obrno>101-1011-21-09-0512</Obrno>
+    <dvno>101-21-09-0528</dvno>
+    <jvno>101-21-09-03-0045</jvno>
+    <Gamount>1000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481770</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-145-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0046</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>payment of Office Supplies (cellcard) for the month of July, 2021 2P.</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Office Supplies (cellcard) for the month of July, 2021 2P.</Claimantname>
+    <Obrno>101-1031-21-09-0515</Obrno>
+    <dvno>101-21-09-0530</dvno>
+    <jvno>101-21-09-03-0046</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481771</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-145-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0047</JEVNo>
+    <_x0031_06>3000.0000</_x0031_06>
+    <_x0031_0305010>3000.0000</_x0031_0305010>
+    <Particular>payment of Office Supplies (cellcard) for the month of August, 2021 2P.</Particular>
+    <Dbt>3000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Office Supplies (cellcard) for the month of August, 2021 2P.</Claimantname>
+    <Obrno>101-1031-21-09-0514</Obrno>
+    <dvno>101-21-09-0532</dvno>
+    <jvno>101-21-09-03-0047</jvno>
+    <Gamount>3000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481772</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-146-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0048</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular>payment of RA for the month of September, 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of RA for the month of September, 2021.</Claimantname>
+    <Obrno>101-8721-21-09-0475</Obrno>
+    <dvno>101-21-09-0491</dvno>
+    <jvno>101-21-09-03-0048</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481773</jevid>
+    <Date_>09/13/2021</Date_>
+    <Rdono>EDC-RD-146-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0049</JEVNo>
+    <_x0031_0305020>8500.0000</_x0031_0305020>
+    <_x0031_06>8500.0000</_x0031_06>
+    <Particular> payment of Representation Allowance (RA) for the month of September 2021.</Particular>
+    <Dbt>8500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payment of Representation Allowance (RA) for the month of September 2021.</Claimantname>
+    <Obrno>101-1121-21-09-0473</Obrno>
+    <dvno>101-21-09-0514</dvno>
+    <jvno>101-21-09-03-0049</jvno>
+    <Gamount>8500.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481774</jevid>
+    <Date_>09/14/2021</Date_>
+    <Rdono>EDC-RD-147-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0050</JEVNo>
+    <_x0031_06>22774.7300</_x0031_06>
+    <_x0031_0305010>22774.7300</_x0031_0305010>
+    <Particular>2P payment of Honorarium 8/5-6/21 during Webinar on Statistical Data Presentation &amp; Infographics.</Particular>
+    <Crdt>234.7900</Crdt>
+    <Accountcode>20201010-1-1-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>2P payment of Honorarium 8/5-6/21 during Webinar on Statistical Data Presentation &amp; Infographics.</Claimantname>
+    <Obrno>101-1041-21-08-1759</Obrno>
+    <dvno>101-21-08-1585</dvno>
+    <jvno>101-21-09-03-0050</jvno>
+    <Gamount>22774.7300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481774</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>469.5800</Crdt>
+    <Accountcode>20201010-1-16-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>2P payment of Honorarium 8/5-6/21 during Webinar on Statistical Data Presentation &amp; Infographics.</Claimantname>
+    <Obrno>101-1041-21-08-1759</Obrno>
+    <dvno>101-21-08-1585</dvno>
+    <jvno>101-21-09-03-0050</jvno>
+    <Gamount>22774.7300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481774</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>23479.1000</Dbt>
+    <Accountcode>50202010-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>2P payment of Honorarium 8/5-6/21 during Webinar on Statistical Data Presentation &amp; Infographics.</Claimantname>
+    <Obrno>101-1041-21-08-1759</Obrno>
+    <dvno>101-21-08-1585</dvno>
+    <jvno>101-21-09-03-0050</jvno>
+    <Gamount>22774.7300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481775</jevid>
+    <Date_>09/14/2021</Date_>
+    <Rdono>EDC-RD-147-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0051</JEVNo>
+    <_x0031_06>60370.0000</_x0031_06>
+    <_x0031_0305010>60370.0000</_x0031_0305010>
+    <Particular> payt of SPES for the month of August 2-27, 2021 (10P)</Particular>
+    <Dbt>60370.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname> payt of SPES for the month of August 2-27, 2021 (10P)</Claimantname>
+    <Obrno>101-1031-21-09-0625</Obrno>
+    <dvno>101-21-09-0607</dvno>
+    <jvno>101-21-09-03-0051</jvno>
+    <Gamount>60370.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481776</jevid>
+    <Date_>09/15/2021</Date_>
+    <Rdono>EDC-RD-148-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0052</JEVNo>
+    <_x0031_06>2000.0000</_x0031_06>
+    <_x0031_0305010>2000.0000</_x0031_0305010>
+    <Particular>4P payment of Honorarium during the Fish Sampling for the Inventory of Fish Species and Reproductive Life Cycle Project August 19,2021.</Particular>
+    <Dbt>2000.0000</Dbt>
+    <Accountcode>50202010-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>4P payment of Honorarium during the Fish Sampling for the Inventory of Fish Species and Reproductive Life Cycle Project August 19,2021.</Claimantname>
+    <Obrno>101-8971-21-09-0343</Obrno>
+    <dvno>101-21-09-0328</dvno>
+    <jvno>101-21-09-03-0052</jvno>
+    <Gamount>2000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481777</jevid>
+    <Date_>09/15/2021</Date_>
+    <Rdono>EDC-RD-148-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0053</JEVNo>
+    <_x0031_06>42000.0000</_x0031_06>
+    <_x0031_0305010>42000.0000</_x0031_0305010>
+    <Particular>( 5P)- payment of Honorarium  during PMRB meeting dtd. June 30, July 22, August 19,2021.</Particular>
+    <Dbt>42000.0000</Dbt>
+    <Accountcode>50210030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>( 5P)- payment of Honorarium  during PMRB meeting dtd. June 30, July 22, August 19,2021.</Claimantname>
+    <Obrno>101-1011-21-09-0419</Obrno>
+    <dvno>101-21-09-0468</dvno>
+    <jvno>101-21-09-03-0053</jvno>
+    <Gamount>42000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481780</jevid>
+    <Date_>09/15/2021</Date_>
+    <Rdono>EDC-RD-149-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0054</JEVNo>
+    <_x0031_06>60370.0000</_x0031_06>
+    <_x0031_0305010>60370.0000</_x0031_0305010>
+    <Particular>payt of SPES for the month of August 2-27, 2021 (10P)</Particular>
+    <Dbt>60370.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of SPES for the month of August 2-27, 2021 (10P)</Claimantname>
+    <Obrno>101-1031-21-09-0621</Obrno>
+    <dvno>101-21-09-0608</dvno>
+    <jvno>101-21-09-03-0054</jvno>
+    <Gamount>60370.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481781</jevid>
+    <Date_>09/15/2021</Date_>
+    <Rdono>EDC-RD-150-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0055</JEVNo>
+    <_x0031_06>60370.0000</_x0031_06>
+    <_x0031_0305010>60370.0000</_x0031_0305010>
+    <Particular>payt of SPES for the month of August 2-27, 2021 (10P)</Particular>
+    <Dbt>60370.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of SPES for the month of August 2-27, 2021 (10P)</Claimantname>
+    <Obrno>101-1031-21-09-0623</Obrno>
+    <dvno>101-21-09-0612</dvno>
+    <jvno>101-21-09-03-0055</jvno>
+    <Gamount>60370.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>481783</jevid>
+    <Date_>09/15/2021</Date_>
+    <Rdono>EDC-RD-150-2021-101-2487</Rdono>
+    <JEVNo>101-21-09-03-0056</JEVNo>
+    <_x0031_06>60370.0000</_x0031_06>
+    <_x0031_0305010>60370.0000</_x0031_0305010>
+    <Particular>payt of SPES for the month of August 2-27, 2021 (10P)</Particular>
+    <Dbt>60370.0000</Dbt>
+    <Accountcode>50299990-3-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>General Fund Proper</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2021-09-13T00:00:00+08:00</Jevdate>
+    <Claimantname>payt of SPES for the month of August 2-27, 2021 (10P)</Claimantname>
+    <Obrno>101-1031-21-09-0624</Obrno>
+    <dvno>101-21-09-0613</dvno>
+    <jvno>101-21-09-03-0056</jvno>
+    <Gamount>60370.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,1018 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FirstAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="SecondAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="ThirdAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="FourthAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountCode" type="xs:long" minOccurs="0" />
+                <xs:element name="AccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="amount" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>DETAILED STATEMENT OF FINANCCIAL PERFORMANCE</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>As of September 13, 2019</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Individual and Corporation</FourthAccountName>
+    <AccountCode>40101020</AccountCode>
+    <AccountName>Professional Tax</AccountName>
+    <amount>115680.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Property</FourthAccountName>
+    <AccountCode>40102040</AccountCode>
+    <AccountName>Real Property Tax- Basic</AccountName>
+    <amount>21725538.13</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Property</FourthAccountName>
+    <AccountCode>40102050</AccountCode>
+    <AccountName>Special Education Tax</AccountName>
+    <amount>30782100.87</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Property</FourthAccountName>
+    <AccountCode>40102080</AccountCode>
+    <AccountName>Real Property Transfer Tax</AccountName>
+    <amount>1507514.35</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Goods and Services</FourthAccountName>
+    <AccountCode>40103040</AccountCode>
+    <AccountName>Tax on Sand, Gravel and Other Quarry Products</AccountName>
+    <amount>10777331.98</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Goods and Services</FourthAccountName>
+    <AccountCode>40103050</AccountCode>
+    <AccountName>Tax on Delivery  Trucks and Vans</AccountName>
+    <amount>1093947.60</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Goods and Services</FourthAccountName>
+    <AccountCode>40103060</AccountCode>
+    <AccountName>Amusement Tax</AccountName>
+    <amount>47900.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Goods and Services</FourthAccountName>
+    <AccountCode>40103070</AccountCode>
+    <AccountName>Franchise Tax</AccountName>
+    <amount>161489.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Goods and Services</FourthAccountName>
+    <AccountCode>40103080</AccountCode>
+    <AccountName>Printing and Publication Tax</AccountName>
+    <amount>2889.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Others</FourthAccountName>
+    <AccountCode>40104990</AccountCode>
+    <AccountName>Other Taxes</AccountName>
+    <amount>22588617.43</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Fines and Penalties</FourthAccountName>
+    <AccountCode>40105020</AccountCode>
+    <AccountName>Tax Revenue - Fines and Penalties - Property Taxes</AccountName>
+    <amount>5506947.60</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Fines and Penalties</FourthAccountName>
+    <AccountCode>40105030</AccountCode>
+    <AccountName>Tax Revenue - Fines and Penalties - Taxes on Goods and Services</AccountName>
+    <amount>420812.56</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Fines and Penalties</FourthAccountName>
+    <AccountCode>40105040</AccountCode>
+    <AccountName>Tax Revenue - Fines and Penalties - Other Taxes</AccountName>
+    <amount>1385956.83</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Share from National Taxes</FourthAccountName>
+    <AccountCode>40106010</AccountCode>
+    <AccountName>Share from Internal Revenue Collections (IRA)</AccountName>
+    <amount>1340341088.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Share from National Taxes</FourthAccountName>
+    <AccountCode>40106030</AccountCode>
+    <AccountName>Share from National Wealth</AccountName>
+    <amount>10130017.35</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201010</AccountCode>
+    <AccountName>Permit Fees</AccountName>
+    <amount>235850.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201020</AccountCode>
+    <AccountName>Registration Fees</AccountName>
+    <amount>2507.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201030</AccountCode>
+    <AccountName>Registration Plates, Tags and Stickers Fees</AccountName>
+    <amount>15900.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201040</AccountCode>
+    <AccountName>Clearance and Certification Fees</AccountName>
+    <amount>612077.62</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201140</AccountCode>
+    <AccountName>Occupation Fees</AccountName>
+    <amount>120157.40</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201980</AccountCode>
+    <AccountName>Fines and Penalties - Service Income</AccountName>
+    <amount>10126.35</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Service Income</FourthAccountName>
+    <AccountCode>40201990</AccountCode>
+    <AccountName>Other Service Income</AccountName>
+    <amount>23200.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202050</AccountCode>
+    <AccountName>Rent Income</AccountName>
+    <amount>5553262.39</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202060</AccountCode>
+    <AccountName>Communication Network Fees</AccountName>
+    <amount>226798.41</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202090</AccountCode>
+    <AccountName>Waterworks System Fees</AccountName>
+    <amount>4289541.58</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202170</AccountCode>
+    <AccountName>Receipts from Printing and Publication</AccountName>
+    <amount>9811.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202200</AccountCode>
+    <AccountName>Hospital Fees</AccountName>
+    <amount>64647465.32</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202220</AccountCode>
+    <AccountName>Interest Income</AccountName>
+    <amount>1213437.86</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202990</AccountCode>
+    <AccountName>Other Business Income</AccountName>
+    <amount>38085121.29</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Shares, Grants and Donations</ThirdAccountName>
+    <FourthAccountName>Share</FourthAccountName>
+    <AccountCode>40401020</AccountCode>
+    <AccountName>Share from PCSO</AccountName>
+    <amount>102946.91</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Shares, Grants and Donations</ThirdAccountName>
+    <FourthAccountName>Grants and Donations</FourthAccountName>
+    <AccountCode>40402020</AccountCode>
+    <AccountName>Grants and Donations in Kind</AccountName>
+    <amount>1602002.81</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Gains</ThirdAccountName>
+    <FourthAccountName>Gains</FourthAccountName>
+    <AccountCode>40501050</AccountCode>
+    <AccountName>Gain on Sale of Property, Plant and Equipment</AccountName>
+    <amount>76496.70</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Miscellaneous Income</SecondAccountName>
+    <ThirdAccountName>Miscellaneous Income</ThirdAccountName>
+    <FourthAccountName>Miscellaneous Income</FourthAccountName>
+    <AccountCode>40601010</AccountCode>
+    <AccountName>Miscellaneous Income</AccountName>
+    <amount>5508521.30</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Salaries and Wages</FourthAccountName>
+    <AccountCode>50101010</AccountCode>
+    <AccountName>Salaries and Wages - Regular</AccountName>
+    <amount>206998667.27</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Salaries and Wages</FourthAccountName>
+    <AccountCode>50101020</AccountCode>
+    <AccountName>Salaries and Wages - Casual/Contractual</AccountName>
+    <amount>37856573.37</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102010</AccountCode>
+    <AccountName>Personal Economic Relief Allowance (PERA)</AccountName>
+    <amount>18144189.28</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102020</AccountCode>
+    <AccountName>Representation Allowance (RA)</AccountName>
+    <amount>3104500.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102030</AccountCode>
+    <AccountName>Transportation Allowance (TA)</AccountName>
+    <amount>711625.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102040</AccountCode>
+    <AccountName>Clothing/Uniform Allowance</AccountName>
+    <amount>7302000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102050</AccountCode>
+    <AccountName>Subsistence Allowance</AccountName>
+    <amount>3812366.51</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102060</AccountCode>
+    <AccountName>Laundry  Allowance</AccountName>
+    <amount>294427.72</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102070</AccountCode>
+    <AccountName>Quarters Allowance</AccountName>
+    <amount>25843.75</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102100</AccountCode>
+    <AccountName>Honoraria</AccountName>
+    <amount>202090.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102110</AccountCode>
+    <AccountName>Hazard Pay</AccountName>
+    <amount>14999433.84</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102120</AccountCode>
+    <AccountName>Longevity Pay</AccountName>
+    <amount>490000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102130</AccountCode>
+    <AccountName>Overtime and Night Pay</AccountName>
+    <amount>10966101.30</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102140</AccountCode>
+    <AccountName>Year End Bonus</AccountName>
+    <amount>30768839.90</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Compensation</FourthAccountName>
+    <AccountCode>50102150</AccountCode>
+    <AccountName>Cash Gift</AccountName>
+    <amount>6000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Personnel Benefit Contributions</FourthAccountName>
+    <AccountCode>50103010</AccountCode>
+    <AccountName>Retirement and Life Insurance Premiums</AccountName>
+    <amount>29567583.63</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Personnel Benefit Contributions</FourthAccountName>
+    <AccountCode>50103020</AccountCode>
+    <AccountName>Pag-IBIG Contributions</AccountName>
+    <amount>1920498.36</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Personnel Benefit Contributions</FourthAccountName>
+    <AccountCode>50103030</AccountCode>
+    <AccountName>PhilHealth Contributions</AccountName>
+    <amount>2790597.58</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Personnel Benefit Contributions</FourthAccountName>
+    <AccountCode>50103040</AccountCode>
+    <AccountName>Employees Compensation Insurance Premiums</AccountName>
+    <amount>932755.25</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Personnel Benefits</FourthAccountName>
+    <AccountCode>50104030</AccountCode>
+    <AccountName>Terminal Leave Benefits</AccountName>
+    <amount>12583517.18</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Personnel Services</ThirdAccountName>
+    <FourthAccountName>Other Personnel Benefits</FourthAccountName>
+    <AccountCode>50104990</AccountCode>
+    <AccountName>Other Personnel Benefits</AccountName>
+    <amount>16989559.48</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Traveling Expenses</FourthAccountName>
+    <AccountCode>50201010</AccountCode>
+    <AccountName>Traveling Expenses - Local</AccountName>
+    <amount>9145132.55</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Training and Scholarship Expenses</FourthAccountName>
+    <AccountCode>50202010</AccountCode>
+    <AccountName>Training Expenses</AccountName>
+    <amount>27737108.14</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Training and Scholarship Expenses</FourthAccountName>
+    <AccountCode>50202020</AccountCode>
+    <AccountName>Scholarship Grants/Expenses</AccountName>
+    <amount>6123352.39</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203010</AccountCode>
+    <AccountName>Office Supplies Expenses</AccountName>
+    <amount>6478973.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203020</AccountCode>
+    <AccountName>Accountable Forms Expenses</AccountName>
+    <amount>249038.10</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203040</AccountCode>
+    <AccountName>Animal/Zoological Supplies Expenses</AccountName>
+    <amount>1203570.30</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203050</AccountCode>
+    <AccountName>Food Supplies Expenses</AccountName>
+    <amount>23993180.41</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203060</AccountCode>
+    <AccountName>Welfare Goods Expenses</AccountName>
+    <amount>571863.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203070</AccountCode>
+    <AccountName>Drugs and Medicines Expenses</AccountName>
+    <amount>8094038.31</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203080</AccountCode>
+    <AccountName>Medical, Dental and Laboratory Supplies Expenses</AccountName>
+    <amount>4670209.84</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203090</AccountCode>
+    <AccountName>Fuel, Oil and Lubricants Expenses</AccountName>
+    <amount>12635624.82</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203100</AccountCode>
+    <AccountName>Agricultural and Marine Supplies Expenses</AccountName>
+    <amount>3196264.40</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203110</AccountCode>
+    <AccountName>Textbooks and Instructional Materials Expenses</AccountName>
+    <amount>1748883.90</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203990</AccountCode>
+    <AccountName>Other Supplies and Materials Expenses</AccountName>
+    <amount>11911022.87</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Utility Expenses</FourthAccountName>
+    <AccountCode>50204010</AccountCode>
+    <AccountName>Water Expenses</AccountName>
+    <amount>1572991.80</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Utility Expenses</FourthAccountName>
+    <AccountCode>50204020</AccountCode>
+    <AccountName>Electricity Expenses</AccountName>
+    <amount>25936655.62</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Communication Expenses</FourthAccountName>
+    <AccountCode>50205010</AccountCode>
+    <AccountName>Postage and Courier Services</AccountName>
+    <amount>49200.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Communication Expenses</FourthAccountName>
+    <AccountCode>50205020</AccountCode>
+    <AccountName>Telephone Expenses</AccountName>
+    <amount>2302160.20</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Communication Expenses</FourthAccountName>
+    <AccountCode>50205030</AccountCode>
+    <AccountName>Internet Subscription Expenses</AccountName>
+    <amount>736417.07</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Communication Expenses</FourthAccountName>
+    <AccountCode>50205040</AccountCode>
+    <AccountName>Cable, Satellite, Telegraph and Radio Expenses</AccountName>
+    <amount>145246.30</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Awards/Rewards and Prizes</FourthAccountName>
+    <AccountCode>50206010</AccountCode>
+    <AccountName>Awards/Rewards Expenses</AccountName>
+    <amount>528616.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Awards/Rewards and Prizes</FourthAccountName>
+    <AccountCode>50206020</AccountCode>
+    <AccountName>Prizes</AccountName>
+    <amount>807300.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Survey, Research, Exploration and Development Expenses</FourthAccountName>
+    <AccountCode>50207010</AccountCode>
+    <AccountName>Survey Expenses</AccountName>
+    <amount>834.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Confidential, Intelligence and Extraordinary Expenses</FourthAccountName>
+    <AccountCode>50210010</AccountCode>
+    <AccountName>Confidential Expenses</AccountName>
+    <amount>30000000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Confidential, Intelligence and Extraordinary Expenses</FourthAccountName>
+    <AccountCode>50210030</AccountCode>
+    <AccountName>Extraordinary and Miscellaneous Expenses</AccountName>
+    <amount>5596386.70</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Professional Services</FourthAccountName>
+    <AccountCode>50211010</AccountCode>
+    <AccountName>Legal Services</AccountName>
+    <amount>300823.94</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Professional Services</FourthAccountName>
+    <AccountCode>50211020</AccountCode>
+    <AccountName>Auditing Services</AccountName>
+    <amount>264786.95</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Professional Services</FourthAccountName>
+    <AccountCode>50211030</AccountCode>
+    <AccountName>Consultancy Services</AccountName>
+    <amount>276642.85</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Professional Services</FourthAccountName>
+    <AccountCode>50211990</AccountCode>
+    <AccountName>Other Professional Services</AccountName>
+    <amount>24736903.90</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>General Services</FourthAccountName>
+    <AccountCode>50212020</AccountCode>
+    <AccountName>Janitorial Services</AccountName>
+    <amount>3530760.02</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>General Services</FourthAccountName>
+    <AccountCode>50212030</AccountCode>
+    <AccountName>Security Services</AccountName>
+    <amount>4501609.32</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>General Services</FourthAccountName>
+    <AccountCode>50212990</AccountCode>
+    <AccountName>Other General Services</AccountName>
+    <amount>29939232.84</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213020</AccountCode>
+    <AccountName>Repairs and Maintenance - Land Improvements</AccountName>
+    <amount>82800.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213030</AccountCode>
+    <AccountName>Repairs and Maintenance - Infrastructure Assets</AccountName>
+    <amount>17963272.65</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213040</AccountCode>
+    <AccountName>Repairs and Maintenance - Buildings and Other Structures</AccountName>
+    <amount>5274149.22</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213050</AccountCode>
+    <AccountName>Repairs and Maintenance - Machinery and Equipment</AccountName>
+    <amount>34580.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213060</AccountCode>
+    <AccountName>Repairs and Maintenance - Transportation Equipment</AccountName>
+    <amount>3140461.54</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213990</AccountCode>
+    <AccountName>Repairs and Maintenance - Other Property, Plant and Equipment</AccountName>
+    <amount>265000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Taxes, Insurance Premiums and Other Fees</FourthAccountName>
+    <AccountCode>50216010</AccountCode>
+    <AccountName>Taxes, Duties and Licenses</AccountName>
+    <amount>269996.95</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Taxes, Insurance Premiums and Other Fees</FourthAccountName>
+    <AccountCode>50216020</AccountCode>
+    <AccountName>Fidelity Bond Premiums</AccountName>
+    <amount>200834.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Taxes, Insurance Premiums and Other Fees</FourthAccountName>
+    <AccountCode>50216030</AccountCode>
+    <AccountName>Insurance Expenses</AccountName>
+    <amount>98804.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299020</AccountCode>
+    <AccountName>Printing and Publication Expenses</AccountName>
+    <amount>2234868.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299030</AccountCode>
+    <AccountName>Representation Expenses</AccountName>
+    <amount>114382.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299040</AccountCode>
+    <AccountName>Transportation and Delivery Expenses</AccountName>
+    <amount>73720.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299050</AccountCode>
+    <AccountName>Rent Expenses</AccountName>
+    <amount>162553.04</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299060</AccountCode>
+    <AccountName>Membership Dues and Contributions to Organizations</AccountName>
+    <amount>898592.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299080</AccountCode>
+    <AccountName>Donations</AccountName>
+    <amount>37567545.60</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299990</AccountCode>
+    <AccountName>Other Maintenance and Operating Expenses</AccountName>
+    <amount>22167217.90</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Financial Expenses</ThirdAccountName>
+    <FourthAccountName>Financial Expenses</FourthAccountName>
+    <AccountCode>50301020</AccountCode>
+    <AccountName>Interest Expenses</AccountName>
+    <amount>644036.27</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Financial Expenses</ThirdAccountName>
+    <FourthAccountName>Financial Expenses</FourthAccountName>
+    <AccountCode>50301990</AccountCode>
+    <AccountName>Other Financial Charges</AccountName>
+    <amount>50.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Surplus from Current Operations</FirstAccountName>
+    <SecondAccountName>Surplus1</SecondAccountName>
+    <ThirdAccountName>Surplus1</ThirdAccountName>
+    <FourthAccountName>Surplus1</FourthAccountName>
+    <AccountCode>60000000</AccountCode>
+    <AccountName>Surplus1</AccountName>
+    <amount>828278192.51</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Financial Assistance/Subsidy to NGAs, LGUs, GOCCs, NGOs/POs</FirstAccountName>
+    <SecondAccountName>Less</SecondAccountName>
+    <ThirdAccountName>Less</ThirdAccountName>
+    <FourthAccountName>Less</FourthAccountName>
+    <AccountCode>70000000</AccountCode>
+    <AccountName>Subsidy to Other Local Government Units</AccountName>
+    <amount>1741110.87</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Net Financial Assistance/Subsidy</FirstAccountName>
+    <SecondAccountName>Surplus1</SecondAccountName>
+    <ThirdAccountName>Surplus1</ThirdAccountName>
+    <FourthAccountName>Surplus1</FourthAccountName>
+    <AccountCode>80000000</AccountCode>
+    <AccountName>Surplus1</AccountName>
+    <amount>-1741110.87</amount>
+  </Table1>
+</NewDataSet>

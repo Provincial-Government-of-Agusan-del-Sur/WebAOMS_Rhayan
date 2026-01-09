@@ -1,0 +1,171 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FirstAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="SecondAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="ThirdAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="FourthAccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountCode" type="xs:long" minOccurs="0" />
+                <xs:element name="AccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="amount" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>STATEMENT OF FINANCCIAL PERFORMANCE</T1>
+    <fundtype>Special Education Fund</fundtype>
+    <dateString>As of August 30, 2019</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Property</FourthAccountName>
+    <AccountCode>40102050</AccountCode>
+    <AccountName>Special Education Tax</AccountName>
+    <amount>29274911.18</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Tax Revenue</ThirdAccountName>
+    <FourthAccountName>Tax Revenue - Fines and Penalties</FourthAccountName>
+    <AccountCode>40105020</AccountCode>
+    <AccountName>Tax Revenue - Fines and Penalties - Property Taxes</AccountName>
+    <amount>3001424.52</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Income</FirstAccountName>
+    <SecondAccountName>Revenue</SecondAccountName>
+    <ThirdAccountName>Service and Business Income</ThirdAccountName>
+    <FourthAccountName>Business Income</FourthAccountName>
+    <AccountCode>40202220</AccountCode>
+    <AccountName>Interest Income</AccountName>
+    <amount>13117.88</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Traveling Expenses</FourthAccountName>
+    <AccountCode>50201010</AccountCode>
+    <AccountName>Traveling Expenses - Local</AccountName>
+    <amount>1805.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Training and Scholarship Expenses</FourthAccountName>
+    <AccountCode>50202010</AccountCode>
+    <AccountName>Training Expenses</AccountName>
+    <amount>246690.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203050</AccountCode>
+    <AccountName>Food Supplies Expenses</AccountName>
+    <amount>216000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Supplies and Materials Expenses</FourthAccountName>
+    <AccountCode>50203110</AccountCode>
+    <AccountName>Textbooks and Instructional Materials Expenses</AccountName>
+    <amount>1499028.90</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Communication Expenses</FourthAccountName>
+    <AccountCode>50205020</AccountCode>
+    <AccountName>Telephone Expenses</AccountName>
+    <amount>1800.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Professional Services</FourthAccountName>
+    <AccountCode>50211990</AccountCode>
+    <AccountName>Other Professional Services</AccountName>
+    <amount>3939000.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Repairs and Maintenance</FourthAccountName>
+    <AccountCode>50213040</AccountCode>
+    <AccountName>Repairs and Maintenance - Buildings and Other Structures</AccountName>
+    <amount>860990.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Expenses</FirstAccountName>
+    <SecondAccountName>Current Operation Expenses</SecondAccountName>
+    <ThirdAccountName>Maintenance and Other Operating Expenses</ThirdAccountName>
+    <FourthAccountName>Other Maintenance and Operating Expenses</FourthAccountName>
+    <AccountCode>50299080</AccountCode>
+    <AccountName>Donations</AccountName>
+    <amount>87800.00</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Surplus from Current Operations</FirstAccountName>
+    <SecondAccountName>Surplus1</SecondAccountName>
+    <ThirdAccountName>Surplus1</ThirdAccountName>
+    <FourthAccountName>Surplus1</FourthAccountName>
+    <AccountCode>60000000</AccountCode>
+    <AccountName>Surplus1</AccountName>
+    <amount>25436339.68</amount>
+  </Table1>
+  <Table1>
+    <FirstAccountName>Net Financial Assistance/Subsidy</FirstAccountName>
+    <SecondAccountName>Surplus1</SecondAccountName>
+    <ThirdAccountName>Surplus1</ThirdAccountName>
+    <FourthAccountName>Surplus1</FourthAccountName>
+    <AccountCode>80000000</AccountCode>
+    <AccountName>Surplus1</AccountName>
+  </Table1>
+</NewDataSet>

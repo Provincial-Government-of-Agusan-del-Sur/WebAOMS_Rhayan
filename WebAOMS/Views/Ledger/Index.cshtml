@@ -1,0 +1,315 @@
+﻿
+@{
+    ViewBag.Title = "JEV Numbering";
+    ViewBag.Title_mini = "Criteria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+        @@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}
+</style>
+
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+        <div class="col-md-12">
+            <input id="txt_defaultjevdate" value="January, 2019" type="text" hidden  />
+            <input id="txt_1stload" value="0" type="text" hidden />
+            <div class="row">
+                
+                <div class="box-body no-padding" style="min-width:350px!important">
+                    <div class="form-group-md">
+                        <div class="col-md-4">
+                            <div class="box-head no-padding">
+                                <h5 class="text-light">Select <strong>Fundtype</strong></h5>
+                            </div>
+                            @(Html.Kendo().DropDownList()
+                              .Name("dp_fundtype")
+                              .DataTextField("FundName")
+                              .DataValueField("FundID")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Getfundtype", "Journals");
+                                  });
+                              })
+                              .Events(ev => ev.Change("rgrid_trans_account"))
+                              .HtmlAttributes(new { style = "width: 100%" })
+                            )
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="box-head no-padding">
+                                <h5 class="text-light">Browse <strong>Account</strong></h5>
+                            </div>
+                            <div class="input-group" style="padding-bottom:5px!important;">
+                                <input id="txt_accountcode" type="text" class="form-control navbar-input" placeholder="Browse Account">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-equal" onclick="view_subaccount()" type="button"><i class="fa fa-folder-open"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <script>
+                            var mg = new mgsInfo()
+
+                            $('#txt_accountcode').on('keydown', function (e) {
+                                if (e.keyCode == 13) {
+                                    view_subaccount()
+                                }
+                            })
+                        </script>
+                    </div>
+                    <div id="div_jevdetails" class="form-group-md" style="padding-top:10px">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>
+<div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Subsidiary Ledger</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="box-body">
+            <div class="box">
+                <div class="box-body" style="padding-top:10px">
+                    <div class="row" style="padding-bottom:10px">
+                        <div class="col-lg-2 col-md-2 col-sm-3">
+                            <label for="AccountName" class="control-label">Account Name:</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-9">
+                            <label id="lbl_Accountname" for="" class="control-label"></label>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom:10px">
+                        <div class="col-lg-2 col-md-2 col-sm-3">
+                            <label for="AccountName" class="control-label">Account Name Address:</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-9">
+                            <label id="lbl_Accountname_full" for="" class="control-label"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            From
+                            @(Html.Kendo().DatePicker()
+                        .Name("dtp_from")
+
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_trans_account"))
+                            )
+                            To
+                            @(Html.Kendo().DatePicker()
+                        .Name("dtp_to")
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("rgrid_trans_account"))
+                            )
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group" style="padding-bottom:5px!important">
+                                <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search JEV Number">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                $('#txt_search_dvno').on('keyup', function (e) {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        if ($('#txt_search_dvno').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Jevno", $('#txt_search_dvno').val(), 'grid_transactions')
+                            gridData.dataSource.sort({ field: "Jevno", dir: "asc" });
+                        }
+                    }
+                })
+
+                function rgrid_trans_account() {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    gridData.dataSource.read();
+                }
+                
+                function para_transaction() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    var fundid = $("#dp_fundtype").data("kendoDropDownList").value();
+                    
+                    return { childcode: $("#txt_accountcode").val(), from: from, to: to, fundid: fundid }
+                }
+
+                $("#export").click(function (e) {
+                    var grid = $("#grid_transactions").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+
+                function view_subaccount() {
+                    startSpin()
+                    if ($("#txt_1stload").val() == 0) {
+                        $.post('@Url.Action("view_account", "Ledger")', {}, function (r) {
+                            stopSpin()
+
+
+                            $("#body_details_subaccount").html("")
+                            $("#h_subaccount_id").html("");
+                            $("#body_details_subaccount").html(r)
+
+                            $("#modal_subaccount").modal("show");
+                        })
+                    }
+                    else {
+                        stopSpin()
+                        $("#modal_subaccount").modal("show");
+                    }
+                    
+                }
+
+                function clickclose() {
+                    //$("#body_details_subaccount").html("");
+                    $("#modal_subaccount").modal("hide");
+                }                  
+                function getBalance(e) {
+                    var balance = 0;
+                    var grid = $("#grid_transactions").data("kendoGrid");
+                    var gridData = grid.dataSource.view();
+                    for (var i = 0; i < gridData.length; i++) {
+                        balance += gridData[i].Balance;
+                    }
+                    $("#id_balance").html(kendo.toString(balance, "n"));
+                }
+                    </script>
+                    <div class="row">
+                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_Ledger_Subsidiary_byDate_Result>()
+                    .Name("grid_transactions")
+                    .Columns(columns =>
+                    {
+                        // columns.Bound(m => m.jevID).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound(m => m.Date).Width(50).Format("{0:MM/dd/yyyy}");
+                        columns.Bound(m => m.Particular).Width(170);
+                        columns.Bound(m => m.JEVno).Width(70).Title("JEV Number");
+                        columns.Bound(m => m.debit).Title("Debit").Width(50).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" })
+                         .ClientFooterTemplate("<div style='text-align:right'><b><div >Ending Balance</div></b></div>");
+                        columns.Bound(m => m.credit).Title("Credit").Width(50).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" })
+                        .ClientFooterTemplate("<div style='text-align:right'><b><div id='id_balance'></div></b></div>");
+                        columns.Bound(m => m.Obrno).Width(70).Title("OBR No.");
+                        columns.Bound(m => m.Dvno).Width(70).Title("DVNO");
+                        columns.Bound(m => m.Checkno).Width(70).Title("Check No");
+                        columns.Bound(m => m.ADBNo).Width(70).Title("ADBNo");
+                    })
+                    .Resizable(resize => resize.Columns(true))
+                    .AutoBind(false)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                    .Scrollable(v=> v.Virtual(true))
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_sub_entries", "Ledger").Data("para_transaction"))
+                        .PageSize(100000)
+                    )
+                    .Events(gridevents => gridevents.DataBound("getBalance"))
+                    )
+                    </div>
+                    <div class="col-md-12" style="padding-top:10px">
+                        <button onclick="print_sl()" class="btn btn-default pull-right"> <i class="fa fa-print"></i> Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function print_sl() {
+        if ($("#txt_accountcode").val() == "0" || $("#txt_accountcode").val() == "") {
+                mg.warning("Invalid Accountcode")
+                return
+        }
+
+        
+        var from = kendo.toString($('#dtp_from').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+        var to = kendo.toString($('#dtp_to').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+            var fundid = $("#dp_fundtype").data("kendoDropDownList").value();
+
+            startSpin()
+
+            $.post('@Url.Content("~/Ledger/print_ledger_sl")', {fundID:fundid,from:from,to:to,childcode: $("#txt_accountcode").val()}
+                , function (r) {
+                    stopSpin()
+                })
+        }
+
+    function clickOK() {
+        $("#txt_accountcode").val($("#h_subaccount_id").html())
+        clickclose();
+        rgrid_trans_account();
+        //alert(arrayName[lvlid] + ' ' + $("#li_title").text())
+        $("#lbl_Accountname").html(arrayName[lvlid]);
+        //$("#lbl_Accountname_full").html();
+    }
+    function clickOK_sub(ChildCode, AccountName) {
+        $("#txt_accountcode").val(ChildCode)
+        clickclose();
+        rgrid_trans_account();
+        //alert(arrayName[lvlid] + ' ' + $("#li_title").text())
+        $("#lbl_Accountname").html(AccountName);
+        $("#lbl_Accountname_full").html($("#li_title").text() + ' > ' + AccountName);
+    }
+</script>
+<div class="modal" id="modal_subaccount" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title"></h4>
+            </div>
+            <div id="body_details_subaccount" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_back()" type="button" class="btn btn-success pull-left"><i class="fa fa-backward"></i> Back</button>
+                @*<button onclick="clickOK()" type="button" class="btn btn-default"><i class="fa fa-check"></i>OK</button>*@
+                <button type="button" class="btn btn-default" onclick="clickclose()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

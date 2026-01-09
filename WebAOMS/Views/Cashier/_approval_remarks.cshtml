@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        
+        <div class="row"> 
+            <form id="frm_coa" class="form-horizontal" style="padding-top:10px" role="form">
+
+                <div class="col-md-12 padding10">
+                    <label for="exampleFormControlTextarea5">Remarks</label>
+                    @*<div  class="pull-right">
+                <a href="#" onclick="addRemark()" style="color:darkseagreen"><b>Edit</b></a>
+            </div>*@
+
+                    <textarea class="form-control" name="remark" id="txt_remark" rows="4">@ViewBag.Remarks</textarea>
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
+<script>
+
+    function btn_save_remarks(isApprove) {
+        startSpin()
+        $.post('@Url.Action("SaveRemarks", "Cashier")',
+            { trnno: $("#txt_trnno").val(), remark: $("#txt_remark").val(), isApprove: isApprove }
+        , function (r) {
+            if (r.code == 6) {
+               
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                $("#mdl_jev_addremarks").modal("hide");
+                rgrid_trans_account()
+            }
+
+            else {
+                stopSpin()
+                mg.warning("Access Denied")
+            }
+        })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+</script>

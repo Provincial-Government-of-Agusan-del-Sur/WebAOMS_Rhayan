@@ -1,0 +1,345 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .zdex {
+        z-index: 500;
+    }
+
+    .modal-dialog-full {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content-full {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+</style>
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Statement of Expenses(comparative per office)</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body" >
+            <div class="col-lg-12 no-padding" style="padding-bottom:10px!important">
+                <div class="col-md-3 no-padding"  hidden>
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Fiscal Year:</span>
+                        </span>
+                    </div>
+                    <script>
+                        function office_para() {
+                            var year = $('#dtp_to').data("kendoDatePicker").value().getFullYear();
+                            return { year: year }
+                        }
+                        function refreshGrid() {
+                            startSpin()
+                            //$('#div_tracking_3').show()
+                            //$('#div_tracking_1').hide()
+                            //$('#div_tracking_2').hide()
+                            
+                            var grid = $("#grid_obligate_bySector").data("kendoGrid");
+                            grid.dataSource.read()
+
+                            
+                            var grid1 = $("#grid_obligate_bySector_summary").data("kendoGrid");
+                            grid1.dataSource.read()
+                            //r_oblig_grid()
+                        }
+                    </script>
+                    <div class="byexym liZmnb">
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_to")
+                        .Format("yyyy")
+                        .Value(ViewBag.date)
+                        .Start(CalendarView.Decade)
+                        .Depth(CalendarView.Decade)
+                        .HtmlAttributes(new { type = "text" })
+                        )
+                    </div>
+                </div>
+                    @*<button class="btn btn-equal" onclick="refreshGrid()" type="button"><i class="fa fa-search"></i></button>*@
+                <div class="col-sm-9 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Account Name:</span>
+                        </span>
+                    </div>
+
+                    <div class="byexym liZmnb">
+                        @(Html.Kendo().DropDownList()
+                    .Name("Account")
+                    .DataTextField("AccountName")
+                    .DataValueField("Accountcode")
+                    .Filter("Contains")
+                    //.AutoBind(true)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("dropdown_get_expenses", "Query");
+                        });
+                    })
+                    .Events(e => e.Change("refreshGrid"))
+                    .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+                </div>
+            </div>
+        <script>
+            var Isreset = false;
+            function click_reset() {
+                Isreset = true;
+                refreshGrid();
+            }
+           
+            function summary_para() {
+                var to = $('#dtp_to').data('kendoDatePicker').value();
+                return { to: to, isReset: Isreset, childcode: $("#Account").data("kendoDropDownList").value() }
+            }
+            function Success_event() {
+                stopSpin()
+                Isreset = false;
+                var grid = this;
+                $(".k-grouping-row").each(function (e) {
+                    grid.collapseGroup(this);
+                });
+            }
+        </script>
+    </div>
+</div>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Query Result</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+             @*   <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh" onclick="click_reset()"> Sync  </i></a>*@
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close" ><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px;">
+        <script>
+            function para_coa (){
+                return { IS_id: $("#dp_is_name").data("kendoDropDownList").value() }
+            }
+
+            function r_grid() {
+                var grid = $("#grid_tracking_form").data("kendoGrid");
+                grid.dataSource.read();
+            }
+            function edit_logs() {
+
+            }
+            function open_details_account(year, rcenterid, accountname) {
+
+                startSpin()
+                $.post('@Url.Action("index_expenses_details", "Query")', { year: year, childcode: $("#Account").data("kendoDropDownList").value(), rcenterid: rcenterid,accountname:accountname }
+                    , function (r) {
+
+                        var header = "Transaction Details";
+                        stopSpin()
+                        $("#h_newstatus_id").html(header);
+                        $("#body_newstatus").html(r)
+                        $("#mdl_newstatus").modal("show");
+                    })
+            }
+        </script>
+
+        <div class="row">
+           @(Html.Kendo().Grid<WebAOMS.Models.ufn_expenses_byyear_Result>()
+                .Name("grid_obligate_bySector")
+                .Excel(excel => excel
+                .FileName("Expenses-" + System.DateTime.Today.ToString("MM-dd-yyyy") + ".xlsx")
+                .Filterable(true)
+                )
+                .Columns(columns =>
+                {
+                    //columns.Bound("OfficeName").Title("Office Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    //columns.Bound("programName").Title("Program Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    columns.Bound(m => m.AccountName).Title("Account Name").Width(500).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    //columns.Bound(m => m.AccountChildName).Title("Function Code").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    // columns.Bound(m => m.C2011).Title("2011").Width(120).Format("{0:N2}").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2012).Title("2012").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2012','#=rcenterid#','#=AccountName#')\">#if(C2012 === null){#  #}else{# #= kendo.toString(C2012, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2013).Title("2013").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2013','#=rcenterid#','#=AccountName#')\">#if(C2013 === null){#  #}else{# #= kendo.toString(C2013, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}# </div>").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2014).Title("2014").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2014','#=rcenterid#','#=AccountName#')\">#if(C2014 === null){#  #}else{# #= kendo.toString(C2014, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2015).Title("2015").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2015','#=rcenterid#','#=AccountName#')\">#if(C2015 === null){#  #}else{# #= kendo.toString(C2015, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2016).Title("2016").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2016','#=rcenterid#','#=AccountName#')\">#if(C2016 === null){#  #}else{# #= kendo.toString(C2016, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}# </div>").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2017).Title("2017").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2017','#=rcenterid#','#=AccountName#')\">#if(C2017 === null){#  #}else{# #= kendo.toString(C2017, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2018).Title("2018").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2018','#=rcenterid#','#=AccountName#')\">#if(C2018 === null){#  #}else{# #= kendo.toString(C2018, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+
+                    columns.Bound(m => m.C2019).Title("2019").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2019','#=rcenterid#','#=AccountName#')\">#if(C2019 === null){#  #}else{# #= kendo.toString(C2019, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}# </div>").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2020).Title("2020").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2020','#=rcenterid#','#=AccountName#')\">#if(C2020 === null){#  #}else{# #= kendo.toString(C2020, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+
+                    columns.Bound(m => m.C2021).Title("2021").Width(120).Format("{0:N2}").ClientTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"open_details_account('2021','#=rcenterid#','#=AccountName#')\">#if(C2021 === null){#  #}else{# #= kendo.toString(C2021, 'n') #  #}#</a></div>").ClientFooterTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.Total).Title("Total").Width(120).Format("{0:N2}").ClientFooterTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'><a href='\\#' onclick=\"\">#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</a></div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+
+                    columns.Bound("OfficeName").Title("Office Name").Width(0).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).ClientGroupHeaderTemplate("#= value#").ClientTemplate("<div></div>").Lockable(false);
+                    // columns.Bound("AccountName").Title("OOE").Width(0).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).ClientGroupHeaderTemplate("#= value#").ClientTemplate("<div></div>").Lockable(false);
+                })
+                //.Groupable(g => g.ShowFooter(true))
+                .AutoBind(true)
+
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                .Mode(GridSelectionMode.Single)
+                .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("Result_expenses_byyear_read", "Query").Data("summary_para"))
+                    .PageSize(10000)
+                    .Group(group => group.Add("OfficeName", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                //.Group(group => group.Add("OOECode", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                // .Group(group => group.Add("AccountName", typeof(string), System.ComponentModel.ListSortDirection.Descending))
+
+                .Aggregates(
+                aggregates =>
+                {
+                    aggregates.Add(a => a.C2012).Sum();
+                    aggregates.Add(a => a.C2013).Sum();
+                    aggregates.Add(a => a.C2014).Sum();
+                    aggregates.Add(a => a.C2015).Sum();
+                    aggregates.Add(a => a.C2016).Sum();
+                    aggregates.Add(a => a.C2017).Sum();
+                    aggregates.Add(a => a.C2018).Sum();
+                    aggregates.Add(a => a.C2019).Sum();
+                    aggregates.Add(a => a.C2020).Sum();
+                    aggregates.Add(a => a.C2021).Sum();
+                    aggregates.Add(a => a.Total).Sum();
+                }
+                 )
+                )
+
+                .Events(e => e.DataBound("Success_event"))
+                .Resizable(resize => resize.Columns(true))
+
+        )
+        </div>
+    </div>
+</div>
+
+@* Summary *@
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Summary</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                @*   <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh" onclick="click_reset()"> Sync  </i></a>*@
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px;">
+
+        <div class="row">
+            @(Html.Kendo().Grid<WebAOMS.Models.ufn_expenses_byyear_Result>()
+                .Name("grid_obligate_bySector_summary")
+                .Excel(excel => excel
+                .FileName("Expenses-" + System.DateTime.Today.ToString("MM-dd-yyyy") + ".xlsx")
+                .Filterable(true)
+                )
+                .Columns(columns =>
+                {
+                    //columns.Bound("OfficeName").Title("Office Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    //columns.Bound("programName").Title("Program Name").Width(400).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    columns.Bound(m => m.AccountName).Title("Account Name").Width(500).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    //columns.Bound(m => m.AccountChildName).Title("Function Code").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Locked(true).Lockable(false);
+                    // columns.Bound(m => m.C2011).Title("2011").Width(120).Format("{0:N2}").Format("{0:N2}").FooterHtmlAttributes(new { style = "text-align:right" }).ClientGroupHeaderColumnTemplate("<div style='width:100%;text-align:right'>#if(sum === null){#  #}else{# #= kendo.toString(sum, 'n') #  #}#</div>").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2012).Title("2012").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2013).Title("2013").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2014).Title("2014").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2015).Title("2015").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2016).Title("2016").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2017).Title("2017").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2018).Title("2018").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+
+                    columns.Bound(m => m.C2019).Title("2019").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right", @class = "table-header-cell" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.C2020).Title("2020").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+
+                    columns.Bound(m => m.C2021).Title("2021").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+                    columns.Bound(m => m.Total).Title("Total").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" }).Lockable(false);
+
+                   
+                   
+                })
+                //.Groupable(g => g.ShowFooter(true))
+                .AutoBind(true)
+
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                .Mode(GridSelectionMode.Single)
+                .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("Result_expenses_byyear_summary_read", "Query").Data("summary_para"))
+                    .PageSize(10000)
+                //.Group(group => group.Add("OOECode", typeof(string), System.ComponentModel.ListSortDirection.Ascending))
+                // .Group(group => group.Add("AccountName", typeof(string), System.ComponentModel.ListSortDirection.Descending))
+
+          
+                )
+
+                .Resizable(resize => resize.Columns(true))
+
+            )
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function removezindex() {
+        $("#mdl_newstatus").removeClass("zdex");
+    }
+</script>
+<div class="modal" id="mdl_newstatus" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_newstatus_id" class="modal-title">Update the Particular</h4>
+            </div>
+            <div id="body_newstatus" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

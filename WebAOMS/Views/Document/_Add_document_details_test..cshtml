@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <form id="stepForm">
+                        <!-- Step 1 -->
+                        <div id="step1">
+                            <h3>Step 1</h3>
+                            <div class="form-group">
+                                <label for="field1">Field 1</label>
+                                <input type="text" class="form-control" id="field1">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="validateStep1()">Next</button>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div id="step2" style="display: none;">
+                            <h3>Step 2</h3>
+                            <div class="form-group">
+                                <label for="field2">Field 2</label>
+                                <input type="text" class="form-control" id="field2">
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="validateStep2()">Next</button>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div id="step3" style="display: none;">
+                            <h3>Step 3</h3>
+                            <div class="form-group">
+                                <label for="field3">Field 3</label>
+                                <input type="text" class="form-control" id="field3">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals -->
+<div class="modal fade" id="modalStep1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Step 1</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="modalField1">Field 1</label>
+                    <input type="text" class="form-control" id="modalField1">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="validateModalStep1()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalStep2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Step 2</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="modalField2">Field 2</label>
+                    <input type="text" class="form-control" id="modalField2">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="validateModalStep2()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('#modalStep1').modal('show');
+    });
+
+    function validateModalStep1() {
+      var field1Value = $('#modalField1').val();
+      if (field1Value.trim() === '') {
+        alert('Field 1 is required!');
+        return;
+      }
+      $('#modalStep1').modal('hide');
+      $('#modalStep2').modal('show');
+    }
+
+    function validateModalStep2() {
+      var field2Value = $('#modalField2').val();
+      if (field2Value.trim() === '') {
+        alert('Field 2 is required!');
+        return;
+      }
+      $('#modalStep2').modal('hide');
+      $('#stepForm').submit();
+    }
+</script>

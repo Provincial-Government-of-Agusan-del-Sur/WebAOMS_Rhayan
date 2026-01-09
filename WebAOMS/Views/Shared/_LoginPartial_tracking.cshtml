@@ -1,0 +1,36 @@
+﻿
+
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-left">
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Track and Trace", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", style = "font-size:22px!important" })</li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Home" })
+        </li>
+        <li>
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        </li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-left">
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Track and Trace", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink",style="font-size:22px!important" })</li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        @*<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Search", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

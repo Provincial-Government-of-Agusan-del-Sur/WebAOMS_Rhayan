@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<style>
+
+</style>
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        
+        <div class="row">
+            <form id="frm_coa" class="form-horizontal" style="padding-top:10px" role="form">
+                <input id="txt_ChartAccountChildID" name="ChartAccountChildID" value="@ViewBag.ChartAccountChildID" hidden />
+                <input id="txt_ChartAccountParentID" name="AccountChildParentID" value="@ViewBag.AccountChildParentID" hidden />
+                <input id="txt_ChildCode" name="ChildCode" value="@ViewBag.ChildCode" hidden />
+                <input id="txt_ChartAccountChildCode" name="ChartAccountChildCode" value ="@ViewBag.ChartAccountChildCode" hidden />
+                <input id="txt_isActive" name="isActive" value="@ViewBag.isActive" hidden />
+
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="code" class="control-label">Account Code:</label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-3">
+                        <input name="code" id="txt_code" class="form-control" placeholder="Code" style="text-align:center" value="@ViewBag.code" type="text">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="Sex" class="control-label">Level No.:</label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-3">
+                        <input name="levelNo" id="txt_leveno" class="form-control" style="text-align:center" readonly value="@ViewBag.levelNo" placeholder="Level Number" type="text">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="AccountName" class="control-label">Account Name:</label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-9">
+                        <textarea name="AccountChildName" id="txt_AccountChildName" class="form-control"  placeholder="AccountName" type="text">@ViewBag.AccountChildName</textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="Address" class="control-label">Ending Balance</label>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-3">
+                        <input name="EndingBalance" id="txt_EndingBalance" class="form-control" placeholder="EndingBalance" type="text">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div data-toggle="buttons">
+                            <label id="lblcheck_include" class="btn checkbox-inline btn-checkbox-primary-inverse">
+                            <input id="chck_include" type="checkbox">Active</label>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="Address" class="control-label">Mapped To</label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        @(Html.Kendo().DropDownList()
+                              .Name("ClaimantTypeID")
+                              .DataTextField("ClaimantType")
+                              .DataValueField("ClaimantID")
+                              .Filter("Contains")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Get_ClaimantType", "ChartOfAccounts");
+                                  });
+                              })
+                              .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+
+
+                </div>
+                <script>
+                    function para_change() {
+                        return {parentcode:parent_code}
+                    }
+                </script>
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="Address" class="control-label">Change to</label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        @(Html.Kendo().DropDownList()
+                              .Name("dp_changeid")
+                              .DataTextField("acountname")
+                              .DataValueField("ChartAccountChildID")
+                              .Filter("Contains")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Get_AccountToChange", "ChartOfAccounts").Data("para_change");
+                                  });
+                              })
+                              .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+                    
+
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="Address" class="control-label"></label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10">
+                        <button onclick="warnupdate_accountingEntries()" type="button" class="btn btn-sm"><i class="fa fa-save"></i> Update the accounting entries to this code</button> @*<input value="@ViewBag.ChartAccountChildID" type="text"/>*@
+                    </div>
+                    
+                </div>
+</form>
+        </div>
+       
+        <div class="row">
+           
+        </div>
+    </div>
+</div>
+
+<script>
+    var mg = new mgsInfo()
+    $(document).ready(function () {
+        $("#txt_EndingBalance").number(true, 2);
+        $("#h_subaccount_edit_id").html("Update account")
+        $("#id_savecoa").show()
+        $("#id_deletecoa").show()
+        if ("@ViewBag.isActive" == "True") {
+            $('#lblcheck_include').addClass("active");
+            $("#chck_include").attr('checked', 'checked');
+        }
+        else {
+            $('#lblcheck_include').removeClass("active");
+        }
+        loadselected_account()
+        loadselected_claimanttype()
+    })
+    function loadselected_account() {
+        var fund = $("#dp_changeid").data("kendoDropDownList");
+        fund.value(@ViewBag.ChartAccountChildID)
+    }
+
+    function loadselected_claimanttype() {
+        var cbo = $("#ClaimantTypeID").data("kendoDropDownList");
+        cbo.value(@ViewBag.ClaimantTypeID)
+    }
+    function saveCOA() {
+        startSpin()
+        var include = $('#chck_include').prop('checked');
+
+        if (include == true) {
+            $("#txt_isActive").val("true")
+        }
+        else {
+            $("#txt_isActive").val("false")
+        }
+
+        $("#txt_ChildCode").val(arrayChildCode[lvlid])
+        var form = $('#frm_coa')
+        $.post('@Url.Action("IUChartOfAccountsChild", "ChartOfAccounts")',
+            form.serialize()
+        , function (r) {
+            if (r == 6) {
+                refreshGrid();
+                toastr.success("Successfully Saved...!", "Done")
+                closeEditAccount()
+                stopSpin()
+            }
+        })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    toastr.warning(error, 'System Message');
+        //});
+    }
+
+    function deleteCOA() {
+        startSpin()
+        $.post('@Url.Action("deleteChartOfAccountsChild", "ChartOfAccounts")',
+            { ChartAccountChildID: $("#txt_ChartAccountChildID").val() }
+        , function (r) {
+            if (r == 6) {
+                refreshGrid();
+                toastr.success("Deleted Successfully...!", "Done")
+                closeEditAccount()
+            }
+            else {
+                toastr.warning("Account in used, unable to delete the account.", "System Message")
+            }
+            stopSpin()
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            toastr.warning(error, 'System Message');
+        });
+    }
+
+    function warnupdate_accountingEntries() {
+        
+        mg.boxYesNo("Are you sure you want to update the accounting entries to this code?", "update_coaEntries()")
+    }
+
+    function update_coaEntries() {
+        startSpin()
+        $.post('@Url.Action("updateChartAccountID", "ChartOfAccounts")',
+            { ChartAccountChildID: $("#txt_ChartAccountChildID").val(), ChangeChartAccountChildID: $("#dp_changeid").data("kendoDropDownList").value() }
+        , function (r) {
+            if (r == 6) {
+
+                toastr.success("Update Successfully...!", "Done")
+                mg.mgsbox_close();
+            }
+            else {
+                toastr.warning("Restricted, unable to update the accouting entries.", "System Message")
+            }
+            stopSpin()
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            toastr.warning(error, 'System Message');
+        });
+    }
+</script>

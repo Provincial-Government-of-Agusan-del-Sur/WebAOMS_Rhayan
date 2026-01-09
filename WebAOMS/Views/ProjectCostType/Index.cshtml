@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="page-block">
+        <div class="page-block-inside border rounded bg-color3 title-panel">
+            <span class="bg-dark icon-panel"><i class="fa fa-tasks fa-lg"></i></span><i class="tri-shape"></i>
+            <div class="title" style="font-size: 18px; font-family: 'Segoe UI Light_', 'Open Sans Light', Verdana, Arial, Helvetica, sans-serif; line-height: 1.0;">&nbsp;ADD, EDIT, DELETE PROJECT COST TYPE</div>
+        </div>
+        <div class="border rounded" style="padding: 5px;">
+            <div class="float-left" style=" height: 100%; border: 1px solid #dadada; margin-right: 5px;">
+                @Html.Partial("_Details")
+            </div>
+            <div class="float-left" style="width: 453px;">
+                @Html.Partial("_grid")
+            </div>
+            <div class="clearfix top-5"></div>
+        </div>
+    </div>
+    <div class="page-block-inside">
+        <div class="block mb-3" style="margin: -5px 0 0px 0; width: 100%;">
+            <div class="float-right" style="margin-right: 5px;">
+                <button onclick="addnewprojectCostType()" class="btn btn-primary">
+                    <i class="fa fa-plus fa-lg"></i> New Project Cost Type
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    Index_Title('Project Cost Type Classification');
+  });
+</script>

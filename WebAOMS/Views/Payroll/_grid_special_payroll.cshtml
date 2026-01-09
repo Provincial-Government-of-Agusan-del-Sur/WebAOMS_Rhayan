@@ -1,0 +1,57 @@
+﻿
+<div class="box" style="padding-bottom:10px">
+    <div class="box-body">
+        <div class="col-lg-12" style="height:100%">
+            <div>
+                <script>
+                    function grid_employee_para() {
+                        var monthyear = kendo.toString($('#DT_printing_period').data('kendoDatePicker').value(), 'MMyyyy').toString()
+                        return {
+                            monthyear: monthyear
+                            , compensationID: $("#ddp_compensation").data("kendoDropDownList").value()
+                            , amountType: $("#amountOptionID").val()
+                            , value: getAmount()
+                            , employmentStatusArray: multiselect.value()
+                        }
+                    }
+                </script>
+                @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_employee_compensation")
+                    .Sortable()
+                    .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer;height:400px" })
+                                    .Pageable(pager => pager
+                .Refresh(true))
+                .Scrollable()
+                .Selectable(selectable => selectable
+                .Mode(GridSelectionMode.Single))
+                .AutoBind(true)
+                .Columns(columns =>
+                {
+                    columns.Bound("EmpName").Width(200).Title("Employee Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("Position").Width(50).Title("Position").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("officeName").Width(200).Title("OFfice Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("Amount").Width(80).Title("Amount").Format("{0:n2}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" });
+                    columns.Template(@<text></text>)
+                    .Width(100)
+                    .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                    .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"removeIndi_togrid('#=t_compensation_tempID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-trash\"></i></button> <button data-original-title=\"recompute\" type=\"button\" onclick=\"edit_col_amount('#=eid#','#=EmpName#','#=t_compensation_tempID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-pencil\"></i></button>");
+                })
+                .DataSource(dataSource => dataSource
+                .Ajax()
+                        .PageSize(1000)
+                .ServerOperation(false)
+                .Read(read => read.Action("LoadGrid_Compensation", "RegularPayroll").Data("grid_employee_para"))
+                )
+                .Resizable(resize => resize.Columns(true))
+                )
+            </div>
+            <div class="row" style="padding-top:10px"></div>
+            <div>
+                <button onclick="browseEmp()" class="btn btn-default"> <i class="fa fa-group"></i> Browse Employee</button>
+                <button id="btn_removeAll" class="btn btn-warning"><i class="fa fa-trash"></i> Remove All</button>
+                <button id="btn_post" class="btn btn-success"><i class="fa fa-upload"></i> Post</button>
+            </div>             
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "Reconcilliation";
+    ViewBag.Title_mini = "Reconcilliation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Criteria</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body">
+
+        <div id="payrollType-1" class="col-lg-6 no-padding">
+            <div class="col-lg-12 no-padding" style="padding-bottom:10px!important">
+                From
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+                    .Format("MMMM dd, yyyy")
+                    .Value("1/1/2019")
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                )
+                To
+                @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value("12/31/2019")
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                )
+                <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+            </div>
+
+        </div>
+
+        <script>
+                function para_dp() {
+
+                    return {claimantName:""}
+                }
+        </script>
+        <div id="payrollType-3" class="col-lg-12 no-padding" style="display:block">
+            
+            <div class="col-lg-12 no-padding">
+                @(Html.Kendo().ComboBox()
+                      .Name("dp_criteria")
+                      .Placeholder("Select Criteria...")
+                     .HtmlAttributes(new { style = "width:100%; text-align:left;" })
+                    .DataTextField("Name")
+                    .DataValueField("ID")
+                    .AutoBind(true)
+                      .Filter("contains")
+
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("get_criteria", "Reconciliation");
+
+                          });
+                      })
+                      .Events (e=> e.Change("change_criteria"))
+                )
+            </div>
+
+        </div>
+
+        <script>
+            function change_criteria() {
+                var grid = $("#grid_tracking").data("kendoGrid");
+                grid.dataSource.read()
+            }
+                function refrehGrid() {
+                    if ($("#gridTypeOptionID").val() ==1){
+                        var grid = $("#grid_tracking").data("kendoGrid");
+                        grid.dataSource.read()
+                    }
+                    else if ($("#gridTypeOptionID").val() == 2) {
+                        var grid = $("#grid_monitoring").data("kendoGrid");
+                        grid.dataSource.read()
+                    }
+                }
+
+                function summary_para() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    var criteria = $('#dp_criteria').data('kendoComboBox').value()
+                    return { from: from, to: to, ID: criteria}
+                }
+        </script>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Transaction List</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /*.k-loading-mask {
+                display: none !important;
+            }*/
+    </style>
+    <div class="box-body">
+        <div id="div_tracking_1" class="col-lg-12 no-padding gridhideoptiondiv" style="display:block">
+            @(Html.Kendo().Grid<dynamic>()
+                .Name("grid_tracking")
+                .Columns(columns =>
+                {
+                    columns.Bound("JEVno").Title("JEVno").Width(120).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Dvno").Title("Dvno").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Checkno").Title("Checkno").Width(90).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Checkdate").Title("Checkdate").Width(90).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Particular").Title("Particular").Width(200).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Acctng_Amount").Title("Acctng_Amount").Width(120).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+                    columns.Bound("Checkno_PTO").Title("Checkno_PTO").Width(90).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("checkdate_PTO").Title("checkdate_PTO").Width(90).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("CheckAmount_PTO").Title("CheckAmount_PTO").Width(100).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Particular_PTO").Title("Particular_PTO").Width(200).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Accountname_PTO").Title("Accountname_PTO").Width(200).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                })
+
+                .Filterable()
+                .AutoBind(false)
+                .HtmlAttributes(new { style = "height: 500px;" })
+                .Scrollable()
+                .Selectable(m => m
+                            .Mode(GridSelectionMode.Single)
+                            .Type(GridSelectionType.Row))
+                .Sortable()
+                .Pageable(pageable => pageable
+                    .Refresh(true)
+                    )
+                .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .Read(read => read.Action("Result_Criteria_read", "Reconciliation").Data("summary_para"))
+                    .PageSize(200)
+                )
+            )
+        </div>
+
+       
+        </div>
+
+
+        <script>
+                $("#export").click(function (e) {
+                        var grid = $("#grid_tracking").data("kendoGrid");
+                        grid.saveAsExcel();
+                });
+        </script>
+    </div>
+    <hr />
+    <div class="box-footer">
+        <div style="height:10px">
+
+        </div>
+    </div>
+<script>
+    function view_trans_details(dvno) {
+        startSpin()
+        $.post('@Url.Action("_partial_view_transdetails", "PreAudit")', {dvno:dvno}, function (r) {
+            stopSpin()
+            $("#body_details_grid").html(r)
+            $("#modal_transaction_details").modal("show");
+        })
+    }
+</script>
+
+<div class="modal" id="modal_transaction_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Transaction Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

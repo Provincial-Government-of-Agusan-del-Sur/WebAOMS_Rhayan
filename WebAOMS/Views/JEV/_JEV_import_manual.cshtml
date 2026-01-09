@@ -1,0 +1,313 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body" style="padding-bottom:0px!important">
+        <div class="row">
+                <script>
+                        function r_dp_accountname() {
+                            var cbo_accountname = $("#dp_accountname").data("kendoDropDownList");
+                            cbo_accountname.dataSource.read();
+                            r_grid_Bathcno();
+
+                        }
+
+                        
+                        function r_grid_Bathcno() {
+                            var cbo_accountname = $("#Grid_batchno_payroll").data("kendoGrid");
+                            cbo_accountname.dataSource.read();
+                        }
+
+                        function refresh_import_grid() {
+                            var grid_batchno = $("#grid_empname").data("kendoGrid");
+                            grid_batchno.dataSource.read();
+                        }
+                </script>
+
+                    <div class="col-md-6">
+                        <div class="box-head no-padding" style="line-height:20px!important">
+                            <label for="Address" class="control-label">Payment Period</label>
+                        </div>
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_payrmentperiod")
+                        .Format("MMMM, yyyy")
+                        .Start(CalendarView.Year)
+                        .Depth(CalendarView.Year)
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text", @style = "width:100%" })
+                        .Events(e => e.Change("r_dp_accountname"))
+                        )
+                    </div>
+                   
+
+                    <div class="col-md-6">
+                        <div class="box-head no-padding"  style="line-height:20px!important">
+                            <label for="Address" class="control-label">Employment Status</label>
+                        </div>
+
+                        @(Html.Kendo().DropDownList()
+                          .Name("dp_empstatus")
+                          .DataTextField("name")
+                          .DataValueField("StatusID")
+                          .Filter("Contains")
+                          .SelectedIndex(10)
+                          .DataSource(source =>
+                          {
+                              source.Read(read =>
+                              {
+                                  read.Action("DataSource_Get_EmploymentStatus", "JEV");
+                              });
+                          })
+                          .Events(e => e.Change("r_dp_accountname"))
+                            .HtmlAttributes(new { style = "width: 100%" })
+                            )
+
+                    </div>  
+                <div class="col-md-12">
+                    <div class="box-head no-padding" style="line-height:20px!important">
+                        <label for="Accountname" class="control-label">Account Name</label>
+                    </div>
+                    <script>
+                        function para_payroll_mapped() {
+                            return { PayrollType: $("#dp_empstatus").data("kendoDropDownList").value() }
+                        }
+                    </script>
+                        @(Html.Kendo().DropDownList()
+                        .Name("dp_accountname")
+                        .DataTextField("Accountname")
+                        .DataValueField("ChartAccountChildID")
+                        .Filter("Contains")
+                        .AutoBind(false)
+                        .DataSource(source =>
+                        {
+                            source.Read(read =>
+                            {
+                                read.Action("DataSource_Get_Accountname_payroll_mapped", "JEV").Data("para_payroll_mapped");
+                            });
+                        })
+                        .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                </div>
+            <script>
+                function load_emp(){
+                    //alert(getarrayoffice())
+                    refresh_import_grid()
+                }
+            </script>
+            <div class="col-md-6"  style="padding-top:5px!important ">
+                 
+
+                
+                    <div data-toggle="buttons">
+                        @(Html.Kendo().Button()
+                        .Name("btn_load")
+                        .Content("<i class=\"fa fa-refresh fa-lg \"></i> Load")
+                        .HtmlAttributes(new { type = "button", @class = "k-button" })
+                        .Events(ev => ev.Click("load_emp")))
+                        
+                        @*@(Html.Kendo().Button()
+                        .Name("btn_browse")
+                        .Content("<i class=\"fa fa-refresh fa-lg \"></i> Browse Excel File")
+                        .HtmlAttributes(new { type = "button", @class = "k-button" })
+                        .Events(ev => ev.Click("browse_excel")))*@
+
+
+                        <label class="btn radio-inline btn-radio-success-inverse active pull-right">
+                            <input name="isDebitOption" id="isDebitOption1" value="1" type="radio">Debit
+                        </label>
+                        <label class="btn radio-inline btn-radio-success-inverse pull-right">
+                            <input name="isDebitOption" id="isDebitOption2" value="0" type="radio">Credit
+                        </label>
+                        <input id="isDebitOptionID" value="1" hidden />
+                        <script>
+                                $(function () {
+                                    $('input[name="isDebitOption"]').bind('change', function () {
+                                        $("#isDebitOptionID").val($(this).val())
+                                        //alert($(this).val())
+                                    });
+                                });
+                        </script>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding-top:5px!important ">
+
+                <div class="input-group no-padding col-md-12">
+                    <input id="txt_search_batchno" type="text" class="form-control navbar-input" placeholder="Search...">
+                    <span class="input-group-btn">
+
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                    <script>
+                        
+                        function para_import() {
+                            var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+                            var month = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'MM').toString();
+                            return { year: year, month: month, payrollempstatus: $("#dp_empstatus").data("kendoDropDownList").value() }
+                        }
+
+                        function refresh_batchno_grid() {
+                            var grid_batchno = $("#Grid_batchno_payroll").data("kendoGrid");
+                            grid_batchno.dataSource.read();
+                        }
+                    </script>
+
+                    <div class="col-md-12" style="padding-top:5px;padding-bottom:5px">
+                            @(Html.Kendo().Grid<dynamic>()
+                            .Name("Grid_batchno_payroll")
+                            .Columns(columns =>
+                            {
+                                columns.Template(@<text></text>)
+                                .Width(13)
+                                .HtmlAttributes(new { style = "text-align:left;font-size:13px" })
+                                .HeaderHtmlAttributes(new { style = "text-align:left; font-size:13px" })
+                                .ClientTemplate("<div data-toggle='buttons'><label id='lblcheck_rata#=OfficeID#' class='btn checkbox-inline btn-checkbox-primary-inverse' style='padding:0px!important'><input id='chck_3_#=OfficeID#' class='chkb_3_' value='#=OfficeID#' type='checkbox'></label></div>");
+                                columns.Bound("OfficeID").Hidden();
+                                columns.Bound("OfficeName").Width(140).Title("Office Name/Batch No.");
+                            })
+                            //.HtmlAttributes(new { style = "min-height: 150px;" })
+                            .AutoBind(false)
+                            .HtmlAttributes(new { style = "height: 150px;" })
+                            .Scrollable()
+                            .Sortable()
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .PageSize(500)
+                            .ServerOperation(false)
+                            .Read(read => read.Action("grid_Get_batchno", "JEV").Data("para_import"))
+                            )
+
+                            )                        
+                     
+                    </div>
+                </div>
+                <script>
+                    function getarrayoffice(){
+                        var ary = [];
+                        var grid = $('#Grid_batchno_payroll').data('kendoGrid');
+                        var rec = grid.dataSource.data();
+
+                        var totalNumbers = rec.length;
+                        for (var i = 0; i < totalNumbers; i++) {
+                            var currentDataItem = rec[i]
+                            var chkboxs = document.getElementById('chck_3_' + currentDataItem.OfficeID);
+                            if (chkboxs.checked == true) {
+                                ary.push(currentDataItem.OfficeID)
+                            }
+                        }
+                        return ary.toString();
+                    }
+
+                    function param_grid_import() {
+
+                        var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+                        var month = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'MM').toString();
+                        var dp_emptatus = $("#dp_empstatus").data("kendoDropDownList").value();
+                        var dp_accountname = $("#dp_accountname").data("kendoDropDownList").value()
+                        if (dp_emptatus == '')
+                        {
+                            dp_emptatus = 0
+                        }
+                        if (dp_accountname == '') {
+                            dp_accountname = 0
+                        }
+                        return { month: month, year: year, officearrayid: getarrayoffice(), payrollempstatus: dp_emptatus, payreffid: dp_accountname }
+                    }
+
+                    function totalAmount(e) {
+                        var total = 0;
+                        var grid = $("#grid_empname").data("kendoGrid");
+                        var gridData = grid.dataSource.view();
+                        for (var i = 0; i < gridData.length; i++) {
+                            total += gridData[i].Amount;
+                        }
+                        $("#txt_total").val("Total Amount: " + addCommas(total.toFixed(2)));
+                        //if (total == 100) {
+                        //    $("#PercentError").hide();
+                        //} else {
+                        //    $("#PercentError").text('Currently Percent of Project = ' + total + '%.');
+                        //    $("#PercentError").show();
+                        //}
+                    }
+                </script>                
+                    <div class="col-md-12">
+                    @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_empname")
+                    .Columns(columns =>
+                    {
+                    columns.Bound("eid").Width(70).Title("Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Empname").Width(200);
+                    columns.Bound("Amount").Width(130).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+
+        })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 250px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_import_empname_byaccount", "JEV").Data("param_grid_import"))
+                        .PageSize(2000)
+                        .ServerOperation(false)
+                        .Sort(sort => sort.Add("EmpName").Ascending())
+                    )
+                    .Events(gridevents => gridevents.DataBound("totalAmount"))
+                    )
+                    </div>
+                </div>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        @*var datepicker = $("#dtp_post").data("kendoDatePicker");
+        datepicker.value('@ViewBag.postdate');*@
+    })
+
+    function save_import_entries() {
+        startSpin()
+        var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+        var month = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'MM').toString();
+        var employmentid = $("#dp_empstatus").data("kendoDropDownList").value();
+        var dp_batchno = getarrayoffice();
+        var dp_accountname = $("#dp_accountname").data("kendoDropDownList").value();
+        var isdebit = $("#isDebitOptionID").val();
+        var jevid = $("#txt_jevid").val();
+
+        if (dp_accountname == '')
+        {
+            toastr.warning("Invalid Office name/Batchno...!", 'System Message')
+            stopSpin()
+            return
+        }
+
+        $.post('@Url.Action("save_import_entries_byAccount", "JEV")',
+            { year: year, month: month, jevid: jevid, dp_batchno: dp_batchno, employmentid: employmentid, isdebit: isdebit, deductionid: dp_accountname }
+        , function (r) {
+            if (r.code == 6) {
+                stopSpin()
+                toastr.success(r.statusName, 'System Message');
+                //$("#body_import").html("")
+                //$("#mdl_import").modal("hide");
+                rgrid_main_account();
+            }
+            else {
+                toastr.warning(r.statusName, 'System Message');
+                stopSpin()
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>

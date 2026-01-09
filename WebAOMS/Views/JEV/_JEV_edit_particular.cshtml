@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                @*<li class="breadcrumb-item"><a href="#" onclick="clicksubAccount(@ViewBag.ChartAccountChildID)">@ViewBag.AccountChildName</a><input id="@ViewBag.ChartAccountChildID"hidden type="text"/></li>*@
+                <li id="li_title" class="breadcrumb-item"></li>
+
+            </ul>
+        </nav>
+        <div class="row"> 
+            <form id="frm_coa" class="form-horizontal" style="padding-top:10px" role="form">
+
+                <div class="form-group">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="AccountName" class="control-label">Particular</label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-9">
+                        <textarea name="Particular" id="txt_edit_Particular" class="form-control" placeholder="AccountName" rows="6" type="text">@ViewBag.particular</textarea>
+                    </div>
+                </div>
+                <div class="form-group pull-right">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <label for="Address" class="control-label">Gross Amount</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <input name="Gamount" id="txt_edit_Gamount" style="text-align:right" class="form-control" value="@ViewBag.Gamount" placeholder="Gross Amount" type="text">
+                    </div>
+
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(function () {
+            $('#txt_edit_Gamount').number(true, 2);
+
+        });
+    })
+    function btn_save_remarks() {
+        startSpin()
+        $.post('@Url.Action("Saveparticular", "JEV")',
+            { jevid: $("#txt_jevid").val(), particular: $("#txt_edit_Particular").val(), Gamount: $("#txt_edit_Gamount").val() }
+        , function (r) {
+            if (r.code == 6) {
+                $("#txt_particular").val($("#txt_edit_Particular").val())
+                $("#txt_GAmount").val($("#txt_edit_Gamount").val())
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                $("#mdl_jev_addremarks").modal("hide");
+            }
+            else {
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>

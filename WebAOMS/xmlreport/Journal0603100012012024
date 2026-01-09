@@ -1,0 +1,105 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevID" type="xs:int" minOccurs="0" />
+                <xs:element name="Date_" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ADANo" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="debit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundryDebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CreditAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="CreditAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="credit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundrycredit" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="debit1" type="xs:int" minOccurs="0" />
+                <xs:element name="debit2" type="xs:int" minOccurs="0" />
+                <xs:element name="debit3" type="xs:int" minOccurs="0" />
+                <xs:element name="credit1" type="xs:int" minOccurs="0" />
+                <xs:element name="credit2" type="xs:int" minOccurs="0" />
+                <xs:element name="credit3" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Sdebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Scredit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderby" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>ORLANDO P. EDICA, CPA</AccountingName>
+    <AccountingPosition>CITY ACCOUNTANT I</AccountingPosition>
+    <CompanyName>CITY OF TACURONG</CompanyName>
+    <CompanyAddress>City Hall Bldg., Alunan Highway, Tacurong City</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>AUTHORITY  TO DEBIT ACCOUNT DISBURSEMENTS  JOURNAL</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>For the month of December, 2024</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>ORLANDO P. EDICA, CPA</AccountantName>
+    <AccountantPosition>CITY ACCOUNTANT I</AccountantPosition>
+    <groupCount>3</groupCount>
+  </Table>
+  <Table1>
+    <jevID>0</jevID>
+    <Particular>Totals Carried Forward</Particular>
+  </Table1>
+  <Table2>
+    <debit1>50101010</debit1>
+    <debit2>50101020</debit2>
+    <debit3>50102010</debit3>
+    <credit1>10102010</credit1>
+    <credit2>20201010</credit2>
+    <credit3>29999990</credit3>
+  </Table2>
+  <Table3>
+    <Accountcode>Totals Carried Forward</Accountcode>
+    <orderby>1</orderby>
+  </Table3>
+</NewDataSet>

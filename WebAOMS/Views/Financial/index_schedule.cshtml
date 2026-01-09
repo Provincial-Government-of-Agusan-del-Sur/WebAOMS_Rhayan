@@ -1,0 +1,108 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    @@media (min-width: 768px) {
+        .modal-xl {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+</style>
+
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="box-body no-padding" style="min-width:350px!important">
+                    <div class="form-group-md">
+                        <div class="col-md-4">
+                            <div class="box-head no-padding">
+                                <h5 class="text-light">Select <strong>Fundtype</strong></h5>
+                            </div>
+                            @(Html.Kendo().DropDownList()
+                              .Name("dp_fundtype")
+                              .DataTextField("FundName")
+                              .DataValueField("FundID")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Getfundtype", "Journals");
+                                  });
+                              })
+                              .HtmlAttributes(new { style = "width: 100%" })
+                            )
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="box-head no-padding">
+                                <h5 class="text-light">Select <strong>Date</strong></h5>
+                            </div>
+                            @(Html.Kendo().DatePicker()
+                            .Name("dtp_to")
+                            .Format("MMMM dd, yyyy")
+                            .Value(DateTime.Now)
+                            .HtmlAttributes(new { type = "text" })
+                            )
+                        </div>
+                   
+                    </div>
+                    <div class="form-group-md">
+                        <div class="col-md-12" style="padding-bottom:10px;padding-top:10px!important">
+                            <button onclick="print_schedule()" class="btn btn-default"> <i class="fa fa-print"></i> Print Preview</button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>
+<script>
+    var isPreClosing = 1;
+    function print_schedule() {
+        var to = kendo.toString($('#dtp_to').data('kendoDatePicker').value(), 'MM/dd/yyyy').toString();
+        var fundid = $("#dp_fundtype").data("kendoDropDownList").value();
+
+        startSpin()
+        $.post('@Url.Content("~/Financial/print_schedule")', { fundid: fundid, to: to}
+            , function (r) {
+                stopSpin()
+            })
+    }
+
+    $(function () {
+        $('#chck_post_closing').change(function () {
+            if ($('#chck_post_closing').is(':checked')) {
+                isPreClosing = 0
+            }
+            else {
+                isPreClosing = 1
+            }
+        })
+    })
+
+
+</script>
+

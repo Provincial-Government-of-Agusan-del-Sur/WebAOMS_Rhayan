@@ -1,0 +1,272 @@
+﻿    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>rpt_doc</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+                /*<![CDATA[*/
+                div.html-root > ol, div.html-root > ul, div.html-root > p {
+                    margin-top: 0px;
+                }
+
+                .sheet .error {
+                    border: 1px solid red;
+                    color: red;
+                }
+                /* interactive page */
+                .interactive-page .sheet {
+                    margin: 10px;
+                }
+                /* print preview page */
+                .print-page {
+                    background-color: #ccc;
+                }
+
+                    .print-page > .sheet {
+                        border: 2px solid darkblue;
+                        /* centers the DIV horizontally */
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        -moz-box-shadow: 5px 5px 5px #888;
+                        -webkit-box-shadow: 5px 5px 5px #888;
+                        box-shadow: 5px 5px 5px #888;
+                    }
+
+                .sheet .layer {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0px;
+                    top: 0px;
+                }
+
+                .sheet .action {
+                    cursor: pointer;
+                }
+
+                .sheet div.action:hover {
+                    border: 1px solid #ddd;
+                    /*
+            -moz-box-shadow: 1px 1px 3px #888 inset
+            -webkit-box-shadow: 1px 1px 3px #888 inset
+            box-shadow: 1px 1px 3px #888 inset
+            z-index: 99
+            */
+                }
+
+                .sheet {
+                    position: relative;
+                    text-rendering: geometricPrecision;
+                }
+
+                .sheet {
+                    background-color: White;
+                }
+
+                .s0- {
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+
+                .s1- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: start;
+                    padding-left: 3px;
+                    padding-right: 3px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    border-bottom: 1px double Black;
+                }
+
+                .s2- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: center;
+                    position: absolute;
+                    word-wrap: normal;
+                    white-space: nowrap;
+                }
+
+                .s3- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: center;
+                    word-wrap: normal;
+                }
+
+                .s4- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    font-weight: bold;
+                    text-align: center;
+                    word-wrap: normal;
+                }
+
+                .s5- {
+                    font-family: "arial black";
+                    font-size: 15pt;
+                    color: Black;
+                    font-weight: bold;
+                    text-align: center;
+                    word-wrap: normal;
+                }
+
+                .s6- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: start;
+                    padding-left: 3px;
+                    padding-right: 1px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+
+                .s7- {
+                    font-family: "Arial";
+                    font-size: 12pt;
+                    color: Black;
+                    font-weight: bold;
+                    text-align: center;
+                    word-wrap: normal;
+                }
+
+                .s8- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: start;
+                    position: absolute;
+                    word-wrap: normal;
+                    white-space: nowrap;
+                }
+
+                .s9- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    font-weight: bold;
+                    text-align: start;
+                    word-wrap: normal;
+                }
+
+                .s10- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: start;
+                    word-wrap: normal;
+                }
+
+                .s11- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: justify;
+                    position: absolute;
+                    word-wrap: normal;
+                    width: 596px;
+                }
+
+                    .s11-:after {
+                        content: "";
+                        display: inline-block;
+                        width: 100%;
+                    }
+
+                .s12- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: justify;
+                    word-wrap: normal;
+                }
+
+                .s13- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: justify;
+                    position: absolute;
+                    word-wrap: normal;
+                    width: 372px;
+                }
+
+                    .s13-:after {
+                        content: "";
+                        display: inline-block;
+                        width: 100%;
+                    }
+
+                .s14- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: justify;
+                    position: absolute;
+                    word-wrap: normal;
+                    width: 547px;
+                }
+
+                    .s14-:after {
+                        content: "";
+                        display: inline-block;
+                        width: 100%;
+                    }
+
+                .s15- {
+                    font-family: "Arial";
+                    font-size: 10pt;
+                    color: Black;
+                    text-align: start;
+                }
+
+                .s16- {
+                    font-family: "Arial";
+                    font-size: 8pt;
+                    color: Black;
+                    font-style: italic;
+                    text-align: start;
+                    word-wrap: break-word;
+                    padding-left: 3px;
+                    padding-right: 3px;
+                    padding-top: 12px;
+                    padding-bottom: 0px;
+                }
+
+                .s17- {
+                    font-family: "Arial";
+                    font-size: 9pt;
+                    color: Black;
+                    text-align: start;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+
+                /*]]>*/
+        </style>
+    </head>
+    <body class="print-page">
+        <div class="sheet page1" style="padding-left:96px;padding-right:96px;padding-top:96px;padding-bottom:48px;width:602px;height:979px;">
+            <div class="layer">
+                @Html.Raw(ViewBag.script)
+            </div><div title="" style="position:absolute;left:96px;top:96px;width:0px;height:979px;"></div><div title="" style="position:absolute;left:698px;top:96px;width:0px;height:979px;"></div><div title="" style="position:absolute;left:96px;top:96px;width:602px;height:0px;"></div><div title="" style="position:absolute;left:96px;top:1075px;width:602px;height:0px;"></div>
+        </div>
+        <!-- Visual Studio Browser Link -->
+        <script type="application/json" id="__browserLink_initializationData">
+            {"appName":"Chrome","requestId":"f0ce42e3a5d8490dacef0d634b81ff33"}
+        </script>
+        <script type="text/javascript" src="http://localhost:3800/596cff70f369466db50466a2810f6a51/browserLink" async="async"></script>
+        <!-- End Browser Link -->
+    </body>
+</html>

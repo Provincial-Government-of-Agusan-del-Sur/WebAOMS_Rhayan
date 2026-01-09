@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewBag.Title = "_changePicture";
+    Layout = null;
+}
+<link href="~/Content/akot/2018.1.1/demo.css" rel="stylesheet" />
+<link href="~/Content/akot/2018.1.1/croppie.css" rel="stylesheet" />
+<script src="~/Scripts/croppie/croppie.js"></script>
+<div class="containerForPic" style="text-align:center">
+    <div class="col-lg-12" style="align-content:center;">
+        <div class="col-lg-12">
+            <div style="height:360px;padding-top:5px">
+                <div class="upload-demo-wrap">
+
+                    <div id="div_photo">
+
+                    </div>
+                </div>
+
+
+                <script>
+
+                    var $uploadCrop;
+
+                    function readFile(input) {
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+
+                            reader.onload = function (e) {
+                                $('.upload-demo').addClass('ready');
+                                $uploadCrop.croppie('bind', {
+                                    url: e.target.result
+                                }).then(function () {
+                                    console.log('jQuery bind complete');
+                                });
+
+                            }
+
+                            reader.readAsDataURL(input.files[0]);
+                        }
+                        else {
+                            swal("Sorry - you're browser doesn't support the FileReader API");
+                        }
+                    }
+
+                    $uploadCrop = $('#div_photo').croppie({
+                        viewport: {
+                            width: 250,
+                            height: 250
+                        },
+                        enableExif: true
+                    });
+
+                    $('#upload').on('change', function () { readFile(this); });
+
+
+
+                    function save50(result) {
+                        var src = result.src;
+                        src = src.replace('data:image/png;base64,', '').toString();
+                        $.ajax({
+                            type: 'POST',
+                            url: "@Url.Content("~/Account/UploadImage50")",
+                            data: '{ "imageData" : "' + src + '" }',
+                            contentType: 'application/json; charset=utf-8',
+                            dataType: 'json',
+                            success: function (data) {
+                            }
+                        });
+                    }
+
+                    function save400(result) {
+                        var src = result.src;
+                        src = src.replace('data:image/png;base64,', '').toString();
+                        $.ajax({
+                            type: 'POST',
+                            url: "@Url.Content("~/Account/UploadImage400")",
+                            data: '{ "imageData" : "' + src + '" }',
+                            contentType: 'application/json; charset=utf-8',
+                            dataType: 'json',
+                            success: function (data) {
+                                toastr.success("Successfully Save..", "Success")
+                                setTimeout(function () {
+                                    location.reload();
+                                }, 1000)
+                            }
+                        });
+                    }
+
+
+                    $('#btn_save_2file').on('click', function () {
+
+                        var w50 = parseInt(140, 10),
+                            h50 = parseInt(140, 10),
+                        size50 = 'viewport';
+                        size50 = { width: h50, height: h50 };
+
+                        var w400 = parseInt(400, 10),
+                            h400 = parseInt(400, 10),
+                        size400 = 'viewport';
+                        size400 = { width: w400, height: h400 };
+
+
+                        $uploadCrop.croppie('result', {
+                            type: 'canvas',
+                            size: size50,
+                            resultSize: {
+                                width: 50,
+                                height: 50
+                            }
+                        }).then(function (resp) {
+                            save50({
+                                src: resp
+                            });
+                        });
+
+                        $uploadCrop.croppie('result', {
+                            type: 'canvas',
+                            size: size400,
+                            resultSize: {
+                                width: 50,
+                                height: 50
+                            }
+                        }).then(function (resp) {
+                            save400({
+                                src: resp
+                            });
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="id_result">
+
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,282 @@
+﻿ @using WebAOMS.Models;
+    @{
+       
+        fmisEntities fmisdb = new fmisEntities();
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout_Public.cshtml";
+
+        
+    }
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Summary</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+
+            <div  class="col-lg-6 no-padding">
+                <div class="col-lg-12" style="padding-bottom:5px">
+                    From
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+                    
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("changedate"))
+                    )
+                    To
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("changedate"))
+                    )
+
+                    
+                </div>
+                <div id="div_pie_summary" class="col-lg-12">
+
+                </div>
+            </div>
+            
+            <script>
+                $(document).ready(function (){
+                    getdata();
+                    loadDatamonitoring();
+                    loadData_list();
+                
+                })
+                function getdata() {
+                    var url = '@Url.Action("Get_pei_summary_current", "PreAudit")';
+
+                    $.post(url, {}, function (e) {
+                        $("#div_pie_summary").html("");
+                        $("#div_pie_summary").html(e);
+                    })
+                    
+                }
+                function changedate() {
+                    getdata();
+                    var grid = $("#grid_monitoring").data("kendoGrid");
+                    grid.dataSource.read()
+
+                    var gridreturned = $("#grid_retured").data("kendoGrid");
+                    gridreturned.dataSource.read()
+
+                }
+                function summary_para() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    return { from: from, to: to }
+                }
+            </script>
+            <div class="col-lg-4 no-padding">
+               
+
+            </div>
+            <div class="col-lg-4 no-padding">
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Pre-Audit Transaction Monitoring</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="col-lg-12 no-padding">
+                <div class="input-group col-lg-6 left" style="padding-bottom:5px!important">
+                    <input id="txtsearchEmp" type="text" class="form-control navbar-input" placeholder="Search claimant">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-12 no-padding">
+                @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_monitoring")
+        .Columns(columns =>
+        {
+            columns.Bound("Dvno").Title("DVNO").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Particular").Title("Particular").Width(100).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Received").Title("Received").Width(60).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("ForAudit").Title("For Audit").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Audited").Title("Audited").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Hours").Title("Hours").Width(30).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 500px;" })
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            )
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("Audit_monitoring_read", "PreAudit").Data("summary_para"))
+            .PageSize(5)
+
+        )
+                )
+            </div>
+
+
+            <script>
+         
+                function loadDatamonitoring() {
+                    setTimeout(function () {
+                        var grid = $("#grid_monitoring").data("kendoGrid");
+                        grid.dataSource.read()
+                        loadDatamonitoring();
+                        getdata();
+                    }, 60000)
+                }
+
+                $('#txtsearchEmp').on('keydown', function (e) {
+                    var gridData = $("#grid_monitoring").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        if ($('#txtsearchEmp').val() == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+                            ISfn.applyFilter("Particular", $('#txtsearchEmp').val(), 'grid_monitoring')
+                            gridData.dataSource.sort({ field: "DTE", dir: "asc" });
+                        }
+                    }
+                })
+
+                $("#grid_monitoring").kendoGrid({
+                    // Grid configuration options...
+                    scrollable: false,
+                    pageable: {
+                        serverPaging: truea
+                    }
+                });
+
+                // Auto-paging function
+                function autoPagingGrid() {
+                    var gridDataSource = $("#grid_monitoring").data("kendoGrid").dataSource;
+                    var currentPage = gridDataSource.page();
+                    var totalPages = gridDataSource.totalPages();
+
+                    // Calculate the next page
+                    var nextPage = currentPage + 1;
+                    if (nextPage > totalPages) {
+                        nextPage = 1; // Go back to the first page if it's the last page
+                    }
+
+                    // Move to the next page
+                    gridDataSource.page(nextPage);
+                }
+
+                // Call autoPagingGrid function every 10 seconds (adjust interval as needed)
+                setInterval(autoPagingGrid, 10000);
+            </script>
+        </div>
+        <hr />
+        <div class="box-footer">
+            <div style="height:10px">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">List of Returned Transactions</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <style>
+            .k-loading-mask {
+                display: none !important;
+            }
+        </style>
+        <div class="box-body">
+            @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_retured")
+        .Columns(columns =>
+        {
+            columns.Bound("Dvno").Title("DVNO").Width(40).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Particular").Title("Particular").Width(100).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Received").Title("Received").Width(60).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("ForAudit").Title("For Audit").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Audited").Title("Audited").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Hours").Title("Hours").Width(30).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 500px;" })
+        .Scrollable()
+
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            )
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("Audit_List_read", "PreAudit").Data("summary_para"))
+            .PageSize(100)
+        )
+            )
+
+            <script>
+            
+
+                function loadData_list() {
+                    setTimeout(function () {
+                        var grid = $("#grid_retured").data("kendoGrid");
+                        grid.dataSource.read()
+                        loadData_list();
+                    }, 600000)
+                }
+            </script>
+        </div>
+        <hr />
+        <div class="box-footer">
+            <div style="height:10px">
+
+            </div>
+        </div>
+    </div>
+
+
+
+

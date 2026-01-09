@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+@using System.Data
+@using WebAOMS.Models
+@model DataSet
+
+<link href="~/Content/akot/2018.1.1/bs-stepper.min.css" rel="stylesheet" />
+<script src="~/Scripts/akot/bs-stepper.min.js"></script>
+
+
+<div class="box" style="width:100%;margin-bottom:0px!important;">
+    <div class="box-body" >
+        <div class="col-md-4" style="height:900px;border:solid 1px gray;overflow-y:auto">
+            <span class="bs-stepper-header" style="padding-top:15px;padding-bottom:15px"><b>Tracking History</b></span>
+            <div id="stepper4" class="bs-stepper vertical linear">
+                <div class="bs-stepper-header" role="tablist">
+@if (Model.Tables[0].Rows.Count > 0)
+{
+    foreach (DataRow row in Model.Tables[0].Rows)
+    {
+        if (row["user_eid"].ToString() == "0")
+        {
+            <div class="step" data-target="#test-vl-@row["rowno"]" style="text-align:left">
+                <span class="bs-stepper-circle">@row["rowno"]</span>
+                <span class="bs-stepper-label" style="max-width:300px">@row["Status_name"]</span>
+                @*<div class="row">
+                        <span class="bs-stepper-label" style="margin-left:45px;font-style:italic">@row["dte"]</span>
+                    </div>*@
+
+                <!-- Your content for "user_eid" equal to "0" goes here -->
+            </div>
+        }
+        else
+        {
+            <div class="step active" data-target="#test-vl-@row["rowno"]" style="text-align:left">
+                <span class="bs-stepper-circle">@row["rowno"]</span>
+                <span class="bs-stepper-label" style="max-width:300px">@row["Status_name"]</span>
+                <div class="row">
+                    <span class="bs-stepper-label" style="margin-left:45px;font-style:italic">@row["dte"]</span>
+                </div>
+                @if (row["remarks"].ToString() != "")
+                {
+                    <div class="row">
+                        <span class="bs-stepper-label" style="margin-left:45px;font-style:italic">Remarks: @row["remarks"]</span>
+                    </div>
+                    <div class="row">
+                        <span class="bs-stepper-label" style="margin-left:45px;font-style:italic;text-align:right">by @row["NameFML"]</span>
+                    </div>
+                }
+            </div>
+        }
+
+        <div class="bs-stepper-line"></div>
+    }
+}
+
+
+                </div>
+
+            </div>
+            </div>
+        <div class="col-md-8" style="height:900px;border:none;">
+
+            @(Html.Kendo().TabStrip()
+                    .Name("tabstrip")
+                    .Animation(animation =>
+                        animation.Open(effect =>
+                        effect.Fade(FadeDirection.In)))
+
+                    .Items(tabstrip =>
+                    {
+                    fmisEntities fmisdb = new fmisEntities();
+                    IEnumerable<vw_docDetails_transaction> docdetails;
+                    string refno = ViewBag.refno;
+                    docdetails = fmisdb.vw_docDetails_transaction.Where(M => M.refno == refno).OrderByDescending(O => O.doc_details_id);
+
+                    int x = 0;
+                    string div_id = "";
+                    foreach (var items in docdetails)
+                    {
+
+
+                        div_id = "id_print_result" + x;
+
+                        if (x == 0)
+                        {
+                            tabstrip.Add().Text(items.report_name)
+                                .Encoded(false)
+                                .Selected(true)
+                                .Content(@<text>
+                                    <iframe id="@div_id" class="col-sm-12 no-padding" src="@items.Expr1" style="height:850px;border:none;">@items.report_name</iframe></text>);
+            }
+            else
+            {
+                tabstrip.Add().Text(items.report_name)
+                        .Encoded(false)
+                        .Selected(false)
+                        .Content(@<text>
+                            <iframe id="@div_id" class="col-sm-12 no-padding" src="@items.Expr1" style="height:850px;border:none;">@items.report_name</iframe></text>);
+
+                            }
+
+                            x = x + 1;
+                        }
+                    })
+            )
+
+
+
+
+            @*<iframe id="id_print_result" class="col-sm-12" style="height:100%;width:100%;padding-top:15px;border:none"></iframe>*@
+        </div>
+    </div>
+</div>
+
+<script>
+ 
+    function btn_loadreport() {
+        
+        @*startSpin()
+        $.post('@Url.Content("~/Document/load_reportdoc")', { refno: '@ViewBag.refno' }
+            , function (r) {
+
+                $('#id_print_result').attr('src', r)
+                $('#a_id_link').attr('src', r)
+                // hackishly force iframe to reload
+                var iframe = document.getElementById("id_print_result");
+                iframe.src = iframe.src;
+                stopSpin()
+            })*@
+    }
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    $(document).ready(function () {
+        btn_loadreport()
+    })
+</script>

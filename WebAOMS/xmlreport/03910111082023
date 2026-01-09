@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CatName" type="xs:string" minOccurs="0" />
+                <xs:element name="OfficeName" type="xs:string" minOccurs="0" />
+                <xs:element name="OOEName" type="xs:string" minOccurs="0" />
+                <xs:element name="programName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountName" type="xs:string" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Allotment" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Obligation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableAmount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableUtilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderOOE" type="xs:string" minOccurs="0" />
+                <xs:element name="OOECode" type="xs:int" minOccurs="0" />
+                <xs:element name="CatNameOrder" type="xs:string" minOccurs="0" />
+                <xs:element name="OOEName2" type="xs:string" minOccurs="0" />
+                <xs:element name="functionID" type="xs:int" minOccurs="0" />
+                <xs:element name="FMISOfficeID" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OOEName" type="xs:string" minOccurs="0" />
+                <xs:element name="Allotment" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Appropropriation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Obligation" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Utilization" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableAmount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PayableUtilization" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>STATUS OF APPROPRIATIONS, ALLOTMENTS, OBLIGATIONS, CONSUMMATED OBLIGATIONS AND COMMITMENTS(Special Education Fund)</T1>
+    <fundtype>CURRENT LEGISLATIVE APPROPRIATIONS</fundtype>
+    <dateString>As of November 08, 2023</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+</NewDataSet>

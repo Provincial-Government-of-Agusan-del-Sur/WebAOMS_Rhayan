@@ -1,0 +1,28 @@
+﻿
+<div class="PvCIH">
+    <span data-lokalise="true" class="khIjp">
+        <span>Receiver/Designation/Office/Address</span>
+    </span>
+</div>
+<div class="byexym liZmnb">
+    <textarea id="txt_area_letterTo" class="editor" rows="5" name="letterTo" cols="30" style="height:200px" aria-label="editor"></textarea>
+</div>
+<script>
+    $("#txt_area_letterTo").kendoEditor({
+        pasteCleanup: {
+            all: true,
+            css: true,
+            keepNewLines: false,
+            msAllFormatting: true,
+            msConvertLists: true,
+            msTags: true,
+            none: true,
+            span: true
+        },
+        resizable: {
+            content: true,
+            toolbar: false
+        },
+        tools: []
+    });
+</script>

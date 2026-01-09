@@ -1,0 +1,855 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevid" type="xs:long" minOccurs="0" />
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="Rdono" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVNo" type="xs:string" minOccurs="0" />
+                <xs:element name="_x0031_0305020" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_x0031_06" type="xs:decimal" minOccurs="0" />
+                <xs:element name="_x0031_0305010" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="Dbt" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Crdt" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Transtype" type="xs:int" minOccurs="0" />
+                <xs:element name="Fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="BankAccountNo" type="xs:string" minOccurs="0" />
+                <xs:element name="Jevdate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Claimantname" type="xs:string" minOccurs="0" />
+                <xs:element name="Obrno" type="xs:string" minOccurs="0" />
+                <xs:element name="dvno" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+                <xs:element name="Gamount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="row" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialAccount" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>CASH DISBURSEMENT JOURNAL</T1>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <dateString>For the month of June, 2020</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>0</groupCount>
+  </Table>
+  <Table1>
+    <jevid>278081</jevid>
+    <Date_>06/01/2020</Date_>
+    <Rdono>LDT-RD-38-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0001</JEVNo>
+    <_x0031_06>19700.0000</_x0031_06>
+    <_x0031_0305010>19700.0000</_x0031_0305010>
+    <Particular>(5P),To payment of JOB ORDER for the period of May 1-15, 2020.</Particular>
+    <Crdt>300.0000</Crdt>
+    <Accountcode>20201030-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-05T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P),To payment of JOB ORDER for the period of May 1-15, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1446</Obrno>
+    <dvno>109-20-05-0067</dvno>
+    <jvno>109-20-06-03-0001</jvno>
+    <Gamount>22400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>278081</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>2400.0000</Crdt>
+    <Accountcode>29999990-4-11-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-05T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P),To payment of JOB ORDER for the period of May 1-15, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1446</Obrno>
+    <dvno>109-20-05-0067</dvno>
+    <jvno>109-20-06-03-0001</jvno>
+    <Gamount>22400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>278081</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>22400.0000</Dbt>
+    <Accountcode>50212020-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-05T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P),To payment of JOB ORDER for the period of May 1-15, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1446</Obrno>
+    <dvno>109-20-05-0067</dvno>
+    <jvno>109-20-06-03-0001</jvno>
+    <Gamount>22400.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_>06/15/2020</Date_>
+    <Rdono>LDT-RD-45-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0002</JEVNo>
+    <_x0031_0305020>3600.2500</_x0031_0305020>
+    <_x0031_06>3600.2500</_x0031_06>
+    <Particular>payment of salary diffential for the month of Jan-March, 2020</Particular>
+    <Dbt>4686.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>562.3200</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>500.0000</Crdt>
+    <Accountcode>29999990-5-47</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>421.7400</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>93.7200</Crdt>
+    <Accountcode>20201030-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>93.7200</Crdt>
+    <Accountcode>20201030-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>70.2900</Crdt>
+    <Accountcode>20201040-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>70.2900</Crdt>
+    <Accountcode>20201040-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>562.3200</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>93.7200</Dbt>
+    <Accountcode>50103020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279832</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>70.2900</Dbt>
+    <Accountcode>50103030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary diffential for the month of Jan-March, 2020</Claimantname>
+    <Obrno>109-4421-20-05-1004</Obrno>
+    <dvno>109-20-05-0048</dvno>
+    <jvno>109-20-06-03-0002</jvno>
+    <Gamount>5412.3300</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_>06/15/2020</Date_>
+    <Rdono>LDT-RD-45-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0003</JEVNo>
+    <_x0031_0305020>64579.5000</_x0031_0305020>
+    <_x0031_06>64579.5000</_x0031_06>
+    <Particular>payment of  Maternity Leave  April 1- June 30, 2020.</Particular>
+    <Dbt>72948.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>8033.7600</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>6025.3200</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>1338.9600</Crdt>
+    <Accountcode>20201030-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>1338.9600</Crdt>
+    <Accountcode>20201030-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>1004.2200</Crdt>
+    <Accountcode>20201040-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>1004.2200</Crdt>
+    <Accountcode>20201040-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>300.0000</Crdt>
+    <Accountcode>20201020-1-3</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>8033.7600</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1338.9600</Dbt>
+    <Accountcode>50103020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1004.2200</Dbt>
+    <Accountcode>50103030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279834</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>300.0000</Dbt>
+    <Accountcode>50103040</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of  Maternity Leave  April 1- June 30, 2020.</Claimantname>
+    <Obrno>109-4421-20-05-1002</Obrno>
+    <dvno>109-20-06-0013</dvno>
+    <jvno>109-20-06-03-0003</jvno>
+    <Gamount>83624.9400</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279836</jevid>
+    <Date_>06/15/2020</Date_>
+    <Rdono>LDT-RD-45-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0004</JEVNo>
+    <_x0031_0305020>1582.4900</_x0031_0305020>
+    <_x0031_06>1582.4900</_x0031_06>
+    <Particular>payment of salary differential for the period May 1-31, 2020</Particular>
+    <Dbt>1739.0000</Dbt>
+    <Accountcode>50101010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period May 1-31, 2020</Claimantname>
+    <Obrno>109-4421-20-06-0403</Obrno>
+    <dvno>109-20-06-0019</dvno>
+    <jvno>109-20-06-03-0004</jvno>
+    <Gamount>1947.6800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279836</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>208.6800</Crdt>
+    <Accountcode>20201020-1-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period May 1-31, 2020</Claimantname>
+    <Obrno>109-4421-20-06-0403</Obrno>
+    <dvno>109-20-06-0019</dvno>
+    <jvno>109-20-06-03-0004</jvno>
+    <Gamount>1947.6800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279836</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Crdt>156.5100</Crdt>
+    <Accountcode>20201020-1-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period May 1-31, 2020</Claimantname>
+    <Obrno>109-4421-20-06-0403</Obrno>
+    <dvno>109-20-06-0019</dvno>
+    <jvno>109-20-06-03-0004</jvno>
+    <Gamount>1947.6800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279836</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>208.6800</Dbt>
+    <Accountcode>50103010</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of salary differential for the period May 1-31, 2020</Claimantname>
+    <Obrno>109-4421-20-06-0403</Obrno>
+    <dvno>109-20-06-0019</dvno>
+    <jvno>109-20-06-03-0004</jvno>
+    <Gamount>1947.6800</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279847</jevid>
+    <Date_>06/18/2020</Date_>
+    <Rdono>LDT-RD-51-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0005</JEVNo>
+    <_x0031_06>6000.0000</_x0031_06>
+    <_x0031_0305010>6000.0000</_x0031_0305010>
+    <Particular>(5P), payment of office supplies (cellcard) for the month of June, 2020 
+</Particular>
+    <Dbt>6000.0000</Dbt>
+    <Accountcode>50205020-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>(5P), payment of office supplies (cellcard) for the month of June, 2020 
+</Claimantname>
+    <Obrno>109-4421-20-06-0833</Obrno>
+    <dvno>109-20-06-0052</dvno>
+    <jvno>109-20-06-03-0005</jvno>
+    <Gamount>6000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279848</jevid>
+    <Date_>06/25/2020</Date_>
+    <Rdono>LDT-RD-53-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0006</JEVNo>
+    <_x0031_0305020>22315.9200</_x0031_0305020>
+    <_x0031_06>22315.9200</_x0031_06>
+    <Particular>payment of mid-year bonus CY2020</Particular>
+    <Dbt>22315.9200</Dbt>
+    <Accountcode>50102990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-20T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of mid-year bonus CY2020</Claimantname>
+    <Obrno>109-4421-20-06-1105</Obrno>
+    <dvno>109-20-06-0060</dvno>
+    <jvno>109-20-06-03-0006</jvno>
+    <Gamount>22315.9200</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279851</jevid>
+    <Date_>06/18/2020</Date_>
+    <Rdono>LDT-RD-56-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0007</JEVNo>
+    <_x0031_0305020>1124317.0600</_x0031_0305020>
+    <_x0031_06>1124317.0600</_x0031_06>
+    <Particular>(195P), payment of overtime and night premium for the month of April, 2020 </Particular>
+    <Crdt>295687.5600</Crdt>
+    <Accountcode>20201010-2-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Claimantname>(195P), payment of overtime and night premium for the month of April, 2020 </Claimantname>
+    <Obrno>109-4421-20-06-0589</Obrno>
+    <dvno>109-20-06-0029</dvno>
+    <jvno>109-20-06-03-0007</jvno>
+    <Gamount>1420004.6200</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279851</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>1144300.8300</Dbt>
+    <Accountcode>50102130-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Claimantname>(195P), payment of overtime and night premium for the month of April, 2020 </Claimantname>
+    <Obrno>109-4421-20-06-0589</Obrno>
+    <dvno>109-20-06-0029</dvno>
+    <jvno>109-20-06-03-0007</jvno>
+    <Gamount>1420004.6200</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279851</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>275703.7900</Dbt>
+    <Accountcode>50102130-2</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Claimantname>(195P), payment of overtime and night premium for the month of April, 2020 </Claimantname>
+    <Obrno>109-4421-20-06-0589</Obrno>
+    <dvno>109-20-06-0029</dvno>
+    <jvno>109-20-06-03-0007</jvno>
+    <Gamount>1420004.6200</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279853</jevid>
+    <Date_>06/16/2020</Date_>
+    <Rdono>LDT-RD-48-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0008</JEVNo>
+    <_x0031_0305020>32053.0000</_x0031_0305020>
+    <_x0031_06>32053.0000</_x0031_06>
+    <Particular>payment of midyear bonus CY2020</Particular>
+    <Dbt>32053.0000</Dbt>
+    <Accountcode>50102990-1</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of midyear bonus CY2020</Claimantname>
+    <Obrno>109-4421-20-05-1537</Obrno>
+    <dvno>109-20-06-0003</dvno>
+    <jvno>109-20-06-03-0008</jvno>
+    <Gamount>32053.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279870</jevid>
+    <Date_>06/18/2020</Date_>
+    <Rdono>LDT-RD-50-2020-101-2487</Rdono>
+    <JEVNo>109-20-06-03-0009</JEVNo>
+    <_x0031_0305020>15000.0000</_x0031_0305020>
+    <_x0031_06>15000.0000</_x0031_06>
+    <Particular>payment of Representation and Transportation Allowance (RATA) for the month of June, 2020						
+</Particular>
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102020</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation and Transportation Allowance (RATA) for the month of June, 2020						
+</Claimantname>
+    <Obrno>109-4421-20-06-0634</Obrno>
+    <dvno>109-20-06-0034</dvno>
+    <jvno>109-20-06-03-0009</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+  <Table1>
+    <jevid>279870</jevid>
+    <Date_ />
+    <Rdono />
+    <JEVNo />
+    <Particular />
+    <Dbt>7500.0000</Dbt>
+    <Accountcode>50102030</Accountcode>
+    <Transtype>3</Transtype>
+    <Fundtype>D.O. PLAZA MEMORIAL HOSPITAL</Fundtype>
+    <BankAccountNo />
+    <Jevdate>2020-06-29T00:00:00+08:00</Jevdate>
+    <Claimantname>payment of Representation and Transportation Allowance (RATA) for the month of June, 2020						
+</Claimantname>
+    <Obrno>109-4421-20-06-0634</Obrno>
+    <dvno>109-20-06-0034</dvno>
+    <jvno>109-20-06-03-0009</jvno>
+    <Gamount>15000.0000</Gamount>
+    <row />
+    <SpecialAccount />
+  </Table1>
+</NewDataSet>

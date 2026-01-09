@@ -1,0 +1,176 @@
+﻿ @using WebAOMS.Models;
+    @{
+       
+        fmisEntities fmisdb = new fmisEntities();
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout_Public.cshtml";
+
+        
+    }
+
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Criteria</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-lg-12" style="border-bottom:1px solid gray">
+                    <div data-toggle="buttons">
+                        <label class="btn radio-inline btn-radio-success-inverse active">
+                            <input name="payrollTypeOption" id="payrollTypeOption1" value="1" type="radio"> Period
+                        </label>
+                        
+                        <input id="payrollTypeOptionID" value="1" hidden />
+                      
+                    </div>
+                </div>
+            </div>
+            <div  id="payrollType-1"   class="col-lg-6 no-padding">
+                <div class="col-lg-12 no-padding" style="padding-top:5px!important">
+                    From
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                    To
+                    @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("refrehGrid"))
+                    )
+                    <button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>
+                </div>
+
+            </div>
+      
+            
+                
+
+            </div>
+
+            <script>
+                $(document).ready(function (){
+                    $('.hideoptiondiv').hide();
+                })
+              
+                function refrehGrid() {
+                    var grid = $("#grid_monitoring").data("kendoGrid");
+                    grid.dataSource.read()
+                }
+
+                function summary_para() {
+                    var from = $('#dtp_from').data('kendoDatePicker').value();
+                    var to = $('#dtp_to').data('kendoDatePicker').value();
+                    return { from: from, to: to}
+                }
+            </script>
+        </div>
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">List of Returned Liquidation</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    @*<button  type="button" class="btn btn-default" style="cursor:pointer">Export to Excel</button>*@
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>
+        <style>
+            /*.k-loading-mask {
+                display: none !important;
+            }*/
+        </style>
+        <div class="box-body">
+            <div class="col-lg-12 no-padding">
+                
+            </div>
+            <div class="col-lg-12 no-padding">        
+        
+        @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_monitoring")
+        .Columns(columns =>
+        {
+
+            columns.Bound("TransactionDate").Title("TransactionDate").Width(100).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("DVNo").Title("DVNo").Width(90).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+
+            columns.Bound("Name").Title("Name").Width(140).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Particular").Title("Particular").Width(300).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("GAmount").Title("Gross Amount").Format("{0:N2}").Width(90).HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("PADesc").Title("Remarks").Width(250).HtmlAttributes(new { style = "text-align:left" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+           
+        })
+        .AutoBind(false)
+        .HtmlAttributes(new { style = "height: 500px;" })
+        .Scrollable()
+        .Selectable(m => m
+                    .Mode(GridSelectionMode.Single)
+                    .Type(GridSelectionType.Row))
+        .Sortable()
+        .Pageable(pageable => pageable
+            .Refresh(true)
+            )
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("returned_liquidation_List_read", "PreAudit").Data("summary_para"))
+            .PageSize(2000)
+        )
+
+        )
+            </div>
+
+
+            <script>
+                $("#export").click(function (e) {
+                    var grid = $("#grid_monitoring").data("kendoGrid");
+                    grid.saveAsExcel();
+                });
+               
+                $('#txtsearchEmp').on('keydown', function (e) {
+                    var gridData = $("#grid_monitoring").data("kendoGrid");
+                    if (e.keyCode == 13) {
+                        refrehGrid()
+                    }
+                })
+            </script>
+        </div>
+        <hr />
+        <div class="box-footer">
+            <div style="height:10px">
+
+            </div>
+        </div>
+    </div>
+
+@*sdf
+sdf
+sd
+sd
+fsd
+fsd
+fds
+fd*@

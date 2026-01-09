@@ -1,0 +1,87 @@
+﻿@model WebAOMS.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+<style>
+
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Change your account settings</h4>
+        </header>
+    </div>
+    <div class="box-body">
+        <div class="ant-card-body">
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Password</span>
+                </span>
+            </div>
+            
+            <div id="id_particular" class="byexym liZmnb">
+                [
+                @if (Model.HasPassword)
+                {
+                    @Html.ActionLink("Change your password", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+                ]
+            </div>
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Phone Number</span>
+                </span>
+            </div>
+            <div id="id_application" class="byexym liZmnb">
+                @(Model.PhoneNumber ?? "None")
+                @if (Model.PhoneNumber != null)
+                {
+                    <br />
+                        <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
+                    using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>[<input type="submit" value="Remove" class="btn-link" />]</text>
+                    }
+                }
+                else
+                {
+                    <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")]</text>
+                }
+            </div>
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>Two-Factor Authentication</span>
+                </span>
+            </div>
+            <div id="id_apprefno" class="byexym liZmnb">
+                @if (Model.TwoFactor)
+                {
+                    using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>Enabled
+                            <input type="submit" value="Disable" class="btn btn-link" />
+                        </text>
+                    }
+                }
+                else
+                {
+                    using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <text>Disabled
+                            <input type="submit" value="Enable" class="btn btn-link" />
+                        </text>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+</div>
+

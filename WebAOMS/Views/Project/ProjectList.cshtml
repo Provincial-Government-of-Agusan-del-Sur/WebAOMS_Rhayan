@@ -1,0 +1,292 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="@Url.Content("~/Scripts/jquery-ui.min.js")"></script>
+<style>
+.custom-modal {
+  max-width: 90%;
+}
+#myModal2 {
+  z-index: 1050;
+}
+#myModal2 {
+  z-index: 1060;
+}
+
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Project List</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        <script>
+
+
+        </script>
+        <div class="row">
+            <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                <input id="txt_search_name_refno" type="text" class="form-control navbar-input" placeholder="Search by">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            
+                @(Html.Kendo().Grid<WebAOMS.Models.vw_Project_grid>()
+                .Name("grid_project")
+                .HtmlAttributes(new { style = "color: #000; font-size:13px; cursor:pointer" })
+                .Columns(columns =>
+                {
+                columns.Bound(M => M.SourceName).Width(150).Title("Fund Source").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+
+                columns.Bound(M => M.date_NADAI).Width(100).Title("Date of NADAI").Format("{0:MM/dd/yyyy}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+                columns.Bound(M => M.ProgramTypeName).Width(200).Title("Type of Program").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+
+
+                columns.Bound(M => M.project_name).Width(250).Title("Project Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                columns.Bound(M => M.Location).Width(250).Title("Location").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+
+                columns.Bound(M => M.mechanismName).Width(200).Title("Mechanism/Mode of Implementation").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                columns.Bound(M => M.TotalReceived).Width(150).Title("Received").Format("{0:N2}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:right" });
+                columns.Bound(M => M.date_completion).Width(100).Title("Date of Completion").Format("{0:MM/dd/yyyy}").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
+                columns.Template(@<text></text>)
+                   .Width(120)
+                   .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                   //.HeaderHtmlAttributes(new { style = "text-align:center; font-size:10" })
+                   .ClientTemplate("<button data-toggle =\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnewProject('#=projectID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button><button data-toggle =\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnewProjectCost('#=projectID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-list\"></i></button>");
+                })
+                .Pageable(p => p
+                    .Input(true)
+                    .Numeric(false)
+                    .Refresh(false)
+                )
+                .Sortable()
+                .Selectable(selectable => selectable
+                    .Mode(GridSelectionMode.Single)
+                    .Type(GridSelectionType.Row)
+                )
+                  .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                .DataSource(dataSource => dataSource
+                .Ajax()
+                .PageSize(100)
+                .Sort(M =>
+                {
+                    M.Add("project_name").Ascending();
+                })
+                .ServerOperation(true)
+                        .Model(M => { M.Id(G => G.projectID); })
+                .Read(g => g.Action("GetgridProject", "Project")))
+                //.Events(e => e.Change("selectedProject"))
+
+                )
+                    
+
+                    <script>
+         
+    function addnewProject(projectID) {
+        startSpin()
+        $.get('@Url.Action("_Details", "Project")', { projectid: projectID }, function (r) {
+                stopSpin()
+                if (projectID == 0) {
+                    $('#btnDeleteProject').hide()
+                    $("#h_doc_form_id").html("Add Project");
+                }
+                else {
+                    $('#btnDeleteProject').show()
+                    $("#h_doc_form_id").html("Project Details");
+                }
+                    
+                    $("#body_doc_form").html(r)
+                    $("#mdl_doc_form").modal("show");
+
+            });
+
+    }
+
+        function addnewProjectCost(id) {
+            startSpin()
+            $.get('@Url.Action("ProjectCost", "Project")', { id: id }, function (r) {
+                stopSpin()
+               
+                    $("#h_project_cost").html("Project Cost List");
+                             
+                    $("#body_project_cost").html(r)
+                    $("#mdl_project_cost").modal("show");
+            });
+        }
+
+        @*function addnewFund(id) {
+            startSpin()
+            $.get('@Url.Action("ProjectCost", "Project")', { id: id }, function (r) {
+                stopSpin()
+
+                $("#h_project_cost").html("Project Cost List");
+
+                $("#body_project_cost").html(r)
+                $("#mdl_project_cost").modal("show");
+            });
+        }*@
+            </script>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="btn-group" style="padding-left:10px;padding-bottom:10px;">
+            <button onclick="addnewProject(0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add Project</button>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function newProjectEstimatedCost() {
+        clickProjectCostType(0);
+    }
+</script>
+
+
+<div class="modal" id="mdl_project_cost" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog ui-draggable" style="min-width:80%!important">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_project_cost" class="modal-title">Transaction Information</h4>
+            </div>
+            <div id="body_project_cost" class="modal-body" style="height:auto!important;min-height:330px">
+
+            </div>
+            <div class="modal-footer">
+                <button id="btn_save_project_cost" onclick="clickProjectCostType(0)" class="btn btn-default"> <i class="fa fa-plus fa-lg"></i> Add Project Cost</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_body_project_cost()">Close</button>
+                <script>
+                    function close_body_project_cost() {
+                        $("#body_project_cost").html("");
+                        $("#mdl_project_cost").modal("hide");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal " id="mdl_doc_form" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;" >
+    <div class="modal-dialog ui-draggable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >x</button>
+                <h4 id="h_doc_form_id" class="modal-title">Transaction Information</h4>
+            </div>
+            <div id="body_doc_form" class="modal-body" style="height:auto!important">
+
+            </div>
+
+            <div class="modal-footer">
+                <button id="btnSaveProject" onclick="saveProject()" class="btn btn-success"> <i class="fa fa-save fa-lg"></i> Save Changes</button>
+                @*<button id="btnUpdateProject" class="btn btn-primary"  > <i class="fa fa-save fa-lg"></i> Update</button>*@
+                <button id="btnDeleteProject" onclick="warn_delete_project()" class="btn btn-danger"> <i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_body_doc_form()">Close</button>
+                <script>
+                    function close_body_doc_form() {
+                        $("#body_doc_form").html("");
+                        $("#mdl_doc_form").modal("hide");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal " id="mdl_cost_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog ui-draggable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_cost_details" class="modal-title">Transaction Information</h4>
+            </div>
+            <div id="body_cost_details" class="modal-body" style="height:auto!important">
+
+            </div>
+
+            <div class="modal-footer">
+                <button id="btnSaveCost" onclick="saveProjectCost()" class="btn btn-success"> <i class="fa fa-save fa-lg"></i> Save Changes</button>
+                @*<button id="btnUpdateProject" class="btn btn-primary"  > <i class="fa fa-save fa-lg"></i> Update</button>*@
+                <button id="btnDeletecost" onclick="warn_delete_project_cost()" class="btn btn-danger"> <i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_body_cost_details()">Close</button>
+                <script>
+                    function close_body_cost_details() {
+                        $("#body_cost_details").html("");
+                        $("#mdl_cost_details").modal("hide");
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="mdl_reff_SourceOfFund" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog ui-draggable" style="min-width:50%!important">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_reff_SourceOfFund" class="modal-title"></h4>
+            </div>
+            <div id="body_reff_SourceOfFund" class="modal-body" style="height:auto!important;min-height:380px">
+
+            </div>
+            <div class="modal-footer">
+                <button id="btn_save_reff_SourceOfFund" onclick="addnewFund_details(0)" class="btn btn-default"> <i class="fa fa-plus fa-lg"></i> Add reff_SourceOfFund</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_body_reff_SourceOfFund()">Close</button>
+                <script>
+                    function close_body_reff_SourceOfFund() {
+                        $("#body_reff_SourceOfFund").html("");
+                        $("#mdl_reff_SourceOfFund").modal("hide");
+
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal " id="mdl_fund_details" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog ui-draggable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 id="h_fund_details" class="modal-title">Transaction Information</h4>
+            </div>
+            <div id="body_fund_details" class="modal-body" style="height:auto!important">
+
+            </div>
+
+            <div class="modal-footer">
+                <button id="btnSaveCost" onclick="savefund()" class="btn btn-success"> <i class="fa fa-save fa-lg"></i> Save Changes</button>
+                @*<button id="btnUpdateProject" class="btn btn-primary"  > <i class="fa fa-save fa-lg"></i> Update</button>*@
+                <button id="btnDeletecost" onclick="warn_delete_savefund()" class="btn btn-danger"> <i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                <button type="button" class="btn btn-default" style="cursor:pointer" onclick="close_body_fund_details()">Close</button>
+                <script>
+                    function close_body_fund_details() {
+                        $("#body_fund_details").html("");
+                        $("#mdl_fund_details").modal("hide");
+
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>

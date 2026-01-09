@@ -1,0 +1,2103 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="amount" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="year_" type="xs:long" minOccurs="0" />
+                <xs:element name="month_" type="xs:int" minOccurs="0" />
+                <xs:element name="FullAccountname" type="xs:string" minOccurs="0" />
+                <xs:element name="GLChartAccountChildID" type="xs:int" minOccurs="0" />
+                <xs:element name="levelNo" type="xs:unsignedByte" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCE OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>SCHEDULES</T1>
+    <fundtype>All Funds</fundtype>
+    <dateString>As of November 08, 2023</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+  </Table>
+  <Table1>
+    <Name>10102010Cash in Bank - Local Currency, Current Account</Name>
+    <Accountcode>10102010</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DEVELOPMENT BANK OF THE PHILIPPINES (DBP)</Name>
+    <Accountcode>10102010-505</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GENERAL FUND</Name>
+    <Accountcode>10102010-505-100</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20% DEVELOPMENT FUND</Name>
+    <amount>15301222.6700</amount>
+    <Accountcode>10102010-505-100-118</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~20% DEVELOPMENT FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>5% BUDGETARY RESERVE (LOCAL DISASTER RISK REDUCTION AND MANAGEMENT FUND - LDRRMF)</Name>
+    <amount>167685942.2600</amount>
+    <Accountcode>10102010-505-100-127</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~5% BUDGETARY RESERVE (LOCAL DISASTER RISK REDUCTION AND MANAGEMENT FUND - LDRRMF)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ECONOMIC ENTERPRISES</Name>
+    <Accountcode>10102010-505-100-119</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~ECONOMIC ENTERPRISES</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GENERAL FUND PROPER</Name>
+    <Accountcode>10102010-505-100-101</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>HOSPITAL</Name>
+    <Accountcode>10102010-505-100-101-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~HOSPITAL</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BUNAWAN DISTRICT HOSPITAL (BDH)</Name>
+    <amount>9338042.3000</amount>
+    <Accountcode>10102010-505-100-101-3-128</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~HOSPITAL~BUNAWAN DISTRICT HOSPITAL (BDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>6</levelNo>
+  </Table1>
+  <Table1>
+    <Name>D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</Name>
+    <amount>91727198.2900</amount>
+    <Accountcode>10102010-505-100-101-3-109</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~HOSPITAL~D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>6</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</Name>
+    <amount>358916.3900</amount>
+    <Accountcode>10102010-505-100-101-3-131</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~HOSPITAL~ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>6</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LORETO DISTRICT HOSPITAL (LDH)</Name>
+    <amount>472593.2000</amount>
+    <Accountcode>10102010-505-100-101-3-132</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~HOSPITAL~LORETO DISTRICT HOSPITAL (LDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>6</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TALACOGON DISTRICT HOSPITAL (TDH)</Name>
+    <amount>4218395.8800</amount>
+    <Accountcode>10102010-505-100-101-3-129</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~HOSPITAL~TALACOGON DISTRICT HOSPITAL (TDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>6</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LOCAL SOURCE</Name>
+    <amount>70303898.3700</amount>
+    <Accountcode>10102010-505-100-101-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~LOCAL SOURCE</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LOCAL SOURCE (PRIOR)</Name>
+    <amount>2971390.7100</amount>
+    <Accountcode>10102010-505-100-101-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~LOCAL SOURCE (PRIOR)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PAES</Name>
+    <amount>10318206.6400</amount>
+    <Accountcode>10102010-505-100-101-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~GENERAL FUND~GENERAL FUND PROPER~PAES</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SPECIAL EDUCATION FUND</Name>
+    <amount>39483692.9800</amount>
+    <Accountcode>10102010-505-201</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~SPECIAL EDUCATION FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TRUST FUND</Name>
+    <Accountcode>10102010-505-301</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BLOOD SCREENING FEE</Name>
+    <amount>1863326.7700</amount>
+    <Accountcode>10102010-505-301-32</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~BLOOD SCREENING FEE</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>CONSIGNMENT OF DRUGS &amp; MEDICINES</Name>
+    <Accountcode>10102010-505-301-61</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~CONSIGNMENT OF DRUGS &amp; MEDICINES</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BUNAWAN DISTRICT HOSPITAL (BDH)</Name>
+    <amount>4858.7600</amount>
+    <Accountcode>10102010-505-301-61-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~CONSIGNMENT OF DRUGS &amp; MEDICINES~BUNAWAN DISTRICT HOSPITAL (BDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</Name>
+    <amount>49707417.7400</amount>
+    <Accountcode>10102010-505-301-61-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~CONSIGNMENT OF DRUGS &amp; MEDICINES~D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</Name>
+    <amount>27947.5300</amount>
+    <Accountcode>10102010-505-301-61-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~CONSIGNMENT OF DRUGS &amp; MEDICINES~ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LORETO MUNICIPAL HOSPITAL (LMH)</Name>
+    <amount>525575.3400</amount>
+    <Accountcode>10102010-505-301-61-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~CONSIGNMENT OF DRUGS &amp; MEDICINES~LORETO MUNICIPAL HOSPITAL (LMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TALACOGON DISTRICT HOSPITAL (TDH)</Name>
+    <amount>3169060.7400</amount>
+    <Accountcode>10102010-505-301-61-5</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~CONSIGNMENT OF DRUGS &amp; MEDICINES~TALACOGON DISTRICT HOSPITAL (TDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DBP TF-PROPER</Name>
+    <amount>3585637.0200</amount>
+    <Accountcode>10102010-505-301-37</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~DBP TF-PROPER</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DOPMH AFFILIATION</Name>
+    <amount>375230.7200</amount>
+    <Accountcode>10102010-505-301-35</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~DOPMH AFFILIATION</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>EC REVOLVING FUND</Name>
+    <Accountcode>10102010-505-301-41</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~EC REVOLVING FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BUNAWAN DISTRICT HOSPITAL (BDH)</Name>
+    <amount>2988838.4600</amount>
+    <Accountcode>10102010-505-301-41-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~EC REVOLVING FUND~BUNAWAN DISTRICT HOSPITAL (BDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</Name>
+    <amount>7498334.1200</amount>
+    <Accountcode>10102010-505-301-41-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~EC REVOLVING FUND~D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</Name>
+    <amount>1030772.1400</amount>
+    <Accountcode>10102010-505-301-41-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~EC REVOLVING FUND~ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LORETO MUNICIPAL HOSPITAL (LMH)</Name>
+    <amount>531515.7600</amount>
+    <Accountcode>10102010-505-301-41-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~EC REVOLVING FUND~LORETO MUNICIPAL HOSPITAL (LMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)</Name>
+    <Accountcode>10102010-505-301-43</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PAMANA - DPWH</Name>
+    <amount>30848.3000</amount>
+    <Accountcode>10102010-505-301-43-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)~PAMANA - DPWH</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PAMANA - OPAPP</Name>
+    <amount>5171324.1800</amount>
+    <Accountcode>10102010-505-301-43-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)~PAMANA - OPAPP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE CHARITY SWEEPSTAKES (PCSO) ENDOWMENT FUND</Name>
+    <amount>524939.6900</amount>
+    <Accountcode>10102010-505-301-42</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~PHILIPPINE CHARITY SWEEPSTAKES (PCSO) ENDOWMENT FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PSF-GOVERNOR'S GUEST HOUSE</Name>
+    <amount>1156.3900</amount>
+    <Accountcode>10102010-505-301-31</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~TRUST FUND~PSF-GOVERNOR'S GUEST HOUSE</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LAND BANK OF THE PHILIPPINES (LBP)</Name>
+    <Accountcode>10102010-6840</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GENERAL FUND</Name>
+    <Accountcode>10102010-6840-100</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>20% DEVELOPMENT FUND</Name>
+    <amount>634884196.4500</amount>
+    <Accountcode>10102010-6840-100-118</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~20% DEVELOPMENT FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>5% BUDGETARY RESERVE (LOCAL DISASTER RISK REDUCTION AND MANAGEMENT FUND - LDRRMF)</Name>
+    <amount>298409892.9600</amount>
+    <Accountcode>10102010-6840-100-127</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~5% BUDGETARY RESERVE (LOCAL DISASTER RISK REDUCTION AND MANAGEMENT FUND - LDRRMF)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ECONOMIC ENTERPRISES</Name>
+    <Accountcode>10102010-6840-100-119</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~ECONOMIC ENTERPRISES</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>AGRICULTURAL RESOURCE CENTER (ARC)</Name>
+    <amount>4862262.0600</amount>
+    <Accountcode>10102010-6840-100-119-124</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~ECONOMIC ENTERPRISES~AGRICULTURAL RESOURCE CENTER (ARC)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PATIN -AY WATERWORKS SYSTEM (PWS)</Name>
+    <amount>3439287.4700</amount>
+    <Accountcode>10102010-6840-100-119-104</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~ECONOMIC ENTERPRISES~PATIN -AY WATERWORKS SYSTEM (PWS)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PROVINCIAL LEARNING SYSTEM (PLC)</Name>
+    <amount>29454910.3100</amount>
+    <Accountcode>10102010-6840-100-119-114</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~ECONOMIC ENTERPRISES~PROVINCIAL LEARNING SYSTEM (PLC)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GENERAL FUND PROPER</Name>
+    <Accountcode>10102010-6840-100-101</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~GENERAL FUND PROPER</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>EC FUND (PRIOR)</Name>
+    <amount>19793944.7700</amount>
+    <Accountcode>10102010-6840-100-101-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~GENERAL FUND PROPER~EC FUND (PRIOR)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>GENERAL LBP ACCOUNT</Name>
+    <amount>579653578.6000</amount>
+    <Accountcode>10102010-6840-100-101-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~GENERAL FUND PROPER~GENERAL LBP ACCOUNT</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>OFW FLY NOW PAY LATER PROGRAM</Name>
+    <amount>1412091.5800</amount>
+    <Accountcode>10102010-6840-100-101-6</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~GENERAL FUND PROPER~OFW FLY NOW PAY LATER PROGRAM</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PRIOR ACCOUNT</Name>
+    <amount>-8662349.0700</amount>
+    <Accountcode>10102010-6840-100-101-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~GENERAL FUND PROPER~PRIOR ACCOUNT</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PERFORMANCE BASED GRANT SYSTEM (PBGS)</Name>
+    <amount>4471928.0700</amount>
+    <Accountcode>10102010-6840-100-128</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~GENERAL FUND~PERFORMANCE BASED GRANT SYSTEM (PBGS)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SPECIAL EDUCATION FUND</Name>
+    <amount>48836063.5400</amount>
+    <Accountcode>10102010-6840-201</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~SPECIAL EDUCATION FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TRUST FUND</Name>
+    <Accountcode>10102010-6840-301</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BDH PHIC AUTO CREDIT PAYMENTS SCHEME</Name>
+    <amount>8886547.0700</amount>
+    <Accountcode>10102010-6840-301-60</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~BDH PHIC AUTO CREDIT PAYMENTS SCHEME</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BDH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</Name>
+    <amount>616898.7700</amount>
+    <Accountcode>10102010-6840-301-66</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~BDH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BOTTOM UP BUDGETING (BUB)</Name>
+    <amount>10000.0000</amount>
+    <Accountcode>10102010-6840-301-54</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~BOTTOM UP BUDGETING (BUB)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DOPMH PHIC AUTO CREDIT PAYMENTS SCHEME</Name>
+    <amount>23008133.6800</amount>
+    <Accountcode>10102010-6840-301-59</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~DOPMH PHIC AUTO CREDIT PAYMENTS SCHEME</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DOPMH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</Name>
+    <amount>4156345.6500</amount>
+    <Accountcode>10102010-6840-301-65</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~DOPMH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>EMCH PHIC AUTO CREDIT PAYMENTS SCHEME</Name>
+    <amount>284386.1900</amount>
+    <Accountcode>10102010-6840-301-62</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~EMCH PHIC AUTO CREDIT PAYMENTS SCHEME</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>EMCH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</Name>
+    <amount>132408.7700</amount>
+    <Accountcode>10102010-6840-301-70</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~EMCH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LDAP-RPT</Name>
+    <amount>1160.3500</amount>
+    <Accountcode>10102010-6840-301-5</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LDAP-RPT</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LHSD - HOSPITAL REVOLVING FUND</Name>
+    <Accountcode>10102010-6840-301-23</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BUNAWAN DISTRICT HOSPITAL (BDH)</Name>
+    <amount>43933136.4400</amount>
+    <Accountcode>10102010-6840-301-23-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND~BUNAWAN DISTRICT HOSPITAL (BDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</Name>
+    <amount>52999861.2900</amount>
+    <Accountcode>10102010-6840-301-23-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND~D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</Name>
+    <amount>3599264.7300</amount>
+    <Accountcode>10102010-6840-301-23-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND~ESPERANZA MEDICARE COMMUNITY HOSPITAL (EMCH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LORETO MUNICIPAL HOSPITAL (LMH)</Name>
+    <amount>2472601.0200</amount>
+    <Accountcode>10102010-6840-301-23-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND~LORETO MUNICIPAL HOSPITAL (LMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TALACOGON DISTRICT HOSPITAL (TDH)</Name>
+    <amount>12768138.1100</amount>
+    <Accountcode>10102010-6840-301-23-5</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND~TALACOGON DISTRICT HOSPITAL (TDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TALASAN</Name>
+    <amount>1500000.0000</amount>
+    <Accountcode>10102010-6840-301-23-6</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LHSD - HOSPITAL REVOLVING FUND~TALASAN</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LMH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</Name>
+    <amount>327235.6400</amount>
+    <Accountcode>10102010-6840-301-72</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LMH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LORETO MH PHIC AUTO CREDIT PAYMENT SCHEME</Name>
+    <amount>1442311.0800</amount>
+    <Accountcode>10102010-6840-301-64</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~LORETO MH PHIC AUTO CREDIT PAYMENT SCHEME</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MALARIA  RESOURCE CENTER</Name>
+    <amount>5610.0500</amount>
+    <Accountcode>10102010-6840-301-18</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~MALARIA  RESOURCE CENTER</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) GOP</Name>
+    <amount>420571.0500</amount>
+    <Accountcode>10102010-6840-301-38</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) GOP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) LP</Name>
+    <amount>8502.2400</amount>
+    <Accountcode>10102010-6840-301-39</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) LP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) PLGU-COMMUNITY FUND FOR AGRICULTURAL DEVELOPMENT (CFAD) LGU EQUITY</Name>
+    <amount>71970.0400</amount>
+    <Accountcode>10102010-6840-301-46</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) PLGU-COMMUNITY FUND FOR AGRICULTURAL DEVELOPMENT (CFAD) LGU EQUITY</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) PLGU-COMMUNITY FUND FOR AGRICULTURAL DEVELOPMENT (CFAD)- ADAPTABLE PROGRAM LOAN II - LP</Name>
+    <amount>58776.8100</amount>
+    <Accountcode>10102010-6840-301-48</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) PLGU-COMMUNITY FUND FOR AGRICULTURAL DEVELOPMENT (CFAD)- ADAPTABLE PROGRAM LOAN II - LP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) PLGU-COMMUNITY FUND FOR AGRICULTURAL DEVELOPMENT (CFAD)- GOP</Name>
+    <amount>7510.0000</amount>
+    <Accountcode>10102010-6840-301-47</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~MINDANAO RURAL DEVELOPMENT PROGRAM (MRDP) PLGU-COMMUNITY FUND FOR AGRICULTURAL DEVELOPMENT (CFAD)- GOP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PERFORMANCE CHALLENGE FUND (PCF)</Name>
+    <amount>49686.1100</amount>
+    <Accountcode>10102010-6840-301-45</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PERFORMANCE CHALLENGE FUND (PCF)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PGAS DONATION TYPHOON PABLO</Name>
+    <amount>822481.7800</amount>
+    <Accountcode>10102010-6840-301-44</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PGAS DONATION TYPHOON PABLO</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) EU GRANT (I-BUILD)</Name>
+    <amount>10000.0000</amount>
+    <Accountcode>10102010-6840-301-58</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) EU GRANT (I-BUILD)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) GOP (I-BUILD)</Name>
+    <amount>75484.7200</amount>
+    <Accountcode>10102010-6840-301-56</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) GOP (I-BUILD)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) GOP - ENTERPRISE DEVELOPMENT (I-REAP)</Name>
+    <amount>10250.0000</amount>
+    <Accountcode>10102010-6840-301-68</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) GOP - ENTERPRISE DEVELOPMENT (I-REAP)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) LOAN PROCEEDS (I-REAP)</Name>
+    <amount>11150.0100</amount>
+    <Accountcode>10102010-6840-301-67</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) LOAN PROCEEDS (I-REAP)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) LP (I-BUILD)</Name>
+    <amount>571974.3600</amount>
+    <Accountcode>10102010-6840-301-57</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) LP (I-BUILD)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) PLGU (I-BUILD)</Name>
+    <amount>7496401.8400</amount>
+    <Accountcode>10102010-6840-301-55</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP) PLGU (I-BUILD)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP)PLGU - ENTERPRISE DEVELOPMENT (I-REAP)</Name>
+    <amount>766818.9200</amount>
+    <Accountcode>10102010-6840-301-69</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHILIPPINE RURAL DEVELOPMENT PROJECT (PRDP)PLGU - ENTERPRISE DEVELOPMENT (I-REAP)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHRTF REVOLVING FUND</Name>
+    <Accountcode>10102010-6840-301-25</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHRTF REVOLVING FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>BUNAWAN DISTRICT HOSPITAL (BDH)</Name>
+    <amount>2836508.6300</amount>
+    <Accountcode>10102010-6840-301-25-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHRTF REVOLVING FUND~BUNAWAN DISTRICT HOSPITAL (BDH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</Name>
+    <amount>41472348.4200</amount>
+    <Accountcode>10102010-6840-301-25-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHRTF REVOLVING FUND~D.O. PLAZA MEMORIAL HOSPITAL (DOPMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LORETO MUNICIPAL HOSPITAL (LMH)</Name>
+    <amount>192973.4300</amount>
+    <Accountcode>10102010-6840-301-25-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PHRTF REVOLVING FUND~LORETO MUNICIPAL HOSPITAL (LMH)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PREMIUMED RPTA MDP 3</Name>
+    <amount>1250.0000</amount>
+    <Accountcode>10102010-6840-301-7</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PREMIUMED RPTA MDP 3</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PROVINCIAL ROADS MAINTENANCE FACILITY (PRMF)</Name>
+    <amount>143908.5600</amount>
+    <Accountcode>10102010-6840-301-40</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~PROVINCIAL ROADS MAINTENANCE FACILITY (PRMF)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SUPPORT TO EMERGENCY AND LIVELIHOOD ASSISTANCE PROGRAM (SELAP)</Name>
+    <amount>540124.0300</amount>
+    <Accountcode>10102010-6840-301-34</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~SUPPORT TO EMERGENCY AND LIVELIHOOD ASSISTANCE PROGRAM (SELAP)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TDH PHIC  AUTO CREDIT PAYMENT SCHEME</Name>
+    <amount>709877.2200</amount>
+    <Accountcode>10102010-6840-301-63</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TDH PHIC  AUTO CREDIT PAYMENT SCHEME</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TDH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</Name>
+    <amount>839767.2600</amount>
+    <Accountcode>10102010-6840-301-71</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TDH PHIC AUTO CREDIT PAYMENTS SCHEME (PROFESSIONAL FEES)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>TRUST FUND PROPER</Name>
+    <Accountcode>10102010-6840-301-9</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DA-PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)</Name>
+    <amount>5839.2700</amount>
+    <Accountcode>10102010-6840-301-9-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~DA-PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DILG - KONKRETO AT AYOS NA LANSANGAN AT DAAN TUNGO SA PANGKALAHATANG KAUNLARAN (KALSADA) PROJECT</Name>
+    <amount>85775591.0600</amount>
+    <Accountcode>10102010-6840-301-9-5</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~DILG - KONKRETO AT AYOS NA LANSANGAN AT DAAN TUNGO SA PANGKALAHATANG KAUNLARAN (KALSADA) PROJECT</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DOCUMENTARY STAMP</Name>
+    <amount>4620.0000</amount>
+    <Accountcode>10102010-6840-301-9-7</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~DOCUMENTARY STAMP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DPWH-SPECIAL LOCAL ROAD FUND(SLRF)</Name>
+    <amount>3329486.9300</amount>
+    <Accountcode>10102010-6840-301-9-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~DPWH-SPECIAL LOCAL ROAD FUND(SLRF)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>NATIONAL COMMISSION FOR CULTURE AND ARTS (NCCA)</Name>
+    <amount>73608.0300</amount>
+    <Accountcode>10102010-6840-301-9-6</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~NATIONAL COMMISSION FOR CULTURE AND ARTS (NCCA)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>OTHERS</Name>
+    <amount>61089422.1800</amount>
+    <Accountcode>10102010-6840-301-9-0</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~OTHERS</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)</Name>
+    <amount>2602945.7300</amount>
+    <Accountcode>10102010-6840-301-9-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~PAYAPA AT MASAGANANG PAMAYANAN (PAMANA)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PGSO GASOLINE AND FUEL REVOLVING FUND</Name>
+    <amount>27711397.9200</amount>
+    <Accountcode>10102010-6840-301-9-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~PGSO GASOLINE AND FUEL REVOLVING FUND</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PROFFESIONAL FEE</Name>
+    <Accountcode>10102010-6840-301-9-8</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~PROFFESIONAL FEE</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>5</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DOPMH</Name>
+    <amount>856930.7100</amount>
+    <Accountcode>10102010-6840-301-9-8-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~TRUST FUND PROPER~PROFFESIONAL FEE~DOPMH</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>6</levelNo>
+  </Table1>
+  <Table1>
+    <Name>UNDP</Name>
+    <amount>466.9800</amount>
+    <Accountcode>10102010-6840-301-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~UNDP</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>UNITED NATION CHILDREN'S FUND (UNICEF)</Name>
+    <amount>232620.5800</amount>
+    <Accountcode>10102010-6840-301-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102010 - Cash in Bank - Local Currency, Current Account~LAND BANK OF THE PHILIPPINES (LBP)~TRUST FUND~UNITED NATION CHILDREN'S FUND (UNICEF)</FullAccountname>
+    <GLChartAccountChildID>244</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>10102020Cash in Bank - Local Currency, Savings Account</Name>
+    <Accountcode>10102020</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>1</levelNo>
+  </Table1>
+  <Table1>
+    <Name>DEVELOPMENT BANK OF THE PHILIPPINES (DBP)</Name>
+    <Accountcode>10102020-505</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015059-160</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-505-2</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015059-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015060-160</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-505-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015060-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015061-160</Name>
+    <amount>3350000.0000</amount>
+    <Accountcode>10102020-505-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015061-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015062-160</Name>
+    <amount>9350000.0000</amount>
+    <Accountcode>10102020-505-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015062-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015063-160</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-505-5</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015063-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015064-160</Name>
+    <amount>3500000.0000</amount>
+    <Accountcode>10102020-505-6</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015064-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015067-160</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-505-7</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015067-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015068-160(7/20/12)</Name>
+    <amount>16059182.0000</amount>
+    <Accountcode>10102020-505-20</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015068-160(7/20/12)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-015069-160</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-505-8</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-015069-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-022381-160 (4/4/12)</Name>
+    <amount>16059182.0000</amount>
+    <Accountcode>10102020-505-21</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-022381-160 (4/4/12)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-024240-160</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-505-9</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-024240-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-026290-160 (4/4/12)</Name>
+    <amount>11500000.0000</amount>
+    <Accountcode>10102020-505-22</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-026290-160 (4/4/12)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-030733-160</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-505-10</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-030733-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-034369-160</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-505-11</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-034369-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-034720-160</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-505-12</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-034720-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-037311-160</Name>
+    <amount>1600000.0000</amount>
+    <Accountcode>10102020-505-13</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-037311-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-037540-160</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-505-14</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-037540-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-037760-160</Name>
+    <amount>18700000.0000</amount>
+    <Accountcode>10102020-505-15</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-037760-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-038652-160</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-505-16</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-038652-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-038691-160</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-505-17</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-038691-160</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-039282-160 11/15/2016</Name>
+    <amount>3104734.8600</amount>
+    <Accountcode>10102020-505-18</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~0845-039282-160 11/15/2016</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>SPECIAL SAVINGS ACCOUNT</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-505-19</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~SPECIAL SAVINGS ACCOUNT</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0845-045700-160 9/30/2020</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-505-19-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~DEVELOPMENT BANK OF THE PHILIPPINES (DBP)~SPECIAL SAVINGS ACCOUNT~0845-045700-160 9/30/2020</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>4</levelNo>
+  </Table1>
+  <Table1>
+    <Name>LANDBANK OF THE PHILIPPINES (LBP)</Name>
+    <Accountcode>10102020-6840</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name> 0971-2073-29</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-62</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~ 0971-2073-29</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1371-93</Name>
+    <amount>1000000.0000</amount>
+    <Accountcode>10102020-6840-80</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1371-93</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1933-52 (2/16/11)</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-1</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1933-52 (2/16/11)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1941-97</Name>
+    <amount>11300000.0000</amount>
+    <Accountcode>10102020-6840-42</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1941-97</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1944-99 (10/14/11)</Name>
+    <amount>9350000.0000</amount>
+    <Accountcode>10102020-6840-3</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1944-99 (10/14/11)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1950-70 (2/16/2012)</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-4</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1950-70 (2/16/2012)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1956-90</Name>
+    <amount>3500000.0000</amount>
+    <Accountcode>10102020-6840-5</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1956-90</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1958-60(8/16/12)</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-6</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1958-60(8/16/12)</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1969-20</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-7</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1969-20</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1971-02</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-8</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1971-02</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1977-22</Name>
+    <amount>17867263.0000</amount>
+    <Accountcode>10102020-6840-43</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1977-22</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-1997-17</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-9</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-1997-17</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2002-00</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-11</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2002-00</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2007-82</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-12</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2007-82</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2009-28</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-13</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2009-28</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2013-71</Name>
+    <amount>22000000.0000</amount>
+    <Accountcode>10102020-6840-14</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2013-71</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2014-79</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-15</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2014-79</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2018-00</Name>
+    <amount>3000000.0000</amount>
+    <Accountcode>10102020-6840-81</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2018-00</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2018-19</Name>
+    <amount>54800000.0000</amount>
+    <Accountcode>10102020-6840-16</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2018-19</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2019-40</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-17</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2019-40</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2020-17</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-79</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2020-17</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2021-49</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-18</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2021-49</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2022-38</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-19</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2022-38</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2022-46</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-20</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2022-46</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2023-86</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-21</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2023-86</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2026-02</Name>
+    <amount>3200000.0000</amount>
+    <Accountcode>10102020-6840-22</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2026-02</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2026-29</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-23</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2026-29</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2027-26</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-24</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2027-26</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2029-55</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-25</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2029-55</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2032-85</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-26</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2032-85</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2034-20</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-27</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2034-20</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2036-76</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-28</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2036-76</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2040-87</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-29</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2040-87</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2043-38</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-30</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2043-38</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2046-13</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-31</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2046-13</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2048-50</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-32</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2048-50</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2049-66</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-33</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2049-66</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2051-64</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-34</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2051-64</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2053-85</Name>
+    <amount>5000000.0000</amount>
+    <Accountcode>10102020-6840-35</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2053-85</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2056-60</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-36</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2056-60</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2057-50</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-37</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2057-50</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2059-46</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-38</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2059-46</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2063-49</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-39</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2063-49</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2066-08</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-40</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2066-08</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2074-18</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-47</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2074-18</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2075-74</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-48</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2075-74</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2081-47</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-49</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2081-47</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2083-09</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-50</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2083-09</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2083-92</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-72</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2083-92</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2087-67</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-51</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2087-67</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2089-61</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-52</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2089-61</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2091-27</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-53</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2091-27</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2095-34</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-54</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2095-34</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2097-47</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-55</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2097-47</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2101-76</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-56</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2101-76</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2103-97</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-57</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2103-97</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2105-08</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-58</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2105-08</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2108-34</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-60</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2108-34</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2110-16</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-61</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2110-16</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2113-85</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-73</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2113-85</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2115-12</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-46</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2115-12</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2116-44</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-71</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2116-44</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2118-73</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-77</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2118-73</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2120-55</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-65</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2120-55</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2120-65</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-76</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2120-65</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2122-09</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-78</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2122-09</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2123-49</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-67</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2123-49</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2125-00</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-68</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2125-00</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2128-10</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-69</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2128-10</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0971-2129-10</Name>
+    <amount>15000000.0000</amount>
+    <Accountcode>10102020-6840-74</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0971-2129-10</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0972-2092-91</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-45</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0972-2092-91</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>0972-2100-28</Name>
+    <amount>10000000.0000</amount>
+    <Accountcode>10102020-6840-75</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~LANDBANK OF THE PHILIPPINES (LBP)~0972-2100-28</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>3</levelNo>
+  </Table1>
+  <Table1>
+    <Name>OTHERS</Name>
+    <amount>3450000.0000</amount>
+    <Accountcode>10102020-0</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~OTHERS</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+  <Table1>
+    <Name>PHILIPPINE NATIONAL BANK</Name>
+    <Accountcode>10102020-65685</Accountcode>
+    <year_>2023</year_>
+    <month_>11</month_>
+    <FullAccountname>10102020 - Cash in Bank - Local Currency, Savings Account~PHILIPPINE NATIONAL BANK</FullAccountname>
+    <GLChartAccountChildID>245</GLChartAccountChildID>
+    <levelNo>2</levelNo>
+  </Table1>
+</NewDataSet>

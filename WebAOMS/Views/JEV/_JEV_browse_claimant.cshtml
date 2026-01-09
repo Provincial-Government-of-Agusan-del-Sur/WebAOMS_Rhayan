@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                @*<li class="breadcrumb-item"><a href="#" onclick="clicksubAccount(@ViewBag.ChartAccountChildID)">@ViewBag.AccountChildName</a><input id="@ViewBag.ChartAccountChildID"hidden type="text"/></li>*@
+                <li id="li_title" class="breadcrumb-item"></li>
+
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="input-group control-width-sm pull-right" style="padding-bottom:5px!important">
+                <input id="txt_search_browse_account" type="text" class="form-control navbar-input" placeholder="Search name..!">
+                <span class="input-group-btn">
+                    <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i  class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <script>
+           
+            function refreshGrid_browse(){
+                var gridData = $("#grid_COA_browse").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+
+            $('#txt_search_browse_account').on('keyup', function (e) {
+                var gridData = $("#grid_COA_browse").data("kendoGrid");
+                if (e.keyCode == 13) {
+                    click_search_claimant()
+                }
+            })
+
+            function click_search_claimant() {
+                if ($('#txt_search_browse_account').val().length > 0) {
+                    ISfn.applyFilter("Name", $('#txt_search_browse_account').val(), 'grid_COA_browse')
+                    //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                }
+                else {
+                    gridData.dataSource.filter({});
+                }
+            }
+
+            function param_browse_claimant() {
+                return { Accountname:'@ViewBag.Accountname'};
+            }
+
+            function close_browse_claimant() {
+                $("#body_browse_claimant").html("")
+                $("#mdl_browse_claimant").modal("hide");
+                refreshGrid()
+            }
+
+            function btn_browse_claimant_add(id, Accountname) {
+                var parentid = @ViewBag.ChartAccountChildID
+                $.post('@Url.Action("add_browse_claimant_toCOA", "JEV")', { ChartAccountChildID: id, Accountname: Accountname, parentID: parentid }, function (r) {
+                    toastr.success(r.statusName, 'System Message');
+                    
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    mg.warning("" + textStatus + "")
+                });
+            }
+
+
+            function onChange(arg) {
+                var selected = $.map(this.select(), function (item) {
+                    alert($(item).text());
+                });
+            }
+
+
+        </script>
+        <style>
+            
+        </style>
+        <div class="row">
+            @(Html.Kendo().Grid<dynamic>()
+        .Name("grid_COA_browse")
+        .Columns(columns =>
+        {
+        columns.Template(@<text></text>)
+            .Width(40)
+            .HtmlAttributes(new { style = "text-align:center;font-size:10" })
+            .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"btn_browse_claimant_add(#=ID#,'#=Name#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-plus\"></i></button>");
+            columns.Bound("ID").Width(70).Title("Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+            columns.Bound("Name").Width(340);
+
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 400px;" })
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_browse_claimant", "JEV").Data("param_browse_claimant"))
+            .PageSize(200)
+            .ServerOperation(false)
+            .Sort(sort => sort.Add("Name").Ascending())
+        )
+            )
+        </div>
+    </div>
+</div>

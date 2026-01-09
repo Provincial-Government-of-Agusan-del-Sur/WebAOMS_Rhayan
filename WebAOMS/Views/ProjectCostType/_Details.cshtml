@@ -1,0 +1,123 @@
+﻿<div id="divhalfdetail" class="div-block" style="border:none; width:320px; padding:10px 0px 10px 0px; display:none"> 
+    <div style="display:none"> 
+        <div class="small_m-label"style="padding-left:5px">Fund ID</div>
+        <div class="m-field" style=" width:310px; ">
+            <span id="sofid" onmouseover="spanhover('spanProjectname')" onmouseout="spanout('spanProjectname')"  class="k-widget k-autocomplete k-header k-state-default k-sate-hover" style="width:40px;">
+                <input id="txtprojectCostID" class="k-input" disabled="disabled" style="width:100%;font-family:'Segoe UI' !important;text-align:center"/>
+            </span>
+        </div> 
+        </div>
+    <div class="clear topm-5" ></div>
+    <div class="clear topm-5" ></div>
+    <div class="padding-5"></div>
+    <div class="small_m-label"style="padding-left:5px">Project Cost Name</div>
+    <div class="m-field" style=" width:310px;">
+        <span id="spanProjectname" onmouseover="spanhover('spanProjectname')" onmouseout="spanout('spanProjectname')"  class="k-widget k-autocomplete k-header k-state-default k-sate-hover" style="width:100%;">
+            <textarea id="txtProjectCostName" class="k-input" style="min-width:100%; max-width:100%;max-height:73px;height:73px; font-family:'Segoe UI' !important;"></textarea>
+        </span>
+    </div>
+    <div class="clear topm-5" ></div>
+    <div class="clear topm-5" ></div>
+    <div class="padding-5"></div>
+    <div class="small_m-label" style="padding-left:5px"> Parent Cost type</div>            
+    <div class="m-field" style=" width:150px;">
+        <input id="cbo_parentCostType"  style="width: 310px"/>
+    </div>
+   <div class="clear topm-10" ></div>
+    <div class="padding-5 padding-5"></div>
+   <div class="block m-buttom-bg" style="margin: 5px 0 0px 0; width:100%; text-align:right;">
+        <button id="btnSaveProjectCostType" class="k-button" style="margin-right:5px;" > <i class="fa fa-save fa-lg"></i> Save</button>        
+        <button id="btnUpdateProjectCostType" class="k-button" style="margin-right:5px;" > <i class="fa fa-save fa-lg"></i> Update</button>        
+        <button id="btnDeleteProjectCostType" class="k-button" style="margin-right:5px;"> <i class="fa fa-trash-o fa-lg"></i> Delete</button>   
+    </div>       
+    </div>
+    <script>
+        $(document).ready(function () {
+            $.post('@Url.Action("LoadComboDatasource","PrivateShared")', { datasourceid: 3 },
+                   function (data) {
+                       $("#cbo_parentCostType").kendoComboBox({
+                           placeholder: "Select Fund..",
+                           dataTextField: "txt",
+                           dataValueField: "val",
+                           dataSource: data
+                       });
+                   }, "json"
+               );
+        })
+
+        $('#btnSaveProjectCostType').click(function () {
+            wndPopup.title('System Confirmation');
+            wndPopup.content("<div style=\"text-align:center; padding-top:15px\">" +
+                        "Are you sure do you want to save?!" +
+                        "<div style=\"padding-top:10px\"><button onclick=\"saveProjectCostType()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">Yes</button><button onclick=\"NoProject()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">No</button> " +
+                        "</div></div>")
+            wndPopup.center().open();
+        })
+        $('#btnUpdateProjectCostType').click(function () {
+            wndPopup.title("System Confirmation");
+            wndPopup.content("<div style=\"text-align:center; padding-top:15px\">" +
+                        "Are you sure do you want to Update?!" +
+                        "<div style=\"padding-top:10px\"><button onclick=\"saveProjectCostType()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">Yes</button><button onclick=\"NoProject()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">No</button> " +
+                        "</div></div>")
+            wndPopup.center().open();
+        })
+
+        $('#btnDeleteProjectCostType').click(function () {
+            wndPopup.title('System Confirmation');
+            wndPopup.content("<div style=\"text-align:center; padding-top:15px\">" +
+                        "Are you sure do you want to remove?!" +
+                        "<div style=\"padding-top:10px\"><button  onclick=\"deleteProjectCostType()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">Yes</button><button  onclick=\"NoProject()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">No</button> " +
+                        "</div></div>")
+            wndPopup.center().open();
+        })
+
+        function saveProjectCostType() {
+            $.post('@Url.Action("SaveProjectCostType","ProjectCostType")',
+              { projectCostID: $('#txtprojectCostID').val(),
+                ParentProjectCostID: $('#cbo_parentCostType').data('kendoComboBox').value(),
+                ProjectCostName: $('#txtProjectCostName').val(),
+              },function (r) {
+                    if (r == 6) {
+                        var grid = $("#grid_project_cost_type").data("kendoGrid");
+                        grid.dataSource.read({
+                            remarks: ""
+                        })
+                        addnewprojectCostType()
+                    }
+                    else if (r == 4) {
+                        alert('Can`t save entry as it already exists');
+                    }
+                    else if (r == 8) {
+                        alert('Some fields are empty or contain a improper value!');
+                    }
+                    else {
+                        alert(r);
+                    }
+                    NoProject()
+                }
+            )
+        }
+
+        function deleteProjectCostType() {
+            $.post('@Url.Action("DeleteProjectCostType","ProjectCostType")',
+             { projectCostID: $('#txtprojectCostID').val()},
+               function (r) {
+                    if (r == 6) {
+                        var grid = $("#grid_project_cost_type").data("kendoGrid");
+                        grid.dataSource.read({
+                            remarks: ""
+                        })
+                        addnewprojectCostType()
+                    }
+                    else {
+                        alert(r);
+                    }
+                    NoProject()
+                }
+            )
+        }
+
+        function NoProject() {
+            wndPopup.close()
+        }
+    </script>

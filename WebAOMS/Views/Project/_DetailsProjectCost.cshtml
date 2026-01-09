@@ -1,0 +1,171 @@
+﻿@model WebAOMS.Models.tbl_B_ProjectEstimatedCost
+
+<script>
+    function paraProjectCostEstimated() {
+        return { datasourceid: 4 }
+    }
+</script>
+<div id="divhalfdetailProjectCost" class="div-block" style="border:none; width:320px; padding:10px 0px 10px 0px;"> 
+    <div style="display:none"> 
+        <div class="small_m-label"style="padding-left:5px">ID</div>
+        <div class="m-field" style=" width:310px; ">
+            <span id="ProjectEstimatedCostID"   class="k-widget k-autocomplete k-header k-state-default k-sate-hover" style="width:40px;">
+                <input id="txtProjectEstimatedCostID" class="k-input autoselect" disabled="disabled" style="width:100%;font-family:'Segoe UI' !important;text-align:center"/>
+            </span>
+        </div> 
+     </div>
+
+    @*<div class="clear topm-5" ></div>
+    <div class="clear topm-5" ></div>
+    <div class="padding-5"></div>*@
+    <div class="small_m-label" style="padding-left:5px"> Project Cost Type</div>            
+    <div class="m-field" style=" width:150px;">
+        @(Html.Kendo().ComboBox()
+                .Name("cbo_projectCostEstimated")
+                .Placeholder("Select project cost type...")
+                .HtmlAttributes(new { style = "width:310px; text-align:left;" })
+                .DataTextField("txt")
+                .DataValueField("val")
+                //.AutoBind(true)
+                .Filter("contains")
+              .DataSource(source => {
+                  source.Read(read =>
+                  {
+                      read.Action("LoadComboDatasource", "PrivateShared").Data("paraProjectCostEstimated");
+                  })
+                  .ServerFiltering(true);
+              }))
+    </div>
+    <div class="clear topm-5" ></div>
+    <div class="clear topm-5" ></div>
+    <div class="padding-5"></div>
+    <div class="small_m-label" style="padding-left:5px">Tranche</div>            
+    <div class="m-field" style=" width:300px;">
+    @(Html.Kendo().ComboBox()
+              .Name("cmb_tranche")
+              .Filter("contains")
+              .Placeholder("Select tranche...")
+              .DataTextField("Text")
+              .DataValueField("Value")
+              .HtmlAttributes(new { style = "width:170px;" })
+              .BindTo(new List<SelectListItem>() {
+                  new SelectListItem() {
+                    Text = "1st Tranche", Value = "1"   
+                  },
+                  new SelectListItem() {
+                    Text = "2nd Tranche", Value = "2"   
+                  },
+                  new SelectListItem() {
+                    Text = "3rd Tranche", Value = "3"   
+                  },
+                  new SelectListItem() {
+                    Text = "4th Tranche", Value = "4"   
+                  },
+                  new SelectListItem() {
+                    Text = "5th Tranche", Value = "5"   
+                  },
+                  new SelectListItem() {
+                    Text = "6th Tranche", Value = "6"   
+                  }
+              })
+               //.Events(e =>
+               // {
+               //     e.Change("select_source");
+               // })
+          .Suggest(true)
+        ) 
+        </div>
+    <div class="clear topm-5" ></div>
+    <div class="clear topm-5" ></div>
+    <div class="padding-5"></div>
+    <div class="small_m-label" style="padding-left:5px">Date Received</div>            
+    <div class="m-field" style=" width:300px;">
+        @(Html.Kendo().DatePicker()
+        .Name("DT_Project_dateReceive")
+        .Format("MMMM dd, yyyy")
+        .Value(Model.DateReceived)
+        .HtmlAttributes(new { type="text",style = "width:170px;" })
+        )
+        </div>
+    <div class="clear topm-5" ></div>
+    <div class="clear topm-5" ></div>
+    <div class="padding-5"></div>
+    <div class="small_m-label" style="padding-left:5px"> Estimated Amount</div>
+    <div class="m-field" style=" width:310px;">
+        <span id="spanEstimatedAmount" onmouseover="spanhover('spanEstimatedAmount')" onmouseout="spanout('spanEstimatedAmount')"  class="k-widget k-autocomplete k-header k-state-default k-sate-hover" style="width:170px;">
+            <input id="txtEstimatedAmount" type="text"  name="number" class="k-input "  style="width:100%;font-family:'Segoe UI' !important;text-align:right"/>
+        </span>
+    </div>
+   <div class="clear topm-10" ></div>
+    <div class="padding-5 padding-5"></div>
+   <div class="block m-buttom-bg" style="margin: 5px 0 0px 0; width:100%; text-align:right;">
+        @*<button id="btnSaveProjectCost" class="k-button" style="margin-right:5px;" > <i class="fa fa-save fa-lg"></i> Save</button>*@        
+        <button id="btnUpdateProjectCost" class="k-button" style="margin-right:5px;" > <i class="fa fa-save fa-lg"></i> Update</button>        
+        <button id="btnCancelProjectCost" class="k-button" style="margin-right:5px;"> <i class="fa fa-trash-o fa-lg"></i> Cancel</button>   
+    </div>       
+</div>
+    <script>
+        
+        $("#DT_Project_dateReceive").attr("readonly", "readonly");
+
+        $(function () {$('#txtEstimatedAmount').number(true, 2);});
+       
+        $(document).ready(function () {
+            $("#cbo_projectCostEstimated").data("kendoComboBox").value(@Model.ProjectCostID)
+            $("#cmb_tranche").data("kendoComboBox").value(@Model.Tranche)
+            $('#txtEstimatedAmount').val(@Model.EstimatedAmount)
+            $('#txtProjectEstimatedCostID').val(@Model.ProjectEstimatedCostID)
+         })
+        $('#btnSaveProjectCost').click(function () {
+            wndPopup.title('System Confirmation');
+            wndPopup.content("<div style=\"text-align:center; padding-top:15px\">" +
+                        "Are you sure do you want to save?!" +
+                        "<div style=\"padding-top:10px\"><button onclick=\"saveProjectCost()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">Yes</button><button onclick=\"NoProjectCost()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">No</button> " +
+                        "</div></div>")
+            wndPopup.center().open();
+        })
+
+        $('#btnUpdateProjectCost').click(function () {
+            wndPopup.title("System Confirmation");
+            wndPopup.content("<div style=\"text-align:center; padding-top:15px\">" +
+                        "Are you sure do you want to Update?!" +
+                        "<div style=\"padding-top:10px\"><button onclick=\"saveProjectCost()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">Yes</button><button onclick=\"NoProjectCost()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">No</button> " +
+                        "</div></div>")
+            wndPopup.center().open();
+        })
+        $('#btnCancelProjectCost').click(function () {
+            $("#vwPCostDetails").data("kendoWindow").close();
+                })
+
+
+        function saveProjectCost(e) {
+            var estimatedCostID = $("#cbo_projectCostEstimated").data("kendoComboBox").value();
+            var trachecode = $("#cmb_tranche").data("kendoComboBox").value();
+            $.post('@Url.Action("SaveProjectCost","Project")',
+            {
+                tranche: trachecode,
+                dateReceived: kendo.toString($('#DT_Project_dateReceive').data('kendoDatePicker').value(), 'd'),
+                ProjectCostID: estimatedCostID,
+                ProjectID: $('#txtprojectID').val(),
+                EstimatedAmount: $('#txtEstimatedAmount').val(),
+                ProjectEstimatedCostID: $('#txtProjectEstimatedCostID').val(),
+            }, function (r) {
+                if (r == 6) {
+                    var grid = $("#grid_project_Cost").data("kendoGrid");
+                    grid.dataSource.read({ porjectCostName: "", projectID: $('#txtprojectID').val() })
+                }
+                else if (r == 4) {
+                    alert('Can`t save entry as it already exists');
+                }
+                else if (r == 8) {
+                    alert('Some fields are empty or contain a improper value!');
+                }
+                else {
+                    alert(r);
+                }
+                NoProjectCost()
+                $("#vwPCostDetails").data("kendoWindow").close();
+            }
+            )
+        }
+    </script>

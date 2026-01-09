@@ -1,0 +1,195 @@
+﻿<script>
+    function paraProjectCostEstimated() {
+        return { datasourceid: 4 }
+    }
+</script>
+<div class="box col-md-12">
+    <form id="frm_project_cost_details">
+        <input id="txt_ProjectCost_ProjectID" hidden type="text" name="ProjectID" value="@ViewBag.ProjectID" />
+        <input id="txtProjectEstimatedCostID" hidden type="text"  name="ProjectEstimatedCostID" value="@ViewBag.ProjectEstimatedCostID"/>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Project Cost Type</label>
+                @(Html.Kendo().DropDownList()
+                .Name("ProjectCostID")
+                .HtmlAttributes(new { style = "width: 100%" })
+                .DataTextField("txt")
+                .DataValueField("val")
+                //.AutoBind(true)
+                .Filter("contains")
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("LoadComboDatasource", "PrivateShared").Data("paraProjectCostEstimated");
+                  })
+                  .ServerFiltering(true);
+              }))
+            </div>
+            <div class="form-group col-md-6">
+                <label>Tranche</label>
+                @(Html.Kendo().DropDownList()
+              .Name("Tranche")
+              .Filter("contains")
+              .DataTextField("Text")
+              .DataValueField("Value")
+              .HtmlAttributes(new { style = "width: 100%" })
+              .BindTo(new List<SelectListItem>() {
+                  new SelectListItem() {
+                    Text = "1st Tranche", Value = "1"
+                  },
+                  new SelectListItem() {
+                    Text = "2nd Tranche", Value = "2"
+                  },
+                  new SelectListItem() {
+                    Text = "3rd Tranche", Value = "3"
+                  },
+                  new SelectListItem() {
+                    Text = "4th Tranche", Value = "4"
+                  },
+                  new SelectListItem() {
+                    Text = "5th Tranche", Value = "5"
+                  },
+                  new SelectListItem() {
+                    Text = "6th Tranche", Value = "6"
+                  }
+              })
+
+             )
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="date-received">Date Received</label>
+                @(Html.Kendo().DatePicker()
+                    .Name("DateReceived")
+                    .Format("MMMM dd, yyyy")
+                    .HtmlAttributes(new { style = "width:100%", type = "text", @class = "input-group" })
+                )
+
+            </div>
+            <div class="form-group col-md-6">
+                <label for="estimated-amount">Estimated Amount</label>
+                <input id="txtEstimatedAmount" type="text" name="EstimatedAmount" value="@ViewBag.EstimatedAmount" class="form-control" />
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<script>
+    var mg = new mgsInfo()
+    function warn_delete_project_cost() {
+        // toastr.warning("Access denied..!", 'System Message');
+
+        //$("#mdl_newstatus").removeClass("modal")
+        //$(".modal").addClass("zdex");
+        mg.bsyesNoWithRemarks("Are you sure you want to delete this project <b>@ViewBag.project_name?</b>", "deleteProjectCost()")
+    }
+
+    function deleteProjectCost() {
+        var remarks = $("#txt_remarks").val()
+        $.post('@Url.Action("DeleteProjectCost","Project")',
+              { ProjectEstimatedCostID: $("#txtProjectEstimatedCostID").val(), remarks: remarks },
+               function (r) {
+                   if (r.success) {
+                       var grid = $("#grid_project_Cost").data("kendoGrid");
+                       grid.dataSource.read();
+                       toastr.success(r.message, 'System Message')
+                       $("#mdl_cost_details").modal("hide");
+                   }
+                   else {
+
+                       toastr.warning(r.message, 'System Message')
+                   }
+               }
+            )
+    }
+
+    $(document).ready(function () {
+        $("#txt_ProjectCost_ProjectID").val($("#txtprojectID").val())
+
+    })
+        $("#DT_Project_dateReceive").attr("readonly", "readonly");
+        $(function () {
+            $('#txtEstimatedAmount').number(true, 2);
+        });
+
+
+        //$('#btnSaveProjectCost').click(function () {
+        //    wndPopup.title('System Confirmation');
+        //    wndPopup.content("<div style=\"text-align:center; padding-top:15px\">" +
+        //                "Are you sure do you want to save?!" +
+        //                "<div style=\"padding-top:10px\"><button onclick=\"saveProjectCost()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">Yes</button><button onclick=\"NoProjectCost()\" class=\"k-button l-button\" style=\"width:100px; padding:4px;\">No</button> " +
+        //                "</div></div>")
+        //    wndPopup.center().open();
+        //})
+
+        //$('#btnCancelProjectCost').click(function () {
+        //    $("#vwPCostDetails").data("kendoWindow").close();
+        //})
+
+
+        function saveProjectCost() {
+            startSpin()
+
+            var frm = $("#frm_project_cost_details").serialize();
+            $.post('@Url.Action("SaveProjectCost", "Project")',
+                   frm
+                   //int projectYear = 0, string projectName = "", string location = "", int fundID = 0, int projectID = 0)
+          ,
+                function (r) {
+                    stopSpin()
+                    if (r.success) {
+                        
+                        var grid = $("#grid_project_Cost").data("kendoGrid");
+                        grid.dataSource.read();
+
+
+                        var gridProject = $("#grid_project").data("kendoGrid");
+                        gridProject.dataSource.read({
+                            remarks: ""
+                        })
+                        toastr.success(r.message, 'System Message')
+                        $("#mdl_cost_details").modal("hide");
+                    }
+                    else {
+
+                        toastr.warning(r.message, 'System Message')
+                    }
+
+                }
+            )
+        }
+        @*function saveProjectCost(e) {
+            var estimatedCostID = $("#cbo_projectCostEstimated").data("kendoComboBox").value();
+            var trachecode = $("#cmb_tranche").data("kendoComboBox").value();
+            $.post('@Url.Action("SaveProjectCost","Project")',
+            {
+                //tranche: trachecode,
+                //dateReceived: kendo.toString($('#DT_Project_dateReceive').data('kendoDatePicker').value(), 'd'),
+                //ProjectCostID: estimatedCostID,
+                //ProjectID: $('#txtprojectID').val(),
+                //EstimatedAmount: $('#txtEstimatedAmount').val(),
+                //ProjectEstimatedCostID: $('#txtProjectEstimatedCostID').val(),
+            }, function (r) {
+                if (r == 6) {
+                    var grid = $("#grid_project_Cost").data("kendoGrid");
+                    grid.dataSource.read({ porjectCostName: "", projectID: $('#txtprojectID').val() })
+                    addnewprojectCost()
+                }
+                else if (r == 4) {
+                    alert('Can`t save entry as it already exists');
+                }
+                else if (r == 8) {
+                    alert('Some fields are empty or contain a improper value!');
+                }
+                else {
+                    alert(r);
+                }
+                NoProjectCost()
+                $("#vwPCostDetails").data("kendoWindow").close();
+            }
+            )
+        }*@
+</script>

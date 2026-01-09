@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <div class="row">
+            <form id="frm_coa" class="form-horizontal" style="padding-top:4px" role="form">
+                <script>
+                    var mg = new mgsInfo()
+                    function param_grid_entries_conso() {
+                        return {jevid:@ViewBag.jevid}
+                    }
+                    function warnApprove() {
+                        var mggs = "Are you sure you want to Approve the JEV NO. <b> @ViewBag.JEVno ?</b>";
+                        mg.bsQuestion(mggs, "approved_jev()","Approve")
+                    }
+
+                    function approved_jev() {
+                        startSpin()
+                        $.post('@Url.Action("approved_jev", "JEV")', { jevid: @ViewBag.jevid }
+                            , function (r) {
+                                stopSpin()
+                                if (r.code == 6) {
+                                    toastr.success(r.statusName, 'System Message');
+                                    rgrid_approved_jev();
+                                    rgrid_trans_account();
+                                    close_modal_question();
+                                    $("#mdl_approve").modal("hide")
+                                }
+                                else {
+                                    toastr.warning(r.statusName, 'System Message');
+                                    close_modal_question();
+                                }
+                            })
+                        .fail(function (jqXHR, textStatus, error) {
+                            stopSpin()
+                            mg.warning("" + textStatus + "")
+                        });
+                    }
+                </script>
+                <div class="row">
+
+
+                    <div class="col-md-12">
+                        @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_Entries_consolidated_Result>()
+                    .Name("grid_entries_consolidated")
+                    .Columns(columns =>
+                    {
+                        columns.Bound("AccountCode").Width(70).Title("Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:left" });
+                        columns.Bound("FullAccountname").Width(300);
+                        columns.Bound("Debit").Width(50).Format("{0:n2}").HtmlAttributes(new { style = "text-align:right" })
+                        .ClientFooterTemplate("<div style='text-align:right'><b>#= kendo.format('{0:N2}',sum) #</b></div>");
+                        columns.Bound("Credit").Width(50).Format("{0:n2}").HtmlAttributes(new { style = "text-align:right" })
+                        .ClientFooterTemplate("<div style='text-align:right'><b>#= kendo.format('{0:N2}',sum) #</b></div>");
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 400px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("JEV_Entries_consolidated", "JEV").Data("param_grid_entries_conso"))
+                        .PageSize(200)
+                        .ServerOperation(false)
+                        .Aggregates(aggregates =>
+                            {
+                                aggregates.Add(a => a.Debit).Sum();
+                                aggregates.Add(a => a.Credit).Sum();
+                                aggregates.Add(a => a.AccountCode).Count();
+                            })
+                    )
+                        )
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+   
+</script>

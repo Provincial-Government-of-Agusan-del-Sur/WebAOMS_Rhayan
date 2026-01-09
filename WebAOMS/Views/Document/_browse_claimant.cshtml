@@ -1,0 +1,179 @@
+﻿
+@{
+    ViewBag.Title = "Claimant";
+    Layout = null;
+}
+<div class="box" style="width:100%;margin-bottom:0px!important">
+    <div class="box-body" >
+        <div id="payrollType-3" class="col-lg-12 no-padding hideoptiondiv" style="display:block">
+                <div data-toggle="buttons">
+                    <label class="btn radio-inline btn-radio-success-inverse active">
+                        <input name="claimantypeOption" id="claimantypeOption1" value="1" type="radio"> Employee
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption2" value="2" type="radio"> Other Individual
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption3" value="3" type="radio"> Company
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption4" value="4" type="radio"> Responsibility Center
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption5" value="5" type="radio"> National Offices
+                    </label>
+                    <label class="btn radio-inline btn-radio-success-inverse">
+                        <input name="claimantypeOption" id="claimantypeOption6" value="6" type="radio"> Barangay Treasurers
+                    </label>
+                    <input id="claimantypeOptionID" value="1" hidden />
+                    <script>
+                                $(function () {
+                                    $('input[name="claimantypeOption"]').bind('change', function () {
+                                        $("#claimantypeOptionID").val($(this).val())
+                                        if ($(this).val() == 2) {
+                                            $("#btn_add_claimant").show();
+                                        }
+                                        else if ($(this).val() == 3) {
+                                            $("#btn_add_claimant").show();
+                                        }
+                                        else {
+                                            $("#btn_add_claimant").hide()
+                                        }
+                                        //var categories = $("#grid_claimant").data("kendoGrid");
+                                        //categories.dataSource.read();
+                                        refreshGrid()
+                                    });
+
+                                });
+
+                                function para_claimant() {
+                                    return { claimantCode: $("#claimantypeOptionID").val(), name: $("#txt_search_name").val() }
+                                }
+
+                                function refreshGrid() {
+                                    var gridData = $("#grid_claimant").data("kendoGrid");
+                                    gridData.dataSource.read();
+                                }
+
+                            function add_claimant() {
+                                startSpin()
+                                $.post('@Url.Action("_add_claimant", "Document")', {}
+                                , function (r) {
+                                    $("#body_add_claimant").html(r)
+                                    $("#mdl_add_claimant").modal("show");
+                                    stopSpin();
+                                })
+                            }
+
+                        function close_add_claimant() {
+                            $("#mdl_add_claimant").modal("hide");
+                        }
+
+                        
+                    </script>
+                </div>
+            <div class="col-lg-12" style="padding-bottom:5px">
+                @*@(Html.Kendo().ComboBox()
+              .Name("dp_claimant")
+              .Placeholder("Select Claimant Name ...")
+             .HtmlAttributes(new { style = "width:400px; text-align:left;" })
+            .DataTextField("Name")
+            .DataValueField("ID")
+            .AutoBind(true)
+              .Filter("contains")
+
+              .DataSource(source =>
+              {
+                  source.Read(read =>
+                  {
+                      read.Action("get_claimant_name_byClamantmode", "PreAudit").Data("para_claimant");
+
+                  });
+              })
+
+            )*@
+                <div class="row">
+                    <div class="input-group control-width-large pull-right" style="padding-bottom:5px!important">
+                        <input id="txt_search_name" type="text" class="form-control navbar-input" placeholder="Search the name of the Payee">
+                        <span class="input-group-btn">
+                            <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_claimant")
+                    .Columns(columns =>
+                    {
+                    //columns.Bound("ID").Width(60).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                    columns.Bound("Name").Width(250);
+                    columns.Bound("Address").Width(350);
+                    @*columns.Template(@<text></text>)
+                                .Width(130)
+                                .Title("Credit")
+                                .HtmlAttributes(new { style = "text-align:right;font-size:10" })
+                                .ClientTemplate("<div id=\"div_credit_#=ChartAccountChildID#\"><button type=\"button\" id=\"btn_credit_#=ChartAccountChildID#\" onclick=\"edit_amount(#=credit#,#=ChartAccountChildID#,'credit',#=hasChild#,'#=AccountChildName#',#=code#,'#=ChildCode#',#=AccountChildParentID#)\" class=\"k-button DebitCredit\">#=addCommas(credit)#</button></div>");*@
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 350px;" })
+                                    .Selectable(m => m
+                        .Mode(GridSelectionMode.Single)
+                        .Type(GridSelectionType.Row))
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(true)
+                        .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_claimant_byClaimantType_server_search", "Document").Data("para_claimant"))
+                        .PageSize(200)
+                        .ServerOperation(true)
+                        .Sort(sort => sort.Add("Name").Ascending())
+                    //.Sort(s => s.Add("ChartAccountChildID").Descending())
+                    )
+                    //.Events(x => x.DataBound("loadnumeric").Change("onChange"))
+                    )
+                </div>
+
+                    @*<button class="btn btn-equal" onclick="refrehGrid()" type="button"><i class="fa fa-search"></i></button>*@
+                </div>
+            </div>    
+    </div>
+</div>
+<script>
+
+    $('#txt_search_name').on('keyup', function (e) {
+        var gridData = $("#grid_claimant").data("kendoGrid");
+        if (e.keyCode == 13) {
+            refreshGrid()
+        }
+    })
+
+    function click_search_claimant() {
+        var gridData = $('#grid_claimant').data('kendoGrid');
+        if ($('#txt_search_name').val().length > 0) {
+            ISfn.applyFilter("Name", $('#txt_search_name').val(), 'grid_claimant')
+            //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+        }
+        else {
+            gridData.dataSource.filter({});
+        }
+    }
+    function select_claimant() {
+        //var ddl_claimant = $('#dp_claimant').data('kendoComboBox')
+        //if (ddl_claimant.selectedIndex == -1) {
+        //    toastr.warning("Invalid Claimant", 'System Message');
+        //    return;
+        //}
+
+        var grid = $('#grid_claimant').data('kendoGrid');
+        var selectedItem = grid.dataItem(grid.select());
+
+        $("#txt_claimant_id").val(selectedItem.ID)
+        $("#txt_claimant").val(selectedItem.Name)
+        close_browse_claimant()
+    }
+
+</script>

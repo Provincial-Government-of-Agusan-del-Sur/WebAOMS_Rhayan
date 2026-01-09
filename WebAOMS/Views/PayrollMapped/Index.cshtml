@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Payroll Mapped";
+}
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group">
+                <button type="button" class="btn btn-equal btn-sm btn-refresh" aria-label="Refresh">
+                    <i class="fa fa-refresh"></i>
+                </button>
+                <button type="button" class="btn btn-equal btn-sm btn-collapse" aria-label="Collapse">
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <button type="button" class="btn btn-equal btn-sm btn-close" aria-label="Close">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="box-body" style="padding-top:10px">
+        
+        @(Html.Kendo().Grid<WebAOMS.Models.PayrollMapped>()
+            .Name("PayrollMappedGrid")
+            .Columns(columns =>
+            {
+                columns.Bound(p => p.trnno).Title("Transaction No").Width(50);
+                columns.Bound(p => p.PayrollType).Title("Payroll Type");
+                columns.Bound(p => p.DeductionID).Title("Deduction ID");
+                columns.Bound(p => p.childcode).Title("Child Code");
+                columns.Bound(p => p.ChartOfAccountID).Title("Chart of Account ID");
+                columns.Bound(p => p.isDebit).Title("Is Debit");
+                columns.Bound(p => p.PayrollOrRemittanceID).Title("Payroll/Remittance ID");
+                columns.Bound(p => p.PayrollEmpStatusID).Title("Payroll Employee Status ID");
+                columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
+            })
+            .ToolBar(toolbar => toolbar.Create())
+            .Editable(editable => editable.Mode(GridEditMode.InLine))
+            .Sortable()
+            .Scrollable()
+            .HtmlAttributes(new { style = "height:400px;" })
+            .DataSource(dataSource => dataSource
+                .Ajax()
+                .Model(model =>
+                {
+                    model.Id(gridMainAlias => gridMainAlias.trnno);
+                    model.Field(gridMainAlias => gridMainAlias.PayrollType).Editable(true);
+                })
+                .Read(read => read.Action("GetAll", "PayrollMapped"))
+                .Create(create => create.Action("Create", "PayrollMapped"))
+                .Update(update => update.Action("Update", "PayrollMapped"))
+                .Destroy(destroy => destroy.Action("Delete", "PayrollMapped"))
+            )
+        )
+    </div>
+    <div class="box-footer">
+        <div class="btn-group" style="padding-left:10px; padding-bottom:10px;">
+            <button onclick="addnew(0)" type="button" class="btn btn-default" aria-label="Add New">
+                <i class="fa fa-plus"></i> Add New
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .box-head {
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    .box-body {
+        padding-top: 10px;
+    }
+
+    .btn-group .btn {
+        margin-right: 5px;
+    }
+</style>
+
+<script>
+    document.querySelectorAll('.btn-refresh').forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Refreshing...');
+        });
+    });
+
+    document.querySelectorAll('.btn-collapse').forEach(button => {
+        button.addEventListener('click', () => {
+            const boxBody = button.closest('.box').querySelector('.box-body');
+            boxBody.classList.toggle('d-none');
+            button.querySelector('i').classList.toggle('fa-angle-down');
+            button.querySelector('i').classList.toggle('fa-angle-up');
+        });
+    });
+
+    document.querySelectorAll('.btn-close').forEach(button => {
+        button.addEventListener('click', () => {
+            button.closest('.box').remove();
+        });
+    });
+</script>

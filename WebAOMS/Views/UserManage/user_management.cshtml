@@ -1,0 +1,134 @@
+﻿@{
+
+}
+
+<div class="box">
+
+    <div class="box-body" style="padding-top:15px">
+        <div class="form-group row">
+            <!-- Select Employee Section -->
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="cbo_employee" class="control-label">Select Employee</label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-9">
+                        <script>
+                          
+                            function load_role(e) {
+                                onclick_edit_role()
+                                loadgrid()
+                            }
+                            function onclick_edit_role() {
+
+                                var Id = '@ViewBag.Id'
+
+                                startSpin()
+                                $.post('@Url.Action("get_rolearray", "UserManage")',
+                                    { Id: Id },
+                                    function (r) {
+                                        stopSpin()
+                                        $("#mselect_role").getKendoMultiSelect().value(r.Result)
+                                    }
+                                )
+                                
+                            }
+                            function getuserID() {
+                                return { userID: 8500 };
+                            }
+                        </script>
+                        @(Html.Kendo().ComboBox()
+                            .Name("cbo_employee")
+                            .Placeholder("Select employee...")
+                            .HtmlAttributes(new { style = "width:100%;" })
+                            .DataTextField("Email")
+                            .DataValueField("Id")
+                            .AutoBind(true)
+                            .Enable(false)
+                            .Filter("contains")
+                            .Events(e => e.Change("load_role")) 
+                            .DataSource(source => source.Read(read => read.Action("get_ref_Employee_byUser", "UserManage")))
+                        )
+                    </div>
+                </div>
+            </div>
+
+            <!-- Access Right Section -->
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <label for="mselect_role" class="control-label"><strong>Access Right</strong></label>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-9">
+                        @(Html.Kendo().MultiSelect()
+                            .Name("mselect_role")
+                            .Placeholder("Select...")
+                            .DataTextField("Name")
+                            .DataValueField("Id")
+                            .AutoBind(true)
+                            .DataSource(source => source.Read(read => read.Action("get_role_byuserid", "UserManage").Data("getuserID"))
+                            .ServerFiltering(true))
+                        )
+                        <div class="text-right" style="padding-top:10px;">
+                            <button onclick="saveConfirmationUserType()" class="btn btn-success">
+                                <i class="fa fa-save"></i> Save Changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tab Strip -->
+@(Html.Kendo().TabStrip()
+    .Name("tabstrip")
+    .Items(tabstrip =>
+    {
+        tabstrip.Add().Text("Menu").Selected(true).LoadContentFrom(Url.Action("user_management_menu", "UserManage", new { Id = ViewBag.Id }));
+        tabstrip.Add().Text("Access to Office").Selected(false).LoadContentFrom(Url.Action("user_management_office", "UserManage", new { Id = ViewBag.Id }));
+    })
+)
+
+<script>
+    var mg = new mgsInfo()
+    // Additional JavaScript functions
+    function getText() {
+        var multiselect = $("#mselect_role").data("kendoMultiSelect");
+        var dataItems = multiselect.dataItems();
+        return dataItems.map(item => item.Name).join(',');
+    }
+
+    function getValue() {
+        var multiselect = $("#mselect_role").data("kendoMultiSelect");
+        var dataItems = multiselect.dataItems();
+        return dataItems.map(item => item.Id).join(',');
+    }
+
+    function saveConfirmationUserType() {
+        var cbo_employee = $('#cbo_employee').data("kendoComboBox");
+        if (!cbo_employee.value()) {
+            toastr.warning("No user selected", "Warning");
+        } else {
+            var message = "Are you sure you want to save.<b> @ViewBag.JEVno ?</b>";
+            mg.bsQuestion(message, "btn_save_role()", "Save");
+        }
+    }
+
+    function btn_save_role() {
+        startSpin();
+        $.post('@Url.Action("save_user_role", "UserManage")',
+            { Id: $('#cbo_employee').data("kendoComboBox").value(), roleArray: getValue() },
+            function (response) {
+                stopSpin();
+                if (response.code === 6) {
+                    toastr.success(response.statusName, 'System Message');
+                    close_modal_question();
+                } else {
+                    toastr.warning(response.statusName, 'System Message');
+                }
+            }
+        );
+    }
+</script>

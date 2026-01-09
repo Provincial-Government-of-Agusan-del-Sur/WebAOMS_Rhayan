@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li id="li_title" class="breadcrumb-item"></li>
+
+            </ul>
+        </nav>
+        <div class="row">
+            <form id="frm_coa" class="form-horizontal" style="padding-top:10px" role="form">
+                <div class="form-group">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                    <label for="">JEV Date</label>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        @(Html.Kendo().DatePicker()
+                    .Name("dtp_post")
+                    .Format("MMMM dd, yyyy")
+                    .HtmlAttributes(new { type = "text", @style = "width:100%" })
+                        )
+                    </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        var datepicker = $("#dtp_post").data("kendoDatePicker");
+        datepicker.value('@ViewBag.postdate');
+        
+    })
+
+    function generate_jevno() {
+        startSpin()
+        var postdate = $('#dtp_post').data('kendoDatePicker').value();
+        var fundid = $("#fundID").data("kendoDropDownList");
+        
+        if (fundid.selectedIndex == -1)
+        {
+            toastr.warning("Invalid Fundtype...!", 'System Message')
+            stopSpin()
+            return
+        }
+        
+        $.post('@Url.Action("generate_jevno", "JEV")',
+            { journalTypeID: $("#jtypeOptionID").val(), postdate: kendo.toString(new Date(postdate), "d"), fundID: fundid.value() }
+        , function (r) {
+            if (r.code == 6) {
+                stopSpin()
+                $("#txt_jevno").val(r.jevno)
+                $("#txt_series").val(r.jevseries)
+                $("#txt_jevdate").val(kendo.toString(new Date(postdate), "d"))
+                $("#txt_defaultjevdate").val(kendo.toString(new Date(postdate), "d"))
+                close_datepost()
+            }
+            else
+            {
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        //.fail(function (jqXHR, textStatus, error) {
+        //    stopSpin()
+        //    mg.warning("" + textStatus + "")
+        //});
+    }
+</script>

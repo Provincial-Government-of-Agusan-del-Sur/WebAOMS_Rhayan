@@ -1,0 +1,712 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Date_" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="jvno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="Acountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Debit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="cnt" type="xs:long" minOccurs="0" />
+                <xs:element name="tmpjevno" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="obrno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>GENERAL JOURNAL</T1>
+    <fundtype>Hospitals</fundtype>
+    <dateString>For the month of December, 2021</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>5</groupCount>
+  </Table>
+  <Table1>
+    <Date_>12/09/2021               </Date_>
+    <JEVno>128-21-12-04-0001</JEVno>
+    <jvno>128-21-12-04-0001</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>227948.0000</Debit>
+    <cnt>10</cnt>
+    <tmpjevno>109-21-12-04-0005</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0001</jvno>
+    <Particular>Other Supplies and Materials Expenses             </Particular>
+    <Acountcode>50203990                 </Acountcode>
+    <Debit>22052.0000</Debit>
+    <cnt>11</cnt>
+    <tmpjevno>128-21-12-04-0001</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0001</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>250000.0000</credit>
+    <cnt>12</cnt>
+    <tmpjevno>128-21-12-04-0001</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>128-21-12-04-0001</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>11</cnt>
+    <tmpjevno>109-21-12-04-0005</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0001</jvno>
+    <Particular>Liquidation of C/A  for patient foodstuff for the month of November 1-30, 2021.ALOBS#128-4421-21-11-0549.VAT of P2,500.00 OR#9452633 dated 12/9/2021</Particular>
+    <Acountcode />
+    <cnt>11</cnt>
+    <tmpjevno>109-21-12-04-0005</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/17/2021               </Date_>
+    <JEVno>128-21-12-04-0002</JEVno>
+    <jvno>128-21-12-04-0002</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>50000.0000</Debit>
+    <cnt>13</cnt>
+    <tmpjevno>128-21-12-04-0001</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0002</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>50000.0000</credit>
+    <cnt>14</cnt>
+    <tmpjevno>128-21-12-04-0002</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0002</jvno>
+    <Particular>Liquidation of C/A  for patient foodstuff for the period November 22-30, 2021.ALOBS#128-4421-21-12-0035. VAT of P500.00 OR# 9693809 dated 12/15/2021</Particular>
+    <Acountcode />
+    <cnt>14</cnt>
+    <tmpjevno>128-21-12-04-0001</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>128-21-12-04-0002</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>14</cnt>
+    <tmpjevno>128-21-12-04-0001</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/31/2021               </Date_>
+    <JEVno>128-21-12-04-0003</JEVno>
+    <jvno>128-21-12-04-0003</jvno>
+    <Particular>Government Equity                                 </Particular>
+    <Acountcode>30101010                 </Acountcode>
+    <Debit>63250.0000</Debit>
+    <cnt>15</cnt>
+    <tmpjevno>128-21-12-04-0002</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0003</jvno>
+    <Particular>Advances for Payroll                              </Particular>
+    <Acountcode>10305020                 </Acountcode>
+    <credit>60000.0000</credit>
+    <cnt>16</cnt>
+    <tmpjevno>128-21-12-04-0003</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0003</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>3250.0000</credit>
+    <cnt>17</cnt>
+    <tmpjevno>128-21-12-04-0003</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0003</jvno>
+    <Particular>To take into account adjustment for JEV 128-21-11-04-0003 where advances was debited instead of credited.</Particular>
+    <Acountcode />
+    <cnt>16</cnt>
+    <tmpjevno>128-21-12-04-0002</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>128-21-12-04-0003</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>16</cnt>
+    <tmpjevno>128-21-12-04-0002</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/31/2021               </Date_>
+    <JEVno>128-21-12-04-0004</JEVno>
+    <jvno>128-21-12-04-0004</jvno>
+    <Particular>Extraordinary and Miscellaneous Expenses          </Particular>
+    <Acountcode>50210030                 </Acountcode>
+    <Debit>11441.5000</Debit>
+    <cnt>18</cnt>
+    <tmpjevno>128-21-12-04-0003</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0004</jvno>
+    <Particular>Petty Cash                                        </Particular>
+    <Acountcode>10101020                 </Acountcode>
+    <credit>11441.5000</credit>
+    <cnt>19</cnt>
+    <tmpjevno>128-21-12-04-0004</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>128-21-12-04-0004</jvno>
+    <Particular>Liquidation of Petty cash.</Particular>
+    <Acountcode />
+    <cnt>19</cnt>
+    <tmpjevno>128-21-12-04-0003</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>128-21-12-04-0004</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>19</cnt>
+    <tmpjevno>128-21-12-04-0003</tmpjevno>
+    <fundtype>BUNAWAN DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/15/2021               </Date_>
+    <JEVno>109-21-12-04-0001</JEVno>
+    <jvno>109-21-12-04-0001</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>749915.3000</Debit>
+    <cnt>0</cnt>
+    <tmpjevno />
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0001</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>749915.3000</credit>
+    <cnt>1</cnt>
+    <tmpjevno>109-21-12-04-0001</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0001</jvno>
+    <Particular>Liquidation of C/A  for patients foodstuff for the month of November 1-30, 2021.alobs#109-4421-21-11-1997. VAT of P7,331.39 OR# 9614179 dated 12/13/2021</Particular>
+    <Acountcode />
+    <cnt>1</cnt>
+    <tmpjevno />
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>109-21-12-04-0001</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>1</cnt>
+    <tmpjevno />
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>08/12/2021               </Date_>
+    <JEVno>109-21-12-04-0002</JEVno>
+    <jvno>109-21-12-04-0002</jvno>
+    <Particular>Extraordinary and Miscellaneous Expenses          </Particular>
+    <Acountcode>50210030                 </Acountcode>
+    <Debit>40500.0000</Debit>
+    <cnt>2</cnt>
+    <tmpjevno>109-21-12-04-0001</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0002</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>40500.0000</credit>
+    <cnt>3</cnt>
+    <tmpjevno>109-21-12-04-0002</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0002</jvno>
+    <Particular>Liquidation of C/A  for Psychological Debriefing of DOPMH Health Worker on October 13, 2021.ALOBS#109-4421-21-10-0581.</Particular>
+    <Acountcode />
+    <cnt>3</cnt>
+    <tmpjevno>109-21-12-04-0001</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>109-21-12-04-0002</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>3</cnt>
+    <tmpjevno>109-21-12-04-0001</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/11/2021               </Date_>
+    <JEVno>109-21-12-04-0003</JEVno>
+    <jvno>109-21-12-04-0003</jvno>
+    <Particular>Medical, Dental and Laboratory Supplies Expenses  </Particular>
+    <Acountcode>50203080                 </Acountcode>
+    <Debit>518248.8600</Debit>
+    <cnt>4</cnt>
+    <tmpjevno>109-21-12-04-0002</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0003</jvno>
+    <Particular>Medical, Dental and Laboratory Supplies Inventory </Particular>
+    <Acountcode>10404070                 </Acountcode>
+    <credit>518248.8600</credit>
+    <cnt>5</cnt>
+    <tmpjevno>109-21-12-04-0003</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0003</jvno>
+    <Particular>To take into account consumption of Medical, Dental and Laboratory Supplies Inventory (GENERAL FUND) (Central Supplies Room) of D.O. Plaza Memorial Hospital (DOPMH) as of November 1-30, 2021. with  DV No. 109-21-12-0045. </Particular>
+    <Acountcode />
+    <cnt>5</cnt>
+    <tmpjevno>109-21-12-04-0002</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>109-21-12-04-0003</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>5</cnt>
+    <tmpjevno>109-21-12-04-0002</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/29/2021               </Date_>
+    <JEVno>109-21-12-04-0004</JEVno>
+    <jvno>109-21-12-04-0004</jvno>
+    <Particular>Extraordinary and Miscellaneous Expenses          </Particular>
+    <Acountcode>50210030                 </Acountcode>
+    <Debit>14811.2500</Debit>
+    <cnt>6</cnt>
+    <tmpjevno>109-21-12-04-0003</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0004</jvno>
+    <Particular>Petty Cash                                        </Particular>
+    <Acountcode>10101020                 </Acountcode>
+    <credit>14811.2500</credit>
+    <cnt>7</cnt>
+    <tmpjevno>109-21-12-04-0004</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0004</jvno>
+    <Particular>Liquidation of C/A for of petty cash expenses.</Particular>
+    <Acountcode />
+    <cnt>7</cnt>
+    <tmpjevno>109-21-12-04-0003</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>109-21-12-04-0004</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>7</cnt>
+    <tmpjevno>109-21-12-04-0003</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/31/2021               </Date_>
+    <JEVno>109-21-12-04-0005</JEVno>
+    <jvno>109-21-12-04-0005</jvno>
+    <Particular>Government Equity                                 </Particular>
+    <Acountcode>30101010                 </Acountcode>
+    <Debit>34200.0000</Debit>
+    <cnt>8</cnt>
+    <tmpjevno>109-21-12-04-0004</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0005</jvno>
+    <Particular>Advances for Officers and Employees               </Particular>
+    <Acountcode>10305040                 </Acountcode>
+    <credit>34200.0000</credit>
+    <cnt>9</cnt>
+    <tmpjevno>109-21-12-04-0005</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>109-21-12-04-0005</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>9</cnt>
+    <tmpjevno>109-21-12-04-0004</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>109-21-12-04-0005</jvno>
+    <Particular>To take into account adjustment for cash advance of Abacajen recorded in GF-Proper but should be recorded in DOPMH with JEV no. 101-21-12-01-0014</Particular>
+    <Acountcode />
+    <cnt>9</cnt>
+    <tmpjevno>109-21-12-04-0004</tmpjevno>
+    <fundtype>D.O. PLAZA MEMORIAL HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/07/2021               </Date_>
+    <JEVno>131-21-12-04-0001</JEVno>
+    <jvno>131-21-12-04-0001</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>150000.0000</Debit>
+    <cnt>22</cnt>
+    <tmpjevno>129-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>131-21-12-04-0001</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>150000.0000</credit>
+    <cnt>23</cnt>
+    <tmpjevno>131-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>131-21-12-04-0001</jvno>
+    <Particular>Liquidation of C/A for dietary expenses of patients for the month of November, 20021.ALOBS#131-4421-21-11-0906. VAT of P4,206.60 OR#9452634 dated 12/10/2021</Particular>
+    <Acountcode />
+    <cnt>23</cnt>
+    <tmpjevno>129-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>131-21-12-04-0001</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>23</cnt>
+    <tmpjevno>129-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/31/2021               </Date_>
+    <JEVno>131-21-12-04-0002</JEVno>
+    <jvno>131-21-12-04-0002</jvno>
+    <Particular>Advances for Payroll                              </Particular>
+    <Acountcode>10305020                 </Acountcode>
+    <Debit>44.7300</Debit>
+    <cnt>24</cnt>
+    <tmpjevno>131-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>131-21-12-04-0002</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>44.7300</credit>
+    <cnt>25</cnt>
+    <tmpjevno>131-21-12-04-0002</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>131-21-12-04-0002</jvno>
+    <Particular>To take into account adjustment for 131-21-11-04-0005 where Advances for Operating Expenses should be recorded instead of Advances for payroll</Particular>
+    <Acountcode />
+    <cnt>25</cnt>
+    <tmpjevno>131-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>131-21-12-04-0002</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>25</cnt>
+    <tmpjevno>131-21-12-04-0001</tmpjevno>
+    <fundtype>ESPERANZA MEDICARE COMMUNITY HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/19/2021               </Date_>
+    <JEVno>132-21-12-04-0001</JEVno>
+    <jvno>132-21-12-04-0001</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>116666.9500</Debit>
+    <cnt>26</cnt>
+    <tmpjevno>131-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0001</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>116666.9500</credit>
+    <cnt>27</cnt>
+    <tmpjevno>132-21-12-04-0001</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0001</jvno>
+    <Particular>Liquidation of C/A for patients foodstuff for the month of November, 2021.VAT of P3,694.47 OR#9614182 dated 12/21/2021</Particular>
+    <Acountcode />
+    <cnt>27</cnt>
+    <tmpjevno>131-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>132-21-12-04-0001</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>27</cnt>
+    <tmpjevno>131-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/24/2021               </Date_>
+    <JEVno>132-21-12-04-0002</JEVno>
+    <jvno>132-21-12-04-0002</jvno>
+    <Particular>Extraordinary and Miscellaneous Expenses          </Particular>
+    <Acountcode>50210030                 </Acountcode>
+    <Debit>14837.0000</Debit>
+    <cnt>28</cnt>
+    <tmpjevno>132-21-12-04-0001</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0002</jvno>
+    <Particular>Petty Cash                                        </Particular>
+    <Acountcode>10101020                 </Acountcode>
+    <credit>14837.0000</credit>
+    <cnt>29</cnt>
+    <tmpjevno>132-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0002</jvno>
+    <Particular>Liquidation of petty cash fund for supplies &amp; materials.alobs#132-4421-21-02-0646.Refund of P163.00 VAT of P228.20 OR#9693408 dated 12/29/2021</Particular>
+    <Acountcode />
+    <cnt>29</cnt>
+    <tmpjevno>132-21-12-04-0001</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>132-21-12-04-0002</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>29</cnt>
+    <tmpjevno>132-21-12-04-0001</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/31/2021               </Date_>
+    <JEVno>132-21-12-04-0003</JEVno>
+    <jvno>132-21-12-04-0003</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>83333.0500</Debit>
+    <cnt>30</cnt>
+    <tmpjevno>132-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0003</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>83333.0500</credit>
+    <cnt>31</cnt>
+    <tmpjevno>132-21-12-04-0003</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0003</jvno>
+    <Particular>Full liquidation of C/A for food supplies for the month of December 2021.alobs#132-4421-21-11-2704. VAT of P2,905.38 OR#9814953 dated 12/31/2021</Particular>
+    <Acountcode />
+    <cnt>31</cnt>
+    <tmpjevno>132-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>132-21-12-04-0003</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>31</cnt>
+    <tmpjevno>132-21-12-04-0002</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/29/2021               </Date_>
+    <JEVno>132-21-12-04-0004</JEVno>
+    <jvno>132-21-12-04-0004</jvno>
+    <Particular>Cash in Bank - Local Currency, Current Account    </Particular>
+    <Acountcode>10102010                 </Acountcode>
+    <Debit>824.2500</Debit>
+    <cnt>32</cnt>
+    <tmpjevno>132-21-12-04-0003</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0004</jvno>
+    <Particular>Accounts Payable                                  </Particular>
+    <Acountcode>20101010                 </Acountcode>
+    <credit>824.2500</credit>
+    <cnt>33</cnt>
+    <tmpjevno>132-21-12-04-0004</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <jvno>132-21-12-04-0004</jvno>
+    <Particular>To take up into account restoration of staled check:
+0068240725  06/16/2021  824.25</Particular>
+    <Acountcode />
+    <cnt>33</cnt>
+    <tmpjevno>132-21-12-04-0003</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>132-21-12-04-0004</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>33</cnt>
+    <tmpjevno>132-21-12-04-0003</tmpjevno>
+    <fundtype>LORETO DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_>12/28/2021               </Date_>
+    <JEVno>129-21-12-04-0001</JEVno>
+    <jvno>129-21-12-04-0001</jvno>
+    <Particular>Food Supplies Expenses                            </Particular>
+    <Acountcode>50203050                 </Acountcode>
+    <Debit>299969.5000</Debit>
+    <cnt>20</cnt>
+    <tmpjevno>128-21-12-04-0004</tmpjevno>
+    <fundtype>TALACOGON DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>129-21-12-04-0001</jvno>
+    <Particular>Advances for Operating Expenses                   </Particular>
+    <Acountcode>10305010                 </Acountcode>
+    <credit>299969.5000</credit>
+    <cnt>21</cnt>
+    <tmpjevno>129-21-12-04-0001</tmpjevno>
+    <fundtype>TALACOGON DISTRICT HOSPITAL</fundtype>
+    <obrno>Liquidation of Cash Advan</obrno>
+  </Table1>
+  <Table1>
+    <jvno>129-21-12-04-0001</jvno>
+    <Particular>Liquidation of C/A  for patient subsistence for the month of December, 2021.ALOBS#9693409 dated 12/29/2021
+</Particular>
+    <Acountcode />
+    <cnt>21</cnt>
+    <tmpjevno>128-21-12-04-0004</tmpjevno>
+    <fundtype>TALACOGON DISTRICT HOSPITAL</fundtype>
+  </Table1>
+  <Table1>
+    <Date_ />
+    <JEVno />
+    <jvno>129-21-12-04-0001</jvno>
+    <Particular />
+    <Acountcode />
+    <cnt>21</cnt>
+    <tmpjevno>128-21-12-04-0004</tmpjevno>
+    <fundtype>TALACOGON DISTRICT HOSPITAL</fundtype>
+  </Table1>
+</NewDataSet>

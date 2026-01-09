@@ -1,0 +1,309 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<div id="div_details" class="box" style="width:100%;margin-bottom:0px!important;padding-top:15px">
+    <div class="box-body">
+        <div class="row">
+            <form id="frm_doc_logdetails">
+                <div class="col-md-12 no-padding" style="padding-bottom:15px">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Reference no</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_refno" name="refno" style="text-align:center" disabled type="text" value="@ViewBag.refno" class="form-control k-input" />
+                    </div>
+                </div>
+                <div class="col-md-6 no-padding"  style="padding-bottom:15px">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Budget Control Number</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_control_no" name="AlobsNo" style="text-align:left" type="text" value="@ViewBag.AlobsNo" class="form-control k-input" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 no-padding"  style="padding-bottom:15px">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>OBR No.</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_obrno" name="obrno" style="text-align:left" type="text" value="@ViewBag.OBRNo" class="form-control k-input" />
+                    </div>
+                </div>
+                <div class="PvCIH"  style="padding-bottom:15px">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Office Charge</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                    .Name("FMISOfficeID")
+                    .DataTextField("OfficeName")
+                    .DataValueField("FMISOfficeID")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_GetOffice_fmis", "Document");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    .Popup(p => p.AppendTo("#mdl_doc_form"))
+                    )
+                </div>
+           
+
+                <div class="col-md-10 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Claimant Name</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        @*<input id="txt_claimant" name="claimantname" value="@ViewBag.claimantname" type="text" class="form-control k-input" />*@
+                        <div class="input-group" style="padding-bottom:5px!important">
+                            <input id="txt_claimant" type="text" class="form-control navbar-input" value="@ViewBag.Name" style="" placeholder="browse claimant" disabled>
+                            <span class="input-group-btn dropup">
+                                <button class="btn btn-equal" type="button" onclick="browse_claimant()"><i class="fa fa-group"></i></button>
+                            </span>
+
+                            @*<input type="text" class="form-control navbar-input control-width-tiny" style="text-align:center"/>*@
+
+                        </div>
+                        <input id="txt_claimant_id" style="display:none" name="Claimantcode" value="@ViewBag.claimantcode" type="text" class="form-control k-input" />
+
+                    </div>
+                </div>
+                <div class="col-md-2 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>No. of Persons</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_doc_count_person" name="countperson" style="text-align:center" type="text" value="@ViewBag.countperson" class="form-control k-input" />
+                    </div>
+                </div>
+                <div class="col-md-12 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Particular</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <textarea id="txt_doc_particular" name="Particulars" maxlength="10000" type="text" class="form-control k-input" rows="8">@ViewBag.Particulars</textarea>
+                    </div>
+                    </div>
+                    <div class="col-md-6 no-padding">
+                        <div class="PvCIH">
+                            <span data-lokalise="true" class="khIjp">
+                                <span>Fund Type</span>
+                            </span>
+                        </div>
+                        <div class="byexym liZmnb">
+                            @(Html.Kendo().DropDownList()
+                            .Name("fundID")
+                            .DataTextField("FundName")
+                            .DataValueField("FundID")
+                            .Filter("Contains")
+                            .AutoBind(false)
+                            .DataSource(source =>
+                            {
+                                source.Read(read =>
+                                {
+                                    read.Action("DataSource_Getfundtype", "Document");
+                                });
+                            })
+                            .HtmlAttributes(new { style = "width: 100%" })
+                            .Popup(p => p.AppendTo("#mdl_doc_form"))
+                            )
+                        </div>
+                    </div>
+                    <div class="col-md-2 no-padding">
+                        <div class="PvCIH">
+                            <span data-lokalise="true" class="khIjp">
+                                <span>Allotment Class</span>
+                            </span>
+                        </div>
+                        <div class="byexym liZmnb">
+                            @(Html.Kendo().DropDownList()
+                            .Name("ModeOfExpenses_Code")
+                            .DataTextField("OOEAbreviation")
+                            .DataValueField("OOECode")
+                            .Filter("Contains")
+                            .AutoBind(false)
+                            .DataSource(source =>
+                            {
+                                source.Read(read =>
+                                {
+                                    read.Action("DataSource_ooe", "Document");
+                                });
+                            })
+                            .HtmlAttributes(new { style = "width: 100%" })
+                            .Popup(p => p.AppendTo("#mdl_doc_form"))
+                            )
+                        </div>
+                    </div>
+                    <div class="col-md-4 no-padding">
+                        <div class="PvCIH">
+                            <span data-lokalise="true" class="khIjp">
+                                <span>DV Amount</span>
+                            </span>
+                        </div>
+                        <div class="byexym liZmnb">
+                            <input id="txt_doc_gamount" name="balance" style="text-align:right" type="text" value="@ViewBag.balance" class="form-control k-input" />
+                        </div>
+                    </div>
+</form>
+            </div>
+        </div>
+    </div>
+<script>
+    var mg = new mgsInfo()
+    function browse_claimant() {
+        startSpin()
+        $.post('@Url.Action("_browse_claimant", "Document")', {}
+            , function (r) {
+                $("#body_browse_claimant").html(r)
+                $("#mdl_browse_claimant").modal("show");
+                stopSpin();
+            })
+    }
+
+    $(document).ready(function () {
+        $("#FMISOfficeID").data("kendoDropDownList").value(@ViewBag.rcenter)
+        //$("#transtype_id").data("kendoDropDownList").value(@ViewBag.transtype_id)
+        $("#fundID").data("kendoDropDownList").value(@ViewBag.fundid)
+        $("#ModeOfExpenses_Code").data("kendoDropDownList").value('@ViewBag.ooe')
+        $('#txt_doc_count_person').number(true, 0);
+        if ("@ViewBag.balance"=="")
+        {
+            $("#txt_doc_gamount").val($("#txt_gamount").val())
+        }
+
+        $("#txt_doc_form_id").val($("#doc_form_id").val())
+        $(function () {
+            $('#txt_doc_gamount').number(true, 2);
+        });
+
+
+        if (@ViewBag.isEdit == 1)
+        {
+            $("#btn_doc_delete").show();
+        }
+        else
+        {
+            $("#btn_doc_delete").hide();
+        }
+
+        var str = $("#txt_doc_particular").val();
+        if (str == "")
+        {
+            $("#txt_doc_particular").val($("#txt_particular").val())
+        }
+    })
+
+    function close_browse_claimant() {
+        $("#mdl_browse_claimant").modal("hide");
+    }
+
+
+
+    function  btn_save_dv() {
+        startSpin()
+        var frm = $("#frm_doc_logdetails").serialize();
+        $.post('@Url.Action("save_DV", "Document")',
+            frm
+        , function (r) {
+            if (r.code == 6) {
+                $("#txt_DVid").val(r.dvid)
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                
+                alert(r.dvid)
+                alert(r.dvno)
+                searchGrid()
+                return 1;
+            }
+            else {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+                return 0;
+            }
+
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+
+
+
+</script>
+<div class="modal" id="mdl_browse_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Browse Claimant</h4>
+            </div>
+            <div id="body_browse_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button id="btn_add_claimant" style="display:none" onclick="add_claimant()" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add New</button>
+                <button onclick="select_claimant()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Select</button>
+                <button type="button" class="btn btn-default" onclick="close_browse_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mdl_add_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Browse Claimant</h4>
+            </div>
+            <div id="body_add_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_claimant()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-default" onclick="close_add_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="mdl_jev_entries" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="close_mdl_entries()" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Expense Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <button onclick="close_mdl_entries()" type="button" class="btn btn-success"><i class="fa fa-backward"></i> Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

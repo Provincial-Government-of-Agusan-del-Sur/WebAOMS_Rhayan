@@ -1,0 +1,156 @@
+﻿@using System.Data
+@model DataSet
+@{
+    ViewBag.Title = "Track and Trace";
+    Layout = "~/Views/Shared/_Layout_tracking.cshtml";
+}
+<style>
+    .liZsdw {
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: 0px;
+        font-style: normal;
+        font-weight: 400;
+        color: rgb(33, 33, 37);
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .OdXIH {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0px;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(181, 185, 189);
+    font-size: 16px;
+    line-height: 24px;
+}
+    .byexym:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+</style>
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Tracking History</h4>
+        </header>
+    </div>
+    <div class="box-body">
+        <script>
+    $(document).ready(function () {
+            $("#txt_dvno_search").val('@ViewBag.r');
+                getInfo('@ViewBag.r')
+            })
+            $("#txt_dvno_search").on('keydown', function (e) {
+                if (e.keyCode == 13) {
+                    getdata()
+                }
+            })
+
+            function getdata() {
+                var refno = $("#txt_dvno_search").val()
+                $.get('@Url.Action("_r", "F")',
+            { r: refno },
+            function (r) {
+                $("#id_result").html("")
+                $("#id_result").html(r);
+                getInfo(refno)
+            }
+        )
+    }
+            function getInfo(refno) {
+                $.post('@Url.Action("TransactionInfo", "F")',
+            { r: refno },
+            function (b) {
+                $("#id_particular").html(b.Particular)
+                $("#id_application").html(b.App);
+                $("#id_apprefno").html(b.Apprefno);
+                $("#id_amount").html(b.Amount);
+            }
+        )
+    }
+        </script>
+        <div class="row" style="padding-top:10px">
+            <div class="input-group" style="padding-bottom:5px!important">
+                <div class="input-group">
+                    <input id="txt_dvno_search" type="text" value="@ViewBag.r" class="form-control" name="x" placeholder="Enter reference no...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" onclick="getdata()" type="button"><span>Search</span></button>
+                    </span>
+                </div>
+            </div>
+            @if (Model.Tables[0].Rows.Count > 0)
+            {
+                
+                <div class="row col-md-12" style="padding-top:5px"></div>
+                <div id="id_result" style="height:auto">
+                    <table class="table table-bordered table-striped table-responsive" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th class="text-center">Date of Last Status</th>
+                            <th class="text-center">Transaction Status</th>
+                            <th class="text-center">Location</th>
+                        </tr>
+
+                        @foreach (DataRow row in Model.Tables[0].Rows)
+                        {
+                            <tr>
+                                <td class="col-md-4">@row["dte"]</td>
+                                <td class="col-md-6">@row["Status_name"]</td>
+                                <td class="col-md-2">@row["Status_location"]</td>
+                            </tr>
+                        }
+
+                    </table>
+
+                </div>
+
+            }
+            else
+            {
+                <div class="row col-md-12" style="padding-top:5px"></div>
+                <div id="id_result" style="height:auto">
+                    <h3>No Record Found(s)</h3>
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>
+       
+
+<div class="box">
+    <div class="box-head" style="border-bottom:1px solid #e8e8e8">
+        <header>
+            <h4 class="text-bold">Transaction Information</h4>
+        </header>
+    </div>
+    <div class="box-body">
+        <div class="ant-card-body">
+        <div class="OdXIH">
+            <span data-lokalise="true" class="khIjp">
+                <span>Particular</span>
+            </span>
+        </div>
+        <div id="id_particular" class="byexym liZsdw"></div>
+        <div class="OdXIH">
+            <span data-lokalise="true" class="khIjp">
+            <span>Amount</span>
+            </span>
+        </div>
+            <div id="id_amount" class="byexym liZsdw"></div>
+        <div class="OdXIH">
+            <span data-lokalise="true" class="khIjp">
+            <span>Application</span>
+            </span></div>
+        <div id="id_application" class="byexym liZsdw">-</div>
+        <div class="OdXIH">
+            <span data-lokalise="true" class="khIjp">
+            <span>Application Reference No.</span>
+            </span>
+        </div>
+        <div id="id_apprefno" class="byexym liZsdw">-</div>
+        </div>
+    </div>
+</div>
+
+
+

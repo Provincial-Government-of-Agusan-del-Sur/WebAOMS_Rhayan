@@ -1,0 +1,7 @@
+﻿@model WebAOMS.Models.activity_item_details
+
+@(Html.Kendo().DropDownListFor(m => m)
+        .DataValueField("itemid")
+        .DataTextField("itemDetails")
+        .BindTo((System.Collections.IEnumerable)ViewData["items"])
+)

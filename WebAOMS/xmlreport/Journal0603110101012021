@@ -1,0 +1,4047 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AccountingName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountingPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="UserID" type="xs:int" minOccurs="0" />
+                <xs:element name="T1" type="xs:string" minOccurs="0" />
+                <xs:element name="T2" type="xs:string" minOccurs="0" />
+                <xs:element name="fundtype" type="xs:string" minOccurs="0" />
+                <xs:element name="dateString" type="xs:string" minOccurs="0" />
+                <xs:element name="generated_text" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantName" type="xs:string" minOccurs="0" />
+                <xs:element name="AccountantPosition" type="xs:string" minOccurs="0" />
+                <xs:element name="groupCount" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="jevID" type="xs:int" minOccurs="0" />
+                <xs:element name="Date_" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ADANo" type="xs:string" minOccurs="0" />
+                <xs:element name="JEVno" type="xs:string" minOccurs="0" />
+                <xs:element name="Particular" type="xs:string" minOccurs="0" />
+                <xs:element name="debit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="debit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundryDebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CreditAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="CreditAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAccountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="DebitAmount" type="xs:string" minOccurs="0" />
+                <xs:element name="credit1" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit2" type="xs:decimal" minOccurs="0" />
+                <xs:element name="credit3" type="xs:decimal" minOccurs="0" />
+                <xs:element name="TotalSundrycredit" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table2">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="debit1" type="xs:int" minOccurs="0" />
+                <xs:element name="debit2" type="xs:int" minOccurs="0" />
+                <xs:element name="debit3" type="xs:int" minOccurs="0" />
+                <xs:element name="credit1" type="xs:int" minOccurs="0" />
+                <xs:element name="credit2" type="xs:int" minOccurs="0" />
+                <xs:element name="credit3" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Table3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Accountcode" type="xs:string" minOccurs="0" />
+                <xs:element name="Sdebit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Scredit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="orderby" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <AccountingName>JOY D. LAGAT, CPA</AccountingName>
+    <AccountingPosition>Provincial Accountant</AccountingPosition>
+    <CompanyName>PROVINCIAL GOVERNMENT OF AGUSAN DEL SUR</CompanyName>
+    <CompanyAddress>Gov. Democrito O. Plaza Government Center, Patin-ay, Prosperidad</CompanyAddress>
+    <UserID>0</UserID>
+    <T1>AUTHORITY  TO DEBIT ACCOUNT DISBURSEMENTS  JOURNAL</T1>
+    <fundtype>General Fund Proper</fundtype>
+    <dateString>For the month of January, 2021</dateString>
+    <generated_text>This is a system generated document</generated_text>
+    <AccountantName>JOY D. LAGAT, CPA</AccountantName>
+    <AccountantPosition>Provincial Accountant</AccountantPosition>
+    <groupCount>0</groupCount>
+  </Table>
+  <Table1>
+    <jevID>0</jevID>
+    <Particular>Totals Carried Forward</Particular>
+  </Table1>
+  <Table1>
+    <jevID>388728</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6978</ADANo>
+    <JEVno>101-21-01-06-0001</JEVno>
+    <Particular>(30P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6978</Particular>
+    <TotalSundryDebit>150000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>150,000.00</DebitAmount>
+    <credit1>150000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>390165</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6978</ADANo>
+    <JEVno>101-21-01-06-0002</JEVno>
+    <Particular>(25P) payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6978</Particular>
+    <TotalSundryDebit>118500.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>118,500.00</DebitAmount>
+    <credit1>118500.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>390167</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6978</ADANo>
+    <JEVno>101-21-01-06-0003</JEVno>
+    <Particular>(3P) payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6978</Particular>
+    <TotalSundryDebit>15000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>15,000.00</DebitAmount>
+    <credit1>15000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>390168</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0004</JEVno>
+    <Particular>(8P) payment of Productivity Enhancement Incentives CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>40000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>40,000.00</DebitAmount>
+    <credit1>40000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388739</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0005</JEVno>
+    <Particular>(91P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>411000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>411,000.00</DebitAmount>
+    <credit1>411000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388744</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0006</JEVno>
+    <Particular>(34P) payment of Productivity Enhancement Incentives CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>170000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>170,000.00</DebitAmount>
+    <credit1>170000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388745</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0007</JEVno>
+    <Particular>(13P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>65000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>65,000.00</DebitAmount>
+    <credit1>65000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388747</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0008</JEVno>
+    <Particular>(2P),  payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>10000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>10,000.00</DebitAmount>
+    <credit1>10000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388754</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0009</JEVno>
+    <Particular>payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388757</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0010</JEVno>
+    <Particular>(3P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979
+</Particular>
+    <TotalSundryDebit>15000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>15,000.00</DebitAmount>
+    <credit1>15000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388759</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0011</JEVno>
+    <Particular>payment of Productivity Enhancement Incentives CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388762</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0012</JEVno>
+    <Particular>(5P) payment of Productivity Enhancement Incentives CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>25000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>25,000.00</DebitAmount>
+    <credit1>25000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388766</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0013</JEVno>
+    <Particular>(4P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>20000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>20,000.00</DebitAmount>
+    <credit1>20000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388768</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0014</JEVno>
+    <Particular>(4P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>20000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>20,000.00</DebitAmount>
+    <credit1>20000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388771</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0015</JEVno>
+    <Particular>(17P), payment of Productivity Enhancement Incentives CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>85000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>85,000.00</DebitAmount>
+    <credit1>85000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388773</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6979</ADANo>
+    <JEVno>101-21-01-06-0016</JEVno>
+    <Particular>payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6979</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388776</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6982</ADANo>
+    <JEVno>101-21-01-06-0017</JEVno>
+    <Particular>(2P) to payment of CASUAL for the period of December 1-15, 2020.ADA BATCH NO:2020-6982</Particular>
+    <TotalSundryDebit>28419.50</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>9,572.68#=1,785.28#=1,338.96</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>28,419.50</DebitAmount>
+    <credit1>15722.58</credit1>
+    <TotalSundrycredit>12696.92</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388778</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6984</ADANo>
+    <JEVno>101-21-01-06-0018</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-6984</Particular>
+    <TotalSundryDebit>13232.12</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>13,232.12</DebitAmount>
+    <credit1>13232.12</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388779</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6984</ADANo>
+    <JEVno>101-21-01-06-0019</JEVno>
+    <Particular>(10P),To payment of CASUAL for the month of December 16-31, 2020.ADA BATCH NO:2020-6984</Particular>
+    <TotalSundryDebit>78336.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>78,336.00</DebitAmount>
+    <credit1>74466.00</credit1>
+    <credit3>3870.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388781</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6984</ADANo>
+    <JEVno>101-21-01-06-0020</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-6984</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7826.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388782</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6984</ADANo>
+    <JEVno>101-21-01-06-0021</JEVno>
+    <Particular>(12P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-6984</Particular>
+    <TotalSundryDebit>42130.56</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>42,130.56</DebitAmount>
+    <credit1>42130.56</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388787</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6985</ADANo>
+    <JEVno>101-21-01-06-0022</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-6985</Particular>
+    <TotalSundryDebit>3200.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,200.00</DebitAmount>
+    <credit1>3200.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388798</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6985</ADANo>
+    <JEVno>101-21-01-06-0023</JEVno>
+    <Particular>(7P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-6985</Particular>
+    <TotalSundryDebit>24265.28</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>24,265.28</DebitAmount>
+    <credit1>23765.28</credit1>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388808</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6985</ADANo>
+    <JEVno>101-21-01-06-0024</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-6985</Particular>
+    <TotalSundryDebit>59998.20</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>59,998.20</DebitAmount>
+    <credit1>59368.20</credit1>
+    <credit3>630.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388810</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0025</JEVno>
+    <Particular>(6P), payment of Productivity Enhancement Incentive (PEI)  CY2020.ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>40000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>40,000.00</DebitAmount>
+    <credit1>40000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388812</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0026</JEVno>
+    <Particular> (2P)- payment of PEI 2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>10000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>10,000.00</DebitAmount>
+    <credit1>10000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388813</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0027</JEVno>
+    <Particular>(12P),  payment of Productivity Enhancement Incentive (PEI)  CY2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>60000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>60,000.00</DebitAmount>
+    <credit1>60000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388814</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0028</JEVno>
+    <Particular>(4P)- payment of PEI 2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>4000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>4,000.00</DebitAmount>
+    <credit1>4000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388815</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0029</JEVno>
+    <Particular>(16P), payment of Productivity Enhancement Incentive (PEI)  CY2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>80000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>80,000.00</DebitAmount>
+    <credit1>80000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388816</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0030</JEVno>
+    <Particular>(4P), payment of Productivity Enhancement Incentive (PEI)  CY2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>20000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>20,000.00</DebitAmount>
+    <credit1>20000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388817</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0031</JEVno>
+    <Particular>(8P, payment of Productivity Enhancement Incentive (PEI)  CY2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>40000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>40,000.00</DebitAmount>
+    <credit1>40000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388819</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6987</ADANo>
+    <JEVno>101-21-01-06-0032</JEVno>
+    <Particular> payment of Productivity Enhancement Incentive (PEI)  CY2020..ADA BATCH NO:2020-6987</Particular>
+    <TotalSundryDebit>1000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>1,000.00</DebitAmount>
+    <credit1>1000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388820</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6988</ADANo>
+    <JEVno>101-21-01-06-0033</JEVno>
+    <Particular>payment of Cash Gift (casual) CY2020..ADA BATCH NO:2020-6988</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388821</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <JEVno>101-21-01-06-0034</JEVno>
+    <Particular>(5P)-payment of Provincial Scholars Allowance (Aug.-Dec. 2020).ADA BATCH NO:2020-6990</Particular>
+    <TotalSundryDebit>94300.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>94,300.00</DebitAmount>
+    <credit1>94300.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388822</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-6992</ADANo>
+    <JEVno>101-21-01-06-0035</JEVno>
+    <Particular>payment of Cash Gift (regular) CY2020.ADA BATCH NO:2020-6992
+</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388742</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6996</ADANo>
+    <JEVno>101-21-01-06-0036</JEVno>
+    <Particular>(3P)- payment of PEI 2020.ADA BATCH NO. 2021-6996
+</Particular>
+    <TotalSundryDebit>15000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>15,000.00</DebitAmount>
+    <credit1>15000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388746</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6996</ADANo>
+    <JEVno>101-21-01-06-0037</JEVno>
+    <Particular> (2P)- payment of PEI 2020.ADA BATCH NO. 2021-6996</Particular>
+    <TotalSundryDebit>10000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>10,000.00</DebitAmount>
+    <credit1>10000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388748</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6997</ADANo>
+    <JEVno>101-21-01-06-0038</JEVno>
+    <Particular>payment of Cash Gift CY2020.ADA BATCH NO. 2021-6997</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388751</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6998</ADANo>
+    <JEVno>101-21-01-06-0039</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020 
+ADA BATCH NO. 2021-6998</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7826.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388755</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6998</ADANo>
+    <JEVno>101-21-01-06-0040</JEVno>
+    <Particular>to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6998</Particular>
+    <TotalSundryDebit>6826.70</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>6,826.70</DebitAmount>
+    <credit1>6826.70</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388756</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6998</ADANo>
+    <JEVno>101-21-01-06-0041</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6998</Particular>
+    <TotalSundryDebit>38795.30</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>800.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>38,795.30</DebitAmount>
+    <credit1>37915.30</credit1>
+    <credit3>80.00</credit3>
+    <TotalSundrycredit>800.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388758</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6998</ADANo>
+    <JEVno>101-21-01-06-0042</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6998</Particular>
+    <TotalSundryDebit>31472.50</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>465.39</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>31,472.50</DebitAmount>
+    <credit1>30527.11</credit1>
+    <credit3>480.00</credit3>
+    <TotalSundrycredit>465.39</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388761</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6998</ADANo>
+    <JEVno>101-21-01-06-0043</JEVno>
+    <Particular>To payment of Salaries and Wages-Casual for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6998</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7056.60</credit1>
+    <credit3>770.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388763</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6998</ADANo>
+    <JEVno>101-21-01-06-0044</JEVno>
+    <Particular>(9P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6998</Particular>
+    <TotalSundryDebit>77294.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>77,294.00</DebitAmount>
+    <credit1>77294.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388764</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6999</ADANo>
+    <JEVno>101-21-01-06-0045</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2021-6999</Particular>
+    <TotalSundryDebit>19108.80</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>19,108.80</DebitAmount>
+    <credit1>19108.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388767</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6999</ADANo>
+    <JEVno>101-21-01-06-0046</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of December 16-31, 2020
+ADA BATCH NO. 2021-6999</Particular>
+    <TotalSundryDebit>6077.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>6,077.50</DebitAmount>
+    <credit1>5895.17</credit1>
+    <credit2>182.33</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388769</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6999</ADANo>
+    <JEVno>101-21-01-06-0047</JEVno>
+    <Particular> to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6999</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388770</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6999</ADANo>
+    <JEVno>101-21-01-06-0048</JEVno>
+    <Particular>(7P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-6999</Particular>
+    <TotalSundryDebit>26752.32</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>26,752.32</DebitAmount>
+    <credit1>26752.32</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388772</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6999</ADANo>
+    <JEVno>101-21-01-06-0049</JEVno>
+    <Particular>(13P),To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2021-6999</Particular>
+    <TotalSundryDebit>42843.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>42,843.52</DebitAmount>
+    <credit1>42843.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388775</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-6999</ADANo>
+    <JEVno>101-21-01-06-0050</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2021-6999</Particular>
+    <TotalSundryDebit>19108.80</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>19,108.80</DebitAmount>
+    <credit1>19108.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388797</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0051</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>7643.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388800</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0052</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>10843.52</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>323.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,843.52</DebitAmount>
+    <credit1>10520.52</credit1>
+    <TotalSundrycredit>323.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388801</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0053</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>13421.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>13,421.76</DebitAmount>
+    <credit1>13421.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388802</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0054</JEVno>
+    <Particular>(23P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>81068.36</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>81,068.36</DebitAmount>
+    <credit1>81068.36</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388803</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0055</JEVno>
+    <Particular>(7P),To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>59145.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>59,145.00</DebitAmount>
+    <credit1>57370.63</credit1>
+    <credit2>1774.37</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388804</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0056</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388806</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0057</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>20739.24</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>20,739.24</DebitAmount>
+    <credit1>19339.24</credit1>
+    <credit3>1200.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388807</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7000</ADANo>
+    <JEVno>101-21-01-06-0058</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7000</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>7643.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388824</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7001</ADANo>
+    <JEVno>101-21-01-06-0059</JEVno>
+    <Particular>(29P) payment of Productivity Enhancement Incentive (PEI)  CY2020
+ADA BATCH NO. 2021-7001</Particular>
+    <TotalSundryDebit>145000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>145,000.00</DebitAmount>
+    <credit1>145000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388825</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0060</JEVno>
+    <Particular>To payment of CASUAL for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7002</Particular>
+    <TotalSundryDebit>26769.43</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>4,786.34#=892.64#=669.48</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>26,769.43</DebitAmount>
+    <credit1>20420.97</credit1>
+    <TotalSundrycredit>6348.46</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388826</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0061</JEVno>
+    <Particular>(4P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>32869.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>32,869.60</DebitAmount>
+    <credit1>32869.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388827</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0062</JEVno>
+    <Particular>(10P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>85639.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>85,639.00</DebitAmount>
+    <credit1>73524.00</credit1>
+    <credit3>12115.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388828</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0063</JEVno>
+    <Particular>(7P),To payment of CASUAL for the month of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>66857.10</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>2,350.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>66,857.10</DebitAmount>
+    <credit1>63037.10</credit1>
+    <credit3>1470.00</credit3>
+    <TotalSundrycredit>2350.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388829</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0064</JEVno>
+    <Particular>AROY, CLEMENTE MORAGA  JR et. al, (5P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>39870.30</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,600.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>39,870.30</DebitAmount>
+    <credit1>34890.30</credit1>
+    <credit3>3380.00</credit3>
+    <TotalSundrycredit>1600.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388830</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0065</JEVno>
+    <Particular>(3P),To payment of CASUAL for the month of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>21431.79</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>21,431.79</DebitAmount>
+    <credit1>21431.79</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388831</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0066</JEVno>
+    <Particular>(2P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>17692.30</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>17,692.30</DebitAmount>
+    <credit1>17692.30</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388832</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0067</JEVno>
+    <Particular>(8P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>62373.70</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>500.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>62,373.70</DebitAmount>
+    <credit1>59303.70</credit1>
+    <credit3>2570.00</credit3>
+    <TotalSundrycredit>500.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388833</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0068</JEVno>
+    <Particular>(26P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>214336.10</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>3,690.95</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>214,336.10</DebitAmount>
+    <credit1>192800.15</credit1>
+    <credit3>17845.00</credit3>
+    <TotalSundrycredit>3690.95</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388835</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0069</JEVno>
+    <Particular> (2P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>20616.40</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>20,616.40</DebitAmount>
+    <credit1>14867.50</credit1>
+    <credit3>5748.90</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388836</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0070</JEVno>
+    <Particular>(2P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>16748.70</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>16,748.70</DebitAmount>
+    <credit1>14798.70</credit1>
+    <credit3>1950.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388837</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7002</ADANo>
+    <JEVno>101-21-01-06-0071</JEVno>
+    <Particular>(12P) to payment of CASUAL for the period of December 1-15, 2020
+ADA BATCH: 2020-7002</Particular>
+    <TotalSundryDebit>101320.82</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>33,299.79#=6,114.28#=4,585.71</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>101,320.82</DebitAmount>
+    <credit1>57321.04</credit1>
+    <TotalSundrycredit>43999.78</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388838</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0072</JEVno>
+    <Particular>(3P) payment of Contract of service (November 2020).ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>15000.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>600.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>15,000.00</DebitAmount>
+    <credit1>12150.00</credit1>
+    <credit2>450.00</credit2>
+    <credit3>1800.00</credit3>
+    <TotalSundrycredit>600.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388840</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0073</JEVno>
+    <Particular> to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388842</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0074</JEVno>
+    <Particular>(16P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>57417.60</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>57,417.60</DebitAmount>
+    <credit1>57417.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388845</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0075</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>10843.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,843.52</DebitAmount>
+    <credit1>10843.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388846</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0076</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 1-31, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>4299.48</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>4,299.48</DebitAmount>
+    <credit1>3599.48</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388852</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0077</JEVno>
+    <Particular>(10P) to payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>49945.90</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,000.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>49,945.90</DebitAmount>
+    <credit1>43200.24</credit1>
+    <credit2>345.66</credit2>
+    <credit3>5400.00</credit3>
+    <TotalSundrycredit>1000.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388855</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0078</JEVno>
+    <Particular>(8P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>29330.56</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>29,330.56</DebitAmount>
+    <credit1>29330.56</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388859</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0079</JEVno>
+    <Particular>(6P),To payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>27108.80</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>600.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>27,108.80</DebitAmount>
+    <credit1>22908.80</credit1>
+    <credit3>3600.00</credit3>
+    <TotalSundrycredit>600.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388866</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0080</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005</Particular>
+    <TotalSundryDebit>10221.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,221.76</DebitAmount>
+    <credit1>10221.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388872</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0081</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the month of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>11465.28</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>11,465.28</DebitAmount>
+    <credit1>11465.28</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388873</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0082</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>10843.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,843.52</DebitAmount>
+    <credit1>10843.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388874</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0083</JEVno>
+    <Particular>(20P)   ,To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>65865.28</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>65,865.28</DebitAmount>
+    <credit1>65865.28</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388875</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0084</JEVno>
+    <Particular>(6P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>20443.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>20,443.52</DebitAmount>
+    <credit1>20443.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388877</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0085</JEVno>
+    <Particular>(3P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>10843.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,843.52</DebitAmount>
+    <credit1>10843.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388878</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0086</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the month of December 1-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>30198.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>400.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>30,198.96</DebitAmount>
+    <credit1>27998.96</credit1>
+    <credit3>1800.00</credit3>
+    <TotalSundrycredit>400.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388879</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0087</JEVno>
+    <Particular> to payment of CONTRACT OF SERVICE for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>5693.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>5,693.50</DebitAmount>
+    <credit1>5693.50</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388880</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0088</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>6400.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>6,400.00</DebitAmount>
+    <credit1>6400.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388881</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0089</JEVno>
+    <Particular>(5P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>21053.88</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>21,053.88</DebitAmount>
+    <credit1>21053.88</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388882</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0090</JEVno>
+    <Particular>(8P) to payment of CONTRACT OF SERVICE for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>48653.55</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>6,030.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>48,653.55</DebitAmount>
+    <credit1>42623.55</credit1>
+    <TotalSundrycredit>6030.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388883</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0091</JEVno>
+    <Particular>(5P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>29421.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>29,421.76</DebitAmount>
+    <credit1>29421.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388884</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0092</JEVno>
+    <Particular>(84P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>449371.84</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>449,371.84</DebitAmount>
+    <credit1>449371.84</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388885</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7005</ADANo>
+    <JEVno>101-21-01-06-0093</JEVno>
+    <Particular> (23P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7005
+</Particular>
+    <TotalSundryDebit>120065.24</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>120,065.24</DebitAmount>
+    <credit1>120065.24</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388849</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0094</JEVno>
+    <Particular> (17P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>134947.30</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>176.09</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>134,947.30</DebitAmount>
+    <credit1>131131.21</credit1>
+    <credit3>3640.00</credit3>
+    <TotalSundrycredit>176.09</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388850</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0095</JEVno>
+    <Particular>to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>9389.80</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>9,389.80</DebitAmount>
+    <credit1>9389.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388853</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0096</JEVno>
+    <Particular>(12P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>87604.40</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>2,184.08</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>87,604.40</DebitAmount>
+    <credit1>84650.32</credit1>
+    <credit3>770.00</credit3>
+    <TotalSundrycredit>2184.08</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388856</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0097</JEVno>
+    <Particular>(16P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>168507.30</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>168,507.30</DebitAmount>
+    <credit1>164888.90</credit1>
+    <credit3>3618.40</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388858</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0098</JEVno>
+    <Particular>(3P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>24217.10</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>24,217.10</DebitAmount>
+    <credit1>24117.10</credit1>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388860</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0099</JEVno>
+    <Particular> (3P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>24217.10</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>400.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>24,217.10</DebitAmount>
+    <credit1>23237.10</credit1>
+    <credit3>580.00</credit3>
+    <TotalSundrycredit>400.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388864</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0100</JEVno>
+    <Particular>(4P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>37559.20</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>37,559.20</DebitAmount>
+    <credit1>37559.20</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388865</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0101</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>8563.90</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>8,563.90</DebitAmount>
+    <credit1>8423.90</credit1>
+    <credit3>140.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388868</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0102</JEVno>
+    <Particular> (2P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006
+</Particular>
+    <TotalSundryDebit>17216.40</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>17,216.40</DebitAmount>
+    <credit1>17216.40</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388869</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7006</ADANo>
+    <JEVno>101-21-01-06-0103</JEVno>
+    <Particular>(14P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7006</Particular>
+    <TotalSundryDebit>100230.20</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,043.01</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>100,230.20</DebitAmount>
+    <credit1>98297.19</credit1>
+    <credit3>890.00</credit3>
+    <TotalSundrycredit>1043.01</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388889</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0104</JEVno>
+    <Particular>(5P) to payment of CASUAL for the period of December 1-15, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>47386.84</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>15,532.41#=2,863.32#=2,147.49</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>47,386.84</DebitAmount>
+    <credit1>26843.62</credit1>
+    <TotalSundrycredit>20543.22</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388893</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0105</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7826.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388896</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0106</JEVno>
+    <Particular>(13P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>107049.50</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>886.32</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>107,049.50</DebitAmount>
+    <credit1>102493.18</credit1>
+    <credit3>3670.00</credit3>
+    <TotalSundrycredit>886.32</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388924</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0107</JEVno>
+    <Particular>(4P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>30968.70</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>456.82</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>30,968.70</DebitAmount>
+    <credit1>30511.88</credit1>
+    <TotalSundrycredit>456.82</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388926</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0108</JEVno>
+    <Particular>(3P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>23479.80</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>23,479.80</DebitAmount>
+    <credit1>23479.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388927</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0109</JEVno>
+    <Particular> to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7826.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388928</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0110</JEVno>
+    <Particular>to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>9389.80</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>9,389.80</DebitAmount>
+    <credit1>9389.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388930</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0111</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>42082.20</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>800.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>42,082.20</DebitAmount>
+    <credit1>35562.20</credit1>
+    <credit3>5720.00</credit3>
+    <TotalSundrycredit>800.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388937</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0112</JEVno>
+    <Particular>(5P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>36762.84</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>542.23</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>36,762.84</DebitAmount>
+    <credit1>35820.61</credit1>
+    <credit3>400.00</credit3>
+    <TotalSundrycredit>542.23</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388940</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0113</JEVno>
+    <Particular>(3P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>37104.80</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>37,104.80</DebitAmount>
+    <credit1>37104.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388942</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0114</JEVno>
+    <Particular>(2P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>14287.86</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>14,287.86</DebitAmount>
+    <credit1>13997.86</credit1>
+    <credit3>290.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388944</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0115</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7226.60</credit1>
+    <credit3>600.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388945</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0116</JEVno>
+    <Particular>(9P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>75777.70</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>75,777.70</DebitAmount>
+    <credit1>75317.70</credit1>
+    <credit3>460.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388953</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0117</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>13042.90</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>13,042.90</DebitAmount>
+    <credit1>13042.90</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388954</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0118</JEVno>
+    <Particular> to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>8965.20</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>8,965.20</DebitAmount>
+    <credit1>8965.20</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388955</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0119</JEVno>
+    <Particular>(24P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>194136.40</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>3,565.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>194,136.40</DebitAmount>
+    <credit1>177951.40</credit1>
+    <credit3>12620.00</credit3>
+    <TotalSundrycredit>3565.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388957</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0120</JEVno>
+    <Particular>(3P),To payment of CASUAL for the month of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>25780.30</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>830.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>25,780.30</DebitAmount>
+    <credit1>24510.30</credit1>
+    <credit3>440.00</credit3>
+    <TotalSundrycredit>830.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388964</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0121</JEVno>
+    <Particular>(14P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>106565.50</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,438.60</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>106,565.50</DebitAmount>
+    <credit1>104266.90</credit1>
+    <credit3>860.00</credit3>
+    <TotalSundrycredit>1438.60</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388966</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0122</JEVno>
+    <Particular>(34P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>304007.91</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>2,200.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>304,007.91</DebitAmount>
+    <credit1>268228.24</credit1>
+    <credit3>33579.67</credit3>
+    <TotalSundrycredit>2200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388969</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7007</ADANo>
+    <JEVno>101-21-01-06-0123</JEVno>
+    <Particular>(4P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7007</Particular>
+    <TotalSundryDebit>32381.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,000.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>32,381.00</DebitAmount>
+    <credit1>30521.00</credit1>
+    <credit3>860.00</credit3>
+    <TotalSundrycredit>1000.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388886</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0124</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of December 1-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>40000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>40,000.00</DebitAmount>
+    <credit1>37266.67</credit1>
+    <credit2>2733.33</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388887</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0125</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>3200.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,200.00</DebitAmount>
+    <credit1>3200.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388890</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0126</JEVno>
+    <Particular> (56P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>187282.88</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>355.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>187,282.88</DebitAmount>
+    <credit1>186927.88</credit1>
+    <TotalSundrycredit>355.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388891</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0127</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>7643.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388894</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0128</JEVno>
+    <Particular>(39P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>137856.96</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>137,856.96</DebitAmount>
+    <credit1>137856.96</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388895</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0129</JEVno>
+    <Particular>(4P),To payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>32996.88</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>400.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>32,996.88</DebitAmount>
+    <credit1>30196.88</credit1>
+    <credit3>2400.00</credit3>
+    <TotalSundrycredit>400.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388898</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0130</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388899</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0131</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>15798.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>15,798.96</DebitAmount>
+    <credit1>10898.96</credit1>
+    <credit3>4700.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388900</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0132</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388901</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0133</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>14665.28</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>14,665.28</DebitAmount>
+    <credit1>14665.28</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388902</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0134</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388904</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0135</JEVno>
+    <Particular> (2P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>7643.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388906</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0136</JEVno>
+    <Particular>(17P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>58130.56</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>58,130.56</DebitAmount>
+    <credit1>58130.56</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388907</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0137</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 1-15, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>6688.08</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>6,688.08</DebitAmount>
+    <credit1>5988.08</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388908</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0138</JEVno>
+    <Particular>to payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>10693.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,693.50</DebitAmount>
+    <credit1>10372.69</credit1>
+    <credit2>320.81</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388909</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0139</JEVno>
+    <Particular> to payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008
+</Particular>
+    <TotalSundryDebit>8000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>8,000.00</DebitAmount>
+    <credit1>7760.00</credit1>
+    <credit2>240.00</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388910</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0140</JEVno>
+    <Particular>,To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388912</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0141</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>10843.52</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,050.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,843.52</DebitAmount>
+    <credit1>9793.52</credit1>
+    <TotalSundrycredit>1050.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388915</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0142</JEVno>
+    <Particular>(3P),To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>21895.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>21,895.50</DebitAmount>
+    <credit1>21895.50</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388917</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0143</JEVno>
+    <Particular>(12P),To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>118529.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>118,529.00</DebitAmount>
+    <credit1>118529.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388922</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0144</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>10843.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,843.52</DebitAmount>
+    <credit1>10843.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388923</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0145</JEVno>
+    <Particular>(3P) to payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2020-7008</Particular>
+    <TotalSundryDebit>25796.88</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>300.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>25,796.88</DebitAmount>
+    <credit1>24296.88</credit1>
+    <credit3>1200.00</credit3>
+    <TotalSundrycredit>300.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388947</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0146</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7008
+</Particular>
+    <TotalSundryDebit>7200.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,200.00</DebitAmount>
+    <credit1>6500.00</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388949</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7008</ADANo>
+    <JEVno>101-21-01-06-0147</JEVno>
+    <Particular>(6P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7008</Particular>
+    <TotalSundryDebit>19488.08</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>19,488.08</DebitAmount>
+    <credit1>19488.08</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388983</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7010</ADANo>
+    <JEVno>101-21-01-06-0148</JEVno>
+    <Particular>To payment of CASUAL for the month of December 16-31, 2020
+ADA BATCH NO. 2021-7010</Particular>
+    <TotalSundryDebit>7826.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,826.60</DebitAmount>
+    <credit1>7626.60</credit1>
+    <credit3>200.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>388984</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7010</ADANo>
+    <JEVno>101-21-01-06-0149</JEVno>
+    <Particular>To payment of CASUAL for the period of December 1-15, 2020
+ADA BATCH NO. 2021-7010</Particular>
+    <TotalSundryDebit>8627.40</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>2,833.97#=520.76#=390.57</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>8,627.40</DebitAmount>
+    <credit1>4882.10</credit1>
+    <TotalSundrycredit>3745.30</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388986</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7012</ADANo>
+    <JEVno>101-21-01-06-0150</JEVno>
+    <Particular>(5P),To payment of JOB ORDER for the period of November 16-30, 2020
+ADA BATCH NO. 2021-7012</Particular>
+    <TotalSundryDebit>24869.70</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>24,869.70</DebitAmount>
+    <credit1>24696.87</credit1>
+    <credit2>172.83</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388988</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7013</ADANo>
+    <JEVno>101-21-01-06-0151</JEVno>
+    <Particular>To payment of CASUAL for the month of November 1-30, 2020
+ADA BATCH NO. 2021-7013</Particular>
+    <TotalSundryDebit>25664.17</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>4,786.34#=892.64#=669.48</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>25,664.17</DebitAmount>
+    <credit1>19315.71</credit1>
+    <TotalSundrycredit>6348.46</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388990</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7018</ADANo>
+    <JEVno>101-21-01-06-0152</JEVno>
+    <Particular>(38P) payment of Productivity Enhancement Incentive (PEI)  CY2020
+ADA BATCH NO. 2021-7018</Particular>
+    <TotalSundryDebit>186000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>186,000.00</DebitAmount>
+    <credit1>186000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388992</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7018</ADANo>
+    <JEVno>101-21-01-06-0153</JEVno>
+    <Particular>payment of Productivity Enhancement Incentive (PEI) CY2020
+ADA BATCH NO. 2021-7018</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388993</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7019</ADANo>
+    <JEVno>101-21-01-06-0154</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7019</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388995</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7019</ADANo>
+    <JEVno>101-21-01-06-0155</JEVno>
+    <Particular>(10P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO. 2021-7019</Particular>
+    <TotalSundryDebit>35108.80</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>35,108.80</DebitAmount>
+    <credit1>35108.80</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388997</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7019</ADANo>
+    <JEVno>101-21-01-06-0156</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7019</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>7898.96</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389000</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7019</ADANo>
+    <JEVno>101-21-01-06-0157</JEVno>
+    <Particular>(7P) to payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7019</Particular>
+    <TotalSundryDebit>63850.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>63,850.50</DebitAmount>
+    <credit1>61929.44</credit1>
+    <credit2>1921.06</credit2>
+  </Table1>
+  <Table1>
+    <jevID>389001</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7019</ADANo>
+    <JEVno>101-21-01-06-0158</JEVno>
+    <Particular>(10P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7019</Particular>
+    <TotalSundryDebit>39956.72</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>39,956.72</DebitAmount>
+    <credit1>39680.20</credit1>
+    <credit2>276.52</credit2>
+  </Table1>
+  <Table1>
+    <jevID>389003</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7019</ADANo>
+    <JEVno>101-21-01-06-0159</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7019</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>7643.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389004</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0160</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>17953.70</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>520.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>17,953.70</DebitAmount>
+    <credit1>17433.70</credit1>
+    <TotalSundrycredit>520.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389007</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0161</JEVno>
+    <Particular>to payment of CASUAL for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>16454.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>2,833.97#=1,020.76#=390.57</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>16,454.00</DebitAmount>
+    <credit1>11828.70</credit1>
+    <credit3>380.00</credit3>
+    <TotalSundrycredit>4245.30</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389009</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0162</JEVno>
+    <Particular>(5P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>39933.90</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>39,933.90</DebitAmount>
+    <credit1>39933.90</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389010</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0163</JEVno>
+    <Particular>(9P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>73305.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,000.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>73,305.00</DebitAmount>
+    <credit1>70645.00</credit1>
+    <credit3>1660.00</credit3>
+    <TotalSundrycredit>1000.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389012</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0164</JEVno>
+    <Particular>(17P),To payment of Salaries and Wages-Casual for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>131091.30</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>131,091.30</DebitAmount>
+    <credit1>127141.30</credit1>
+    <credit3>3950.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>389013</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0165</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389014</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7020</ADANo>
+    <JEVno>101-21-01-06-0166</JEVno>
+    <Particular> (8P) to payment of CASUAL for the period of December 1-15, 2020
+ADA BATCH NO. 2021-7020</Particular>
+    <TotalSundryDebit>103018.51</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>33,504.38#=6,248.48#=4,686.36</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>103,018.51</DebitAmount>
+    <credit1>58579.29</credit1>
+    <TotalSundrycredit>44439.22</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388971</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7021</ADANo>
+    <JEVno>101-21-01-06-0167</JEVno>
+    <Particular> (2P), to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7021</Particular>
+    <TotalSundryDebit>6926.94</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>6,926.94</DebitAmount>
+    <credit1>6926.94</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388972</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7021</ADANo>
+    <JEVno>101-21-01-06-0168</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2020-7021</Particular>
+    <TotalSundryDebit>4800.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>4,800.00</DebitAmount>
+    <credit1>4100.00</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388973</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7021</ADANo>
+    <JEVno>101-21-01-06-0169</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7021</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388974</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7021</ADANo>
+    <JEVno>101-21-01-06-0170</JEVno>
+    <Particular>(2P),To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020.ADA BATCH NO:2020-7021</Particular>
+    <TotalSundryDebit>15382.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>15,382.50</DebitAmount>
+    <credit1>14921.02</credit1>
+    <credit2>461.48</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388975</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7021</ADANo>
+    <JEVno>101-21-01-06-0171</JEVno>
+    <Particular>(6P),To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020.ADA BATCH NO:2020-7021</Particular>
+    <TotalSundryDebit>42021.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>42,021.00</DebitAmount>
+    <credit1>40760.34</credit1>
+    <credit2>1260.66</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388977</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7022</ADANo>
+    <JEVno>101-21-01-06-0172</JEVno>
+    <Particular>(12P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7021</Particular>
+    <TotalSundryDebit>100021.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,450.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>100,021.00</DebitAmount>
+    <credit1>91861.31</credit1>
+    <credit3>6709.69</credit3>
+    <TotalSundrycredit>1450.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388978</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7022</ADANo>
+    <JEVno>101-21-01-06-0173</JEVno>
+    <Particular>(4P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7022</Particular>
+    <TotalSundryDebit>35270.13</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>35,270.13</DebitAmount>
+    <credit1>35270.13</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388979</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7022</ADANo>
+    <JEVno>101-21-01-06-0174</JEVno>
+    <Particular>(7P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7022</Particular>
+    <TotalSundryDebit>55921.50</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>750.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>55,921.50</DebitAmount>
+    <credit1>54831.50</credit1>
+    <credit3>340.00</credit3>
+    <TotalSundrycredit>750.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388980</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0175</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388981</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0176</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388985</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0177</JEVno>
+    <Particular>(5P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>18487.04</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>18,487.04</DebitAmount>
+    <credit1>18487.04</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388987</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0178</JEVno>
+    <Particular>(7P) to payment of CONTRACT OF SERVICE for the period of December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>53941.50</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>53,941.50</DebitAmount>
+    <credit1>52323.25</credit1>
+    <credit2>1618.25</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388989</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0179</JEVno>
+    <Particular>(3P),To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>15000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>15,000.00</DebitAmount>
+    <credit1>14550.00</credit1>
+    <credit2>450.00</credit2>
+  </Table1>
+  <Table1>
+    <jevID>388991</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0180</JEVno>
+    <Particular>(14P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>46043.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>46,043.52</DebitAmount>
+    <credit1>46043.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388994</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0181</JEVno>
+    <Particular>(3P) payment of Job Order for the period December 16-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>9600.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>9,600.00</DebitAmount>
+    <credit1>9600.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>388996</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7024</ADANo>
+    <JEVno>101-21-01-06-0182</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 1-31, 2020.ADA BATCH NO:2020-7024</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>7898.96</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>388999</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7026</ADANo>
+    <JEVno>101-21-01-06-0183</JEVno>
+    <Particular>(20P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7026</Particular>
+    <TotalSundryDebit>160472.20</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>700.00</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>160,472.20</DebitAmount>
+    <credit1>152552.20</credit1>
+    <credit3>7220.00</credit3>
+    <TotalSundrycredit>700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389006</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7031</ADANo>
+    <JEVno>101-21-01-06-0184</JEVno>
+    <Particular>(6P) to payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7031</Particular>
+    <TotalSundryDebit>54292.20</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>54,292.20</DebitAmount>
+    <credit1>54292.20</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389008</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7036</ADANo>
+    <JEVno>101-21-01-06-0185</JEVno>
+    <Particular>to payment of CASUAL for the period of December 1-15, 2020.ADA BATCH NO:2020-7036</Particular>
+    <TotalSundryDebit>8627.40</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>2,833.97#=520.76#=390.57</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>8,627.40</DebitAmount>
+    <credit1>4882.10</credit1>
+    <TotalSundrycredit>3745.30</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389011</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7036</ADANo>
+    <JEVno>101-21-01-06-0186</JEVno>
+    <Particular>(17P),To payment of JOB ORDER for the period of December 16-31, 2020..ADA BATCH NO:2020-7036</Particular>
+    <TotalSundryDebit>58295.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>58,295.76</DebitAmount>
+    <credit1>58295.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389172</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7036</ADANo>
+    <JEVno>101-21-01-06-0187</JEVno>
+    <Particular> to payment of CONTRACT OF SERVICE for the month of December 1-31, 2020.ADA BATCH NO:2021-7036</Particular>
+    <TotalSundryDebit>30000.00</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>30,000.00</DebitAmount>
+    <credit1>28216.67</credit1>
+    <credit2>1083.33</credit2>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389222</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7037</ADANo>
+    <JEVno>101-21-01-06-0188</JEVno>
+    <Particular>(9P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7037</Particular>
+    <TotalSundryDebit>85604.30</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>2,664.23</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>85,604.30</DebitAmount>
+    <credit1>78740.07</credit1>
+    <credit3>4200.00</credit3>
+    <TotalSundrycredit>2664.23</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389228</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7037</ADANo>
+    <JEVno>101-21-01-06-0189</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7037</Particular>
+    <TotalSundryDebit>13653.40</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>13,653.40</DebitAmount>
+    <credit1>13653.40</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389230</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7037</ADANo>
+    <JEVno>101-21-01-06-0190</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7037</Particular>
+    <TotalSundryDebit>6828.70</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>6,828.70</DebitAmount>
+    <credit1>6828.70</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389234</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7038</ADANo>
+    <JEVno>101-21-01-06-0191</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 1-31, 2020.ADA BATCH NO:2020-7038</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>7898.96</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389238</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7038</ADANo>
+    <JEVno>101-21-01-06-0192</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7038</Particular>
+    <TotalSundryDebit>9600.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>9,600.00</DebitAmount>
+    <credit1>9600.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389241</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7038</ADANo>
+    <JEVno>101-21-01-06-0193</JEVno>
+    <Particular>(3P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7038</Particular>
+    <TotalSundryDebit>11465.28</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>11,465.28</DebitAmount>
+    <credit1>11465.28</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389248</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7040</ADANo>
+    <JEVno>101-21-01-06-0194</JEVno>
+    <Particular>(6P),To payment of CASUAL for the period of December 16-31, 2020.ADA BATCH NO:2020-7040</Particular>
+    <TotalSundryDebit>41318.40</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>41,318.40</DebitAmount>
+    <credit1>39918.40</credit1>
+    <credit3>1400.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>389251</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7042</ADANo>
+    <JEVno>101-21-01-06-0195</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of December 1-31, 2020.ADA BATCH NO:2020-7042</Particular>
+    <TotalSundryDebit>40000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>40,000.00</DebitAmount>
+    <credit1>37266.67</credit1>
+    <credit2>2733.33</credit2>
+  </Table1>
+  <Table1>
+    <jevID>389252</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7045</ADANo>
+    <JEVno>101-21-01-06-0196</JEVno>
+    <Particular>(4P) to payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2020-7045</Particular>
+    <TotalSundryDebit>14043.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>14,043.52</DebitAmount>
+    <credit1>14043.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389073</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7049</ADANo>
+    <JEVno>101-21-01-06-0197</JEVno>
+    <Particular>ASSISTANCE CONTRACT SERVICE , JOB ORDER  JUDY ANN BUSCAYA
+ADA BATCH NO. 2021-7049</Particular>
+    <TotalSundryDebit>5000.00</TotalSundryDebit>
+    <DebitAccountcode>29999990</DebitAccountcode>
+    <DebitAmount>5,000.00</DebitAmount>
+    <credit1>5000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389074</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7050</ADANo>
+    <JEVno>101-21-01-06-0198</JEVno>
+    <Particular>To payment of CASUAL for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7050</Particular>
+    <TotalSundryDebit>16454.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>2,833.97#=520.76#=390.57</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>16,454.00</DebitAmount>
+    <credit1>12708.70</credit1>
+    <TotalSundrycredit>3745.30</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389075</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7051</ADANo>
+    <JEVno>101-21-01-06-0199</JEVno>
+    <Particular>To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7051</Particular>
+    <TotalSundryDebit>7488.90</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>7,488.90</DebitAmount>
+    <credit1>4388.90</credit1>
+    <credit3>3100.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>389076</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7052</ADANo>
+    <JEVno>101-21-01-06-0200</JEVno>
+    <Particular>(12P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7052</Particular>
+    <TotalSundryDebit>92386.90</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>92,386.90</DebitAmount>
+    <credit1>89656.90</credit1>
+    <credit3>2730.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>389077</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7055</ADANo>
+    <JEVno>101-21-01-06-0201</JEVno>
+    <Particular>(5P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7055</Particular>
+    <TotalSundryDebit>47647.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>47,647.60</DebitAmount>
+    <credit1>47647.60</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389078</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7056</ADANo>
+    <JEVno>101-21-01-06-0202</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7056</Particular>
+    <TotalSundryDebit>7643.52</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,643.52</DebitAmount>
+    <credit1>7643.52</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389079</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7057</ADANo>
+    <JEVno>101-21-01-06-0203</JEVno>
+    <Particular>(3P) to payment of CASUAL for the period of November 16-30, 2020
+ADA BATCH NO. 2021-7057</Particular>
+    <TotalSundryDebit>35793.90</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>35,793.90</DebitAmount>
+    <credit1>35793.90</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389080</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7059</ADANo>
+    <JEVno>101-21-01-06-0204</JEVno>
+    <Particular>(3P), to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7059
+</Particular>
+    <TotalSundryDebit>24851.60</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>24,851.60</DebitAmount>
+    <credit1>24651.60</credit1>
+    <credit3>200.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>389081</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7060</ADANo>
+    <JEVno>101-21-01-06-0205</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-70260</Particular>
+    <TotalSundryDebit>4000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>4,000.00</DebitAmount>
+    <credit1>4000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389082</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7061</ADANo>
+    <JEVno>101-21-01-06-0206</JEVno>
+    <Particular>To payment of JOB ORDER for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7061</Particular>
+    <TotalSundryDebit>10032.12</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>10,032.12</DebitAmount>
+    <credit1>9232.12</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389083</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7062</ADANo>
+    <JEVno>101-21-01-06-0207</JEVno>
+    <Particular>(10P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7062</Particular>
+    <TotalSundryDebit>57804.12</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>57,804.12</DebitAmount>
+    <credit1>57804.12</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389084</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7066</ADANo>
+    <JEVno>101-21-01-06-0208</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7066</Particular>
+    <TotalSundryDebit>8379.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>8,379.00</DebitAmount>
+    <credit1>8127.63</credit1>
+    <credit2>251.37</credit2>
+  </Table1>
+  <Table1>
+    <jevID>389085</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7068</ADANo>
+    <JEVno>101-21-01-06-0209</JEVno>
+    <Particular>To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7068</Particular>
+    <TotalSundryDebit>3821.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>3,821.76</DebitAmount>
+    <credit1>3821.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389086</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7069</ADANo>
+    <JEVno>101-21-01-06-0210</JEVno>
+    <Particular>To payment of CONTRACT OF SERVICE for the month of December 1-31, 2020
+ADA BATCH NO. 2021-7069</Particular>
+    <TotalSundryDebit>40000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>40,000.00</DebitAmount>
+    <credit1>37266.67</credit1>
+    <credit2>2733.33</credit2>
+  </Table1>
+  <Table1>
+    <jevID>389087</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7072</ADANo>
+    <JEVno>101-21-01-06-0211</JEVno>
+    <Particular>(2P), payment of job order for the period of December 16-31, 2020.
+ADA BATCH NO. 2021-7072</Particular>
+    <TotalSundryDebit>7021.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>7,021.76</DebitAmount>
+    <credit1>7021.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389088</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7073</ADANo>
+    <JEVno>101-21-01-06-0212</JEVno>
+    <Particular> ( 3P) payment of wages for the period of December 16-31, 2020.
+ADA BATCH NO. 2021-7073</Particular>
+    <TotalSundryDebit>20480.10</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>20,480.10</DebitAmount>
+    <credit1>20480.10</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389089</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7074</ADANo>
+    <JEVno>101-21-01-06-0213</JEVno>
+    <Particular>(8P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7074
+</Particular>
+    <TotalSundryDebit>83814.87</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>83,814.87</DebitAmount>
+    <credit1>83814.87</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389090</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7076</ADANo>
+    <JEVno>101-21-01-06-0214</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7076</Particular>
+    <TotalSundryDebit>24104.10</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>24,104.10</DebitAmount>
+    <credit1>24104.10</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389091</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7078</ADANo>
+    <JEVno>101-21-01-06-0215</JEVno>
+    <Particular>(6P),To payment of JOB ORDER for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7078</Particular>
+    <TotalSundryDebit>21687.04</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>21,687.04</DebitAmount>
+    <credit1>21687.04</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389092</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7079</ADANo>
+    <JEVno>101-21-01-06-0216</JEVno>
+    <Particular>(18P) to payment of CASUAL for the period of December 16-31, 2020
+ADA BATCH NO. 2021-7079</Particular>
+    <TotalSundryDebit>174227.70</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>174,227.70</DebitAmount>
+    <credit1>174227.70</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389891</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7080</ADANo>
+    <JEVno>101-21-01-06-0217</JEVno>
+    <Particular>(10P),To payment of CASUAL for the month of January 1-15, 2021.ADA BATCH NO:2021-7080</Particular>
+    <debit2>59247.00</debit2>
+    <TotalSundryDebit>21203.19</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>28,372.06#=5,213.76#=3,910.32</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>15,641.19#=2,606.88#=1,955.12#=1,000.00</DebitAmount>
+    <credit1>41954.05</credit1>
+    <credit3>1000.00</credit3>
+    <TotalSundrycredit>37496.14</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389896</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7082</ADANo>
+    <JEVno>101-21-01-06-0218</JEVno>
+    <Particular>(11P),To payment of JOB ORDER for the month of January 1-15, 2021.ADA BATCH NO:2021-7082</Particular>
+    <debit2>48663.20</debit2>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,100.00</CreditAmount>
+    <credit1>41563.20</credit1>
+    <credit3>6000.00</credit3>
+    <TotalSundrycredit>1100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389898</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7085</ADANo>
+    <JEVno>101-21-01-06-0219</JEVno>
+    <Particular>Payment of Job order for the period of December 2020.ADA BATCH NO:2021-7085</Particular>
+    <TotalSundryDebit>8598.96</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>100.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>8,598.96</DebitAmount>
+    <credit1>7898.96</credit1>
+    <credit3>600.00</credit3>
+    <TotalSundrycredit>100.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389899</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7086</ADANo>
+    <JEVno>101-21-01-06-0220</JEVno>
+    <Particular>(29P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7086</Particular>
+    <debit2>180860.50</debit2>
+    <TotalSundryDebit>64573.41</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>86,457.44#=16,415.76#=11,936.82</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>47,747.13#=7,957.88#=5,968.40#=2,900.00</DebitAmount>
+    <credit1>125773.89</credit1>
+    <credit3>4850.00</credit3>
+    <TotalSundrycredit>114810.02</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389901</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7088</ADANo>
+    <JEVno>101-21-01-06-0221</JEVno>
+    <Particular>( 339P )- payment of Provincial Scholar Allowance &amp; Tuition fee ( June to December SY 2018 ).ADA BATCH NO:2021-7088</Particular>
+    <TotalSundryDebit>28000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>28,000.00</DebitAmount>
+    <credit1>28000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389902</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7088</ADANo>
+    <JEVno>101-21-01-06-0222</JEVno>
+    <Particular>( 339P )- payment of Provincial Scholar Allowance &amp; Tuition fee ( June to December SY 2018 ).ADA BATCH NO:2021-7088</Particular>
+    <TotalSundryDebit>18000.00</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>18,000.00</DebitAmount>
+    <credit1>18000.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389903</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7093</ADANo>
+    <JEVno>101-21-01-06-0223</JEVno>
+    <Particular>(13P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7093</Particular>
+    <debit2>82233.80</debit2>
+    <TotalSundryDebit>29341.68</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>39,291.97#=7,236.60#=5,427.45</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>21,709.71#=3,618.30#=2,713.67#=1,300.00</DebitAmount>
+    <credit1>59619.46</credit1>
+    <TotalSundrycredit>51956.02</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389905</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7094</ADANo>
+    <JEVno>101-21-01-06-0224</JEVno>
+    <Particular>(36P),To payment of JOB ORDER for the period of January 1-15, 2021..ADA BATCH NO:2021-7094</Particular>
+    <TotalSundryDebit>158766.80</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>3,700.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>158,766.80</DebitAmount>
+    <credit1>132866.80</credit1>
+    <credit3>22200.00</credit3>
+    <TotalSundrycredit>3700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389912</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7094</ADANo>
+    <JEVno>101-21-01-06-0225</JEVno>
+    <Particular>l(3P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7094</Particular>
+    <debit2>18490.40</debit2>
+    <TotalSundryDebit>6605.22</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>9,498.11#=1,627.16#=1,220.37</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>4,881.46#=813.58#=610.18#=300.00</DebitAmount>
+    <credit1>12749.98</credit1>
+    <TotalSundrycredit>12345.64</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389913</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7094</ADANo>
+    <JEVno>101-21-01-06-0226</JEVno>
+    <Particular>(7P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7094</Particular>
+    <debit2>53494.80</debit2>
+    <TotalSundryDebit>18941.73</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>25,414.61#=5,457.56#=3,530.66</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>14,122.64#=2,353.78#=1,765.31#=700.00</DebitAmount>
+    <credit1>38033.70</credit1>
+    <TotalSundrycredit>34402.83</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389916</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7094</ADANo>
+    <JEVno>101-21-01-06-0227</JEVno>
+    <Particular>(2P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7094
+</Particular>
+    <debit2>12930.90</debit2>
+    <TotalSundryDebit>4609.45</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>8,174.08#=1,137.92#=853.44</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>3,413.76#=568.96#=426.73#=200.00</DebitAmount>
+    <credit1>7374.91</credit1>
+    <TotalSundrycredit>10165.44</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389921</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7097</ADANo>
+    <JEVno>101-21-01-06-0228</JEVno>
+    <Particular>(2P),To payment of JOB ORDER for the period of January 1-15, 2021.ADA BATCH NO:2021-7097</Particular>
+    <TotalSundryDebit>8777.20</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>50212990</DebitAccountcode>
+    <DebitAmount>8,777.20</DebitAmount>
+    <credit1>7377.20</credit1>
+    <credit3>1200.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389925</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7098</ADANo>
+    <JEVno>101-21-01-06-0229</JEVno>
+    <Particular>(15P),To payment of JOB ORDER for the period of December 16-31, 2020.ADA BATCH NO:2021-7098</Particular>
+    <TotalSundryDebit>48621.76</TotalSundryDebit>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>48,621.76</DebitAmount>
+    <credit1>48621.76</credit1>
+  </Table1>
+  <Table1>
+    <jevID>389931</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7101</ADANo>
+    <JEVno>101-21-01-06-0230</JEVno>
+    <Particular>(15P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7101</Particular>
+    <debit2>91523.90</debit2>
+    <TotalSundryDebit>32709.69</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>54,133.08#=8,054.16#=6,040.61</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>24,162.34#=4,027.08#=3,020.27#=1,500.00</DebitAmount>
+    <credit1>54505.74</credit1>
+    <credit3>1500.00</credit3>
+    <TotalSundrycredit>68227.85</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389935</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7102</ADANo>
+    <JEVno>101-21-01-06-0231</JEVno>
+    <Particular>(15P),To payment of CASUAL for the period of January 1-15, 2021.ADA BATCH NO:2021-7102
+
+</Particular>
+    <debit2>98074.80</debit2>
+    <TotalSundryDebit>34943.54</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>57,491.69#=8,630.64#=6,472.96</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>25,891.77#=4,315.32#=3,236.45#=1,500.00</DebitAmount>
+    <credit1>60423.05</credit1>
+    <TotalSundrycredit>72595.29</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389938</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7103</ADANo>
+    <JEVno>101-21-01-06-0232</JEVno>
+    <Particular>(2P),To payment of CASUAL for the month of January 1-15, 2021..ADA BATCH NO:2021-7103
+</Particular>
+    <debit2>14135.90</debit2>
+    <TotalSundryDebit>5020.35</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>8,586.34#=1,243.96#=932.97</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>3,731.88#=621.98#=466.49#=200.00</DebitAmount>
+    <credit1>8392.98</credit1>
+    <TotalSundrycredit>10763.27</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389939</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7104</ADANo>
+    <JEVno>101-21-01-06-0233</JEVno>
+    <Particular>(5P),To payment of CASUAL for the period of January 1-15, 2021..ADA BATCH NO:2021-7104
+</Particular>
+    <debit2>30747.60</debit2>
+    <TotalSundryDebit>10984.93</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>14,705.38#=2,705.80#=2,029.35</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>8,117.36#=1,352.90#=1,014.67#=500.00</DebitAmount>
+    <credit1>22292.00</credit1>
+    <TotalSundrycredit>19440.53</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389940</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7105</ADANo>
+    <JEVno>101-21-01-06-0234</JEVno>
+    <Particular>(6P),To payment of CASUAL for the period of January 1-15, 2021..ADA BATCH NO:2021-7105
+</Particular>
+    <debit2>39414.90</debit2>
+    <TotalSundryDebit>14040.48</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>24,265.23#=3,768.52#=2,601.39</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>10,405.53#=1,734.26#=1,300.69#=600.00</DebitAmount>
+    <credit1>22820.24</credit1>
+    <TotalSundrycredit>30635.14</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389941</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7106</ADANo>
+    <JEVno>101-21-01-06-0235</JEVno>
+    <Particular>(14P),To payment of CASUAL for the period of January 1-15, 2021..ADA BATCH NO:2021-7106
+
+</Particular>
+    <debit2>87299.00</debit2>
+    <TotalSundryDebit>31169.00</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>51,380.88#=7,682.36#=5,761.76</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>23,046.96#=3,841.18#=2,880.86#=1,400.00</DebitAmount>
+    <credit1>53643.00</credit1>
+    <TotalSundrycredit>64825.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389944</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7107</ADANo>
+    <JEVno>101-21-01-06-0236</JEVno>
+    <Particular>(9P),To payment of CASUAL for the period of January 1-15, 2021..ADA BATCH NO:2021-7107
+</Particular>
+    <debit2>68424.20</debit2>
+    <TotalSundryDebit>24232.65</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>36,095.56#=6,021.36#=4,516.01</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>18,063.98#=3,010.68#=2,257.99#=900.00</DebitAmount>
+    <credit1>45523.92</credit1>
+    <credit3>500.00</credit3>
+    <TotalSundrycredit>46632.93</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389947</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-2</ADANo>
+    <JEVno>101-21-01-06-0237</JEVno>
+    <Particular>(3P) to payment of CASUAL for the period of December 1-15, 2020..ADA BATCH NO:2021-0002
+</Particular>
+    <TotalSundryDebit>42543.67</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>14,796.69#=2,761.28#=2,070.96</CreditAmount>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>42,543.67</DebitAmount>
+    <credit1>22914.74</credit1>
+    <TotalSundrycredit>19628.93</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389958</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-3</ADANo>
+    <JEVno>101-21-01-06-0238</JEVno>
+    <Particular>(2P) to payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2021-0003</Particular>
+    <TotalSundryDebit>9554.40</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>200.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>9,554.40</DebitAmount>
+    <credit1>8154.40</credit1>
+    <credit3>1200.00</credit3>
+    <TotalSundrycredit>200.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389959</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-3</ADANo>
+    <JEVno>101-21-01-06-0239</JEVno>
+    <Particular>(17P),To payment of JOB ORDER for the period of December 1-15, 2020.ADA BATCH NO:2021-0003</Particular>
+    <TotalSundryDebit>72869.70</TotalSundryDebit>
+    <CreditAccountcode>20201030</CreditAccountcode>
+    <CreditAmount>1,700.00</CreditAmount>
+    <DebitAccountcode>20101010</DebitAccountcode>
+    <DebitAmount>72,869.70</DebitAmount>
+    <credit1>60969.70</credit1>
+    <credit3>10200.00</credit3>
+    <TotalSundrycredit>1700.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389965</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0240</JEVno>
+    <Particular>(5P), Payment of Salaries for the Month of January 1-31, 2021 </Particular>
+    <debit1>80652.00</debit1>
+    <debit3>10000.00</debit3>
+    <TotalSundryDebit>13001.07</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>52,642.47#=6,629.03#=2,419.56</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>9,678.24#=1,613.04#=1,209.79#=500.00</DebitAmount>
+    <credit1>25717.68</credit1>
+    <credit3>16244.33</credit3>
+    <TotalSundrycredit>61691.06</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389971</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0241</JEVno>
+    <Particular>(23P), Payment of  Salaries January 1-31, 2021 </Particular>
+    <debit1>470437.00</debit1>
+    <debit3>46000.00</debit3>
+    <TotalSundryDebit>81691.98</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>212,461.76#=19,576.15#=13,671.96</CreditAmount>
+    <DebitAccountcode>50102050#=50102060#=50102110#=50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>1,500.00#=150.00#=5,044.75#=56,452.44#=9,408.74#=6,836.05#=2,300.00</DebitAmount>
+    <credit1>213081.44</credit1>
+    <credit2>15383.77</credit2>
+    <credit3>123953.90</credit3>
+    <TotalSundrycredit>245709.87</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389972</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0242</JEVno>
+    <Particular>(21P), Payment of Salaries January 1-31, 2021 </Particular>
+    <debit1>836096.00</debit1>
+    <debit3>42000.00</debit3>
+    <TotalSundryDebit>130363.58</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>299,665.76#=52,102.93#=22,420.14</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>100,331.52#=16,721.92#=11,210.14#=2,100.00</DebitAmount>
+    <credit1>417105.14</credit1>
+    <credit2>80419.05</credit2>
+    <credit3>136746.56</credit3>
+    <TotalSundrycredit>374188.83</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389973</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0243</JEVno>
+    <Particular>(20P), Payment of Salaries January 1-31, 2021  
+
+
+</Particular>
+    <debit1>811023.00</debit1>
+    <debit3>40000.00</debit3>
+    <TotalSundryDebit>126375.30</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>332,291.83#=40,358.23#=21,664.08</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>97,322.76#=16,220.46#=10,832.08#=2,000.00</DebitAmount>
+    <credit1>248224.07</credit1>
+    <credit2>80403.63</credit2>
+    <credit3>254456.46</credit3>
+    <TotalSundrycredit>394314.14</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389976</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0244</JEVno>
+    <Particular>( 26p ), payment of salaries for the month of January 2021.</Particular>
+    <debit1>1065605.00</debit1>
+    <debit3>52000.00</debit3>
+    <TotalSundryDebit>404754.71</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>372,167.62#=55,298.75#=28,624.56</CreditAmount>
+    <DebitAccountcode>50102050#=50102060#=50102110#=50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>32,200.00#=3,900.00#=202,557.67#=127,872.60#=21,312.10#=14,312.34#=2,600.00</DebitAmount>
+    <credit1>729763.39</credit1>
+    <credit2>153173.31</credit2>
+    <credit3>183332.08</credit3>
+    <TotalSundrycredit>456090.93</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389978</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0245</JEVno>
+    <Particular>(22P), Payment of salaries for the Month of January 1-31, 2021 </Particular>
+    <debit1>595942.00</debit1>
+    <debit3>44000.00</debit3>
+    <TotalSundryDebit>93474.60</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>224,160.90#=24,483.35#=15,685.32</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>71,513.04#=11,918.84#=7,842.72#=2,200.00</DebitAmount>
+    <credit1>284322.11</credit1>
+    <credit2>53177.68</credit2>
+    <credit3>131587.24</credit3>
+    <TotalSundrycredit>264329.57</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389980</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0246</JEVno>
+    <Particular>(10P), Payment of Salaries January 1-31, 2021  </Particular>
+    <debit1>278712.00</debit1>
+    <debit3>20000.00</debit3>
+    <TotalSundryDebit>43997.42</TotalSundryDebit>
+    <CreditAccountcode>10305010#=10305040#=20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>1,000.00#=1,100.00#=99,585.26#=11,148.48#=7,955.43</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>33,445.44#=5,574.24#=3,977.74#=1,000.00</DebitAmount>
+    <credit1>125014.94</credit1>
+    <credit2>16619.75</credit2>
+    <credit3>80285.56</credit3>
+    <TotalSundrycredit>120789.17</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389982</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0247</JEVno>
+    <Particular>(20p), payment of salaries for the month of January 2021.</Particular>
+    <debit1>561582.00</debit1>
+    <debit3>40000.00</debit3>
+    <TotalSundryDebit>93789.30</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>217,006.54#=25,184.24#=15,035.52</CreditAmount>
+    <DebitAccountcode>50102050#=50102060#=50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>4,750.00#=900.00#=67,389.84#=11,231.64#=7,517.82#=2,000.00</DebitAmount>
+    <credit1>240936.77</credit1>
+    <credit2>43684.31</credit2>
+    <credit3>153523.92</credit3>
+    <TotalSundrycredit>257226.30</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>389991</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0248</JEVno>
+    <Particular>(9P), Salaries for the Month of January 1-31, 2021 </Particular>
+    <debit1>221435.00</debit1>
+    <debit3>18000.00</debit3>
+    <TotalSundryDebit>35103.46</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>92,734.89#=8,857.40#=6,405.06</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>26,572.20#=4,428.70#=3,202.56#=900.00</DebitAmount>
+    <credit1>109653.28</credit1>
+    <credit2>11454.91</credit2>
+    <credit3>45432.92</credit3>
+    <TotalSundrycredit>107997.35</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390003</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0249</JEVno>
+    <Particular>(11P), Payment of Salaries January 1-31, 2021 </Particular>
+    <debit1>1378533.00</debit1>
+    <debit3>22000.00</debit3>
+    <TotalSundryDebit>174073.26</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>372,228.05#=55,141.32#=19,800.00</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>135,702.60#=27,570.66#=9,900.00#=900.00</DebitAmount>
+    <credit1>702174.47</credit1>
+    <credit2>315128.96</credit2>
+    <credit3>110133.46</credit3>
+    <TotalSundrycredit>447169.37</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390004</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0250</JEVno>
+    <Particular>payment of Salaries January 1-31, 2021.</Particular>
+    <debit1>142223.00</debit1>
+    <debit3>2000.00</debit3>
+    <TotalSundryDebit>20911.22</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>29,966.83#=5,688.92#=1,800.00</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>17,066.76#=2,844.46#=900.00#=100.00</DebitAmount>
+    <credit1>94280.45</credit1>
+    <credit2>33398.02</credit2>
+    <TotalSundrycredit>37455.75</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390005</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0251</JEVno>
+    <Particular>(4P), Payment of Salaries for the month of January 1-31, 2021.</Particular>
+    <debit1>101063.00</debit1>
+    <debit3>8000.00</debit3>
+    <TotalSundryDebit>16064.78</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>31,328.33#=10,104.52#=3,031.89</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>12,127.56#=2,021.26#=1,515.96#=400.00</DebitAmount>
+    <credit1>76313.82</credit1>
+    <credit2>2885.22</credit2>
+    <credit3>1464.00</credit3>
+    <TotalSundrycredit>44464.74</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390006</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7137</ADANo>
+    <JEVno>101-21-01-06-0252</JEVno>
+    <Particular>payment of salary for the month of january 2021</Particular>
+    <debit1>178688.00</debit1>
+    <debit3>2000.00</debit3>
+    <TotalSundryDebit>26016.32</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>37,624.48#=17,147.52#=1,800.00</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>21,442.56#=3,573.76#=900.00#=100.00</DebitAmount>
+    <credit1>53829.95</credit1>
+    <credit2>45232.37</credit2>
+    <credit3>51070.00</credit3>
+    <TotalSundrycredit>56572.00</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390008</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0253</JEVno>
+    <Particular>(17P),  payment of salaries for the month of January 2021.</Particular>
+    <debit1>619234.00</debit1>
+    <debit3>34000.00</debit3>
+    <TotalSundryDebit>96532.02</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>249,224.70#=37,671.57#=16,278.45</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>74,308.08#=12,384.68#=8,139.26#=1,700.00</DebitAmount>
+    <credit1>222962.74</credit1>
+    <credit2>58430.33</credit2>
+    <credit3>165198.23</credit3>
+    <TotalSundrycredit>303174.72</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390011</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0254</JEVno>
+    <Particular>(12P), Payment of  Salaries January 1-31, 2021 </Particular>
+    <debit1>389071.00</debit1>
+    <debit3>24000.00</debit3>
+    <TotalSundryDebit>61167.82</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>173,678.26#=19,866.85#=10,995.69</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>46,688.52#=7,781.42#=5,497.88#=1,200.00</DebitAmount>
+    <credit1>174610.27</credit1>
+    <credit2>31285.63</credit2>
+    <credit3>63802.12</credit3>
+    <TotalSundrycredit>204540.80</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390014</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0255</JEVno>
+    <Particular>(32P), Payment of Salaries January 1-31, 2021  </Particular>
+    <debit1>962880.00</debit1>
+    <debit3>64000.00</debit3>
+    <TotalSundryDebit>151534.02</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>323,461.20#=50,554.70#=27,061.50</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>115,545.60#=19,257.60#=13,530.82#=3,200.00</DebitAmount>
+    <credit1>489562.77</credit1>
+    <credit2>66416.58</credit2>
+    <credit3>221357.27</credit3>
+    <TotalSundrycredit>401077.40</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390017</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0256</JEVno>
+    <Particular>(8P), Payment of Salaries for the Month of January 1-31, 2021 </Particular>
+    <debit1>339565.00</debit1>
+    <debit3>16000.00</debit3>
+    <TotalSundryDebit>52482.83</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>92,766.15#=15,582.60#=8,287.41</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>40,747.80#=6,791.30#=4,143.73#=800.00</DebitAmount>
+    <credit1>216173.38</credit1>
+    <credit2>40198.23</credit2>
+    <credit3>35040.06</credit3>
+    <TotalSundrycredit>116636.16</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390019</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0257</JEVno>
+    <Particular>(23P), Payment of Salaries January 1-31, 2021  </Particular>
+    <debit1>823261.00</debit1>
+    <debit3>46000.00</debit3>
+    <TotalSundryDebit>128120.15</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>368,126.08#=50,367.08#=21,127.14</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>98,791.32#=16,465.22#=10,563.61#=2,300.00</DebitAmount>
+    <credit1>253639.85</credit1>
+    <credit2>88393.22</credit2>
+    <credit3>215727.78</credit3>
+    <TotalSundrycredit>439620.30</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390023</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0258</JEVno>
+    <Particular>(15P), Payment of Salaries for the month of January 1-31, 2021  </Particular>
+    <debit1>530626.00</debit1>
+    <debit3>30000.00</debit3>
+    <TotalSundryDebit>82797.15</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>227,012.09#=23,725.04#=14,018.97</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>63,675.12#=10,612.52#=7,009.51#=1,500.00</DebitAmount>
+    <credit1>193021.40</credit1>
+    <credit2>49029.89</credit2>
+    <credit3>136615.76</credit3>
+    <TotalSundrycredit>264756.10</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390027</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0259</JEVno>
+    <Particular>(14P), Payment of  Salaries January 1-31, 2021 </Particular>
+    <debit1>268004.00</debit1>
+    <debit3>28000.00</debit3>
+    <TotalSundryDebit>42788.87</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>123,671.11#=13,220.16#=7,736.58</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>32,160.48#=5,360.08#=3,868.31#=1,400.00</DebitAmount>
+    <credit1>108989.80</credit1>
+    <credit2>10589.51</credit2>
+    <credit3>74585.71</credit3>
+    <TotalSundrycredit>144627.85</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390029</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0260</JEVno>
+    <Particular>(5P), Payment of Salaries January 1-31, 2021 </Particular>
+    <debit1>156261.00</debit1>
+    <debit3>10000.00</debit3>
+    <TotalSundryDebit>24534.85</TotalSundryDebit>
+    <CreditAccountcode>10305040#=20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>1,000.00#=65,809.50#=7,250.44#=4,316.58</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>18,751.32#=3,125.22#=2,158.31#=500.00</DebitAmount>
+    <credit1>61551.69</credit1>
+    <credit2>12764.97</credit2>
+    <credit3>38102.67</credit3>
+    <TotalSundrycredit>78376.52</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390030</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0261</JEVno>
+    <Particular>(957P), Salaries for the Month of January 1-31, 2021  </Particular>
+    <debit1>1736167.00</debit1>
+    <debit3>114000.00</debit3>
+    <TotalSundryDebit>273361.33</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>631,270.97#=78,321.68#=49,195.59</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>208,340.04#=34,723.34#=24,597.95#=5,700.00</DebitAmount>
+    <credit1>858434.62</credit1>
+    <credit2>121261.75</credit2>
+    <credit3>385043.72</credit3>
+    <TotalSundrycredit>758788.24</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390031</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7138</ADANo>
+    <JEVno>101-21-01-06-0262</JEVno>
+    <Particular>(18p) -payment of salary for the month of January 2021</Particular>
+    <debit1>587239.00</debit1>
+    <debit3>36000.00</debit3>
+    <TotalSundryDebit>92464.32</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>211,374.85#=34,348.87#=16,901.61</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>70,468.68#=11,744.78#=8,450.86#=1,800.00</DebitAmount>
+    <credit1>348647.51</credit1>
+    <credit2>45070.69</credit2>
+    <credit3>59359.79</credit3>
+    <TotalSundrycredit>262625.33</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390032</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0263</JEVno>
+    <Particular>(16P), Payment of salaries for the month of  January 1-31, 2021  </Particular>
+    <debit1>658210.00</debit1>
+    <debit3>32000.00</debit3>
+    <TotalSundryDebit>102586.34</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>182,401.70#=26,965.75#=17,673.78</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>78,985.20#=13,164.20#=8,836.94#=1,600.00</DebitAmount>
+    <credit1>356573.08</credit1>
+    <credit2>67145.69</credit2>
+    <credit3>142036.34</credit3>
+    <TotalSundrycredit>227041.23</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390034</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0264</JEVno>
+    <Particular>(5P), Payment of salaries for the month of January 1-31,  2021  </Particular>
+    <debit1>185106.00</debit1>
+    <debit3>10000.00</debit3>
+    <TotalSundryDebit>28447.55</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>71,397.62#=7,404.24#=4,065.39</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>22,212.72#=3,702.12#=2,032.71#=500.00</DebitAmount>
+    <credit1>107417.68</credit1>
+    <credit2>24011.12</credit2>
+    <credit3>9257.50</credit3>
+    <TotalSundrycredit>82867.25</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390035</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0265</JEVno>
+    <Particular>(25P), Payment of Salaries for the month of January 1-31, 2021  </Particular>
+    <debit1>1005103.00</debit1>
+    <debit3>50000.00</debit3>
+    <TotalSundryDebit>156937.37</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>330,585.74#=52,494.20#=27,445.74</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>120,612.36#=20,102.06#=13,722.95#=2,500.00</DebitAmount>
+    <credit1>465519.23</credit1>
+    <credit2>95005.51</credit2>
+    <credit3>240989.95</credit3>
+    <TotalSundrycredit>410525.68</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390037</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0266</JEVno>
+    <Particular>(4P), Payment of Salaries for the Month of January 1-31, 2021 </Particular>
+    <debit1>137432.00</debit1>
+    <debit3>8000.00</debit3>
+    <TotalSundryDebit>21499.01</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>45,469.21#=6,497.28#=3,717.03</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>16,491.84#=2,748.64#=1,858.53#=400.00</DebitAmount>
+    <credit1>48573.18</credit1>
+    <credit2>13131.42</credit2>
+    <credit3>49542.89</credit3>
+    <TotalSundrycredit>55683.52</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390038</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7138</ADANo>
+    <JEVno>101-21-01-06-0267</JEVno>
+    <Particular>(3P), Payment of Salaries for the month of January 1-31, 2021 </Particular>
+    <debit1>118438.00</debit1>
+    <debit3>6000.00</debit3>
+    <TotalSundryDebit>18437.32</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>59,737.95#=4,737.52#=3,111.99</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>14,212.56#=2,368.76#=1,556.00#=300.00</DebitAmount>
+    <credit1>25479.23</credit1>
+    <credit2>12951.63</credit2>
+    <credit3>36857.00</credit3>
+    <TotalSundrycredit>67587.46</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390043</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7112</ADANo>
+    <JEVno>101-21-01-06-0268</JEVno>
+    <Particular>(6P) payment of Salaries and Wages for the month of January 1-31, 2021.</Particular>
+    <debit1>167813.00</debit1>
+    <debit3>12000.00</debit3>
+    <TotalSundryDebit>26508.03</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>82,912.92#=6,712.52#=4,828.38</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>20,137.56#=3,356.26#=2,414.21#=600.00</DebitAmount>
+    <credit1>54753.52</credit1>
+    <credit2>13229.68</credit2>
+    <credit3>43884.01</credit3>
+    <TotalSundrycredit>94453.82</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390046</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0269</JEVno>
+    <Particular>(8P), Payment of Salaries for the month of January 1-31, 2021  </Particular>
+    <debit1>371927.00</debit1>
+    <debit3>16000.00</debit3>
+    <TotalSundryDebit>102309.49</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>137,127.91#=25,257.97#=8,940.51</CreditAmount>
+    <DebitAccountcode>50102050#=50102060#=50102110#=50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>5,150.00#=750.00#=39,069.44#=44,631.24#=7,438.54#=4,470.27#=800.00</DebitAmount>
+    <credit1>216735.74</credit1>
+    <credit2>49251.43</credit2>
+    <credit3>52922.93</credit3>
+    <TotalSundrycredit>171326.39</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390048</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7113</ADANo>
+    <JEVno>101-21-01-06-0270</JEVno>
+    <Particular>(4P) payment of salaries and wages for the month of January 1-31, 2021.</Particular>
+    <debit1>76045.00</debit1>
+    <debit3>8000.00</debit3>
+    <TotalSundryDebit>12186.98</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>27,951.63#=3,041.80#=2,281.35</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>9,125.40#=1,520.90#=1,140.68#=400.00</DebitAmount>
+    <credit1>29361.20</credit1>
+    <credit2>1976.88</credit2>
+    <credit3>31619.12</credit3>
+    <TotalSundrycredit>33274.78</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390049</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0271</JEVno>
+    <Particular>(4P), Payment of salaries for the month of  January 1-31, 2021 </Particular>
+    <debit1>114395.00</debit1>
+    <debit3>8000.00</debit3>
+    <TotalSundryDebit>18131.23</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>43,837.87#=4,575.80#=3,431.85</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>13,727.40#=2,287.90#=1,715.93#=400.00</DebitAmount>
+    <credit1>81005.13</credit1>
+    <credit2>5565.58</credit2>
+    <credit3>2110.00</credit3>
+    <TotalSundrycredit>51845.52</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390050</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0272</JEVno>
+    <Particular>(16P), Payment of Salaries for the month of January 1-31, 2021  </Particular>
+    <debit1>511542.00</debit1>
+    <debit3>32000.00</debit3>
+    <TotalSundryDebit>80292.37</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>243,279.15#=21,041.97#=14,152.89</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>61,385.04#=10,230.84#=7,076.49#=1,600.00</DebitAmount>
+    <credit1>209768.49</credit1>
+    <credit2>42960.25</credit2>
+    <credit3>92631.62</credit3>
+    <TotalSundrycredit>278474.01</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390051</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7114</ADANo>
+    <JEVno>101-21-01-06-0273</JEVno>
+    <Particular> (2P) payment of salaries and wages for the month of January 1-31, 2021.</Particular>
+    <debit1>50477.00</debit1>
+    <debit3>4000.00</debit3>
+    <TotalSundryDebit>8023.94</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040#=20301010</CreditAccountcode>
+    <CreditAmount>20,008.58#=2,019.08#=1,514.31#=545.00</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>6,057.24#=1,009.54#=757.16#=200.00</DebitAmount>
+    <credit1>20986.19</credit1>
+    <credit2>1575.78</credit2>
+    <credit3>15852.00</credit3>
+    <TotalSundrycredit>24086.97</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390052</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0274</JEVno>
+    <Particular>(10P), Payment of Salaries for the month of January 1-31, 2021 </Particular>
+    <debit1>130391.00</debit1>
+    <debit3>20000.00</debit3>
+    <TotalSundryDebit>21210.65</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>36,381.09#=5,215.64#=3,911.73</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>15,646.92#=2,607.82#=1,955.91#=1,000.00</DebitAmount>
+    <credit1>125123.19</credit1>
+    <credit3>970.00</credit3>
+    <TotalSundrycredit>45508.46</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390054</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0275</JEVno>
+    <Particular>(5P), Payment of Salaries for the month of January 1-31, 2021  </Particular>
+    <debit1>198746.00</debit1>
+    <debit3>10000.00</debit3>
+    <TotalSundryDebit>31170.39</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>81,742.26#=10,686.54#=5,691.87</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>23,849.52#=3,974.92#=2,845.95#=500.00</DebitAmount>
+    <credit1>83473.92</credit1>
+    <credit2>16334.57</credit2>
+    <credit3>41987.23</credit3>
+    <TotalSundrycredit>98120.67</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390055</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0276</JEVno>
+    <Particular>(8P), Payment of Salaries for the month of  January 1-31, 2021</Particular>
+    <debit1>314032.00</debit1>
+    <debit3>16000.00</debit3>
+    <TotalSundryDebit>49236.73</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>126,964.93#=31,192.68#=8,944.44</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>37,683.84#=6,280.64#=4,472.25#=800.00</DebitAmount>
+    <credit1>120407.79</credit1>
+    <credit2>27308.56</credit2>
+    <credit3>64450.33</credit3>
+    <TotalSundrycredit>167102.05</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390056</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7111</ADANo>
+    <JEVno>101-21-01-06-0277</JEVno>
+    <Particular>(6P), Payment of Salaries for the Month of January 1-31, 2021 </Particular>
+    <debit1>277862.00</debit1>
+    <debit3>12000.00</debit3>
+    <TotalSundryDebit>42805.73</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>102,119.15#=11,751.83#=6,610.08</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>33,343.44#=5,557.24#=3,305.05#=600.00</DebitAmount>
+    <credit1>96193.84</credit1>
+    <credit2>35951.83</credit2>
+    <credit3>80041.00</credit3>
+    <TotalSundrycredit>120481.06</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390134</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7220</ADANo>
+    <JEVno>101-21-01-06-0278</JEVno>
+    <Particular>(27P), payment of salaries for the month of January 2021.</Particular>
+    <debit1>860049.00</debit1>
+    <debit3>54000.00</debit3>
+    <TotalSundryDebit>134881.12</TotalSundryDebit>
+    <CreditAccountcode>20201020#=20201030#=20201040</CreditAccountcode>
+    <CreditAmount>386,895.66#=66,707.83#=23,548.38</CreditAmount>
+    <DebitAccountcode>50103010#=50103020#=50103030#=50103040</DebitAccountcode>
+    <DebitAmount>103,205.88#=17,200.98#=11,774.26#=2,700.00</DebitAmount>
+    <credit1>349898.64</credit1>
+    <credit2>70254.35</credit2>
+    <credit3>151625.26</credit3>
+    <TotalSundrycredit>477151.87</TotalSundrycredit>
+  </Table1>
+  <Table1>
+    <jevID>390147</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7096</ADANo>
+    <JEVno>101-21-01-06-0279</JEVno>
+    <Particular>To payment of CASUAL for the month of December 16-31, 2020.ADA BATCH NO:2021-7096</Particular>
+    <TotalSundryDebit>11870.70</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>11,870.70</DebitAmount>
+    <credit1>11870.70</credit1>
+  </Table1>
+  <Table1>
+    <jevID>390188</jevID>
+    <Date_>2021-01-29T00:00:00+08:00</Date_>
+    <ADANo>2021-7003</ADANo>
+    <JEVno>101-21-01-06-0280</JEVno>
+    <Particular>payment of Productivity Enhancement Incentive (PEI)  CY2020
+.</Particular>
+    <TotalSundryDebit>10000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>10,000.00</DebitAmount>
+    <credit1>7000.00</credit1>
+    <credit3>3000.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>390186</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2020-7000</ADANo>
+    <JEVno>101-21-01-06-0281</JEVno>
+    <Particular>payment of Year End Bonus (regular) 2020</Particular>
+    <TotalSundryDebit>32053.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>32,053.00</DebitAmount>
+    <credit1>32053.00</credit1>
+  </Table1>
+  <Table1>
+    <jevID>390175</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7047</ADANo>
+    <JEVno>101-21-01-06-0282</JEVno>
+    <Particular>(5P) payment of Productivity Enhancement Incentive (PEI)  CY2020
+</Particular>
+    <TotalSundryDebit>50000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>50,000.00</DebitAmount>
+    <credit1>35000.00</credit1>
+    <credit3>15000.00</credit3>
+  </Table1>
+  <Table1>
+    <jevID>390185</jevID>
+    <Date_>2021-01-22T00:00:00+08:00</Date_>
+    <ADANo>2021-7048</ADANo>
+    <JEVno>101-21-01-06-0283</JEVno>
+    <Particular>payment of Productivity Enhancement Incentive (PEI) CY2020</Particular>
+    <TotalSundryDebit>10000.00</TotalSundryDebit>
+    <DebitAccountcode>20101020</DebitAccountcode>
+    <DebitAmount>10,000.00</DebitAmount>
+    <credit1>7000.00</credit1>
+    <credit3>3000.00</credit3>
+  </Table1>
+  <Table2>
+    <debit1>50101011</debit1>
+    <debit2>50101021</debit2>
+    <debit3>50102011</debit3>
+    <credit1>10102011</credit1>
+    <credit2>20201011</credit2>
+    <credit3>29999991</credit3>
+  </Table2>
+  <Table3>
+    <Accountcode>Totals Carried Forward</Accountcode>
+    <orderby>1</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>10305010</Accountcode>
+    <Scredit>1000.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>10305040</Accountcode>
+    <Scredit>2100.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20101010</Accountcode>
+    <Sdebit>3235936.37</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20101020</Accountcode>
+    <Sdebit>6256349.84</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201020</Accountcode>
+    <Scredit>7390553.94</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201030</Accountcode>
+    <Scredit>1100339.72</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20201040</Accountcode>
+    <Scredit>549067.59</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>20301010</Accountcode>
+    <Scredit>545.00</Scredit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>29999990</Accountcode>
+    <Sdebit>5000.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102050</Accountcode>
+    <Sdebit>43600.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102060</Accountcode>
+    <Sdebit>5700.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50102110</Accountcode>
+    <Sdebit>246671.86</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103010</Accountcode>
+    <Sdebit>2388638.39</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103020</Accountcode>
+    <Sdebit>403060.12</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103030</Accountcode>
+    <Sdebit>265669.56</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50103040</Accountcode>
+    <Sdebit>65100.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+  <Table3>
+    <Accountcode>50212990</Accountcode>
+    <Sdebit>167544.00</Sdebit>
+    <orderby>2</orderby>
+  </Table3>
+</NewDataSet>

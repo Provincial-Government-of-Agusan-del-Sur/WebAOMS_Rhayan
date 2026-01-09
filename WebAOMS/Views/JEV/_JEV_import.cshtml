@@ -1,0 +1,168 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="box" style="margin-bottom:0px!important">
+    <div class="box-body">
+        <div class="row">
+            <form id="frm_coa" class="form-horizontal" style="padding-top:4px" role="form">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label for="Address" class="control-label">Payment Period</label>
+                    </div>
+                    <script>
+                        function refreshBathcno() {
+                            var cbo_batchno = $("#dp_batchno").data("kendoDropDownList");
+                            cbo_batchno.dataSource.read();
+                        }
+                        function refresh_import_grid() {
+                            var grid_batchno = $("#grid_empname").data("kendoGrid");
+                            grid_batchno.dataSource.read();
+                        }
+                    </script>
+                    <div class="col-md-9">
+                        @(Html.Kendo().DatePicker()
+                        .Name("dtp_payrmentperiod")
+                        .Format("MMMM, yyyy")
+                        .Start(CalendarView.Year)
+                        .Depth(CalendarView.Year)
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text", @style="width:50%"} )
+                        .Events(e => e.Change("refreshBathcno"))
+                        )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label for="Address" class="control-label">Employment Status</label>
+                    </div>
+                    <div class="col-md-9">
+                        @(Html.Kendo().DropDownList()
+                      .Name("dp_empstatus")
+                      .DataTextField("name")
+                      .DataValueField("StatusID")
+                      .Filter("Contains")
+                      .DataSource(source =>
+                      {
+                          source.Read(read =>
+                          {
+                              read.Action("DataSource_Get_EmploymentStatus", "JEV");
+                          });
+                      })
+                      .Events(e => e.Change("refreshBathcno"))
+                              .HtmlAttributes(new { style = "width: 50%" })
+                        )
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3" style="min-width:140px!important">
+                        <label for="Address" class="control-label">Office Name/Batchno</label>
+                    </div>
+                    <script>
+                        
+                        function para_import() {
+                            var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+                            var month = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'MM').toString();
+                            return { year: year, month: month, payrollempstatus: $("#dp_empstatus").data("kendoDropDownList").value() }
+                        }
+                    </script>
+                    <div class="col-md-9">
+                        
+                        @(Html.Kendo().DropDownList()
+                              .Name("dp_batchno")
+                              .DataTextField("OfficeName")
+                              .DataValueField("OfficeID")
+                              .Filter("Contains")
+                              .DataSource(source =>
+                              {
+                                  source.Read(read =>
+                                  {
+                                      read.Action("DataSource_Get_batchno", "JEV").Data("para_import");
+                                  });
+                              })
+                              .Events(e=> e.Change("refresh_import_grid"))
+                              .HtmlAttributes(new { style = "width: 100%" })
+                        )
+                    </div>
+                </div>
+                <script>
+                    function param_grid_import() {
+                        var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+                        var month = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'MM').toString();
+                        return { month: month, year: year, officeid: $("#dp_batchno").data("kendoDropDownList").value(), payrollempstatus: $("#dp_empstatus").data("kendoDropDownList").value() }
+                    }
+                </script>
+                <div class="row">
+                    @(Html.Kendo().Grid<dynamic>()
+                    .Name("grid_empname")
+                    .Columns(columns =>
+                    {
+                        columns.Bound("eid").Width(70).Title("Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound("EmpName").Width(200);
+                        columns.Bound("Basic").Width(130).HtmlAttributes(new { style = "text-align:right" }).Format("{0:N2}");
+
+                    })
+                    .AutoBind(true)
+                    .HtmlAttributes(new { style = "height: 300px;" })
+                    .Scrollable()
+                    .Sortable()
+                    .Pageable(pageable => pageable
+                    .Refresh(true)
+                    .ButtonCount(5))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_import_empname", "JEV").Data("param_grid_import"))
+                        .PageSize(200)
+                        .ServerOperation(false)
+                        .Sort(sort => sort.Add("EmpName").Ascending())
+                    )
+                    )
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        @*var datepicker = $("#dtp_post").data("kendoDatePicker");
+        datepicker.value('@ViewBag.postdate');*@
+        
+    })
+
+    function save_import_entries() {
+        startSpin()
+        var year = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'yyyy').toString();
+        var month = kendo.toString($('#dtp_payrmentperiod').data('kendoDatePicker').value(), 'MM').toString();
+        var employmentid = $("#dp_empstatus").data("kendoDropDownList").value();
+        var dp_batchno = $("#dp_batchno").data("kendoDropDownList").value();
+        var jevid = $("#txt_jevid").val();
+
+        if (dp_batchno == '')
+        {
+            toastr.warning("Invalid Office name/Batchno...!", 'System Message')
+            stopSpin()
+            return
+        }
+
+        $.post('@Url.Action("save_import_entries", "JEV")',
+            { year:year, month:month, jevid:jevid, dp_batchno:dp_batchno, employmentid:employmentid}
+        , function (r) {
+            if (r.code == 6) {
+                stopSpin()
+                toastr.success(r.statusName, 'System Message');
+                $("#body_import").html("")
+                $("#mdl_import").modal("hide");
+                rgrid_main_account();
+            }
+            else {
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            mg.warning("" + textStatus + "")
+        });
+    }
+</script>

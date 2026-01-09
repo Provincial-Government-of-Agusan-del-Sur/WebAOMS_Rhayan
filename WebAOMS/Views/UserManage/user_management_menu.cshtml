@@ -1,0 +1,146 @@
+﻿<div class="container-fluid">
+    <div class="row">
+
+            <!-- Available Menu Section -->
+        
+            <div class="col-sm-5 no-padding">
+                <div class="box-head no-padding">
+                    <header><h4 class="text-light"><strong>Available menu</strong></h4></header>
+
+                </div>
+                <div class="box-body no-padding">
+                    <div class="form-group">
+                       
+                    </div>
+                    <script>
+                        function para_available_menu() {
+                            return { Id: '@ViewBag.Id' };
+                        }
+                        var menuStr;
+                        function SelectOnChange(arg) {
+                            menuStr = this.selectedKeyNames().join(",");
+                        }
+                    </script>
+                    <div class="form-group">
+                        <div class="col-md-12 no-padding">
+                            @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_menu>()
+                            .Name("grid_available_menu")
+                            .Sortable()
+                            .Pageable()
+                            .Scrollable()
+                            .AutoBind(false)
+                            .HtmlAttributes(new { style = "height:450px" })
+                            .Selectable(m => m.Mode(GridSelectionMode.Multiple).Type(GridSelectionType.Row))
+                            .Columns(columns =>
+                            {
+                                columns.Select().Width(30).HtmlAttributes(new { @class = "checkbox-align" }).HeaderHtmlAttributes(new { @class = "checkbox-align" });
+                                columns.Bound(a => a.MenuName).Width(300).Title("Menu Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                            })
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .PageSize(400)
+                                .ServerOperation(false)
+                                .Model(model => model.Id(p => p.menu_id))
+                                .Read(read => read.Action("grid_available_menu", "UserManage").Data("para_available_menu"))
+                            )
+                            .Resizable(resize => resize.Columns(true))
+                            .Events(ev => ev.Change("SelectOnChange"))
+                            )
+                        </div>
+                    </div>
+                    <script>
+                        function add_menu() {
+                            var Id = $('#cbo_employee').data("kendoComboBox").value();
+                            $.post('@Url.Action("add_usermenu", "Maintenance")', { menuStr: menuStr, Id: Id }, function () {
+                                loadgrid();
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
+        <div class="col-sm-1 no-padding" style="width: 75px!important; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 40vh;">
+            <!-- Adjust height as needed -->
+            <div class="col-sm-12 no-padding">
+                <div class="row" style="display: flex; justify-content: center;padding-bottom:10px">
+                    <button type="button" onclick="add_menu()" class="btn btn-sm btn-inverse btn-equal" style="margin-right:2px;"><i class="fa fa-arrow-right"></i></button>
+                </div>
+                <div class="row" style="display: flex; justify-content: center;">
+                    <button type="button" onclick="remove_menu()" class="btn btn-sm btn-inverse btn-equal" style="margin-right:2px;"><i class="fa fa-arrow-left"></i></button>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- Accessible Menu Section -->
+            <div class="col-sm-5 no-padding">
+                <div class="box-head" style="padding-bottom:5px">
+                    <header><h4 class="text-light"><strong>Menu options available for user access.</strong></h4></header>
+                </div>
+                <div class="box-body no-padding">
+                    <div class="form-group">
+                        
+                    </div>
+                    <script>
+                        function para_user_menu() {
+                            return { Id: '@ViewBag.Id' };
+                        }
+                        var menuStrUser;
+                        function OnChangeUsermenu(arg) {
+                            menuStrUser = this.selectedKeyNames().join(",");
+                        }
+                    </script>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_user_menu>()
+                            .Name("grid_user_menu")
+                            .Sortable()
+                            .Pageable()
+                            .Scrollable()
+                            .AutoBind(false)
+                            .HtmlAttributes(new { style = "height:450px" })
+                            .Selectable(m => m.Mode(GridSelectionMode.Multiple).Type(GridSelectionType.Row))
+                            .Columns(columns =>
+                            {
+                                columns.Select().Width(30).HtmlAttributes(new { @class = "checkbox-align" }).HeaderHtmlAttributes(new { @class = "checkbox-align" });
+                                columns.Bound(a => a.MenuName).Width(300).Title("Menu Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                            })
+                            .DataSource(dataSource => dataSource
+                                .Ajax()
+                                .PageSize(400)
+                                .ServerOperation(false)
+                                .Model(model => model.Id(p => p.t_menu_user_id))
+                                .Read(read => read.Action("grid_user_menu", "UserManage").Data("para_user_menu"))
+                            )
+                            .Resizable(resize => resize.Columns(true))
+                            .Events(ev => ev.Change("OnChangeUsermenu"))
+                            )
+                        </div>
+                    </div>
+                    <script>
+                        function remove_menu() {
+                            var Id = $('#cbo_employee').data("kendoComboBox").value();
+                            $.post('@Url.Action("remove_usermenu", "Maintenance")', { menuStr: menuStrUser, Id: Id }, function () {
+                                loadgrid();
+                            });
+                        }
+
+                        function loadgrid() {
+                            var gridData = $("#grid_available_menu").data("kendoGrid");
+                            gridData.dataSource.read();
+
+                            var grid_user = $("#grid_user_menu").data("kendoGrid");
+                            grid_user.dataSource.read();
+                        }
+
+                        $(document).ready(function () {
+                            $('#cbo_employee').data("kendoComboBox").value('@ViewBag.Id');
+                            $("#id_title").text("@ViewBag.Modal_title");
+                            onclick_edit_role();
+                            loadgrid();
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </div>
+</div>

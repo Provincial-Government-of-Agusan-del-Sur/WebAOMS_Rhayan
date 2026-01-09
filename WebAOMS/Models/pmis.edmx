@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="pmisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_Attachment">
+          <Key>
+            <PropertyRef Name="attach_id" />
+          </Key>
+          <Property Name="attach_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="attach_name" Type="varchar" MaxLength="100" />
+          <Property Name="attach_description" Type="varchar" MaxLength="400" />
+          <Property Name="IsPrerequisite" Type="tinyint" />
+          <Property Name="orderby" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="tbl_l_Compensation">
+          <Key>
+            <PropertyRef Name="compensationID" />
+          </Key>
+          <Property Name="compensationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompensatioName" Type="varchar" MaxLength="50" />
+          <Property Name="Col_Name" Type="varchar" MaxLength="50" />
+          <Property Name="period" Type="int" />
+          <Property Name="HRSignatory" Type="varchar(max)" />
+          <Property Name="istaxable" Type="tinyint" />
+          <Property Name="width" Type="varchar" MaxLength="20" />
+          <Property Name="height" Type="varchar" MaxLength="20" />
+          <Property Name="NoHRSig" Type="bit" />
+          <Property Name="ViewOnUser" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_l_Compensation_Column">
+          <Key>
+            <PropertyRef Name="Col_id" />
+          </Key>
+          <Property Name="Col_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Col_name" Type="varchar" MaxLength="50" />
+          <Property Name="Col_description" Type="varchar" MaxLength="50" />
+          <Property Name="CompensationID" Type="int" />
+          <Property Name="Datatype" Type="tinyint" />
+          <Property Name="isIncome" Type="tinyint" />
+          <Property Name="col_width" Type="decimal" Precision="18" Scale="9" />
+          <Property Name="col_format" Type="varchar" MaxLength="20" />
+          <Property Name="orderby" Type="tinyint" />
+          <Property Name="includeTaxAnnual" Type="tinyint" />
+          <Property Name="defaultAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="formula" Type="varchar" MaxLength="20" />
+          <Property Name="editable" Type="bit" />
+          <Property Name="isActive" Type="bit" />
+          <Property Name="isReadOnly" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll">
+          <Key>
+            <PropertyRef Name="t_compensation_tempID" />
+          </Key>
+          <Property Name="t_compensation_tempID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="compensation_batchID" Type="int" />
+          <Property Name="eid" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="UserID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll_batch">
+          <Key>
+            <PropertyRef Name="t_compensation_batchID" />
+          </Key>
+          <Property Name="t_compensation_batchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompensationID" Type="int" />
+          <Property Name="yearMonth" Type="int" />
+          <Property Name="employmentStatusArray" Type="varchar" MaxLength="500" />
+          <Property Name="employmentStatusText" Type="nvarchar" MaxLength="200" />
+          <Property Name="status_id" Type="tinyint" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="UserID" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll_col">
+          <Key>
+            <PropertyRef Name="t_Compensation_col_temp_id" />
+          </Key>
+          <Property Name="t_Compensation_col_temp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="t_compensation_tempID" Type="int" />
+          <Property Name="Compensation_col_id" Type="int" />
+          <Property Name="Value" Type="money" />
+          <Property Name="value_str" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll_Deduction">
+          <Key>
+            <PropertyRef Name="special_payroll_deductionID" />
+          </Key>
+          <Property Name="special_payroll_deductionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="eid" Type="int" />
+          <Property Name="CompensationID" Type="int" />
+          <Property Name="Batchno" Type="int" />
+          <Property Name="year_" Type="int" />
+          <Property Name="month_" Type="tinyint" />
+          <Property Name="Deduction_ID" Type="int" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="DTE" Type="datetime" />
+          <Property Name="user_eid" Type="int" />
+        </EntityType>
+        <Association Name="FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col">
+          <End Role="tbl_t_Special_Payroll" Type="Self.tbl_t_Special_Payroll" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_t_Special_Payroll_col" Type="Self.tbl_t_Special_Payroll_col" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_t_Special_Payroll">
+              <PropertyRef Name="t_compensation_tempID" />
+            </Principal>
+            <Dependent Role="tbl_t_Special_Payroll_col">
+              <PropertyRef Name="t_compensation_tempID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="pmisModelStoreContainer">
+          <EntitySet Name="tbl_Attachment" EntityType="Self.tbl_Attachment" Schema="epay" store:Type="Tables" />
+          <EntitySet Name="tbl_l_Compensation" EntityType="Self.tbl_l_Compensation" Schema="epay" store:Type="Tables" />
+          <EntitySet Name="tbl_l_Compensation_Column" EntityType="Self.tbl_l_Compensation_Column" Schema="epay" store:Type="Tables" />
+          <EntitySet Name="tbl_t_Special_Payroll" EntityType="Self.tbl_t_Special_Payroll" Schema="epay" store:Type="Tables" />
+          <EntitySet Name="tbl_t_Special_Payroll_batch" EntityType="Self.tbl_t_Special_Payroll_batch" Schema="epay" store:Type="Tables" />
+          <EntitySet Name="tbl_t_Special_Payroll_col" EntityType="Self.tbl_t_Special_Payroll_col" Schema="epay" store:Type="Tables" />
+          <EntitySet Name="tbl_t_Special_Payroll_Deduction" EntityType="Self.tbl_t_Special_Payroll_Deduction" Schema="epay" store:Type="Tables" />
+          <AssociationSet Name="FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col" Association="Self.FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col">
+            <End Role="tbl_t_Special_Payroll" EntitySet="tbl_t_Special_Payroll" />
+            <End Role="tbl_t_Special_Payroll_col" EntitySet="tbl_t_Special_Payroll_col" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pmisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_t_Special_Payroll">
+          <Key>
+            <PropertyRef Name="t_compensation_tempID" />
+          </Key>
+          <Property Name="t_compensation_tempID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="compensation_batchID" Type="Int32" />
+          <Property Name="eid" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="Int32" />
+          <NavigationProperty Name="tbl_t_Special_Payroll_col" Relationship="Self.FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col" FromRole="tbl_t_Special_Payroll" ToRole="tbl_t_Special_Payroll_col" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll_batch">
+          <Key>
+            <PropertyRef Name="t_compensation_batchID" />
+          </Key>
+          <Property Name="t_compensation_batchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompensationID" Type="Int32" />
+          <Property Name="yearMonth" Type="Int32" />
+          <Property Name="employmentStatusArray" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="employmentStatusText" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="status_id" Type="Byte" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll_col">
+          <Key>
+            <PropertyRef Name="t_Compensation_col_temp_id" />
+          </Key>
+          <Property Name="t_Compensation_col_temp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="t_compensation_tempID" Type="Int32" />
+          <Property Name="Compensation_col_id" Type="Int32" />
+          <Property Name="Value" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="tbl_t_Special_Payroll" Relationship="Self.FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col" FromRole="tbl_t_Special_Payroll_col" ToRole="tbl_t_Special_Payroll" />
+          <Property Name="value_str" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_t_Special_Payroll_Deduction">
+          <Key>
+            <PropertyRef Name="special_payroll_deductionID" />
+          </Key>
+          <Property Name="special_payroll_deductionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="eid" Type="Int32" />
+          <Property Name="CompensationID" Type="Int32" />
+          <Property Name="Batchno" Type="Int32" />
+          <Property Name="year_" Type="Int32" />
+          <Property Name="month_" Type="Byte" />
+          <Property Name="Deduction_ID" Type="Int32" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DTE" Type="DateTime" Precision="3" />
+          <Property Name="user_eid" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col">
+          <End Role="tbl_t_Special_Payroll" Type="Self.tbl_t_Special_Payroll" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_t_Special_Payroll_col" Type="Self.tbl_t_Special_Payroll_col" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_t_Special_Payroll">
+              <PropertyRef Name="t_compensation_tempID" />
+            </Principal>
+            <Dependent Role="tbl_t_Special_Payroll_col">
+              <PropertyRef Name="t_compensation_tempID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="pmisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_t_Special_Payroll" EntityType="Self.tbl_t_Special_Payroll" />
+          <EntitySet Name="tbl_t_Special_Payroll_batch" EntityType="Self.tbl_t_Special_Payroll_batch" />
+          <EntitySet Name="tbl_t_Special_Payroll_col" EntityType="Self.tbl_t_Special_Payroll_col" />
+          <EntitySet Name="tbl_t_Special_Payroll_Deduction" EntityType="Self.tbl_t_Special_Payroll_Deduction" />
+          <AssociationSet Name="FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col" Association="Self.FK_tbl_t_Compensation_temp_col_tbl_t_Compensation_temp_col">
+            <End Role="tbl_t_Special_Payroll" EntitySet="tbl_t_Special_Payroll" />
+            <End Role="tbl_t_Special_Payroll_col" EntitySet="tbl_t_Special_Payroll_col" />
+          </AssociationSet>
+          <EntitySet Name="tbl_l_Compensation" EntityType="pmisModel.tbl_l_Compensation" />
+          <EntitySet Name="tbl_l_Compensation_Column" EntityType="pmisModel.tbl_l_Compensation_Column" />
+          <EntitySet Name="tbl_Attachment" EntityType="pmisModel.tbl_Attachment" />
+        </EntityContainer>
+        <EntityType Name="tbl_l_Compensation">
+          <Key>
+            <PropertyRef Name="compensationID" />
+          </Key>
+          <Property Name="compensationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompensatioName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Col_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="period" Type="Int32" />
+          <Property Name="HRSignatory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="istaxable" Type="Byte" />
+          <Property Name="width" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="height" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NoHRSig" Type="Boolean" />
+          <Property Name="ViewOnUser" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_l_Compensation_Column">
+          <Key>
+            <PropertyRef Name="Col_id" />
+          </Key>
+          <Property Name="Col_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Col_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Col_description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CompensationID" Type="Int32" />
+          <Property Name="Datatype" Type="Byte" />
+          <Property Name="isIncome" Type="Byte" />
+          <Property Name="col_width" Type="Decimal" Precision="18" Scale="9" />
+          <Property Name="col_format" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="orderby" Type="Byte" />
+          <Property Name="includeTaxAnnual" Type="Byte" />
+          <Property Name="defaultAmount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="formula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="editable" Type="Boolean" />
+          <Property Name="isActive" Type="Boolean" />
+          <Property Name="isReadOnly" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbl_Attachment">
+          <Key>
+            <PropertyRef Name="attach_id" />
+          </Key>
+          <Property Name="attach_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="attach_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="attach_description" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="IsPrerequisite" Type="Byte" />
+          <Property Name="orderby" Type="Byte" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pmisModelStoreContainer" CdmEntityContainer="pmisEntities">
+          <EntitySetMapping Name="tbl_t_Special_Payroll">
+            <EntityTypeMapping TypeName="pmisModel.tbl_t_Special_Payroll">
+              <MappingFragment StoreEntitySet="tbl_t_Special_Payroll">
+                <ScalarProperty Name="t_compensation_tempID" ColumnName="t_compensation_tempID" />
+                <ScalarProperty Name="compensation_batchID" ColumnName="compensation_batchID" />
+                <ScalarProperty Name="eid" ColumnName="eid" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_t_Special_Payroll_batch">
+            <EntityTypeMapping TypeName="pmisModel.tbl_t_Special_Payroll_batch">
+              <MappingFragment StoreEntitySet="tbl_t_Special_Payroll_batch">
+                <ScalarProperty Name="t_compensation_batchID" ColumnName="t_compensation_batchID" />
+                <ScalarProperty Name="CompensationID" ColumnName="CompensationID" />
+                <ScalarProperty Name="yearMonth" ColumnName="yearMonth" />
+                <ScalarProperty Name="employmentStatusArray" ColumnName="employmentStatusArray" />
+                <ScalarProperty Name="employmentStatusText" ColumnName="employmentStatusText" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_t_Special_Payroll_col">
+            <EntityTypeMapping TypeName="pmisModel.tbl_t_Special_Payroll_col">
+              <MappingFragment StoreEntitySet="tbl_t_Special_Payroll_col">
+                <ScalarProperty Name="value_str" ColumnName="value_str" />
+                <ScalarProperty Name="t_Compensation_col_temp_id" ColumnName="t_Compensation_col_temp_id" />
+                <ScalarProperty Name="t_compensation_tempID" ColumnName="t_compensation_tempID" />
+                <ScalarProperty Name="Compensation_col_id" ColumnName="Compensation_col_id" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_t_Special_Payroll_Deduction">
+            <EntityTypeMapping TypeName="pmisModel.tbl_t_Special_Payroll_Deduction">
+              <MappingFragment StoreEntitySet="tbl_t_Special_Payroll_Deduction">
+                <ScalarProperty Name="special_payroll_deductionID" ColumnName="special_payroll_deductionID" />
+                <ScalarProperty Name="eid" ColumnName="eid" />
+                <ScalarProperty Name="CompensationID" ColumnName="CompensationID" />
+                <ScalarProperty Name="Batchno" ColumnName="Batchno" />
+                <ScalarProperty Name="year_" ColumnName="year_" />
+                <ScalarProperty Name="month_" ColumnName="month_" />
+                <ScalarProperty Name="Deduction_ID" ColumnName="Deduction_ID" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="DTE" ColumnName="DTE" />
+                <ScalarProperty Name="user_eid" ColumnName="user_eid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_l_Compensation">
+            <EntityTypeMapping TypeName="pmisModel.tbl_l_Compensation">
+              <MappingFragment StoreEntitySet="tbl_l_Compensation">
+                <ScalarProperty Name="ViewOnUser" ColumnName="ViewOnUser" />
+                <ScalarProperty Name="NoHRSig" ColumnName="NoHRSig" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="istaxable" ColumnName="istaxable" />
+                <ScalarProperty Name="HRSignatory" ColumnName="HRSignatory" />
+                <ScalarProperty Name="period" ColumnName="period" />
+                <ScalarProperty Name="Col_Name" ColumnName="Col_Name" />
+                <ScalarProperty Name="CompensatioName" ColumnName="CompensatioName" />
+                <ScalarProperty Name="compensationID" ColumnName="compensationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_l_Compensation_Column">
+            <EntityTypeMapping TypeName="pmisModel.tbl_l_Compensation_Column">
+              <MappingFragment StoreEntitySet="tbl_l_Compensation_Column">
+                <ScalarProperty Name="isReadOnly" ColumnName="isReadOnly" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="editable" ColumnName="editable" />
+                <ScalarProperty Name="formula" ColumnName="formula" />
+                <ScalarProperty Name="defaultAmount" ColumnName="defaultAmount" />
+                <ScalarProperty Name="includeTaxAnnual" ColumnName="includeTaxAnnual" />
+                <ScalarProperty Name="orderby" ColumnName="orderby" />
+                <ScalarProperty Name="col_format" ColumnName="col_format" />
+                <ScalarProperty Name="col_width" ColumnName="col_width" />
+                <ScalarProperty Name="isIncome" ColumnName="isIncome" />
+                <ScalarProperty Name="Datatype" ColumnName="Datatype" />
+                <ScalarProperty Name="CompensationID" ColumnName="CompensationID" />
+                <ScalarProperty Name="Col_description" ColumnName="Col_description" />
+                <ScalarProperty Name="Col_name" ColumnName="Col_name" />
+                <ScalarProperty Name="Col_id" ColumnName="Col_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Attachment">
+            <EntityTypeMapping TypeName="pmisModel.tbl_Attachment">
+              <MappingFragment StoreEntitySet="tbl_Attachment">
+                <ScalarProperty Name="orderby" ColumnName="orderby" />
+                <ScalarProperty Name="IsPrerequisite" ColumnName="IsPrerequisite" />
+                <ScalarProperty Name="attach_description" ColumnName="attach_description" />
+                <ScalarProperty Name="attach_name" ColumnName="attach_name" />
+                <ScalarProperty Name="attach_id" ColumnName="attach_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

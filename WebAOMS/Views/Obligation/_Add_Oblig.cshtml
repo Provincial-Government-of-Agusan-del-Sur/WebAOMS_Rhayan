@@ -1,0 +1,579 @@
+﻿
+@{
+    ViewBag.Title = "_account_sub";
+    Layout = null;
+}
+<div id="div_details" class="box" style="width:100%;margin-bottom:0px!important">
+    <div class="box-body">
+        <div class="col-lg-12 no-padding">
+            <form id="frm_doc_logdetails">
+
+                <input id="txt_Obligid" name="obligID" value="@ViewBag.obligID" type="text" hidden />
+                <input id="txt_officeID"  name="officeID"  type="text" hidden  />
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Transaction Type</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                    .Name("transtype_id")
+                    .DataTextField("TransactionName")
+                    .DataValueField("Transtype_id")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_transaction_type", "Document");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    )
+                </div>
+                <script>
+                    function para_oblig_OPA() {
+                        return { officeid: $("#RCenter").data("kendoDropDownList").value(),year:$('#dtp_to').data("kendoDatePicker").value().getFullYear() };
+                    }
+                </script>
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>Particular</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    <textarea id="txt_doc_particular" name="Particular" maxlength="2000" type="text" class="form-control k-input" rows="4">@ViewBag.particular</textarea>
+                </div>
+
+                <div class="col-md-10 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>Claimant Name</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        @*<input id="txt_claimant" name="claimantname" value="@ViewBag.claimantname" type="text" class="form-control k-input" />*@
+                        <div class="input-group" style="padding-bottom:5px!important">
+                            <input id="txt_claimant" type="text" class="form-control navbar-input" value="@ViewBag.Name" style="" placeholder="browse claimant" disabled>
+                            <span class="input-group-btn dropup">
+                                <button class="btn btn-equal" type="button" onclick="browse_claimant()"><i class="fa fa-group"></i></button>
+                            </span>
+
+                            @*<input type="text" class="form-control navbar-input control-width-tiny" style="text-align:center"/>*@
+
+                        </div>
+                        <input id="txt_claimant_id" style="display:none" name="Claimantcode" value="@ViewBag.claimantcode" type="text" class="form-control k-input" />
+
+                    </div>
+                </div>
+                <div class="col-md-2 no-padding">
+                    <div class="PvCIH">
+                        <span data-lokalise="true" class="khIjp">
+                            <span>No. of Persons</span>
+                        </span>
+                    </div>
+                    <div class="byexym liZmnb">
+                        <input id="txt_doc_count_person" name="countperson" style="text-align:center" type="text" value="@ViewBag.countperson" class="form-control k-input" />
+                    </div>
+                </div>
+                    <div class="col-md-6 no-padding">
+                        <div class="PvCIH">
+                            <span data-lokalise="true" class="khIjp">
+                                <span>Fund Type</span>
+                            </span>
+                        </div>
+                        <div class="byexym liZmnb">
+                            @(Html.Kendo().DropDownList()
+                            .Name("fundID")
+                            .DataTextField("FundName")
+                            .DataValueField("FundID")
+                            .Filter("Contains")
+                            .AutoBind(false)
+                            .DataSource(source =>
+                            {
+                                source.Read(read =>
+                                {
+                                    read.Action("DataSource_Getfundtype", "Document");
+                                });
+                            })
+                            .HtmlAttributes(new { style = "width: 100%" })
+                            )
+                        </div>
+                    </div>
+                    <div class="col-md-2 no-padding">
+                        <div class="PvCIH">
+                            <span data-lokalise="true" class="khIjp">
+                                <span>Allotment Class</span>
+                            </span>
+                        </div>
+                        <div class="byexym liZmnb">
+                            @(Html.Kendo().DropDownList()
+                            .Name("ooe")
+                            .DataTextField("OOEAbreviation")
+                            .DataValueField("OOEAbreviation")
+                            .Filter("Contains")
+                            .AutoBind(false)
+                            .DataSource(source =>
+                            {
+                                source.Read(read =>
+                                {
+                                    read.Action("DataSource_ooe", "Document");
+                                });
+                            })
+                            .HtmlAttributes(new { style = "width: 100%" })
+                            )
+                        </div>
+                    </div>
+</form>
+            </div>
+            <div class="col-lg-12" style="padding-top:5px">
+                <div style="text-align:left">
+                   <h5><bold>Expense details</bold></h5> 
+                </div>
+
+                <div class="form-group-md">
+                    <div class="row">
+                        <script>
+                            //function getOPAValue() { //get the office program account
+                            //    var multiselect = $("#ms_officeProgramAccountID").data("kendoMultiSelect");
+                            //    var dataItem = multiselect.dataItems()
+                            //    var txtdata = "";
+                            //    var item = dataItem;
+                            //    $.each(item, function (index, item) {
+                            //        txtdata = txtdata + item.officeProgramAccount_id + ',';
+                            //    });
+                                
+                            //    return txtdata.substring(0, txtdata.length - 1);
+                            //}
+
+                            function param_grid_entries_sub() {
+                                return { obligid: $("#txt_Obligid").val() };
+                            }
+                            function productNameEditable(dataItem) {
+                                // do not allow editing for product with ProductID=3
+                                return dataItem.oblig_expense_detail_id != 3;
+                            }
+                        </script>
+                        <div class="col-md-12 no-padding">
+                            @(Html.Kendo().Grid<WebAOMS.Models.ufn_Expense_details_Result>()
+                            .Name("grid_Entries")
+                            //.Editable(editable => editable.Mode(GridEditMode.InCell))
+                            .Columns(columns =>
+                            {
+                                columns.Bound(c => c.Code).Width(100).Title("Account Code").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" })
+                                    .ClientFooterTemplate("<div style='text-align:right'>Row(s) <b>#=count#</b></div>");
+                                columns.Bound(c => c.AccountName).Title("Account Name").Width(400).ClientFooterTemplate("<div style='text-align:right'><b>Total Obligated Amount</b></div>"); ;
+
+                                columns.Bound(c => c.Amount).Width(100).Title("Amount").HeaderHtmlAttributes(new { Style = "text-align:center" })
+                            .ClientTemplate("<div id=\"div_cf_#=oblig_expense_detail_id#\" style 'text-align:right'><button type=\"button\" onclick=\"edit_amount(#=Amount#,#=oblig_expense_detail_id#)\" style='display:inline-block;text-align:right' class=\" DebitCredit\">#=addCommas(Amount)#</button></div>")
+                            .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+                            })
+                            //.Selectable(selectable => selectable
+                            //.Mode(GridSelectionMode.Single))
+                            .AutoBind(true)
+                            .HtmlAttributes(new { style = "height: 250px;" })
+                            .Scrollable()
+                            .Sortable()
+                            .DataSource(dataSource => dataSource
+
+                                .Ajax()
+                                .Read(read => read.Action("grid_expenses", "Obligation").Data("param_grid_entries_sub"))
+                                .Batch(true)
+                                .PageSize(200)
+                                .ServerOperation(false)
+                                .Aggregates(aggregates =>
+                                {
+                                    aggregates.Add(p => p.Amount).Sum();
+                                    aggregates.Add(p => p.Code).Count();
+                                })
+                            )
+                            )
+                        </div>
+                        <script>
+                            var mg = new mgsInfo()
+                            $(document).ready(function () {
+                                $(function () {
+                                    $('#txt_GAmount').number(true, 2);
+                                });
+
+                            })
+
+                            function edit_amount(amount,id){
+                                var Itype;
+                                if (amount == null)
+                                {
+                                    amount = 0;
+                                }
+
+                                Itype = 2
+
+                                $("#div_cf_" + id).html("<input class=\"txtDebitCredit gridtxt\" style='text-align:right' value=\""+ amount +"\" type=\"text\" id=\"txt_cf_" +id + "\">")
+                                $("#txt_cf_" +id).number(true, 2);
+
+                                $("#txt_cf_" +id).focus();
+                                $("#txt_cf_" +id).select();
+
+                                $("#txt_cf_" +id).on('keyup', function (e) {
+                                    if (e.keyCode == 13)
+                                    {
+                                        var txtAmount = $("#txt_cf_" +id).val()
+                                        if (txtAmount == ""){
+                                            txtAmount = "0.00"
+                                        }
+                                        startSpin()
+
+                                        var obligid = $("#txt_Obligid").val()
+
+                                        
+
+                                        var functionid = $("#RCenter").data("kendoDropDownList").value();
+                                        startSpin()
+                                        $.post('@Url.Action("insert_oblig_expense", "Obligation")'
+                                       ,{
+                                           oblig_expense_detail_id:id
+                                           , obligid:obligid
+                                           , ChartAccountID:0
+                                           , functionid:functionid
+                                           , Amount:txtAmount
+                                           ,officeProgramAccountid:''
+                                       }, function (r) {
+
+                                           if (r.code=="6")
+                                           {
+                                               $("#div_cf_" + id).html("<button type=\"button\" onclick=\"edit_amount('"+txtAmount+"',"+id+")\" style='text-align:right' class=\" DebitCredit\">"+txtAmount+"</button>")
+                                               stopSpin()
+                                               rgrid_main_account()
+                                           }
+                                           else {
+                                               toastr.warning(r.statusName)
+                                               stopSpin()
+                                           }
+                                       })
+                                    .fail(function (jqXHR, textStatus, error) {
+                                        stopSpin()
+                                        toastr.warning(error, 'System Message');
+                                    });
+                                    }
+
+                                })
+                            }
+
+                            function edit_subentries(oblig_expense_detail_id, ChartAccountID, Amount) {
+
+                                var obligid = $("#txt_Obligid").val()
+                                var functionid = $("#RCenter").data("kendoDropDownList").value();
+                                var officeProgramAccountid = $("#officeProgramAccountID").data("kendoDropDownList").value();
+                                startSpin()
+                                $.post('@Url.Action("insert_oblig_expense", "Obligation")'
+                               ,{
+                                   oblig_expense_detail_id:oblig_expense_detail_id
+                                   , obligid:obligid
+                                   , ChartAccountID:ChartAccountID
+                                   , functionid:functionid
+                                   , Amount:Amount
+                                   ,officeProgramAccountid:officeProgramAccountid
+                               }, function (r) {
+                                       stopSpin()
+                                       
+                                       if (r.code=="6")
+                                       {
+                                           toastr.success(r.statusName)
+                                       }
+                                       else {
+                                           toastr.warning(r.statusName)
+                                           stopSpin()
+                                       }
+
+                               })
+                               //.fail(function (jqXHR, textStatus, error) {
+                               //    stopSpin()
+                               //    toastr.warning(error, 'System Message');
+                               //});
+                            }
+
+                            function new_entry() {
+                                var obligid = $("#txt_Obligid").val()
+                                if (obligid == "0")
+                                {
+
+                                    //$("#txt_officeProgramAccountID").val(getOPAValue())
+                                    var frm = $("#frm_doc_logdetails").serialize();
+                                    $.post('@Url.Action("save_oblig", "Obligation")',
+                                            frm
+                                        , function (r) {
+                                            if (r.code == 6) {
+                                                $("#txt_Obligid").val(r.obligid)
+                                                toastr.success(r.statusName, 'System Message')
+                                                stopSpin()
+                                                r_oblig_grid()
+                                                return 1;
+                                            }
+                                            else {
+                                                stopSpin()
+                                                toastr.warning(r.statusName, 'System Message');
+                                                return 0;
+                                            }
+                                        })
+                                }
+                                else
+                                {
+                                    startSpin()
+                                    $.post('@Url.Action("_oblig_expense_details", "Obligation")', { obligid: obligid }, function (r) {
+                                        $("#body_details_grid").html("")
+
+                                        stopSpin()
+                                        $("#add_claimant").html("");
+                                        $("#body_details_grid").html(r)
+                                        $("#mdl_jev_entries").modal("show");
+                                    })
+
+                                }
+
+                            }
+
+                            function close_mdl_entries() {
+                                $("#body_details_grid").html("")
+                                $("#mdl_jev_entries").modal("hide");
+                                rgrid_main_account()
+                            }
+
+                            function rgrid_main_account() {
+                                var gridData = $("#grid_Entries").data("kendoGrid");
+                                gridData.dataSource.read();
+                            }
+                            function printcafoa(document_type_id) {
+                                //$("#mdl_doc_form").addClass("zdex");
+                                startSpin()
+                                $.post('@Url.Action("print_cafoa_SAAO", "Obligation")', { document_type_id: document_type_id, obligid: $("#txt_Obligid").val()}
+                                    , function (r) {
+                                        stopSpin()
+                                    })
+
+                                //.fail(function (jqXHR, textStatus, error) {
+                                //    stopSpin()
+                                //    mg.warning("" + textStatus + "")
+                                //});
+                            }
+                            @*$(function () {
+                                $('#chck_co').change(function () {
+                                    if ($('#chck_co').is(':checked')) {
+                                        updateToCO(1)
+                                    } else {
+                                        updateToCO(0)
+                                    }
+                                })
+                            })
+
+                            function updateToCO(value) {
+                                $.post('@Url.Action("SaveOverride", "RegularPayroll")', { eid: $("#txt_eid").val(), value: value },
+                                function (r) {
+                                    toastr.success('Modified Successfully', 'Success');
+                                    $("#grid_employee_list").data("kendoGrid").dataSource.read();
+                                })
+                            }*@
+                        </script>
+                        <div class="col-md-12" style="padding-top:10px">
+                            @*<button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-trash"></i> Delete</button>*@
+                            <button onclick="printcafoa(30)" class="btn btn-default pull-left">  <i class="fa fa-report"></i> Print SAA</button>
+                            <button onclick="printcafoa(29)" class="btn btn-default pull-left"> <i class="fa fa-report"></i> Print CAFOA</button>
+                            <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add Account</button>
+                            @*<div data-toggle="buttons" style="padding-left:10px!important">
+                                <label id="lblcheck_co" class="btn checkbox-inline btn-checkbox-primary-inverse"><input id="chck_co" type="checkbox"> Capital Outlay</label>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var mg = new mgsInfo()
+    function browse_claimant() {
+        startSpin()
+        $.post('@Url.Action("_browse_claimant", "Document")', {}
+            , function (r) {
+                $("#body_browse_claimant").html(r)
+                $("#mdl_browse_claimant").modal("show");
+                stopSpin();
+            })
+    }
+
+    @*function loadOfficeProgramAccount(){
+        $.post('@Url.Action("get_oblig_selected_accnt", "Obligation")',
+            {obligid:$("#txt_Obligid").val()},
+            function (r) {
+                stopSpin()
+
+                $("#ms_officeProgramAccountID").getKendoMultiSelect().value(r.Result)
+            }
+        )
+    }*@
+
+    $(document).ready(function () {
+        //alert($("#RCenter").data("kendoDropDownList").value())
+
+        //$("#ms_officeProgramAccountID").getKendoMultiSelect().value(@ViewBag.officeProgramAccountID)
+        @*var multiselect = $("#ms_officeProgramAccountID").data("kendoMultiSelect");
+
+        //// get the value of the multiselect.
+        //var value = multiselect.value();
+
+        // set the value of the multiselect.
+        multiselect.value([@ViewBag.officeProgramAccountID]);*@
+
+
+        $("#txt_officeID").val($("#RCenter").data("kendoDropDownList").value())
+        $("#RCenter").data("kendoDropDownList").value(@ViewBag.rcenter)
+        //$("#officeProgramAccountID").data("kendoDropDownList").value('@ViewBag.officeProgramAccountID')
+        $("#transtype_id").data("kendoDropDownList").value(@ViewBag.transtype_id)
+        $("#fundID").data("kendoDropDownList").value(@ViewBag.fundid)
+        $("#ooe").data("kendoDropDownList").value('@ViewBag.ooe')
+        $('#txt_doc_count_person').number(true, 0);
+        if ("@ViewBag.gamount"=="")
+        {
+            $("#txt_doc_gamount").val($("#txt_gamount").val())
+        }
+
+        $("#txt_doc_form_id").val($("#doc_form_id").val())
+        $(function () {
+            $('#txt_doc_gamount').number(true, 2);
+        });
+
+
+        if (@ViewBag.isEdit == 1)
+        {
+            $("#btn_doc_delete").show();
+        }
+        else
+        {
+            $("#btn_doc_delete").hide();
+        }
+
+        var str = $("#txt_doc_particular").val();
+        if (str == "")
+        {
+            $("#txt_doc_particular").val($("#txt_particular").val())
+        }
+        //$("#ms_officeProgramAccountID").getKendoMultiSelect().value(@ViewBag.officeProgramAccountID)
+        //loadOfficeProgramAccount()
+    })
+
+    function close_browse_claimant() {
+        $("#mdl_browse_claimant").modal("hide");
+    }
+
+
+
+    function  btn_save_dv() {
+        startSpin()
+        //$("#txt_officeProgramAccountID").val(getOPAValue())
+        var frm = $("#frm_doc_logdetails").serialize();
+        $.post('@Url.Action("save_oblig", "Obligation")',
+                frm
+            , function (r) {
+                if (r.code == 6) {
+                    $("#txt_Obligid").val(r.obligid)
+                    toastr.success(r.statusName, 'System Message')
+                    stopSpin()
+                    r_oblig_grid()
+                    return 1;
+                }
+                else {
+                    stopSpin()
+                    toastr.warning(r.statusName, 'System Message');
+                    return 0;
+                }
+            })
+            .fail(function (jqXHR, textStatus, error) {
+                stopSpin()
+                mg.warning("" + textStatus + "")
+            });
+        }
+
+    function warn_delete_oblig_transaction(){
+        $(".modal").addClass("zdex");
+        mg.bsyesNoWithRemarks("Are you sure you want to delete this obligation?", "delete_oblig_transaction("+$("#txt_Obligid").val()+")")
+    }
+
+    function delete_oblig_transaction(obligid) {
+        startSpin()
+        remarks = $("#txt_remarks").val()
+        $.post('@Url.Action("delete_oblig_transaction", "Obligation")',
+            {obligid:obligid,remark:remarks}
+        , function (r) {
+            if (r.code == 6) {
+                toastr.success(r.statusName, 'System Message')
+                stopSpin()
+                r_oblig_grid();
+                $('#modal_delete').modal('hide');
+            }
+            else {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+            zdex()
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            zdex()
+            toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
+        });
+    }
+</script>
+<div class="modal" id="mdl_browse_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Browse Claimant</h4>
+            </div>
+            <div id="body_browse_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button id="btn_add_claimant" style="display:none" onclick="add_claimant()" type="button" class="btn btn-success"><i class="fa fa-plus"></i> Add New</button>
+                <button onclick="select_claimant()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Select</button>
+                <button type="button" class="btn btn-default" onclick="close_browse_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="mdl_add_claimant" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="close_browse_claimant()">x</button>
+                <h4 class="modal-title">Browse Claimant</h4>
+            </div>
+            <div id="body_add_claimant" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <button onclick="btn_save_claimant()" type="button" class="btn btn-success"><i class="fa fa-check"></i> Save</button>
+                <button type="button" class="btn btn-default" onclick="close_add_claimant()" style="cursor:pointer">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="mdl_jev_entries" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="close_mdl_entries()" aria-hidden="true">X</button>
+                <h4 id="h_subaccount_id" class="modal-title">Expense Details</h4>
+            </div>
+            <div id="body_details_grid" class="modal-body" style="height:auto!important">
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <button onclick="close_mdl_entries()" type="button" class="btn btn-success"><i class="fa fa-backward"></i> Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

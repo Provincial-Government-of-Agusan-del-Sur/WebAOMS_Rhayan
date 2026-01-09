@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "JEV Numbering";
+    ViewBag.Title_mini = "JEV Numbering";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="box-head no-padding">
+                    <h4 class="text-light">Enter <strong>DVNO</strong></h4>
+                </div>
+                <div class="box-body no-padding">
+                    <div class="form-group-md">
+                        <div class="input-group no-padding col-md-4">
+                            <input id="txt_dvno" type="text" class="form-control navbar-input" placeholder="Enter DVNO">
+                            <span class="input-group-btn">
+                                <button class="btn btn-equal" onclick="view_jev_details()" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+
+                        @*<div class="col-md-8">
+                                <div class="col-md-12" style="padding-top:10px">
+                                    <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-trash"></i> Delete</button>
+                                    <button onclick="btn_save_transaction()" class="btn btn-success pull-right"> <i class="fa fa-save"></i> Save Changes</button>
+                                    <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add Account</button>
+
+                                </div>
+                            </div>*@
+                        <script>
+                            var mg = new mgsInfo()
+                            $(document).ready(function () {
+                                var cleave = new Cleave('#txt_dvno', {
+                                    delimiter: '-',
+                                    blocks: [3, 2, 2, 4],
+                                    uppercase: true,
+                                });
+                            })
+
+                            //$('#txt_dvno').on('keypress', function (e) {
+                                
+                            //    var dvno = $('#txt_dvno').val();
+                            //    alert(dvno.length)
+                            //    if (dvno.length != 14) {
+                            //        $("#div_jevdetails").html("")
+                            //    }
+                            //})
+
+                            $('#txt_dvno').on('keydown', function (e) {
+                                if (e.keyCode == 13) {
+                                    view_jev_details()
+                                }
+                            })
+
+                            function view_jev_details() {
+                                var dvno = $('#txt_dvno').val()
+                                startSpin()
+                                $.post('@Url.Action("_view_jev_details", "JEV")', { dvno: dvno }, function (r) {
+                                    stopSpin()
+                                    if (r.code == "5" || r.code == "7") {
+                                        mg.warning("" + r.statusName + "")
+                                        $("#div_jevdetails").html("")
+                                    }
+                                    else {
+                                        $("#div_jevdetails").html(r)
+                                    }
+                                })
+                            }
+                        </script>
+                    </div>
+                    <div id="div_jevdetails" class="form-group-md" style="padding-top:10px">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>
+@*<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">Transaction List</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+
+        <div class="box">
+            <div class="box-body" style="padding-top:10px">
+                <div class="row">
+                    <div class="col-md-8">
+                        From
+                        @(Html.Kendo().DatePicker()
+                    .Name("dtp_from")
+
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("rgrid_trans_account"))
+                        )
+                        To
+                        @(Html.Kendo().DatePicker()
+                    .Name("dtp_to")
+                    .Format("MMMM dd, yyyy")
+                    .Value(DateTime.Now)
+                    .HtmlAttributes(new { type = "text" })
+                    .Events(ev => ev.Change("rgrid_trans_account"))
+                        )
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group" style="padding-bottom:5px!important">
+                            <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search Claimant Name">
+                            <span class="input-group-btn">
+                                <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <script>
+            $('#txt_search_dvno').on('keyup', function (e) {
+                var gridData = $("#grid_transactions").data("kendoGrid");
+                //if (e.keyCode == 13) {
+                    if ($('#txt_search_dvno').val() == "") {
+                        gridData.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("Name", $('#txt_search_dvno').val(), 'grid_transactions')
+                        gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                    }
+                //}
+            })
+            function rgrid_trans_account() {
+                var gridData = $("#grid_transactions").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+            function para_transaction() {
+                var from = $('#dtp_from').data('kendoDatePicker').value();
+                var to = $('#dtp_to').data('kendoDatePicker').value();
+                return { from: from, to: to }
+            }
+
+            $("#export").click(function (e) {
+                var grid = $("#grid_transactions").data("kendoGrid");
+                grid.saveAsExcel();
+            });
+                </script>
+                <div class="row">
+        @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_transaction_byDate_Result>()
+        .Name("grid_transactions")
+        .Columns(columns =>
+        {
+            columns.Bound(m => m.jevid).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Bound(m => m.Dvno).Width(70);
+            columns.Bound(m => m.Obrno).Width(90);
+            columns.Bound(m => m.Name).Width(150);
+            columns.Bound(m => m.Particular).Width(200);
+            // columns.Bound(m => m.CheckDate).Width(70).Format("{0:dd/MM/yyyy}");
+            columns.Bound(m => m.Checkno).Width(70);
+            columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style="text-align:right" });
+        })
+        .AutoBind(true)
+        .HtmlAttributes(new { style = "height: 350px;" })
+        .Scrollable()
+        .Sortable()
+        .Pageable(pageable => pageable
+        .Refresh(true)
+        .ButtonCount(5))
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .Read(read => read.Action("grid_transaction_bydate", "JEV").Data("para_transaction"))
+            .PageSize(200)
+        )
+                    )
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
