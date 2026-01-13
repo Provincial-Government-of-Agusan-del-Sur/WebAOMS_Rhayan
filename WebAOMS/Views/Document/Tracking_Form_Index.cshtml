@@ -51,7 +51,7 @@
         </script>
         <div class="row">
             <div class="input-group control-width-large" style="padding-bottom:5px!important">
-                <input id="txt_search_name_refno" type="text" class="form-control navbar-input" placeholder="Search by tracking reference">
+                <input id="txt_search_name_refno" type="text" class="form-control navbar-input" placeholder="Search...">
                 <span class="input-group-btn">
                     <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
                 </span>
@@ -159,20 +159,40 @@
                 stopSpin()
             })
     }
-    $('#txt_search_name_refno').on('keydown', function (e) {
-        if (e.keyCode == 13) {
-            click_search_refno()
-        }
-    })
-    function click_search_refno() {
+    //$('#txt_search_name_refno').on('keydown', function (e) {
+    //    if (e.keyCode == 13) {
+    //        click_search_refno()
+    //    }
+    //})
+    $(function () {
+        $("#txt_search_name_refno").keypress(function (e) {
+            if (e.keyCode == 13) {
+                click_search_claimant();
+            }
+        });
+    });
+    function click_search_claimant() {
+        //if ($('#txt_search_name_refno').val().length > 0) {
+        //    ISfn.applyFilter("refno", $('#txt_search_name_refno').val(), 'grid_tracking_form')
+        //    //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+        //}
+        //else {
+        //    var gridData = $('#grid_tracking_form').data("kendoGrid");
+        //    gridData.dataSource.filter({});
+        //}
+        var $filter = new Array();
+        $filter = [];
+
         if ($('#txt_search_name_refno').val().length > 0) {
-            ISfn.applyFilter("refno", $('#txt_search_name_refno').val(), 'grid_tracking_form')
-            //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+            $filter.push({ field: "refno", operator: "contains", value: $('#txt_search_name_refno').val() }),
+            $filter.push({ field: "NameFML", operator: "contains", value: $('#txt_search_name_refno').val() }),
+            $filter.push({ field: "Particular", operator: "contains", value: $('#txt_search_name_refno').val() });
         }
-        else {
-            var gridData = $('#grid_tracking_form').data("kendoGrid");
-            gridData.dataSource.filter({});
-        }
+
+        $('#grid_tracking_form').data('kendoGrid').dataSource.filter({
+            logic: "or",
+            filters: $filter
+        });
     }
 
 </script>

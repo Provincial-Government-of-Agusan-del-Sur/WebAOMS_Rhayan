@@ -1,9 +1,7 @@
-Telerik.ReportViewer.WebForms.ReportViewer, Telerik.ReportViewer.WebForms, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.Panel, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.Table, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.Barcode, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.Shape, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.HtmlTextBox, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.PictureBox, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.CheckBox, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
-Telerik.Reporting.TextBox, Telerik.Reporting, Version=15.2.21.1125, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.Barcode, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.Shape, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.Panel, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.HtmlTextBox, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.PictureBox, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.Table, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
+Telerik.Reporting.TextBox, Telerik.Reporting, Version=16.1.22.622, Culture=neutral, PublicKeyToken=a9d7983dfcc261be
