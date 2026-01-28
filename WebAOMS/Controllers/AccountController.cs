@@ -118,7 +118,7 @@ namespace WebAOMS.Controllers
             //PGAS
 
            model.Email = model.Email.Replace("@pgas.gov", "").Replace("@pgas.ph", "");
-            model.Email = model.Email.Replace("@pgzn.gov.ph", "").Replace("@pgzn.ph", "");
+           // model.Email = model.Email.Replace("@pgzn.gov.ph", "").Replace("@pgzn.ph", "");
 
             var user = await UserManager.FindByNameAsync(model.Email);
             if (user != null)
