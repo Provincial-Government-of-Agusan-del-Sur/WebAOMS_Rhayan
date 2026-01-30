@@ -44,6 +44,14 @@
                 </div>
 
             </div>
+            <div class="col-lg-8">
+                <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                    <input id="txt_search_name_refno" autocomplete="off" type="text" class="form-control navbar-input" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
             <div class="col-lg-12" style="height:100%">
                 <script>
                     var col_dataype;
@@ -94,7 +102,37 @@
                     function param_grid_special_payroll  (){
                         return {compensationID: $("#ddl_compensation").data("kendoDropDownList").value()}
                     }
+                    $(function () {
+                        $("#txt_search_name_refno").keypress(function (e) {
+                            if (e.keyCode == 13) {
+                                click_search_claimant();
+                            }
+                        });
+                    });
+                    function click_search_claimant() {
+                        //if ($('#txt_search_name_refno').val().length > 0) {
+                        //    ISfn.applyFilter("refno", $('#txt_search_name_refno').val(), 'grid_tracking_form')
+                        //    //gridData.dataSource.sort({ field: "AccountChildName", dir: "asc" });
+                        //}
+                        //else {
+                        //    var gridData = $('#grid_tracking_form').data("kendoGrid");
+                        //    gridData.dataSource.filter({});
+                        //}
+                        var $filter = new Array();
+                        $filter = [];
+
+                        if ($('#txt_search_name_refno').val().length > 0) {
+                            $filter.push({ field: "batchno", operator: "contains", value: $('#txt_search_name_refno').val() }),
+                            $filter.push({ field: "CompensatioName", operator: "contains", value: $('#txt_search_name_refno').val() });
+                        }
+
+                        $('#grid_employee_special_Payroll').data('kendoGrid').dataSource.filter({
+                            logic: "or",
+                            filters: $filter
+                        });
+                    }
                 </script>
+               
                 <div>
                     @(Html.Kendo().Grid<dynamic>()
                     .Name("grid_employee_special_Payroll")
@@ -109,7 +147,7 @@
                     .Columns(columns =>
                     {
                     columns.Bound("batchno").Width(50).Title("Batch No.").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
-                    columns.Bound("CompensatioName").Width(300).Title("Compensatio Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
+                    columns.Bound("CompensatioName").Width(300).Title("Compensation Name").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:left" });
                     columns.Bound("employmentStatusText").Width(200).Title("Employment Status").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
                     columns.Bound("MonthYear").Width(80).Title("Month Year").HeaderHtmlAttributes(new { style = "text-align:center;font-size:13px" }).HtmlAttributes(new { style = "text-align:center" });
                     columns.Template(@<text></text>)
