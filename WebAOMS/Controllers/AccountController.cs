@@ -132,26 +132,34 @@ namespace WebAOMS.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: true);
-            switch (result)
+            if (getEmpStatus(model.Email) == 0)
             {
-                case SignInStatus.Success:
-                    USER.Set(user.Id, 1);
-                    IEnumerable<w_UserMenu> _menu = fmisdb.w_UserMenu.Where(M => M.userid_ID == user.Id).OrderBy(o=>o.Ordering);
-                    USERMENU.SetUserMenu(_menu, user.Id);
-                    return RedirectToLocal(returnUrl);
+                ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
+            }
+            else
+            {
+                var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: true);
+                switch (result)
+                {
+                    case SignInStatus.Success:
+                        USER.Set(user.Id, 1);
+                        IEnumerable<w_UserMenu> _menu = fmisdb.w_UserMenu.Where(M => M.userid_ID == user.Id).OrderBy(o => o.Ordering);
+                        USERMENU.SetUserMenu(_menu, user.Id);
+                        return RedirectToLocal(returnUrl);
 
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    USER.Set(user.Id, 1);
-                    IEnumerable<w_UserMenu> _menux = fmisdb.w_UserMenu.Where(M => M.userid_ID == user.Id).OrderBy(o => o.Ordering);
-                    USERMENU.SetUserMenu(_menux, user.Id);
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
+                    case SignInStatus.LockedOut:
+                        return View("Lockout");
+                    case SignInStatus.RequiresVerification:
+                        USER.Set(user.Id, 1);
+                        IEnumerable<w_UserMenu> _menux = fmisdb.w_UserMenu.Where(M => M.userid_ID == user.Id).OrderBy(o => o.Ordering);
+                        USERMENU.SetUserMenu(_menux, user.Id);
+                        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    case SignInStatus.Failure:
+                    default:
+                        ModelState.AddModelError("", "Invalid login attempt.");
+                        return View(model);
+                }
             }
         }
 
@@ -830,6 +838,21 @@ namespace WebAOMS.Controllers
             image.Save(Server.MapPath("~/Content/UserImage/400x400/" + user.UserID.ToString() + ".png"));
             uploadResult.Add(user.UserID.ToString() + ".png", true);
             return Json(new { success = true }, JsonRequestBehavior.AllowGet);
+        }
+        public int getEmpStatus(string email = "")
+        {
+            DataTable arec;
+            int empid = 0;
+            arec = ISfn.ToDatatable("select [EmailAdd] FROM [pmis].[dbo].[vwMergeAllActiveNonActiveEmployee] where replace([EmailAdd],'@pgas.ph','')='" + email + "' and [Active]=1");
+            if (arec.Rows.Count > 0)
+            {
+                empid = 1; ;
+            }
+            else
+            {
+                empid = 0;
+            }
+            return empid;
         }
         #endregion
     }
