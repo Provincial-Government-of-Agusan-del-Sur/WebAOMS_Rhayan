@@ -214,9 +214,14 @@ namespace WebAOMS.Controllers
                 connection.Close();
             }
 
-            if (rptid==34)
+            if (rptid==34 )
             {
                 hideAccount = 1;
+                rptid = 33;
+            }
+            else if ( rptid == 33)
+            {
+                hideAccount = 0;
                 rptid = 33;
             }
             else if (rptid == 35)
