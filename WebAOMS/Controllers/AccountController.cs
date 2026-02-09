@@ -843,7 +843,7 @@ namespace WebAOMS.Controllers
         {
             DataTable arec;
             int empid = 0;
-            arec = ISfn.ToDatatable("select [EmailAdd] FROM [pmis].[dbo].[vwMergeAllActiveNonActiveEmployee] where replace([EmailAdd],'@pgas.ph','')='" + email + "' and [Active]=1");
+            arec = ISfn.ToDatatable("ifmis.dbo.sp_BMS_AOMSAccountLogin '" + email + "'");
             if (arec.Rows.Count > 0)
             {
                 empid = 1; ;

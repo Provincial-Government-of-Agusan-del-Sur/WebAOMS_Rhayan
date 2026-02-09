@@ -1,4 +1,5 @@
 ﻿@using WebAOMS.Models;
+@using WebAOMS.Base;
 @{
 
     var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
@@ -13,13 +14,13 @@
         }
         else
         {
-            ViewBag.pictureLocaltion = Url.Content("~/Content/UserImage/50x50/NoPicture.png?");
+            //ViewBag.pictureLocaltion = Url.Content("~/Content/UserImage/50x50/NoPicture.png?"); //mp
+            ViewBag.pictureLocaltion = "https://pgas.ph/hris/content/images/photos/" + USER.C_eID + ".png" + "?timestamp=" + DateTime.Now.ToString(@"dd\hh\mm\ss"); //xXx
         }
 
     }
 
-
-}
+    }
 <script>
     function clickLogout() {
         var url = "@Url.Content("~/Account/LogOff")";
@@ -122,7 +123,7 @@
                     <li class="dropdown">
                        @if (Request.IsAuthenticated == true)
                        {
-                        <a href="#" class="navbar-profile dropdown-toggle text-bold" data-toggle="dropdown">@User.Identity.Name <i class="fa fa-fw fa-angle-down"></i> <img class="img-circle" src="@ViewBag.pictureLocaltion" alt=""></a>@*src="@IFMIS.Base.USER.C_picLink"*@
+                        <a href="#" class="navbar-profile dropdown-toggle text-bold" data-toggle="dropdown">@User.Identity.Name<i class="fa fa-fw fa-angle-down"></i><img class="img-circle"src="@ViewBag.pictureLocaltion" alt=""></a>@*src="@IFMIS.Base.USER.C_picLink"*@
                         <ul class="dropdown-menu animation-slide">
                             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
                             {
