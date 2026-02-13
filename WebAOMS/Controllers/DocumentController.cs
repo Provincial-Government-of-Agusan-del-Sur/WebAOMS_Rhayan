@@ -738,15 +738,39 @@ namespace WebAOMS.Controllers
                 return PartialView("_view_doc", ds);
             }
         }
-
         public ActionResult _browse_claimant()
-        {
-
+        {     
             return PartialView("_browse_claimant", null);
         }
-        public ActionResult _add_claimant()
+        public ActionResult _add_claimant(string id="")
         {
-
+            string cmdStr = "Select * from [fmis].[dbo].[tblCMS_CDClaimantDetails] where ClaimantCode=@id";
+            SqlConnection connection = new SqlConnection(fmisConn);
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                command.Parameters.Add("@id", SqlDbType.Char, 10).Value = id;
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows == true)
+                {
+                    while (reader.Read())
+                    {
+                        ViewBag.ClaimantCode = reader["ClaimantCode"];
+                        ViewBag.Firstname = reader["Firstname"];
+                        ViewBag.MI = reader["MI"];
+                        ViewBag.LastName = reader["LastName"];
+                        ViewBag.Suffix = reader["Suffix"];
+                        ViewBag.Address = reader["Address"];
+                        ViewBag.ContactNo = reader["ContactNo"];
+                        ViewBag.TIN = reader["TIN"];
+                    }
+                }
+                else
+                {
+                    ViewBag.ClaimantCode = "0";
+                }
+            }
+            connection.Close();
             return PartialView("_browse_claimant_new", null);
         }
 
@@ -899,40 +923,71 @@ namespace WebAOMS.Controllers
             DataTable rec = new DataTable(); ;
             SqlConnection connection = new SqlConnection(fmisConn);
 
-
-            string cmdStr = "execute [Accounting].[usp_Save_Claimant] @Firstname, @MI,@LastName , @Suffix, @Address, @ContactNo, @TIN, @clamantType";
-            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            if (data.ClaimantCode == "0") //new entry
             {
-                command.Parameters.Add("@Firstname", SqlDbType.NVarChar, 200).Value = (object)data.Firstname ?? DBNull.Value;
-                command.Parameters.Add("@MI", SqlDbType.NVarChar, 80).Value = (object)data.MI ?? DBNull.Value;
-                command.Parameters.Add("@LastName", SqlDbType.NVarChar, 500).Value = (object)data.LastName ?? DBNull.Value;
-                command.Parameters.Add("@Suffix", SqlDbType.NVarChar, 200).Value = (object)data.Suffix ?? DBNull.Value;
-                command.Parameters.Add("@Address", SqlDbType.NVarChar, 1000).Value = (object)data.Address ?? DBNull.Value;
-                command.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 200).Value = (object)data.ContactNo ?? DBNull.Value;
-                command.Parameters.Add("@TIN", SqlDbType.NVarChar, 120).Value = (object)data.TIN ?? DBNull.Value;
-                command.Parameters.Add("@clamantType", SqlDbType.NVarChar, 120).Value = (object)data.clamantType ?? DBNull.Value;
-                connection.Open();
-
-                SqlDataReader read = command.ExecuteReader();
-                if (read.HasRows == true)
+                string cmdStr = "execute [Accounting].[usp_Save_Claimant] @Firstname, @MI,@LastName , @Suffix, @Address, @ContactNo, @TIN, @clamantType";
+                using (SqlCommand command = new SqlCommand(cmdStr, connection))
                 {
-                    while (read.Read())
+                    command.Parameters.Add("@Firstname", SqlDbType.NVarChar, 200).Value = (object)data.Firstname ?? DBNull.Value;
+                    command.Parameters.Add("@MI", SqlDbType.NVarChar, 80).Value = (object)data.MI ?? DBNull.Value;
+                    command.Parameters.Add("@LastName", SqlDbType.NVarChar, 500).Value = (object)data.LastName ?? DBNull.Value;
+                    command.Parameters.Add("@Suffix", SqlDbType.NVarChar, 200).Value = (object)data.Suffix ?? DBNull.Value;
+                    command.Parameters.Add("@Address", SqlDbType.NVarChar, 1000).Value = (object)data.Address ?? DBNull.Value;
+                    command.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 200).Value = (object)data.ContactNo ?? DBNull.Value;
+                    command.Parameters.Add("@TIN", SqlDbType.NVarChar, 120).Value = (object)data.TIN ?? DBNull.Value;
+                    command.Parameters.Add("@clamantType", SqlDbType.NVarChar, 120).Value = (object)data.clamantType ?? DBNull.Value;
+                    connection.Open();
+
+                    SqlDataReader read = command.ExecuteReader();
+                    if (read.HasRows == true)
                     {
-                        Claimantcode = read["Claimantcode"].ToString();
-                        result = Convert.ToInt32(read["result"]);
+                        while (read.Read())
+                        {
+                            Claimantcode = read["Claimantcode"].ToString();
+                            result = Convert.ToInt32(read["result"]);
+                        }
                     }
-                }
 
-                connection.Close();
-                if (result == 6)
-                {
-                    return Json(new { code = 6, statusName = "Successfully Saved..!", Claimantcode = Claimantcode });
-                }
-                else
-                {
-                    return Json(new { code = 5, statusName = "Name already on the database..", Claimantcode = Claimantcode.AntiInject() });
-                }
+                    connection.Close();
+                    if (result == 6)
+                    {
+                        return Json(new { code = 6, statusName = "Successfully Saved..!", Claimantcode = Claimantcode });
+                    }
+                    else
+                    {
+                        return Json(new { code = 5, statusName = "Name already exists in the database.", Claimantcode = Claimantcode.AntiInject() });
+                    }
 
+                }
+            }
+            else { //update claimant
+                string cmdStr = "execute [Accounting].[usp_Update_Claimant] @Firstname, @MI,@LastName , @Suffix, @Address, @ContactNo, @TIN, @claimantcode";
+                using (SqlCommand command = new SqlCommand(cmdStr, connection))
+                {
+                    command.Parameters.Add("@Firstname", SqlDbType.NVarChar, 200).Value = (object)data.Firstname ?? DBNull.Value;
+                    command.Parameters.Add("@MI", SqlDbType.NVarChar, 80).Value = (object)data.MI ?? DBNull.Value;
+                    command.Parameters.Add("@LastName", SqlDbType.NVarChar, 500).Value = (object)data.LastName ?? DBNull.Value;
+                    command.Parameters.Add("@Suffix", SqlDbType.NVarChar, 200).Value = (object)data.Suffix ?? DBNull.Value;
+                    command.Parameters.Add("@Address", SqlDbType.NVarChar, 1000).Value = (object)data.Address ?? DBNull.Value;
+                    command.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 200).Value = (object)data.ContactNo ?? DBNull.Value;
+                    command.Parameters.Add("@TIN", SqlDbType.NVarChar, 120).Value = (object)data.TIN ?? DBNull.Value;
+                    command.Parameters.Add("@claimantcode", SqlDbType.NVarChar, 120).Value = (object)data.ClaimantCode ?? DBNull.Value;
+                    connection.Open();
+
+                    SqlDataReader read = command.ExecuteReader();
+                    if (read.HasRows == true)
+                    {
+                        while (read.Read())
+                        {
+                            Claimantcode = read["Claimantcode"].ToString();
+                            result = Convert.ToInt32(read["result"]);
+                        }
+                    }
+                    connection.Close();
+                    
+                    return Json(new { code = result, statusName = "Claimant information saved successfully.", Claimantcode = Claimantcode });
+                   
+                }
             }
         }
         public ActionResult save_DocForm(tbl_t_DocForm data)

@@ -27,43 +27,43 @@
                     </label>
                     <input id="claimantypeOptionID" value="1" hidden />
                     <script>
-                                $(function () {
-                                    $('input[name="claimantypeOption"]').bind('change', function () {
-                                        $("#claimantypeOptionID").val($(this).val())
-                                        if ($(this).val() == 2) {
-                                            $("#btn_add_claimant").show();
-                                        }
-                                        else if ($(this).val() == 3) {
-                                            $("#btn_add_claimant").show();
-                                        }
-                                        else {
-                                            $("#btn_add_claimant").hide()
-                                        }
-                                        //var categories = $("#grid_claimant").data("kendoGrid");
-                                        //categories.dataSource.read();
-                                        refreshGrid()
-                                    });
-
-                                });
-
-                                function para_claimant() {
-                                    return { claimantCode: $("#claimantypeOptionID").val(), name: $("#txt_search_name").val() }
+                        $(function () {
+                            $('input[name="claimantypeOption"]').bind('change', function () {
+                                $("#claimantypeOptionID").val($(this).val())
+                                if ($(this).val() == 2) {
+                                    $("#btn_add_claimant").show();
                                 }
-
-                                function refreshGrid() {
-                                    var gridData = $("#grid_claimant").data("kendoGrid");
-                                    gridData.dataSource.read();
+                                else if ($(this).val() == 3) {
+                                    $("#btn_add_claimant").show();
                                 }
+                                else {
+                                    $("#btn_add_claimant").hide()
+                                }
+                                //var categories = $("#grid_claimant").data("kendoGrid");
+                                //categories.dataSource.read();
+                                refreshGrid()
+                            });
 
-                            function add_claimant() {
-                                startSpin()
-                                $.post('@Url.Action("_add_claimant", "Document")', {}
-                                , function (r) {
-                                    $("#body_add_claimant").html(r)
-                                    $("#mdl_add_claimant").modal("show");
-                                    stopSpin();
-                                })
-                            }
+                        });
+
+                        function para_claimant() {
+                            return { claimantCode: $("#claimantypeOptionID").val(), name: $("#txt_search_name").val() }
+                        }
+
+                        function refreshGrid() {
+                            var gridData = $("#grid_claimant").data("kendoGrid");
+                            gridData.dataSource.read();
+                        }
+
+                        function add_claimant(id) {
+                            startSpin()
+                            $.post('@Url.Action("_add_claimant", "Document")', {id:id}
+                            , function (r) {
+                                $("#body_add_claimant").html(r)
+                                $("#mdl_add_claimant").modal("show");
+                                stopSpin();
+                            })
+                        }
 
                         function close_add_claimant() {
                             $("#mdl_add_claimant").modal("hide");
@@ -94,7 +94,7 @@
             )*@
                 <div class="row">
                     <div class="input-group control-width-large pull-right" style="padding-bottom:5px!important">
-                        <input id="txt_search_name" type="text" class="form-control navbar-input" placeholder="Search the name of the Payee">
+                        <input id="txt_search_name" type="text" autocomplete="off" class="form-control navbar-input" placeholder="Search the name of the Payee">
                         <span class="input-group-btn">
                             <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
                         </span>
@@ -106,13 +106,14 @@
                     .Columns(columns =>
                     {
                     //columns.Bound("ID").Width(60).Title("ID").HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" });
-                    columns.Bound("Name").Width(250);
-                    columns.Bound("Address").Width(350);
-                    @*columns.Template(@<text></text>)
-                                .Width(130)
-                                .Title("Credit")
-                                .HtmlAttributes(new { style = "text-align:right;font-size:10" })
-                                .ClientTemplate("<div id=\"div_credit_#=ChartAccountChildID#\"><button type=\"button\" id=\"btn_credit_#=ChartAccountChildID#\" onclick=\"edit_amount(#=credit#,#=ChartAccountChildID#,'credit',#=hasChild#,'#=AccountChildName#',#=code#,'#=ChildCode#',#=AccountChildParentID#)\" class=\"k-button DebitCredit\">#=addCommas(credit)#</button></div>");*@
+                    columns.Bound("Name").Width(190);
+                    columns.Bound("Address").Width(300);
+                    columns.Template(@<text></text>)
+                        .Width(30)
+                        .Title("")
+                        .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+                        //.ClientTemplate("<button type=\"button\" data-toggle=\"tooltip\" onclick=\"add_claimant('#=ID#')\" class=\"btn btn-xs btn-inverse btn-equal\"  <i class=\"fa fa-pencil\"></i></button>");
+                        .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"add_claimant('#=ID#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button></button>");
                     })
                     .AutoBind(true)
                     .HtmlAttributes(new { style = "height: 350px;" })
@@ -175,5 +176,4 @@
         $("#txt_claimant").val(selectedItem.Name)
         close_browse_claimant()
     }
-
 </script>
