@@ -1147,6 +1147,7 @@
     <Content Include="Content\akot\2018.1.1\print.min.css" />
     <Content Include="Content\akot\2018.1.1\toastr.css" />
     <Content Include="Content\akot\croppie\croppie.css" />
+    <Content Include="Content\Company Image\CompanyLogo2026.png" />
     <Content Include="Content\Company Image\CompanyLogo.png" />
     <Content Include="Content\Company Image\System.png" />
     <Content Include="Content\CompanyLogo.png" />

@@ -27,7 +27,7 @@ namespace WebAOMS.Report.Design
             InitializeComponent();
             DataSet dset = new DataSet();
             DataTable recap_sig;
-            pictureBox1.Value = "Content/Company Image/CompanyLogo.png";
+            pictureBox1.Value = "Content/Company Image/CompanyLogo2026.png";
             SqlConnection connection = new SqlConnection(fmisConn);
             string cmdStr = "exec [Accounting].[usp_rpt_Journal_Recap] @userid,@fundid,@to,@Transtype,@isConso";
             using (SqlCommand command = new SqlCommand(cmdStr, connection))

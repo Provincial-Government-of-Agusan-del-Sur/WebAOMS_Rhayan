@@ -23,7 +23,7 @@ namespace WebAOMS.Report.Design
             // Required for telerik Reporting designer support
             //
             InitializeComponent();
-            pictureBox1.Value = "Content/Company Image/CompanyLogo.png";
+            pictureBox1.Value = "Content/Company Image/CompanyLogo2026.png";
             DataSet dt = new DataSet();
 
             SqlConnection connection = new SqlConnection(fmisConn);
