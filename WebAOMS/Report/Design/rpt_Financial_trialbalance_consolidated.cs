@@ -22,7 +22,7 @@ namespace WebAOMS.Report.Design
         public Trial_Balance_Consolidated(Int16 fundid, int IsPreClosing, DateTime to)
         {
             InitializeComponent();
-            pictureBox1.Value = "Content/Company Image/CompanyLogo2026.png";
+            pictureBox1.Value = "Content/Company Image/CompanyLogo.png";
             DataSet dt = new DataSet();
             string filename = "";
             Int16 reportid = 1;

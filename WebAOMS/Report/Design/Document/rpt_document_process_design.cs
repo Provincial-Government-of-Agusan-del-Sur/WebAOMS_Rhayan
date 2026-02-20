@@ -60,7 +60,7 @@ namespace WebAOMS.Report.Design.Document
                         refno = reader["refno"].ToString();
                         txt_office.Value = reader["T1"].ToString();
                         txt_title.Value = reader["T2"].ToString();
-                        pictureBox1.Value = reader["CompanyLogo2026"].ToString();
+                        pictureBox1.Value = reader["CompanyLogo"].ToString();
                         txt_user.Value = reader["preparedby"].ToString();
                         txt_user_position.Value = reader["preparedPosition"].ToString();
                         txt_head.Value = reader["head"].ToString();

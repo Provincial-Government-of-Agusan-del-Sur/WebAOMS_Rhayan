@@ -20,7 +20,7 @@ namespace WebAOMS.Report.Accounting
             // Required for telerik Reporting designer support
             //
             InitializeComponent();
-            pictureBox1.Value = "Content/Company Image/CompanyLogo2026.png";
+            pictureBox1.Value = "Content/Company Image/CompanyLogo.png";
             DataSet dt = new DataSet();
             string filename = "";
             string refno = "";

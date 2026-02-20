@@ -577,7 +577,7 @@ namespace WebAOMS.Controllers
                     while (reader.Read())
                     {
                         ViewBag.script = HttpUtility.HtmlDecode(reader["script"].ToString());
-                        ViewBag.CompanyLogo2026 = Url.Content(reader["CompanyLogo2026"].ToString());
+                        ViewBag.CompanyLogo = Url.Content(reader["CompanyLogo"].ToString());
                         ViewBag.refno = reader["refno"].ToString();
                         ISfn.SaveQRcode(ws.get_tracking_link(refno).ToString(), 4, refno);
 
@@ -622,7 +622,7 @@ namespace WebAOMS.Controllers
                     while (reader.Read())
                     {
                         ViewBag.script = HttpUtility.HtmlDecode(reader["script"].ToString());
-                        ViewBag.CompanyLogo2026 = Url.Content(reader["CompanyLogo2026"].ToString());
+                        ViewBag.CompanyLogo = Url.Content(reader["CompanyLogo"].ToString());
                         ViewBag.refno = reader["refno"].ToString();
                         ISfn.SaveQRcode(ws.get_tracking_link(refno).ToString(), 4, refno);
 
@@ -661,7 +661,7 @@ namespace WebAOMS.Controllers
                     while (reader.Read())
                     {
                         ViewBag.script = HttpUtility.HtmlDecode(reader["script"].ToString());
-                        ViewBag.CompanyLogo2026 = Url.Content(reader["CompanyLogo2026"].ToString());
+                        ViewBag.CompanyLogo = Url.Content(reader["CompanyLogo"].ToString());
                         ViewBag.refno = reader["refno"].ToString();
                         ISfn.SaveQRcode(ws.get_tracking_link(refno).ToString(), 4, refno);
 

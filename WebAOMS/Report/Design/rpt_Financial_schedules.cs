@@ -23,7 +23,7 @@ namespace WebAOMS.Report.Design
         public rpt_Financial_schedules(Int16 fundid, DateTime to)
         {
             InitializeComponent();
-            pictureBox1.Value = "Content/Company Image/CompanyLogo2026.png";
+            pictureBox1.Value = "Content/Company Image/CompanyLogo.png";
             DataSet dt = new DataSet();
             string filename = "";
             Int16 reportid = 1;
