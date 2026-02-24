@@ -29,7 +29,6 @@
 
                 function load_phoneno() {
                     var Eid = this.value();
-                    //alert(eid)
                     $.post('@Url.Action("Load_phoneno", "Document")',
                         {
                             eid: Eid
@@ -293,9 +292,11 @@
 <script>
     function load_dv(id,document_type_id,title,year){
         const documentTypeIdsToHide = [48, 49, 53, 54, 55, 56,57,58,59];
+     
         if ($("#doc_form_id").val() > 0){
 
             if (documentTypeIdsToHide.includes(document_type_id)) {
+            
                     $("#id_dgsign").hide()
                     $("#id_forreview").show()
                     $("#btn_doc_configure").hide()
@@ -303,6 +304,7 @@
             }
             else if (document_type_id==50)
             {
+             
                 $("#id_dgsign").hide()
                 $("#id_forreview").show()
                 $("#btn_doc_configure").hide()
@@ -360,12 +362,13 @@
     }
 
     function add_attachment(doc_form_id,id,document_type_id,title,year) {
-
+      
         startSpin()
         $.post('@Url.Action("_Add_attachment", "Document")', { doc_form_id: $("#doc_form_id").val(),document_type_id:document_type_id,id:id,year:year}
             , function (r) {
                 stopSpin()
                 r_grid_attach_doc()
+              
                 if (r.code == 5) {
                     mg.warning("" + r.statusName + "", "System Message")
                 }
@@ -379,6 +382,7 @@
                 }
                 else
                 {
+                  
                     $("#mdl_newstatus").addClass("zdex");
                     $("#body_doc_form").html("")
                     var header = "Add new document";

@@ -51,7 +51,6 @@
                         function add_accesstoOffice() {
                             var Id = $('#cbo_employee').data("kendoComboBox").value();
                             $.post('@Url.Action("add_user_office", "Maintenance")', { officeStr: officeStr_office, Id: Id }, function () {
-                                alert("ASDF")
                                 loadgrid_office();
                             });
                         }
