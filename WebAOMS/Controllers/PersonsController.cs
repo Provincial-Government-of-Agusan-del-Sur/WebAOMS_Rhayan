@@ -45,7 +45,7 @@ namespace WebAOMS.Controllers
         public JsonResult get_person_group()
         {
             IEnumerable<tbl_l_Persons_group> person_group;
-            person_group = fmisdb.tbl_l_Persons_group;
+            person_group = fmisdb.tbl_l_Persons_group.OrderBy(w => w.GroupName);
             return Json(person_group.ToList(), JsonRequestBehavior.AllowGet);
         }
         public JsonResult get_person_address()
