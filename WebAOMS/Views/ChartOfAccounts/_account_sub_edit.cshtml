@@ -148,7 +148,13 @@
 
     function loadselected_claimanttype() {
         var cbo = $("#ClaimantTypeID").data("kendoDropDownList");
-        cbo.value(@ViewBag.ClaimantTypeID)
+        if ('@ViewBag.ClaimantTypeID' == '0' ){
+            cbo.value(6)
+        }
+        else{
+            cbo.value(@ViewBag.ClaimantTypeID)
+        }
+
     }
     function saveCOA() {
         startSpin()
@@ -201,7 +207,7 @@
     }
 
     function warnupdate_accountingEntries() {
-        
+
         mg.boxYesNo("Are you sure you want to update the accounting entries to this code?", "update_coaEntries()")
     }
 

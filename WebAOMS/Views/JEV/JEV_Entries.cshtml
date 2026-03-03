@@ -192,14 +192,21 @@
         .Name("grid_transactions")
         .Columns(columns =>
         {
-            columns.Bound(m => m.jevid).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+            columns.Template(@<text></text>)
+            .ClientTemplate("<input id='check#=jevid#' type='checkbox' style='zoom:1.0'  title='Tick the checkbox to include this in generating the ACIC file!'  class='checkbox'/>")
+            .Title("<input onclick=CheckAll_Prep(this) type='checkbox' title='Tick all the boxes!' class='checkbox'/> <span style='text - align:center; vertical - align:middle; height: 30px;'></span> ")
+            .Width(20)
+            .HtmlAttributes(new { style = "text-align:center;vertical-align:middle;" })
+            .HeaderHtmlAttributes(new { style = "text-align:center;vertical-align:middle;zoom:1.0;" });
+            
+            columns.Bound(m => m.jevid).Width(40).Hidden().Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
             columns.Bound(m => m.Dvno).Width(70);
             columns.Bound(m => m.Obrno).Width(90);
             columns.Bound(m => m.Name).Width(150);
             columns.Bound(m => m.Particular).Width(200);
             // columns.Bound(m => m.CheckDate).Width(70).Format("{0:dd/MM/yyyy}");
             columns.Bound(m => m.Checkno).Width(70);
-            columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style="text-align:right" });
+            columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
         })
         .AutoBind(true)
         .HtmlAttributes(new { style = "height: 350px;" })
@@ -217,6 +224,46 @@
                 </div>
             </div>
         </div>
+        <div class="modal-footer" style="margin-top:-20px;">
+            <button class="btn btn-success" onclick="downloadATMFile()">   <i class="fa fa-file"></i> Generate ACIC File</button>
+        </div>
     </div>
 </div>
 
+<script>
+    function downloadATMFile() {
+        var from = $('#dtp_from').data('kendoDatePicker').value();
+        var to = $('#dtp_to').data('kendoDatePicker').value();
+        var idsToSend = [];
+        var grid = $("#grid_transactions").data("kendoGrid")
+        var ds = grid.dataSource.view();
+        for (var i = 0; i < ds.length; i++) {
+            var row = grid.table.find("tr[data-uid='" + ds[i].uid + "']");
+            var checkbox = $(row).find(".checkbox");
+            if (checkbox.is(":checked")) {
+                idsToSend.push(ds[i].jevid); //loops
+            }
+        }
+        if (idsToSend == "" ) {
+            toastr.warning('Please tick the checkbox first!', 'System Warning')
+        }
+        else {
+            @*$.post('@Url.Action("Save_transaction_through_checkno", "JEV")', { checkno: checkno, jevid: $("#txt_jevid").val() }*@
+            $.post('@Url.Action("Save_GenerateACICFile", "JEV")', { transno: idsToSend, from: from, to: to }
+            , function (r) {
+                stopSpin()
+                if (r.code == 6) {
+                    toastr.success(r.statusName, 'System Message');
+                    //$("#txt_jevid").val(r.newjevID)
+                    rgrid_trans_account();
+                }
+                else {
+                    mg.warning("" + r.statusName + "")
+                }
+            })
+        }
+    }
+    function CheckAll_Prep(e) {
+        $("#grid_transactions tbody input:checkbox").prop("checked", e.checked);
+    }
+</script>

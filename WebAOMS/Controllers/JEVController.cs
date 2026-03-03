@@ -18,6 +18,7 @@ using WebAOMS.Models;
 using WebAOMS.Base;
 using WebAOMS.Mod;
 using WebAOMS.wsfmis;
+using System.Text;
 
 namespace WebAOMS.Controllers
 {
@@ -1979,6 +1980,114 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             }
 
             return resultTable;
+        }
+        public ActionResult Save_GenerateACICFile(string[] transno, string from="", string to="",int bankid=1)
+        {
+            try
+            {
+                var cntrlno = "";
+                DataTable dt = new DataTable();
+                dt.Columns.Add("transno");
+                var idx = 0;
+                foreach (var trnno in transno)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr[0] = transno[idx];
+                    dt.Rows.Add(dr);
+                    idx++;
+                }
+                
+                DataTable rec = new DataTable();
+                string cmdStr = "execute[Accounting].[usp_save_accountantadvice_acic] @trnno, @from,@to";
+                SqlConnection connection = new SqlConnection(fmisConn);
+
+                using (SqlCommand command = new SqlCommand(cmdStr, connection))
+                {
+                    command.Parameters.AddWithValue("@trnno", dt);
+                    command.Parameters.AddWithValue("@from", from);
+                    command.Parameters.AddWithValue("@to", to);
+                    command.Parameters.AddWithValue("@userid", USER.C_eID);
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows == true)
+                    {
+                        while (reader.Read())
+                        {
+                            cntrlno = reader["controlno"].ToString();
+                            return Json(new { code = 6, statusName = "Successfully Save!" });
+                        }
+                    }
+                    connection.Close();
+                }
+
+                string strUrl = "";
+                string bankname;
+                if (bankid == 2)
+                {
+                    bankname = "CreateATM_file_DBP";
+                }
+                else
+                {
+                    bankname = "CreateATM_file_LBP";
+                }
+                strUrl = ISfn.UrlStr("~/RegularPayroll/" + bankname + "?bankid=" + bankid + "&from="+ from + "&to="+ to + "&cntrlno="+ cntrlno + "").ToString();
+
+                //return JavaScript("window.open('" + strUrl + "')");
+                
+                return Json(new { code = 6, statusName = "Successfully Save!"});
+
+            }
+            catch (Exception e)
+            {
+                string r = ISfn.errorLog(e.HResult, e.Message, "JEV/Save_GenerateACICFile");
+                return Json(new { code = 5, statusName = e.Message });
+            }
+        }
+        public FileStreamResult CreateATM_file_LBP(int bankid = 2, string from = "", string to = "",string cntrlno="")
+        {
+            string companyname = "";
+            decimal TotalCheckFieldHash = 0;
+            decimal TOTALAccntNoHash = 0;
+            decimal amount = 0;
+            decimal accountnosix = 0;
+            int intRecCount = 0;
+            DataTable recompany;
+            recompany = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(), System.Data.CommandType.Text,
+            "SELECT left(CompanyName,25) + space(25 - datalength(left(CompanyName,25))) as CompanyName FROM [pmis].[dbo].[tbl_Payroll_report_Signatory] where userid = " + USER.C_eID + "").Tables[0];
+            if (recompany.Rows.Count > 0)
+            {
+                companyname = "9999999999" + recompany.Rows[0]["CompanyName"].ToString();
+            }
+            recompany.Dispose();
+            var header_data = "";
+
+            var string_with_your_data = "";
+            decimal totalMoney = 0;
+            DataTable rec;
+            rec = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(), System.Data.CommandType.Text,
+            "exec [epay].[usp_get_atm_AdviceAcc_employee_list_for_bank] " + bankid + ",'" + from + "','" + to + "'").Tables[0];
+            if (rec.Rows.Count > 0)
+            {
+                foreach (DataRow rw in rec.Rows)
+                {
+                    string_with_your_data = string_with_your_data + rw["DataString"].ToString() + "       " + Environment.NewLine;
+                    totalMoney = totalMoney + Convert.ToDecimal(rw["Amount"]);
+                    amount = Convert.ToDecimal(rw["Amount"]);
+                    accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
+                    TotalCheckFieldHash = TotalCheckFieldHash + (amount * accountnosix);
+                    TOTALAccntNoHash = TOTALAccntNoHash + Convert.ToDecimal(rw["accountNo"]);
+                }
+            }
+            intRecCount = rec.Rows.Count;
+            rec.Dispose();
+            header_data = companyname + (totalMoney * 100).ToString("000000000000000") + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("00000") + Environment.NewLine;
+            //header_data = companyname + (totalMoney * 100).ToString("000000000000000") + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("00000") + " " + ATMBatchNo.ToString("00000") + Environment.NewLine;
+
+            string_with_your_data = string_with_your_data + header_data;
+            var byteArray = Encoding.Default.GetBytes(string_with_your_data);
+            var stream = new MemoryStream(byteArray);
+
+            return File(stream, "application/text", cntrlno + ".txt");
         }
         #endregion
     }
