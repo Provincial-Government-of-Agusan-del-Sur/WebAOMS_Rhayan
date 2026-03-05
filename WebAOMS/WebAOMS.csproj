@@ -4842,6 +4842,8 @@
     <Content Include="Views\Shared\EditorTemplates\ChartAccountEditor.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\ParticularTextArea.cshtml" />
     <Content Include="Views\Shared\EditorComTemplates\_letter.cshtml" />
+    <Content Include="Views\JEV\_JEV_Entries_T1.cshtml" />
+    <Content Include="Views\JEV\_JEV_Entries_T2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

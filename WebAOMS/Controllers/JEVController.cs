@@ -2102,6 +2102,14 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
 
             return File(stream, "application/text", cntrlno + ".txt");
         }
+        public PartialViewResult _JEV_Entries_T1()
+        {
+            return PartialView("_JEV_Entries_T1");
+        }
+        public PartialViewResult _JEV_Entries_T2()
+        {
+            return PartialView("_JEV_Entries_T2");
+        }
         #endregion
     }
 }

@@ -1,0 +1,33 @@
+﻿@(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_transaction_byDate_Result>()
+    .Name("grid_transactions")
+    .Columns(columns =>
+    {
+        columns.Template(@<text></text>)
+        .ClientTemplate("<input id='check#=jevid#' type='checkbox' style='zoom:1.0;cursor:pointer;'  title='Tick the checkbox to include this in generating the ACIC file!'  class='checkbox'/>")
+        .Title("<input onclick=CheckAll_Prep(this) type='checkbox' title='Tick all the boxes!' class='checkbox'/> <span style='text - align:center; vertical - align:middle; height: 30px;'></span> ")
+        .Width(20)
+        .HtmlAttributes(new { style = "text-align:center;vertical-align:middle;" })
+        .HeaderHtmlAttributes(new { style = "text-align:center;vertical-align:middle;zoom:1.0;" });
+
+        columns.Bound(m => m.jevid).Width(40).Hidden().Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+        columns.Bound(m => m.Dvno).Width(70);
+        columns.Bound(m => m.Obrno).Width(90);
+        columns.Bound(m => m.Name).Width(150);
+        columns.Bound(m => m.Particular).Width(200);
+        // columns.Bound(m => m.CheckDate).Width(70).Format("{0:dd/MM/yyyy}");
+        columns.Bound(m => m.Checkno).Width(70);
+        columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+    })
+    .AutoBind(true)
+    .HtmlAttributes(new { style = "height: 350px;" })
+    .Scrollable()
+    .Sortable()
+    .Pageable(pageable => pageable
+    .Refresh(true)
+    .ButtonCount(5))
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .Read(read => read.Action("grid_transaction_bydate", "JEV").Data("para_transaction"))
+    .PageSize(200)
+    )
+)
