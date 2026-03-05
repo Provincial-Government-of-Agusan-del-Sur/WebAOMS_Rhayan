@@ -193,7 +193,7 @@
         .Columns(columns =>
         {
             columns.Template(@<text></text>)
-            .ClientTemplate("<input id='check#=jevid#' type='checkbox' style='zoom:1.0'  title='Tick the checkbox to include this in generating the ACIC file!'  class='checkbox'/>")
+            .ClientTemplate("<input id='check#=jevid#' type='checkbox' style='zoom:1.0;cursor:pointer;'  title='Tick the checkbox to include this in generating the ACIC file!'  class='checkbox'/>")
             .Title("<input onclick=CheckAll_Prep(this) type='checkbox' title='Tick all the boxes!' class='checkbox'/> <span style='text - align:center; vertical - align:middle; height: 30px;'></span> ")
             .Width(20)
             .HtmlAttributes(new { style = "text-align:center;vertical-align:middle;" })
@@ -234,6 +234,10 @@
     function downloadATMFile() {
         var from = $('#dtp_from').data('kendoDatePicker').value();
         var to = $('#dtp_to').data('kendoDatePicker').value();
+
+        if (from) from = kendo.toString(from, "yyyy-MM-dd");
+        if (to) to = kendo.toString(to, "yyyy-MM-dd");
+
         var idsToSend = [];
         var grid = $("#grid_transactions").data("kendoGrid")
         var ds = grid.dataSource.view();
@@ -249,17 +253,17 @@
         }
         else {
             @*$.post('@Url.Action("Save_transaction_through_checkno", "JEV")', { checkno: checkno, jevid: $("#txt_jevid").val() }*@
-            $.post('@Url.Action("Save_GenerateACICFile", "JEV")', { transno: idsToSend, from: from, to: to }
+            $.post('@Url.Action("Save_GenerateACICFile", "JEV")', { trnno: idsToSend, from: from, to: to }
             , function (r) {
                 stopSpin()
-                if (r.code == 6) {
-                    toastr.success(r.statusName, 'System Message');
-                    //$("#txt_jevid").val(r.newjevID)
-                    rgrid_trans_account();
-                }
-                else {
-                    mg.warning("" + r.statusName + "")
-                }
+                //if (r.code == 6) {
+                //    toastr.success(r.statusName, 'System Message');
+                //    //$("#txt_jevid").val(r.newjevID)
+                //    rgrid_trans_account();
+                //}
+                //else {
+                //    mg.warning("" + r.statusName + "")
+                //}
             })
         }
     }

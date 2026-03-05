@@ -835,7 +835,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
         public ActionResult grid_transaction_bydate([DataSourceRequest] DataSourceRequest request,DateTime from,DateTime to)
         {
             DataTable rec = new DataTable();
-            string cmdStr = "select * from [Accounting].[ufn_JEV_get_transaction_byDate](@from,@to) order by jevid";
+            string cmdStr = "select * from [Accounting].[ufn_JEV_get_transaction_byDate](@from,@to) order by Name";
             SqlConnection connection = new SqlConnection(fmisConn);
 
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
@@ -1981,29 +1981,35 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
 
             return resultTable;
         }
-        public ActionResult Save_GenerateACICFile(string[] transno, string from="", string to="",int bankid=1)
+        public ActionResult Save_GenerateACICFile(string[] trnno, DateTime from, DateTime to,int bankid=1)
         {
             try
             {
                 var cntrlno = "";
+                long totmoney = 0;
                 DataTable dt = new DataTable();
-                dt.Columns.Add("transno");
+                dt.Columns.Add("trnno", typeof(string));
                 var idx = 0;
-                foreach (var trnno in transno)
+                foreach (var trn in trnno)
                 {
-                    DataRow dr = dt.NewRow();
-                    dr[0] = transno[idx];
-                    dt.Rows.Add(dr);
+                    //DataRow dr = dt.NewRow();
+                    //dr[0] = trnno[idx];
+                    //dt.Rows.Add(dr);
+                    dt.Rows.Add(trn);
                     idx++;
                 }
                 
                 DataTable rec = new DataTable();
-                string cmdStr = "execute[Accounting].[usp_save_accountantadvice_acic] @trnno, @from,@to";
+                string cmdStr = "execute [Accounting].[usp_save_accountantadvice_acic] @trnno,@from,@to,@userid";
                 SqlConnection connection = new SqlConnection(fmisConn);
 
                 using (SqlCommand command = new SqlCommand(cmdStr, connection))
                 {
-                    command.Parameters.AddWithValue("@trnno", dt);
+                    // Add TVP parameter with TypeName
+                    var param = command.Parameters.AddWithValue("@trnno", dt);
+                    param.SqlDbType = SqlDbType.Structured;
+                    param.TypeName = "Accounting.UDT_AOMS_AccountantAdvice"; 
+                    // <--- This must match the SQL type
                     command.Parameters.AddWithValue("@from", from);
                     command.Parameters.AddWithValue("@to", to);
                     command.Parameters.AddWithValue("@userid", USER.C_eID);
@@ -2014,7 +2020,8 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                         while (reader.Read())
                         {
                             cntrlno = reader["controlno"].ToString();
-                            return Json(new { code = 6, statusName = "Successfully Save!" });
+                            totmoney = Convert.ToInt64(reader["totamount"]);
+                            // return Json(new { code = 6, statusName = "Successfully Save!" });
                         }
                     }
                     connection.Close();
@@ -2030,11 +2037,11 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                 {
                     bankname = "CreateATM_file_LBP";
                 }
-                strUrl = ISfn.UrlStr("~/RegularPayroll/" + bankname + "?bankid=" + bankid + "&from="+ from + "&to="+ to + "&cntrlno="+ cntrlno + "").ToString();
+                strUrl = ISfn.UrlStr("~/JEV/" + bankname + "?bankid=" + bankid + "&from="+ from + "&to="+ to + "&cntrlno="+ cntrlno + "&totmoney="+ totmoney + "").ToString();
 
-                //return JavaScript("window.open('" + strUrl + "')");
-                
-                return Json(new { code = 6, statusName = "Successfully Save!"});
+                return JavaScript("window.open('" + strUrl + "')");
+
+                //return Json(new { code = 6, statusName = "Successfully Save!"});
 
             }
             catch (Exception e)
@@ -2043,7 +2050,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                 return Json(new { code = 5, statusName = e.Message });
             }
         }
-        public FileStreamResult CreateATM_file_LBP(int bankid = 2, string from = "", string to = "",string cntrlno="")
+        public FileStreamResult CreateATM_file_LBP(int bankid = 2, string from = "", string to = "",string cntrlno="",long totmoney=0)
         {
             string companyname = "";
             decimal TotalCheckFieldHash = 0;
@@ -2053,16 +2060,20 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             int intRecCount = 0;
             DataTable recompany;
             recompany = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(), System.Data.CommandType.Text,
-            "SELECT left(CompanyName,25) + space(25 - datalength(left(CompanyName,25))) as CompanyName FROM [pmis].[dbo].[tbl_Payroll_report_Signatory] where userid = " + USER.C_eID + "").Tables[0];
+            "SELECT left(CompanyName,25) + space(25 - datalength(left(CompanyName,25))) as CompanyName FROM [pmis].[dbo].[tbl_Payroll_report_Signatory] where userid = 9999999").Tables[0];
             if (recompany.Rows.Count > 0)
             {
                 companyname = "9999999999" + recompany.Rows[0]["CompanyName"].ToString();
+            }
+            else
+            {
+                companyname = "9999999999";
             }
             recompany.Dispose();
             var header_data = "";
 
             var string_with_your_data = "";
-            decimal totalMoney = 0;
+            double totalMoney = 0.00;
             DataTable rec;
             rec = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(), System.Data.CommandType.Text,
             "exec [epay].[usp_get_atm_AdviceAcc_employee_list_for_bank] " + bankid + ",'" + from + "','" + to + "'").Tables[0];
@@ -2070,17 +2081,19 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             {
                 foreach (DataRow rw in rec.Rows)
                 {
-                    string_with_your_data = string_with_your_data + rw["DataString"].ToString() + "       " + Environment.NewLine;
-                    totalMoney = totalMoney + Convert.ToDecimal(rw["Amount"]);
+                    string_with_your_data = string_with_your_data + rw["DataString"].ToString() + "          " + Environment.NewLine;
+                   // totalMoney = Convert.ToDouble(totalMoney + Convert.ToDouble(rw["Amount"]));
                     amount = Convert.ToDecimal(rw["Amount"]);
-                    accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
-                    TotalCheckFieldHash = TotalCheckFieldHash + (amount * accountnosix);
-                    TOTALAccntNoHash = TOTALAccntNoHash + Convert.ToDecimal(rw["accountNo"]);
+                    //accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
+                    //TotalCheckFieldHash = TotalCheckFieldHash + (amount * accountnosix);
+                   // accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
+                    TotalCheckFieldHash = TotalCheckFieldHash + (amount * 100080);
+                    //TOTALAccntNoHash = TOTALAccntNoHash + Convert.ToDecimal(rw["accountNo"]);
                 }
             }
             intRecCount = rec.Rows.Count;
             rec.Dispose();
-            header_data = companyname + (totalMoney * 100).ToString("000000000000000") + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("00000") + Environment.NewLine;
+            header_data = companyname + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("0000000") + totmoney.ToString("0000000000000000") + Environment.NewLine;
             //header_data = companyname + (totalMoney * 100).ToString("000000000000000") + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("00000") + " " + ATMBatchNo.ToString("00000") + Environment.NewLine;
 
             string_with_your_data = string_with_your_data + header_data;
