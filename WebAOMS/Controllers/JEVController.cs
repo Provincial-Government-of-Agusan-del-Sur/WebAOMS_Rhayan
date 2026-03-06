@@ -2110,6 +2110,12 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
         {
             return PartialView("_JEV_Entries_T2");
         }
+        public ActionResult JEV_Accountantadvice()
+        {
+            ViewBag.rightSidebar_title = "AOMS";
+            ViewBag.menuid = "a13";
+            return View();
+        }
         #endregion
     }
 }

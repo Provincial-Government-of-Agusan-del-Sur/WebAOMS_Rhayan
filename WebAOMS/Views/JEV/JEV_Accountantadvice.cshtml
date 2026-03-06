@@ -54,7 +54,7 @@
                             //})
 
                             //$('#txt_checkno').on('keypress', function (e) {
-                                
+
                             //    var dvno = $('#txt_checkno').val();
                             //    alert(dvno.length)
                             //    if (dvno.length != 14) {
@@ -63,7 +63,7 @@
                             //})
 
                             $('#txt_checkno').on('keydown', function (e) {
-                                
+
                                 if (e.keyCode == 13) {
                                     view_jev_details()
                                 }
@@ -161,16 +161,28 @@
                 </div>
                 <script>
             $('#txt_search_dvno').on('keyup', function (e) {
-              
-                var gridData = $("#grid_transactions").data("kendoGrid");
-                if ($('#txt_search_dvno').val() == "") {
-                    gridData.dataSource.filter({});
+                var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
+                if (SelectedTabIndex == 0) {
+                    var gridData = $("#grid_transactions").data("kendoGrid");
+                    if ($('#txt_search_dvno').val() == "") {
+                        gridData.dataSource.filter({});
+                    }
+                    else {
+                        //ISfn.applyFilter("Name", $('#txt_search_dvno').val(), 'grid_transactions'),
+                        ISfn.applyFilter("Particular", $('#txt_search_dvno').val(), 'grid_transactions')
+                        gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                    }
                 }
                 else {
-                    ISfn.applyFilter("Name", $('#txt_search_dvno').val(), 'grid_transactions')
-                    gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                    var gridDatav2 = $("#grid_transactions_acic").data("kendoGrid");
+                    if ($('#txt_search_dvno').val() == "") {
+                        gridDatav2.dataSource.filter({});
+                    }
+                    else {
+                        ISfn.applyFilter("Name", $('#txt_search_dvno').val(), 'grid_transactions_acic')
+                        gridDatav2.dataSource.sort({ field: "Name", dir: "asc" });
+                    }
                 }
-               
             })
             function rgrid_trans_account() {
                 var gridData = $("#grid_transactions").data("kendoGrid");
@@ -181,42 +193,76 @@
                 var to = $('#dtp_to').data('kendoDatePicker').value();
                 return { from: from, to: to }
             }
-            
+            function fn_refresher(e) {
+                var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
+
+                if (SelectedTabIndex == 0) {
+                    $("#grid_transactions").data("kendoGrid").dataSource.read();
+                }
+                else if (SelectedTabIndex == 1) {
+                    $("#grid_transactions_acic").data("kendoGrid").dataSource.read();
+                }
+
+            }
+
             $("#export").click(function (e) {
                 var grid = $("#grid_transactions").data("kendoGrid");
                 grid.saveAsExcel();
             });
                 </script>
                 <div class="row">
-                    
-                    @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_transaction_byDate_Result>()
-                    .Name("grid_transactions")
-                    .Columns(columns =>
-                    {
-                        columns.Bound(m => m.jevid).Width(40).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
-                        columns.Bound(m => m.Dvno).Width(70);
-                        columns.Bound(m => m.Obrno).Width(90);
-                        columns.Bound(m => m.Name).Width(150);
-                        columns.Bound(m => m.Particular).Width(200);
-                        // columns.Bound(m => m.CheckDate).Width(70).Format("{0:dd/MM/yyyy}");
-                        columns.Bound(m => m.Checkno).Width(70);
-                        columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
-                    })
-                    .AutoBind(true)
-                    .HtmlAttributes(new { style = "height: 350px;" })
-                    .Scrollable()
-                    .Sortable()
-                    .Pageable(pageable => pageable
-                    .Refresh(true)
-                    .ButtonCount(5))
-                    .DataSource(dataSource => dataSource
-                    .Ajax()
-                    .Read(read => read.Action("grid_transaction_bydate", "JEV").Data("para_transaction"))
-                    .PageSize(200)
+                    @(Html.Kendo().TabStrip()
+                      .Name("tabstrip")
+                      .Navigatable(false)
+                      .Animation(animation =>
+                          animation.Open(effect =>
+                          effect.Fade(FadeDirection.In)))
+                      .Items(tabstrip =>
+                      {
+                          tabstrip.Add().Text("Prepared").Selected(true).LoadContentFrom("_JEV_Entries_T1", "Jev");
+                          tabstrip.Add().Text("Generated").LoadContentFrom("_JEV_Entries_T2", "Jev");
+                      })
+                      .Events(e => e.Activate("fn_refresher"))
                     )
-                    )
+
+                    @*@(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_transaction_byDate_Result>()
+                        .Name("grid_transactions")
+                        .Columns(columns =>
+                        {
+                            columns.Template(@<text></text>)
+                            .ClientTemplate("<input id='check#=jevid#' type='checkbox' style='zoom:1.0;cursor:pointer;'  title='Tick the checkbox to include this in generating the ACIC file!'  class='checkbox'/>")
+                            .Title("<input onclick=CheckAll_Prep(this) type='checkbox' title='Tick all the boxes!' class='checkbox'/> <span style='text - align:center; vertical - align:middle; height: 30px;'></span> ")
+                            .Width(20)
+                            .HtmlAttributes(new { style = "text-align:center;vertical-align:middle;" })
+                            .HeaderHtmlAttributes(new { style = "text-align:center;vertical-align:middle;zoom:1.0;" });
+
+                            columns.Bound(m => m.jevid).Width(40).Hidden().Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                            columns.Bound(m => m.Dvno).Width(70);
+                            columns.Bound(m => m.Obrno).Width(90);
+                            columns.Bound(m => m.Name).Width(150);
+                            columns.Bound(m => m.Particular).Width(200);
+                            // columns.Bound(m => m.CheckDate).Width(70).Format("{0:dd/MM/yyyy}");
+                            columns.Bound(m => m.Checkno).Width(70);
+                            columns.Bound(m => m.Gamount).Title("Gross Amount").Width(70).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
+                        })
+                        .AutoBind(true)
+                        .HtmlAttributes(new { style = "height: 350px;" })
+                        .Scrollable()
+                        .Sortable()
+                        .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .ButtonCount(5))
+                        .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Read(read => read.Action("grid_transaction_bydate", "JEV").Data("para_transaction"))
+                        .PageSize(200)
+                        )
+                        )*@
                 </div>
             </div>
+        </div>
+        <div class="modal-footer" id="generateacicfile_id" style="margin-top:-20px;">
+            <button class="btn btn-success" onclick="downloadATMFile()">   <i class="fa fa-file"></i> Generate ACIC File</button>
         </div>
     </div>
 </div>
