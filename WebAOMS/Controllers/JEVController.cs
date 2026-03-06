@@ -2116,6 +2116,31 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             ViewBag.menuid = "a13";
             return View();
         }
+
+        public ActionResult grid_accountantadvice_transaction([DataSourceRequest] DataSourceRequest request, DateTime to)
+        {
+            DataTable rec = new DataTable();
+            string cmdStr = "select * from [Accounting].[ufn_AA_get_transaction_byDate](@to)  order by AdviceNo,name";
+            SqlConnection connection = new SqlConnection(fmisConn);
+
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                command.Parameters.AddWithValue("@to", to);
+                connection.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                da.Fill(rec);
+                connection.Close();
+                da.Dispose();
+            }
+            return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
+        }
+        //public JsonResult DataSource_GetAdviceNo(DateTime to)
+        //{
+        //    IEnumerable<WebAOMS.Models.Maintenance.grid_accountantadvice> office;
+        //    office = fmisdb.ufn_adviceno_list().OrderBy(o => o.adviceno desc);
+        //    return Json(office.ToList(), JsonRequestBehavior.AllowGet);
+        //}
         #endregion
     }
 }

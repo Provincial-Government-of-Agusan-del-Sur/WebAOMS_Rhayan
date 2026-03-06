@@ -821,6 +821,8 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
             </CollectionType>
           </ReturnType>
         </Function>
+        
+        
         <Function Name="ufn_chartOfAccounts_expenses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Accounting">
           <ReturnType>
             <CollectionType>
@@ -1394,7 +1396,7 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
                 <Property Name="CheckDate" Type="date" />
                 <Property Name="Obrno" Type="nvarchar" MaxLength="50" />
                 <Property Name="Checkno" Type="varchar" MaxLength="25" />
-                <Property Name="Particular" Type="nvarchar" MaxLength="2000" />
+                <Property Name="Particular" Type="nvarchar" MaxLength="4000" />
                 <Property Name="Gamount" Type="money" />
               </RowType>
             </CollectionType>
@@ -1870,7 +1872,7 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
             <CollectionType>
               <RowType>
                 <Property Name="venueid" Type="int" Nullable="false" />
-                <Property Name="venue" Type="varchar" MaxLength="56" Nullable="false" />
+                <Property Name="venue" Type="varchar" MaxLength="2006" Nullable="false" />
               </RowType>
             </CollectionType>
           </ReturnType>
@@ -5792,7 +5794,7 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\PGAS\PIMOSVN\11-4-2017\WebAOMS 2019\WebAOMS\Models\fmis.edmx'. 
+﻿// T4 code generation is enabled for model 'R:\IS\GitHub\WebAOMS_Rhayan\WebAOMS\Models\fmis.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

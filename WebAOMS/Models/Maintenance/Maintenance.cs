@@ -54,5 +54,16 @@ namespace WebAOMS.Models.Maintenance
         public string supplier { get; set; }
         public string address { get; set; }
     }
+    public class grid_accountantadvice
+    {
+        public long jevid { get; set; }
+        public string AdviceNo { get; set; }
+        public string ChkBankAccntNo { get; set; }
+        public string Checkno { get; set; }
+        public string CheckDate { get; set; }
+        public string Name { get; set; }
+        public double ChkAmount { get; set; }
+    }
+
 
 }
