@@ -6,10 +6,7 @@
 }
 
 <script>
-    function para_advice() {
-        var to = $('#dtp_to').data('kendoDatePicker').value();
-        return { to: to }
-    }
+    
 </script>
 <div class="box">
     <div class="box-head">
@@ -35,11 +32,11 @@
                    
                         Date of Advice
                         @(Html.Kendo().DatePicker()
-                    .Name("dtp_to")
-                    .Format("MMMM dd, yyyy")
-                    .Value(DateTime.Now)
-                    .HtmlAttributes(new { type = "text" })
-                    .Events(ev => ev.Change("rgrid_trans_account"))
+                        .Name("dtp_to")
+                        .Format("MMMM dd, yyyy")
+                        .Value(DateTime.Now)
+                        .HtmlAttributes(new { type = "text" })
+                        .Events(ev => ev.Change("param_dateadvice"))
                         )
                     </div>
                     <div class="col-md-4">
@@ -52,11 +49,15 @@
                     </div>
 
                 </div>
-                @*<div class="byexym liZmnb">
-                    @(Html.Kendo().DropDownList()
-                    .Name("officeId")
-                    .DataTextField("OfficeName")
-                    .DataValueField("OfficeID")
+
+                <div class="row">
+                    <div class="col-md-8">
+                        Advice No.
+                        @(Html.Kendo().DropDownList()
+                    .Name("drpadviceacc")
+                    .DataTextField("AdviceNo")
+                    .DataValueField("AdviceNo")
+                    .SelectedIndex(-1)
                     .Filter("Contains")
                     .AutoBind(false)
                     .DataSource(source =>
@@ -66,34 +67,13 @@
                             read.Action("DataSource_GetAdviceNo", "JEV").Data("para_advice"); ;
                         });
                     })
-                    .Events(e => e.Change("r_liaison"))
-                    .HtmlAttributes(new { style = "width: 100%" })
-                    )
-                </div>*@
-                <div class="row">
-                    <div class="col-md-8">
-
-                        Advice No.
-                        @*@(Html.Kendo().DatePicker()
-                    .Name("dtp_to")
-                    .Format("MMMM dd, yyyy")
-                    .Value(DateTime.Now)
-                    .HtmlAttributes(new { type = "text" })
-                    .Events(ev => ev.Change("rgrid_trans_account"))
+                    //.Events(e => e.Change("r_liaison"))
+                    //.HtmlAttributes(new { style = "width: 100%" })
                         )
                     </div>
-                    <div class="col-md-4">
-                        <div class="input-group" style="padding-bottom:5px!important">
-                            <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search Advice No.">
-                            <span class="input-group-btn">
-                                <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>*@
-                    </div>
-
                 </div>
                 <script>
-            $('#txt_search_dvno').on('keyup', function (e) {
+                 $('#txt_search_dvno').on('keyup', function (e) {
                 var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
                 if (SelectedTabIndex == 0) {
                     var gridData = $("#grid_transactions").data("kendoGrid");
@@ -117,9 +97,24 @@
                     }
                 }
             })
-            function rgrid_trans_account() {
+            function para_advice() {
+                var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
+                return { to: to }
+            }
+
+            function para_liaison (){
+                return { officeid: $("#officeId").data("kendoDropDownList").value() }
+            }
+            function param_dateadvice(){
+                //$("#drpadviceacc").data("kendoDropDownList").value("");
+                var r_l = $("#drpadviceacc").data("kendoDropDownList")
+                r_l.dataSource.read();
+            }
+            function param_dateadvice() {
                 var gridData = $("#grid_transactions").data("kendoGrid");
+                var drpData=$("#drpadviceacc").data("kendoDropDownList");
                 gridData.dataSource.read();
+                drpData.dataSource.read();
             }
             function para_transaction() {
                 var to = $('#dtp_to').data('kendoDatePicker').value();
@@ -142,7 +137,7 @@
                 grid.saveAsExcel();
             });
                 </script>
-                <div class="row">
+                <div class="row" style="margin-top:10px">
                     @(Html.Kendo().TabStrip()
                       .Name("tabstrip")
                       .Navigatable(false)
@@ -166,6 +161,7 @@
 </div>
 
 <script>
+   
     function downloadATMFile() {
         var from = $('#dtp_from').data('kendoDatePicker').value();
         var to = $('#dtp_to').data('kendoDatePicker').value();
@@ -194,7 +190,7 @@
                 //if (r.code == 6) {
                 //    toastr.success(r.statusName, 'System Message');
                 //    //$("#txt_jevid").val(r.newjevID)
-                //    rgrid_trans_account();
+                //    param_dateadvice();
                 //}
                 //else {
                 //    mg.warning("" + r.statusName + "")

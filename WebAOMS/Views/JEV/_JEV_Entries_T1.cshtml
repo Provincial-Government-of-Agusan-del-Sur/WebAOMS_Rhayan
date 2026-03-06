@@ -1,8 +1,9 @@
 ﻿@(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_accountantadvice>()
+@*@(Html.Kendo().Grid<WebAOMS.Models.ufn_AA_get_transaction_byDate>()*@
     .Name("grid_transactions")
     .Columns(columns =>
     {
-        columns.Template(@<text></text>)
+    columns.Template(@<text></text>)
         .ClientTemplate("<input id='check#=jevid#' type='checkbox' style='zoom:1.0;cursor:pointer;'  title='Tick the checkbox to include this in generating the ACIC file!'  class='checkbox'/>")
         .Title("<input onclick=CheckAll_Prep(this) type='checkbox' title='Tick all the boxes!' class='checkbox'/> <span style='text - align:center; vertical - align:middle; height: 30px;'></span> ")
         .Width(20)

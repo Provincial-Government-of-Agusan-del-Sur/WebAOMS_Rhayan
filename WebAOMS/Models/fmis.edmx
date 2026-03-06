@@ -821,8 +821,6 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
             </CollectionType>
           </ReturnType>
         </Function>
-        
-        
         <Function Name="ufn_chartOfAccounts_expenses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Accounting">
           <ReturnType>
             <CollectionType>
@@ -5794,7 +5792,7 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

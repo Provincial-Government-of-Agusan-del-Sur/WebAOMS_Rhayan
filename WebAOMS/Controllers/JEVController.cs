@@ -19,6 +19,7 @@ using WebAOMS.Base;
 using WebAOMS.Mod;
 using WebAOMS.wsfmis;
 using System.Text;
+using WebAOMS.Models.Maintenance;
 
 namespace WebAOMS.Controllers
 {
@@ -2135,12 +2136,44 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             }
             return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
         }
-        //public JsonResult DataSource_GetAdviceNo(DateTime to)
+
+        //public ActionResult DataSource_GetAdviceNo([DataSourceRequest]DataSourceRequest request, DateTime to)
         //{
-        //    IEnumerable<WebAOMS.Models.Maintenance.grid_accountantadvice> office;
-        //    office = fmisdb.ufn_adviceno_list().OrderBy(o => o.adviceno desc);
-        //    return Json(office.ToList(), JsonRequestBehavior.AllowGet);
+
+        //    string tempStr = "select * from [Accounting].[ufn_adviceno_list] ('"+ to + "') order by AdviceNo desc";
+        //    DataTable dt = tempStr.DataSet();
+
+        //    var result = new ContentResult();
+        //    result.Content = SerializeDT.DataTableToJSON(dt);
+        //    result.ContentType = "application/json";
+        //    return result;
+
+
         //}
+
+        public JsonResult DataSource_GetAdviceNo(DateTime? to)
+        {
+           
+            DataTable rec;
+            List<grid_accountantadvice> list = new List<grid_accountantadvice>();
+            string dateParam = to.HasValue ? to.Value.ToString("MM/dd/yyyy") : "";
+            rec = OleDbHelper.ExecuteDataset(
+                ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(),
+                 System.Data.CommandType.Text,
+                "select * from fmis.[Accounting].[ufn_adviceno_list] ('" + dateParam + "') order by AdviceNo desc"
+            ).Tables[0];
+
+            foreach (DataRow row in rec.Rows)
+            {
+                list.Add(new grid_accountantadvice
+                {
+                    AdviceNo = row["AdviceNo"].ToString()
+                });
+            }
+
+            return Json(list, JsonRequestBehavior.AllowGet);
+        }
+        
         #endregion
     }
 }
