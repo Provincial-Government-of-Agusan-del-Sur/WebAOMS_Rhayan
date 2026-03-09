@@ -2147,13 +2147,11 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
         //    result.Content = SerializeDT.DataTableToJSON(dt);
         //    result.ContentType = "application/json";
         //    return result;
-
-
+        
         //}
 
         public JsonResult DataSource_GetAdviceNo(DateTime? to)
         {
-           
             DataTable rec;
             List<grid_accountantadvice> list = new List<grid_accountantadvice>();
             string dateParam = to.HasValue ? to.Value.ToString("MM/dd/yyyy") : "";

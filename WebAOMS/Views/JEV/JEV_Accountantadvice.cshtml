@@ -28,15 +28,40 @@
         <div class="box">
             <div class="box-body" style="padding-top:10px">
                 <div class="row">
-                    <div class="col-md-8">
-                   
+                    <div class="col-md-2">
                         Date of Advice
+                    </div>
+                    <div class="col-md-9">
                         @(Html.Kendo().DatePicker()
                         .Name("dtp_to")
                         .Format("MMMM dd, yyyy")
                         .Value(DateTime.Now)
                         .HtmlAttributes(new { type = "text" })
                         .Events(ev => ev.Change("param_dateadvice"))
+                        )
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-2">
+                        Advice No.
+                    </div>
+                    <div class="col-md-6">
+                        @(Html.Kendo().DropDownList()
+                        .Name("drpadviceacc")
+                        .DataTextField("AdviceNo")
+                        .DataValueField("AdviceNo")
+                        .Filter("Contains")
+                        .AutoBind(false)
+                        .DataSource(source =>
+                        {
+                            source.Read(read =>
+                            {
+                                read.Action("DataSource_GetAdviceNo", "JEV").Data("para_advice"); ;
+                            });
+                        })
+                    //.Events(e => e.Change("r_liaison"))
+                    //.HtmlAttributes(new { style = "width: 100%" })
                         )
                     </div>
                     <div class="col-md-4">
@@ -46,30 +71,6 @@
                                 <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
                             </span>
                         </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-8">
-                        Advice No.
-                        @(Html.Kendo().DropDownList()
-                    .Name("drpadviceacc")
-                    .DataTextField("AdviceNo")
-                    .DataValueField("AdviceNo")
-                    .SelectedIndex(-1)
-                    .Filter("Contains")
-                    .AutoBind(false)
-                    .DataSource(source =>
-                    {
-                        source.Read(read =>
-                        {
-                            read.Action("DataSource_GetAdviceNo", "JEV").Data("para_advice"); ;
-                        });
-                    })
-                    //.Events(e => e.Change("r_liaison"))
-                    //.HtmlAttributes(new { style = "width: 100%" })
-                        )
                     </div>
                 </div>
                 <script>
@@ -106,7 +107,8 @@
                 return { officeid: $("#officeId").data("kendoDropDownList").value() }
             }
             function param_dateadvice(){
-                //$("#drpadviceacc").data("kendoDropDownList").value("");
+                $("#drpadviceacc").data("kendoDropDownList").value("");
+                $("#drpadviceacc").data("kendoDropDownList").text("");
                 var r_l = $("#drpadviceacc").data("kendoDropDownList")
                 r_l.dataSource.read();
             }
@@ -137,7 +139,7 @@
                 grid.saveAsExcel();
             });
                 </script>
-                <div class="row" style="margin-top:10px">
+                <div class="row" style="margin-top:5px">
                     @(Html.Kendo().TabStrip()
                       .Name("tabstrip")
                       .Navigatable(false)
