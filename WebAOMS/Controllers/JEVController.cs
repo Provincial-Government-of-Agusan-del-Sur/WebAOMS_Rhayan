@@ -1982,7 +1982,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
 
             return resultTable;
         }
-        public ActionResult Save_GenerateACICFile(string[] trnno, DateTime from, DateTime to,int bankid=1)
+        public ActionResult Save_GenerateACICFile(string[] trnno,DateTime to,int bankid=1)
         {
             try
             {
@@ -2001,7 +2001,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                 }
                 
                 DataTable rec = new DataTable();
-                string cmdStr = "execute [Accounting].[usp_save_accountantadvice_acic] @trnno,@from,@to,@userid";
+                string cmdStr = "execute [Accounting].[usp_save_accountantadvice_acic] @trnno,@to,@userid";
                 SqlConnection connection = new SqlConnection(fmisConn);
 
                 using (SqlCommand command = new SqlCommand(cmdStr, connection))
@@ -2011,7 +2011,6 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                     param.SqlDbType = SqlDbType.Structured;
                     param.TypeName = "Accounting.UDT_AOMS_AccountantAdvice"; 
                     // <--- This must match the SQL type
-                    command.Parameters.AddWithValue("@from", from);
                     command.Parameters.AddWithValue("@to", to);
                     command.Parameters.AddWithValue("@userid", USER.C_eID);
                     connection.Open();
@@ -2038,7 +2037,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                 {
                     bankname = "CreateATM_file_LBP";
                 }
-                strUrl = ISfn.UrlStr("~/JEV/" + bankname + "?bankid=" + bankid + "&from="+ from + "&to="+ to + "&cntrlno="+ cntrlno + "&totmoney="+ totmoney + "").ToString();
+                strUrl = ISfn.UrlStr("~/JEV/" + bankname + "?bankid=" + bankid + "&to="+ to + "&cntrlno="+ cntrlno + "&totmoney="+ totmoney + "").ToString();
 
                 return JavaScript("window.open('" + strUrl + "')");
 
@@ -2051,7 +2050,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                 return Json(new { code = 5, statusName = e.Message });
             }
         }
-        public FileStreamResult CreateATM_file_LBP(int bankid = 2, string from = "", string to = "",string cntrlno="",long totmoney=0)
+        public FileStreamResult CreateATM_file_LBP(int bankid = 2, string to = "",string cntrlno="",long totmoney=0)
         {
             string companyname = "";
             decimal TotalCheckFieldHash = 0;
@@ -2077,7 +2076,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             double totalMoney = 0.00;
             DataTable rec;
             rec = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(), System.Data.CommandType.Text,
-            "exec [epay].[usp_get_atm_AdviceAcc_employee_list_for_bank] " + bankid + ",'" + from + "','" + to + "'").Tables[0];
+            "exec [epay].[usp_get_atm_AdviceAcc_employee_list_for_bank] " + bankid + ",'" + to + "'").Tables[0];
             if (rec.Rows.Count > 0)
             {
                 foreach (DataRow rw in rec.Rows)
@@ -2118,15 +2117,16 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             return View();
         }
 
-        public ActionResult grid_accountantadvice_transaction([DataSourceRequest] DataSourceRequest request, DateTime to)
+        public ActionResult grid_accountantadvice_transaction([DataSourceRequest] DataSourceRequest request, DateTime to,string adno)
         {
             DataTable rec = new DataTable();
-            string cmdStr = "select * from [Accounting].[ufn_AA_get_transaction_byDate](@to)  order by AdviceNo,name";
+            string cmdStr = "select * from [Accounting].[ufn_AA_get_transaction_byDate](@to,@adno)  order by AdviceNo desc,name asc";
             SqlConnection connection = new SqlConnection(fmisConn);
 
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
                 command.Parameters.AddWithValue("@to", to);
+                command.Parameters.AddWithValue("@adno", adno);
                 connection.Open();
 
                 SqlDataAdapter da = new SqlDataAdapter(command);
@@ -2171,7 +2171,26 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
 
             return Json(list, JsonRequestBehavior.AllowGet);
         }
-        
+        public ActionResult grid_transaction_acic([DataSourceRequest] DataSourceRequest request, DateTime to, string adno)
+        {
+            DataTable rec = new DataTable();
+            string cmdStr = "select * from [Accounting].[ufn_AA_get_transaction_acic_generated](@to,@adno)  order by AdviceNo desc,name asc";
+            SqlConnection connection = new SqlConnection(fmisConn);
+
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                command.Parameters.AddWithValue("@to", to);
+                command.Parameters.AddWithValue("@adno", adno);
+                connection.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                da.Fill(rec);
+                connection.Close();
+                da.Dispose();
+            }
+            return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
+        }
+
         #endregion
     }
 }

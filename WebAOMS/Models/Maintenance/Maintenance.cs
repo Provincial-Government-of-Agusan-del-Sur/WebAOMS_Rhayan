@@ -63,6 +63,7 @@ namespace WebAOMS.Models.Maintenance
         public string CheckDate { get; set; }
         public string Name { get; set; }
         public double ChkAmount { get; set; }
+        public string Filename { get; set; }
     }
 
 
