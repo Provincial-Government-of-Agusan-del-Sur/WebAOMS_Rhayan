@@ -2076,7 +2076,7 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             double totalMoney = 0.00;
             DataTable rec;
             rec = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["pmisDBconnstring"].ToString(), System.Data.CommandType.Text,
-            "exec [epay].[usp_get_atm_AdviceAcc_employee_list_for_bank] " + bankid + ",'" + to + "'").Tables[0];
+            "exec [epay].[usp_get_atm_AdviceAcc_employee_list_for_bank] " + bankid + ",'" + to + "','"+ cntrlno + "'").Tables[0];
             if (rec.Rows.Count > 0)
             {
                 foreach (DataRow rw in rec.Rows)
@@ -2190,7 +2190,35 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             }
             return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
         }
+        public ActionResult searchadvice_details(DateTime to, string adno)
+        {
+            string cmdStr = "select * from [Accounting].[ufn_AA_get_transaction_acic_printed] (@to,@adno) ";
+            SqlConnection connection = new SqlConnection(fmisConn);
 
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                command.Parameters.AddWithValue("@to", to);
+                command.Parameters.AddWithValue("@adno", adno);
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows == true)
+                {
+                    while (reader.Read())
+                    {
+                        if (Convert.ToInt32(reader["P1"]) != 0 && Convert.ToInt32(reader["Prepbal"]) == 0) { // all printed
+                            return Json(new {code = 6, statusName = "This advice number has already generated an ACIC file." });
+                        }
+                        else if (Convert.ToInt32(reader["P1"]) != 0 && Convert.ToInt32(reader["Prepbal"]) != 0)
+                        {
+                            return Json(new { code = 6, statusName = "One or more payees under this advice number have already generated an ACIC file." });
+                        }
+                    }
+                }
+                connection.Close();
+            }
+            return Json(new { code = 5, statusName = "" });
+        }
         #endregion
     }
 }

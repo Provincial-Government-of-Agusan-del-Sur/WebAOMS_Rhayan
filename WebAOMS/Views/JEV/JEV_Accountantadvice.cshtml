@@ -6,7 +6,7 @@
 }
 
 <script>
-    
+    var mg = new mgsInfo()
 </script>
 <div class="box">
     <div class="box-head">
@@ -74,29 +74,56 @@
                     </div>
                 </div>
                 <script>
-                 $('#txt_search_dvno').on('keyup', function (e) {
-                var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
-                if (SelectedTabIndex == 0) {
-                    var gridData = $("#grid_transactions").data("kendoGrid");
-                    if ($('#txt_search_dvno').val() == "") {
-                        gridData.dataSource.filter({});
+                $('#txt_search_dvno').on('keyup', function (e) {
+                    var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
+
+                    if (SelectedTabIndex == 0) {
+
+                        var gridData = $("#grid_transactions").data("kendoGrid");
+                        var value = $('#txt_search_dvno').val();
+
+                        if (value == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+
+                            gridData.dataSource.filter({
+                                logic: "or",
+                                filters: [
+                                    { field: "AdviceNo", operator: "contains", value: value },
+                                    { field: "ChkBankAccntNo", operator: "contains", value: value },
+                                    { field: "Checkno", operator: "contains", value: value },
+                                    { field: "Name", operator: "contains", value: value }
+                                ]
+                            });
+
+                            gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                        }
                     }
                     else {
-                        ISfn.applyFilter("AdviceNo", $('#txt_search_dvno').val(), 'grid_transactions'),
-                        //ISfn.applyFilter("Particular", $('#txt_search_dvno').val(), 'grid_transactions')
-                        gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                        var gridData = $("#grid_transactions_acic").data("kendoGrid");
+                        var value = $('#txt_search_dvno').val();
+
+                        if (value == "") {
+                            gridData.dataSource.filter({});
+                        }
+                        else {
+
+                            gridData.dataSource.filter({
+                                logic: "or",
+                                filters: [
+                                    { field: "AdviceNo", operator: "contains", value: value },
+                                    { field: "ChkBankAccntNo", operator: "contains", value: value },
+                                    { field: "Checkno", operator: "contains", value: value },
+                                    { field: "Name", operator: "contains", value: value },
+                                    { field: "Filename", operator: "contains", value: value }
+                                ]
+                            });
+
+                            gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                        }
                     }
-                }
-                else {
-                    var gridDatav2 = $("#grid_transactions_acic").data("kendoGrid");
-                    if ($('#txt_search_dvno').val() == "") {
-                        gridDatav2.dataSource.filter({});
-                    }
-                    else {
-                        ISfn.applyFilter("AdviceNo", $('#txt_search_dvno').val(), 'grid_transactions_acic')
-                        gridDatav2.dataSource.sort({ field: "Name", dir: "asc" });
-                    }
-                }
+                
             })
             function para_advice() {
                 var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
@@ -104,62 +131,74 @@
             }
             function param_adno() {
                 var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
-                if (SelectedTabIndex == 0) {
-                    grid_refresh();
-                }
-                else {
-                    grid_refresh_acic();
-                }
-            }
+                var adno = $('#drpadviceacc').data("kendoDropDownList").value();
+                var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
 
-            function para_liaison (){
-                return { officeid: $("#officeId").data("kendoDropDownList").value() }
-            }
-                function param_dateadvice(){
-                    $("#drpadviceacc").data("kendoDropDownList").value("");
-                    $("#drpadviceacc").data("kendoDropDownList").text("");
-                    $("#drpadviceacc").data("kendoDropDownList").dataSource.data([]);
-                    var r_l = $("#drpadviceacc").data("kendoDropDownList")
-                    r_l.dataSource.read();
-                    grid_refresh();
-                }
-                function grid_refresh() {
-                    var gridData = $("#grid_transactions").data("kendoGrid");
-                    gridData.dataSource.read();
-                }
-                function grid_refresh_acic() {
-                    var gridData = $("#grid_transactions_acic").data("kendoGrid");
-                    gridData.dataSource.read();
-                }
-                function para_drpdwn() {
-                    var drpData = $("#drpadviceacc").data("kendoDropDownList");
-                    drpData.dataSource.read();
-                }
-                function para_transaction() {
-                    var to = $('#dtp_to').data('kendoDatePicker').value();
-                    var adno = $('#drpadviceacc').data("kendoDropDownList").value();
-                    return {
-                        to: to,
-                        adno:adno
+                $.post('@Url.Action("searchadvice_details", "JEV")', {to:to, adno: adno }, function (r) {
+                    stopSpin()
+                    if (r.code == "6") {
+                        mg.warning("" + r.statusName + "")
                     }
-                }
-                function fn_refresher(e) {
-                    var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
-
                     if (SelectedTabIndex == 0) {
-                        $("#grid_transactions").data("kendoGrid").dataSource.read();
+                        grid_refresh();
                     }
-                    else if (SelectedTabIndex == 1) {
-                        $("#grid_transactions_acic").data("kendoGrid").dataSource.read();
+                    else {
+                        grid_refresh_acic();
                     }
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    mg.warning("" + textStatus + "")
+                });
 
+               
+            }
+
+            function param_dateadvice(){
+                $("#drpadviceacc").data("kendoDropDownList").value("");
+                $("#drpadviceacc").data("kendoDropDownList").text("");
+                $("#drpadviceacc").data("kendoDropDownList").dataSource.data([]);
+                var r_l = $("#drpadviceacc").data("kendoDropDownList")
+                r_l.dataSource.read();
+                grid_refresh();
+            }
+            function grid_refresh() {
+                var gridData = $("#grid_transactions").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+            function grid_refresh_acic() {
+                var gridData = $("#grid_transactions_acic").data("kendoGrid");
+                gridData.dataSource.read();
+            }
+            function para_drpdwn() {
+                var drpData = $("#drpadviceacc").data("kendoDropDownList");
+                drpData.dataSource.read();
+            }
+            function para_transaction() {
+                var to = $('#dtp_to').data('kendoDatePicker').value();
+                var adno = $('#drpadviceacc').data("kendoDropDownList").value();
+                return {
+                    to: to,
+                    adno:adno
+                }
+            }
+            function fn_refresher(e) {
+                var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
+
+                if (SelectedTabIndex == 0) {
+                    $("#grid_transactions").data("kendoGrid").dataSource.read();
+                }
+                else if (SelectedTabIndex == 1) {
+                    $("#grid_transactions_acic").data("kendoGrid").dataSource.read();
                 }
 
-                $("#export").click(function (e) {
-                    var grid = $("#grid_transactions").data("kendoGrid");
-                    grid.saveAsExcel();
-                });
-                </script>
+            }
+
+            $("#export").click(function (e) {
+                var grid = $("#grid_transactions").data("kendoGrid");
+                grid.saveAsExcel();
+            });
+            </script>
                 <div class="row" style="margin-top:5px">
                     @(Html.Kendo().TabStrip()
                       .Name("tabstrip")
