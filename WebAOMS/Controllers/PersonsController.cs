@@ -36,7 +36,7 @@ namespace WebAOMS.Controllers
         public ActionResult data_grid_persons([DataSourceRequest] DataSourceRequest request, int groupid)
         {
             IEnumerable<vw_Persons> _persons;
-            _persons = fmisdb.vw_Persons.Where(w => w.person_group_id == groupid);
+            _persons = fmisdb.vw_Persons.Where(w => w.person_group_id == groupid).OrderBy(y => y.Name);
             var jsonResult = Json(_persons.ToDataSourceResult(request));
             jsonResult.MaxJsonLength = int.MaxValue;
             return jsonResult;

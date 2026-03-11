@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Accountant Advice Preparation";
-    ViewBag.Title_mini = "Accountant Advice Preparation";
+    ViewBag.Title_mini = "Accountant Advice ACIC Generation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,11 +11,10 @@
 <div class="box">
     <div class="box-head">
         <header>
-            <h4 class="text-bold">Transaction List</h4>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
         </header>
         <div class="tools">
             <div class="btn-group ">
-                <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
                 <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
                 <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
                 <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
@@ -23,31 +22,47 @@
         </div>
         <hr />
     </div>
-    <div class="box-body">
+</div>
+    <div class="box">
+        <div class="box-head">
+            <header>
+                <h4 class="text-bold">Transaction List</h4>
+            </header>
+            <div class="tools">
+                <div class="btn-group ">
+                    <a id="export" href="#" class="btn btn-equal btn-sm btn-excel" style="width:100px"><i class="fa fa-file"></i> Export to excel</a>
+                    <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+                    <a class="btn btn-equal btn-sm btn-close"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="box-body">
 
-        <div class="box">
-            <div class="box-body" style="padding-top:10px">
-                <div class="row">
-                    <div class="col-md-2">
-                        Date of Advice
-                    </div>
-                    <div class="col-md-9">
-                        @(Html.Kendo().DatePicker()
+            <div class="box">
+                <div class="box-body" style="padding-top:10px">
+                    <div class="row">
+                        <div class="col-md-2">
+                            Date of Advice
+                        </div>
+                        <div class="col-md-9">
+                            @(Html.Kendo().DatePicker()
                         .Name("dtp_to")
                         .Format("MMMM dd, yyyy")
                         .Value(DateTime.Now)
                         .HtmlAttributes(new { type = "text" })
                         .Events(ev => ev.Change("param_dateadvice"))
-                        )
+                            )
+                        </div>
                     </div>
-                </div>
 
-                <div class="row" style="margin-top:10px;">
-                    <div class="col-md-2">
-                        Advice No.
-                    </div>
-                    <div class="col-md-6">
-                        @(Html.Kendo().DropDownList()
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-md-2">
+                            Advice No.
+                        </div>
+                        <div class="col-md-6">
+                            @(Html.Kendo().DropDownList()
                         .Name("drpadviceacc")
                         .OptionLabel("Select Advice No.")
                         .DataTextField("AdviceNo")
@@ -63,144 +78,144 @@
                                 read.Action("DataSource_GetAdviceNo", "JEV").Data("para_advice"); ;
                             });
                         }))
-                    </div>
-                    <div class="col-md-4">
-                        <div class="input-group" style="padding-bottom:5px!important">
-                            <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search Advice No.">
-                            <span class="input-group-btn">
-                                <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
-                            </span>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group" style="padding-bottom:5px!important">
+                                <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search Advice No.">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <script>
-                $('#txt_search_dvno').on('keyup', function (e) {
-                    var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
+                    <script>
+                        $('#txt_search_dvno').on('keyup', function (e) {
+                            var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
 
-                    if (SelectedTabIndex == 0) {
+                            if (SelectedTabIndex == 0) {
 
-                        var gridData = $("#grid_transactions").data("kendoGrid");
-                        var value = $('#txt_search_dvno').val();
+                                var gridData = $("#grid_transactions").data("kendoGrid");
+                                var value = $('#txt_search_dvno').val();
 
-                        if (value == "") {
-                            gridData.dataSource.filter({});
+                                if (value == "") {
+                                    gridData.dataSource.filter({});
+                                }
+                                else {
+
+                                    gridData.dataSource.filter({
+                                        logic: "or",
+                                        filters: [
+                                            { field: "AdviceNo", operator: "contains", value: value },
+                                            { field: "ChkBankAccntNo", operator: "contains", value: value },
+                                            { field: "Checkno", operator: "contains", value: value },
+                                            { field: "Name", operator: "contains", value: value }
+                                        ]
+                                    });
+
+                                    gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                                }
+                            }
+                            else {
+                                var gridData = $("#grid_transactions_acic").data("kendoGrid");
+                                var value = $('#txt_search_dvno').val();
+
+                                if (value == "") {
+                                    gridData.dataSource.filter({});
+                                }
+                                else {
+
+                                    gridData.dataSource.filter({
+                                        logic: "or",
+                                        filters: [
+                                            { field: "AdviceNo", operator: "contains", value: value },
+                                            { field: "ChkBankAccntNo", operator: "contains", value: value },
+                                            { field: "Checkno", operator: "contains", value: value },
+                                            { field: "Name", operator: "contains", value: value },
+                                            { field: "Filename", operator: "contains", value: value }
+                                        ]
+                                    });
+
+                                    gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                                }
+                            }
+
+                        })
+                        function para_advice() {
+                            var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
+                            return { to: to }
                         }
-                        else {
+                        function param_adno() {
+                            var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
+                            var adno = $('#drpadviceacc').data("kendoDropDownList").value();
+                            var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
 
-                            gridData.dataSource.filter({
-                                logic: "or",
-                                filters: [
-                                    { field: "AdviceNo", operator: "contains", value: value },
-                                    { field: "ChkBankAccntNo", operator: "contains", value: value },
-                                    { field: "Checkno", operator: "contains", value: value },
-                                    { field: "Name", operator: "contains", value: value }
-                                ]
+                            $.post('@Url.Action("searchadvice_details", "JEV")', { to: to, adno: adno }, function (r) {
+                                stopSpin()
+                                if (r.code == "6") {
+                                    mg.warning("" + r.statusName + "")
+                                }
+                                if (SelectedTabIndex == 0) {
+                                    grid_refresh();
+                                }
+                                else {
+                                    grid_refresh_acic();
+                                }
+                            })
+                            .fail(function (jqXHR, textStatus, error) {
+                                stopSpin()
+                                mg.warning("" + textStatus + "")
                             });
 
-                            gridData.dataSource.sort({ field: "Name", dir: "asc" });
+
                         }
-                    }
-                    else {
-                        var gridData = $("#grid_transactions_acic").data("kendoGrid");
-                        var value = $('#txt_search_dvno').val();
 
-                        if (value == "") {
-                            gridData.dataSource.filter({});
+                        function param_dateadvice() {
+                            $("#drpadviceacc").data("kendoDropDownList").value("");
+                            $("#drpadviceacc").data("kendoDropDownList").text("");
+                            $("#drpadviceacc").data("kendoDropDownList").dataSource.data([]);
+                            var r_l = $("#drpadviceacc").data("kendoDropDownList")
+                            r_l.dataSource.read();
+                            grid_refresh();
                         }
-                        else {
-
-                            gridData.dataSource.filter({
-                                logic: "or",
-                                filters: [
-                                    { field: "AdviceNo", operator: "contains", value: value },
-                                    { field: "ChkBankAccntNo", operator: "contains", value: value },
-                                    { field: "Checkno", operator: "contains", value: value },
-                                    { field: "Name", operator: "contains", value: value },
-                                    { field: "Filename", operator: "contains", value: value }
-                                ]
-                            });
-
-                            gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                        function grid_refresh() {
+                            var gridData = $("#grid_transactions").data("kendoGrid");
+                            gridData.dataSource.read();
                         }
-                    }
-                
-            })
-            function para_advice() {
-                var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
-                return { to: to }
-            }
-            function param_adno() {
-                var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
-                var adno = $('#drpadviceacc').data("kendoDropDownList").value();
-                var to = kendo.toString($("#dtp_to").data('kendoDatePicker').value(), "MM/dd/yyyy");
+                        function grid_refresh_acic() {
+                            var gridData = $("#grid_transactions_acic").data("kendoGrid");
+                            gridData.dataSource.read();
+                        }
+                        function para_drpdwn() {
+                            var drpData = $("#drpadviceacc").data("kendoDropDownList");
+                            drpData.dataSource.read();
+                        }
+                        function para_transaction() {
+                            var to = $('#dtp_to').data('kendoDatePicker').value();
+                            var adno = $('#drpadviceacc').data("kendoDropDownList").value();
+                            return {
+                                to: to,
+                                adno: adno
+                            }
+                        }
+                        function fn_refresher(e) {
+                            var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
 
-                $.post('@Url.Action("searchadvice_details", "JEV")', {to:to, adno: adno }, function (r) {
-                    stopSpin()
-                    if (r.code == "6") {
-                        mg.warning("" + r.statusName + "")
-                    }
-                    if (SelectedTabIndex == 0) {
-                        grid_refresh();
-                    }
-                    else {
-                        grid_refresh_acic();
-                    }
-                })
-                .fail(function (jqXHR, textStatus, error) {
-                    stopSpin()
-                    mg.warning("" + textStatus + "")
-                });
+                            if (SelectedTabIndex == 0) {
+                                $("#grid_transactions").data("kendoGrid").dataSource.read();
+                            }
+                            else if (SelectedTabIndex == 1) {
+                                $("#grid_transactions_acic").data("kendoGrid").dataSource.read();
+                            }
 
-               
-            }
+                        }
 
-            function param_dateadvice(){
-                $("#drpadviceacc").data("kendoDropDownList").value("");
-                $("#drpadviceacc").data("kendoDropDownList").text("");
-                $("#drpadviceacc").data("kendoDropDownList").dataSource.data([]);
-                var r_l = $("#drpadviceacc").data("kendoDropDownList")
-                r_l.dataSource.read();
-                grid_refresh();
-            }
-            function grid_refresh() {
-                var gridData = $("#grid_transactions").data("kendoGrid");
-                gridData.dataSource.read();
-            }
-            function grid_refresh_acic() {
-                var gridData = $("#grid_transactions_acic").data("kendoGrid");
-                gridData.dataSource.read();
-            }
-            function para_drpdwn() {
-                var drpData = $("#drpadviceacc").data("kendoDropDownList");
-                drpData.dataSource.read();
-            }
-            function para_transaction() {
-                var to = $('#dtp_to').data('kendoDatePicker').value();
-                var adno = $('#drpadviceacc').data("kendoDropDownList").value();
-                return {
-                    to: to,
-                    adno:adno
-                }
-            }
-            function fn_refresher(e) {
-                var SelectedTabIndex = $("#tabstrip").data("kendoTabStrip").select().index();
-
-                if (SelectedTabIndex == 0) {
-                    $("#grid_transactions").data("kendoGrid").dataSource.read();
-                }
-                else if (SelectedTabIndex == 1) {
-                    $("#grid_transactions_acic").data("kendoGrid").dataSource.read();
-                }
-
-            }
-
-            $("#export").click(function (e) {
-                var grid = $("#grid_transactions").data("kendoGrid");
-                grid.saveAsExcel();
-            });
-            </script>
-                <div class="row" style="margin-top:5px">
-                    @(Html.Kendo().TabStrip()
+                        $("#export").click(function (e) {
+                            var grid = $("#grid_transactions").data("kendoGrid");
+                            grid.saveAsExcel();
+                        });
+                    </script>
+                    <div class="row" style="margin-top:5px">
+                        @(Html.Kendo().TabStrip()
                       .Name("tabstrip")
                       .Navigatable(false)
                       .Animation(animation =>
@@ -212,48 +227,48 @@
                           tabstrip.Add().Text("Generated").LoadContentFrom("_JEV_Entries_T2", "Jev");
                       })
                       .Events(e => e.Activate("fn_refresher"))
-                    )
+                        )
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="modal-footer" id="generateacicfile_id" style="margin-top:-20px;">
-            <button class="btn btn-success" onclick="downloadATMFile()">   <i class="fa fa-file"></i> Generate ACIC File</button>
+            <div class="modal-footer" id="generateacicfile_id" style="margin-top:-20px;">
+                <button class="btn btn-success" onclick="downloadATMFile()">   <i class="fa fa-file"></i> Generate ACIC File</button>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-   
-    function downloadATMFile() {
-       // var from = $('#dtp_from').data('kendoDatePicker').value();
-        var to = $('#dtp_to').data('kendoDatePicker').value();
+    <script>
 
-      //  if (from) from = kendo.toString(from, "yyyy-MM-dd");
-        if (to) to = kendo.toString(to, "yyyy-MM-dd");
+        function downloadATMFile() {
+            // var from = $('#dtp_from').data('kendoDatePicker').value();
+            var to = $('#dtp_to').data('kendoDatePicker').value();
 
-        var idsToSend = [];
-        var grid = $("#grid_transactions").data("kendoGrid")
-        var ds = grid.dataSource.view();
-        for (var i = 0; i < ds.length; i++) {
-            var row = grid.table.find("tr[data-uid='" + ds[i].uid + "']");
-            var checkbox = $(row).find(".checkbox");
-            if (checkbox.is(":checked")) {
-                idsToSend.push(ds[i].jevid); //loops
+            //  if (from) from = kendo.toString(from, "yyyy-MM-dd");
+            if (to) to = kendo.toString(to, "yyyy-MM-dd");
+
+            var idsToSend = [];
+            var grid = $("#grid_transactions").data("kendoGrid")
+            var ds = grid.dataSource.view();
+            for (var i = 0; i < ds.length; i++) {
+                var row = grid.table.find("tr[data-uid='" + ds[i].uid + "']");
+                var checkbox = $(row).find(".checkbox");
+                if (checkbox.is(":checked")) {
+                    idsToSend.push(ds[i].jevid); //loops
+                }
+            }
+            if (idsToSend == "") {
+                toastr.warning('Please tick the checkbox first!', 'System Warning')
+            }
+            else {
+                @*$.post('@Url.Action("Save_transaction_through_checkno", "JEV")', { checkno: checkno, jevid: $("#txt_jevid").val() }*@
+                $.post('@Url.Action("Save_GenerateACICFile", "JEV")', { trnno: idsToSend, to: to }
+                , function (r) {
+                    stopSpin()
+                    grid_refresh()
+                })
             }
         }
-        if (idsToSend == "" ) {
-            toastr.warning('Please tick the checkbox first!', 'System Warning')
+        function CheckAll_Prep(e) {
+            $("#grid_transactions tbody input:checkbox").prop("checked", e.checked);
         }
-        else {
-            @*$.post('@Url.Action("Save_transaction_through_checkno", "JEV")', { checkno: checkno, jevid: $("#txt_jevid").val() }*@
-            $.post('@Url.Action("Save_GenerateACICFile", "JEV")', { trnno: idsToSend, to: to }
-            , function (r) {
-                stopSpin()
-                grid_refresh()
-            })
-        }
-    }
-    function CheckAll_Prep(e) {
-        $("#grid_transactions tbody input:checkbox").prop("checked", e.checked);
-    }
-</script>
+    </script>

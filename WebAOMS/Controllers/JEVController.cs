@@ -2084,16 +2084,16 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
                     string_with_your_data = string_with_your_data + rw["DataString"].ToString() + "          " + Environment.NewLine;
                    // totalMoney = Convert.ToDouble(totalMoney + Convert.ToDouble(rw["Amount"]));
                     amount = Convert.ToDecimal(rw["Amount"]);
-                    //accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
+                    accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
                     //TotalCheckFieldHash = TotalCheckFieldHash + (amount * accountnosix);
-                   // accountnosix = Convert.ToDecimal(rw["AccountNoSix"]);
-                    TotalCheckFieldHash = TotalCheckFieldHash + (amount * 100080);
+                    //accountnosix = Convert.ToDecimal("100080");
+                    TotalCheckFieldHash = TotalCheckFieldHash + (amount * accountnosix);
                     //TOTALAccntNoHash = TOTALAccntNoHash + Convert.ToDecimal(rw["accountNo"]);
                 }
             }
             intRecCount = rec.Rows.Count;
             rec.Dispose();
-            header_data = companyname + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("0000000") + totmoney.ToString("0000000000000000") + Environment.NewLine;
+            header_data = companyname + ((TotalCheckFieldHash * 100) + (intRecCount * 200)).ToString("00000000000000000000") + intRecCount.ToString("000000") + totmoney.ToString("0000000000000000") + Environment.NewLine;
             //header_data = companyname + (totalMoney * 100).ToString("000000000000000") + (TotalCheckFieldHash * 100).ToString("0000000000000000000") + intRecCount.ToString("00000") + " " + ATMBatchNo.ToString("00000") + Environment.NewLine;
 
             string_with_your_data = string_with_your_data + header_data;
