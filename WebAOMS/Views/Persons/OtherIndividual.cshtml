@@ -20,34 +20,65 @@
                         <span>Group Name</span>
                     </span>
                 </div>
-                <div class="byexym liZmnb">
-                    <div class="col-md-6 no-padding">
-                        @(Html.Kendo().DropDownList()
-                        .Name("ddp_person_group_id")
-                        .DataTextField("GroupName")
-                        .DataValueField("person_group_id")
-                        .HtmlAttributes(new { style = "width:100%" })
-                        .Filter("contains")
-                        .SelectedIndex(0)
-                        .DataSource(source =>
-                        {
-                            source.Read(read =>
-                            {
-                                read.Action("get_person_group", "Persons");
-                            })
-                            .ServerFiltering(true);
-                        })
-                    .Events(e =>
+               @* <div class="byexym liZmnb">*@
+                <div class="col-md-7 no-padding">
+                    @(Html.Kendo().DropDownList()
+                    .Name("ddp_person_group_id")
+                    .DataTextField("GroupName")
+                    .DataValueField("person_group_id")
+                    .HtmlAttributes(new { style = "width:75%" })
+                    .Filter("contains")
+                    .SelectedIndex(0)
+                    .DataSource(source =>
                     {
-                        e.Change("r_grid").DataBound("r_grid");
+                        source.Read(read =>
+                        {
+                            read.Action("get_person_group", "Persons");
+                        })
+                        .ServerFiltering(true);
                     })
-                        )
-                    </div>
+                .Events(e =>
+                {
+                    e.Change("r_grid").DataBound("r_grid");
+                })
+                    )
+                </div>
                    
+                @*</div>*@
+                <div class="col-md-5 no-padding">
+                    <div class="input-group" style="padding-bottom:0px!important">
+                        <input id="txt_search_dvno" type="text" class="form-control navbar-input" placeholder="Search something...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-equal" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
                 </div>
             </div>
+           
 
-                <script>
+            <script>
+            $('#txt_search_dvno').on('keyup', function (e) {
+                var gridData = $("#grid_persons").data("kendoGrid");
+                var value = $('#txt_search_dvno').val();
+
+                if (value == "") {
+                    gridData.dataSource.filter({});
+                }
+                else {
+
+                    gridData.dataSource.filter({
+                        logic: "or",
+                        filters: [
+                            { field: "Name", operator: "contains", value: value },
+                            { field: "AddressName", operator: "contains", value: value },
+                            { field: "ClaimantCode", operator: "contains", value: value }
+                        ]
+                    });
+
+                    gridData.dataSource.sort({ field: "Name", dir: "asc" });
+                }
+
+            })
             function para_person (){
                 return { groupid: $("#ddp_person_group_id").data("kendoDropDownList").value() }
             }
@@ -55,7 +86,7 @@
                 var grid = $("#grid_persons").data("kendoGrid");
                 grid.dataSource.read();
             }
-                </script>
+            </script>
         </div>
         <div class="row">
             @(Html.Kendo().Grid<WebAOMS.Models.vw_Persons>()
