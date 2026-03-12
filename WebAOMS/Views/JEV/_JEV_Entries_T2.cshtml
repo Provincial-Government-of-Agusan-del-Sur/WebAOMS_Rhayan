@@ -10,6 +10,12 @@
         columns.Bound(m => m.Name).Width(190).Title("Payee");
         columns.Bound(m => m.ChkAmount).Title("Check Amount").Width(80).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
         columns.Bound(m => m.Filename).Width(150).Title("File Name");
+        columns.Template(@<text></text>)
+            .Width(30)
+            .HtmlAttributes(new { style = "text-align:left;font-size:10" })
+            .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" <button data-original-title=\"recompute\" type=\"button\" onclick=\"warn_delete_doc_attach('#=AdviceNo#')\" class=\"btn btn-xs btn-danger btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-trash\"></i></button>");
+
+
     })
     .AutoBind(true)
     .HtmlAttributes(new { style = "height: 350px;" })

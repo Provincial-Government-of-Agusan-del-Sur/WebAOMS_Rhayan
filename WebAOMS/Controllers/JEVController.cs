@@ -2219,6 +2219,32 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             }
             return Json(new { code = 5, statusName = "" });
         }
+        public ActionResult delete_adviceno(string AdviceNo)
+        {
+            try
+            {
+                Int32 userid = Convert.ToInt32(USER.C_eID);
+                SqlConnection connection = new SqlConnection(fmisConn);
+                string cmdStr = "execute [usp_return_accountantadvice_acic] @AdviceNo,@userid";
+                using (SqlCommand command = new SqlCommand(cmdStr, connection))
+                {
+                    command.Parameters.Add("@AdviceNo", SqlDbType.VarChar).Value = AdviceNo;
+                    command.Parameters.Add("@userid", SqlDbType.Int).Value = userid;
+                    connection.Open();
+                    int rows = command.ExecuteNonQuery();
+                    connection.Close();
+                    return Json(new { code = 6, statusName = "Successfully Deleted!" });
+                }
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    code = e.HResult,
+                    statusName = e.Message
+                });
+            }
+        }
         #endregion
     }
 }

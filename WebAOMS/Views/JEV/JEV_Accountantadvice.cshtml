@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Accountant Advice Preparation";
-    ViewBag.Title_mini = "Accountant Advice ACIC Generation";
+    ViewBag.Title_mini = "Accountant Advice- ACIC Generation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -175,7 +175,7 @@
                             $("#drpadviceacc").data("kendoDropDownList").dataSource.data([]);
                             var r_l = $("#drpadviceacc").data("kendoDropDownList")
                             r_l.dataSource.read();
-                            grid_refresh();
+                            fn_refresher()
                         }
                         function grid_refresh() {
                             var gridData = $("#grid_transactions").data("kendoGrid");
@@ -270,5 +270,32 @@
         }
         function CheckAll_Prep(e) {
             $("#grid_transactions tbody input:checkbox").prop("checked", e.checked);
+        }
+        function warn_delete_doc_attach(AdviceNo) {
+            $(".modal").addClass("zdex");
+            mg.boxYesNo("Are you sure you want to delete advice number <b>" + AdviceNo + "</b> from the generated ACIC file?", "delete_adno('" + AdviceNo + "')")
+        }
+        function delete_adno(AdviceNo) {
+            startSpin()
+            $.post('@Url.Action("delete_adviceno", "JEV")',
+                { AdviceNo: AdviceNo }
+            , function (r) {
+                if (r.code == 6) {
+                    toastr.success(r.statusName, 'System Message')
+                    stopSpin()
+                    grid_refresh_acic();
+                    $('#modal_meesage').modal('hide');
+                }
+                else {
+                    stopSpin()
+                    toastr.warning(r.statusName, 'System Message');
+                }
+                zdex()
+            })
+            .fail(function (jqXHR, textStatus, error) {
+                //stopSpin()
+                zdex()
+                toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
+            });
         }
     </script>
