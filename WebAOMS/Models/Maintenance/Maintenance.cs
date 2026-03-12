@@ -65,6 +65,21 @@ namespace WebAOMS.Models.Maintenance
         public double ChkAmount { get; set; }
         public string Filename { get; set; }
     }
+    public class grid_monitoring_activitydesign
+    {
+        public long doc_form_id { get; set; }
+        public string Office { get; set; }
+        public string Name { get; set; }
+        public string Particular { get; set; }
+        public double Amount { get; set; }
+        public string DTE { get; set; }
+        public string inclusivedte { get; set; }
+        public string refno  { get; set; }
+        public string Status_name { get; set; }
+        public int status_code { get; set; }
+        public int UserID { get; set; }
 
+
+    }
 
 }

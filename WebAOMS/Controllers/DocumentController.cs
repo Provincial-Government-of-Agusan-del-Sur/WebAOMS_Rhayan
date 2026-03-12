@@ -3155,6 +3155,43 @@ namespace WebAOMS.Controllers
             //}
         }
         }
+        public ActionResult data_grid_monitoring_list([DataSourceRequest] DataSourceRequest request, DateTime tdate)
+        {
+            DataTable rec = new DataTable();
+            string cmdStr = "Execute Tracking.[usp_grid_tracking_list] @tdate ";
+            SqlConnection connection = new SqlConnection(fmisConn);
+
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                
+                command.Parameters.AddWithValue("@tdate", tdate);
+                connection.Open();
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                da.Fill(rec);
+                connection.Close();
+                da.Dispose();
+            }
+            return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult grid_transaction_acic([DataSourceRequest] DataSourceRequest request, DateTime to, string adno)
+        {
+            DataTable rec = new DataTable();
+            string cmdStr = "select * from [Accounting].[ufn_AA_get_transaction_acic_generated](@to,@adno)  order by AdviceNo desc,name asc";
+            SqlConnection connection = new SqlConnection(fmisConn);
+
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                command.Parameters.AddWithValue("@to", to);
+                command.Parameters.AddWithValue("@adno", adno);
+                connection.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                da.Fill(rec);
+                connection.Close();
+                da.Dispose();
+            }
+            return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
+        }
     }
 }
 
