@@ -3158,13 +3158,14 @@ namespace WebAOMS.Controllers
         public ActionResult data_grid_monitoring_list([DataSourceRequest] DataSourceRequest request, DateTime tdate)
         {
             DataTable rec = new DataTable();
-            string cmdStr = "Execute Tracking.[usp_grid_monitoring_list] @tdate ";
+            string cmdStr = "Execute Tracking.[usp_grid_monitoring_list] @tdate,@userid ";
             SqlConnection connection = new SqlConnection(fmisConn);
 
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
                 
                 command.Parameters.AddWithValue("@tdate", tdate);
+                command.Parameters.AddWithValue("@userid", USER.C_eID);
                 connection.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
                 da.Fill(rec);
