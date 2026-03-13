@@ -50,11 +50,15 @@
 
         </script>
         <div class="row">
-            <div class="input-group control-width-large" style="padding-bottom:5px!important">
-                <input id="txt_search_name_refno"  autocomplete="off" type="text" class="form-control navbar-input" placeholder="Search...">
-                <span class="input-group-btn">
-                    <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
-                </span>
+            <div class="col-md-8">
+            </div>
+            <div class="col-md-4">
+                <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                    <input id="txt_search_name_refno" autocomplete="off" type="text" class="form-control navbar-input" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" onclick="click_search_claimant()" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -129,16 +133,16 @@
             }
 
             function param_datetogrid() {
-                grid_refresh
+                grid_refresh()
             }
 
 
         </script>
         <div class="row">
-            <div class="col-md-2">
-                File Date
+            <div class="col-md-2" style="margin-top:5px">
+                Date of Application
             </div>
-            <div class="col-md-9">
+            <div class="col-md-6">
                 @(Html.Kendo().DatePicker()
                 .Name("dtp_to")
                 .Format("MMMM dd, yyyy")
@@ -147,26 +151,26 @@
                 .Events(ev => ev.Change("param_datetogrid"))
                 )
             </div>
-        </div>
-
-        <div class="row">
-            <div class="input-group control-width-large" style="padding-bottom:5px!important">
-                <input id="txt_search_name_refno_v2" autocomplete="off" type="text" class="form-control navbar-input" placeholder="Search...">
-                <span class="input-group-btn">
-                    <button class="btn btn-equal" onclick="click_search_claimant_v2()" type="button"><i class="fa fa-search"></i></button>
-                </span>
+            <div class="col-md-4">
+                <div class="input-group control-width-large" style="padding-bottom:5px!important">
+                    <input id="txt_search_name_refno_v2" autocomplete="off" type="text" class="form-control navbar-input" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-equal" onclick="click_search_claimant_v2()" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
             </div>
         </div>
+
         <div class="row">
             @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_monitoring_activitydesign>()
         .Name("grid_monitoring_form")
         .Columns(columns =>
         {
         columns.Bound(m => m.doc_form_id).Title("Transation No").Hidden();
-        columns.Bound(m => m.refno).Title("Tracking Reference").Format("{0:n2}").Width(150).HtmlAttributes(new { style = "font-family:Courier New!important;text-align:center" });
-        columns.Bound(m => m.Office).Title("Office").Format("{0:n2}").Width(150).HtmlAttributes(new { style = "font-family:Courier New!important;text-align:center" });
+        columns.Bound(m => m.refno).Title("Tracking Reference").Format("{0:n2}").Width(100).HtmlAttributes(new { style = "font-family:Courier New!important;text-align:center" });
+        columns.Bound(m => m.Office).Title("Office").Format("{0:n2}").Width(70).HtmlAttributes(new { style = "font-family:Courier New!important;text-align:center" });
         columns.Bound(m => m.Name).Title("Liaison Officer").Width(150);
-        columns.Bound(m => m.Particular).Width(400);
+        columns.Bound(m => m.Particular).Width(300);
         columns.Template(@<text></text>)
         .Width(200).HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" }).HeaderTemplate("Status")
         .ClientTemplate("<button class=\"k-button\" onclick=\"open_document('#=refno#')\" style=\"cursor:pointer;width:100%\" >#=Status_name#</button>");
@@ -192,11 +196,11 @@
             )
         </div>
     </div>
-    <div class="box-footer">
+    @*<div class="box-footer">
         <div class="btn-group" style="padding-left:10px;padding-bottom:10px;">
             <button onclick="addnew(0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
         </div>
-    </div>
+    </div>*@
 </div>
 <script>
    function open_document(refno) {
@@ -298,10 +302,11 @@
         var $filter = new Array();
         $filter = [];
 
-        if ($('#txt_search_name_refno').val().length > 0) {
-            $filter.push({ field: "refno", operator: "contains", value: $('#txt_search_name_refno').val() }),
-            $filter.push({ field: "NameFML", operator: "contains", value: $('#txt_search_name_refno').val() }),
-            $filter.push({ field: "Particular", operator: "contains", value: $('#txt_search_name_refno').val() });
+        if ($('#txt_search_name_refno_v2').val().length > 0) {
+            $filter.push({ field: "refno", operator: "contains", value: $('#txt_search_name_refno_v2').val() }),
+            $filter.push({ field: "Office", operator: "contains", value: $('#txt_search_name_refno_v2').val() }),
+            $filter.push({ field: "Name", operator: "contains", value: $('#txt_search_name_refno_v2').val() }),
+            $filter.push({ field: "Particular", operator: "contains", value: $('#txt_search_name_refno_v2').val() });
         }
 
         $('#grid_monitoring_form').data('kendoGrid').dataSource.filter({
