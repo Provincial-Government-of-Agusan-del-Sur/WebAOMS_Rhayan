@@ -180,8 +180,9 @@
 
         })
         .HtmlAttributes(new { style = "height: 400px;" })
-         .Scrollable() // <== Enable virtualization
+        .Scrollable() // <== Enable virtualization
         .Sortable()
+        .Resizable(e => e.Columns(true))
         .Pageable(pageable => pageable
         .Refresh(true)
         .ButtonCount(10))
