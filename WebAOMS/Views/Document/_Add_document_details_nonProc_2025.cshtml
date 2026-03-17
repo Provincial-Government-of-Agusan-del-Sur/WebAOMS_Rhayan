@@ -255,7 +255,8 @@
                 <script>
 
                     function para_wfp(){
-                        return {year:2026,officeid:$("#officeChargewfp").data("kendoDropDownList").value(),isPLC:true}
+                        var tyear=@GlobalFunctions.getCurrentYear();
+                        return {year:tyear,officeid:$("#officeChargewfp").data("kendoDropDownList").value(),isPLC:true}
                     }
 
                     function r_wfp(){
@@ -456,9 +457,10 @@
                         $("#insertBtn").click(function(event) {
 
                             var selectedDate = $("#datepicker").data("kendoDatePicker").value();
+                            var tyear=@GlobalFunctions.getCurrentYear();
                             if (selectedDate) {
-                                if (selectedDate.getFullYear() !== 2026) {
-                                    toastr.warning("Only dates in 2026 are allowed.", 'System Message');
+                                if (selectedDate.getFullYear() != tyear) {
+                                    toastr.warning("Only dates in "+ tyear +" are allowed.", 'System Message');
                                 } else {
                                     insertData(selectedDate); // Proceed with your data insertion logic
                                 }
