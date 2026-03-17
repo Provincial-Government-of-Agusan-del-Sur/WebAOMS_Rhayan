@@ -232,14 +232,14 @@
                 </div>
             </div>
             <div class="modal-footer" id="generateacicfile_id" style="margin-top:-20px;">
-                <button class="btn btn-success" onclick="downloadATMFile()">   <i class="fa fa-file"></i> Generate ACIC File</button>
+                <button class="btn btn-success" onclick="generateACICfile()">   <i class="fa fa-file"></i> Generate ACIC File</button>
             </div>
         </div>
     </div>
 
     <script>
 
-        function downloadATMFile() {
+        function generateACICfile() {
             // var from = $('#dtp_from').data('kendoDatePicker').value();
             var to = $('#dtp_to').data('kendoDatePicker').value();
 
@@ -260,7 +260,6 @@
                 toastr.warning('Please tick the checkbox first!', 'System Warning')
             }
             else {
-                @*$.post('@Url.Action("Save_transaction_through_checkno", "JEV")', { checkno: checkno, jevid: $("#txt_jevid").val() }*@
                 $.post('@Url.Action("Save_GenerateACICFile", "JEV")', { trnno: idsToSend, to: to }
                 , function (r) {
                     stopSpin()
