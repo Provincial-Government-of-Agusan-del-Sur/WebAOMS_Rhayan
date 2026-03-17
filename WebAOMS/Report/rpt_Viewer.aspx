@@ -12,27 +12,27 @@
 </head>
     <body style="height:100%">
        
-        <form id="form1" runat="server">
+    <form id="form1" runat="server">
               <telerik:ReportViewer ID="rp" runat="server" Resources-PrintToolTip ="true"  ShowExportGroup="true"  style=" width:100%;height:2000px;margin:auto" ViewMode="Interactive"></telerik:ReportViewer>
-        </form>
+        <%--</form>--%>
          <script type="text/javascript">
-            $(document).ready(function () {
-                document.body.style.overflow = "hidden";
-                var viewportWidth = $(window).width();
-                var viewportHeight = $(window).height();
-                document.body.style.overflow = "";
-                $("#rp").height(viewportHeight-20)
-            })            
+            //$(document).ready(function () {
+            //    document.body.style.overflow = "hidden";
+            //    var viewportWidth = $(window).width();
+            //    var viewportHeight = $(window).height();
+            //    document.body.style.overflow = "";
+            //    $("#rp").height(viewportHeight-20)
+            //})            
 
             rp.prototype.PrintReport = function () {
 
             switch (this.defaultPrintFormat) {
 
-            case "Default":
+            //case "Default":
 
-            this.DefaultPrint();
+            //this.DefaultPrint();
 
-            break;
+            //break;
 
             case "PDF":
 
@@ -48,6 +48,7 @@
 
             };
 
-</script>
+        </script>
+    </form>
     </body>
 </html>
