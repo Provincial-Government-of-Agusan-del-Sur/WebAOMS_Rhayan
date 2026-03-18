@@ -1148,10 +1148,11 @@
     <Content Include="Content\akot\2018.1.1\toastr.css" />
     <Content Include="Content\akot\croppie\croppie.css" />
     <Content Include="Content\Company Image\CompanyLogo.png" />
+    <Content Include="Content\Company Image\CompanyLogo_v1.png" />
     <Content Include="Content\Company Image\CompanyLogoOld.png" />
     <Content Include="Content\Company Image\System.png" />
     <Content Include="Content\CompanyLogoOld.png" />
-    <Content Include="Content\CompanyLogo.png" />
+    <Content Include="Content\CompanyLogo_v1.png" />
     <Content Include="Content\favicon.ico" />
     <Content Include="Content\kendo\2019.3.1023\16x16\Chart.png" />
     <Content Include="Content\kendo\2019.3.1023\16x16\ComboBox.png" />
@@ -2175,10 +2176,12 @@
     <Content Include="Content\office\1.png" />
     <Content Include="Content\office\12.png" />
     <Content Include="Content\office\153.png" />
+    <Content Include="Content\office\1_old.png" />
     <Content Include="Content\office\21.png" />
     <Content Include="Content\office\72.png" />
     <Content Include="Content\printer.gif" />
     <Content Include="Content\QR\4919ATQSAG.jpeg" />
+    <Content Include="Content\CompanyLogo.png" />
     <Content Include="Content\Signatory\333.png" />
     <Content Include="Content\styleEditor.css" />
     <Content Include="Content\removeParaMargin.css" />
