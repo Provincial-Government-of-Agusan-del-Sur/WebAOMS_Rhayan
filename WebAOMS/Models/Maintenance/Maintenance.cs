@@ -81,5 +81,18 @@ namespace WebAOMS.Models.Maintenance
 
 
     }
+    public class grid_accountingentries
+    {
+        public string refno { get; set; } 
+	    public int ChartAccountChildID { get; set; }
+	    public int AccountChildParentID { get; set; }
+	    public int code { get; set; }
+        public string AccountChildName { get; set; }
+        public string ChildCode { get; set; }
+        public int hasChild { get; set; }
+        public double debit { get; set; }
+        public double credit { get; set; }
+        public int GLChartAccountChildID { get; set; }
+    }
 
 }

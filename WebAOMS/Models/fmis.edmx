@@ -5,8 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="fmisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'fmis.Accounting.tbl_l_AddDataFromClaimant' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="tbl_l_AddDataFromClaimant">
           <Key>
             <PropertyRef Name="l_AddDataFromClaimant_id" />
@@ -527,8 +525,6 @@ warning 6005: The data type 'hierarchyid' is currently not supported for the tar
           <Property Name="Actioncode" Type="int" Nullable="false" />
           <Property Name="UserID" Type="varchar" MaxLength="10" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'fmis.dbo.tblBMS_ObjectOfExpenditures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="tblBMS_ObjectOfExpenditures">
           <Key>
             <PropertyRef Name="OOECode" />
@@ -2014,6 +2010,7 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
           </ReturnType>
         </Function>
         <EntityContainer Name="fmisModelStoreContainer">
+          <EntitySet Name="tbl_l_AddDataFromClaimant" EntityType="Self.tbl_l_AddDataFromClaimant" Schema="Accounting" store:Type="Tables" />
           <EntitySet Name="tbl_l_Address" EntityType="Self.tbl_l_Address" Schema="Accounting" store:Type="Tables" />
           <EntitySet Name="tbl_l_ChartOfAccounts" EntityType="Self.tbl_l_ChartOfAccounts" Schema="Accounting" store:Type="Tables" />
           <EntitySet Name="tbl_l_ChartOfAccounts_cashFlow" EntityType="Self.tbl_l_ChartOfAccounts_cashFlow" Schema="Accounting" store:Type="Tables" />
@@ -2047,25 +2044,10 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
           <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblAMIS_Logtrans" EntityType="Self.tblAMIS_Logtrans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBMS_ObjectOfExpenditures" EntityType="Self.tblBMS_ObjectOfExpenditures" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCMS_CDCheckBook_Audit_logs" EntityType="Self.tblCMS_CDCheckBook_Audit_logs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblREF_AIS_Offices" EntityType="Self.tblREF_AIS_Offices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_l_InformationSystem" EntityType="Self.tbl_l_InformationSystem" Schema="Tracking" store:Type="Tables" />
-          <EntitySet Name="tbl_l_AddDataFromClaimant" EntityType="Self.tbl_l_AddDataFromClaimant" store:Type="Tables" store:Schema="Accounting">
-            <DefiningQuery>SELECT 
-    [tbl_l_AddDataFromClaimant].[l_AddDataFromClaimant_id] AS [l_AddDataFromClaimant_id], 
-    [tbl_l_AddDataFromClaimant].[Whatname] AS [Whatname], 
-    [tbl_l_AddDataFromClaimant].[Query] AS [Query], 
-    [tbl_l_AddDataFromClaimant].[ClaimantTypeID] AS [ClaimantTypeID]
-    FROM [Accounting].[tbl_l_AddDataFromClaimant] AS [tbl_l_AddDataFromClaimant]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="tblBMS_ObjectOfExpenditures" EntityType="Self.tblBMS_ObjectOfExpenditures" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [tblBMS_ObjectOfExpenditures].[OOECode] AS [OOECode], 
-    [tblBMS_ObjectOfExpenditures].[OOEAbreviation] AS [OOEAbreviation], 
-    [tblBMS_ObjectOfExpenditures].[OOEName] AS [OOEName], 
-    [tblBMS_ObjectOfExpenditures].[OOENGASCode] AS [OOENGASCode]
-    FROM [dbo].[tblBMS_ObjectOfExpenditures] AS [tblBMS_ObjectOfExpenditures]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="vw_AspNetUsers_details" EntityType="Self.vw_AspNetUsers_details" store:Type="Views" store:Schema="Accounting">
             <DefiningQuery>SELECT 
     [vw_AspNetUsers_details].[Id] AS [Id], 
@@ -5793,7 +5775,7 @@ warning 6002: The table/view 'fmis.Tracking.vw_Document_Status' does not have a 
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

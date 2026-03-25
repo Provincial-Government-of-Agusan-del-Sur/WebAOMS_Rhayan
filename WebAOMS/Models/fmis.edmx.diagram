@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d76ec53d65774a8e80111b58b4146b4c" Name="Diagram1" ZoomLevel="82">
+      <Diagram DiagramId="d76ec53d65774a8e80111b58b4146b4c" Name="Diagram1" ZoomLevel="53">
         <EntityTypeShape EntityType="fmisModel.vw_Employee_Concatname" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="fmisModel.tbl_l_ChartOfAccountsParent" Width="2.75" PointX="5.75" PointY="0.75" />
         <EntityTypeShape EntityType="fmisModel.tbl_l_ChartOfAccounts" Width="2.75" PointX="5.25" PointY="4.5" />
