@@ -149,7 +149,7 @@
     function loadselected_claimanttype() {
         var cbo = $("#ClaimantTypeID").data("kendoDropDownList");
         if ('@ViewBag.ClaimantTypeID' == '0' ){
-            cbo.value(6)
+            cbo.value(0)
         }
         else{
             cbo.value(@ViewBag.ClaimantTypeID)

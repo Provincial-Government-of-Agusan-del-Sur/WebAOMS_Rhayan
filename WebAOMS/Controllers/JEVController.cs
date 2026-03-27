@@ -799,12 +799,46 @@ public ActionResult grid_import_null_grid([DataSourceRequest] DataSourceRequest 
             rec = fmisdb.ufn_JEV_get_jev_byjevid(jevid);
             return Json(rec.ToDataSourceResult(request, o=> new  { AccountChildName = o.AccountChildName, ChartAccountChildID = o.GLChartAccountChildID, GLChartAccountChildID = o.ChartAccountChildID, reffno = o.reffNo, credit = o.credit,debit = o.debit,code=o.code, ChildCode = o.ChildCode }),JsonRequestBehavior.AllowGet);
         }
-        public ActionResult grid_entries_byjevid([DataSourceRequest] DataSourceRequest request, Int32 jevid)
+        ///xXx- 3/26/206 - Not using EF
+        public JsonResult grid_entries_byjevid([DataSourceRequest] DataSourceRequest request, int jevid)
         {
-            IEnumerable<ufn_JEV_get_jev_byjevid_Result> rec;
-            rec = fmisdb.ufn_JEV_get_jev_byjevid(jevid);
-            return Json(rec.ToDataSourceResult(request, o => new { AccountChildName = o.AccountChildName, ChartAccountChildID = o.GLChartAccountChildID, GLChartAccountChildID = o.ChartAccountChildID, reffno = o.reffNo, credit = o.credit, debit = o.debit, code = o.code, ChildCode = o.ChildCode }), JsonRequestBehavior.AllowGet);
+            List<grid_accountingentries> realign_List = new List<grid_accountingentries>();
+
+            using (SqlConnection con = new SqlConnection(fmisConn))
+            {
+                SqlCommand com = new SqlCommand(@" select * from [Accounting].[ufn_JEV_get_jev_byjevid_v2] ("+ jevid + ")  order by jevID", con);
+
+                con.Open();
+                SqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    grid_accountingentries real = new grid_accountingentries();
+                    real.refno = reader.GetValue(0).ToString();
+                    real.ChartAccountChildID = reader.GetInt32(1);
+                    real.AccountChildParentID = reader.GetInt32(2);
+                    real.code = reader.GetValue(3).ToString();
+                    real.AccountChildName = reader.GetValue(4).ToString();
+                    real.ChildCode = reader.GetValue(5).ToString();
+                    real.hasChild = reader.GetInt32(6);
+                    //real.debit = Convert.ToDouble(reader.GetValue(7));
+                    //real.credit = Convert.ToDouble(reader.GetValue(8));
+                    real.debit = reader.GetValue(7) == DBNull.Value ? (double?)null : Convert.ToDouble(reader.GetValue(7));
+                    real.credit = reader.GetValue(8) == DBNull.Value ? (double?)null : Convert.ToDouble(reader.GetValue(8));
+                    real.GLChartAccountChildID = reader.GetInt32(9);
+                
+                    realign_List.Add(real);
+                }
+            }
+            return Json(realign_List.ToDataSourceResult(request));
         }
+      
+        /// Mar Paul - last update 3/26/2026
+        //public ActionResult grid_entries_byjevid([DataSourceRequest] DataSourceRequest request, Int32 jevid)
+        //{
+        //    IEnumerable<ufn_JEV_get_jev_byjevid_Result> rec;
+        //    rec = fmisdb.ufn_JEV_get_jev_byjevid(jevid);
+        //    return Json(rec.ToDataSourceResult(request, o => new { AccountChildName = o.AccountChildName, ChartAccountChildID = o.GLChartAccountChildID, GLChartAccountChildID = o.ChartAccountChildID, reffno = o.reffNo, credit = o.credit, debit = o.debit, code = o.code, ChildCode = o.ChildCode }), JsonRequestBehavior.AllowGet);
+        //}
         public ActionResult grid_entries_cashflow([DataSourceRequest] DataSourceRequest request, Int64 jevid)
         {
             IEnumerable<ufn_JEV_CashFlow_entry_Result> rec;

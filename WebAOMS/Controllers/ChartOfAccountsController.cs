@@ -243,7 +243,7 @@ namespace WebAOMS.Controllers
         public JsonResult DataSource_Get_ClaimantType(string parentcode)
         {
             IEnumerable<ufn_ComboSource_ClaimantType_Result> fundtype;
-            fundtype = fmisdb.ufn_ComboSource_ClaimantType().OrderBy(o => o.ClaimantType);
+            fundtype = fmisdb.ufn_ComboSource_ClaimantType().OrderBy(o => o.ClaimantID);
             return Json(fundtype.ToList(), JsonRequestBehavior.AllowGet);
         }
         public ActionResult import_account_excel()

@@ -7,6 +7,7 @@
         padding-bottom:5px
     }
 </style>
+
 <div class="panel panel-default" style="padding-bottom:10px;">
     <form id="frm_jev_details">
 
@@ -316,23 +317,28 @@
                     <div class="form-group-md">
                         <div class="row">
                             <div class="col-md-12">
-                             @(Html.Kendo().Grid<WebAOMS.Models.ufn_JEV_get_jev_byDVNO_Result>()
+                             @(Html.Kendo().Grid<WebAOMS.Models.Maintenance.grid_accountingentries>()
                             .Name("grid_Entries")
                             .Columns(columns =>
                             {
                             columns.Bound(c => c.code).Width(100).Title("Account Code")
                                 .HeaderHtmlAttributes(new { style = "text-align:center" }).HtmlAttributes(new { style = "text-align:center" })
                                 .ClientFooterTemplate("<div style='text-align:right'>Row(s) <b>#=count#</b></div>");
-                                columns.Bound(c => c.AccountChildName).Title("Account Name").Width(400);
+                            columns.Bound(c => c.AccountChildName).Title("Account Name").Width(400);
 
                             columns.Bound(c => c.debit).Width(100).Title("Debit").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { Style = "text-align:center" })
-                                 .ClientTemplate("<div id=\"div_debit_#=ChartAccountChildID#\"><button type=\"button\" style='text-align:right' onclick=\"edit_subentries(#=ChartAccountChildID#)\" class=\"k-button DebitCredit\">#=addCommas(debit)#</button></div>")
-                                .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+                             .ClientTemplate("<div id=\"div_debit_#=ChartAccountChildID#\"><button type=\"button\" style='text-align:right' onclick=\"edit_subentries(#=ChartAccountChildID#)\" class=\"k-button DebitCredit\">#=addCommas(debit)#</button></div>")
+                                //.ClientTemplate(
+                                //   "<button type='button' class='k-button DebitCredit' " +
+                                //   "onclick='edit_subentries(#=ChartAccountChildID#)' style='width:100%;text-align:right'>" +
+                                //   "#= credit == 0 ? '' : kendo.toString(credit,'n2') #" +
+                                //   "</button>")
+                                .ClientFooterTemplate("<div style='text-align:right'><b>#=kendo.toString(sum, 'n2')#</b></div>");
 
                             columns.Bound(c => c.credit).Width(100).Title("Credit").HtmlAttributes(new { style = "text-align:right" }).HeaderHtmlAttributes(new { Style = "text-align:center" })
                             //.ClientTemplate("<div style='text-align:right'>#=addCommas(credit)# </div>")
                             .ClientTemplate("<div id=\"div_debit_#=ChartAccountChildID#\"><button type=\"button\" style='text-align:right!important' onclick=\"edit_subentries(#=ChartAccountChildID#)\" class=\"k-button DebitCredit\">#=addCommas(credit)#</button></div>")
-                            .ClientFooterTemplate("<div style='text-align:right'><b>#=addCommas(sum)#</b></div>");
+                            .ClientFooterTemplate("<div style='text-align:right'><b>#=kendo.toString(sum, 'n2')#</b></div>");
 
                             columns.Template(@<text></text>)
                                 .Width(100)
@@ -360,6 +366,8 @@
                             )
 
                                 )
+
+                               
                             </div>
                             <script>
                                 var mg = new mgsInfo()

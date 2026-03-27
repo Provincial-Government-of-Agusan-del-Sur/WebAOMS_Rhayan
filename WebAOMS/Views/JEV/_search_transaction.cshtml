@@ -52,8 +52,9 @@
                     .Name("grid_search_results")
                     .Columns(columns =>
                     {
-                        columns.Bound("jevid").Width(30).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
-                        columns.Bound("Field").Width(150);
+                        columns.Bound("jevid").Width(60).Title("TransNo").HtmlAttributes(new { style = "text-align:center" }).HeaderHtmlAttributes(new { style = "text-align:center" });
+                        columns.Bound("Checkno").Width(65);
+                        columns.Bound("Field").Width(50);
                     })
                     .AutoBind(false)
                     .HtmlAttributes(new { style = "height: 350px;" })
