@@ -961,7 +961,7 @@ namespace WebAOMS.Controllers
                 }
             }
             else { //update claimant
-                string cmdStr = "execute [Accounting].[usp_Update_Claimant] @Firstname, @MI,@LastName , @Suffix, @Address, @ContactNo, @TIN, @claimantcode";
+                string cmdStr = "execute [Accounting].[usp_Update_Claimant] @Firstname, @MI,@LastName , @Suffix, @Address, @ContactNo, @TIN, @claimantcode,@userid";
                 using (SqlCommand command = new SqlCommand(cmdStr, connection))
                 {
                     command.Parameters.Add("@Firstname", SqlDbType.NVarChar, 200).Value = (object)data.Firstname ?? DBNull.Value;
@@ -972,6 +972,7 @@ namespace WebAOMS.Controllers
                     command.Parameters.Add("@ContactNo", SqlDbType.NVarChar, 200).Value = (object)data.ContactNo ?? DBNull.Value;
                     command.Parameters.Add("@TIN", SqlDbType.NVarChar, 120).Value = (object)data.TIN ?? DBNull.Value;
                     command.Parameters.Add("@claimantcode", SqlDbType.NVarChar, 120).Value = (object)data.ClaimantCode ?? DBNull.Value;
+                    command.Parameters.Add("@userid", SqlDbType.NVarChar, 120).Value = USER.C_eID;
                     connection.Open();
 
                     SqlDataReader read = command.ExecuteReader();
