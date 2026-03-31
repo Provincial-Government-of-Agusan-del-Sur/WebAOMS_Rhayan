@@ -125,7 +125,34 @@ namespace WebAOMS.Controllers
                 return PartialView("_AccessDenied", null);
             }
 
-            if (ChartAccountChildID == 0)
+            DataTable rec;
+            var whatName = "";
+            //DataTable arec;
+            //arec = ISfn.ToDatatable("select * from [fmis].[Accounting].[tbl_l_ChartOfAccountsChild] where ChartAccountChildID = @ChartAccountChildID", "@ChartAccountChildID", ChartAccountChildID.ToString());
+            //if (arec.Rows.Count > 0)
+            //{
+            //    whatName = arec.Rows[0]["AccountChildName"].ToString();
+            //}
+
+            whatName = Convert.ToString(ISfn.ExecScalar("select AccountChildName from [fmis].[Accounting].[tbl_l_ChartOfAccountsChild] where ChartAccountChildID = " + ChartAccountChildID + ""));
+            //Int32 isSubmit = Convert.ToInt32(ISfn.ExecScalar("select [Accounting].[fns_check_iSForReview](" + doc_form_id + ") as result"));
+            if (AccountChildParentID == -1)
+            {
+                tbl_l_AddDataFromClaimant rec_charts = fmisdb.tbl_l_AddDataFromClaimant.Single(M => M.Whatname == whatName);
+                ViewBag.ChartAccountChildID = 0;
+                ViewBag.code = "";
+                ViewBag.AccountChildParentID = 0;
+                ViewBag.AccountChildName = "";
+                ViewBag.ChildCode = 0;//rec_charts.ChildCode;
+                ViewBag.levelNo = 0;//rec_charts.levelNo + 1;
+                ViewBag.hasChild = 0;
+                ViewBag.isActive = true;
+                ViewBag.isEdit = 0;
+                ViewBag.ClaimantTypeID = rec_charts.l_AddDataFromClaimant_id;// == DBNull.Value ? (double?)null : rec_charts.l_AddDataFromClaimant_id;
+                ViewBag.enable = false;
+                return PartialView("_account_sub_edit", null);
+            }
+            else if (ChartAccountChildID == 0)
             {
                 tbl_l_ChartOfAccountsChild rec_charts = fmisdb.tbl_l_ChartOfAccountsChild.Single(M => M.ChartAccountChildID == AccountChildParentID);
                 ViewBag.ChartAccountChildID = 0;
@@ -133,10 +160,10 @@ namespace WebAOMS.Controllers
                 ViewBag.AccountChildParentID = AccountChildParentID;
                 ViewBag.AccountChildName = "";
                 ViewBag.ChildCode = rec_charts.ChildCode;
-               // ViewBag.ChartAccountChildCode = rec_charts.ChartAccountChildID.ToString();
+                // ViewBag.ChartAccountChildCode = rec_charts.ChartAccountChildID.ToString();
                 ViewBag.levelNo = rec_charts.levelNo + 1;
                 ViewBag.hasChild = 0;
-            
+
                 //ViewBag.ModifiedByID = User.Identity.Name;
                 ViewBag.isActive = true;
                 ViewBag.isEdit = 0;

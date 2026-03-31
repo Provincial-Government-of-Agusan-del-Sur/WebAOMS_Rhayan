@@ -54,7 +54,7 @@
             columns.Template(@<text></text>)
             .Width(150)
             .HtmlAttributes(new { style = "text-align:left;font-size:10" })
-            .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"view_subaccount(#=ChartAccountChildID#, '#=AccountChildName#','#=code#','#=ChildCode#')\" class=\"btn btn-md btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-list\"></i></button> ");
+            .ClientTemplate("<button data-original-title=\"recompute\" type=\"button\" onclick=\"view_subaccount(#=ChartAccountChildID#, '#=AccountChildName#','#=code#','#=ChildCode#')\" class=\"btn btn-md btn-inverse btn-equal\" style=\"margin-right:2px\" data-dismiss=\"modal\"><i class=\"fa fa-list\"></i></button> <button data-original-title=\"recompute\" type=\"button\" onclick=\"edit_mainaccount(#=ChartAccountChildID#,'#=AccountChildParentID#')\" class=\"btn btn-md btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button> ");
         })
         //.Selectable(selectable => selectable
         //.Mode(GridSelectionMode.Single))
@@ -81,6 +81,21 @@
     </div>
 </div>
 <script>
+    function edit_mainaccount(ChartAccountChildID, AccountChildParentID) {
+
+        startSpin()
+        $.post('@Url.Action("_partial_view_subaccount_edit", "ChartOfAccounts")', { ChartAccountChildID: ChartAccountChildID, AccountChildParentID: "-1" }, function (r) {
+            stopSpin()
+            $("#h_subaccount_edit_id").html("Update Sub Account");
+            $("#body_details_subaccount_edit").html(r)
+            $("#modal_subaccount_edit").modal("show");
+        })
+        .fail(function (jqXHR, textStatus, error) {
+            stopSpin()
+            toastr.warning("Access to your network is not currently available.", 'Problem Connecting');
+        });
+    }
+
     function view_subaccount(ChartAccountChildID, AccountChildName,code,childcode) {
         startSpin()
         $.post('@Url.Action("_partial_view_subaccount", "ChartOfAccounts")', { ChartAccountChildID: ChartAccountChildID, code: code, AccountChildName: AccountChildName, ChildCode: childcode }
