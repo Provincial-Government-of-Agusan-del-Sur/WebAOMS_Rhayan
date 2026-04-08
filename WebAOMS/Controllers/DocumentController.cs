@@ -1165,7 +1165,7 @@ namespace WebAOMS.Controllers
                         var _SaveE = context.tbl_t_DocEvents_revision.Where(m => m.revision_Id == doc_details_id).FirstOrDefault();
                         _SaveE.DTE_from = data["DTE_from"];
                         _SaveE.DTE_to = data["DTE_to"];
-                        _SaveE.EventId = Convert.ToInt32(data["EventId"]);
+                    //    _SaveE.EventId = Convert.ToInt16(data["EventId"]);
                         _SaveE.iscancel = Convert.ToInt32(data["iscancel"]);
                         //_SaveE.officeid = Convert.ToInt32(data["officeid"]);
                         _SaveE.Reason = data["Reason"];
