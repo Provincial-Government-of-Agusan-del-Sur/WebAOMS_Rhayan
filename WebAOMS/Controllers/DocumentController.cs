@@ -32,7 +32,7 @@ namespace WebAOMS.Controllers
 
 
         // GET: Document
-        [Authorize(Roles = "Liason, Admin, Tracking")]
+        [Authorize(Roles = "Liason, Admin, Tracking, Liaison")]
         public ActionResult Tracking_Form_Index()
         {
             ViewBag.Title = "Tracking Form";
