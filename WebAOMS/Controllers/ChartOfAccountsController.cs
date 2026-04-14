@@ -134,10 +134,11 @@ namespace WebAOMS.Controllers
             //    whatName = arec.Rows[0]["AccountChildName"].ToString();
             //}
 
-            whatName = Convert.ToString(ISfn.ExecScalar("select AccountChildName from [fmis].[Accounting].[tbl_l_ChartOfAccountsChild] where ChartAccountChildID = " + ChartAccountChildID + ""));
+            //whatName = Convert.ToString(ISfn.ExecScalar("select AccountChildName from [fmis].[Accounting].[tbl_l_ChartOfAccountsChild] where ChartAccountChildID = " + ChartAccountChildID + ""));
             //Int32 isSubmit = Convert.ToInt32(ISfn.ExecScalar("select [Accounting].[fns_check_iSForReview](" + doc_form_id + ") as result"));
             if (AccountChildParentID == -1)
             {
+                whatName = Convert.ToString(ISfn.ExecScalar("select AccountChildName from [fmis].[Accounting].[tbl_l_ChartOfAccountsChild] where ChartAccountChildID = " + ChartAccountChildID + ""));
                 tbl_l_AddDataFromClaimant rec_charts = fmisdb.tbl_l_AddDataFromClaimant.Single(M => M.Whatname == whatName);
                 ViewBag.ChartAccountChildID = 0;
                 ViewBag.code = "";
