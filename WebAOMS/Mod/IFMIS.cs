@@ -499,6 +499,35 @@ namespace WebAOMS.Base
             }
         }
     }
+    public class SerializeDT
+    {
+        public static string DataTableToJSON(DataTable table)
+        {
+            List<Dictionary<string, object>> list = new List<Dictionary<string, object>>();
+
+            foreach (DataRow row in table.Rows)
+            {
+                Dictionary<string, object> dict = new Dictionary<string, object>();
+
+                foreach (DataColumn col in table.Columns)
+                {
+                    dict[col.ColumnName] = row[col];
+                }
+                list.Add(dict);
+            }
+
+            var serializer = new JavaScriptSerializer();
+
+            serializer.MaxJsonLength = Int32.MaxValue;
+
+            return serializer.Serialize(list);
+        }
+
+        //internal static string DataTableToJSON(List<WFPrepare> prog)
+        //{
+        //    throw new NotImplementedException();
+        //}
+    }
     //public struct ApplicationError
     //{
     //    public static IFMISEntities ifmisdb = new IFMISEntities();

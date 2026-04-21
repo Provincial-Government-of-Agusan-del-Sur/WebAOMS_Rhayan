@@ -31,12 +31,12 @@
     <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
-<PropertyGroup>
-  <RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
-</PropertyGroup>
-<PropertyGroup>
-  <RestorePackagesPath>packages</RestorePackagesPath>
-</PropertyGroup>
+  <PropertyGroup>
+    <RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestorePackagesPath>packages</RestorePackagesPath>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -863,6 +863,7 @@
     </Compile>
     <Compile Include="Mod\AES.cs" />
     <Compile Include="Mod\base.cs" />
+    <Compile Include="Mod\CommonPGSql.cs" />
     <Compile Include="Mod\Extensions.cs" />
     <Compile Include="Mod\IFMIS.cs" />
     <Compile Include="Mod\ISFN.cs" />
@@ -1148,6 +1149,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Mono.Security.dll" />
+    <Content Include="bin\Npgsql.dll" />
     <Content Include="Content\akot\2018.1.1\akot.css" />
     <Content Include="Content\akot\2018.1.1\akot_responsive.css" />
     <Content Include="Content\akot\2018.1.1\Boostrap-12-12-18.css" />

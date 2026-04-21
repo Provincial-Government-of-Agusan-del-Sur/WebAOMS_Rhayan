@@ -186,6 +186,7 @@ namespace WebAOMS.Report.Design.Payroll
             // TODO: Add any constructor code after InitializeComponent call
             //
             pictureBox2.Value = ISfn.QRGen(Tracks.get_tracking_link(refno).ToString(), 4);
+            
         }
     }
 }

@@ -14,6 +14,7 @@ using WebAOMS.Base;
 using WebAOMS.ws_tracking;
 using WebAOMS.epsws;
 using WebAOMS.Mod;
+using WebAOMS.Mod.Connector;
 using System.Diagnostics;
 using Microsoft.AspNet.Identity;
 using System.Net.Http;
@@ -29,7 +30,7 @@ namespace WebAOMS.Controllers
         string fmisConn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
         string dbcon_fmis = ConfigurationManager.ConnectionStrings["ifmisConnString"].ToString();
         fmisEntities fmisdb = new fmisEntities();
-        //clsDBConnect db = new clsDBConnect();
+        clsDBConnect db = new clsDBConnect();
 
         // GET: Document
         [Authorize(Roles = "Liason, Admin, Tracking, Liaison")]
@@ -3193,6 +3194,28 @@ namespace WebAOMS.Controllers
                 da.Dispose();
             }
             return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult GetSupplier([DataSourceRequest] DataSourceRequest request)
+        {
+            string connStr = CommonPGSql.MyPostgreSqlConn(); // your PostgreSQL connection string method
+
+            DataTable dt = new DataTable();
+            using (Npgsql.NpgsqlConnection con = new Npgsql.NpgsqlConnection(connStr))
+            {
+                string query = "SELECT supplierid, upper(name) as name FROM l_supplier_details where supplierid > 0 ORDER BY name;";
+                using (Npgsql.NpgsqlCommand cmd = new Npgsql.NpgsqlCommand(query, con))
+                {
+                    con.Open();
+                    using (Npgsql.NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        dt.Load(reader);
+                    }
+                }
+            }
+            var result = new ContentResult();
+            result.Content = SerializeDT.DataTableToJSON(dt);
+            result.ContentType = "application/json";
+            return result;
         }
     }
 }
