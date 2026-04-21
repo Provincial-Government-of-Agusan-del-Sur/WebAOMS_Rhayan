@@ -56,7 +56,29 @@
                     )
                 </div>
 
-
+                <div class="PvCIH">
+                    <span data-lokalise="true" class="khIjp">
+                        <span>CAFOA No.</span>
+                    </span>
+                </div>
+                <div class="byexym liZmnb">
+                    @(Html.Kendo().DropDownList()
+                    .Name("cafoano")
+                    .DataTextField("TransactionName")
+                    .DataValueField("Transtype_id")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("DataSource_transaction_type", "Document");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                    .Popup(p => p.AppendTo("#mdl_doc_form"))
+                    )
+                </div>
                 @*<div class="PvCIH">
                     <span data-lokalise="true" class="khIjp">
                         <span>Liaison Officer</span>

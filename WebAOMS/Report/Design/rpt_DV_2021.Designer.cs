@@ -741,7 +741,7 @@ namespace WebAOMS.Report.Design
             tableGroup13.Name = "group35";
             this.table1.RowGroups.Add(tableGroup5);
             this.table1.RowGroups.Add(tableGroup13);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(8.079D), Telerik.Reporting.Drawing.Unit.Inch(4.226D));
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(8.079D), Telerik.Reporting.Drawing.Unit.Inch(4.225D));
             // 
             // textBox47
             // 
@@ -1800,7 +1800,7 @@ namespace WebAOMS.Report.Design
             this.textBox15,
             this.textBox25});
             this.panel1.Name = "panel1";
-            this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.671D), Telerik.Reporting.Drawing.Unit.Cm(3.668D));
+            this.panel1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.671D), Telerik.Reporting.Drawing.Unit.Cm(3.669D));
             this.panel1.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel1.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.Solid;
             this.panel1.Style.BorderWidth.Bottom = Telerik.Reporting.Drawing.Unit.Cm(0D);

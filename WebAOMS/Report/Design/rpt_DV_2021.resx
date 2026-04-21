@@ -120,7 +120,4 @@
   <data name="htmlTextBox4.Value" xml:space="preserve">
     <value>&lt;p style="text-align: left"&gt;&lt;span style="font-size: 8pt"&gt;&lt;span style="font-size: 9pt"&gt;&lt;span style="font-size: 9pt"&gt;&lt;span style="font-size: 9pt"&gt;&lt;span style="font-size: larger"&gt;&lt;span style="font-size: larger"&gt;&lt;span style="font-size: medium"&gt;&lt;span style="font-size: medium"&gt;Passed in Pre-Audit&lt;br /&gt;in the amount of: ________________&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 9pt"&gt;&lt;span style="font-size: 9pt; text-decoration: underline"&gt;&lt;span style="font-size: 9pt"&gt;&lt;br /&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 9pt"&gt;&lt;span style="font-size: 9pt"&gt;&lt;span style="font-size: larger"&gt;&lt;span style="font-size: larger"&gt;&lt;span style="font-size: medium"&gt;&lt;span style="font-size: medium"&gt;Pre-Audited By:&lt;span style="font-size: medium; text-decoration: underline"&gt; ________________&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;</value>
   </data>
-  <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>1.5</value>
-  </metadata>
 </root>

@@ -19,9 +19,9 @@ using Microsoft.AspNet.Identity;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using eams.Base;
 namespace WebAOMS.Controllers
 {
-
     public class DocumentController : Controller
     {
         TrackingSoapClient ws = new TrackingSoapClient();
@@ -29,7 +29,7 @@ namespace WebAOMS.Controllers
         string fmisConn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
         string dbcon_fmis = ConfigurationManager.ConnectionStrings["ifmisConnString"].ToString();
         fmisEntities fmisdb = new fmisEntities();
-
+        //clsDBConnect db = new clsDBConnect();
 
         // GET: Document
         [Authorize(Roles = "Liason, Admin, Tracking, Liaison")]

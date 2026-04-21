@@ -30,13 +30,9 @@
     <Use64BitIISExpress />
     <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
     <TargetFrameworkProfile />
+    <RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
+
   </PropertyGroup>
-<PropertyGroup>
-  <RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
-</PropertyGroup>
-<PropertyGroup>
-  <RestorePackagesPath>packages</RestorePackagesPath>
-</PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -1148,6 +1144,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Npgsql.dll" />
     <Content Include="Content\akot\2018.1.1\akot.css" />
     <Content Include="Content\akot\2018.1.1\akot_responsive.css" />
     <Content Include="Content\akot\2018.1.1\Boostrap-12-12-18.css" />
@@ -5066,11 +5063,13 @@
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" /> -->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-</Project>
+</Project>roject>AfterBuild">
+  </Target> -->
+</Project>roject>
