@@ -120,4 +120,7 @@
   <data name="htmlTextBox1.Value" xml:space="preserve">
     <value>&lt;p style="text-align: center"&gt;Republic of the Philippines &lt;br /&gt;&lt;strong&gt;{Parameters.CompanyName.Value} &lt;/strong&gt;&lt;br /&gt;{Parameters.CompanyAddress.Value}&lt;/p&gt;&lt;p style="text-align: center"&gt;&lt;strong&gt;{Parameters.T1.Value}&lt;br /&gt;&lt;/strong&gt;{Parameters.fundtype.Value}&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;br /&gt;&lt;em&gt;&lt;span style="font-size: 10px"&gt;{Parameters.dateString.Value}&lt;/span&gt;&lt;/em&gt;&lt;/p&gt;&lt;p style="text-align: center"&gt;&lt;/p&gt;</value>
   </data>
+  <metadata name="$this.Zoom" type="System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>0.8</value>
+  </metadata>
 </root>

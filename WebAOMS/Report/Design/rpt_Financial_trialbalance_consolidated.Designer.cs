@@ -114,7 +114,7 @@ namespace WebAOMS.Report.Design
             // textBox87
             // 
             this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.193D), Telerik.Reporting.Drawing.Unit.Inch(0.33D));
+            this.textBox87.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.513D), Telerik.Reporting.Drawing.Unit.Inch(0.33D));
             this.textBox87.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox87.Style.Font.Bold = true;
             this.textBox87.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8.5D);
@@ -349,7 +349,7 @@ namespace WebAOMS.Report.Design
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.236D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.24D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.312D)));
-            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.193D)));
+            this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(1.513D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.998D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.998D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.998D)));
@@ -502,7 +502,7 @@ namespace WebAOMS.Report.Design
             tableGroup23.Name = "group5";
             this.table1.RowGroups.Add(tableGroup22);
             this.table1.RowGroups.Add(tableGroup23);
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(12.159D), Telerik.Reporting.Drawing.Unit.Inch(0.729D));
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(12.479D), Telerik.Reporting.Drawing.Unit.Inch(0.729D));
             // 
             // textBox53
             // 
@@ -556,7 +556,7 @@ namespace WebAOMS.Report.Design
             // textBox57
             // 
             this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.193D), Telerik.Reporting.Drawing.Unit.Inch(0.163D));
+            this.textBox57.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.513D), Telerik.Reporting.Drawing.Unit.Inch(0.163D));
             this.textBox57.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox57.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox57.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
@@ -590,7 +590,7 @@ namespace WebAOMS.Report.Design
             // textBox60
             // 
             this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.193D), Telerik.Reporting.Drawing.Unit.Inch(0.236D));
+            this.textBox60.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.513D), Telerik.Reporting.Drawing.Unit.Inch(0.236D));
             this.textBox60.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox60.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
             this.textBox60.StyleName = "";
@@ -867,7 +867,7 @@ namespace WebAOMS.Report.Design
             this.htmlTextBox1.Anchoring = ((Telerik.Reporting.AnchoringStyles)((Telerik.Reporting.AnchoringStyles.Left | Telerik.Reporting.AnchoringStyles.Right)));
             this.htmlTextBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.173D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.htmlTextBox1.Name = "htmlTextBox1";
-            this.htmlTextBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(30.476D), Telerik.Reporting.Drawing.Unit.Cm(3.1D));
+            this.htmlTextBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(31.311D), Telerik.Reporting.Drawing.Unit.Cm(3.1D));
             this.htmlTextBox1.Value = resources.GetString("htmlTextBox1.Value");
             // 
             // pictureBox1
@@ -960,7 +960,7 @@ namespace WebAOMS.Report.Design
             this.Name = "Trial_Balance_Consolidated";
             this.PageSettings.ContinuousPaper = false;
             this.PageSettings.Landscape = true;
-            this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(0.5D), Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.5D));
+            this.PageSettings.Margins = new Telerik.Reporting.Drawing.MarginsU(Telerik.Reporting.Drawing.Unit.Inch(0.25D), Telerik.Reporting.Drawing.Unit.Inch(0.25D), Telerik.Reporting.Drawing.Unit.Inch(1D), Telerik.Reporting.Drawing.Unit.Inch(0.5D));
             this.PageSettings.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PageSettings.PaperSize = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(8.5D), Telerik.Reporting.Drawing.Unit.Inch(13D));
             reportParameter1.Name = "CompanyName";
@@ -981,7 +981,7 @@ namespace WebAOMS.Report.Design
             this.StyleSheet.AddRange(new Telerik.Reporting.Drawing.StyleRule[] {
             styleRule1});
             this.UnitOfMeasure = Telerik.Reporting.Drawing.UnitType.Inch;
-            this.Width = Telerik.Reporting.Drawing.Unit.Cm(30.914D);
+            this.Width = Telerik.Reporting.Drawing.Unit.Cm(31.75D);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
