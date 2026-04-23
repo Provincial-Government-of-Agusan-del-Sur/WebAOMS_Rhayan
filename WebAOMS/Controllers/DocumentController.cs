@@ -3195,14 +3195,15 @@ namespace WebAOMS.Controllers
             }
             return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
         }
-        public ActionResult GetSupplier([DataSourceRequest] DataSourceRequest request)
+        public ActionResult getcafoano([DataSourceRequest] DataSourceRequest request)
         {
             string connStr = CommonPGSql.MyPostgreSqlConn(); // your PostgreSQL connection string method
 
             DataTable dt = new DataTable();
             using (Npgsql.NpgsqlConnection con = new Npgsql.NpgsqlConnection(connStr))
             {
-                string query = "SELECT supplierid, upper(name) as name FROM l_supplier_details where supplierid > 0 ORDER BY name;";
+                //string query = "SELECT supplierid, upper(name) as name FROM l_supplier_details where supplierid > 0 ORDER BY name;";
+                string query = "SELECT prid,obrno || '/' || pono as obrno FROM r_po_obrlist_vw where tyear=" +  GlobalFunctions.getCurrentYear() + ";";
                 using (Npgsql.NpgsqlCommand cmd = new Npgsql.NpgsqlCommand(query, con))
                 {
                     con.Open();

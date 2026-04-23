@@ -88,6 +88,28 @@
             )
             </div>
 
+            <div class="PvCIH">
+                <span data-lokalise="true" class="khIjp">
+                    <span>CAFOA/P.O. No.</span>
+                </span>
+            </div>
+            <div class="byexym liZmnb">
+                @(Html.Kendo().DropDownList()
+                    .Name("cafoano")
+                    .DataTextField("obrno")
+                    .DataValueField("prid")
+                    .Filter("Contains")
+                    .AutoBind(false)
+                    .DataSource(source =>
+                    {
+                        source.Read(read =>
+                        {
+                            read.Action("getcafoano", "Document");
+                        });
+                    })
+                    .HtmlAttributes(new { style = "width: 100%" })
+                )
+            </div>
 
             <div class="PvCIH">
                 <span data-lokalise="true" class="khIjp">
