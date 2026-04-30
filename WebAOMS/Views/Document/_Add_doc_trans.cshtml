@@ -37,6 +37,10 @@
                         }
                     )
                 }
+                //function getcafno(){
+                //    var combo = $("#cafoano").data("kendoComboBox");
+                //    $("#cafoano_text").val(combo.text());
+                //}
                 function para_attach(){
                     return {doc_form_id:$("#doc_form_id").val()}
                 }
@@ -88,13 +92,13 @@
             )
             </div>
 
-            <div class="PvCIH">
+            @*<div class="PvCIH">
                 <span data-lokalise="true" class="khIjp">
-                    <span>CAFOA/P.O. No.</span>
+                    <span>CAFOA/ P.O. No.</span>
                 </span>
             </div>
             <div class="byexym liZmnb">
-                @(Html.Kendo().DropDownList()
+                @(Html.Kendo().ComboBox()
                     .Name("cafoano")
                     .DataTextField("obrno")
                     .DataValueField("prid")
@@ -107,9 +111,10 @@
                             read.Action("getcafoano", "Document");
                         });
                     })
+                     .Events(e=> e.Change("getcafno"))
                     .HtmlAttributes(new { style = "width: 100%" })
                 )
-            </div>
+            </div>*@
 
             <div class="PvCIH">
                 <span data-lokalise="true" class="khIjp">
@@ -180,7 +185,6 @@
 )
                 </div>
             </div>
-
         </form>        
     </div>
 </div><script>
@@ -214,6 +218,7 @@
     $(document).ready(function () {
         $("#officeId").data("kendoDropDownList").value(@ViewBag.officeid)
         $("#liaison_eid").data("kendoDropDownList").value(@ViewBag.liaison_eid)
+        @*$("#cafoano").data("kendoComboBox").value(@ViewBag.cafoaid)*@
         $("#grid_attach_doc .k-grid-header").css('display', 'none');
         $(function () {
             $('#txt_gamount').number(true, 2);
@@ -248,9 +253,10 @@
     function btn_save_status_log() {
         startSpin()
         var frm = $("#frm_logdetails").serialize();
+        //var combo = $("#cafoano").data("kendoComboBox");
         $.post('@Url.Action("save_DocForm", "Document")',
-            frm
-        , function (r) {
+            frm,
+         function (r) {
             if (r.code == 6) {
                 toastr.success(r.statusName, 'System Message')
                 stopSpin()
@@ -302,7 +308,7 @@
         })
         .fail(function (jqXHR, textStatus, error) {
             stopSpin()
-            	zdex()
+            zdex()
             toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
         });
     }

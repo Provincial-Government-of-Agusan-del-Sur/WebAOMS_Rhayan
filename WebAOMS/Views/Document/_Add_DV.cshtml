@@ -3,6 +3,25 @@
     ViewBag.Title = "_account_sub";
     Layout = null;
 }
+<script>
+    function getcafno(){
+        var cafoano= $("#cafoano").data("kendoComboBox").text()
+        $.get('@Url.Action("check_gamount", "Document")',{cafoano:cafoano}
+       , function (r) {
+           var combo = $("#cafoano").data("kendoComboBox");
+           $("#cafoano_text").val(combo.text());
+           $("#txt_doc_gamount").val(r)
+       })
+       .fail(function (jqXHR, textStatus, error) {
+           stopSpin()
+           zdex()
+           toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
+       });
+       
+    }
+
+        
+</script>
 <div id="div_details" class="box" style="width:100%;margin-bottom:0px!important">
     <div class="box-body">
         <div class="row">
@@ -58,25 +77,25 @@
 
                 <div class="PvCIH">
                     <span data-lokalise="true" class="khIjp">
-                        <span>CAFOA No.</span>
+                        <span>CAFOA/ P.O. No.</span>
                     </span>
                 </div>
                 <div class="byexym liZmnb">
-                    @(Html.Kendo().DropDownList()
+                    @(Html.Kendo().ComboBox()
                     .Name("cafoano")
-                    .DataTextField("TransactionName")
-                    .DataValueField("Transtype_id")
+                    .DataTextField("obrno")
+                    .DataValueField("prid")
                     .Filter("Contains")
                     .AutoBind(false)
                     .DataSource(source =>
                     {
                         source.Read(read =>
                         {
-                            read.Action("DataSource_transaction_type", "Document");
+                            read.Action("getcafoano", "Document");
                         });
                     })
+                     .Events(e => e.Change("getcafno"))
                     .HtmlAttributes(new { style = "width: 100%" })
-                    .Popup(p => p.AppendTo("#mdl_doc_form"))
                     )
                 </div>
                 @*<div class="PvCIH">
@@ -204,7 +223,8 @@
                             <input id="txt_doc_gamount" name="Gamount" style="text-align:right" type="text" value="@ViewBag.gamount" class="form-control k-input" />
                         </div>
                     </div>
-</form>
+                <input type="hidden" name="cafoano_text" id="cafoano_text" />
+        </form>
             </div>
             <div class="row" style="padding:10px">
                 <div style="text-align:left">
@@ -475,6 +495,8 @@
         $("#transtype_id").data("kendoDropDownList").value(@ViewBag.transtype_id)
         $("#fundID").data("kendoDropDownList").value(@ViewBag.fundid)
         $("#ooe").data("kendoDropDownList").value('@ViewBag.ooe')
+        $("#cafoano").data("kendoComboBox").value(@ViewBag.cafoaid)
+        
         $('#txt_doc_count_person').number(true, 0);
         if ("@ViewBag.gamount"=="")
         {
@@ -503,11 +525,13 @@
         }
     })
 
+
+
     function close_browse_claimant() {
         $("#mdl_browse_claimant").modal("hide");
     }
 
- 
+
 
     function  btn_save_dv() {
         startSpin()

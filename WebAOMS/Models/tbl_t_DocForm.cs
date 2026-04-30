@@ -24,5 +24,7 @@ namespace WebAOMS.Models
         public Nullable<System.DateTime> DTE { get; set; }
         public Nullable<bool> isDeleted { get; set; }
         public Nullable<int> changeby { get; set; }
+        public Nullable<long> cafoano { get; set; }
+        public string cafoano_text { get; set; }
     }
 }

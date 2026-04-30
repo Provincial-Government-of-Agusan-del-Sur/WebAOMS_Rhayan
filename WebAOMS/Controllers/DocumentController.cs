@@ -31,7 +31,7 @@ namespace WebAOMS.Controllers
         string dbcon_fmis = ConfigurationManager.ConnectionStrings["ifmisConnString"].ToString();
         fmisEntities fmisdb = new fmisEntities();
         clsDBConnect db = new clsDBConnect();
-
+        string connStr = CommonPGSql.MyPostgreSqlConn();
         // GET: Document
         [Authorize(Roles = "Liason, Admin, Tracking, Liaison")]
         public ActionResult Tracking_Form_Index()
@@ -139,6 +139,7 @@ namespace WebAOMS.Controllers
                         ViewBag.refno = reader["refno"];
                         ViewBag.isEdit = 1;
                         ViewBag.status_code = reader["status_code"];
+                        ViewBag.cafoaid = reader["cafoaid"];
                     }
                 }
                 else
@@ -152,6 +153,7 @@ namespace WebAOMS.Controllers
                     ViewBag.refno = "";
                     ViewBag.isEdit = 0;
                     ViewBag.status_code = 0;
+                    ViewBag.cafoano = "";
                 }
             }
             connection.Close();
@@ -196,6 +198,7 @@ namespace WebAOMS.Controllers
                             ViewBag.ooe = reader["ooe"];
                             ViewBag.id = id;
                             ViewBag.isEdit = 1;
+                            ViewBag.cafoaid= reader["cafoaid"];
                         }
                     }
                     else
@@ -211,6 +214,7 @@ namespace WebAOMS.Controllers
                         ViewBag.Name = "";
                         ViewBag.id = 0;
                         ViewBag.isEdit = 0;
+                        ViewBag.cafoaid = 0;
                     }
                 }
                 connection.Close();
@@ -1000,23 +1004,25 @@ namespace WebAOMS.Controllers
             int userid = Convert.ToInt32(USER.C_swipeID);
             int doc_form_id = 0;
             string refno = "";
-            DataTable rec = new DataTable(); ;
+            //string cafoanoText = data.cafoano_text;
+            DataTable rec = new DataTable(); 
             if (data.Particular == null)
             {
                 return Json(new { code = 7, statusName = "The Particular is required" });
             }
-
+            
             SqlConnection connection = new SqlConnection(fmisConn);
-            string cmdStr = "execute [Accounting].[usp_Save_docform] @doc_form_id,@officeId,@liaison_eid,@Particular,@GAmount,'',@UserID";
+            string cmdStr = "execute [Accounting].[usp_Save_docform_v2] @doc_form_id,@officeId,@liaison_eid,@Particular,@GAmount,'',@UserID";
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
                 command.Parameters.Add("@doc_form_id", SqlDbType.Int).Value = data.doc_form_id;
-
                 command.Parameters.AddWithValue("@officeid", data.officeId);
                 command.Parameters.AddWithValue("@liaison_eid", data.liaison_eid);
                 command.Parameters.AddWithValue("@particular", data.Particular);
                 command.Parameters.AddWithValue("@gamount", data.GAmount);
                 command.Parameters.AddWithValue("@userid", userid);
+                //command.Parameters.Add("@cafoano", SqlDbType.VarChar, 100).Value = cafoanoText;
+                //command.Parameters.AddWithValue("@cafoaid", data.cafoano);
                 connection.Open();
 
                 SqlDataReader read = command.ExecuteReader();
@@ -1033,11 +1039,7 @@ namespace WebAOMS.Controllers
                 connection.Close();
                 return Json(new { code = 6, statusName = "Successfully Saved..!", doc_form_id = doc_form_id, refno = refno });
             }
-            //}
-            //catch (Exception e)
-            //{
-            //    return Json(new { code = e.HResult, statusName = e.Message });
-            //}
+            
         }
         public int check_if_DGsign(int doc_details_id)
         {
@@ -1447,7 +1449,7 @@ namespace WebAOMS.Controllers
         {
             int userid = Convert.ToInt32(USER.C_swipeID);
             Int32 dvid;
-
+            string cafoanoText = data.cafoano_text;
             if (data.Particular == null)
             {
                 return Json(new { code = 7, statusName = "The Particular is required" });
@@ -1495,7 +1497,7 @@ namespace WebAOMS.Controllers
             }
 
             SqlConnection connection = new SqlConnection(fmisConn);
-            string cmdStr = "execute [Accounting].[usp_Save_DV_details] @DVid,@Particular,@Claimantcode,@Gamount ,@Transtype_id ,@RCenter,@fundID,@UserID,@doc_form_id,@countperson,@ooe";
+            string cmdStr = "execute [Accounting].[usp_Save_DV_details_v2] @DVid,@Particular,@Claimantcode,@Gamount ,@Transtype_id ,@RCenter,@fundID,@UserID,@doc_form_id,@countperson,@ooe,@cafoano,@cafoaid";
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
                 command.Parameters.AddWithValue("@DVid", data.DVid);
@@ -1509,6 +1511,17 @@ namespace WebAOMS.Controllers
                 command.Parameters.AddWithValue("@doc_form_id", data.doc_form_id);
                 command.Parameters.AddWithValue("@ooe", data.ooe);
                 command.Parameters.AddWithValue("@countperson", data.countperson);
+                //command.Parameters.Add("@cafoano", SqlDbType.VarChar, 100).Value = cafoanoText;
+                //command.Parameters.AddWithValue("@cafoaid", data.cafoano);
+                command.Parameters.Add("@cafoano", SqlDbType.VarChar, 100).Value =
+                    string.IsNullOrWhiteSpace(cafoanoText)
+                    ? (object)DBNull.Value
+                    : cafoanoText;
+                command.Parameters.Add("@cafoaid", SqlDbType.Int).Value =
+                data.cafoano == null || data.cafoano == 0
+                ? (object)DBNull.Value
+                : data.cafoano;
+
                 connection.Open();
                 dvid = (Int32)command.ExecuteScalar();
 
@@ -3217,6 +3230,31 @@ namespace WebAOMS.Controllers
             result.Content = SerializeDT.DataTableToJSON(dt);
             result.ContentType = "application/json";
             return result;
+        }
+        public double check_gamount(string cafoano)
+        {
+            //int r;
+            //r = Convert.ToInt32(ISfn.ExecScalar("select Accounting.[fns_checkDocIfSign](" + doc_details_id + ") as result"));
+            //return r;
+            try
+            {
+                var data = 0.00;
+                using (Npgsql.NpgsqlConnection con = new Npgsql.NpgsqlConnection(connStr))
+                {
+
+                    string query = "select a.prid,a.pono,a.obrno,b.totalamount as grossamount from t_po as a inner join t_pr_amount1_vw as b on b.prid=a.prid where obrno='"+ cafoano + "';" ;
+                    using (Npgsql.NpgsqlCommand cmd = new Npgsql.NpgsqlCommand(query, con))
+                    {
+                        con.Open();
+                        data = Convert.ToDouble(cmd.ExecuteScalar());
+                    }
+                    return data;
+                }
+            }
+            catch 
+            {
+                return 0;
+            }
         }
     }
 }

@@ -35,5 +35,7 @@ namespace WebAOMS.Models
         public string remark { get; set; }
         public Nullable<short> countperson { get; set; }
         public string ooe { get; set; }
+        public Nullable<long> cafoano { get; set; }
+        public string cafoano_text { get; set; }
     }
 }
