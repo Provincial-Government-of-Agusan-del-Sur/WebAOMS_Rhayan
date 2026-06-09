@@ -164,7 +164,7 @@ namespace WebAOMS.Report.Design.Payroll
             // 
             // detail
             // 
-            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(3.51D);
+            this.detail.Height = Telerik.Reporting.Drawing.Unit.Inch(3.367D);
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.table4});
             this.detail.Name = "detail";
@@ -338,7 +338,7 @@ namespace WebAOMS.Report.Design.Payroll
             this.textBox115,
             this.textBox134});
             this.table4.KeepTogether = false;
-            this.table4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(2.992D));
+            this.table4.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(2.626D));
             this.table4.Name = "table4";
             tableGroup13.Name = "group1";
             tableGroup14.Name = "group";

@@ -6,21 +6,25 @@
 <script>
     function getcafno(){
         var cafoano= $("#cafoano").data("kendoComboBox").text()
-        $.get('@Url.Action("check_gamount", "Document")',{cafoano:cafoano}
+        //var cafsplit =cafoano.split
+        var frm = $("#frm_doc_logdetails").serialize();
+        $.get('@Url.Action("check_gamount", "Document")',{frm,cafoano:cafoano}
        , function (r) {
            var combo = $("#cafoano").data("kendoComboBox");
-           $("#cafoano_text").val(combo.text());
-           $("#txt_doc_gamount").val(r)
+           //$("#cafoano_text").val(combo.text());
+           $("#txt_doc_gamount").val(r.amount)
+           //alert(r.particular)
+           //$("#txt_doc_particular").val(r.particular)
        })
        .fail(function (jqXHR, textStatus, error) {
            stopSpin()
            zdex()
            toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
        });
-       
+
     }
 
-        
+
 </script>
 <div id="div_details" class="box" style="width:100%;margin-bottom:0px!important">
     <div class="box-body">

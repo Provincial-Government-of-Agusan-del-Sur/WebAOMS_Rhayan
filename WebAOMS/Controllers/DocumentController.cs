@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using Kendo.Mvc.UI;
 using System.Web.Script.Serialization;
 using WebAOMS.Models;
+using WebAOMS.Models.Maintenance;
 using WebAOMS.Base;
 using WebAOMS.ws_tracking;
 using WebAOMS.epsws;
@@ -3231,30 +3232,39 @@ namespace WebAOMS.Controllers
             result.ContentType = "application/json";
             return result;
         }
-        public double check_gamount(string cafoano)
+        public ActionResult check_gamount(controltransaction data)
         {
             //int r;
             //r = Convert.ToInt32(ISfn.ExecScalar("select Accounting.[fns_checkDocIfSign](" + doc_details_id + ") as result"));
             //return r;
-            try
-            {
-                var data = 0.00;
+            //try
+            //{
+                //var data = 0.00;
+                var cafno = data.cafoano.ToString().Split('/');
                 using (Npgsql.NpgsqlConnection con = new Npgsql.NpgsqlConnection(connStr))
                 {
 
-                    string query = "select a.prid,a.pono,a.obrno,b.totalamount as grossamount from t_po as a inner join t_pr_amount1_vw as b on b.prid=a.prid where obrno='"+ cafoano + "';" ;
+                    string query = "select a.prid,a.pono,a.obrno,b.totalamount as grossamount from t_po as a inner join t_pr_amount1_vw as b on b.prid=a.prid where obrno='"+ cafno.First() + "';" ;
                     using (Npgsql.NpgsqlCommand cmd = new Npgsql.NpgsqlCommand(query, con))
                     {
                         con.Open();
-                        data = Convert.ToDouble(cmd.ExecuteScalar());
+                        data.amount = Convert.ToDouble(cmd.ExecuteScalar());
                     }
-                    return data;
+                   
                 }
-            }
-            catch 
-            {
-                return 0;
-            }
+                //DataTable arec;
+                //arec = ISfn.ToDatatable("SELECT [Description] FROM [IFMIS].[dbo].[tbl_T_BMSCurrentControl] where OBRNo= '" + cafno.First() + "' and actioncode=1");
+                //if (arec.Rows.Count > 0)
+                //{
+                //    ViewBag.Description = arec.Rows[0]["Description"].ToString();
+                //}
+            //return data;
+            return Json(new { amount = data.amount});
+            //}
+            //catch 
+            //{
+            //    return 0;
+            //}
         }
     }
 }

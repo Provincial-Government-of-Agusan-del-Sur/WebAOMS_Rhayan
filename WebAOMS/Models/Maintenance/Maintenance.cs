@@ -95,4 +95,11 @@ namespace WebAOMS.Models.Maintenance
         public int GLChartAccountChildID { get; set; }
     }
 
+    public class controltransaction
+    {
+        public string particular { get; set; }
+        public double amount { get; set; }
+        public string cafoano { get; set; }
+    }
+
 }
