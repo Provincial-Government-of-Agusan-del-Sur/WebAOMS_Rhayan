@@ -3234,37 +3234,43 @@ namespace WebAOMS.Controllers
         }
         public ActionResult check_gamount(controltransaction data)
         {
-            //int r;
-            //r = Convert.ToInt32(ISfn.ExecScalar("select Accounting.[fns_checkDocIfSign](" + doc_details_id + ") as result"));
-            //return r;
-            //try
-            //{
-                //var data = 0.00;
-                var cafno = data.cafoano.ToString().Split('/');
-                using (Npgsql.NpgsqlConnection con = new Npgsql.NpgsqlConnection(connStr))
-                {
+            if (data == null || string.IsNullOrWhiteSpace(data.cafoano))
+            {
+                return Json(
+                new { amount = 0.0, particular = string.Empty },
+                    JsonRequestBehavior.AllowGet);
+            }
 
-                    string query = "select a.prid,a.pono,a.obrno,b.totalamount as grossamount from t_po as a inner join t_pr_amount1_vw as b on b.prid=a.prid where obrno='"+ cafno.First() + "';" ;
-                    using (Npgsql.NpgsqlCommand cmd = new Npgsql.NpgsqlCommand(query, con))
-                    {
-                        con.Open();
-                        data.amount = Convert.ToDouble(cmd.ExecuteScalar());
-                    }
-                   
+            string obrNo = data.cafoano.Split('/')[0];
+            double amount = 0;
+            string particular = string.Empty;
+
+            const string amountQuery = @" SELECT COALESCE(b.totalamount, 0) FROM t_po a INNER JOIN t_pr_amount1_vw b ON b.prid = a.prid WHERE a.obrno = @obrno LIMIT 1;";
+
+            using (var con = new Npgsql.NpgsqlConnection(connStr))
+            using (var cmd = new Npgsql.NpgsqlCommand(amountQuery, con))
+            {
+                cmd.Parameters.AddWithValue("@obrno", obrNo);
+
+                con.Open();
+
+                var result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    amount = Convert.ToDouble(result);
                 }
-                //DataTable arec;
-                //arec = ISfn.ToDatatable("SELECT [Description] FROM [IFMIS].[dbo].[tbl_T_BMSCurrentControl] where OBRNo= '" + cafno.First() + "' and actioncode=1");
-                //if (arec.Rows.Count > 0)
-                //{
-                //    ViewBag.Description = arec.Rows[0]["Description"].ToString();
-                //}
-            //return data;
-            return Json(new { amount = data.amount});
-            //}
-            //catch 
-            //{
-            //    return 0;
-            //}
+            }
+            DataTable dt = ISfn.ToDatatable($@"select top 1 * from (
+                                            SELECT [Description] FROM [IFMIS].[dbo].[tbl_T_BMSCurrentControl] WHERE OBRNo = '{obrNo}'  AND actioncode = 1
+                                            union all
+                                            select [Description]  FROM [IFMIS].[dbo].[tbl_T_BMSExcessControl] WHERE OBRNo = '{obrNo}'  AND actioncode = 1) as x
+                                            ");
+
+            if (dt.Rows.Count > 0)
+            {
+                particular = Convert.ToString(dt.Rows[0]["Description"]);
+            }
+            return Json(  new  { amount, particular }, JsonRequestBehavior.AllowGet);
         }
     }
 }

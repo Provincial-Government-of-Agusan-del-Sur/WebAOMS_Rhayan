@@ -6,15 +6,10 @@
 <script>
     function getcafno(){
         var cafoano= $("#cafoano").data("kendoComboBox").text()
-        //var cafsplit =cafoano.split
         var frm = $("#frm_doc_logdetails").serialize();
-        $.get('@Url.Action("check_gamount", "Document")',{frm,cafoano:cafoano}
-       , function (r) {
-           var combo = $("#cafoano").data("kendoComboBox");
-           //$("#cafoano_text").val(combo.text());
+        $.get('@Url.Action("check_gamount", "Document")',{frm,cafoano:cafoano}, function (r) {
            $("#txt_doc_gamount").val(r.amount)
-           //alert(r.particular)
-           //$("#txt_doc_particular").val(r.particular)
+           $("#txt_doc_particular").val(r.particular)
        })
        .fail(function (jqXHR, textStatus, error) {
            stopSpin()

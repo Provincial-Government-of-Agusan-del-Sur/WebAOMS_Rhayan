@@ -959,6 +959,12 @@
     <Compile Include="Report\Design\rpt_DV_2021.Designer.cs">
       <DependentUpon>rpt_DV_2021.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Design\rpt_DV_consol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Design\rpt_DV_consol.Designer.cs">
+      <DependentUpon>rpt_DV_consol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Design\rpt_Financial_cashflow.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -4942,6 +4948,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Design\rpt_DV_2021.resx">
       <DependentUpon>rpt_DV_2021.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Design\rpt_DV_consol.resx">
+      <DependentUpon>rpt_DV_consol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Design\rpt_DV_rata.resx">
       <DependentUpon>rpt_DV_rata.cs</DependentUpon>
