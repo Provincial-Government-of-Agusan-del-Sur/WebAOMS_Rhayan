@@ -177,7 +177,7 @@
 
 
                         function print_special_payroll(batchno, bankid, compensationid,officeID) {
-
+                            var officeID = officeID == null ? 0 : officeID;
                             $.post('@Url.Content("~/Payroll/print_pay_special")', { batchno: batchno, bankID: bankid, compensationid: compensationid, officeID: officeID }
                                 , function (r) {
 
