@@ -1448,15 +1448,13 @@ namespace WebAOMS.Controllers
             return Convert.ToInt32(ISfn.ExecScalar("select [Accounting].[ufn_checkIfExstsInDTS] ('" + refno.AntiInject() + "'," + report_id + ") as r"));
         }
 
-        public ActionResult save_Doc_DV(tbl_t_DV_Details data)
+        public ActionResult save_Doc_DV(tbl_t_DV_Details data,string cafoano_text)
         {
             int userid = Convert.ToInt32(USER.C_swipeID);
             Int32 dvid;
-            string cafoanoText = data.cafoano_text;
-            if (data.Particular == null)
-            {
-                return Json(new { code = 7, statusName = "The Particular is required" });
-            }
+            string cafoanoText = data.cafoano_text.Split('/')[0];
+            //string cafoanoText = data.cafoano_text;
+
             if (data.Particular == null)
             {
                 return Json(new { code = 7, statusName = "The Particular is required" });
@@ -3246,30 +3244,32 @@ namespace WebAOMS.Controllers
             string obrNo = data.cafoano.Split('/')[0];
             double amount = 0;
             string particular = string.Empty;
+            
+            ////PostgreSQL
+            //const string amountQuery = @" SELECT COALESCE(b.totalamount, 0) FROM t_po a INNER JOIN t_pr_amount1_vw b ON b.prid = a.prid WHERE a.obrno = @obrno LIMIT 1;";
 
-            const string amountQuery = @" SELECT COALESCE(b.totalamount, 0) FROM t_po a INNER JOIN t_pr_amount1_vw b ON b.prid = a.prid WHERE a.obrno = @obrno LIMIT 1;";
+            //using (var con = new Npgsql.NpgsqlConnection(connStr))
+            //using (var cmd = new Npgsql.NpgsqlCommand(amountQuery, con))
+            //{
+            //    cmd.Parameters.AddWithValue("@obrno", obrNo);
 
-            using (var con = new Npgsql.NpgsqlConnection(connStr))
-            using (var cmd = new Npgsql.NpgsqlCommand(amountQuery, con))
-            {
-                cmd.Parameters.AddWithValue("@obrno", obrNo);
+            //    con.Open();
 
-                con.Open();
-
-                var result = cmd.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
-                {
-                    amount = Convert.ToDouble(result);
-                }
-            }
+            //    var result = cmd.ExecuteScalar();
+            //    if (result != null && result != DBNull.Value)
+            //    {
+            //        amount = Convert.ToDouble(result);
+            //    }
+            //}
             DataTable dt = ISfn.ToDatatable($@"select top 1 * from (
-                                            SELECT [Description] FROM [IFMIS].[dbo].[tbl_T_BMSCurrentControl] WHERE OBRNo = '{obrNo}'  AND actioncode = 1
+                                            SELECT Amount,[Description] FROM [IFMIS].[dbo].[tbl_T_BMSCurrentControl] WHERE OBRNo = '{obrNo}'  AND actioncode = 1
                                             union all
-                                            select [Description]  FROM [IFMIS].[dbo].[tbl_T_BMSExcessControl] WHERE OBRNo = '{obrNo}'  AND actioncode = 1) as x
+                                            select Amount,[Description]  FROM [IFMIS].[dbo].[tbl_T_BMSExcessControl] WHERE OBRNo = '{obrNo}'  AND actioncode = 1) as x
                                             ");
 
             if (dt.Rows.Count > 0)
             {
+                amount= Convert.ToDouble(dt.Rows[0]["Amount"]);
                 particular = Convert.ToString(dt.Rows[0]["Description"]);
             }
             return Json(  new  { amount, particular }, JsonRequestBehavior.AllowGet);

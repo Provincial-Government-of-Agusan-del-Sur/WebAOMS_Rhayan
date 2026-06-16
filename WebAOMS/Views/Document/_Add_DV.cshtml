@@ -19,7 +19,6 @@
 
     }
 
-
 </script>
 <div id="div_details" class="box" style="width:100%;margin-bottom:0px!important">
     <div class="box-body">
@@ -535,8 +534,9 @@
     function  btn_save_dv() {
         startSpin()
         var frm = $("#frm_doc_logdetails").serialize();
+        var cafoano= $("#cafoano").data("kendoComboBox").text()
         $.post('@Url.Action("save_Doc_DV", "Document")',
-            frm
+            {frm,cafoano_text:cafoano}
         , function (r) {
             if (r.code == 6) {
                 $("#txt_DVid").val(r.dvid)
