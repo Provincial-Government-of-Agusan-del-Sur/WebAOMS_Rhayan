@@ -896,6 +896,7 @@
     </div>
 </div>
 <script>
+    var mg = new mgsInfo()
     function Close_mdl_doc_form(){
         removezindex();
         $("#body_doc_form").html("");
@@ -949,10 +950,42 @@
                 }
             })
         }
-        
-       
+
     }
-                </script>
+    function warn_delete_doc_attach(AdviceNo) {
+        $(".modal").addClass("zdex");
+        mg.boxYesNo("Are you sure you want to delete advice number <b>" + AdviceNo + "</b> from the generated ACIC file?", "delete_adno('" + AdviceNo + "')")
+    }
+    function btn_submitForReturn()
+    {
+       // $(".modal").addClass("zdex");
+        mg.boxYesNo("Are you sure you want to return the submitted AD to the preparer for revision?", "btn_retunconfirm()","btn_returncancel()")
+
+    }
+    function btn_retunconfirm(){
+        startSpin()
+        var txt_doc_details_id = $("#txt_doc_details_id").val()
+        $.post('@Url.Action("ForReturn", "DGSign")',
+            { reportid: @ViewBag.report_id, status_code:@ViewBag.status_code,refno:$("#txt_refno").val()}
+        , function(r) {
+            if (r == "success")
+            {
+                stopSpin()
+                toastr.success("Successfully returned to the preparer.", 'System Message')
+                Close_mdl_doc_form()
+                btn_returncancel()
+            }
+            else
+            {
+                stopSpin()
+                toastr.warning(r.statusName, 'System Message');
+            }
+        })
+    }
+    function btn_returncancel() {
+        $('.modal').modal('hide');
+    }
+</script>
 <script>
 
     var mg = new mgsInfo()

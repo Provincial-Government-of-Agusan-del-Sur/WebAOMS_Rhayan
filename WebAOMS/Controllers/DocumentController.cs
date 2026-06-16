@@ -114,9 +114,10 @@ namespace WebAOMS.Controllers
             return Json(rec.ToDataSourceResult(request), JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult _Add_doc(Int64 doc_form_id)
+        public ActionResult _Add_doc(Int64 doc_form_id,int status_code)
         {
             ViewBag.doc_form_id = doc_form_id;
+            ViewBag.status_code = status_code;
             string cmdStr = @"SELECT d.*,isnull(status_code,0) as status_code from  Accounting.tbl_t_DocForm as d
   inner join Tracking.tbl_t_transactionDetails as b on b.Unique_refno = refno
   inner join Tracking.tbl_t_transactionDetails_log as e on e.trans_id = b.trans_id and e.isActive = 1
@@ -172,8 +173,9 @@ namespace WebAOMS.Controllers
 ;
         }
 
-        public ActionResult _Add_attachment(Int64 doc_form_id, int document_type_id, int id, int year)
+        public ActionResult _Add_attachment(Int64 doc_form_id, int document_type_id, int id, int year,int status_code)
         {
+            ViewBag.status_code = status_code;
             if (document_type_id == 1)
             {
                 string cmdStr = "execute  [Accounting].[usp_get_dv_details] @id";

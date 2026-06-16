@@ -247,6 +247,12 @@
             $("#btn_save_id").show();
             $("#btn_attach").show()
         }
+        if ("@ViewBag.status_code" == "439"){
+            $("#id_forreturn").show()
+        }else{
+            
+            $("#id_forreturn").hide()
+        }
     })
 
 
@@ -325,10 +331,10 @@
 
             if (documentTypeIdsToHide.includes(document_type_id)) {
             
-                    $("#id_dgsign").hide()
-                    $("#id_forreview").show()
-                    $("#btn_doc_configure").hide()
-                    $("#btn_proceed").hide()
+                $("#id_dgsign").hide()
+                $("#id_forreview").show()
+                $("#btn_doc_configure").hide()
+                $("#btn_proceed").hide()
             }
             else if (document_type_id==50)
             {
@@ -352,7 +358,7 @@
                 $("#btn_doc_configure").hide()
                 $("#btn_proceed").hide()
             }
-            add_attachment(@ViewBag.doc_form_id,id,document_type_id,title,year)
+            add_attachment(@ViewBag.doc_form_id,id,document_type_id,title,year,@ViewBag.status_code)
         }
         else
         {
@@ -389,10 +395,10 @@
         }
     }
 
-    function add_attachment(doc_form_id,id,document_type_id,title,year) {
+    function add_attachment(doc_form_id,id,document_type_id,title,year,status_code) {
       
         startSpin()
-        $.post('@Url.Action("_Add_attachment", "Document")', { doc_form_id: $("#doc_form_id").val(),document_type_id:document_type_id,id:id,year:year}
+        $.post('@Url.Action("_Add_attachment", "Document")', { doc_form_id: $("#doc_form_id").val(),document_type_id:document_type_id,id:id,year:year,status_code:status_code}
             , function (r) {
                 stopSpin()
                 r_grid_attach_doc()

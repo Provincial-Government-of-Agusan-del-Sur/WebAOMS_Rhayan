@@ -80,7 +80,7 @@
             columns.Template(@<text></text>)
         .Width(80)
         .HtmlAttributes(new { style = "text-align:left;font-size:10" })
-        .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnew(#=doc_form_id#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"print_tracking('#=refno#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-print\"></i></button>");
+        .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnew(#=doc_form_id#,#=status_code#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button><button data-original-title=\"recompute\" type=\"button\" onclick=\"print_tracking('#=refno#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-print\"></i></button>");
 
         })
         .HtmlAttributes(new { style = "height: 400px;" })
@@ -102,7 +102,7 @@
     </div>
     <div class="box-footer">
         <div class="btn-group" style="padding-left:10px;padding-bottom:10px;">
-            <button onclick="addnew(0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
+            <button onclick="addnew(0,0)" type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add New</button>
         </div>
     </div>
 </div>
@@ -227,9 +227,9 @@
     }
 
     var mg = new mgsInfo()
-    function addnew(doc_form_id) {
+    function addnew(doc_form_id, status_code) {
         startSpin()
-        $.post('@Url.Action("_Add_doc", "Document")', { doc_form_id: doc_form_id }
+        $.post('@Url.Action("_Add_doc", "Document")', { doc_form_id: doc_form_id, status_code: status_code }
             , function (r) {
                 if (r.code == 5) {
                     stopSpin()
@@ -378,7 +378,7 @@
             <div class="modal-footer">
                 <button id="id_dgsign" onclick="btn_signDGSign()" type="button" class="btn btn-success pull-left"><i class="fa fa-pencil"></i> Sign via DGSign</button>
                 <button id="id_forreview" onclick="btn_submitForReview()" type="button" class="btn btn-success pull-left"><i class="fa fa-view"></i> Submit for Review</button>
-
+                <button id="id_forreturn" onclick="btn_submitForReturn()" type="button" class="btn btn-success pull-left"><i class="fa fa-undo"></i> Return</button>
                 <button id="btn_doc_configure" onclick="cofigure_logo()" type="button" class="btn btn-default"><i class="fa fa-gear"></i> Configure Logo</button>
                 <button id="btn_proceed" onclick="cofigure_logo()" type="button" class="btn btn-default"><i class="fa fa-arrow-right"></i> Proceed</button>
 

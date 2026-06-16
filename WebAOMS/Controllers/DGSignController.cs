@@ -269,7 +269,26 @@ namespace WebAOMS.Controllers
 
             return 1;
         }
-        
+        public string ForReturn(int reportid,int status_code, string refno)
+        {
+            DGSignController dg = new DGSignController();
+
+            SqlConnection connection = new SqlConnection(fmisConn);
+            string cmdStr = "execute [Tracking].[usp_submittedAD_return] @reportid,@status_code,@refno";
+            using (SqlCommand command = new SqlCommand(cmdStr, connection))
+            {
+                command.Parameters.AddWithValue("@reportid", reportid);
+                command.Parameters.AddWithValue("@status_code", status_code);
+                command.Parameters.AddWithValue("@refno", refno);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                return "success";
+            }
+
+        }
+
     }
 
 }
