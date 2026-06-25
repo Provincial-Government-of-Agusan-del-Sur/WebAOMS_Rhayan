@@ -1448,12 +1448,11 @@ namespace WebAOMS.Controllers
             return Convert.ToInt32(ISfn.ExecScalar("select [Accounting].[ufn_checkIfExstsInDTS] ('" + refno.AntiInject() + "'," + report_id + ") as r"));
         }
 
-        public ActionResult save_Doc_DV(tbl_t_DV_Details data,string cafoano_text)
+        public ActionResult save_Doc_DV(tbl_t_DV_Details data)
         {
             int userid = Convert.ToInt32(USER.C_swipeID);
             Int32 dvid;
             string cafoanoText = data.cafoano_text.Split('/')[0];
-            //string cafoanoText = data.cafoano_text;
 
             if (data.Particular == null)
             {
@@ -1512,8 +1511,6 @@ namespace WebAOMS.Controllers
                 command.Parameters.AddWithValue("@doc_form_id", data.doc_form_id);
                 command.Parameters.AddWithValue("@ooe", data.ooe);
                 command.Parameters.AddWithValue("@countperson", data.countperson);
-                //command.Parameters.Add("@cafoano", SqlDbType.VarChar, 100).Value = cafoanoText;
-                //command.Parameters.AddWithValue("@cafoaid", data.cafoano);
                 command.Parameters.Add("@cafoano", SqlDbType.VarChar, 100).Value =
                     string.IsNullOrWhiteSpace(cafoanoText)
                     ? (object)DBNull.Value

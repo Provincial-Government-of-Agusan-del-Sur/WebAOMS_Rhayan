@@ -6,6 +6,7 @@
 <script>
     function getcafno(){
         var cafoano= $("#cafoano").data("kendoComboBox").text()
+        var cafoano_text= $("#cafoano").data("kendoComboBox").text()
         var frm = $("#frm_doc_logdetails").serialize();
         $.get('@Url.Action("check_gamount", "Document")',{frm,cafoano:cafoano}, function (r) {
            $("#txt_doc_gamount").val(r.amount)
@@ -533,10 +534,12 @@
 
     function  btn_save_dv() {
         startSpin()
-        var frm = $("#frm_doc_logdetails").serialize();
-        var cafoano= $("#cafoano").data("kendoComboBox").text()
+
+        $("#cafoano_text").val($("#cafoano").data("kendoComboBox").text());
+        const  frm = $("#frm_doc_logdetails").serialize();
+
         $.post('@Url.Action("save_Doc_DV", "Document")',
-            {frm,cafoano_text:cafoano}
+           frm
         , function (r) {
             if (r.code == 6) {
                 $("#txt_DVid").val(r.dvid)

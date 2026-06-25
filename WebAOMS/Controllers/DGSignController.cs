@@ -230,6 +230,13 @@ namespace WebAOMS.Controllers
                 return Json(new { code = 5, statusName = "The inclusive date must be at least 14 days in advance for acceptance." });
             }
 
+            //verify department head review
+            int dheid = Convert.ToInt32(ISfn.ExecScalar("select Accounting.[fns_checkDH_review]('" + refno + "') as result"));
+            if (dheid != 0 && dheid != USER.C_eID)
+            {
+                return Json(new { code = 5, statusName = "Sorry! Only the Department Head is authorized to submit this part of the Activity Design review." });
+            }
+
             int nextStatusID = Convert.ToInt32(ISfn.ExecScalar("select [Accounting].[fns_getNextStatusCode]('"+ refno.AntiInject() +"') as result"));
 
 

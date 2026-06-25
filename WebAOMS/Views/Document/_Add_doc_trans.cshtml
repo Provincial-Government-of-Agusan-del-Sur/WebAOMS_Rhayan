@@ -326,7 +326,7 @@
 <script>
     function load_dv(id,document_type_id,title,year){
         const documentTypeIdsToHide = [48, 49, 53, 54, 55, 56,57,58,59];
-     
+       
         if ($("#doc_form_id").val() > 0){
 
             if (documentTypeIdsToHide.includes(document_type_id)) {
@@ -401,6 +401,7 @@
         $.post('@Url.Action("_Add_attachment", "Document")', { doc_form_id: $("#doc_form_id").val(),document_type_id:document_type_id,id:id,year:year,status_code:status_code}
             , function (r) {
                 stopSpin()
+                //alert(document_type_id)
                 r_grid_attach_doc()
               
                 if (r.code == 5) {
