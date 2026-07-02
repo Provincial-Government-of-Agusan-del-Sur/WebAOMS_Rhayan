@@ -1452,8 +1452,9 @@ namespace WebAOMS.Controllers
         {
             int userid = Convert.ToInt32(USER.C_swipeID);
             Int32 dvid;
-            string cafoanoText = data.cafoano_text.Split('/')[0];
 
+            string cafoanoText = data.cafoano_text?.Split('/')[0] ?? string.Empty;
+           
             if (data.Particular == null)
             {
                 return Json(new { code = 7, statusName = "The Particular is required" });
