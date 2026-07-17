@@ -36,7 +36,7 @@
                         {
                             read.Action("get_person_group", "Persons");
                         })
-                        .ServerFiltering(true);
+                        .ServerFiltering(false);
                     })
                 .Events(e =>
                 {
@@ -104,7 +104,7 @@
             columns.Template(@<text></text>)
             .Width(80)
             .HtmlAttributes(new { style = "text-align:left;font-size:10" })
-            .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnew('#=ClaimantCode#')\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
+            .ClientTemplate("<button data-toggle=\"tooltip\" data-placement=\"top\" type=\"button\" data-original-title=\"Edit tracking\" onclick=\"addnew('#=ClaimantCode#',#=PersonID#)\" class=\"btn btn-xs btn-inverse btn-equal\" style=\"margin-right:2px\"><i class=\"fa fa-pencil\"></i></button>");
 
             })
             .HtmlAttributes(new { style = "height: 350px;" })
@@ -131,9 +131,9 @@
 <script>
 
     var mg = new mgsInfo()
-    function addnew(claimantcode) {
+    function addnew(claimantcode, PersonID) {
         startSpin()
-        $.post('@Url.Action("_add_person", "Persons")', { claimantcode: claimantcode }
+        $.post('@Url.Action("_add_person", "Persons")', { claimantcode: claimantcode, PersonID: PersonID }
             , function (r) {
                 if (r.code == 5) {
                     stopSpin()
@@ -170,7 +170,7 @@
             </div>
             <div class="modal-footer">
                 <button onclick="btn_save_person()" type="button" class="btn btn-success"><i class="fa fa-save"></i> Save Changes</button>
-                <button id="btn_delete" onclick="warn_delete_doc_form()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                <button id="btn_delete" onclick="warn_delete_iperson()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
                 <button type="button" class="btn btn-default" style="cursor:pointer" data-dismiss="modal">Close</button>
             </div>
         </div>

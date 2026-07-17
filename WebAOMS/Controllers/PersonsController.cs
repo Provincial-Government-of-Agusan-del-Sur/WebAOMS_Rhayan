@@ -54,10 +54,10 @@ namespace WebAOMS.Controllers
             _address = fmisdb.tbl_l_Address;
             return Json(_address.ToList(), JsonRequestBehavior.AllowGet);
         }
-        public ActionResult _add_person(string claimantcode)
+        public ActionResult _add_person(string claimantcode,int PersonID)
         {
             var persons = fmisdb.tbl_l_Persons.Where(M => M.ClaimantCode == claimantcode).ToList();
-
+            ViewBag.PersonID = PersonID;
             if (persons.Count > 0)
             {
                 ViewBag.isEdit = 1; // Assuming you want to set this to 1 if there are any matching records
@@ -124,6 +124,39 @@ namespace WebAOMS.Controllers
                     return Json(new { code = 5, statusName = "Name already on the database..", Claimantcode = Claimantcode });
                 }
 
+            }
+        }
+        public ActionResult delete_personname(int PersonID)
+        {
+            TrackingController track = new TrackingController();
+            try
+            {
+                int py_detail_id = Convert.ToInt32(ISfn.ExecScalar("select [Accounting].[fns_checkspecialpayroll] ("+ PersonID + ") as r"));
+                if (py_detail_id > 0)
+                {
+                    return Json(new { code = 5, statusName = "Sorry, the name you're trying to delete has already been used in a prepared special payroll. To delete the person name, you must first remove the associated special payroll record." });
+                }
+
+                Int32 userid = Convert.ToInt32(USER.C_swipeID);
+                SqlConnection connection = new SqlConnection(fmisConn);
+                string cmdStr = "execute [Accounting].[usp_delete_otherindividual] @PersonID";
+                using (SqlCommand command = new SqlCommand(cmdStr, connection))
+                {
+                    command.Parameters.Add("@PersonID", SqlDbType.Int).Value = PersonID;
+                    connection.Open();
+
+                    int rows = command.ExecuteNonQuery();
+                    connection.Close();                  
+                    return Json(new { code = 6, statusName = "Successfully Deleted..!" });
+                }
+            }
+            catch (Exception e)
+            {
+                return Json(new
+                {
+                    code = e.HResult,
+                    statusName = e.Message
+                });
             }
         }
 

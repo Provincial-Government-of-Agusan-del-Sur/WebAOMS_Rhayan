@@ -129,6 +129,37 @@
                     mg.warning("" + textStatus + "")
                 });
             }
+            function warn_delete_iperson() {
+                $(".modal").addClass("zdex");
+                mg.bsyesNoWithRemarks("Are you sure you want to delete the registered name <b>@ViewBag.Name?</b>", "delete_iperson(@ViewBag.PersonID)")
+            }
+
+            function delete_iperson(PersonID) {
+                startSpin()
+                var frm = $("#frm_add_cperson").serialize();
+                $.post('@Url.Action("delete_personname", "Persons")',
+                    { PersonID: PersonID }
+                , function (r) {
+                    if (r.code == 6) {
+                        toastr.success(r.statusName, 'System Message')
+                        stopSpin()
+                        r_grid()
+                        $("#mdl_newstatus").modal("hide");
+                        $('#modal_delete').modal('hide');
+
+                    }
+                    else {
+                        stopSpin()
+                        toastr.warning(r.statusName, 'System Message');
+                    }
+                    zdex()
+                })
+                .fail(function (jqXHR, textStatus, error) {
+                    stopSpin()
+                    zdex()
+                    toastr.warning(textStatus + "\n" + jqXHR + "\n" + error, 'Error Deleting..');
+                });
+            }
         </script>
     </div>
 </div>
