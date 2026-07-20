@@ -54,7 +54,7 @@ namespace WebAOMS.Controllers
             _address = fmisdb.tbl_l_Address;
             return Json(_address.ToList(), JsonRequestBehavior.AllowGet);
         }
-        public ActionResult _add_person(string claimantcode,int PersonID)
+        public ActionResult _add_person(string claimantcode="",int? PersonID=0)
         {
             var persons = fmisdb.tbl_l_Persons.Where(M => M.ClaimantCode == claimantcode).ToList();
             ViewBag.PersonID = PersonID;
