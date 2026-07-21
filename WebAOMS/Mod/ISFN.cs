@@ -466,10 +466,17 @@ namespace WebAOMS.Base
         }
         public static string ExecScalar(string qry)
         {
-            string r;
-            r = OleDbHelper.ExecuteScalar(ifmisdb, CommandType.Text,
-                       qry).ToString();
-            return r;
+            //string r;
+            //r = OleDbHelper.ExecuteScalar(ifmisdb, CommandType.Text,
+            //           qry).ToString();
+            //return r;
+            object result = OleDbHelper.ExecuteScalar(ifmisdb, CommandType.Text, qry);
+
+            if (result == null || result == DBNull.Value)
+                return string.Empty;
+
+            return result.ToString();
+
         }
         public static Boolean CheckIfExist(string qry = "")
         {
@@ -510,9 +517,11 @@ namespace WebAOMS.Base
         public static string Get_employee_phoneno(int eid)
         {
             string r;
+
+            r = ISfn.ExecScalar("SELECT telephone from pmis.dbo.vw_employee_Concatname where eid = " + eid + "").ToString();
+
+            return r;
             
-                r = ISfn.ExecScalar("SELECT telephone from pmis.dbo.vw_employee_Concatname where eid = "+eid+"").ToString();
-            return r; 
         }
         public static DataSet getDataset(string qry)
         {
