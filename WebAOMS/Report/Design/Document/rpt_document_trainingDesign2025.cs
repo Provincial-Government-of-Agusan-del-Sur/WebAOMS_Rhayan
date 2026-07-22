@@ -33,7 +33,7 @@ namespace WebAOMS.Report.Design.Document
             //}
             DataSet dt = new DataSet();
             string refno = "";
-            string cmdStr = "execute [Accounting].[usp_rpt_Doc_details_v2_test] @report_id, @doc_details_id,@userid";
+            string cmdStr = "execute [Accounting].[usp_rpt_Doc_details_v2] @report_id, @doc_details_id,@userid";
             SqlConnection connection = new SqlConnection(fmisConn);
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
