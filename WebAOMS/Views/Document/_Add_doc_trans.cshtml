@@ -326,19 +326,25 @@
 <script>
     function load_dv(id,document_type_id,title,year){
         const documentTypeIdsToHide = [48, 49, 53, 54, 55, 56,57,58,59];
-       
+     
         if ($("#doc_form_id").val() > 0){
 
             if (documentTypeIdsToHide.includes(document_type_id)) {
-            
-                $("#id_dgsign").hide()
-                $("#id_forreview").show()
+                if ("@ViewBag.Status_Code"=="401")
+                {
+                    $("#id_dgsign").show()
+                    $("#id_forreview").hide()
+                }
+                else{
+                    $("#id_dgsign").hide()
+                    $("#id_forreview").show()
+                }
+                
                 $("#btn_doc_configure").hide()
                 $("#btn_proceed").hide()
             }
             else if (document_type_id==50)
             {
-             
                 $("#id_dgsign").hide()
                 $("#id_forreview").show()
                 $("#btn_doc_configure").hide()
@@ -362,7 +368,6 @@
         }
         else
         {
-            
             //if ((document_type_id)==53 || (document_type_id==54) || (document_type_id==55))
             //{
             //    //$("#id_dgsign").hide()
@@ -401,7 +406,6 @@
         $.post('@Url.Action("_Add_attachment", "Document")', { doc_form_id: $("#doc_form_id").val(),document_type_id:document_type_id,id:id,year:year,status_code:status_code}
             , function (r) {
                 stopSpin()
-                //alert(document_type_id)
                 r_grid_attach_doc()
               
                 if (r.code == 5) {
