@@ -210,7 +210,7 @@ namespace WebAOMS.Controllers
                 command.ExecuteNonQuery();
                 connection.Close();
 
-                if (status_code == 401)
+                if (status_code == 401) 
                 {
                     string id = ISfn.ExecScalar(@"SELECT max(doc_details_id)
                       FROM [fmis].[Accounting].[tbl_t_DocForm] as a 

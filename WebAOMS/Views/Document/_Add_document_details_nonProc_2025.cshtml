@@ -700,8 +700,8 @@
                         .Columns(columns =>
                         {
                             columns.Bound(p => p.Particular)
-              .Width(250)
-              .EditorTemplateName("ParticularTextArea");
+                      .Width(250)
+                      .EditorTemplateName("ParticularTextArea");
                             columns.Bound(p => p.item_names).Title("Item name").Width(120);
                             columns.Bound(p => p.item_price).Title("Price").Width(80).Format("{0:N2}").HtmlAttributes(new { style = "text-align:right" });
                             columns.Bound(p => p.item_qty).Title("Quantity").Width(70).Format("{0:N0}").HtmlAttributes(new { style = "text-align:center" });

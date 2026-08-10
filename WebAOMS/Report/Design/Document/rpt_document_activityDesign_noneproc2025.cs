@@ -68,7 +68,8 @@ namespace WebAOMS.Report.Design.Document
                         ReportParameters["T1"].Value = reader["T1"].ToString();
                         ReportParameters["T2"].Value = reader["T2"].ToString();
                         refno = reader["refno"].ToString();
-                        txt_office.Value = reader["T1"].ToString();
+                        txt_office.Value = HttpUtility.HtmlDecode(reader["T1"].ToString()).Replace("&nbsp;&nbsp;", "");
+                        //txt_office.Value = reader["T1"].ToString();
                         txt_title.Value = reader["T2"].ToString();
                         pictureBox1.Value = reader["CompanyLogo"].ToString();
 

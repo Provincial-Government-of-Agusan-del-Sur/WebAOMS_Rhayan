@@ -46,7 +46,6 @@ namespace WebAOMS.Report.Design.Document
             this.pageHeaderSection1 = new Telerik.Reporting.PageHeaderSection();
             this.pictureBox1 = new Telerik.Reporting.PictureBox();
             this.pictureBox3 = new Telerik.Reporting.PictureBox();
-            this.txt_office = new Telerik.Reporting.TextBox();
             this.htmlTextBox2 = new Telerik.Reporting.HtmlTextBox();
             this.detail = new Telerik.Reporting.DetailSection();
             this.textBox26 = new Telerik.Reporting.TextBox();
@@ -108,6 +107,7 @@ namespace WebAOMS.Report.Design.Document
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
             this.textBox2 = new Telerik.Reporting.TextBox();
             this.brcode_UI = new Telerik.Reporting.Barcode();
+            this.txt_office = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox12
@@ -228,19 +228,19 @@ namespace WebAOMS.Report.Design.Document
             // 
             // pageHeaderSection1
             // 
-            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(2.7D);
+            this.pageHeaderSection1.Height = Telerik.Reporting.Drawing.Unit.Cm(3.556D);
             this.pageHeaderSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.pictureBox1,
             this.pictureBox3,
-            this.txt_office,
-            this.htmlTextBox2});
+            this.htmlTextBox2,
+            this.txt_office});
             this.pageHeaderSection1.Name = "pageHeaderSection1";
             this.pageHeaderSection1.PrintOnLastPage = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchoring = Telerik.Reporting.AnchoringStyles.Left;
-            this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
+            this.pictureBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.pictureBox1.MimeType = "image/png";
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.75D), Telerik.Reporting.Drawing.Unit.Inch(0.591D));
@@ -250,30 +250,16 @@ namespace WebAOMS.Report.Design.Document
             // 
             this.pictureBox3.Anchoring = Telerik.Reporting.AnchoringStyles.Right;
             this.pictureBox3.DocumentMapText = "";
-            this.pictureBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(13.453D), Telerik.Reporting.Drawing.Unit.Inch(0.002D));
+            this.pictureBox3.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(5.297D), Telerik.Reporting.Drawing.Unit.Inch(0.002D));
             this.pictureBox3.MimeType = "image/png";
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.907D), Telerik.Reporting.Drawing.Unit.Inch(0.589D));
             this.pictureBox3.Sizing = Telerik.Reporting.Drawing.ImageSizeMode.Stretch;
             // 
-            // txt_office
-            // 
-            this.txt_office.CanGrow = true;
-            this.txt_office.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
-            this.txt_office.Name = "txt_office";
-            this.txt_office.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(15.9D), Telerik.Reporting.Drawing.Unit.Cm(1.2D));
-            this.txt_office.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.txt_office.Style.Font.Bold = true;
-            this.txt_office.Style.Font.Name = "Calibri";
-            this.txt_office.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(15D);
-            this.txt_office.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.txt_office.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.txt_office.Value = "";
-            // 
             // htmlTextBox2
             // 
             this.htmlTextBox2.Anchoring = ((Telerik.Reporting.AnchoringStyles)((Telerik.Reporting.AnchoringStyles.Left | Telerik.Reporting.AnchoringStyles.Right)));
-            this.htmlTextBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(1.905D), Telerik.Reporting.Drawing.Unit.Cm(0D));
+            this.htmlTextBox2.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.75D), Telerik.Reporting.Drawing.Unit.Cm(0D));
             this.htmlTextBox2.Name = "htmlTextBox2";
             this.htmlTextBox2.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(11.548D), Telerik.Reporting.Drawing.Unit.Cm(1.5D));
             this.htmlTextBox2.Value = resources.GetString("htmlTextBox2.Value");
@@ -1105,6 +1091,25 @@ namespace WebAOMS.Report.Design.Document
             this.brcode_UI.Style.Font.Italic = false;
             this.brcode_UI.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
             // 
+            // txt_office
+            // 
+            this.txt_office.CanShrink = true;
+            this.txt_office.KeepTogether = false;
+            this.txt_office.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Cm(0D), Telerik.Reporting.Drawing.Unit.Cm(1.524D));
+            this.txt_office.Name = "txt_office";
+            this.txt_office.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Cm(15.922D), Telerik.Reporting.Drawing.Unit.Cm(2.032D));
+            this.txt_office.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.txt_office.Style.Font.Bold = true;
+            this.txt_office.Style.Font.Name = "Calibri";
+            this.txt_office.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(15D);
+            this.txt_office.Style.Padding.Bottom = Telerik.Reporting.Drawing.Unit.Pixel(10D);
+            this.txt_office.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Pixel(2D);
+            this.txt_office.Style.Padding.Right = Telerik.Reporting.Drawing.Unit.Pixel(2D);
+            this.txt_office.Style.Padding.Top = Telerik.Reporting.Drawing.Unit.Pixel(10D);
+            this.txt_office.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.txt_office.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.txt_office.Value = "";
+            // 
             // rpt_document_activityDesign_noneproc2025
             // 
             this.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
@@ -1143,7 +1148,6 @@ namespace WebAOMS.Report.Design.Document
         private Telerik.Reporting.PictureBox pictureBox1;
         private Telerik.Reporting.PictureBox pictureBox3;
         private Telerik.Reporting.TextBox textBox23;
-        private Telerik.Reporting.TextBox txt_office;
         private Telerik.Reporting.TextBox txt_title;
         private Telerik.Reporting.TextBox txt_label_approve;
         private Telerik.Reporting.PictureBox pictureBox4;
@@ -1212,5 +1216,6 @@ namespace WebAOMS.Report.Design.Document
         private Telerik.Reporting.HtmlTextBox htmlTextBox1;
         private Telerik.Reporting.HtmlTextBox txt_user;
         private Telerik.Reporting.HtmlTextBox txt_approve;
+        private Telerik.Reporting.TextBox txt_office;
     }
 }
