@@ -534,10 +534,9 @@
 
     function  btn_save_dv() {
         startSpin()
-
         $("#cafoano_text").val($("#cafoano").data("kendoComboBox").text());
         const  frm = $("#frm_doc_logdetails").serialize();
-
+       
         $.post('@Url.Action("save_Doc_DV", "Document")',
            frm
         , function (r) {
