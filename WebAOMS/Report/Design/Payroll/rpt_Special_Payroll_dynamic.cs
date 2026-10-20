@@ -173,6 +173,10 @@ namespace WebAOMS.Report.Design.Payroll
             {
                //// txt_paymentperiod.Value = recp.Rows[0]["CompensatioName"].ToString() + " " + recp.Rows[0]["year"].ToString() + "(" + recp.Rows[0]["employmentStatusText"].ToString() + ")";
                 this.PageSettings.PaperSize = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(Convert.ToDouble(recp.Rows[0]["width"])), Telerik.Reporting.Drawing.Unit.Inch(Convert.ToDouble(recp.Rows[0]["height"])));
+                if (Convert.ToInt32(recp.Rows[0]["CompensationID"])== 54)
+                {
+                    table4.Visible = false;
+                }
             }
             recp.Dispose();
             txt_batchno.Value = "Batch No.: " + batchno;
