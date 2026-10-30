@@ -245,6 +245,11 @@ namespace WebAOMS.Report
                     fundid = Convert.ToInt16(Request["fundid"]);
                     rs.ReportDocument = new rpt_Financial_schedules(fundid, to);
                     break;
+                case 52:
+                    dvid = Convert.ToInt32(Request["dvid"]);
+                    refno = Request["refno"].ToString();
+                    rs.ReportDocument = new rpt_DV_consol(dvid);
+                    break;
                 default:
                     to = Convert.ToDateTime(Request["to"]);
                     fundid = Convert.ToInt16(Request["fundid"]);

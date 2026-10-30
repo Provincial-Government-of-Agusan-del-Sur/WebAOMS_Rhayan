@@ -24,7 +24,7 @@ namespace WebAOMS.Report.Design
             DataSet dt = new DataSet();
 
             SqlConnection connection = new SqlConnection(fmisConn);
-            string cmdStr = "execute  [Accounting].[usp_rpt_DV_details] @dvid";
+            string cmdStr = "execute  [Accounting].[usp_rpt_DV_details_test] @dvid";
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
 

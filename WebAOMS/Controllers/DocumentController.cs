@@ -3272,6 +3272,21 @@ namespace WebAOMS.Controllers
             }
             return Json(  new  { amount, particular }, JsonRequestBehavior.AllowGet);
         }
+        public int checkDVObr(int document_type_id, int id)
+        {
+            DataTable arec;
+            int empid = 0;
+            arec = ISfn.ToDatatable("fmis.dbo.usp_JEV_Get_DV_NoCount "+ id + "");
+            if (Convert.ToInt16(arec.Rows[0][0]) > 0)
+            {
+                empid = 1; 
+            }
+            else
+            {
+                empid = 0;
+            }
+            return empid;
+        }
     }
 }
 
