@@ -248,7 +248,7 @@ namespace WebAOMS.Report
                 case 52:
                     dvid = Convert.ToInt32(Request["dvid"]);
                     refno = Request["refno"].ToString();
-                    rs.ReportDocument = new rpt_DV_consol(dvid);
+                    rs.ReportDocument = new rpt_DV_consol(dvid, refno);
                     break;
                 default:
                     to = Convert.ToDateTime(Request["to"]);

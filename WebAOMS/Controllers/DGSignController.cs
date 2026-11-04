@@ -295,51 +295,59 @@ namespace WebAOMS.Controllers
             }
 
         }
-        public ActionResult SignViaDG_DV(int document_type_id, int dvid, string refno)
+        public ActionResult SignViaDG_DV(int document_type_id=0, int dvid=0, string refno="")
         {
             var r = "";
 
 
             var res_source = new InstanceReportSource();
 
-            if (document_type_id != 52)
+            DataTable arec;
+            arec = ISfn.ToDatatable("SELECT count(dvid) dvid FROM [fmis].[dbo].[tblAMIS_DV_Consol] where actioncode=1 and dvid=" + dvid + "");
+            if (Convert.ToInt16(arec.Rows[0][0]) == 0)
             {
-                var report_separation = new Report.Design.rpt_DV_2021(dvid, refno);
-                res_source.ReportDocument = report_separation;
+                if (document_type_id == 11)
+                {
+                    var report_separation = new Report.Design.rpt_DV_2021(dvid, refno);
+                    res_source.ReportDocument = report_separation;
+                }
+                else
+                {
+                    var report_separation = new Report.Design.rpt_DV_consol(dvid, refno);
+                    res_source.ReportDocument = report_separation;
+                }
+           
+                //PDF processing
+                ReportProcessor reportProcessor = new ReportProcessor();
+                RenderingResult result = reportProcessor.RenderReport("PDF", res_source, null);
+                var file = ISfn.createPDFBinary(result);
+
+                using (SqlConnection connection = new SqlConnection(fmisConn))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("exec [Accounting].[usp_DGsign_DV_Consol] @userid, @dvid,@File,@refno,@doctypeid", connection))
+                    {
+                        command.Parameters.AddWithValue("@userid", USER.C_eID);
+
+                        command.Parameters.AddWithValue("@dvid", dvid);
+                        command.Parameters.AddWithValue("@File", file);
+                        command.Parameters.AddWithValue("@refno", refno);
+                        command.Parameters.AddWithValue("@doctypeid", document_type_id);
+                        command.ExecuteNonQuery();
+                    }
+                    r = "The document has been successfully generated and is ready for digital signature.";
+                
+                    //trackController.save_status_log(refno.AntiInject(), 381, "", USER.C_eID);
+                    connection.Close();
+                }
+
+                return Json(new { code = 6, statusName = r }, JsonRequestBehavior.AllowGet);
             }
             else
             {
-                var report_separation = new Report.Design.rpt_DV_consol(dvid);
-                res_source.ReportDocument = report_separation;
+                return Json(new { code = 7, statusName = "A document has already been generated for digital signature." }, JsonRequestBehavior.AllowGet);
             }
-           
-            //PDF processing
-            ReportProcessor reportProcessor = new ReportProcessor();
-            RenderingResult result = reportProcessor.RenderReport("PDF", res_source, null);
-            var file = ISfn.createPDFBinary(result);
-
-            using (SqlConnection connection = new SqlConnection(fmisConn))
-            {
-                connection.Open();
-
-                using (SqlCommand command = new SqlCommand("exec [Accounting].[usp_DGsign_Post_final_reconstruct] @userid, @Code,@File,@doc_details_id", connection))
-                {
-                    command.Parameters.AddWithValue("@userid", USER.C_eID);
-
-                    command.Parameters.AddWithValue("@Code", dvid);
-                    command.Parameters.AddWithValue("@File", file);
-                    command.Parameters.AddWithValue("@doc_details_id", refno);
-                    command.ExecuteNonQuery();
-                }
-                r = "The document has been successfully generated and is ready for digital signature.";
-
-
-
-                //trackController.save_status_log(refno.AntiInject(), 381, "", USER.C_eID);
-                connection.Close();
-            }
-
-            return Json(new { code = 6, statusName = r }, JsonRequestBehavior.AllowGet);
         }
     }
 

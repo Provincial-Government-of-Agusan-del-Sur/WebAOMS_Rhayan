@@ -3277,7 +3277,7 @@ namespace WebAOMS.Controllers
             DataTable arec;
             int empid = 0;
             arec = ISfn.ToDatatable("fmis.dbo.usp_JEV_Get_DV_NoCount "+ id + "");
-            if (Convert.ToInt16(arec.Rows[0][0]) > 0)
+            if (Convert.ToInt16(arec.Rows[0][0]) > 1)
             {
                 empid = 1; 
             }

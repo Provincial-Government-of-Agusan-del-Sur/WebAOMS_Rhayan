@@ -19,7 +19,7 @@ namespace WebAOMS.Report.Design
     public partial class rpt_DV_consol : Telerik.Reporting.Report
     {
         string fmisConn = ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
-        public rpt_DV_consol(System.Int32 dvid)
+        public rpt_DV_consol(System.Int32 dvid, string refno)
         {
             InitializeComponent();
             //pictureBox1.Value = "Content/Company Image/CompanyLogo.png";
@@ -28,7 +28,7 @@ namespace WebAOMS.Report.Design
 
 
             SqlConnection connection = new SqlConnection(fmisConn);
-            string cmdStr = "execute  [Accounting].[usp_JEV_Get_DV_consolidated] "+ dvid + "";
+            string cmdStr = "execute  [Accounting].[usp_JEV_Get_DV_consolidated] "+ dvid + ",'"+ refno + "'";
             using (SqlCommand command = new SqlCommand(cmdStr, connection))
             {
 
@@ -42,6 +42,7 @@ namespace WebAOMS.Report.Design
 
             this.table1.DataSource = dt.Tables[1];
             this.table2.DataSource = dt.Tables[0];
+            brcode_UI.Value = refno;
             //  pictureBox2.Value = ISfn.QRGen(Track.get_tracking_link(refno).ToString(), 4);
         }
     }

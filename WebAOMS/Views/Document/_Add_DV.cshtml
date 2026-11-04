@@ -434,53 +434,61 @@
                             function printDVObr(document_type_id) {
                                 //$("#mdl_doc_form").addClass("zdex");
 
-
                                 startSpin()
 
-                                $.get('@Url.Action("checkDVObr", "Document")', { document_type_id: document_type_id, id: $("#txt_DVid").val()}
-                                    , function (r) {
-                                        console.log(r)
-                                        if (r == 0)
-                                        {
-                                            $.post('@Url.Action("printDVObr", "Document")', { document_type_id: document_type_id, id: $("#txt_DVid").val(), refno: $("#txt_refno").val()}
-                                                , function (r) {
-                                                    stopSpin()
-                                                })
-                                        }
-                                        else{
-                                            if (document_type_id != 53){
+                                if (document_type_id != 59)
+                                {
+                                    $.get('@Url.Action("checkDVObr", "Document")', { document_type_id: document_type_id, id: $("#txt_DVid").val()}
+                                        , function (r) {
+                                            console.log(r)
+                                            if (r == 0)
+                                            {
+                                                $.post('@Url.Action("printDVObr", "Document")', { document_type_id: document_type_id, id: $("#txt_DVid").val(), refno: $("#txt_refno").val()}
+                                                    , function (r) {
+                                                        stopSpin()
+                                                    })
+                                            }
+                                            else{
+
                                                 $.post('@Url.Action("printDVObr", "Document")', { document_type_id: document_type_id, id: $("#txt_DVid").val(), refno: $("#txt_refno").val()}
                                                     , function (r) {
                                                         $.post('@Url.Action("printDVObr", "Document")', { document_type_id: 52, id: $("#txt_DVid").val(), refno: $("#txt_refno").val()} //consol dv
-                                                         , function (r) {
-                                                         })
+                                                            , function (r) {
+                                                            })
                                                     })
+                                                stopSpin()
                                             }
-                                            else{ //print via dgsign
-                                                $.post('@Url.Action("SignViaDG_DV", "DGSign")',
-                                                    { document_type_id: document_type_id, id: $("#txt_DVid").val(), refno: $("#txt_refno").val()}
-                                                , function(r) {
-                                                    if (r.code == 6)
-                                                    {
-                                                        stopSpin()
-                                                        toastr.success(r.statusName, 'System Message')
-                                                        Close_mdl_doc_form()
-                                                    }
-                                                    else
-                                                    {
-                                                        stopSpin()
-                                                        toastr.warning(r.statusName, 'System Message');
-                                                    }
-                                                })
-                                            }
-                                            stopSpin()
-                                        }
-                                    })
-
-                                //.fail(function (jqXHR, textStatus, error) {
-                                //    stopSpin()
-                                //    mg.warning("" + textStatus + "")
-                                //});
+                                        })
+                                }
+                                else{ //print via dgsign
+                                    $.post('@Url.Action("SignViaDG_DV", "DGSign")',
+                                            { document_type_id: 11, dvid: $("#txt_DVid").val(), refno: $("#txt_refno").val()}
+                                            , function(r) {
+                                                if (r.code == 6)
+                                                {
+                                                    $.post('@Url.Action("SignViaDG_DV", "DGSign")',
+                                                    { document_type_id: 52, dvid: $("#txt_DVid").val(), refno: $("#txt_refno").val()}
+                                                    , function(r) {
+                                                        if (r.code == 6)
+                                                        {
+                                                            toastr.success(r.statusName, 'System Message')
+                                                            //Close_mdl_doc_form()
+                                                        }
+                                                        else
+                                                        {
+                                                            stopSpin()
+                                                            toastr.warning(r.statusName, 'System Message');
+                                                        }
+                                                    })
+                                                }
+                                                else
+                                                {
+                                                    stopSpin()
+                                                    toastr.warning(r.statusName, 'System Message');
+                                                }
+                                                stopSpin()
+                                            })
+                                }
                             }
                             @*$(function () {
                                 $('#chck_co').change(function () {
@@ -504,7 +512,7 @@
                             @*<button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-trash"></i> Delete</button>*@
                             <button onclick="printDVObr(11)" class="btn btn-default pull-left"> <i class="fa fa-print"></i> Print DV</button>
                             <button onclick="printDVObr(12)" class="btn btn-default pull-left"> <i class="fa fa-print"></i> Print CAFOA/FURS</button>
-                            <button onclick="printDVObr(53)" class="btn btn-default pull-left"> <i class="fa fa-print"></i> Print DV Via DGSign</button>
+                            <button onclick="printDVObr(59)" class="btn btn-default pull-left"> <i class="fa fa-print"></i> Print DV Via DGSign</button>
                             <button onclick="new_entry()" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add Account</button>
                             @*<div data-toggle="buttons" style="padding-left:10px!important">
                                 <label id="lblcheck_co" class="btn checkbox-inline btn-checkbox-primary-inverse"><input id="chck_co" type="checkbox"> Capital Outlay</label>
