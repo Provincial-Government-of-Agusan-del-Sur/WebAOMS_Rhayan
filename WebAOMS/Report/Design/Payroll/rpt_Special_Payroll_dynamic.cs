@@ -37,9 +37,10 @@ namespace WebAOMS.Report.Design.Payroll
 
             Telerik.Reporting.Drawing.FormattingRule formattingRule1 = new Telerik.Reporting.Drawing.FormattingRule();
             DataTable rec;
+            DataTable rec4;
 
             rec = dset.Tables[3];
-            
+            rec4 = dset.Tables[4];
             //create a blank Table item
             Telerik.Reporting.Table table1 = new Telerik.Reporting.Table();
             table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.0), Telerik.Reporting.Drawing.Unit.Inch(0.0));
@@ -167,18 +168,19 @@ namespace WebAOMS.Report.Design.Payroll
             this.detail.Items.AddRange(new Telerik.Reporting.ReportItemBase[] { table1 });
 
             table1.ColumnHeadersPrintOnEveryPage = true;
-            DataTable recp;
-            recp = dset.Tables[4];
-            if (recp.Rows.Count > 0)
+            //DataTable recp;
+            //recp = dset.Tables[4];
+            if (rec4.Rows[0]["CompensationID"].ToString() == "50")
             {
-               //// txt_paymentperiod.Value = recp.Rows[0]["CompensatioName"].ToString() + " " + recp.Rows[0]["year"].ToString() + "(" + recp.Rows[0]["employmentStatusText"].ToString() + ")";
-                this.PageSettings.PaperSize = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(Convert.ToDouble(recp.Rows[0]["width"])), Telerik.Reporting.Drawing.Unit.Inch(Convert.ToDouble(recp.Rows[0]["height"])));
-                if (Convert.ToInt32(recp.Rows[0]["CompensationID"])== 54)
-                {
-                    table4.Visible = false;
-                }
+                textBox93.Value = "CERTIFIED:   Listed individuals are duly recognized awardees.";
+                //// txt_paymentperiod.Value = recp.Rows[0]["CompensatioName"].ToString() + " " + recp.Rows[0]["year"].ToString() + "(" + recp.Rows[0]["employmentStatusText"].ToString() + ")";
+                //this.PageSettings.PaperSize = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(Convert.ToDouble(recp.Rows[0]["width"])), Telerik.Reporting.Drawing.Unit.Inch(Convert.ToDouble(recp.Rows[0]["height"])));
+                //if (Convert.ToInt32(recp.Rows[0]["CompensationID"]) == 54)
+                //{
+                //    table4.Visible = false;
+                //}
             }
-            recp.Dispose();
+            //recp.Dispose();
             txt_batchno.Value = "Batch No.: " + batchno;
 
             this.DataSource = dset.Tables[1];
