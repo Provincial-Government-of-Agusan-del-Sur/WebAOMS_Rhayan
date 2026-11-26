@@ -27,6 +27,7 @@ namespace WebAOMS.Report
             DateTime from;
             string refno;
             int obligid;
+            int tyear;
             Int32 dvid;
             int hideAccountname; int hideOOEname;
             switch (rptid)
@@ -249,6 +250,11 @@ namespace WebAOMS.Report
                     dvid = Convert.ToInt32(Request["dvid"]);
                     refno = Request["refno"].ToString();
                     rs.ReportDocument = new rpt_DV_consol(dvid, refno);
+                    break;
+                case 60:
+                    tyear = Convert.ToInt32(Request["tyear"]);
+                    rs.ReportDocument = new rpt_Cancelled_check_v2(tyear);
+                    
                     break;
                 default:
                     to = Convert.ToDateTime(Request["to"]);

@@ -130,5 +130,20 @@ namespace WebAOMS.Controllers
             strUrl = ISfn.UrlStr("~/Report/rpt_Viewer.aspx?rptid=5&Isdetailed=" + IsPreClosing + "&to=" + to.ToString("MM/dd/yyyy") + "&fundid=" + fundid + "").ToString();
             return JavaScript("window.open('" + strUrl + "')");
         }
+        public ActionResult cancelled_check()
+        {
+            ViewBag.rightSidebar_title = "AOMS";
+            ViewBag.menuid = "a93";
+            return View();
+        }
+        public ActionResult print_cancel_check(Int32 tyear)
+        {
+            string strUrl;
+
+            var userId = User.Identity.GetUserId(); // ApplicationUser.Id
+            
+            strUrl = ISfn.UrlStr("~/Report/rpt_Viewer.aspx?rptid=60&tyear=" + tyear + "").ToString();
+            return JavaScript("window.open('" + strUrl + "')");
+        }
     }
 }

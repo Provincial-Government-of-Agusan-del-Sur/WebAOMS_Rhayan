@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Financial Report";
+    ViewBag.Title_mini = "Cancelled Check";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    @@media (min-width: 768px) {
+        .modal-xl {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+</style>
+
+
+<div class="box">
+    <div class="box-head">
+        <header>
+            <h4 class="text-bold">@ViewBag.Title_mini</h4>
+        </header>
+        <div class="tools">
+            <div class="btn-group ">
+                <a class="btn btn-equal btn-sm btn-refresh"><i class="fa fa-refresh"></i></a>
+                <a class="btn btn-equal btn-sm btn-collapse"><i class="fa fa-angle-down"></i></a>
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="box-body">
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="box-body no-padding" style="min-width:350px!important">
+                    <div class="form-group-md">
+                        
+                        <div class="col-md-3">
+                            <div class="box-head no-padding">
+                                <h5 class="text-light">Select <strong>Year</strong></h5>
+                            </div>
+                            @(Html.Kendo().DatePicker()
+                            .Name("dtp_to")
+                            .Start(CalendarView.Decade)
+                            .Depth(CalendarView.Decade)
+                            .Format("yyyy")
+                            .Value(DateTime.Now)
+                            .HtmlAttributes(new { type = "text" })
+                            )
+                        </div>
+                    </div>
+                    <div class="form-group-md">
+                        <div class="col-md-12" style="padding-bottom:10px;padding-top:10px!important">
+                            <button onclick="print_check_report()" class="btn btn-default"> <i class="fa fa-print"></i> Print Preview</button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>
+<script>
+    function print_check_report() {
+        var selectedDate = $("#dtp_to").data("kendoDatePicker").value();
+        var selectedYear = selectedDate ? selectedDate.getFullYear() : null;
+      //  var fundid = $("#dp_fundtype").data("kendoDropDownList").value();
+
+        startSpin()
+        $.post('@Url.Content("~/Financial/print_cancel_check")', { tyear: selectedYear }
+            , function (r) {
+                stopSpin()
+            })
+    }
+    
+</script>
+

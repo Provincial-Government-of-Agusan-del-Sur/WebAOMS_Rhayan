@@ -953,6 +953,12 @@
     <Compile Include="Report\Design\rpt_cafoa.Designer.cs">
       <DependentUpon>rpt_cafoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Design\rpt_Cancelled_check_v2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Design\rpt_Cancelled_check_v2.Designer.cs">
+      <DependentUpon>rpt_Cancelled_check_v2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Design\rpt_DV_2021.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -4872,6 +4878,7 @@
     <Content Include="Views\JEV\_JEV_Entries_T1.cshtml" />
     <Content Include="Views\JEV\_JEV_Entries_T2.cshtml" />
     <Content Include="Views\JEV\JEV_Accountantadvice.cshtml" />
+    <Content Include="Views\Financial\cancelled_check.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -4939,6 +4946,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Design\rpt_cafoa.resx">
       <DependentUpon>rpt_cafoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Design\rpt_Cancelled_check_v2.resx">
+      <DependentUpon>rpt_Cancelled_check_v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Design\rpt_doc.resx">
       <DependentUpon>rpt_doc.cs</DependentUpon>
