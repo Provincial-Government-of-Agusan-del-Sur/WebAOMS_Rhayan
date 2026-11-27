@@ -947,6 +947,12 @@
     <Compile Include="Report\Design\Payroll\rpt_Special_Payroll_dynamic.Designer.cs">
       <DependentUpon>rpt_Special_Payroll_dynamic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Design\rpt_acicdes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Design\rpt_acicdes.Designer.cs">
+      <DependentUpon>rpt_acicdes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Design\rpt_cafoa.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -4943,6 +4949,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Design\Payroll\rpt_Special_Payroll_dynamic.resx">
       <DependentUpon>rpt_Special_Payroll_dynamic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Design\rpt_acicdes.resx">
+      <DependentUpon>rpt_acicdes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Design\rpt_cafoa.resx">
       <DependentUpon>rpt_cafoa.cs</DependentUpon>
